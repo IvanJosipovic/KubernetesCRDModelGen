@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationInsightsAPIKey is the Schema for the ApplicationInsightsAPIKeys API. Manages an Application Insights API key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationInsightsAPIKeyList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationInsightsAPIKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationI
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationI
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsAPIKeySpecForProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecForProvider
     [JsonPropertyName("writePermissions")]
     public IList<string>? WritePermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdRef
@@ -156,7 +171,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplication
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdSelector
@@ -190,7 +209,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecInitProviderApplication
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsAPIKeySpecInitProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecInitProvider
     [JsonPropertyName("writePermissions")]
     public IList<string>? WritePermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpecWriteConnectionSecretToRef
@@ -241,7 +266,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsAPIKeySpec defines the desired state of ApplicationInsightsAPIKey</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeySpec
@@ -266,7 +293,9 @@ public partial class V1beta1ApplicationInsightsAPIKeySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationInsightsAPIKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeyStatusAtProvider
@@ -291,7 +320,9 @@ public partial class V1beta1ApplicationInsightsAPIKeyStatusAtProvider
     [JsonPropertyName("writePermissions")]
     public IList<string>? WritePermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeyStatusConditions
@@ -320,7 +351,9 @@ public partial class V1beta1ApplicationInsightsAPIKeyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsAPIKeyStatus defines the observed state of ApplicationInsightsAPIKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsAPIKeyStatus
@@ -337,7 +370,9 @@ public partial class V1beta1ApplicationInsightsAPIKeyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsAPIKey is the Schema for the ApplicationInsightsAPIKeys API. Manages an Application Insights API key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -367,3 +402,4 @@ public partial class V1beta1ApplicationInsightsAPIKey : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsAPIKeyStatus? Status { get; set; }
 }
+#nullable disable

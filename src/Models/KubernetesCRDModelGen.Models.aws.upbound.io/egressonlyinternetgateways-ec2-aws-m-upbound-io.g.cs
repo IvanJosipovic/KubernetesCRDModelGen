@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>EgressOnlyInternetGateway is the Schema for the EgressOnlyInternetGateways API. Provides a resource to create an egress-only Internet gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EgressOnlyInternetGatewayList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1EgressOnlyInternetGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1EgressOnlyInternetGatewaySpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdRef
@@ -152,7 +167,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelector
@@ -186,7 +205,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelect
     [JsonPropertyName("policy")]
     public V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1EgressOnlyInternetGatewaySpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EgressOnlyInternetGatewaySpec defines the desired state of EgressOnlyInternetGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewaySpec
@@ -254,7 +281,9 @@ public partial class V1beta1EgressOnlyInternetGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EgressOnlyInternetGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewayStatusAtProvider
@@ -279,7 +308,9 @@ public partial class V1beta1EgressOnlyInternetGatewayStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewayStatusConditions
@@ -308,7 +339,9 @@ public partial class V1beta1EgressOnlyInternetGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EgressOnlyInternetGatewayStatus defines the observed state of EgressOnlyInternetGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EgressOnlyInternetGatewayStatus
@@ -325,7 +358,9 @@ public partial class V1beta1EgressOnlyInternetGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EgressOnlyInternetGateway is the Schema for the EgressOnlyInternetGateways API. Provides a resource to create an egress-only Internet gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -355,3 +390,4 @@ public partial class V1beta1EgressOnlyInternetGateway : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1EgressOnlyInternetGatewayStatus? Status { get; set; }
 }
+#nullable disable

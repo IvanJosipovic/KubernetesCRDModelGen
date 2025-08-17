@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kinesisanalyticsv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>Application is the Schema for the Applications API. Manages a Kinesis Analytics v2 Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Application> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRef
@@ -127,7 +140,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelector
@@ -161,7 +178,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the Amazon S3 bucket containing the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation
@@ -194,7 +213,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location and type of the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfigurationCodeContent
@@ -207,7 +228,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("textContent")]
     public string? TextContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The code location and type parameters for the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationCodeConfiguration
@@ -220,7 +243,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("codeContentType")]
     public string? CodeContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether snapshots are enabled for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationApplicationSnapshotConfiguration
@@ -229,7 +254,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationAp
     [JsonPropertyName("snapshotsEnabled")]
     public bool? SnapshotsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup
@@ -242,7 +269,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationEn
     [JsonPropertyName("propertyMap")]
     public IDictionary<string, string>? PropertyMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes execution properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationEnvironmentProperties
@@ -251,7 +280,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationEn
     [JsonPropertyName("propertyGroup")]
     public IList<V1beta1ApplicationSpecForProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup>? PropertyGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes an application's checkpointing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration
@@ -272,7 +303,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFl
     [JsonPropertyName("minPauseBetweenCheckpoints")]
     public double? MinPauseBetweenCheckpoints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes configuration parameters for CloudWatch logging for an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration
@@ -289,7 +322,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFl
     [JsonPropertyName("metricsLevel")]
     public string? MetricsLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes parameters for how an application executes multiple tasks simultaneously.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration
@@ -310,7 +345,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFl
     [JsonPropertyName("parallelismPerKpu")]
     public double? ParallelismPerKpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFlinkApplicationConfiguration
@@ -327,7 +364,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationFl
     [JsonPropertyName("parallelismConfiguration")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration? ParallelismConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restore behavior of a restarting application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRunConfigurationApplicationRestoreConfiguration
@@ -340,7 +379,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRu
     [JsonPropertyName("snapshotName")]
     public string? SnapshotName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The starting parameters for a Flink-based Kinesis Data Analytics application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration
@@ -349,7 +390,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRu
     [JsonPropertyName("allowNonRestoredState")]
     public bool? AllowNonRestoredState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the starting properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRunConfiguration
@@ -362,7 +405,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationRu
     [JsonPropertyName("flinkRunConfiguration")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration? FlinkRunConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the number of in-application streams to create.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputParallelism
@@ -371,7 +416,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor
@@ -380,7 +427,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input processing configuration for the input. An input processor transforms records as they are received from the stream, before the application's SQL code executes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration
@@ -389,7 +438,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("inputLambdaProcessor")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor? InputLambdaProcessor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn
@@ -406,7 +457,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -419,7 +472,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -428,7 +483,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters
@@ -441,7 +498,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat
@@ -454,7 +513,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchema
@@ -471,7 +532,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration
@@ -480,7 +543,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("inputStartingPosition")]
     public string? InputStartingPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput
@@ -489,7 +554,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRefPolicy
@@ -502,7 +569,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRef
@@ -519,7 +588,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelectorPolicy
@@ -532,7 +603,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelector
@@ -553,7 +626,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput
@@ -570,7 +645,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input stream used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationInput
@@ -603,7 +680,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("namePrefix")]
     public string? NamePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the data format when records are written to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema
@@ -612,7 +691,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRefPolicy
@@ -625,7 +706,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRef
@@ -642,7 +725,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelectorPolicy
@@ -655,7 +740,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelector
@@ -676,7 +763,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis Data Firehose delivery stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput
@@ -693,7 +782,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis data stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput
@@ -702,7 +793,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRefPolicy
@@ -715,7 +808,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRef
@@ -732,7 +827,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelectorPolicy
@@ -745,7 +842,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelector
@@ -766,7 +865,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Lambda function as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput
@@ -783,7 +884,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationOutput
@@ -808,7 +911,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn
@@ -825,7 +930,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -838,7 +945,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -847,7 +956,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters
@@ -860,7 +971,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat
@@ -873,7 +986,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema
@@ -890,7 +1005,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRefPolicy
@@ -903,7 +1020,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRef
@@ -920,7 +1039,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelectorPolicy
@@ -933,7 +1054,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelector
@@ -954,7 +1077,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies the S3 bucket and object that contains the reference data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource
@@ -975,7 +1100,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("fileKey")]
     public string? FileKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference data source used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource
@@ -992,7 +1119,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a SQL-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfiguration
@@ -1009,7 +1138,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationSq
     [JsonPropertyName("referenceDataSource")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource? ReferenceDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefsPolicy
@@ -1022,7 +1153,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefs
@@ -1039,7 +1172,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelectorPolicy
@@ -1052,7 +1187,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelector
@@ -1073,7 +1210,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsRefsPolicy
@@ -1086,7 +1225,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsRefs
@@ -1103,7 +1244,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsSelectorPolicy
@@ -1116,7 +1259,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsSelector
@@ -1137,7 +1282,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfiguration
@@ -1166,7 +1313,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfigurationVp
     [JsonPropertyName("subnetIdsSelector")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfigurationSubnetIdsSelector? SubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The application's configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApplicationConfiguration
@@ -1199,7 +1348,9 @@ public partial class V1beta1ApplicationSpecForProviderApplicationConfiguration
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1ApplicationSpecForProviderApplicationConfigurationVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy
@@ -1212,7 +1363,9 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRef
@@ -1229,7 +1382,9 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy
@@ -1242,7 +1397,9 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelector
@@ -1263,7 +1420,9 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A CloudWatch log stream to monitor application configuration errors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptions
@@ -1280,7 +1439,9 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptions
     [JsonPropertyName("logStreamArnSelector")]
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelector? LogStreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleRefPolicy
@@ -1293,7 +1454,9 @@ public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleRef
@@ -1310,7 +1473,9 @@ public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderServiceExecutionRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleSelectorPolicy
@@ -1323,7 +1488,9 @@ public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleSelector
@@ -1344,7 +1511,9 @@ public partial class V1beta1ApplicationSpecForProviderServiceExecutionRoleSelect
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecForProviderServiceExecutionRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProvider
@@ -1397,7 +1566,9 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRefPolicy
@@ -1410,7 +1581,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRef
@@ -1427,7 +1600,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelectorPolicy
@@ -1440,7 +1615,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelector
@@ -1461,7 +1638,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationBucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRefPolicy
@@ -1474,7 +1653,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRef
@@ -1491,7 +1672,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelectorPolicy
@@ -1504,7 +1687,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelector
@@ -1525,7 +1710,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationFileKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the Amazon S3 bucket containing the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation
@@ -1558,7 +1745,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location and type of the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfigurationCodeContent
@@ -1571,7 +1760,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("textContent")]
     public string? TextContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The code location and type parameters for the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationCodeConfiguration
@@ -1584,7 +1775,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("codeContentType")]
     public string? CodeContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether snapshots are enabled for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationApplicationSnapshotConfiguration
@@ -1593,7 +1786,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationA
     [JsonPropertyName("snapshotsEnabled")]
     public bool? SnapshotsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup
@@ -1606,7 +1801,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationE
     [JsonPropertyName("propertyMap")]
     public IDictionary<string, string>? PropertyMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes execution properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationEnvironmentProperties
@@ -1615,7 +1812,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationE
     [JsonPropertyName("propertyGroup")]
     public IList<V1beta1ApplicationSpecInitProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup>? PropertyGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes an application's checkpointing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration
@@ -1636,7 +1835,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationF
     [JsonPropertyName("minPauseBetweenCheckpoints")]
     public double? MinPauseBetweenCheckpoints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes configuration parameters for CloudWatch logging for an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration
@@ -1653,7 +1854,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationF
     [JsonPropertyName("metricsLevel")]
     public string? MetricsLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes parameters for how an application executes multiple tasks simultaneously.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration
@@ -1674,7 +1877,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationF
     [JsonPropertyName("parallelismPerKpu")]
     public double? ParallelismPerKpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationFlinkApplicationConfiguration
@@ -1691,7 +1896,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationF
     [JsonPropertyName("parallelismConfiguration")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration? ParallelismConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restore behavior of a restarting application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationRunConfigurationApplicationRestoreConfiguration
@@ -1704,7 +1911,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationR
     [JsonPropertyName("snapshotName")]
     public string? SnapshotName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The starting parameters for a Flink-based Kinesis Data Analytics application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration
@@ -1713,7 +1922,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationR
     [JsonPropertyName("allowNonRestoredState")]
     public bool? AllowNonRestoredState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the starting properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationRunConfiguration
@@ -1726,7 +1937,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationR
     [JsonPropertyName("flinkRunConfiguration")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration? FlinkRunConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the number of in-application streams to create.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputParallelism
@@ -1735,7 +1948,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor
@@ -1744,7 +1959,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input processing configuration for the input. An input processor transforms records as they are received from the stream, before the application's SQL code executes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration
@@ -1753,7 +1970,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("inputLambdaProcessor")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor? InputLambdaProcessor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn
@@ -1770,7 +1989,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -1783,7 +2004,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -1792,7 +2015,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters
@@ -1805,7 +2030,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat
@@ -1818,7 +2045,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchema
@@ -1835,7 +2064,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration
@@ -1844,7 +2075,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("inputStartingPosition")]
     public string? InputStartingPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput
@@ -1853,7 +2086,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRefPolicy
@@ -1866,7 +2101,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRef
@@ -1883,7 +2120,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelectorPolicy
@@ -1896,7 +2135,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelector
@@ -1917,7 +2158,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput
@@ -1934,7 +2177,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input stream used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationInput
@@ -1967,7 +2212,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("namePrefix")]
     public string? NamePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the data format when records are written to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema
@@ -1976,7 +2223,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRefPolicy
@@ -1989,7 +2238,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRef
@@ -2006,7 +2257,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelectorPolicy
@@ -2019,7 +2272,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelector
@@ -2040,7 +2295,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis Data Firehose delivery stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput
@@ -2057,7 +2314,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis data stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput
@@ -2066,7 +2325,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRefPolicy
@@ -2079,7 +2340,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRef
@@ -2096,7 +2359,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelectorPolicy
@@ -2109,7 +2374,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelector
@@ -2130,7 +2397,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Lambda function as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput
@@ -2147,7 +2416,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationOutput
@@ -2172,7 +2443,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn
@@ -2189,7 +2462,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -2202,7 +2477,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -2211,7 +2488,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters
@@ -2224,7 +2503,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat
@@ -2237,7 +2518,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema
@@ -2254,7 +2537,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRefPolicy
@@ -2267,7 +2552,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRef
@@ -2284,7 +2571,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelectorPolicy
@@ -2297,7 +2586,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelector
@@ -2318,7 +2609,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceBucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies the S3 bucket and object that contains the reference data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource
@@ -2339,7 +2632,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("fileKey")]
     public string? FileKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference data source used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource
@@ -2356,7 +2651,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a SQL-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfiguration
@@ -2373,7 +2670,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationS
     [JsonPropertyName("referenceDataSource")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource? ReferenceDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefsPolicy
@@ -2386,7 +2685,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefs
@@ -2403,7 +2704,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelectorPolicy
@@ -2416,7 +2719,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelector
@@ -2437,7 +2742,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSecurityGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsRefsPolicy
@@ -2450,7 +2757,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsRefs
@@ -2467,7 +2776,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsSelectorPolicy
@@ -2480,7 +2791,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsSelector
@@ -2501,7 +2814,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfiguration
@@ -2530,7 +2845,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfigurationV
     [JsonPropertyName("subnetIdsSelector")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfigurationSubnetIdsSelector? SubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The application's configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApplicationConfiguration
@@ -2563,7 +2880,9 @@ public partial class V1beta1ApplicationSpecInitProviderApplicationConfiguration
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1ApplicationSpecInitProviderApplicationConfigurationVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy
@@ -2576,7 +2895,9 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRef
@@ -2593,7 +2914,9 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy
@@ -2606,7 +2929,9 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelector
@@ -2627,7 +2952,9 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A CloudWatch log stream to monitor application configuration errors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptions
@@ -2644,7 +2971,9 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptions
     [JsonPropertyName("logStreamArnSelector")]
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelector? LogStreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleRefPolicy
@@ -2657,7 +2986,9 @@ public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleRef
@@ -2674,7 +3005,9 @@ public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderServiceExecutionRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleSelectorPolicy
@@ -2687,7 +3020,9 @@ public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleSelector
@@ -2708,7 +3043,9 @@ public partial class V1beta1ApplicationSpecInitProviderServiceExecutionRoleSelec
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSpecInitProviderServiceExecutionRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProvider
@@ -2757,7 +3094,9 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecProviderConfigRef
@@ -2770,7 +3109,9 @@ public partial class V1beta1ApplicationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
@@ -2779,7 +3120,9 @@ public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationSpec defines the desired state of Application</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpec
@@ -2804,7 +3147,9 @@ public partial class V1beta1ApplicationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the Amazon S3 bucket containing the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation
@@ -2821,7 +3166,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationA
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location and type of the application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationApplicationCodeConfigurationCodeContent
@@ -2834,7 +3181,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationA
     [JsonPropertyName("textContent")]
     public string? TextContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The code location and type parameters for the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationApplicationCodeConfiguration
@@ -2847,7 +3196,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationA
     [JsonPropertyName("codeContentType")]
     public string? CodeContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether snapshots are enabled for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationApplicationSnapshotConfiguration
@@ -2856,7 +3207,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationA
     [JsonPropertyName("snapshotsEnabled")]
     public bool? SnapshotsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup
@@ -2869,7 +3222,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationE
     [JsonPropertyName("propertyMap")]
     public IDictionary<string, string>? PropertyMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes execution properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationEnvironmentProperties
@@ -2878,7 +3233,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationE
     [JsonPropertyName("propertyGroup")]
     public IList<V1beta1ApplicationStatusAtProviderApplicationConfigurationEnvironmentPropertiesPropertyGroup>? PropertyGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes an application's checkpointing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration
@@ -2899,7 +3256,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationF
     [JsonPropertyName("minPauseBetweenCheckpoints")]
     public double? MinPauseBetweenCheckpoints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes configuration parameters for CloudWatch logging for an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration
@@ -2916,7 +3275,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationF
     [JsonPropertyName("metricsLevel")]
     public string? MetricsLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes parameters for how an application executes multiple tasks simultaneously.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration
@@ -2937,7 +3298,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationF
     [JsonPropertyName("parallelismPerKpu")]
     public double? ParallelismPerKpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationFlinkApplicationConfiguration
@@ -2954,7 +3317,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationF
     [JsonPropertyName("parallelismConfiguration")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration? ParallelismConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restore behavior of a restarting application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationRunConfigurationApplicationRestoreConfiguration
@@ -2967,7 +3332,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationR
     [JsonPropertyName("snapshotName")]
     public string? SnapshotName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The starting parameters for a Flink-based Kinesis Data Analytics application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration
@@ -2976,7 +3343,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationR
     [JsonPropertyName("allowNonRestoredState")]
     public bool? AllowNonRestoredState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the starting properties for a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationRunConfiguration
@@ -2989,7 +3358,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationR
     [JsonPropertyName("flinkRunConfiguration")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationRunConfigurationFlinkRunConfiguration? FlinkRunConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the number of in-application streams to create.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputParallelism
@@ -2998,7 +3369,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor
@@ -3007,7 +3380,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input processing configuration for the input. An input processor transforms records as they are received from the stream, before the application's SQL code executes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration
@@ -3016,7 +3391,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("inputLambdaProcessor")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor? InputLambdaProcessor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn
@@ -3033,7 +3410,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -3046,7 +3425,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -3055,7 +3436,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters
@@ -3068,7 +3451,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat
@@ -3081,7 +3466,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchema
@@ -3098,7 +3485,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration
@@ -3107,7 +3496,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("inputStartingPosition")]
     public string? InputStartingPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput
@@ -3116,7 +3507,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput
@@ -3125,7 +3518,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The input stream used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationInput
@@ -3166,7 +3561,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("namePrefix")]
     public string? NamePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the data format when records are written to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema
@@ -3175,7 +3572,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis Data Firehose delivery stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput
@@ -3184,7 +3583,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Kinesis data stream as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput
@@ -3193,7 +3594,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies a Lambda function as the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput
@@ -3202,7 +3605,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationOutput
@@ -3231,7 +3636,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("outputId")]
     public string? OutputId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn
@@ -3248,7 +3655,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("sqlType")]
     public string? SqlType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when the record format uses delimiters (for example, CSV).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters
@@ -3261,7 +3670,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordRowDelimiter")]
     public string? RecordRowDelimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information when JSON is the record format on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters
@@ -3270,7 +3681,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordRowPath")]
     public string? RecordRowPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters
@@ -3283,7 +3696,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("jsonMappingParameters")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters? JsonMappingParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the format of the records on the streaming source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat
@@ -3296,7 +3711,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordFormatType")]
     public string? RecordFormatType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema
@@ -3313,7 +3730,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("recordFormat")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat? RecordFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies the S3 bucket and object that contains the reference data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource
@@ -3326,7 +3745,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("fileKey")]
     public string? FileKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference data source used by the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource
@@ -3347,7 +3768,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a SQL-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfiguration
@@ -3364,7 +3787,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationS
     [JsonPropertyName("referenceDataSource")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationSqlApplicationConfigurationReferenceDataSource? ReferenceDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC configuration of a Flink-based application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationVpcConfiguration
@@ -3385,7 +3810,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfigurationV
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The application's configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApplicationConfiguration
@@ -3418,7 +3845,9 @@ public partial class V1beta1ApplicationStatusAtProviderApplicationConfiguration
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1ApplicationStatusAtProviderApplicationConfigurationVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A CloudWatch log stream to monitor application configuration errors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderCloudwatchLoggingOptions
@@ -3431,7 +3860,9 @@ public partial class V1beta1ApplicationStatusAtProviderCloudwatchLoggingOptions
     [JsonPropertyName("logStreamArn")]
     public string? LogStreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProvider
@@ -3504,7 +3935,9 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("versionId")]
     public double? VersionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusConditions
@@ -3533,7 +3966,9 @@ public partial class V1beta1ApplicationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationStatus defines the observed state of Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatus
@@ -3550,7 +3985,9 @@ public partial class V1beta1ApplicationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Application is the Schema for the Applications API. Manages a Kinesis Analytics v2 Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3580,3 +4017,4 @@ public partial class V1beta1Application : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ApplicationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.upbound.io;
+#nullable enable
 /// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2AutoscalingGroupList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta2AutoscalingGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistribution
@@ -42,7 +45,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistr
     [JsonPropertyName("capacityDistributionStrategy")]
     public string? CapacityDistributionStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -55,7 +60,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSp
     [JsonPropertyName("capacityReservationResourceGroupArns")]
     public IList<string>? CapacityReservationResourceGroupArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecification
@@ -68,7 +75,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSp
     [JsonPropertyName("capacityReservationTarget")]
     public IList<V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
@@ -101,7 +110,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceMaintenancePolicy
@@ -114,7 +125,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceMaintenancePo
     [JsonPropertyName("minHealthyPercentage")]
     public double? MinHealthyPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPreferencesAlarmSpecification
@@ -123,7 +136,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPrefer
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPreferences
@@ -168,7 +183,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPrefer
     [JsonPropertyName("standbyInstances")]
     public string? StandbyInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefresh
@@ -185,7 +202,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefresh
     [JsonPropertyName("triggers")]
     public IList<string>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRefPolicy
@@ -198,7 +217,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRef
@@ -211,7 +232,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRe
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelectorPolicy
@@ -224,7 +247,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelector
@@ -241,7 +266,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSe
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPolicy
@@ -254,7 +281,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRef
@@ -267,7 +296,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelector
@@ -297,7 +330,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelec
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplate
@@ -322,7 +357,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyInstancesDistribution
@@ -351,7 +388,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyI
     [JsonPropertyName("spotMaxPrice")]
     public string? SpotMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -364,7 +403,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -377,7 +418,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -390,7 +433,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -407,7 +452,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
@@ -432,7 +479,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
@@ -445,7 +494,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -458,7 +509,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -471,7 +524,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -484,7 +539,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
@@ -497,7 +554,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -510,7 +569,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
@@ -523,7 +584,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
@@ -536,7 +599,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
@@ -549,7 +614,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
@@ -650,7 +717,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("vcpuCount")]
     public IList<V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -663,7 +732,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -676,7 +747,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -689,7 +762,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -706,7 +781,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
@@ -731,7 +808,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverride
@@ -752,7 +831,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("weightedCapacity")]
     public string? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplate
@@ -765,7 +846,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     [JsonPropertyName("override")]
     public IList<V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicy
@@ -778,7 +861,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicy
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplate>? LaunchTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPolicy
@@ -791,7 +876,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRef
@@ -804,7 +891,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelectorPolicy
@@ -817,7 +906,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelector
@@ -834,7 +925,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelecto
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRefPolicy
@@ -847,7 +940,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceLinkedRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRef
@@ -860,7 +955,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnR
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPolicy
@@ -873,7 +970,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceLinkedRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelector
@@ -890,7 +989,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnS
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderTag
@@ -907,7 +1008,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderTrafficSource
@@ -920,7 +1023,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderTrafficSource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefsPolicy
@@ -933,7 +1038,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefs
@@ -946,7 +1053,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefs
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolicy
@@ -959,7 +1068,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate vpcZoneIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelector
@@ -976,7 +1087,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSele
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderWarmPoolInstanceReusePolicy
@@ -985,7 +1098,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderWarmPoolInstanceReuse
     [JsonPropertyName("reuseOnScaleIn")]
     public bool? ReuseOnScaleIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderWarmPool
@@ -1006,7 +1121,9 @@ public partial class V1beta2AutoscalingGroupSpecForProviderWarmPool
     [JsonPropertyName("poolState")]
     public string? PoolState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProvider
@@ -1195,7 +1312,9 @@ public partial class V1beta2AutoscalingGroupSpecForProvider
     [JsonPropertyName("warmPool")]
     public IList<V1beta2AutoscalingGroupSpecForProviderWarmPool>? WarmPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderAvailabilityZoneDistribution
@@ -1204,7 +1323,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderAvailabilityZoneDist
     [JsonPropertyName("capacityDistributionStrategy")]
     public string? CapacityDistributionStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -1217,7 +1338,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationS
     [JsonPropertyName("capacityReservationResourceGroupArns")]
     public IList<string>? CapacityReservationResourceGroupArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecification
@@ -1230,7 +1353,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationS
     [JsonPropertyName("capacityReservationTarget")]
     public IList<V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderInitialLifecycleHook
@@ -1263,7 +1388,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInitialLifecycleHook
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceMaintenancePolicy
@@ -1276,7 +1403,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceMaintenanceP
     [JsonPropertyName("minHealthyPercentage")]
     public double? MinHealthyPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPreferencesAlarmSpecification
@@ -1285,7 +1414,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPrefe
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPreferences
@@ -1330,7 +1461,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPrefe
     [JsonPropertyName("standbyInstances")]
     public string? StandbyInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefresh
@@ -1347,7 +1480,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefresh
     [JsonPropertyName("triggers")]
     public IList<string>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRefPolicy
@@ -1360,7 +1495,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRef
@@ -1373,7 +1510,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationR
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelectorPolicy
@@ -1386,7 +1525,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelector
@@ -1403,7 +1544,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationS
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefPolicy
@@ -1416,7 +1559,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRef
@@ -1429,7 +1574,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolicy
@@ -1442,7 +1589,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelector
@@ -1459,7 +1608,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSele
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplate
@@ -1484,7 +1635,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyInstancesDistribution
@@ -1513,7 +1666,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("spotMaxPrice")]
     public string? SpotMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -1526,7 +1681,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -1539,7 +1696,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -1552,7 +1711,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -1569,7 +1730,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
@@ -1594,7 +1757,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
@@ -1607,7 +1772,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -1620,7 +1787,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -1633,7 +1802,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -1646,7 +1817,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
@@ -1659,7 +1832,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -1672,7 +1847,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
@@ -1685,7 +1862,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
@@ -1698,7 +1877,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
@@ -1711,7 +1892,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
@@ -1812,7 +1995,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("vcpuCount")]
     public IList<V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -1825,7 +2010,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -1838,7 +2025,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -1851,7 +2040,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -1868,7 +2059,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
@@ -1893,7 +2086,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverride
@@ -1914,7 +2109,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("weightedCapacity")]
     public string? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplate
@@ -1927,7 +2124,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("override")]
     public IList<V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
@@ -1940,7 +2139,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplate>? LaunchTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPolicy
@@ -1953,7 +2154,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRef
@@ -1966,7 +2169,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelectorPolicy
@@ -1979,7 +2184,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelector
@@ -1996,7 +2203,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelect
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRefPolicy
@@ -2009,7 +2218,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceLinkedRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRef
@@ -2022,7 +2233,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorPolicy
@@ -2035,7 +2248,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceLinkedRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelector
@@ -2052,7 +2267,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderTag
@@ -2069,7 +2286,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderTrafficSource
@@ -2082,7 +2301,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderTrafficSource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefsPolicy
@@ -2095,7 +2316,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefs
@@ -2108,7 +2331,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPolicy
@@ -2121,7 +2346,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate vpcZoneIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelector
@@ -2138,7 +2365,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSel
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPoolInstanceReusePolicy
@@ -2147,7 +2376,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPoolInstanceReus
     [JsonPropertyName("reuseOnScaleIn")]
     public bool? ReuseOnScaleIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPool
@@ -2168,7 +2399,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPool
     [JsonPropertyName("poolState")]
     public string? PoolState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProvider
@@ -2353,7 +2586,9 @@ public partial class V1beta2AutoscalingGroupSpecInitProvider
     [JsonPropertyName("warmPool")]
     public IList<V1beta2AutoscalingGroupSpecInitProviderWarmPool>? WarmPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecProviderConfigRefPolicy
@@ -2366,7 +2601,9 @@ public partial class V1beta2AutoscalingGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecProviderConfigRef
@@ -2379,7 +2616,9 @@ public partial class V1beta2AutoscalingGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta2AutoscalingGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef
@@ -2392,7 +2631,9 @@ public partial class V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingGroupSpec defines the desired state of AutoscalingGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpec
@@ -2421,7 +2662,9 @@ public partial class V1beta2AutoscalingGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderAvailabilityZoneDistribution
@@ -2430,7 +2673,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderAvailabilityZoneDist
     [JsonPropertyName("capacityDistributionStrategy")]
     public string? CapacityDistributionStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -2443,7 +2688,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationS
     [JsonPropertyName("capacityReservationResourceGroupArns")]
     public IList<string>? CapacityReservationResourceGroupArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecification
@@ -2456,7 +2703,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationS
     [JsonPropertyName("capacityReservationTarget")]
     public IList<V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderInitialLifecycleHook
@@ -2489,7 +2738,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInitialLifecycleHook
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceMaintenancePolicy
@@ -2502,7 +2753,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceMaintenanceP
     [JsonPropertyName("minHealthyPercentage")]
     public double? MinHealthyPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPreferencesAlarmSpecification
@@ -2511,7 +2764,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPrefe
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPreferences
@@ -2556,7 +2811,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPrefe
     [JsonPropertyName("standbyInstances")]
     public string? StandbyInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefresh
@@ -2573,7 +2830,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefresh
     [JsonPropertyName("triggers")]
     public IList<string>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderLaunchTemplate
@@ -2590,7 +2849,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyInstancesDistribution
@@ -2619,7 +2880,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("spotMaxPrice")]
     public string? SpotMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
@@ -2636,7 +2899,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
@@ -2649,7 +2914,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -2662,7 +2929,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -2675,7 +2944,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -2688,7 +2959,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
@@ -2701,7 +2974,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -2714,7 +2989,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
@@ -2727,7 +3004,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
@@ -2740,7 +3019,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
@@ -2753,7 +3034,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
@@ -2854,7 +3137,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("vcpuCount")]
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
@@ -2871,7 +3156,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverride
@@ -2892,7 +3179,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("weightedCapacity")]
     public string? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplate
@@ -2905,7 +3194,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("override")]
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
@@ -2918,7 +3209,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplate>? LaunchTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderTag
@@ -2935,7 +3228,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderTrafficSource
@@ -2948,7 +3243,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderTrafficSource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPoolInstanceReusePolicy
@@ -2957,7 +3254,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPoolInstanceReus
     [JsonPropertyName("reuseOnScaleIn")]
     public bool? ReuseOnScaleIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPool
@@ -2978,7 +3277,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPool
     [JsonPropertyName("poolState")]
     public string? PoolState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusAtProvider
@@ -3159,7 +3460,9 @@ public partial class V1beta2AutoscalingGroupStatusAtProvider
     [JsonPropertyName("warmPoolSize")]
     public double? WarmPoolSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatusConditions
@@ -3188,7 +3491,9 @@ public partial class V1beta2AutoscalingGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingGroupStatus defines the observed state of AutoscalingGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupStatus
@@ -3205,7 +3510,9 @@ public partial class V1beta2AutoscalingGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3235,3 +3542,4 @@ public partial class V1beta2AutoscalingGroup : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta2AutoscalingGroupStatus? Status { get; set; }
 }
+#nullable disable

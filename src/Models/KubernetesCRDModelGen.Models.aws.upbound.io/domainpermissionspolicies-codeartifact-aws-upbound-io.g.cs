@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codeartifact.aws.upbound.io;
+#nullable enable
 /// <summary>DomainPermissionsPolicy is the Schema for the DomainPermissionsPolicys API. Provides a CodeArtifact Domain Permissions Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DomainPermissionsPolicyList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1DomainPermissionsPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Domain in codeartifact to populate domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainRef
@@ -59,7 +64,9 @@ public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainRef
     [JsonPropertyName("policy")]
     public V1beta1DomainPermissionsPolicySpecForProviderDomainRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Domain in codeartifact to populate domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DomainPermissionsPolicySpecForProviderDomainSelector
     [JsonPropertyName("policy")]
     public V1beta1DomainPermissionsPolicySpecForProviderDomainSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1DomainPermissionsPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecInitProvider
@@ -139,7 +152,9 @@ public partial class V1beta1DomainPermissionsPolicySpecInitProvider
     [JsonPropertyName("policyRevision")]
     public string? PolicyRevision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecProviderConfigRefPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1DomainPermissionsPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecProviderConfigRef
@@ -165,7 +182,9 @@ public partial class V1beta1DomainPermissionsPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DomainPermissionsPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpecWriteConnectionSecretToRef
@@ -178,7 +197,9 @@ public partial class V1beta1DomainPermissionsPolicySpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainPermissionsPolicySpec defines the desired state of DomainPermissionsPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicySpec
@@ -207,7 +228,9 @@ public partial class V1beta1DomainPermissionsPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DomainPermissionsPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicyStatusAtProvider
@@ -240,7 +263,9 @@ public partial class V1beta1DomainPermissionsPolicyStatusAtProvider
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicyStatusConditions
@@ -269,7 +294,9 @@ public partial class V1beta1DomainPermissionsPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainPermissionsPolicyStatus defines the observed state of DomainPermissionsPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainPermissionsPolicyStatus
@@ -286,7 +313,9 @@ public partial class V1beta1DomainPermissionsPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainPermissionsPolicy is the Schema for the DomainPermissionsPolicys API. Provides a CodeArtifact Domain Permissions Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -316,3 +345,4 @@ public partial class V1beta1DomainPermissionsPolicy : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1DomainPermissionsPolicyStatus? Status { get; set; }
 }
+#nullable disable

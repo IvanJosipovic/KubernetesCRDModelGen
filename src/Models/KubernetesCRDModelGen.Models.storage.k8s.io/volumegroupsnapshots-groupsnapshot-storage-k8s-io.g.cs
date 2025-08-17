@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.groupsnapshot.storage.k8s.io;
+#nullable enable
 /// <summary>VolumeGroupSnapshot is a user's request for creating either a point-in-time group snapshot or binding to a pre-existing group snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VolumeGroupSnapshotList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1VolumeGroupSnapshot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotSpecSourceSelectorMatchExpressions
@@ -50,7 +53,9 @@ public partial class V1beta1VolumeGroupSnapshotSpecSourceSelectorMatchExpression
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector is a label query over persistent volume claims that are to be grouped together for snapshotting. This labelSelector will be used to match the label added to a PVC. If the label is added or removed to a volume after a group snapshot is created, the existing group snapshots won't be modified. Once a VolumeGroupSnapshotContent is created and the sidecar starts to process it, the volume list will not change with retries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotSpecSourceSelector
@@ -63,7 +68,9 @@ public partial class V1beta1VolumeGroupSnapshotSpecSourceSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source specifies where a group snapshot will be created from. This field is immutable after creation. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotSpecSource
@@ -76,7 +83,9 @@ public partial class V1beta1VolumeGroupSnapshotSpecSource
     [JsonPropertyName("volumeGroupSnapshotContentName")]
     public string? VolumeGroupSnapshotContentName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired characteristics of a group snapshot requested by a user. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotSpec
@@ -89,7 +98,9 @@ public partial class V1beta1VolumeGroupSnapshotSpec
     [JsonPropertyName("volumeGroupSnapshotClassName")]
     public string? VolumeGroupSnapshotClassName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Error is the last observed error during group snapshot creation, if any. This field could be helpful to upper level controllers (i.e., application controller) to decide whether they should continue on waiting for the group snapshot to be created based on the type of error reported. The snapshot controller will keep retrying when an error occurs during the group snapshot creation. Upon success, this error field will be cleared.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotStatusError
@@ -102,7 +113,9 @@ public partial class V1beta1VolumeGroupSnapshotStatusError
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current information of a group snapshot. Consumers must verify binding between VolumeGroupSnapshot and VolumeGroupSnapshotContent objects is successful (by validating that both VolumeGroupSnapshot and VolumeGroupSnapshotContent point to each other) before using this object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotStatus
@@ -123,7 +136,9 @@ public partial class V1beta1VolumeGroupSnapshotStatus
     [JsonPropertyName("readyToUse")]
     public bool? ReadyToUse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeGroupSnapshot is a user's request for creating either a point-in-time group snapshot or binding to a pre-existing group snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -153,3 +168,4 @@ public partial class V1beta1VolumeGroupSnapshot : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1VolumeGroupSnapshotStatus? Status { get; set; }
 }
+#nullable disable

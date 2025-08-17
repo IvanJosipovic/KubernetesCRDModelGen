@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTSecuritySolution is the Schema for the IOTSecuritySolutions API. Manages an iot security solution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTSecuritySolutionList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1IOTSecuritySolution> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderAdditionalWorkspace
@@ -46,7 +49,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderAdditionalWorkspac
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefs
@@ -76,7 +83,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of IOTHub in devices to populate iothubIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelector
@@ -110,7 +121,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A recommendations_enabled block of options to enable or disable as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderRecommendationsEnabled
@@ -179,7 +192,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderRecommendationsEna
     [JsonPropertyName("vulnerableTlsCipherSuite")]
     public bool? VulnerableTlsCipherSuite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRefPolicy
@@ -192,7 +207,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRef
@@ -209,7 +226,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPolicy
@@ -222,7 +241,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelector
@@ -243,7 +264,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecForProvider
@@ -324,7 +347,9 @@ public partial class V1beta1IOTSecuritySolutionSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderAdditionalWorkspace
@@ -337,7 +362,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderAdditionalWorkspa
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPolicy
@@ -350,7 +377,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefs
@@ -367,7 +396,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicy
@@ -380,7 +411,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of IOTHub in devices to populate iothubIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
@@ -401,7 +434,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A recommendations_enabled block of options to enable or disable as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderRecommendationsEnabled
@@ -470,7 +505,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderRecommendationsEn
     [JsonPropertyName("vulnerableTlsCipherSuite")]
     public bool? VulnerableTlsCipherSuite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecInitProvider
@@ -539,7 +576,9 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecProviderConfigRef
@@ -552,7 +591,9 @@ public partial class V1beta1IOTSecuritySolutionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef
@@ -561,7 +602,9 @@ public partial class V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecuritySolutionSpec defines the desired state of IOTSecuritySolution</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionSpec
@@ -586,7 +629,9 @@ public partial class V1beta1IOTSecuritySolutionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionStatusAtProviderAdditionalWorkspace
@@ -599,7 +644,9 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProviderAdditionalWorkspa
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A recommendations_enabled block of options to enable or disable as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionStatusAtProviderRecommendationsEnabled
@@ -668,7 +715,9 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProviderRecommendationsEn
     [JsonPropertyName("vulnerableTlsCipherSuite")]
     public bool? VulnerableTlsCipherSuite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionStatusAtProvider
@@ -737,7 +786,9 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionStatusConditions
@@ -766,7 +817,9 @@ public partial class V1beta1IOTSecuritySolutionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecuritySolutionStatus defines the observed state of IOTSecuritySolution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecuritySolutionStatus
@@ -783,7 +836,9 @@ public partial class V1beta1IOTSecuritySolutionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecuritySolution is the Schema for the IOTSecuritySolutions API. Manages an iot security solution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -813,3 +868,4 @@ public partial class V1beta1IOTSecuritySolution : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1IOTSecuritySolutionStatus? Status { get; set; }
 }
+#nullable disable

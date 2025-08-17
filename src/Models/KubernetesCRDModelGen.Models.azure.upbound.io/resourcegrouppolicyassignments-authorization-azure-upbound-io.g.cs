@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+#nullable enable
 /// <summary>ResourceGroupPolicyAssignment is the Schema for the ResourceGroupPolicyAssignments API. Manages a Resource Group Policy Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceGroupPolicyAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderIdentity
@@ -46,7 +49,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderNonComplianceMessage
@@ -59,7 +64,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderNonCompl
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverridesSelectors
@@ -72,7 +79,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverride
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverrides
@@ -85,7 +94,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderOverride
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRef
@@ -111,7 +124,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy
@@ -124,7 +139,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelector
@@ -141,7 +158,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDe
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicy
@@ -154,7 +173,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRef
@@ -167,7 +188,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelectorPolicy
@@ -180,7 +203,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelector
@@ -197,7 +222,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectorsSelectors
@@ -214,7 +241,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectors
@@ -227,7 +256,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProviderResource
     [JsonPropertyName("selectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProvider
@@ -300,7 +331,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecForProvider
     [JsonPropertyName("resourceSelectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentSpecForProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderIdentity
@@ -313,7 +346,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderIdentit
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderNonComplianceMessage
@@ -326,7 +361,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderNonComp
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverridesSelectors
@@ -339,7 +376,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrid
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrides
@@ -352,7 +391,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderOverrid
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy
@@ -365,7 +406,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRef
@@ -378,7 +421,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy
@@ -391,7 +436,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelector
@@ -408,7 +455,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyD
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicy
@@ -421,7 +470,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRef
@@ -434,7 +485,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelectorPolicy
@@ -447,7 +500,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelector
@@ -464,7 +519,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectorsSelectors
@@ -481,7 +538,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectors
@@ -494,7 +553,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourc
     [JsonPropertyName("selectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProvider
@@ -567,7 +628,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecInitProvider
     [JsonPropertyName("resourceSelectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentSpecInitProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicy
@@ -580,7 +643,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRef
@@ -593,7 +658,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupPolicyAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpecWriteConnectionSecretToRef
@@ -606,7 +673,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpecWriteConnectionSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupPolicyAssignmentSpec defines the desired state of ResourceGroupPolicyAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentSpec
@@ -635,7 +704,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceGroupPolicyAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderIdentity
@@ -656,7 +727,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderIdentit
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderNonComplianceMessage
@@ -669,7 +742,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderNonComp
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverridesSelectors
@@ -686,7 +761,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrid
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrides
@@ -699,7 +776,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderOverrid
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectorsSelectors
@@ -716,7 +795,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourc
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectors
@@ -729,7 +810,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourc
     [JsonPropertyName("selectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProvider
@@ -790,7 +873,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusAtProvider
     [JsonPropertyName("resourceSelectors")]
     public IList<V1beta1ResourceGroupPolicyAssignmentStatusAtProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatusConditions
@@ -819,7 +904,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupPolicyAssignmentStatus defines the observed state of ResourceGroupPolicyAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupPolicyAssignmentStatus
@@ -836,7 +923,9 @@ public partial class V1beta1ResourceGroupPolicyAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupPolicyAssignment is the Schema for the ResourceGroupPolicyAssignments API. Manages a Resource Group Policy Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -866,3 +955,4 @@ public partial class V1beta1ResourceGroupPolicyAssignment : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1ResourceGroupPolicyAssignmentStatus? Status { get; set; }
 }
+#nullable disable

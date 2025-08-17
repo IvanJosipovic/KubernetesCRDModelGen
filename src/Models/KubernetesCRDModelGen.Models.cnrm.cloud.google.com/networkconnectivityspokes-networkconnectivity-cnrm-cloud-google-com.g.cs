@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkConnectivitySpokeList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkConnectivitySpoke> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
@@ -50,7 +53,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris
@@ -67,7 +72,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachments
@@ -80,7 +87,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
     [JsonPropertyName("uris")]
     public IList<V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris> Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef
@@ -97,7 +106,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances
@@ -110,7 +121,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
     [JsonPropertyName("virtualMachineRef")]
     public V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef? VirtualMachineRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The URIs of linked Router appliance resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances
@@ -123,7 +136,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool SiteToSiteDataTransfer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
@@ -140,7 +155,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. VPC network that is associated with the spoke.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
@@ -153,7 +170,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
     [JsonPropertyName("uriRef")]
     public V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef UriRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
@@ -170,7 +189,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The URIs of linked VPN tunnel resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
@@ -183,7 +204,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
     [JsonPropertyName("uris")]
     public IList<V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris> Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
@@ -200,7 +223,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeSpec
@@ -241,7 +266,9 @@ public partial class V1beta1NetworkConnectivitySpokeSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeStatusConditions
@@ -266,7 +293,9 @@ public partial class V1beta1NetworkConnectivitySpokeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkConnectivitySpokeStatus
@@ -295,7 +324,9 @@ public partial class V1beta1NetworkConnectivitySpokeStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -325,3 +356,4 @@ public partial class V1beta1NetworkConnectivitySpoke : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1NetworkConnectivitySpokeStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signalrservice.azure.m.upbound.io;
+#nullable enable
 /// <summary>WebPubsubNetworkACL is the Schema for the WebPubsubNetworkACLs API. Manages the Network ACL for a Web Pubsub service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebPubsubNetworkACLList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1WebPubsubNetworkACL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateEndpoint in network to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdR
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateEndpoint in network to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdS
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpoint
@@ -122,7 +133,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpoint
     [JsonPropertyName("idSelector")]
     public V1beta1WebPubsubNetworkACLSpecForProviderPrivateEndpointIdSelector? IdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A public_network block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderPublicNetwork
@@ -135,7 +148,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderPublicNetwork
     [JsonPropertyName("deniedRequestTypes")]
     public IList<string>? DeniedRequestTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdRef
@@ -165,7 +182,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelector
@@ -199,7 +220,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecForProvider
@@ -228,7 +251,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecForProvider
     [JsonPropertyName("webPubsubIdSelector")]
     public V1beta1WebPubsubNetworkACLSpecForProviderWebPubsubIdSelector? WebPubsubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdRefPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateEndpoint in network to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdRef
@@ -258,7 +285,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointId
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateEndpoint in network to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdSelector
@@ -292,7 +323,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointId
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpoint
@@ -317,7 +350,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpoint
     [JsonPropertyName("idSelector")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderPrivateEndpointIdSelector? IdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A public_network block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPublicNetwork
@@ -330,7 +365,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderPublicNetwork
     [JsonPropertyName("deniedRequestTypes")]
     public IList<string>? DeniedRequestTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdRefPolicy
@@ -343,7 +380,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdRef
@@ -360,7 +399,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelectorPolicy
@@ -373,7 +414,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelector
@@ -394,7 +437,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelect
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecInitProvider
@@ -423,7 +468,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecInitProvider
     [JsonPropertyName("webPubsubIdSelector")]
     public V1beta1WebPubsubNetworkACLSpecInitProviderWebPubsubIdSelector? WebPubsubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecProviderConfigRef
@@ -436,7 +483,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpecWriteConnectionSecretToRef
@@ -445,7 +494,9 @@ public partial class V1beta1WebPubsubNetworkACLSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubNetworkACLSpec defines the desired state of WebPubsubNetworkACL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLSpec
@@ -470,7 +521,9 @@ public partial class V1beta1WebPubsubNetworkACLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebPubsubNetworkACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLStatusAtProviderPrivateEndpoint
@@ -487,7 +540,9 @@ public partial class V1beta1WebPubsubNetworkACLStatusAtProviderPrivateEndpoint
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A public_network block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLStatusAtProviderPublicNetwork
@@ -500,7 +555,9 @@ public partial class V1beta1WebPubsubNetworkACLStatusAtProviderPublicNetwork
     [JsonPropertyName("deniedRequestTypes")]
     public IList<string>? DeniedRequestTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLStatusAtProvider
@@ -525,7 +582,9 @@ public partial class V1beta1WebPubsubNetworkACLStatusAtProvider
     [JsonPropertyName("webPubsubId")]
     public string? WebPubsubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLStatusConditions
@@ -554,7 +613,9 @@ public partial class V1beta1WebPubsubNetworkACLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubNetworkACLStatus defines the observed state of WebPubsubNetworkACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubNetworkACLStatus
@@ -571,7 +632,9 @@ public partial class V1beta1WebPubsubNetworkACLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubNetworkACL is the Schema for the WebPubsubNetworkACLs API. Manages the Network ACL for a Web Pubsub service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -601,3 +664,4 @@ public partial class V1beta1WebPubsubNetworkACL : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1WebPubsubNetworkACLStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageImageList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1api20220301storageImage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecExtendedLocation
@@ -50,7 +53,9 @@ public partial class V1api20220301storageImageSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecOperatorSpecConfigMapExpressions
@@ -67,7 +72,9 @@ public partial class V1api20220301storageImageSpecOperatorSpecConfigMapExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecOperatorSpecSecretExpressions
@@ -84,7 +91,9 @@ public partial class V1api20220301storageImageSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecOperatorSpec
@@ -101,7 +110,9 @@ public partial class V1api20220301storageImageSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageImageSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecOwner
@@ -114,7 +125,9 @@ public partial class V1api20220301storageImageSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecSourceVirtualMachineReference
@@ -135,7 +148,9 @@ public partial class V1api20220301storageImageSpecSourceVirtualMachineReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecSourceVirtualMachine
@@ -148,7 +163,9 @@ public partial class V1api20220301storageImageSpecSourceVirtualMachine
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecSourceVirtualMachineReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSetReference
@@ -169,7 +186,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEnc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSet
@@ -182,7 +201,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEnc
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksManagedDiskReference
@@ -203,7 +224,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksManaged
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksManagedDisk
@@ -216,7 +239,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksManaged
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileDataDisksManagedDiskReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapshotReference
@@ -237,7 +262,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapsho
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapshot
@@ -250,7 +277,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapsho
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileDataDisksSnapshotReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageDataDisk Describes a data disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileDataDisks
@@ -291,7 +320,9 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisks
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSetReference
@@ -312,7 +343,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryp
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSet
@@ -325,7 +358,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryp
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDiskReference
@@ -346,7 +381,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDis
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDisk
@@ -359,7 +396,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDis
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileOsDiskManagedDiskReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshotReference
@@ -380,7 +419,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshotRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshot
@@ -393,7 +434,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshot
     [JsonPropertyName("reference")]
     public V1api20220301storageImageSpecStorageProfileOsDiskSnapshotReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageOSDisk Describes an Operating System disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfileOsDisk
@@ -438,7 +481,9 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDisk
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageStorageProfile Describes a storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpecStorageProfile
@@ -459,7 +504,9 @@ public partial class V1api20220301storageImageSpecStorageProfile
     [JsonPropertyName("zoneResilient")]
     public bool? ZoneResilient { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Image_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageSpec
@@ -508,7 +555,9 @@ public partial class V1api20220301storageImageSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusConditions
@@ -541,7 +590,9 @@ public partial class V1api20220301storageImageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusExtendedLocation
@@ -558,7 +609,9 @@ public partial class V1api20220301storageImageStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusSourceVirtualMachine
@@ -571,7 +624,9 @@ public partial class V1api20220301storageImageStatusSourceVirtualMachine
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksDiskEncryptionSet
@@ -584,7 +639,9 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksDiskE
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksManagedDisk
@@ -597,7 +654,9 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksManag
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksSnapshot
@@ -610,7 +669,9 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksSnaps
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageDataDisk_STATUS Describes a data disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileDataDisks
@@ -651,7 +712,9 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisks
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskDiskEncryptionSet
@@ -664,7 +727,9 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskDiskEncr
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskManagedDisk
@@ -677,7 +742,9 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskManagedD
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskSnapshot
@@ -690,7 +757,9 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskSnapshot
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageOSDisk_STATUS Describes an Operating System disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfileOsDisk
@@ -735,7 +804,9 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDisk
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageStorageProfile_STATUS Describes a storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatusStorageProfile
@@ -756,7 +827,9 @@ public partial class V1api20220301storageImageStatusStorageProfile
     [JsonPropertyName("zoneResilient")]
     public bool? ZoneResilient { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Image_STATUS The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageImageStatus
@@ -809,7 +882,9 @@ public partial class V1api20220301storageImageStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -839,3 +914,4 @@ public partial class V1api20220301storageImage : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1api20220301storageImageStatus? Status { get; set; }
 }
+#nullable disable

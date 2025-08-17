@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240401.WorkspacesCompute Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240401storageWorkspacesComputeList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1api20240401storageWorkspacesCompute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecIdentityUserAssignedIdentitiesReference
@@ -54,7 +57,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecIdentityUserAssign
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecIdentityUserAssignedIdentities
@@ -67,7 +72,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecIdentityUserAssign
     [JsonPropertyName("reference")]
     public V1api20240401storageWorkspacesComputeSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecIdentity
@@ -84,7 +91,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20240401storageWorkspacesComputeSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpecConfigMapExpressions
@@ -101,7 +110,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpecConfig
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpecSecretExpressions
@@ -118,7 +129,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpecSecret
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.WorkspacesComputeOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpec
@@ -135,7 +148,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240401storageWorkspacesComputeSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a machinelearningservices.azure.com/Workspace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecOwner
@@ -148,7 +163,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetReference: Virtual network subnet resource ID the compute nodes belong to</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesAksNetworkingConfigurationSubnetReference
@@ -169,7 +186,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AksNetworkingConfiguration Advance configuration for AKS networking</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesAksNetworkingConfiguration
@@ -194,7 +213,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("subnetReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesAksNetworkingConfigurationSubnetReference? SubnetReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerSubnetReference: Load Balancer Subnet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesLoadBalancerSubnetReference
@@ -215,7 +236,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesSslConfigurationCert
@@ -228,7 +251,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesSslConfigurationKey
@@ -241,7 +266,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SslConfiguration The ssl configuration for scoring</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesSslConfiguration
@@ -274,7 +301,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AKS_Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksProperties
@@ -315,7 +344,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksPrope
     [JsonPropertyName("sslConfiguration")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAksPropertiesSslConfiguration? SslConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksResourceReference
@@ -336,7 +367,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAksResou
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AKS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAks
@@ -369,7 +402,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAks
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAksResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScaleSettings scale settings for AML Compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesScaleSettings
@@ -390,7 +425,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("nodeIdleTimeBeforeScaleDown")]
     public string? NodeIdleTimeBeforeScaleDown { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: The ID of the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesSubnetReference
@@ -411,7 +448,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ResourceId Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesSubnet
@@ -424,7 +463,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("reference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesSubnetReference Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentialsAdminUserPassword
@@ -437,7 +478,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentialsAdminUserSshPublicKey
@@ -450,7 +493,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAccountCredentials Settings for user account that gets created on each on the nodes of a compute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentials
@@ -471,7 +516,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("adminUserSshPublicKey")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesUserAccountCredentialsAdminUserSshPublicKey? AdminUserSshPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Virtual Machine image path</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesVirtualMachineImageReference
@@ -492,7 +539,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineImage Virtual Machine image for Windows AML Compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesVirtualMachineImage
@@ -505,7 +554,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("reference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputePropertiesVirtualMachineImageReference Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AmlComputeProperties AML Compute properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputeProperties
@@ -558,7 +609,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputeResourceReference
@@ -579,7 +632,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AmlCompute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompute
@@ -612,7 +667,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesAmlCompu
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesAmlComputeResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Docker Docker container configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesDocker
@@ -625,7 +682,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("privileged")]
     public bool? Privileged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Endpoint Describes the endpoint configuration for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesEndpoints
@@ -654,7 +713,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("target")]
     public int? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.EnvironmentVariable Environment Variables for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesEnvironmentVariables
@@ -671,7 +732,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Image Describes the Image Specifications</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesImage
@@ -688,7 +751,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.BindOptions Describes the bind options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumesBind
@@ -709,7 +774,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("selinux")]
     public string? Selinux { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.TmpfsOptions Describes the tmpfs options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumesTmpfs
@@ -722,7 +789,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("size")]
     public int? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VolumeOptions Describes the volume options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumesVolume
@@ -735,7 +804,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("nocopy")]
     public bool? Nocopy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VolumeDefinition Describes the volume configuration for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumes
@@ -776,7 +847,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("volume")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumesVolume? Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.CustomService Specifies the custom service configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServices
@@ -809,7 +882,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("volumes")]
     public IList<V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesCustomServicesVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUserObjectIdFromConfig
@@ -822,7 +897,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUserTenantIdFromConfig
@@ -835,7 +912,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AssignedUser A user that can be assigned to a compute instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser
@@ -860,7 +939,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUserTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.PersonalComputeInstanceSettings Settings for a personal compute instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettings
@@ -873,7 +954,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("assignedUser")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser? AssignedUser { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Cron The workflow trigger cron for ComputeStartStop schedule type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStopCron
@@ -894,7 +977,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeRecurrenceSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStopRecurrenceSchedule
@@ -919,7 +1004,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Recurrence The workflow trigger recurrence for ComputeStartStop schedule type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStopRecurrence
@@ -948,7 +1035,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: A system assigned id for the schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStopScheduleReference
@@ -969,7 +1058,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScheduleBase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStopSchedule
@@ -990,7 +1081,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeStartStopSchedule Compute start stop schedule properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStop
@@ -1023,7 +1116,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("triggerType")]
     public string? TriggerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeSchedules The list of schedules to be applied on the computes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedules
@@ -1036,7 +1131,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("computeStartStop")]
     public IList<V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSchedulesComputeStartStop>? ComputeStartStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptReference Script reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScriptsCreationScript
@@ -1061,7 +1158,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptReference Script reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript
@@ -1086,7 +1185,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptsToExecute Customized setup scripts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScripts
@@ -1103,7 +1204,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("startupScript")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript? StartupScript { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SetupScripts Details of customized scripts to execute for setting up the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScripts
@@ -1116,7 +1219,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("scripts")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSetupScriptsScripts? Scripts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceSshSettings Specifies policy and settings for SSH access.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSshSettings
@@ -1133,7 +1238,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("sshPublicAccess")]
     public string? SshPublicAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: The ID of the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSubnetReference
@@ -1154,7 +1261,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ResourceId Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSubnet
@@ -1167,7 +1276,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("reference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstancePropertiesSubnetReference Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceProperties Compute Instance properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstanceProperties
@@ -1216,7 +1327,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstanceResourceReference
@@ -1237,7 +1350,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstance
@@ -1270,7 +1385,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesComputeI
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesComputeInstanceResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataFactoryResourceReference
@@ -1291,7 +1408,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataFact
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataFactory</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataFactory
@@ -1320,7 +1439,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataFact
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesDataFactoryResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataLakeAnalytics_Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLakeAnalyticsProperties
@@ -1333,7 +1454,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLake
     [JsonPropertyName("dataLakeStoreAccountName")]
     public string? DataLakeStoreAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLakeAnalyticsResourceReference
@@ -1354,7 +1477,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLake
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataLakeAnalytics</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLakeAnalytics
@@ -1387,7 +1512,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDataLake
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesDataLakeAnalyticsResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabricksPropertiesDatabricksAccessToken
@@ -1400,7 +1527,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabric
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DatabricksProperties Properties of Databricks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabricksProperties
@@ -1417,7 +1546,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabric
     [JsonPropertyName("workspaceUrl")]
     public string? WorkspaceUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabricksResourceReference
@@ -1438,7 +1569,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabric
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Databricks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabricks
@@ -1471,7 +1604,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesDatabric
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesDatabricksResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccountPassword
@@ -1484,7 +1619,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccountPrivateKeyData
@@ -1497,7 +1634,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccountPublicKeyData
@@ -1510,7 +1649,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineSshCredentials Admin credentials for virtual machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightPropertiesAdministratorAccount
@@ -1535,7 +1676,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.HDInsightProperties HDInsight compute properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightProperties
@@ -1556,7 +1699,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("sshPort")]
     public int? SshPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightResourceReference
@@ -1577,7 +1722,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.HDInsight</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsight
@@ -1610,7 +1757,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesHdInsigh
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesHdInsightResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesExtensionPrincipalIdFromConfig
@@ -1623,7 +1772,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.InstanceTypeSchema_Resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesInstanceTypesResources
@@ -1640,7 +1791,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("requests")]
     public IDictionary<string, string>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.InstanceTypeSchema Instance type schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesInstanceTypes
@@ -1657,7 +1810,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("resources")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesInstanceTypesResources? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesRelayConnectionString
@@ -1670,7 +1825,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesPropertiesServiceBusConnectionString
@@ -1683,7 +1840,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.KubernetesProperties Kubernetes properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesProperties
@@ -1728,7 +1887,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("vcName")]
     public string? VcName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesResourceReference
@@ -1749,7 +1910,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Kubernetes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernetes
@@ -1782,7 +1945,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesKubernet
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesKubernetesResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AutoPauseProperties Auto pause properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSparkPropertiesAutoPauseProperties
@@ -1799,7 +1964,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseS
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AutoScaleProperties Auto scale properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSparkPropertiesAutoScaleProperties
@@ -1820,7 +1987,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseS
     [JsonPropertyName("minNodeCount")]
     public int? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SynapseSpark_Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSparkProperties
@@ -1869,7 +2038,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseS
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSparkResourceReference
@@ -1890,7 +2061,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SynapseSpark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSpark
@@ -1923,7 +2096,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesSynapseS
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesSynapseSparkResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccountPassword
@@ -1936,7 +2111,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccountPrivateKeyData
@@ -1949,7 +2126,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccountPublicKeyData
@@ -1962,7 +2141,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineSshCredentials Admin credentials for virtual machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachinePropertiesAdministratorAccount
@@ -1987,7 +2168,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachine_Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachineProperties
@@ -2020,7 +2203,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("virtualMachineSize")]
     public string? VirtualMachineSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource id of the underlying compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachineResourceReference
@@ -2041,7 +2226,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachine
@@ -2074,7 +2261,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecPropertiesVirtualM
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachineResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecProperties
@@ -2123,7 +2312,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecProperties
     [JsonPropertyName("virtualMachine")]
     public V1api20240401storageWorkspacesComputeSpecPropertiesVirtualMachine? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Sku The resource model definition representing SKU</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpecSku
@@ -2152,7 +2343,9 @@ public partial class V1api20240401storageWorkspacesComputeSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.WorkspacesCompute_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeSpec
@@ -2197,7 +2390,9 @@ public partial class V1api20240401storageWorkspacesComputeSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusConditions
@@ -2230,7 +2425,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusIdentityUserAssignedIdentities
@@ -2247,7 +2444,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusIdentityUserAssi
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusIdentity
@@ -2272,7 +2471,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20240401storageWorkspacesComputeStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AksNetworkingConfiguration_STATUS Advance configuration for AKS networking</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPropertiesAksNetworkingConfiguration
@@ -2297,7 +2498,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SslConfiguration_STATUS The ssl configuration for scoring</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPropertiesSslConfiguration
@@ -2322,7 +2525,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemService_STATUS A system service running on a compute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPropertiesSystemServices
@@ -2343,7 +2548,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AKS_Properties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProperties
@@ -2388,7 +2595,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("systemServices")]
     public IList<V1api20240401storageWorkspacesComputeStatusPropertiesAksPropertiesSystemServices>? SystemServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorAdditionalInfo
@@ -2405,7 +2614,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorDetailsAdditionalInfo
@@ -2422,7 +2633,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsErrorDetails
@@ -2447,7 +2660,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsError
@@ -2476,7 +2691,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrors
@@ -2489,7 +2706,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAksPro
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesAksProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AKS_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAks
@@ -2542,7 +2761,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAks
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorAdditionalInfo
@@ -2559,7 +2780,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorDetailsAdditionalInfo
@@ -2576,7 +2799,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsErrorDetails
@@ -2601,7 +2826,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsError
@@ -2630,7 +2857,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrors
@@ -2643,7 +2872,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.NodeStateCounts_STATUS Counts of various compute node states on the amlCompute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesNodeStateCounts
@@ -2676,7 +2907,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("unusableNodeCount")]
     public int? UnusableNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScaleSettings_STATUS scale settings for AML Compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesScaleSettings
@@ -2697,7 +2930,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("nodeIdleTimeBeforeScaleDown")]
     public string? NodeIdleTimeBeforeScaleDown { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ResourceId_STATUS Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesSubnet
@@ -2710,7 +2945,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAccountCredentials_STATUS Settings for user account that gets created on each on the nodes of a compute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesUserAccountCredentials
@@ -2723,7 +2960,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("adminUserName")]
     public string? AdminUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineImage_STATUS Virtual Machine image for Windows AML Compute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputePropertiesVirtualMachineImage
@@ -2736,7 +2975,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AmlComputeProperties_STATUS AML Compute properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProperties
@@ -2813,7 +3054,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorAdditionalInfo
@@ -2830,7 +3073,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorDetailsAdditionalInfo
@@ -2847,7 +3092,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsErrorDetails
@@ -2872,7 +3119,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsError
@@ -2901,7 +3150,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrors
@@ -2914,7 +3165,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesAmlComputeProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AmlCompute_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCompute
@@ -2967,7 +3220,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesAmlCom
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceApplication_STATUS Defines an Aml Instance application and its connectivity endpoint URI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesApplications
@@ -2984,7 +3239,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("endpointUri")]
     public string? EndpointUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceConnectivityEndpoints_STATUS Defines all connectivity endpoints and properties for an ComputeInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesConnectivityEndpoints
@@ -3001,7 +3258,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("publicIpAddress")]
     public string? PublicIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceEnvironmentInfo_STATUS Environment information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesContainersEnvironment
@@ -3018,7 +3277,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceContainer_STATUS Defines an Aml Instance container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesContainers
@@ -3051,7 +3312,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("services")]
     public IList<IDictionary<string, JsonNode>>? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceCreatedBy_STATUS Describes information on user who created this ComputeInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCreatedBy
@@ -3072,7 +3335,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("userOrgId")]
     public string? UserOrgId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Docker_STATUS Docker container configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesDocker
@@ -3085,7 +3350,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("privileged")]
     public bool? Privileged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Endpoint_STATUS Describes the endpoint configuration for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesEndpoints
@@ -3114,7 +3381,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("target")]
     public int? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.EnvironmentVariable_STATUS Environment Variables for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesEnvironmentVariables
@@ -3131,7 +3400,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Image_STATUS Describes the Image Specifications</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesImage
@@ -3148,7 +3419,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.BindOptions_STATUS Describes the bind options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumesBind
@@ -3169,7 +3442,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("selinux")]
     public string? Selinux { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.TmpfsOptions_STATUS Describes the tmpfs options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumesTmpfs
@@ -3182,7 +3457,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("size")]
     public int? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VolumeOptions_STATUS Describes the volume options for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumesVolume
@@ -3195,7 +3472,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("nocopy")]
     public bool? Nocopy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VolumeDefinition_STATUS Describes the volume configuration for the container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumes
@@ -3236,7 +3515,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("volume")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumesVolume? Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.CustomService_STATUS Specifies the custom service configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServices
@@ -3269,7 +3550,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("volumes")]
     public IList<V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesCustomServicesVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceDataDisk_STATUS Defines an Aml Instance DataDisk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesDataDisks
@@ -3294,7 +3577,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceDataMount_STATUS Defines an Aml Instance DataMount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesDataMounts
@@ -3339,7 +3624,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("sourceType")]
     public string? SourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorAdditionalInfo
@@ -3356,7 +3643,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorDetailsAdditionalInfo
@@ -3373,7 +3662,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsErrorDetails
@@ -3398,7 +3689,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsError
@@ -3427,7 +3720,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrors
@@ -3440,7 +3735,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceLastOperation_STATUS The last operation on ComputeInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesLastOperation
@@ -3465,7 +3762,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("operationTrigger")]
     public string? OperationTrigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ImageMetadata_STATUS Returns metadata about the operating system image for this compute instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesOsImageMetadata
@@ -3486,7 +3785,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("latestImageVersion")]
     public string? LatestImageVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AssignedUser_STATUS A user that can be assigned to a compute instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser
@@ -3503,7 +3804,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.PersonalComputeInstanceSettings_STATUS Settings for a personal compute instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesPersonalComputeInstanceSettings
@@ -3516,7 +3819,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("assignedUser")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesPersonalComputeInstanceSettingsAssignedUser? AssignedUser { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Cron_STATUS The workflow trigger cron for ComputeStartStop schedule type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStopCron
@@ -3537,7 +3842,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeRecurrenceSchedule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStopRecurrenceSchedule
@@ -3562,7 +3869,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Recurrence_STATUS The workflow trigger recurrence for ComputeStartStop schedule type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStopRecurrence
@@ -3591,7 +3900,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScheduleBase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStopSchedule
@@ -3612,7 +3923,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeStartStopSchedule_STATUS Compute start stop schedule properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStop
@@ -3653,7 +3966,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("triggerType")]
     public string? TriggerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeSchedules_STATUS The list of schedules to be applied on the computes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedules
@@ -3666,7 +3981,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("computeStartStop")]
     public IList<V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSchedulesComputeStartStop>? ComputeStartStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptReference_STATUS Script reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScriptsCreationScript
@@ -3691,7 +4008,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptReference_STATUS Script reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript
@@ -3716,7 +4035,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ScriptsToExecute_STATUS Customized setup scripts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScripts
@@ -3733,7 +4054,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("startupScript")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScriptsStartupScript? StartupScript { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SetupScripts_STATUS Details of customized scripts to execute for setting up the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScripts
@@ -3746,7 +4069,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("scripts")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSetupScriptsScripts? Scripts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceSshSettings_STATUS Specifies policy and settings for SSH access.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSshSettings
@@ -3771,7 +4096,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("sshPublicAccess")]
     public string? SshPublicAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ResourceId_STATUS Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesSubnet
@@ -3784,7 +4111,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceVersion_STATUS Version of computeInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstancePropertiesVersions
@@ -3797,7 +4126,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("runtime")]
     public string? Runtime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstanceProperties_STATUS Compute Instance properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProperties
@@ -3890,7 +4221,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorAdditionalInfo
@@ -3907,7 +4240,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorDetailsAdditionalInfo
@@ -3924,7 +4259,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsErrorDetails
@@ -3949,7 +4286,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsError
@@ -3978,7 +4317,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrors
@@ -3991,7 +4332,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstanceProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ComputeInstance_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComputeInstance
@@ -4044,7 +4387,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesComput
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorAdditionalInfo
@@ -4061,7 +4406,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorDetailsAdditionalInfo
@@ -4078,7 +4425,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsErrorDetails
@@ -4103,7 +4452,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsError
@@ -4132,7 +4483,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrors
@@ -4145,7 +4498,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesDataFactoryProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataFactory_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFactory
@@ -4194,7 +4549,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataFa
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataLakeAnalytics_Properties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProperties
@@ -4207,7 +4564,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("dataLakeStoreAccountName")]
     public string? DataLakeStoreAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorAdditionalInfo
@@ -4224,7 +4583,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorDetailsAdditionalInfo
@@ -4241,7 +4602,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsErrorDetails
@@ -4266,7 +4629,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsError
@@ -4295,7 +4660,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrors
@@ -4308,7 +4675,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalyticsProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DataLakeAnalytics_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLakeAnalytics
@@ -4361,7 +4730,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDataLa
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.DatabricksProperties_STATUS Properties of Databricks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProperties
@@ -4374,7 +4745,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("workspaceUrl")]
     public string? WorkspaceUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorAdditionalInfo
@@ -4391,7 +4764,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorDetailsAdditionalInfo
@@ -4408,7 +4783,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsErrorDetails
@@ -4433,7 +4810,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsError
@@ -4462,7 +4841,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrors
@@ -4475,7 +4856,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesDatabricksProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Databricks_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabricks
@@ -4528,7 +4911,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesDatabr
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineSshCredentials_STATUS Admin credentials for virtual machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightPropertiesAdministratorAccount
@@ -4541,7 +4926,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.HDInsightProperties_STATUS HDInsight compute properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProperties
@@ -4562,7 +4949,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("sshPort")]
     public int? SshPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorAdditionalInfo
@@ -4579,7 +4968,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorDetailsAdditionalInfo
@@ -4596,7 +4987,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsErrorDetails
@@ -4621,7 +5014,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsError
@@ -4650,7 +5045,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrors
@@ -4663,7 +5060,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesHdInsightProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.HDInsight_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsight
@@ -4716,7 +5115,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesHdInsi
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.InstanceTypeSchema_Resources_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesPropertiesInstanceTypesResources
@@ -4733,7 +5134,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("requests")]
     public IDictionary<string, string>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.InstanceTypeSchema_STATUS Instance type schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesPropertiesInstanceTypes
@@ -4750,7 +5153,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("resources")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesPropertiesInstanceTypesResources? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.KubernetesProperties_STATUS Kubernetes properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProperties
@@ -4783,7 +5188,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("vcName")]
     public string? VcName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorAdditionalInfo
@@ -4800,7 +5207,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorDetailsAdditionalInfo
@@ -4817,7 +5226,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsErrorDetails
@@ -4842,7 +5253,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsError
@@ -4871,7 +5284,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrors
@@ -4884,7 +5299,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesKubernetesProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Kubernetes_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubernetes
@@ -4937,7 +5354,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesKubern
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AutoPauseProperties_STATUS Auto pause properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkPropertiesAutoPauseProperties
@@ -4954,7 +5373,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AutoScaleProperties_STATUS Auto scale properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkPropertiesAutoScaleProperties
@@ -4975,7 +5396,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("minNodeCount")]
     public int? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SynapseSpark_Properties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProperties
@@ -5024,7 +5447,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorAdditionalInfo
@@ -5041,7 +5466,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorDetailsAdditionalInfo
@@ -5058,7 +5485,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsErrorDetails
@@ -5083,7 +5512,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsError
@@ -5112,7 +5543,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrors
@@ -5125,7 +5558,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSparkProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SynapseSpark_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynapseSpark
@@ -5178,7 +5613,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesSynaps
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachineSshCredentials_STATUS Admin credentials for virtual machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachinePropertiesAdministratorAccount
@@ -5191,7 +5628,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachine_Properties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProperties
@@ -5224,7 +5663,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("virtualMachineSize")]
     public string? VirtualMachineSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorAdditionalInfo
@@ -5241,7 +5682,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorDetailsAdditionalInfo
@@ -5258,7 +5701,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsErrorDetails
@@ -5283,7 +5728,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsError
@@ -5312,7 +5759,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ErrorResponse_STATUS Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrors
@@ -5325,7 +5774,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("error")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachineProvisioningErrorsError? Error { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.VirtualMachine_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachine
@@ -5378,7 +5829,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusPropertiesVirtua
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Compute_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusProperties
@@ -5427,7 +5880,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusProperties
     [JsonPropertyName("virtualMachine")]
     public V1api20240401storageWorkspacesComputeStatusPropertiesVirtualMachine? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Sku_STATUS The resource model definition representing SKU</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusSku
@@ -5456,7 +5911,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatusSystemData
@@ -5489,7 +5946,9 @@ public partial class V1api20240401storageWorkspacesComputeStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.WorkspacesCompute_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspacesComputeStatus
@@ -5538,7 +5997,9 @@ public partial class V1api20240401storageWorkspacesComputeStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.WorkspacesCompute Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -5568,3 +6029,4 @@ public partial class V1api20240401storageWorkspacesCompute : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1api20240401storageWorkspacesComputeStatus? Status { get; set; }
 }
+#nullable disable

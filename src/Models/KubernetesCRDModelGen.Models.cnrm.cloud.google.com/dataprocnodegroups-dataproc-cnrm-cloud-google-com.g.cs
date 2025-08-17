@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataprocNodeGroup is the Schema for the DataprocNodeGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataprocNodeGroupList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1alpha1DataprocNodeGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigAccelerators
@@ -46,7 +49,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigAccelerators
     [JsonPropertyName("acceleratorTypeURI")]
     public string? AcceleratorTypeURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigDiskConfig
@@ -75,7 +80,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigDiskConfig
     [JsonPropertyName("numLocalSSDs")]
     public int? NumLocalSSDs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibilityPolicyInstanceSelectionList
@@ -88,7 +95,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibi
     [JsonPropertyName("rank")]
     public int? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines how the Group selects the provisioning model to ensure required reliability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibilityPolicyProvisioningModelMix
@@ -101,7 +110,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibi
     [JsonPropertyName("standardCapacityPercentAboveBase")]
     public int? StandardCapacityPercentAboveBase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Instance flexibility Policy allowing a mixture of VM shapes and provisioning models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibilityPolicy
@@ -114,7 +125,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibi
     [JsonPropertyName("provisioningModelMix")]
     public V1alpha1DataprocNodeGroupSpecNodeGroupConfigInstanceFlexibilityPolicyProvisioningModelMix? ProvisioningModelMix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration to handle the startup of instances during cluster create and update process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigStartupConfig
@@ -123,7 +136,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigStartupConfig
     [JsonPropertyName("requiredRegistrationFraction")]
     public double? RequiredRegistrationFraction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The node group instance group configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfig
@@ -168,7 +183,9 @@ public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfig
     [JsonPropertyName("startupConfig")]
     public V1alpha1DataprocNodeGroupSpecNodeGroupConfigStartupConfig? StartupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecProjectRef
@@ -189,7 +206,9 @@ public partial class V1alpha1DataprocNodeGroupSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocNodeGroupSpec defines the desired state of DataprocNodeGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpec
@@ -218,7 +237,9 @@ public partial class V1alpha1DataprocNodeGroupSpec
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusConditions
@@ -243,13 +264,17 @@ public partial class V1alpha1DataprocNodeGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigInstanceFlexibilityPolicyInstanceSelectionResults
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Instance flexibility Policy allowing a mixture of VM shapes and provisioning models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigInstanceFlexibilityPolicy
@@ -258,7 +283,9 @@ public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfig
     [JsonPropertyName("instanceSelectionResults")]
     public IList<V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigInstanceFlexibilityPolicyInstanceSelectionResults>? InstanceSelectionResults { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigInstanceReferences
@@ -279,13 +306,17 @@ public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfig
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigManagedGroupConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The node group instance group configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfig
@@ -310,7 +341,9 @@ public partial class V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfig
     [JsonPropertyName("managedGroupConfig")]
     public V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatusObservedState
@@ -319,7 +352,9 @@ public partial class V1alpha1DataprocNodeGroupStatusObservedState
     [JsonPropertyName("nodeGroupConfig")]
     public V1alpha1DataprocNodeGroupStatusObservedStateNodeGroupConfig? NodeGroupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocNodeGroupStatus defines the config connector machine state of DataprocNodeGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupStatus
@@ -340,7 +375,9 @@ public partial class V1alpha1DataprocNodeGroupStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataprocNodeGroupStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocNodeGroup is the Schema for the DataprocNodeGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -370,3 +407,4 @@ public partial class V1alpha1DataprocNodeGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1alpha1DataprocNodeGroupStatus? Status { get; set; }
 }
+#nullable disable

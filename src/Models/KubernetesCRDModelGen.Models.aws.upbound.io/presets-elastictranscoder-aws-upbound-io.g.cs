@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elastictranscoder.aws.upbound.io;
+#nullable enable
 /// <summary>Preset is the Schema for the Presets API. Provides an Elastic Transcoder preset resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PresetList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Preset> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderAudio
@@ -58,7 +61,9 @@ public partial class V1beta1PresetSpecForProviderAudio
     [JsonPropertyName("sampleRate")]
     public string? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderAudioCodecOptions
@@ -79,7 +84,9 @@ public partial class V1beta1PresetSpecForProviderAudioCodecOptions
     [JsonPropertyName("signed")]
     public string? Signed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderThumbnails
@@ -116,7 +123,9 @@ public partial class V1beta1PresetSpecForProviderThumbnails
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderVideo
@@ -173,7 +182,9 @@ public partial class V1beta1PresetSpecForProviderVideo
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderVideoWatermarks
@@ -218,7 +229,9 @@ public partial class V1beta1PresetSpecForProviderVideoWatermarks
     [JsonPropertyName("verticalOffset")]
     public string? VerticalOffset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProvider
@@ -267,7 +280,9 @@ public partial class V1beta1PresetSpecForProvider
     [JsonPropertyName("videoWatermarks")]
     public IList<V1beta1PresetSpecForProviderVideoWatermarks>? VideoWatermarks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProviderAudio
@@ -292,7 +307,9 @@ public partial class V1beta1PresetSpecInitProviderAudio
     [JsonPropertyName("sampleRate")]
     public string? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProviderAudioCodecOptions
@@ -313,7 +330,9 @@ public partial class V1beta1PresetSpecInitProviderAudioCodecOptions
     [JsonPropertyName("signed")]
     public string? Signed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProviderThumbnails
@@ -350,7 +369,9 @@ public partial class V1beta1PresetSpecInitProviderThumbnails
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProviderVideo
@@ -407,7 +428,9 @@ public partial class V1beta1PresetSpecInitProviderVideo
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProviderVideoWatermarks
@@ -452,7 +475,9 @@ public partial class V1beta1PresetSpecInitProviderVideoWatermarks
     [JsonPropertyName("verticalOffset")]
     public string? VerticalOffset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecInitProvider
@@ -497,7 +522,9 @@ public partial class V1beta1PresetSpecInitProvider
     [JsonPropertyName("videoWatermarks")]
     public IList<V1beta1PresetSpecInitProviderVideoWatermarks>? VideoWatermarks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecProviderConfigRefPolicy
@@ -510,7 +537,9 @@ public partial class V1beta1PresetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecProviderConfigRef
@@ -523,7 +552,9 @@ public partial class V1beta1PresetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PresetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecWriteConnectionSecretToRef
@@ -536,7 +567,9 @@ public partial class V1beta1PresetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PresetSpec defines the desired state of Preset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpec
@@ -565,7 +598,9 @@ public partial class V1beta1PresetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PresetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProviderAudio
@@ -590,7 +625,9 @@ public partial class V1beta1PresetStatusAtProviderAudio
     [JsonPropertyName("sampleRate")]
     public string? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProviderAudioCodecOptions
@@ -611,7 +648,9 @@ public partial class V1beta1PresetStatusAtProviderAudioCodecOptions
     [JsonPropertyName("signed")]
     public string? Signed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProviderThumbnails
@@ -648,7 +687,9 @@ public partial class V1beta1PresetStatusAtProviderThumbnails
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProviderVideo
@@ -705,7 +746,9 @@ public partial class V1beta1PresetStatusAtProviderVideo
     [JsonPropertyName("sizingPolicy")]
     public string? SizingPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProviderVideoWatermarks
@@ -750,7 +793,9 @@ public partial class V1beta1PresetStatusAtProviderVideoWatermarks
     [JsonPropertyName("verticalOffset")]
     public string? VerticalOffset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusAtProvider
@@ -807,7 +852,9 @@ public partial class V1beta1PresetStatusAtProvider
     [JsonPropertyName("videoWatermarks")]
     public IList<V1beta1PresetStatusAtProviderVideoWatermarks>? VideoWatermarks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatusConditions
@@ -836,7 +883,9 @@ public partial class V1beta1PresetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PresetStatus defines the observed state of Preset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetStatus
@@ -853,7 +902,9 @@ public partial class V1beta1PresetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Preset is the Schema for the Presets API. Provides an Elastic Transcoder preset resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -883,3 +934,4 @@ public partial class V1beta1Preset : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1PresetStatus? Status { get; set; }
 }
+#nullable disable

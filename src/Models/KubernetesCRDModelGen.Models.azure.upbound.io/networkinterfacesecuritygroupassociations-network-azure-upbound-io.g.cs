@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>NetworkInterfaceSecurityGroupAssociation is the Schema for the NetworkInterfaceSecurityGroupAssociations API. Manages the association between a Network Interface and a Network Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationList : IKube
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkInterfaceSecurityGroupAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProvi
     [JsonPropertyName("networkSecurityGroupIdSelector")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelector? NetworkSecurityGroupIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRef
@@ -256,7 +287,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelector
@@ -286,7 +321,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProv
     [JsonPropertyName("networkSecurityGroupIdSelector")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelector? NetworkSecurityGroupIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecProvider
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpecWriteCon
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceSecurityGroupAssociationSpec defines the desired state of NetworkInterfaceSecurityGroupAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpec
@@ -383,7 +428,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatusAtProvider
@@ -400,7 +447,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatusAtProv
     [JsonPropertyName("networkSecurityGroupId")]
     public string? NetworkSecurityGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatusConditions
@@ -429,7 +478,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatusCondit
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceSecurityGroupAssociationStatus defines the observed state of NetworkInterfaceSecurityGroupAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatus
@@ -446,7 +497,9 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceSecurityGroupAssociation is the Schema for the NetworkInterfaceSecurityGroupAssociations API. Manages the association between a Network Interface and a Network Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +529,4 @@ public partial class V1beta1NetworkInterfaceSecurityGroupAssociation : IKubernet
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceSecurityGroupAssociationStatus? Status { get; set; }
 }
+#nullable disable

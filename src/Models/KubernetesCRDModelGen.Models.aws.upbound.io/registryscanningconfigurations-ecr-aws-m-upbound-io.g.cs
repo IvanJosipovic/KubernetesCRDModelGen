@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ecr.aws.m.upbound.io;
+#nullable enable
 /// <summary>RegistryScanningConfiguration is the Schema for the RegistryScanningConfigurations API. Provides an Elastic Container Registry Scanning Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegistryScanningConfigurationList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1RegistryScanningConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecForProviderRuleRepositoryFilter
@@ -46,7 +49,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecForProviderRuleRepo
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecForProviderRule
@@ -59,7 +64,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecForProviderRule
     [JsonPropertyName("scanFrequency")]
     public string? ScanFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecForProvider
@@ -76,7 +83,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecForProvider
     [JsonPropertyName("scanType")]
     public string? ScanType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecInitProviderRuleRepositoryFilter
@@ -89,7 +98,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecInitProviderRuleRep
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecInitProviderRule
@@ -102,7 +113,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecInitProviderRule
     [JsonPropertyName("scanFrequency")]
     public string? ScanFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecInitProvider
@@ -115,7 +128,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecInitProvider
     [JsonPropertyName("scanType")]
     public string? ScanType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecProviderConfigRef
@@ -128,7 +143,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecWriteConnectionSecretToRef
@@ -137,7 +154,9 @@ public partial class V1beta1RegistryScanningConfigurationSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryScanningConfigurationSpec defines the desired state of RegistryScanningConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpec
@@ -162,7 +181,9 @@ public partial class V1beta1RegistryScanningConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegistryScanningConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationStatusAtProviderRuleRepositoryFilter
@@ -175,7 +196,9 @@ public partial class V1beta1RegistryScanningConfigurationStatusAtProviderRuleRep
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationStatusAtProviderRule
@@ -188,7 +211,9 @@ public partial class V1beta1RegistryScanningConfigurationStatusAtProviderRule
     [JsonPropertyName("scanFrequency")]
     public string? ScanFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationStatusAtProvider
@@ -213,7 +238,9 @@ public partial class V1beta1RegistryScanningConfigurationStatusAtProvider
     [JsonPropertyName("scanType")]
     public string? ScanType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationStatusConditions
@@ -242,7 +269,9 @@ public partial class V1beta1RegistryScanningConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryScanningConfigurationStatus defines the observed state of RegistryScanningConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationStatus
@@ -259,7 +288,9 @@ public partial class V1beta1RegistryScanningConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryScanningConfiguration is the Schema for the RegistryScanningConfigurations API. Provides an Elastic Container Registry Scanning Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -289,3 +320,4 @@ public partial class V1beta1RegistryScanningConfiguration : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1RegistryScanningConfigurationStatus? Status { get; set; }
 }
+#nullable disable

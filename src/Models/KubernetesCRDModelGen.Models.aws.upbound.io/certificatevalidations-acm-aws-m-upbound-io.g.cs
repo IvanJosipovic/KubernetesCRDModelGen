@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acm.aws.m.upbound.io;
+#nullable enable
 /// <summary>CertificateValidation is the Schema for the CertificateValidations API. Waits for and checks successful validation of an ACM certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateValidationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateValidation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProviderCertificateArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CertificateValidationSpecForProviderCertificateArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProviderCertificateArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1CertificateValidationSpecForProviderCertificateArnRe
     [JsonPropertyName("policy")]
     public V1beta1CertificateValidationSpecForProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProviderCertificateArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CertificateValidationSpecForProviderCertificateArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProviderCertificateArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CertificateValidationSpecForProviderCertificateArnSe
     [JsonPropertyName("policy")]
     public V1beta1CertificateValidationSpecForProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1CertificateValidationSpecForProvider
     [JsonPropertyName("validationRecordFqdns")]
     public IList<string>? ValidationRecordFqdns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnRef
@@ -152,7 +167,9 @@ public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnR
     [JsonPropertyName("policy")]
     public V1beta1CertificateValidationSpecInitProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnSelector
@@ -186,7 +205,9 @@ public partial class V1beta1CertificateValidationSpecInitProviderCertificateArnS
     [JsonPropertyName("policy")]
     public V1beta1CertificateValidationSpecInitProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1CertificateValidationSpecInitProvider
     [JsonPropertyName("validationRecordFqdns")]
     public IList<string>? ValidationRecordFqdns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1CertificateValidationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1CertificateValidationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateValidationSpec defines the desired state of CertificateValidation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpec
@@ -254,7 +281,9 @@ public partial class V1beta1CertificateValidationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateValidationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationStatusAtProvider
@@ -275,7 +304,9 @@ public partial class V1beta1CertificateValidationStatusAtProvider
     [JsonPropertyName("validationRecordFqdns")]
     public IList<string>? ValidationRecordFqdns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationStatusConditions
@@ -304,7 +335,9 @@ public partial class V1beta1CertificateValidationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateValidationStatus defines the observed state of CertificateValidation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationStatus
@@ -321,7 +354,9 @@ public partial class V1beta1CertificateValidationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateValidation is the Schema for the CertificateValidations API. Waits for and checks successful validation of an ACM certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +386,4 @@ public partial class V1beta1CertificateValidation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1CertificateValidationStatus? Status { get; set; }
 }
+#nullable disable

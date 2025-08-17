@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.asset.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AssetFeed is the Schema for the AssetFeed API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AssetFeedList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1AssetFeed> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition which determines whether an asset update should be published.  If specified, an asset will be returned only when the expression evaluates  to true.  When set, `expression` field in the `Expr` must be a valid [CEL expression]  (https://github.com/google/cel-spec) on a TemporalAsset with name  `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted  == true") will only publish Asset deletions. Other fields of `Expr` are  optional.   See our [user  guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes-with-condition)  for detailed instructions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecCondition
@@ -54,7 +57,9 @@ public partial class V1alpha1AssetFeedSpecCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestinationTopicRef
@@ -71,7 +76,9 @@ public partial class V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestinationTopic
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination on Pub/Sub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestination
@@ -80,7 +87,9 @@ public partial class V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestination
     [JsonPropertyName("topicRef")]
     public V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestinationTopicRef? TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Feed output configuration defining where the asset updates are published to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecFeedOutputConfig
@@ -89,7 +98,9 @@ public partial class V1alpha1AssetFeedSpecFeedOutputConfig
     [JsonPropertyName("pubsubDestination")]
     public V1alpha1AssetFeedSpecFeedOutputConfigPubsubDestination? PubsubDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderRef represents the Folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecFolderRef
@@ -106,7 +117,9 @@ public partial class V1alpha1AssetFeedSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrganizationRef represents the Organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecOrganizationRef
@@ -115,7 +128,9 @@ public partial class V1alpha1AssetFeedSpecOrganizationRef
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecProjectRef
@@ -136,7 +151,9 @@ public partial class V1alpha1AssetFeedSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetFeedSpec defines the desired state of AssetFeed</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpec
@@ -181,7 +198,9 @@ public partial class V1alpha1AssetFeedSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedStatusConditions
@@ -206,7 +225,9 @@ public partial class V1alpha1AssetFeedStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetFeedStatus defines the config connector machine state of AssetFeed</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedStatus
@@ -223,7 +244,9 @@ public partial class V1alpha1AssetFeedStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetFeed is the Schema for the AssetFeed API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -253,3 +276,4 @@ public partial class V1alpha1AssetFeed : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1alpha1AssetFeedStatus? Status { get; set; }
 }
+#nullable disable

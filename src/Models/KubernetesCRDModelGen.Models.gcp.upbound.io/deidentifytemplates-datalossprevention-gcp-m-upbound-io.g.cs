@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datalossprevention.gcp.m.upbound.io;
+#nullable enable
 /// <summary>DeidentifyTemplate is the Schema for the DeidentifyTemplates API. Allows creation of templates to de-identify content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,19 +34,25 @@ public partial class V1beta1DeidentifyTemplateList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1DeidentifyTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all findings not specified in other ImageTransformation's selectedInfoTypes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsAllInfoTypes
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all text that doesn't match an infoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsAllText
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The color to use when redacting content from an image. If not specified, the default is black. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsRedactionColor
@@ -62,7 +69,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("red")]
     public double? Red { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesSensitivityScore
@@ -71,7 +80,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes
@@ -88,7 +99,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to the selected infoTypes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes
@@ -97,7 +110,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("infoTypes")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransforms
@@ -118,7 +133,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("selectedInfoTypes")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes? SelectedInfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as an image and redact. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformations
@@ -127,7 +144,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigIma
     [JsonPropertyName("transforms")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransforms>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -136,7 +155,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
@@ -153,7 +174,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -170,7 +193,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -191,7 +216,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -224,7 +251,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -241,7 +270,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -262,7 +293,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -295,7 +328,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -312,7 +347,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -333,7 +370,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -366,7 +405,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -383,7 +424,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -392,7 +435,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -405,7 +450,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -426,7 +473,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -435,7 +484,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -448,7 +499,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -457,7 +510,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -466,7 +521,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -483,7 +540,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -492,7 +551,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -509,7 +570,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -526,7 +589,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -539,7 +604,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -548,7 +615,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -557,7 +626,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -574,7 +645,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -583,7 +656,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -592,7 +667,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -605,7 +682,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -614,7 +693,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -623,7 +704,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -640,7 +723,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -649,7 +734,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -666,7 +753,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -695,7 +784,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -704,7 +795,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -717,7 +810,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -726,7 +821,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -735,7 +832,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -752,7 +851,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -773,7 +874,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -786,7 +889,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -799,7 +904,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -816,13 +923,17 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -839,7 +950,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -860,7 +973,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -897,7 +1012,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -906,7 +1023,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -915,7 +1034,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -924,7 +1045,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -933,7 +1056,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -986,7 +1111,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformations
@@ -999,7 +1126,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformations
@@ -1008,7 +1137,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInf
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
@@ -1017,7 +1148,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
@@ -1034,7 +1167,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
@@ -1055,7 +1190,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
@@ -1092,7 +1229,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
@@ -1109,7 +1248,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
@@ -1118,7 +1259,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
@@ -1131,7 +1274,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsCondition
@@ -1140,7 +1285,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsFields
@@ -1149,7 +1296,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -1158,7 +1307,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
@@ -1175,7 +1326,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -1192,7 +1345,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -1213,7 +1368,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -1246,7 +1403,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -1263,7 +1422,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -1284,7 +1445,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -1317,7 +1480,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -1334,7 +1499,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -1355,7 +1522,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -1388,7 +1557,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -1405,7 +1576,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -1414,7 +1587,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -1427,7 +1602,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -1448,7 +1625,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -1457,7 +1636,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -1470,7 +1651,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -1479,7 +1662,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef
@@ -1492,7 +1677,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -1501,7 +1688,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -1518,7 +1707,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -1527,7 +1718,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -1544,7 +1737,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -1561,7 +1756,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -1574,7 +1771,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -1583,7 +1782,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef
@@ -1596,7 +1797,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -1605,7 +1808,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -1622,7 +1827,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -1631,7 +1838,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -1640,7 +1849,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -1653,7 +1864,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -1662,7 +1875,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef
@@ -1675,7 +1890,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -1684,7 +1901,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -1701,7 +1920,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -1710,7 +1931,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -1727,7 +1950,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -1756,7 +1981,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -1765,7 +1992,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -1778,7 +2007,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -1787,7 +2018,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef
@@ -1800,7 +2033,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -1809,7 +2044,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -1826,7 +2063,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -1847,7 +2086,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -1860,7 +2101,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -1873,7 +2116,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -1890,13 +2135,17 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -1913,7 +2162,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -1934,7 +2185,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -1971,7 +2224,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -1980,7 +2235,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -1989,7 +2246,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -1998,13 +2257,17 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each matching finding with the name of the info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceWithInfoTypeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -2013,7 +2276,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -2066,7 +2331,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
@@ -2079,7 +2346,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the contents of the field as free text, and selectively transform content that matches an InfoType. Only one of primitive_transformation or info_type_transformations must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
@@ -2088,7 +2357,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -2105,7 +2376,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -2126,7 +2399,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -2163,7 +2438,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -2180,7 +2457,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -2201,7 +2480,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -2238,7 +2519,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -2255,7 +2538,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -2276,7 +2561,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -2313,7 +2600,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -2330,7 +2619,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
@@ -2339,7 +2630,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -2352,7 +2645,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -2373,7 +2668,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -2382,7 +2679,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -2395,7 +2694,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -2404,7 +2705,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -2413,7 +2716,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -2430,7 +2735,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -2439,7 +2746,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -2456,7 +2765,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -2473,7 +2784,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -2486,7 +2799,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -2495,7 +2810,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -2504,7 +2821,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -2521,7 +2840,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
@@ -2530,7 +2851,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -2539,7 +2862,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -2552,7 +2877,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -2561,7 +2888,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -2570,7 +2899,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -2587,7 +2918,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -2596,7 +2929,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -2613,7 +2948,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -2642,7 +2979,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -2651,7 +2990,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -2664,7 +3005,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -2673,7 +3016,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -2682,7 +3027,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -2699,7 +3046,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
@@ -2720,7 +3069,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
@@ -2737,7 +3088,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
@@ -2758,7 +3111,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -2795,7 +3150,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
@@ -2812,7 +3169,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
@@ -2833,7 +3192,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -2870,7 +3231,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -2887,13 +3250,17 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -2910,7 +3277,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -2931,7 +3300,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -2968,7 +3339,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
@@ -2977,7 +3350,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -2986,7 +3361,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -2995,7 +3372,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
@@ -3004,7 +3383,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
@@ -3053,7 +3434,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformations
@@ -3074,7 +3457,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
@@ -3083,7 +3468,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
@@ -3100,7 +3487,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
@@ -3121,7 +3510,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
@@ -3158,7 +3549,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
@@ -3175,7 +3568,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
@@ -3184,7 +3579,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
@@ -3197,7 +3594,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
@@ -3206,7 +3605,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressions
@@ -3215,7 +3616,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("condition")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformations
@@ -3228,7 +3631,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRec
     [JsonPropertyName("recordSuppressions")]
     public IList<V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the deidentify template Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfig
@@ -3245,7 +3650,9 @@ public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfig
     [JsonPropertyName("recordTransformations")]
     public V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigRecordTransformations? RecordTransformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProvider
@@ -3270,19 +3677,25 @@ public partial class V1beta1DeidentifyTemplateSpecForProvider
     [JsonPropertyName("templateId")]
     public string? TemplateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all findings not specified in other ImageTransformation's selectedInfoTypes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsAllInfoTypes
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all text that doesn't match an infoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsAllText
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The color to use when redacting content from an image. If not specified, the default is black. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsRedactionColor
@@ -3299,7 +3712,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("red")]
     public double? Red { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesSensitivityScore
@@ -3308,7 +3723,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes
@@ -3325,7 +3742,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to the selected infoTypes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes
@@ -3334,7 +3753,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("infoTypes")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransforms
@@ -3355,7 +3776,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("selectedInfoTypes")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes? SelectedInfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as an image and redact. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformations
@@ -3364,7 +3787,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIm
     [JsonPropertyName("transforms")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigImageTransformationsTransforms>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -3373,7 +3798,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
@@ -3390,7 +3817,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -3407,7 +3836,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -3428,7 +3859,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -3461,7 +3894,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -3478,7 +3913,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -3499,7 +3936,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -3532,7 +3971,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -3549,7 +3990,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -3570,7 +4013,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -3603,7 +4048,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -3620,7 +4067,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -3629,7 +4078,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -3642,7 +4093,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -3663,7 +4116,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -3672,7 +4127,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -3685,7 +4142,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -3694,7 +4153,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -3703,7 +4164,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -3720,7 +4183,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -3729,7 +4194,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -3746,7 +4213,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -3763,7 +4232,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -3776,7 +4247,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -3785,7 +4258,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -3794,7 +4269,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -3811,7 +4288,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -3820,7 +4299,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -3829,7 +4310,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -3842,7 +4325,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -3851,7 +4336,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -3860,7 +4347,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -3877,7 +4366,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -3886,7 +4377,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -3903,7 +4396,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -3932,7 +4427,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -3941,7 +4438,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -3954,7 +4453,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -3963,7 +4464,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -3972,7 +4475,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -3989,7 +4494,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -4010,7 +4517,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -4023,7 +4532,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -4036,7 +4547,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -4053,13 +4566,17 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -4076,7 +4593,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -4097,7 +4616,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -4134,7 +4655,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -4143,7 +4666,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -4152,7 +4677,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -4161,7 +4688,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -4170,7 +4699,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -4223,7 +4754,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformations
@@ -4236,7 +4769,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformations
@@ -4245,7 +4780,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigIn
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
@@ -4254,7 +4791,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
@@ -4271,7 +4810,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
@@ -4292,7 +4833,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
@@ -4329,7 +4872,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
@@ -4346,7 +4891,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
@@ -4355,7 +4902,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
@@ -4368,7 +4917,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsCondition
@@ -4377,7 +4928,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsFields
@@ -4386,7 +4939,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -4395,7 +4950,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
@@ -4412,7 +4969,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -4429,7 +4988,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -4450,7 +5011,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -4483,7 +5046,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -4500,7 +5065,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -4521,7 +5088,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -4554,7 +5123,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -4571,7 +5142,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -4592,7 +5165,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -4625,7 +5200,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -4642,7 +5219,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -4651,7 +5230,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -4664,7 +5245,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -4685,7 +5268,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -4694,7 +5279,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -4707,7 +5294,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -4716,7 +5305,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef
@@ -4729,7 +5320,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -4738,7 +5331,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -4755,7 +5350,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -4764,7 +5361,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -4781,7 +5380,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -4798,7 +5399,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -4811,7 +5414,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -4820,7 +5425,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef
@@ -4833,7 +5440,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -4842,7 +5451,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -4859,7 +5470,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -4868,7 +5481,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -4877,7 +5492,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -4890,7 +5507,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -4899,7 +5518,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef
@@ -4912,7 +5533,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -4921,7 +5544,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -4938,7 +5563,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -4947,7 +5574,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -4964,7 +5593,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -4993,7 +5624,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -5002,7 +5635,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -5015,7 +5650,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -5024,7 +5661,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef
@@ -5037,7 +5676,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -5046,7 +5687,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -5063,7 +5706,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -5084,7 +5729,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -5097,7 +5744,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -5110,7 +5759,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -5127,13 +5778,17 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -5150,7 +5805,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -5171,7 +5828,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -5208,7 +5867,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -5217,7 +5878,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -5226,7 +5889,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -5235,13 +5900,17 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each matching finding with the name of the info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceWithInfoTypeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -5250,7 +5919,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -5303,7 +5974,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
@@ -5316,7 +5989,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the contents of the field as free text, and selectively transform content that matches an InfoType. Only one of primitive_transformation or info_type_transformations must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
@@ -5325,7 +6000,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -5342,7 +6019,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -5363,7 +6042,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -5400,7 +6081,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -5417,7 +6100,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -5438,7 +6123,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -5475,7 +6162,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -5492,7 +6181,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -5513,7 +6204,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -5550,7 +6243,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -5567,7 +6262,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
@@ -5576,7 +6273,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -5589,7 +6288,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -5610,7 +6311,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -5619,7 +6322,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -5632,7 +6337,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -5641,7 +6348,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -5650,7 +6359,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -5667,7 +6378,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -5676,7 +6389,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -5693,7 +6408,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -5710,7 +6427,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -5723,7 +6442,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -5732,7 +6453,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -5741,7 +6464,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -5758,7 +6483,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
@@ -5767,7 +6494,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -5776,7 +6505,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -5789,7 +6520,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -5798,7 +6531,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -5807,7 +6542,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -5824,7 +6561,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -5833,7 +6572,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -5850,7 +6591,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -5879,7 +6622,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -5888,7 +6633,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -5901,7 +6648,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -5910,7 +6659,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -5919,7 +6670,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -5936,7 +6689,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
@@ -5957,7 +6712,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
@@ -5974,7 +6731,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
@@ -5995,7 +6754,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -6032,7 +6793,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
@@ -6049,7 +6812,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
@@ -6070,7 +6835,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -6107,7 +6874,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -6124,13 +6893,17 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -6147,7 +6920,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -6168,7 +6943,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -6205,7 +6982,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
@@ -6214,7 +6993,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -6223,7 +7004,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -6232,7 +7015,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
@@ -6241,7 +7026,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
@@ -6290,7 +7077,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformations
@@ -6311,7 +7100,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
@@ -6320,7 +7111,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
@@ -6337,7 +7130,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
@@ -6358,7 +7153,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
@@ -6395,7 +7192,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
@@ -6412,7 +7211,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
@@ -6421,7 +7222,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
@@ -6434,7 +7237,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
@@ -6443,7 +7248,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressions
@@ -6452,7 +7259,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("condition")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformations
@@ -6465,7 +7274,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRe
     [JsonPropertyName("recordSuppressions")]
     public IList<V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the deidentify template Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfig
@@ -6482,7 +7293,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfig
     [JsonPropertyName("recordTransformations")]
     public V1beta1DeidentifyTemplateSpecInitProviderDeidentifyConfigRecordTransformations? RecordTransformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecInitProvider
@@ -6507,7 +7320,9 @@ public partial class V1beta1DeidentifyTemplateSpecInitProvider
     [JsonPropertyName("templateId")]
     public string? TemplateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecProviderConfigRef
@@ -6520,7 +7335,9 @@ public partial class V1beta1DeidentifyTemplateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecWriteConnectionSecretToRef
@@ -6529,7 +7346,9 @@ public partial class V1beta1DeidentifyTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeidentifyTemplateSpec defines the desired state of DeidentifyTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpec
@@ -6554,19 +7373,25 @@ public partial class V1beta1DeidentifyTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DeidentifyTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all findings not specified in other ImageTransformation's selectedInfoTypes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsAllInfoTypes
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to all text that doesn't match an infoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsAllText
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The color to use when redacting content from an image. If not specified, the default is black. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsRedactionColor
@@ -6583,7 +7408,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("red")]
     public double? Red { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesSensitivityScore
@@ -6592,7 +7419,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes
@@ -6609,7 +7438,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apply transformation to the selected infoTypes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes
@@ -6618,7 +7449,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("infoTypes")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransforms
@@ -6639,7 +7472,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("selectedInfoTypes")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes? SelectedInfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as an image and redact. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformations
@@ -6648,7 +7483,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIm
     [JsonPropertyName("transforms")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigImageTransformationsTransforms>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -6657,7 +7494,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
@@ -6674,7 +7513,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -6691,7 +7532,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -6712,7 +7555,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -6745,7 +7590,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -6762,7 +7609,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -6783,7 +7632,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -6816,7 +7667,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -6833,7 +7686,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -6854,7 +7709,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -6887,7 +7744,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -6904,7 +7763,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -6913,7 +7774,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -6926,7 +7789,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -6947,7 +7812,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -6956,7 +7823,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -6969,7 +7838,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -6978,7 +7849,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -6987,7 +7860,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -7004,7 +7879,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -7013,7 +7890,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -7030,7 +7909,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -7047,7 +7928,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -7060,7 +7943,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -7069,7 +7954,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -7078,7 +7965,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -7095,7 +7984,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -7104,7 +7995,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -7113,7 +8006,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -7126,7 +8021,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -7135,7 +8032,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -7144,7 +8043,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -7161,7 +8062,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -7170,7 +8073,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -7187,7 +8092,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -7216,7 +8123,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -7225,7 +8134,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -7238,7 +8149,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -7247,7 +8160,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -7256,7 +8171,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -7273,7 +8190,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -7294,7 +8213,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -7307,7 +8228,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -7320,7 +8243,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -7337,13 +8262,17 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -7360,7 +8289,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -7381,7 +8312,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -7418,7 +8351,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -7427,7 +8362,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -7436,7 +8373,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -7445,7 +8384,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -7454,7 +8395,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -7507,7 +8450,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformations
@@ -7520,7 +8465,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformations
@@ -7529,7 +8476,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigIn
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
@@ -7538,7 +8487,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
@@ -7555,7 +8506,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
@@ -7576,7 +8529,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
@@ -7613,7 +8568,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
@@ -7630,7 +8587,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
@@ -7639,7 +8598,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
@@ -7652,7 +8613,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsCondition
@@ -7661,7 +8624,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsFields
@@ -7670,7 +8635,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypesSensitivityScore
@@ -7679,7 +8646,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
@@ -7696,7 +8665,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -7713,7 +8684,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -7734,7 +8707,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -7767,7 +8742,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -7784,7 +8761,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -7805,7 +8784,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -7838,7 +8819,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -7855,7 +8838,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -7876,7 +8861,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -7909,7 +8896,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -7926,7 +8915,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
@@ -7935,7 +8926,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -7948,7 +8941,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -7969,7 +8964,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -7978,7 +8975,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -7991,7 +8990,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -8000,7 +9001,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef
@@ -8013,7 +9016,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -8022,7 +9027,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -8039,7 +9046,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -8048,7 +9057,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -8065,7 +9076,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -8082,7 +9095,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -8095,7 +9110,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -8104,7 +9121,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef
@@ -8117,7 +9136,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -8126,7 +9147,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -8143,7 +9166,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
@@ -8152,7 +9177,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -8161,7 +9188,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -8174,7 +9203,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -8183,7 +9214,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef
@@ -8196,7 +9229,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -8205,7 +9240,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -8222,7 +9259,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -8231,7 +9270,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -8248,7 +9289,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -8277,7 +9320,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -8286,7 +9331,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -8299,7 +9346,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -8308,7 +9357,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 128/192/256 bit key. A base64-encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef
@@ -8321,7 +9372,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -8330,7 +9383,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("keySecretRef")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedKeySecretRef? KeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -8347,7 +9402,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
@@ -8368,7 +9425,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -8381,7 +9440,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -8394,7 +9455,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("integerValue")]
     public string? IntegerValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -8411,13 +9474,17 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -8434,7 +9501,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -8455,7 +9524,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -8492,7 +9563,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
@@ -8501,7 +9574,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -8510,7 +9585,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -8519,13 +9596,17 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each matching finding with the name of the info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceWithInfoTypeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
@@ -8534,7 +9615,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
@@ -8587,7 +9670,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
@@ -8600,7 +9685,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the contents of the field as free text, and selectively transform content that matches an InfoType. Only one of primitive_transformation or info_type_transformations must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
@@ -8609,7 +9696,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("transformations")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations>? Transformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
@@ -8626,7 +9715,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
@@ -8647,7 +9738,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound of the range, exclusive; type must match min. The max block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
@@ -8684,7 +9777,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
@@ -8701,7 +9796,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
@@ -8722,7 +9819,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used. The min block must only contain one argument. See the bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
@@ -8759,7 +9858,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
@@ -8776,7 +9877,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
@@ -8797,7 +9900,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replacement value for this bucket. The replacement_value block must only contain one argument. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
@@ -8834,7 +9939,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
@@ -8851,7 +9958,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("replacementValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue? ReplacementValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH This can be used on data of type: number, long, string, timestamp. If the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
@@ -8860,7 +9969,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("buckets")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
@@ -8873,7 +9984,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("commonCharactersToIgnore")]
     public string? CommonCharactersToIgnore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
@@ -8894,7 +10007,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("reverseOrder")]
     public bool? ReverseOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
@@ -8903,7 +10018,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
@@ -8916,7 +10033,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
@@ -8925,7 +10044,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
@@ -8934,7 +10055,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
@@ -8951,7 +10074,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeSensitivityScore
@@ -8960,7 +10085,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
@@ -8977,7 +10104,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
@@ -8994,7 +10123,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
@@ -9007,7 +10138,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
@@ -9016,7 +10149,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
@@ -9025,7 +10160,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
@@ -9042,7 +10179,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
@@ -9051,7 +10190,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("cryptoKey")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
@@ -9060,7 +10201,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
@@ -9073,7 +10216,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
@@ -9082,7 +10227,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
@@ -9091,7 +10238,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
@@ -9108,7 +10257,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional custom sensitivity for this InfoType. This only applies to data profiling. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeSensitivityScore
@@ -9117,7 +10268,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("score")]
     public string? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType SurrogateType. This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
@@ -9134,7 +10287,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the content.reidentify API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
@@ -9163,7 +10318,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("surrogateInfoType")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
@@ -9172,7 +10329,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMS wrapped key. Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see Creating a wrapped key. Note: When you use Cloud KMS for cryptographic operations, charges apply. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
@@ -9185,7 +10344,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wrappedKey")]
     public string? WrappedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
@@ -9194,7 +10355,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
@@ -9203,7 +10366,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key used by the encryption function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
@@ -9220,7 +10385,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("unwrapped")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shifts dates by random number of days, with option to be consistent for the same context. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
@@ -9241,7 +10408,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("upperBoundDays")]
     public double? UpperBoundDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
@@ -9258,7 +10427,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
@@ -9279,7 +10450,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lower bound value of buckets. All values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value "-10". The lower_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
@@ -9316,7 +10489,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
@@ -9333,7 +10508,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
@@ -9354,7 +10531,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value "89+". The upper_bound block must only contain one argument. See the fixed_size_bucketing_config block description for more information about choosing a data type. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
@@ -9391,7 +10570,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies. The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with "10-20". This can be used on data of type: double, long. If the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
@@ -9408,13 +10589,17 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("upperBound")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound? UpperBound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
@@ -9431,7 +10616,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
@@ -9452,7 +10639,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. The new_value block must only contain one argument. For example when replacing the contents of a string-type field, only string_value should be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
@@ -9489,7 +10678,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace each input value with a given value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
@@ -9498,7 +10689,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("newValue")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of words to select from for random replacement. The limits page contains details about the size limits of dictionaries. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList
@@ -9507,7 +10700,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replace with a value randomly drawn (with replacement) from a dictionary. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig
@@ -9516,7 +10711,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("wordList")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
@@ -9525,7 +10722,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("partToExtract")]
     public string? PartToExtract { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Primitive transformation to apply to the infoType. The primitive_transformation block must only contain one argument, corresponding to the type of transformation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
@@ -9574,7 +10773,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timePartConfig")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformations
@@ -9595,7 +10796,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("primitiveTransformation")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field within the record this condition is evaluated against. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
@@ -9604,7 +10807,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a whole or partial calendar date. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
@@ -9621,7 +10826,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a time of day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
@@ -9642,7 +10849,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Value to compare against. The value block must only contain one argument. For example when a condition is evaluated against a string-type field, only string_value should be set. This argument is mandatory, except for conditions using the EXISTS operator. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
@@ -9679,7 +10888,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
@@ -9696,7 +10907,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("value")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions to apply to the expression. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
@@ -9705,7 +10918,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("conditions")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expression, consisting of an operator and conditions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
@@ -9718,7 +10933,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("logicalOperator")]
     public string? LogicalOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
@@ -9727,7 +10944,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("expressions")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressions
@@ -9736,7 +10955,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("condition")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformations
@@ -9749,7 +10970,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRe
     [JsonPropertyName("recordSuppressions")]
     public IList<V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the deidentify template Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfig
@@ -9766,7 +10989,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfig
     [JsonPropertyName("recordTransformations")]
     public V1beta1DeidentifyTemplateStatusAtProviderDeidentifyConfigRecordTransformations? RecordTransformations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusAtProvider
@@ -9807,7 +11032,9 @@ public partial class V1beta1DeidentifyTemplateStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatusConditions
@@ -9836,7 +11063,9 @@ public partial class V1beta1DeidentifyTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeidentifyTemplateStatus defines the observed state of DeidentifyTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateStatus
@@ -9853,7 +11082,9 @@ public partial class V1beta1DeidentifyTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeidentifyTemplate is the Schema for the DeidentifyTemplates API. Allows creation of templates to de-identify content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -9883,3 +11114,4 @@ public partial class V1beta1DeidentifyTemplate : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1DeidentifyTemplateStatus? Status { get; set; }
 }
+#nullable disable

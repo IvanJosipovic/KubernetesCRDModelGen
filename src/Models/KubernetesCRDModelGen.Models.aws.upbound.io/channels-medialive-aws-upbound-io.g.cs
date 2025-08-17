@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.medialive.aws.upbound.io;
+#nullable enable
 /// <summary>Channel is the Schema for the Channels API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ChannelList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Channel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderCdiInputSpecification
@@ -42,7 +45,9 @@ public partial class V1beta1ChannelSpecForProviderCdiInputSpecification
     [JsonPropertyName("resolution")]
     public string? Resolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderDestinationsMediaPackageSettings
@@ -51,7 +56,9 @@ public partial class V1beta1ChannelSpecForProviderDestinationsMediaPackageSettin
     [JsonPropertyName("channelId")]
     public string? ChannelId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderDestinationsMultiplexSettings
@@ -64,7 +71,9 @@ public partial class V1beta1ChannelSpecForProviderDestinationsMultiplexSettings
     [JsonPropertyName("programName")]
     public string? ProgramName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderDestinationsSettings
@@ -85,7 +94,9 @@ public partial class V1beta1ChannelSpecForProviderDestinationsSettings
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderDestinations
@@ -106,7 +117,9 @@ public partial class V1beta1ChannelSpecForProviderDestinations
     [JsonPropertyName("settings")]
     public IList<V1beta1ChannelSpecForProviderDestinationsSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
@@ -123,7 +136,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("targetLkfs")]
     public double? TargetLkfs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
@@ -140,7 +155,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("csid")]
     public string? Csid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
@@ -153,7 +170,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("sid")]
     public double? Sid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
@@ -170,7 +189,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("nielsenNaesIiNwSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
@@ -179,7 +200,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("nielsenWatermarksSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
@@ -220,7 +243,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("vbrQuality")]
     public string? VbrQuality { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
@@ -253,7 +278,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("metadataControl")]
     public string? MetadataControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
@@ -286,7 +313,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("surroundTrim")]
     public double? SurroundTrim { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
@@ -371,7 +400,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("surroundMode")]
     public string? SurroundMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
@@ -388,13 +419,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
@@ -411,7 +446,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettings
@@ -444,7 +481,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("wavSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
@@ -457,7 +496,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("inputChannel")]
     public double? InputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
@@ -470,7 +511,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("outputChannel")]
     public double? OutputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettings
@@ -487,7 +530,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("channelsOut")]
     public double? ChannelsOut { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptions
@@ -536,7 +581,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlankingAvailBlankingImage
@@ -553,7 +600,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlankingAv
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlanking
@@ -566,13 +615,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlanking
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
@@ -589,7 +642,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
@@ -662,7 +717,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
@@ -679,7 +736,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
@@ -752,7 +811,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
@@ -773,49 +834,65 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
@@ -824,7 +901,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
@@ -833,7 +912,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettings
@@ -890,7 +971,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("webvttDestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptions
@@ -919,7 +1002,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
@@ -936,7 +1021,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigurationInputLossBehavior
@@ -961,7 +1048,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     [JsonPropertyName("repeatFrameMsec")]
     public double? RepeatFrameMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfiguration
@@ -990,13 +1079,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
@@ -1005,7 +1098,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfiguration
@@ -1018,7 +1113,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
     [JsonPropertyName("motionGraphicsSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsNielsenConfiguration
@@ -1031,7 +1128,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsNielsenConfigur
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
@@ -1040,7 +1139,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
@@ -1049,7 +1150,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("archiveS3Settings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
@@ -1058,7 +1161,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
@@ -1075,7 +1180,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("rolloverInterval")]
     public double? RolloverInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
@@ -1084,7 +1191,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
@@ -1093,7 +1202,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
@@ -1102,7 +1213,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("frameCaptureS3Settings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
@@ -1115,7 +1228,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("frameCaptureCdnSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
@@ -1132,7 +1247,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("languageDescription")]
     public string? LanguageDescription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
@@ -1141,7 +1258,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
@@ -1174,7 +1293,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("token")]
     public string? Token { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
@@ -1195,7 +1316,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
@@ -1220,7 +1343,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
@@ -1229,7 +1354,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
@@ -1254,7 +1381,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
@@ -1279,7 +1408,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("hlsWebdavSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
@@ -1296,7 +1427,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
@@ -1309,7 +1442,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("staticKeyValue")]
     public string? StaticKeyValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
@@ -1318,7 +1453,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("staticKeySettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
@@ -1491,7 +1628,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("tsFileMode")]
     public string? TsFileMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
@@ -1500,7 +1639,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
@@ -1509,7 +1650,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
@@ -1518,7 +1661,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
@@ -1599,13 +1744,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("timestampOffsetMode")]
     public string? TimestampOffsetMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
@@ -1638,7 +1787,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
@@ -1655,7 +1806,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("timedMetadataId3Period")]
     public double? TimedMetadataId3Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettings
@@ -1692,7 +1845,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("udpGroupSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -1709,7 +1864,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -1730,7 +1887,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -1739,7 +1898,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
@@ -1932,13 +2093,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
@@ -1951,7 +2116,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("rawSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
@@ -1968,7 +2135,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
@@ -1977,7 +2146,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
@@ -1994,7 +2165,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
@@ -2015,7 +2188,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("segmentType")]
     public string? SegmentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
@@ -2032,13 +2207,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("timedMetadataBehavior")]
     public string? TimedMetadataBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
@@ -2111,7 +2290,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
@@ -2124,7 +2305,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("m3u8Settings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
@@ -2145,7 +2328,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("standardHlsSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
@@ -2166,13 +2351,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("segmentModifier")]
     public string? SegmentModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
@@ -2185,7 +2374,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
@@ -2194,7 +2385,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
@@ -2203,7 +2396,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
@@ -2212,7 +2407,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
@@ -2233,7 +2430,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -2250,7 +2449,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -2271,7 +2472,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -2280,7 +2483,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
@@ -2473,7 +2678,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
@@ -2482,7 +2689,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("m2tsSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
@@ -2491,7 +2700,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
@@ -2508,7 +2719,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("rowLength")]
     public double? RowLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
@@ -2529,7 +2742,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("fecOutputSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettings
@@ -2566,7 +2781,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("udpOutputSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputs
@@ -2591,7 +2808,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("videoDescriptionName")]
     public string? VideoDescriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroups
@@ -2608,7 +2827,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroups
     [JsonPropertyName("outputs")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsTimecodeConfig
@@ -2621,7 +2842,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsTimecodeConfig
     [JsonPropertyName("syncThreshold")]
     public double? SyncThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
@@ -2634,7 +2857,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("captureIntervalUnits")]
     public string? CaptureIntervalUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
@@ -2647,7 +2872,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
@@ -2656,7 +2883,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
@@ -2821,19 +3050,25 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
@@ -2846,19 +3081,25 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("maxFall")]
     public double? MaxFall { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
@@ -2883,7 +3124,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("rec709Settings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
@@ -2896,7 +3139,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
@@ -2905,7 +3150,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
@@ -2922,7 +3169,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("timecodeBurninPosition")]
     public string? TimecodeBurninPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
@@ -3075,7 +3324,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("treeblockSize")]
     public string? TreeblockSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettings
@@ -3092,7 +3343,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("h265Settings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptions
@@ -3125,7 +3378,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettings
@@ -3166,7 +3421,9 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettings
     [JsonPropertyName("videoDescriptions")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
@@ -3179,7 +3436,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("audioSilenceThresholdMsec")]
     public double? AudioSilenceThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
@@ -3188,7 +3447,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("inputLossThresholdMsec")]
     public double? InputLossThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
@@ -3201,7 +3462,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("videoBlackThresholdMsec")]
     public double? VideoBlackThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
@@ -3218,7 +3481,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("videoBlackSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
@@ -3227,7 +3492,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("failoverConditionSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettings
@@ -3248,7 +3515,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     [JsonPropertyName("secondaryInputId")]
     public string? SecondaryInputId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPolicy
@@ -3261,7 +3530,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Input in medialive to populate inputId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRef
@@ -3274,7 +3545,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRef
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicy
@@ -3287,7 +3560,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Input in medialive to populate inputId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelector
@@ -3304,7 +3579,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
@@ -3317,7 +3594,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
@@ -3330,7 +3609,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("languageSelectionPolicy")]
     public string? LanguageSelectionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
@@ -3339,7 +3620,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
@@ -3348,7 +3631,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("programSelection")]
     public string? ProgramSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
@@ -3357,7 +3642,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("track")]
     public double? Track { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
@@ -3370,7 +3657,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("tracks")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
@@ -3391,7 +3680,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("audioTrackSelection")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelector
@@ -3404,7 +3695,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
@@ -3413,13 +3706,17 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("sourceAncillaryChannelNumber")]
     public double? SourceAncillaryChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
@@ -3432,7 +3729,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
@@ -3449,7 +3748,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
@@ -3462,7 +3763,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
@@ -3475,7 +3778,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
@@ -3496,7 +3801,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
@@ -3509,7 +3816,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("pageNumber")]
     public string? PageNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
@@ -3542,7 +3851,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("teletextSourceSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelector
@@ -3559,7 +3870,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
@@ -3584,7 +3897,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsN
     [JsonPropertyName("scte35Source")]
     public string? Scte35Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsNetworkInputSettings
@@ -3597,7 +3912,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsN
     [JsonPropertyName("serverValidation")]
     public string? ServerValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsVideoSelector
@@ -3610,7 +3927,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsV
     [JsonPropertyName("colorSpaceUsage")]
     public string? ColorSpaceUsage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettings
@@ -3659,7 +3978,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettings
     [JsonPropertyName("videoSelector")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachments
@@ -3688,7 +4009,9 @@ public partial class V1beta1ChannelSpecForProviderInputAttachments
     [JsonPropertyName("inputSettings")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputSpecification
@@ -3705,7 +4028,9 @@ public partial class V1beta1ChannelSpecForProviderInputSpecification
     [JsonPropertyName("maximumBitrate")]
     public string? MaximumBitrate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderMaintenance
@@ -3718,7 +4043,9 @@ public partial class V1beta1ChannelSpecForProviderMaintenance
     [JsonPropertyName("maintenanceStartTime")]
     public string? MaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderRoleArnRefPolicy
@@ -3731,7 +4058,9 @@ public partial class V1beta1ChannelSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderRoleArnRef
@@ -3744,7 +4073,9 @@ public partial class V1beta1ChannelSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderRoleArnSelectorPolicy
@@ -3757,7 +4088,9 @@ public partial class V1beta1ChannelSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderRoleArnSelector
@@ -3774,7 +4107,9 @@ public partial class V1beta1ChannelSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderVpc
@@ -3791,7 +4126,9 @@ public partial class V1beta1ChannelSpecForProviderVpc
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProvider
@@ -3860,7 +4197,9 @@ public partial class V1beta1ChannelSpecForProvider
     [JsonPropertyName("vpc")]
     public IList<V1beta1ChannelSpecForProviderVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderCdiInputSpecification
@@ -3869,7 +4208,9 @@ public partial class V1beta1ChannelSpecInitProviderCdiInputSpecification
     [JsonPropertyName("resolution")]
     public string? Resolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderDestinationsMediaPackageSettings
@@ -3878,7 +4219,9 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsMediaPackageSetti
     [JsonPropertyName("channelId")]
     public string? ChannelId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderDestinationsMultiplexSettings
@@ -3891,7 +4234,9 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsMultiplexSettings
     [JsonPropertyName("programName")]
     public string? ProgramName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderDestinationsSettings
@@ -3912,7 +4257,9 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsSettings
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderDestinations
@@ -3933,7 +4280,9 @@ public partial class V1beta1ChannelSpecInitProviderDestinations
     [JsonPropertyName("settings")]
     public IList<V1beta1ChannelSpecInitProviderDestinationsSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
@@ -3950,7 +4299,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("targetLkfs")]
     public double? TargetLkfs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
@@ -3967,7 +4318,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("csid")]
     public string? Csid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
@@ -3980,7 +4333,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sid")]
     public double? Sid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
@@ -3997,7 +4352,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("nielsenNaesIiNwSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
@@ -4006,7 +4363,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("nielsenWatermarksSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
@@ -4047,7 +4406,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("vbrQuality")]
     public string? VbrQuality { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
@@ -4080,7 +4441,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("metadataControl")]
     public string? MetadataControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
@@ -4113,7 +4476,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("surroundTrim")]
     public double? SurroundTrim { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
@@ -4198,7 +4563,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("surroundMode")]
     public string? SurroundMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
@@ -4215,13 +4582,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
@@ -4238,7 +4609,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettings
@@ -4271,7 +4644,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("wavSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
@@ -4284,7 +4659,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("inputChannel")]
     public double? InputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
@@ -4297,7 +4674,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("outputChannel")]
     public double? OutputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettings
@@ -4314,7 +4693,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("channelsOut")]
     public double? ChannelsOut { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptions
@@ -4363,7 +4744,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlankingAvailBlankingImage
@@ -4380,7 +4763,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlankingA
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlanking
@@ -4393,13 +4778,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlanking
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
@@ -4416,7 +4805,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
@@ -4489,7 +4880,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
@@ -4506,7 +4899,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
@@ -4579,7 +4974,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
@@ -4600,49 +4997,65 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
@@ -4651,7 +5064,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
@@ -4660,7 +5075,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettings
@@ -4717,7 +5134,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("webvttDestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptions
@@ -4746,7 +5165,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
@@ -4763,7 +5184,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigurationInputLossBehavior
@@ -4788,7 +5211,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("repeatFrameMsec")]
     public double? RepeatFrameMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfiguration
@@ -4817,13 +5242,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
@@ -4832,7 +5261,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfiguration
@@ -4845,7 +5276,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
     [JsonPropertyName("motionGraphicsSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsNielsenConfiguration
@@ -4858,7 +5291,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsNielsenConfigu
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
@@ -4867,7 +5302,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
@@ -4876,7 +5313,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("archiveS3Settings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
@@ -4885,7 +5324,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
@@ -4902,7 +5343,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rolloverInterval")]
     public double? RolloverInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
@@ -4911,7 +5354,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
@@ -4920,7 +5365,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
@@ -4929,7 +5376,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("frameCaptureS3Settings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
@@ -4942,7 +5391,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("frameCaptureCdnSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
@@ -4959,7 +5410,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("languageDescription")]
     public string? LanguageDescription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
@@ -4968,7 +5421,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
@@ -5001,7 +5456,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("token")]
     public string? Token { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
@@ -5022,7 +5479,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
@@ -5047,7 +5506,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
@@ -5056,7 +5517,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
@@ -5081,7 +5544,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
@@ -5106,7 +5571,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("hlsWebdavSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
@@ -5123,7 +5590,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
@@ -5136,7 +5605,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("staticKeyValue")]
     public string? StaticKeyValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
@@ -5145,7 +5616,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("staticKeySettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
@@ -5318,7 +5791,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("tsFileMode")]
     public string? TsFileMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
@@ -5327,7 +5802,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
@@ -5336,7 +5813,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
@@ -5345,7 +5824,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
@@ -5426,13 +5907,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timestampOffsetMode")]
     public string? TimestampOffsetMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
@@ -5465,7 +5950,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
@@ -5482,7 +5969,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timedMetadataId3Period")]
     public double? TimedMetadataId3Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettings
@@ -5519,7 +6008,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("udpGroupSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -5536,7 +6027,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -5557,7 +6050,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -5566,7 +6061,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
@@ -5759,13 +6256,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
@@ -5778,7 +6279,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rawSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
@@ -5795,7 +6298,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
@@ -5804,7 +6309,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
@@ -5821,7 +6328,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
@@ -5842,7 +6351,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("segmentType")]
     public string? SegmentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
@@ -5859,13 +6370,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timedMetadataBehavior")]
     public string? TimedMetadataBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
@@ -5938,7 +6453,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
@@ -5951,7 +6468,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("m3u8Settings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
@@ -5972,7 +6491,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("standardHlsSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
@@ -5993,13 +6514,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("segmentModifier")]
     public string? SegmentModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
@@ -6012,7 +6537,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
@@ -6021,7 +6548,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
@@ -6030,7 +6559,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
@@ -6039,7 +6570,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
@@ -6060,7 +6593,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -6077,7 +6612,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -6098,7 +6635,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -6107,7 +6646,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
@@ -6300,7 +6841,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
@@ -6309,7 +6852,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("m2tsSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
@@ -6318,7 +6863,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
@@ -6335,7 +6882,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rowLength")]
     public double? RowLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
@@ -6356,7 +6905,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("fecOutputSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettings
@@ -6393,7 +6944,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("udpOutputSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputs
@@ -6418,7 +6971,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoDescriptionName")]
     public string? VideoDescriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroups
@@ -6435,7 +6990,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroups
     [JsonPropertyName("outputs")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsTimecodeConfig
@@ -6448,7 +7005,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsTimecodeConfig
     [JsonPropertyName("syncThreshold")]
     public double? SyncThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
@@ -6461,7 +7020,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("captureIntervalUnits")]
     public string? CaptureIntervalUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
@@ -6474,7 +7035,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
@@ -6483,7 +7046,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
@@ -6648,19 +7213,25 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
@@ -6673,19 +7244,25 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxFall")]
     public double? MaxFall { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
@@ -6710,7 +7287,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("rec709Settings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
@@ -6723,7 +7302,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
@@ -6732,7 +7313,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
@@ -6749,7 +7332,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("timecodeBurninPosition")]
     public string? TimecodeBurninPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
@@ -6902,7 +7487,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("treeblockSize")]
     public string? TreeblockSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettings
@@ -6919,7 +7506,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("h265Settings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptions
@@ -6952,7 +7541,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettings
@@ -6993,7 +7584,9 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettings
     [JsonPropertyName("videoDescriptions")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
@@ -7006,7 +7599,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("audioSilenceThresholdMsec")]
     public double? AudioSilenceThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
@@ -7015,7 +7610,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("inputLossThresholdMsec")]
     public double? InputLossThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
@@ -7028,7 +7625,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("videoBlackThresholdMsec")]
     public double? VideoBlackThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
@@ -7045,7 +7644,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("videoBlackSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
@@ -7054,7 +7655,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("failoverConditionSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettings
@@ -7075,7 +7678,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("secondaryInputId")]
     public string? SecondaryInputId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPolicy
@@ -7088,7 +7693,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Input in medialive to populate inputId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRef
@@ -7101,7 +7708,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRef
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicy
@@ -7114,7 +7723,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Input in medialive to populate inputId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelector
@@ -7131,7 +7742,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
@@ -7144,7 +7757,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
@@ -7157,7 +7772,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("languageSelectionPolicy")]
     public string? LanguageSelectionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
@@ -7166,7 +7783,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
@@ -7175,7 +7794,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("programSelection")]
     public string? ProgramSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
@@ -7184,7 +7805,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("track")]
     public double? Track { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
@@ -7197,7 +7820,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("tracks")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
@@ -7218,7 +7843,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("audioTrackSelection")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelector
@@ -7231,7 +7858,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
@@ -7240,13 +7869,17 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("sourceAncillaryChannelNumber")]
     public double? SourceAncillaryChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
@@ -7259,7 +7892,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
@@ -7276,7 +7911,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
@@ -7289,7 +7926,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
@@ -7302,7 +7941,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
@@ -7323,7 +7964,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
@@ -7336,7 +7979,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("pageNumber")]
     public string? PageNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
@@ -7369,7 +8014,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("teletextSourceSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelector
@@ -7386,7 +8033,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
@@ -7411,7 +8060,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("scte35Source")]
     public string? Scte35Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsNetworkInputSettings
@@ -7424,7 +8075,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("serverValidation")]
     public string? ServerValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsVideoSelector
@@ -7437,7 +8090,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("colorSpaceUsage")]
     public string? ColorSpaceUsage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
@@ -7486,7 +8141,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     [JsonPropertyName("videoSelector")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachments
@@ -7515,7 +8172,9 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachments
     [JsonPropertyName("inputSettings")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputSpecification
@@ -7532,7 +8191,9 @@ public partial class V1beta1ChannelSpecInitProviderInputSpecification
     [JsonPropertyName("maximumBitrate")]
     public string? MaximumBitrate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderMaintenance
@@ -7545,7 +8206,9 @@ public partial class V1beta1ChannelSpecInitProviderMaintenance
     [JsonPropertyName("maintenanceStartTime")]
     public string? MaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderRoleArnRefPolicy
@@ -7558,7 +8221,9 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderRoleArnRef
@@ -7571,7 +8236,9 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy
@@ -7584,7 +8251,9 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderRoleArnSelector
@@ -7601,7 +8270,9 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderVpc
@@ -7618,7 +8289,9 @@ public partial class V1beta1ChannelSpecInitProviderVpc
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProvider
@@ -7683,7 +8356,9 @@ public partial class V1beta1ChannelSpecInitProvider
     [JsonPropertyName("vpc")]
     public IList<V1beta1ChannelSpecInitProviderVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecProviderConfigRefPolicy
@@ -7696,7 +8371,9 @@ public partial class V1beta1ChannelSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecProviderConfigRef
@@ -7709,7 +8386,9 @@ public partial class V1beta1ChannelSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ChannelSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecWriteConnectionSecretToRef
@@ -7722,7 +8401,9 @@ public partial class V1beta1ChannelSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChannelSpec defines the desired state of Channel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpec
@@ -7751,7 +8432,9 @@ public partial class V1beta1ChannelSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ChannelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderCdiInputSpecification
@@ -7760,7 +8443,9 @@ public partial class V1beta1ChannelStatusAtProviderCdiInputSpecification
     [JsonPropertyName("resolution")]
     public string? Resolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderDestinationsMediaPackageSettings
@@ -7769,7 +8454,9 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsMediaPackageSetti
     [JsonPropertyName("channelId")]
     public string? ChannelId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderDestinationsMultiplexSettings
@@ -7782,7 +8469,9 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsMultiplexSettings
     [JsonPropertyName("programName")]
     public string? ProgramName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderDestinationsSettings
@@ -7803,7 +8492,9 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsSettings
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderDestinations
@@ -7824,7 +8515,9 @@ public partial class V1beta1ChannelStatusAtProviderDestinations
     [JsonPropertyName("settings")]
     public IList<V1beta1ChannelStatusAtProviderDestinationsSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
@@ -7841,7 +8534,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("targetLkfs")]
     public double? TargetLkfs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
@@ -7858,7 +8553,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("csid")]
     public string? Csid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
@@ -7871,7 +8568,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sid")]
     public double? Sid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
@@ -7888,7 +8587,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("nielsenNaesIiNwSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
@@ -7897,7 +8598,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("nielsenWatermarksSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
@@ -7938,7 +8641,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("vbrQuality")]
     public string? VbrQuality { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
@@ -7971,7 +8676,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("metadataControl")]
     public string? MetadataControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
@@ -8004,7 +8711,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("surroundTrim")]
     public double? SurroundTrim { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
@@ -8089,7 +8798,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("surroundMode")]
     public string? SurroundMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
@@ -8106,13 +8817,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
@@ -8129,7 +8844,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettings
@@ -8162,7 +8879,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("wavSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
@@ -8175,7 +8894,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("inputChannel")]
     public double? InputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
@@ -8188,7 +8909,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("outputChannel")]
     public double? OutputChannel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettings
@@ -8205,7 +8928,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("channelsOut")]
     public double? ChannelsOut { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptions
@@ -8254,7 +8979,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlankingAvailBlankingImage
@@ -8271,7 +8998,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlankingA
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlanking
@@ -8284,13 +9013,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlanking
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
@@ -8307,7 +9040,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
@@ -8380,7 +9115,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
@@ -8397,7 +9134,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
@@ -8470,7 +9209,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
@@ -8491,49 +9232,65 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
@@ -8542,7 +9299,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
@@ -8551,7 +9310,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettings
@@ -8608,7 +9369,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("webvttDestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptions
@@ -8637,7 +9400,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
@@ -8654,7 +9419,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigurationInputLossBehavior
@@ -8679,7 +9446,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("repeatFrameMsec")]
     public double? RepeatFrameMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfiguration
@@ -8708,13 +9477,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
@@ -8723,7 +9496,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfiguration
@@ -8736,7 +9511,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
     [JsonPropertyName("motionGraphicsSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsNielsenConfiguration
@@ -8749,7 +9526,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsNielsenConfigu
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
@@ -8758,7 +9537,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
@@ -8767,7 +9548,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("archiveS3Settings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
@@ -8776,7 +9559,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
@@ -8793,7 +9578,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rolloverInterval")]
     public double? RolloverInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
@@ -8802,7 +9589,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
@@ -8811,7 +9600,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
@@ -8820,7 +9611,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("frameCaptureS3Settings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
@@ -8833,7 +9626,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("frameCaptureCdnSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
@@ -8850,7 +9645,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("languageDescription")]
     public string? LanguageDescription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
@@ -8859,7 +9656,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
@@ -8892,7 +9691,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("token")]
     public string? Token { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
@@ -8913,7 +9714,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
@@ -8938,7 +9741,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
@@ -8947,7 +9752,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("cannedAcl")]
     public string? CannedAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
@@ -8972,7 +9779,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
@@ -8997,7 +9806,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("hlsWebdavSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
@@ -9014,7 +9825,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
@@ -9027,7 +9840,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("staticKeyValue")]
     public string? StaticKeyValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
@@ -9036,7 +9851,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("staticKeySettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
@@ -9209,7 +10026,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("tsFileMode")]
     public string? TsFileMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
@@ -9218,7 +10037,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
@@ -9227,7 +10048,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
@@ -9236,7 +10059,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
@@ -9317,13 +10142,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timestampOffsetMode")]
     public string? TimestampOffsetMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
@@ -9356,7 +10185,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("restartDelay")]
     public double? RestartDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
@@ -9373,7 +10204,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timedMetadataId3Period")]
     public double? TimedMetadataId3Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettings
@@ -9410,7 +10243,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("udpGroupSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -9427,7 +10262,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -9448,7 +10285,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -9457,7 +10296,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
@@ -9650,13 +10491,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
@@ -9669,7 +10514,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rawSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
@@ -9686,7 +10533,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
@@ -9695,7 +10544,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
@@ -9712,7 +10563,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
@@ -9733,7 +10586,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("segmentType")]
     public string? SegmentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
@@ -9750,13 +10605,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("timedMetadataBehavior")]
     public string? TimedMetadataBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
@@ -9829,7 +10688,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
@@ -9842,7 +10703,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("m3u8Settings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
@@ -9863,7 +10726,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("standardHlsSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
@@ -9884,13 +10749,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("segmentModifier")]
     public string? SegmentModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
@@ -9903,7 +10772,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("nameModifier")]
     public string? NameModifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
@@ -9912,7 +10783,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
@@ -9921,7 +10794,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destination")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
@@ -9930,7 +10805,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
@@ -9951,7 +10828,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("numRetries")]
     public double? NumRetries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
@@ -9968,7 +10847,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
@@ -9989,7 +10870,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
@@ -9998,7 +10881,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("repInterval")]
     public double? RepInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
@@ -10191,7 +11076,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoPid")]
     public string? VideoPid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
@@ -10200,7 +11087,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("m2tsSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
@@ -10209,7 +11098,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("destinationRefId")]
     public string? DestinationRefId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
@@ -10226,7 +11117,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("rowLength")]
     public double? RowLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
@@ -10247,7 +11140,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("fecOutputSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettings
@@ -10284,7 +11179,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("udpOutputSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputs
@@ -10309,7 +11206,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("videoDescriptionName")]
     public string? VideoDescriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroups
@@ -10326,7 +11225,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroups
     [JsonPropertyName("outputs")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsTimecodeConfig
@@ -10339,7 +11240,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsTimecodeConfig
     [JsonPropertyName("syncThreshold")]
     public double? SyncThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
@@ -10352,7 +11255,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("captureIntervalUnits")]
     public string? CaptureIntervalUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
@@ -10365,7 +11270,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
@@ -10374,7 +11281,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
@@ -10539,19 +11448,25 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
@@ -10564,19 +11479,25 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxFall")]
     public double? MaxFall { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
@@ -10601,7 +11522,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("rec709Settings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
@@ -10614,7 +11537,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("strength")]
     public string? Strength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
@@ -10623,7 +11548,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("temporalFilterSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
@@ -10640,7 +11567,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("timecodeBurninPosition")]
     public string? TimecodeBurninPosition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
@@ -10793,7 +11722,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("treeblockSize")]
     public string? TreeblockSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettings
@@ -10810,7 +11741,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("h265Settings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptions
@@ -10843,7 +11776,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettings
@@ -10884,7 +11819,9 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettings
     [JsonPropertyName("videoDescriptions")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
@@ -10897,7 +11834,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("audioSilenceThresholdMsec")]
     public double? AudioSilenceThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
@@ -10906,7 +11845,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("inputLossThresholdMsec")]
     public double? InputLossThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
@@ -10919,7 +11860,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("videoBlackThresholdMsec")]
     public double? VideoBlackThresholdMsec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
@@ -10936,7 +11879,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("videoBlackSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
@@ -10945,7 +11890,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("failoverConditionSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettings
@@ -10966,7 +11913,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     [JsonPropertyName("secondaryInputId")]
     public string? SecondaryInputId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
@@ -10979,7 +11928,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
@@ -10992,7 +11943,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("languageSelectionPolicy")]
     public string? LanguageSelectionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
@@ -11001,7 +11954,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
@@ -11010,7 +11965,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("programSelection")]
     public string? ProgramSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
@@ -11019,7 +11976,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("track")]
     public double? Track { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
@@ -11032,7 +11991,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("tracks")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
@@ -11053,7 +12014,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("audioTrackSelection")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelector
@@ -11066,7 +12029,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
@@ -11075,13 +12040,17 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("sourceAncillaryChannelNumber")]
     public double? SourceAncillaryChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
@@ -11094,7 +12063,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
@@ -11111,7 +12082,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
@@ -11124,7 +12097,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("source608ChannelNumber")]
     public double? Source608ChannelNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
@@ -11137,7 +12112,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("pid")]
     public double? Pid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
@@ -11158,7 +12135,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
@@ -11171,7 +12150,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("pageNumber")]
     public string? PageNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
@@ -11204,7 +12185,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("teletextSourceSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelector
@@ -11221,7 +12204,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("selectorSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
@@ -11246,7 +12231,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("scte35Source")]
     public string? Scte35Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsNetworkInputSettings
@@ -11259,7 +12246,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("serverValidation")]
     public string? ServerValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsVideoSelector
@@ -11272,7 +12261,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("colorSpaceUsage")]
     public string? ColorSpaceUsage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
@@ -11321,7 +12312,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     [JsonPropertyName("videoSelector")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachments
@@ -11342,7 +12335,9 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachments
     [JsonPropertyName("inputSettings")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputSpecification
@@ -11359,7 +12354,9 @@ public partial class V1beta1ChannelStatusAtProviderInputSpecification
     [JsonPropertyName("maximumBitrate")]
     public string? MaximumBitrate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderMaintenance
@@ -11372,7 +12369,9 @@ public partial class V1beta1ChannelStatusAtProviderMaintenance
     [JsonPropertyName("maintenanceStartTime")]
     public string? MaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderVpc
@@ -11397,7 +12396,9 @@ public partial class V1beta1ChannelStatusAtProviderVpc
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProvider
@@ -11474,7 +12475,9 @@ public partial class V1beta1ChannelStatusAtProvider
     [JsonPropertyName("vpc")]
     public IList<V1beta1ChannelStatusAtProviderVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusConditions
@@ -11503,7 +12506,9 @@ public partial class V1beta1ChannelStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChannelStatus defines the observed state of Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatus
@@ -11520,7 +12525,9 @@ public partial class V1beta1ChannelStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is the Schema for the Channels API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -11550,3 +12557,4 @@ public partial class V1beta1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ChannelStatus? Status { get; set; }
 }
+#nullable disable

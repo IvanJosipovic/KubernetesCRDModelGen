@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceList : 
     [JsonPropertyName("items")]
     public IList<V1alpha1AccessContextManagerServicePerimeterResource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Only the `external` field is supported to configure the reference.  The name of the Service Perimeter to add this resource to.  Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef
@@ -50,7 +53,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecPer
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A GCP resource that is inside of the service perimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef
@@ -67,7 +72,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecRes
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpec
@@ -80,7 +87,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpec
     [JsonPropertyName("resourceRef")]
     public V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef ResourceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatusConditions
@@ -105,7 +114,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatusC
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatus
@@ -118,7 +129,9 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -148,3 +161,4 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResource : IKub
     [JsonPropertyName("status")]
     public V1alpha1AccessContextManagerServicePerimeterResourceStatus? Status { get; set; }
 }
+#nullable disable

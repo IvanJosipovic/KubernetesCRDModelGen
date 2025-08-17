@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>A FunctionRevision represents a revision of a Function. Crossplane creates new revisions when there are changes to the Function.  Crossplane creates and manages FunctionRevisions. Don't directly edit FunctionRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1FunctionRevisionList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1FunctionRevision> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionSpecPackagePullSecrets
@@ -42,7 +45,9 @@ public partial class V1FunctionRevisionSpecPackagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeConfigRef references a RuntimeConfig resource that will be used to configure the package runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionSpecRuntimeConfigRef
@@ -59,7 +64,9 @@ public partial class V1FunctionRevisionSpecRuntimeConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRevisionSpec specifies configuration for a FunctionRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionSpec
@@ -108,7 +115,9 @@ public partial class V1FunctionRevisionSpec
     [JsonPropertyName("tlsServerSecretName")]
     public string? TlsServerSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionStatusAppliedImageConfigRefs
@@ -121,7 +130,9 @@ public partial class V1FunctionRevisionStatusAppliedImageConfigRefs
     [JsonPropertyName("reason")]
     public string Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionStatusConditions
@@ -150,7 +161,9 @@ public partial class V1FunctionRevisionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A TypedReference refers to an object by Name, Kind, and APIVersion. It is commonly used to reference cluster-scoped objects or objects where the namespace is already known.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionStatusObjectRefs
@@ -171,7 +184,9 @@ public partial class V1FunctionRevisionStatusObjectRefs
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRevisionStatus represents the observed state of a FunctionRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionStatus
@@ -220,7 +235,9 @@ public partial class V1FunctionRevisionStatus
     [JsonPropertyName("tlsServerSecretName")]
     public string? TlsServerSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A FunctionRevision represents a revision of a Function. Crossplane creates new revisions when there are changes to the Function.  Crossplane creates and manages FunctionRevisions. Don't directly edit FunctionRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -250,3 +267,4 @@ public partial class V1FunctionRevision : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1FunctionRevisionStatus? Status { get; set; }
 }
+#nullable disable

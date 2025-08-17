@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.upbound.io;
+#nullable enable
 /// <summary>CertificateContacts is the Schema for the CertificateContactss API. Manages Key Vault Certificate Contacts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateContactsList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateContacts> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProviderContact
@@ -50,7 +53,9 @@ public partial class V1beta1CertificateContactsSpecForProviderContact
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecForProvider
@@ -127,7 +140,9 @@ public partial class V1beta1CertificateContactsSpecForProvider
     [JsonPropertyName("keyVaultIdSelector")]
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProviderContact
@@ -144,7 +159,9 @@ public partial class V1beta1CertificateContactsSpecInitProviderContact
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRef
@@ -170,7 +189,9 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelector
@@ -200,7 +223,9 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecInitProvider
@@ -221,7 +246,9 @@ public partial class V1beta1CertificateContactsSpecInitProvider
     [JsonPropertyName("keyVaultIdSelector")]
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecProviderConfigRefPolicy
@@ -234,7 +261,9 @@ public partial class V1beta1CertificateContactsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecProviderConfigRef
@@ -247,7 +276,9 @@ public partial class V1beta1CertificateContactsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateContactsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpecWriteConnectionSecretToRef
@@ -260,7 +291,9 @@ public partial class V1beta1CertificateContactsSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateContactsSpec defines the desired state of CertificateContacts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsSpec
@@ -289,7 +322,9 @@ public partial class V1beta1CertificateContactsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateContactsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsStatusAtProviderContact
@@ -306,7 +341,9 @@ public partial class V1beta1CertificateContactsStatusAtProviderContact
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsStatusAtProvider
@@ -323,7 +360,9 @@ public partial class V1beta1CertificateContactsStatusAtProvider
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsStatusConditions
@@ -352,7 +391,9 @@ public partial class V1beta1CertificateContactsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateContactsStatus defines the observed state of CertificateContacts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateContactsStatus
@@ -369,7 +410,9 @@ public partial class V1beta1CertificateContactsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateContacts is the Schema for the CertificateContactss API. Manages Key Vault Certificate Contacts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -399,3 +442,4 @@ public partial class V1beta1CertificateContacts : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1CertificateContactsStatus? Status { get; set; }
 }
+#nullable disable

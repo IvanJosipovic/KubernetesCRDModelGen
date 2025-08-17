@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+#nullable enable
 /// <summary>MwsWorkspaces is the Schema for the MwsWorkspacess API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MwsWorkspacesList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1alpha1MwsWorkspaces> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account Id that could be found in the top right corner of Accounts Console.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderAccountIdSecretRef
@@ -50,7 +53,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderAccountIdSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderCloudResourceContainerGcp
@@ -59,7 +64,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderCloudResourceContainerG
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderCloudResourceContainer
@@ -68,7 +75,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderCloudResourceContainer
     [JsonPropertyName("gcp")]
     public IList<V1alpha1MwsWorkspacesSpecForProviderCloudResourceContainerGcp>? Gcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderExternalCustomerInfo
@@ -85,7 +94,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderExternalCustomerInfo
     [JsonPropertyName("customerName")]
     public string? CustomerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderGcpManagedNetworkConfig
@@ -102,7 +113,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderGcpManagedNetworkConfig
     [JsonPropertyName("subnetCidr")]
     public string? SubnetCidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderGkeConfig
@@ -115,7 +128,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderGkeConfig
     [JsonPropertyName("masterIpRange")]
     public string? MasterIpRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderTokenTokenValueSecretRef
@@ -132,7 +147,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderTokenTokenValueSecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderToken
@@ -153,7 +170,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProviderToken
     [JsonPropertyName("tokenValueSecretRef")]
     public V1alpha1MwsWorkspacesSpecForProviderTokenTokenValueSecretRef? TokenValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProvider
@@ -266,7 +285,9 @@ public partial class V1alpha1MwsWorkspacesSpecForProvider
     [JsonPropertyName("workspaceUrl")]
     public string? WorkspaceUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account Id that could be found in the top right corner of Accounts Console.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderAccountIdSecretRef
@@ -283,7 +304,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderAccountIdSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderCloudResourceContainerGcp
@@ -292,7 +315,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderCloudResourceContainer
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderCloudResourceContainer
@@ -301,7 +326,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderCloudResourceContainer
     [JsonPropertyName("gcp")]
     public IList<V1alpha1MwsWorkspacesSpecInitProviderCloudResourceContainerGcp>? Gcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderExternalCustomerInfo
@@ -318,7 +345,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderExternalCustomerInfo
     [JsonPropertyName("customerName")]
     public string? CustomerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderGcpManagedNetworkConfig
@@ -335,7 +364,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderGcpManagedNetworkConfi
     [JsonPropertyName("subnetCidr")]
     public string? SubnetCidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderGkeConfig
@@ -348,7 +379,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderGkeConfig
     [JsonPropertyName("masterIpRange")]
     public string? MasterIpRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderTokenTokenValueSecretRef
@@ -365,7 +398,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderTokenTokenValueSecretR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProviderToken
@@ -386,7 +421,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProviderToken
     [JsonPropertyName("tokenValueSecretRef")]
     public V1alpha1MwsWorkspacesSpecInitProviderTokenTokenValueSecretRef? TokenValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecInitProvider
@@ -499,7 +536,9 @@ public partial class V1alpha1MwsWorkspacesSpecInitProvider
     [JsonPropertyName("workspaceUrl")]
     public string? WorkspaceUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecProviderConfigRefPolicy
@@ -512,7 +551,9 @@ public partial class V1alpha1MwsWorkspacesSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecProviderConfigRef
@@ -525,7 +566,9 @@ public partial class V1alpha1MwsWorkspacesSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MwsWorkspacesSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToConfigRefPolicy
@@ -538,7 +581,9 @@ public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToConfigRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToConfigRef
@@ -551,7 +596,9 @@ public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToConfigRe
     [JsonPropertyName("policy")]
     public V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToMetadata
@@ -568,7 +615,9 @@ public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsTo
@@ -585,7 +634,9 @@ public partial class V1alpha1MwsWorkspacesSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecWriteConnectionSecretToRef
@@ -598,7 +649,9 @@ public partial class V1alpha1MwsWorkspacesSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsWorkspacesSpec defines the desired state of MwsWorkspaces</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpec
@@ -631,7 +684,9 @@ public partial class V1alpha1MwsWorkspacesSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MwsWorkspacesSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderCloudResourceContainerGcp
@@ -640,7 +695,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderCloudResourceContainer
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderCloudResourceContainer
@@ -649,7 +706,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderCloudResourceContainer
     [JsonPropertyName("gcp")]
     public IList<V1alpha1MwsWorkspacesStatusAtProviderCloudResourceContainerGcp>? Gcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderExternalCustomerInfo
@@ -666,7 +725,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderExternalCustomerInfo
     [JsonPropertyName("customerName")]
     public string? CustomerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderGcpManagedNetworkConfig
@@ -683,7 +744,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderGcpManagedNetworkConfi
     [JsonPropertyName("subnetCidr")]
     public string? SubnetCidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderGkeConfig
@@ -696,7 +759,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderGkeConfig
     [JsonPropertyName("masterIpRange")]
     public string? MasterIpRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProviderToken
@@ -713,7 +778,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProviderToken
     [JsonPropertyName("tokenId")]
     public string? TokenId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusAtProvider
@@ -834,7 +901,9 @@ public partial class V1alpha1MwsWorkspacesStatusAtProvider
     [JsonPropertyName("workspaceUrl")]
     public string? WorkspaceUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatusConditions
@@ -863,7 +932,9 @@ public partial class V1alpha1MwsWorkspacesStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsWorkspacesStatus defines the observed state of MwsWorkspaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesStatus
@@ -880,7 +951,9 @@ public partial class V1alpha1MwsWorkspacesStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsWorkspaces is the Schema for the MwsWorkspacess API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -910,3 +983,4 @@ public partial class V1alpha1MwsWorkspaces : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1alpha1MwsWorkspacesStatus? Status { get; set; }
 }
+#nullable disable

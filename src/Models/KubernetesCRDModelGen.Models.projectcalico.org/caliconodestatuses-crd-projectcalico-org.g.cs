@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1CalicoNodeStatusList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1CalicoNodeStatus> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusSpec
@@ -50,7 +53,9 @@ public partial class V1CalicoNodeStatusSpec
     [JsonPropertyName("updatePeriodSeconds")]
     public int? UpdatePeriodSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgentBirdV4
@@ -75,7 +80,9 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV4
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgentBirdV6
@@ -100,7 +107,9 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV6
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusAgent
@@ -113,7 +122,9 @@ public partial class V1CalicoNodeStatusStatusAgent
     [JsonPropertyName("birdV6")]
     public V1CalicoNodeStatusStatusAgentBirdV6? BirdV6 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgpPeersV4
@@ -134,7 +145,9 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV4
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgpPeersV6
@@ -155,7 +168,9 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV6
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusBgp
@@ -184,7 +199,9 @@ public partial class V1CalicoNodeStatusStatusBgp
     [JsonPropertyName("peersV6")]
     public IList<V1CalicoNodeStatusStatusBgpPeersV6>? PeersV6 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
@@ -197,7 +214,9 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
     [JsonPropertyName("sourceType")]
     public string? SourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
@@ -222,7 +241,9 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
@@ -235,7 +256,9 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
     [JsonPropertyName("sourceType")]
     public string? SourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
@@ -260,7 +283,9 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatusRoutes
@@ -273,7 +298,9 @@ public partial class V1CalicoNodeStatusStatusRoutes
     [JsonPropertyName("routesV6")]
     public IList<V1CalicoNodeStatusStatusRoutesRoutesV6>? RoutesV6 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusStatus
@@ -294,7 +321,9 @@ public partial class V1CalicoNodeStatusStatus
     [JsonPropertyName("routes")]
     public V1CalicoNodeStatusStatusRoutes? Routes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -324,3 +353,4 @@ public partial class V1CalicoNodeStatus : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1CalicoNodeStatusStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.gcp.upbound.io;
+#nullable enable
 /// <summary>Entry is the Schema for the Entrys API. Entry Metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EntryList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Entry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProviderEntryGroupRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EntrySpecForProviderEntryGroupRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EntryGroup in datacatalog to populate entryGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProviderEntryGroupRef
@@ -59,7 +64,9 @@ public partial class V1beta1EntrySpecForProviderEntryGroupRef
     [JsonPropertyName("policy")]
     public V1beta1EntrySpecForProviderEntryGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProviderEntryGroupSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1EntrySpecForProviderEntryGroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EntryGroup in datacatalog to populate entryGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProviderEntryGroupSelector
@@ -89,7 +98,9 @@ public partial class V1beta1EntrySpecForProviderEntryGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1EntrySpecForProviderEntryGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProviderGcsFilesetSpec
@@ -98,7 +109,9 @@ public partial class V1beta1EntrySpecForProviderGcsFilesetSpec
     [JsonPropertyName("filePatterns")]
     public IList<string>? FilePatterns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1EntrySpecForProvider
     [JsonPropertyName("userSpecifiedType")]
     public string? UserSpecifiedType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProviderEntryGroupRefPolicy
@@ -164,7 +179,9 @@ public partial class V1beta1EntrySpecInitProviderEntryGroupRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EntryGroup in datacatalog to populate entryGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProviderEntryGroupRef
@@ -177,7 +194,9 @@ public partial class V1beta1EntrySpecInitProviderEntryGroupRef
     [JsonPropertyName("policy")]
     public V1beta1EntrySpecInitProviderEntryGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProviderEntryGroupSelectorPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1EntrySpecInitProviderEntryGroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EntryGroup in datacatalog to populate entryGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProviderEntryGroupSelector
@@ -207,7 +228,9 @@ public partial class V1beta1EntrySpecInitProviderEntryGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1EntrySpecInitProviderEntryGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProviderGcsFilesetSpec
@@ -216,7 +239,9 @@ public partial class V1beta1EntrySpecInitProviderGcsFilesetSpec
     [JsonPropertyName("filePatterns")]
     public IList<string>? FilePatterns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecInitProvider
@@ -269,7 +294,9 @@ public partial class V1beta1EntrySpecInitProvider
     [JsonPropertyName("userSpecifiedType")]
     public string? UserSpecifiedType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecProviderConfigRefPolicy
@@ -282,7 +309,9 @@ public partial class V1beta1EntrySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecProviderConfigRef
@@ -295,7 +324,9 @@ public partial class V1beta1EntrySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EntrySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpecWriteConnectionSecretToRef
@@ -308,7 +339,9 @@ public partial class V1beta1EntrySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EntrySpec defines the desired state of Entry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntrySpec
@@ -337,7 +370,9 @@ public partial class V1beta1EntrySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EntrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderBigqueryDateShardedSpec
@@ -354,7 +389,9 @@ public partial class V1beta1EntryStatusAtProviderBigqueryDateShardedSpec
     [JsonPropertyName("tablePrefix")]
     public string? TablePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderBigqueryTableSpecTableSpec
@@ -363,7 +400,9 @@ public partial class V1beta1EntryStatusAtProviderBigqueryTableSpecTableSpec
     [JsonPropertyName("groupedEntry")]
     public string? GroupedEntry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderBigqueryTableSpecViewSpec
@@ -372,7 +411,9 @@ public partial class V1beta1EntryStatusAtProviderBigqueryTableSpecViewSpec
     [JsonPropertyName("viewQuery")]
     public string? ViewQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderBigqueryTableSpec
@@ -389,7 +430,9 @@ public partial class V1beta1EntryStatusAtProviderBigqueryTableSpec
     [JsonPropertyName("viewSpec")]
     public IList<V1beta1EntryStatusAtProviderBigqueryTableSpecViewSpec>? ViewSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderGcsFilesetSpecSampleGcsFileSpecs
@@ -402,7 +445,9 @@ public partial class V1beta1EntryStatusAtProviderGcsFilesetSpecSampleGcsFileSpec
     [JsonPropertyName("sizeBytes")]
     public double? SizeBytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProviderGcsFilesetSpec
@@ -415,7 +460,9 @@ public partial class V1beta1EntryStatusAtProviderGcsFilesetSpec
     [JsonPropertyName("sampleGcsFileSpecs")]
     public IList<V1beta1EntryStatusAtProviderGcsFilesetSpecSampleGcsFileSpecs>? SampleGcsFileSpecs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusAtProvider
@@ -480,7 +527,9 @@ public partial class V1beta1EntryStatusAtProvider
     [JsonPropertyName("userSpecifiedType")]
     public string? UserSpecifiedType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatusConditions
@@ -509,7 +558,9 @@ public partial class V1beta1EntryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EntryStatus defines the observed state of Entry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EntryStatus
@@ -526,7 +577,9 @@ public partial class V1beta1EntryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Entry is the Schema for the Entrys API. Entry Metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -556,3 +609,4 @@ public partial class V1beta1Entry : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1EntryStatus? Status { get; set; }
 }
+#nullable disable

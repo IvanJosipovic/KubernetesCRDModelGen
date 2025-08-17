@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeRegionAutoscalerList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeRegionAutoscaler> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization
@@ -46,7 +49,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtil
     [JsonPropertyName("target")]
     public double Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters of autoscaling based on a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization
@@ -55,7 +60,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBal
     [JsonPropertyName("target")]
     public double Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyMetric
@@ -80,7 +87,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyMetric
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas
@@ -93,7 +102,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDo
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale down controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControl
@@ -106,7 +117,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDo
     [JsonPropertyName("timeWindowSec")]
     public int? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -119,7 +132,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleIn
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl
@@ -132,7 +147,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleIn
     [JsonPropertyName("timeWindowSec")]
     public int? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules
@@ -165,7 +182,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaling
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.  If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicy
@@ -210,7 +229,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpecProjectRef
@@ -227,7 +248,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerSpec
@@ -256,7 +279,9 @@ public partial class V1alpha1ComputeRegionAutoscalerSpec
     [JsonPropertyName("target")]
     public string Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerStatusConditions
@@ -281,7 +306,9 @@ public partial class V1alpha1ComputeRegionAutoscalerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionAutoscalerStatus
@@ -302,7 +329,9 @@ public partial class V1alpha1ComputeRegionAutoscalerStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -332,3 +361,4 @@ public partial class V1alpha1ComputeRegionAutoscaler : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1ComputeRegionAutoscalerStatus? Status { get; set; }
 }
+#nullable disable

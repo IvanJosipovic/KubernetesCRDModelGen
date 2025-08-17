@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.maintenance.azure.upbound.io;
+#nullable enable
 /// <summary>MaintenanceAssignmentDedicatedHost is the Schema for the MaintenanceAssignmentDedicatedHosts API. Manages a Maintenance Assignment to Dedicated Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1MaintenanceAssignmentDedicatedHost> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDed
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DedicatedHost in compute to populate dedicatedHostId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDed
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDed
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DedicatedHost in compute to populate dedicatedHostId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDed
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderDedicatedHostIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMai
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMai
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecForProvider
     [JsonPropertyName("maintenanceConfigurationIdSelector")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecForProviderMaintenanceConfigurationIdSelector? MaintenanceConfigurationIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DedicatedHost in compute to populate dedicatedHostId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DedicatedHost in compute to populate dedicatedHostId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderDedicatedHostIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProvider
@@ -323,7 +360,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecInitProvider
     [JsonPropertyName("maintenanceConfigurationIdSelector")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecInitProviderMaintenanceConfigurationIdSelector? MaintenanceConfigurationIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecProviderConfigRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecProviderConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecProviderConfigRef
@@ -349,7 +390,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecProviderConfig
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecWriteConnectionSecretToRef
@@ -362,7 +405,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpecWriteConnectio
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentDedicatedHostSpec defines the desired state of MaintenanceAssignmentDedicatedHost</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostSpec
@@ -391,7 +436,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MaintenanceAssignmentDedicatedHostSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostStatusAtProvider
@@ -412,7 +459,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostStatusAtProvider
     [JsonPropertyName("maintenanceConfigurationId")]
     public string? MaintenanceConfigurationId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostStatusConditions
@@ -441,7 +490,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentDedicatedHostStatus defines the observed state of MaintenanceAssignmentDedicatedHost.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentDedicatedHostStatus
@@ -458,7 +509,9 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHostStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentDedicatedHost is the Schema for the MaintenanceAssignmentDedicatedHosts API. Manages a Maintenance Assignment to Dedicated Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -488,3 +541,4 @@ public partial class V1beta1MaintenanceAssignmentDedicatedHost : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1MaintenanceAssignmentDedicatedHostStatus? Status { get; set; }
 }
+#nullable disable

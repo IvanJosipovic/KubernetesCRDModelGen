@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+#nullable enable
 /// <summary>ProjectBucketConfig is the Schema for the ProjectBucketConfigs API. Manages a project-level logging bucket config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProjectBucketConfigList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ProjectBucketConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKey
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKey
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKey
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKey
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettings
@@ -106,7 +117,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettings
     [JsonPropertyName("kmsKeyNameSelector")]
     public V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderIndexConfigs
@@ -119,7 +132,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderProjectRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderProjectRef
@@ -145,7 +162,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderProjectSelectorPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderProjectSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderProjectSelector
@@ -175,7 +196,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProvider
@@ -224,7 +247,9 @@ public partial class V1beta1ProjectBucketConfigSpecForProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameRef
@@ -250,7 +277,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKe
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameSelectorPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameSelector
@@ -280,7 +311,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKe
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettings
@@ -297,7 +330,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderCmekSettings
     [JsonPropertyName("kmsKeyNameSelector")]
     public V1beta1ProjectBucketConfigSpecInitProviderCmekSettingsKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProviderIndexConfigs
@@ -310,7 +345,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecInitProvider
@@ -339,7 +376,9 @@ public partial class V1beta1ProjectBucketConfigSpecInitProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecProviderConfigRefPolicy
@@ -352,7 +391,9 @@ public partial class V1beta1ProjectBucketConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecProviderConfigRef
@@ -365,7 +406,9 @@ public partial class V1beta1ProjectBucketConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectBucketConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecWriteConnectionSecretToRef
@@ -378,7 +421,9 @@ public partial class V1beta1ProjectBucketConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectBucketConfigSpec defines the desired state of ProjectBucketConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpec
@@ -407,7 +452,9 @@ public partial class V1beta1ProjectBucketConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProjectBucketConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigStatusAtProviderCmekSettings
@@ -428,7 +475,9 @@ public partial class V1beta1ProjectBucketConfigStatusAtProviderCmekSettings
     [JsonPropertyName("serviceAccountId")]
     public string? ServiceAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigStatusAtProviderIndexConfigs
@@ -441,7 +490,9 @@ public partial class V1beta1ProjectBucketConfigStatusAtProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigStatusAtProvider
@@ -494,7 +545,9 @@ public partial class V1beta1ProjectBucketConfigStatusAtProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigStatusConditions
@@ -523,7 +576,9 @@ public partial class V1beta1ProjectBucketConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectBucketConfigStatus defines the observed state of ProjectBucketConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigStatus
@@ -540,7 +595,9 @@ public partial class V1beta1ProjectBucketConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectBucketConfig is the Schema for the ProjectBucketConfigs API. Manages a project-level logging bucket config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -570,3 +627,4 @@ public partial class V1beta1ProjectBucketConfig : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ProjectBucketConfigStatus? Status { get; set; }
 }
+#nullable disable

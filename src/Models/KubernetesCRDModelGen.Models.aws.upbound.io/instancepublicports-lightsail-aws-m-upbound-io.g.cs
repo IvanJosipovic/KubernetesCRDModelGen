@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.m.upbound.io;
+#nullable enable
 /// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Manages public ports for a Lightsail instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstancePublicPortsList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1InstancePublicPorts> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1InstancePublicPortsSpecForProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1InstancePublicPortsSpecForProviderInstanceNameSelect
     [JsonPropertyName("policy")]
     public V1beta1InstancePublicPortsSpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProviderPortInfo
@@ -126,7 +137,9 @@ public partial class V1beta1InstancePublicPortsSpecForProviderPortInfo
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1InstancePublicPortsSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameRefPolicy
@@ -164,7 +179,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameRef
@@ -181,7 +198,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1InstancePublicPortsSpecInitProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelectorPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelector
@@ -215,7 +236,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelec
     [JsonPropertyName("policy")]
     public V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProviderPortInfo
@@ -244,7 +267,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderPortInfo
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProvider
@@ -265,7 +290,9 @@ public partial class V1beta1InstancePublicPortsSpecInitProvider
     [JsonPropertyName("portInfo")]
     public IList<V1beta1InstancePublicPortsSpecInitProviderPortInfo>? PortInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecProviderConfigRef
@@ -278,7 +305,9 @@ public partial class V1beta1InstancePublicPortsSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecWriteConnectionSecretToRef
@@ -287,7 +316,9 @@ public partial class V1beta1InstancePublicPortsSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePublicPortsSpec defines the desired state of InstancePublicPorts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpec
@@ -312,7 +343,9 @@ public partial class V1beta1InstancePublicPortsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstancePublicPortsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsStatusAtProviderPortInfo
@@ -341,7 +374,9 @@ public partial class V1beta1InstancePublicPortsStatusAtProviderPortInfo
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsStatusAtProvider
@@ -362,7 +397,9 @@ public partial class V1beta1InstancePublicPortsStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsStatusConditions
@@ -391,7 +428,9 @@ public partial class V1beta1InstancePublicPortsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePublicPortsStatus defines the observed state of InstancePublicPorts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsStatus
@@ -408,7 +447,9 @@ public partial class V1beta1InstancePublicPortsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Manages public ports for a Lightsail instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -438,3 +479,4 @@ public partial class V1beta1InstancePublicPorts : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1InstancePublicPortsStatus? Status { get; set; }
 }
+#nullable disable

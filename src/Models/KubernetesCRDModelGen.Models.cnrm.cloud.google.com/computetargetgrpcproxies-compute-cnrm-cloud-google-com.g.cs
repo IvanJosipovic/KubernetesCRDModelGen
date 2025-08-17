@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeTargetGRPCProxyList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeTargetGRPCProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The UrlMap resource that defines the mapping from URL to the BackendService. The protocol field in the BackendService must be set to GRPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetGRPCProxySpecUrlMapRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeTargetGRPCProxySpecUrlMapRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetGRPCProxySpec
@@ -71,7 +76,9 @@ public partial class V1beta1ComputeTargetGRPCProxySpec
     [JsonPropertyName("validateForProxyless")]
     public bool? ValidateForProxyless { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetGRPCProxyStatusConditions
@@ -96,7 +103,9 @@ public partial class V1beta1ComputeTargetGRPCProxyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetGRPCProxyStatus
@@ -125,7 +134,9 @@ public partial class V1beta1ComputeTargetGRPCProxyStatus
     [JsonPropertyName("selfLinkWithId")]
     public string? SelfLinkWithId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -155,3 +166,4 @@ public partial class V1beta1ComputeTargetGRPCProxy : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ComputeTargetGRPCProxyStatus? Status { get; set; }
 }
+#nullable disable

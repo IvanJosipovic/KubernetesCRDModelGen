@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
+#nullable enable
 /// <summary>Channel represents a generic Channel. It is normally used when we want a Channel, but do not need a specific Channel implementation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ChannelList : IKubernetesObject<V1ListMeta>, IItems<V1Cha
     [JsonPropertyName("items")]
     public IList<V1Channel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChannelTemplate specifies which Channel CRD to use to create the CRD Channel backing this Channel. This is immutable after creation. Normally this is set by the Channel defaulter, not directly by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelSpecChannelTemplate
@@ -50,7 +53,9 @@ public partial class V1ChannelSpecChannelTemplate
     [JsonPropertyName("spec")]
     public JsonNode? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelSpecSubscribersAuth
@@ -63,7 +68,9 @@ public partial class V1ChannelSpecSubscribersAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelSpecSubscribers
@@ -112,7 +119,9 @@ public partial class V1ChannelSpecSubscribers
     [JsonPropertyName("auth")]
     public V1ChannelSpecSubscribersAuth? Auth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelSpec
@@ -129,7 +138,9 @@ public partial class V1ChannelSpec
     [JsonPropertyName("subscribers")]
     public IList<V1ChannelSpecSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusAddress
@@ -150,7 +161,9 @@ public partial class V1ChannelStatusAddress
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusAddresses
@@ -171,7 +184,9 @@ public partial class V1ChannelStatusAddresses
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is an KReference to the Channel CRD backing this Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusChannel
@@ -192,7 +207,9 @@ public partial class V1ChannelStatusChannel
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusPolicies
@@ -205,7 +222,9 @@ public partial class V1ChannelStatusPolicies
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusConditions
@@ -234,7 +253,9 @@ public partial class V1ChannelStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeadLetterChannel is a KReference and is set by the channel when it supports native error handling via a channel Failed messages are delivered here.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusDeadLetterChannel
@@ -255,7 +276,9 @@ public partial class V1ChannelStatusDeadLetterChannel
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusSubscribersAuth
@@ -268,7 +291,9 @@ public partial class V1ChannelStatusSubscribersAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatusSubscribers
@@ -293,7 +318,9 @@ public partial class V1ChannelStatusSubscribers
     [JsonPropertyName("auth")]
     public V1ChannelStatusSubscribersAuth? Auth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the Channel. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChannelStatus
@@ -346,7 +373,9 @@ public partial class V1ChannelStatus
     [JsonPropertyName("subscribers")]
     public IList<V1ChannelStatusSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel represents a generic Channel. It is normally used when we want a Channel, but do not need a specific Channel implementation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -376,3 +405,4 @@ public partial class V1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1Channe
     [JsonPropertyName("status")]
     public V1ChannelStatus? Status { get; set; }
 }
+#nullable disable

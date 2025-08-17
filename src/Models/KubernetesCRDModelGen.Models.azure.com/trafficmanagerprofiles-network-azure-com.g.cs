@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfile Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220401storageTrafficManagerProfileList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1api20220401storageTrafficManagerProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.DnsConfig Class containing DNS settings in a Traffic Manager profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
@@ -50,7 +53,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
     [JsonPropertyName("ttl")]
     public int? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigCustomHeaders
@@ -67,7 +72,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigC
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigExpectedStatusCodeRanges
@@ -84,7 +91,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigE
     [JsonPropertyName("min")]
     public int? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
@@ -129,7 +138,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
     [JsonPropertyName("toleratedNumberOfFailures")]
     public int? ToleratedNumberOfFailures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapExpressions
@@ -146,7 +157,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn
@@ -159,7 +172,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMaps
@@ -172,7 +187,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     [JsonPropertyName("dnsConfigFqdn")]
     public V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn? DnsConfigFqdn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecSecretExpressions
@@ -189,7 +206,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecSe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
@@ -210,7 +229,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220401storageTrafficManagerProfileSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOwner
@@ -223,7 +244,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfile_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpec
@@ -288,7 +311,9 @@ public partial class V1api20220401storageTrafficManagerProfileSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusConditions
@@ -321,7 +346,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.DnsConfig_STATUS Class containing DNS settings in a Traffic Manager profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
@@ -342,7 +369,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
     [JsonPropertyName("ttl")]
     public int? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.Endpoint_STATUS Class representing a Traffic Manager endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
@@ -355,7 +384,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigCustomHeaders
@@ -372,7 +403,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigExpectedStatusCodeRanges
@@ -389,7 +422,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     [JsonPropertyName("min")]
     public int? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.MonitorConfig_STATUS Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfig
@@ -434,7 +469,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     [JsonPropertyName("toleratedNumberOfFailures")]
     public int? ToleratedNumberOfFailures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfile_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatus
@@ -499,7 +536,9 @@ public partial class V1api20220401storageTrafficManagerProfileStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfile Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -529,3 +568,4 @@ public partial class V1api20220401storageTrafficManagerProfile : IKubernetesObje
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfileStatus? Status { get; set; }
 }
+#nullable disable

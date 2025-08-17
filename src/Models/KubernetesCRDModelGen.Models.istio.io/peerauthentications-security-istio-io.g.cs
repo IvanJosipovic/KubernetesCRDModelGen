@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PeerAuthenticationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1PeerAuthentication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Mutual TLS settings for workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PeerAuthenticationSpecMtls
@@ -42,7 +45,9 @@ public partial class V1beta1PeerAuthenticationSpecMtls
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PeerAuthenticationSpecPortLevelMtls
@@ -51,7 +56,9 @@ public partial class V1beta1PeerAuthenticationSpecPortLevelMtls
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The selector determines the workloads to apply the PeerAuthentication on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PeerAuthenticationSpecSelector
@@ -60,7 +67,9 @@ public partial class V1beta1PeerAuthenticationSpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Peer authentication configuration for workloads. See more details at: https://istio.io/docs/reference/config/security/peer_authentication.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PeerAuthenticationSpec
@@ -77,7 +86,9 @@ public partial class V1beta1PeerAuthenticationSpec
     [JsonPropertyName("selector")]
     public V1beta1PeerAuthenticationSpecSelector? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -107,3 +118,4 @@ public partial class V1beta1PeerAuthentication : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

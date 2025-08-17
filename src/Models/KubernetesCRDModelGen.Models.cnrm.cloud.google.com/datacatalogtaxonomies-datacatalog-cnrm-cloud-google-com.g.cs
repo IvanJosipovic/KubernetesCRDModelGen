@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataCatalogTaxonomy is the Schema for the datacatalog API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataCatalogTaxonomyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1DataCatalogTaxonomy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomySpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1beta1DataCatalogTaxonomySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomySpec
@@ -83,7 +88,9 @@ public partial class V1beta1DataCatalogTaxonomySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomyStatusConditions
@@ -108,7 +115,9 @@ public partial class V1beta1DataCatalogTaxonomyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Identity of the service which owns the Taxonomy. This field is only populated when the taxonomy is created by a Google Cloud service. Currently only 'DATAPLEX' is supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomyStatusObservedStateService
@@ -121,7 +130,9 @@ public partial class V1beta1DataCatalogTaxonomyStatusObservedStateService
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Creation and modification timestamps of this taxonomy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomyStatusObservedStateTaxonomyTimestamps
@@ -138,7 +149,9 @@ public partial class V1beta1DataCatalogTaxonomyStatusObservedStateTaxonomyTimest
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomyStatusObservedState
@@ -155,7 +168,9 @@ public partial class V1beta1DataCatalogTaxonomyStatusObservedState
     [JsonPropertyName("taxonomyTimestamps")]
     public V1beta1DataCatalogTaxonomyStatusObservedStateTaxonomyTimestamps? TaxonomyTimestamps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogTaxonomyStatus
@@ -180,7 +195,9 @@ public partial class V1beta1DataCatalogTaxonomyStatus
     [JsonPropertyName("observedState")]
     public V1beta1DataCatalogTaxonomyStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogTaxonomy is the Schema for the datacatalog API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -210,3 +227,4 @@ public partial class V1beta1DataCatalogTaxonomy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1DataCatalogTaxonomyStatus? Status { get; set; }
 }
+#nullable disable

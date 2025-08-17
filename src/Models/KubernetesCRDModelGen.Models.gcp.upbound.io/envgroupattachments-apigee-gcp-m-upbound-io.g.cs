@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.m.upbound.io;
+#nullable enable
 /// <summary>EnvgroupAttachment is the Schema for the EnvgroupAttachments API. An</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EnvgroupAttachmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1EnvgroupAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Envgroup in apigee to populate envgroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdRef
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Envgroup in apigee to populate envgroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecForProviderEnvgroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in apigee to populate environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentRef
@@ -127,7 +140,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentRef
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecForProviderEnvironmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in apigee to populate environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelector
@@ -161,7 +178,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1EnvgroupAttachmentSpecForProvider
     [JsonPropertyName("environmentSelector")]
     public V1beta1EnvgroupAttachmentSpecForProviderEnvironmentSelector? EnvironmentSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Envgroup in apigee to populate envgroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdRef
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Envgroup in apigee to populate envgroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecInitProviderEnvgroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in apigee to populate environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentRef
@@ -284,7 +315,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentRef
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in apigee to populate environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelector
@@ -318,7 +353,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelecto
     [JsonPropertyName("policy")]
     public V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1EnvgroupAttachmentSpecInitProvider
     [JsonPropertyName("environmentSelector")]
     public V1beta1EnvgroupAttachmentSpecInitProviderEnvironmentSelector? EnvironmentSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1EnvgroupAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1EnvgroupAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvgroupAttachmentSpec defines the desired state of EnvgroupAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentSpec
@@ -394,7 +437,9 @@ public partial class V1beta1EnvgroupAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EnvgroupAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentStatusAtProvider
@@ -415,7 +460,9 @@ public partial class V1beta1EnvgroupAttachmentStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentStatusConditions
@@ -444,7 +491,9 @@ public partial class V1beta1EnvgroupAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvgroupAttachmentStatus defines the observed state of EnvgroupAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupAttachmentStatus
@@ -461,7 +510,9 @@ public partial class V1beta1EnvgroupAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvgroupAttachment is the Schema for the EnvgroupAttachments API. An</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -491,3 +542,4 @@ public partial class V1beta1EnvgroupAttachment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1EnvgroupAttachmentStatus? Status { get; set; }
 }
+#nullable disable

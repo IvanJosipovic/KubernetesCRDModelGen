@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>TransitGatewayPrefixListReference is the Schema for the TransitGatewayPrefixListReferences API. Manages an EC2 Transit Gateway Prefix List Reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1TransitGatewayPrefixListReference> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProvider
     [JsonPropertyName("transitGatewayRouteTableIdSelector")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelector? TransitGatewayRouteTableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRef
@@ -276,7 +307,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRef
@@ -332,7 +371,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelector
@@ -362,7 +405,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRefPolicy
@@ -375,7 +420,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRef
@@ -388,7 +435,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelectorPolicy
@@ -401,7 +450,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelector
@@ -418,7 +469,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProvider
@@ -463,7 +516,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProvider
     [JsonPropertyName("transitGatewayRouteTableIdSelector")]
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelector? TransitGatewayRouteTableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRefPolicy
@@ -476,7 +531,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRef
@@ -489,7 +546,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigR
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecWriteConnectionSecretToRef
@@ -502,7 +561,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecWriteConnection
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPrefixListReferenceSpec defines the desired state of TransitGatewayPrefixListReference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceSpec
@@ -531,7 +592,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TransitGatewayPrefixListReferenceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceStatusAtProvider
@@ -564,7 +627,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatusAtProvider
     [JsonPropertyName("transitGatewayRouteTableId")]
     public string? TransitGatewayRouteTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceStatusConditions
@@ -593,7 +658,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPrefixListReferenceStatus defines the observed state of TransitGatewayPrefixListReference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPrefixListReferenceStatus
@@ -610,7 +677,9 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPrefixListReference is the Schema for the TransitGatewayPrefixListReferences API. Manages an EC2 Transit Gateway Prefix List Reference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -640,3 +709,4 @@ public partial class V1beta1TransitGatewayPrefixListReference : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayPrefixListReferenceStatus? Status { get; set; }
 }
+#nullable disable

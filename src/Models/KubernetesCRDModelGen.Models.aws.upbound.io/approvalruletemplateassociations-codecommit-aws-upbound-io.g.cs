@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codecommit.aws.upbound.io;
+#nullable enable
 /// <summary>ApprovalRuleTemplateAssociation is the Schema for the ApprovalRuleTemplateAssociations API. Associates a CodeCommit Approval Rule Template with a Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1ApprovalRuleTemplateAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprov
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApprovalRuleTemplate in codecommit to populate approvalRuleTemplateName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprov
     [JsonPropertyName("policy")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprov
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApprovalRuleTemplate in codecommit to populate approvalRuleTemplateName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprov
     [JsonPropertyName("policy")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderReposi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in codecommit to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderReposi
     [JsonPropertyName("policy")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderReposi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in codecommit to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProviderReposi
     [JsonPropertyName("policy")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProvider
@@ -178,13 +197,17 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProvider
     [JsonPropertyName("repositoryNameSelector")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderRepositoryNameSelector? RepositoryNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecInitProvider
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecProviderConfigRefPolicy
@@ -197,7 +220,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecProviderConfigRef
@@ -210,7 +235,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ApprovalRuleTemplateAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpecWriteConnectionSecretToRef
@@ -223,7 +250,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApprovalRuleTemplateAssociationSpec defines the desired state of ApprovalRuleTemplateAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationSpec
@@ -252,7 +281,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApprovalRuleTemplateAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationStatusAtProvider
@@ -273,7 +304,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationStatusAtProvider
     [JsonPropertyName("repositoryName")]
     public string? RepositoryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationStatusConditions
@@ -302,7 +335,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApprovalRuleTemplateAssociationStatus defines the observed state of ApprovalRuleTemplateAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApprovalRuleTemplateAssociationStatus
@@ -319,7 +354,9 @@ public partial class V1beta1ApprovalRuleTemplateAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApprovalRuleTemplateAssociation is the Schema for the ApprovalRuleTemplateAssociations API. Associates a CodeCommit Approval Rule Template with a Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -349,3 +386,4 @@ public partial class V1beta1ApprovalRuleTemplateAssociation : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1ApprovalRuleTemplateAssociationStatus? Status { get; set; }
 }
+#nullable disable

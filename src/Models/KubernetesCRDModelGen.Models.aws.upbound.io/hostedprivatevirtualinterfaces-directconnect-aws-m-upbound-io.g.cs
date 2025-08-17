@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.m.upbound.io;
+#nullable enable
 /// <summary>HostedPrivateVirtualInterface is the Schema for the HostedPrivateVirtualInterfaces API. Provides a Direct Connect hosted private virtual interface resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1HostedPrivateVirtualInterface> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnecti
     [JsonPropertyName("policy")]
     public V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnecti
     [JsonPropertyName("policy")]
     public V1beta1HostedPrivateVirtualInterfaceSpecForProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProvider
@@ -154,7 +165,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecForProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdRefPolicy
@@ -167,7 +180,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdRef
@@ -184,7 +199,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnect
     [JsonPropertyName("policy")]
     public V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdSelectorPolicy
@@ -197,7 +214,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdSelector
@@ -218,7 +237,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnect
     [JsonPropertyName("policy")]
     public V1beta1HostedPrivateVirtualInterfaceSpecInitProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProvider
@@ -271,7 +292,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecInitProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecProviderConfigRef
@@ -284,7 +307,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpecWriteConnectionSecretToRef
@@ -293,7 +318,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPrivateVirtualInterfaceSpec defines the desired state of HostedPrivateVirtualInterface</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceSpec
@@ -318,7 +345,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HostedPrivateVirtualInterfaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceStatusAtProvider
@@ -387,7 +416,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceStatusAtProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceStatusConditions
@@ -416,7 +447,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPrivateVirtualInterfaceStatus defines the observed state of HostedPrivateVirtualInterface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPrivateVirtualInterfaceStatus
@@ -433,7 +466,9 @@ public partial class V1beta1HostedPrivateVirtualInterfaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPrivateVirtualInterface is the Schema for the HostedPrivateVirtualInterfaces API. Provides a Direct Connect hosted private virtual interface resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -463,3 +498,4 @@ public partial class V1beta1HostedPrivateVirtualInterface : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1HostedPrivateVirtualInterfaceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SpannerInstanceConfig is the Schema for the SpannerInstanceConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1SpannerInstanceConfigList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1alpha1SpannerInstanceConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Base configuration name, e.g. projects/&lt;project_name&gt;/instanceConfigs/nam3, based on which this configuration is created. Only set for user-managed configurations. `base_config` must refer to a configuration of type `GOOGLE_MANAGED` in the same project as this configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigSpecBaseConfigRef
@@ -50,7 +53,9 @@ public partial class V1alpha1SpannerInstanceConfigSpecBaseConfigRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1SpannerInstanceConfigSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigSpecReplicas
@@ -88,7 +95,9 @@ public partial class V1alpha1SpannerInstanceConfigSpecReplicas
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstanceConfigSpec defines the desired state of SpannerInstanceConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigSpec
@@ -125,7 +134,9 @@ public partial class V1alpha1SpannerInstanceConfigSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigStatusConditions
@@ -150,7 +161,9 @@ public partial class V1alpha1SpannerInstanceConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigStatusObservedStateOptionalReplicas
@@ -167,7 +180,9 @@ public partial class V1alpha1SpannerInstanceConfigStatusObservedStateOptionalRep
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigStatusObservedState
@@ -200,7 +215,9 @@ public partial class V1alpha1SpannerInstanceConfigStatusObservedState
     [JsonPropertyName("storageLimitPerProcessingUnit")]
     public long? StorageLimitPerProcessingUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstanceConfigStatus defines the config connector machine state of SpannerInstanceConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigStatus
@@ -221,7 +238,9 @@ public partial class V1alpha1SpannerInstanceConfigStatus
     [JsonPropertyName("observedState")]
     public V1alpha1SpannerInstanceConfigStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstanceConfig is the Schema for the SpannerInstanceConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -251,3 +270,4 @@ public partial class V1alpha1SpannerInstanceConfig : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1alpha1SpannerInstanceConfigStatus? Status { get; set; }
 }
+#nullable disable

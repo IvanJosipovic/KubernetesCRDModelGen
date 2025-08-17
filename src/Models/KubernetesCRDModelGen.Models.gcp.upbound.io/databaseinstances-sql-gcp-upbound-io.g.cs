@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.gcp.upbound.io;
+#nullable enable
 /// <summary>DatabaseInstance is the Schema for the DatabaseInstances API. Creates a new SQL database instance in Google Cloud SQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DatabaseInstanceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1DatabaseInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderClone
@@ -58,7 +61,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderClone
     [JsonPropertyName("sourceInstanceName")]
     public string? SourceInstanceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the replication connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfigurationPasswordSecretRef
@@ -75,7 +80,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfigurationP
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
@@ -128,7 +135,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderReplicationCluster
@@ -137,7 +146,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicationCluster
     [JsonPropertyName("failoverDrReplicaName")]
     public string? FailoverDrReplicaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderRestoreBackupContext
@@ -154,7 +165,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderRestoreBackupContext
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Initial root password. Can be updated. Required for MS SQL Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderRootPasswordSecretRef
@@ -171,7 +184,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderRootPasswordSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsActiveDirectoryConfig
@@ -180,7 +195,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsActiveDirecto
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsAdvancedMachineFeatures
@@ -189,7 +206,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsAdvancedMachi
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigurationBackupRetentionSettings
@@ -202,7 +221,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigu
     [JsonPropertyName("retentionUnit")]
     public string? RetentionUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfiguration
@@ -235,7 +256,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigu
     [JsonPropertyName("transactionLogRetentionDays")]
     public double? TransactionLogRetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfigFlags
@@ -248,7 +271,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfig
@@ -261,7 +286,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoo
     [JsonPropertyName("flags")]
     public IList<V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDataCacheConfig
@@ -270,7 +297,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDataCacheConf
     [JsonPropertyName("dataCacheEnabled")]
     public bool? DataCacheEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDatabaseFlags
@@ -283,7 +312,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDatabaseFlags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDenyMaintenancePeriod
@@ -300,7 +331,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDenyMaintenan
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsInsightsConfig
@@ -325,7 +358,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsInsightsConfi
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationAuthorizedNetworks
@@ -342,7 +377,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRefPolicy
@@ -355,7 +392,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate privateNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRef
@@ -368,7 +407,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("policy")]
     public V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate privateNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelector
@@ -398,7 +441,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("policy")]
     public V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfigPscAutoConnections
@@ -411,7 +456,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("consumerServiceProjectId")]
     public string? ConsumerServiceProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfig
@@ -428,7 +475,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("pscEnabled")]
     public bool? PscEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfiguration
@@ -481,7 +530,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsLocationPreference
@@ -498,7 +549,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsLocationPrefe
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsMaintenanceWindow
@@ -515,7 +568,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsMaintenanceWi
     [JsonPropertyName("updateTrack")]
     public string? UpdateTrack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsPasswordValidationPolicy
@@ -544,7 +599,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsPasswordValid
     [JsonPropertyName("reuseInterval")]
     public double? ReuseInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsSqlServerAuditConfig
@@ -561,7 +618,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsSqlServerAudi
     [JsonPropertyName("uploadInterval")]
     public string? UploadInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettings
@@ -686,7 +745,9 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettings
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProvider
@@ -747,7 +808,9 @@ public partial class V1beta1DatabaseInstanceSpecForProvider
     [JsonPropertyName("settings")]
     public IList<V1beta1DatabaseInstanceSpecForProviderSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderClone
@@ -772,7 +835,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderClone
     [JsonPropertyName("sourceInstanceName")]
     public string? SourceInstanceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the replication connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfigurationPasswordSecretRef
@@ -789,7 +854,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
@@ -842,7 +909,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderReplicationCluster
@@ -851,7 +920,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicationCluster
     [JsonPropertyName("failoverDrReplicaName")]
     public string? FailoverDrReplicaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderRestoreBackupContext
@@ -868,7 +939,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderRestoreBackupContext
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Initial root password. Can be updated. Required for MS SQL Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderRootPasswordSecretRef
@@ -885,7 +958,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderRootPasswordSecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsActiveDirectoryConfig
@@ -894,7 +969,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsActiveDirect
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsAdvancedMachineFeatures
@@ -903,7 +980,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsAdvancedMach
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfigurationBackupRetentionSettings
@@ -916,7 +995,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfig
     [JsonPropertyName("retentionUnit")]
     public string? RetentionUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfiguration
@@ -949,7 +1030,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfig
     [JsonPropertyName("transactionLogRetentionDays")]
     public double? TransactionLogRetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfigFlags
@@ -962,7 +1045,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfig
@@ -975,7 +1060,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPo
     [JsonPropertyName("flags")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDataCacheConfig
@@ -984,7 +1071,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDataCacheCon
     [JsonPropertyName("dataCacheEnabled")]
     public bool? DataCacheEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDatabaseFlags
@@ -997,7 +1086,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDatabaseFlag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDenyMaintenancePeriod
@@ -1014,7 +1105,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDenyMaintena
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsInsightsConfig
@@ -1039,7 +1132,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsInsightsConf
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationAuthorizedNetworks
@@ -1056,7 +1151,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRefPolicy
@@ -1069,7 +1166,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate privateNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRef
@@ -1082,7 +1181,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("policy")]
     public V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy
@@ -1095,7 +1196,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate privateNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelector
@@ -1112,7 +1215,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("policy")]
     public V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfigPscAutoConnections
@@ -1125,7 +1230,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("consumerServiceProjectId")]
     public string? ConsumerServiceProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfig
@@ -1142,7 +1249,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("pscEnabled")]
     public bool? PscEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfiguration
@@ -1195,7 +1304,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsLocationPreference
@@ -1212,7 +1323,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsLocationPref
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsMaintenanceWindow
@@ -1229,7 +1342,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsMaintenanceW
     [JsonPropertyName("updateTrack")]
     public string? UpdateTrack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsPasswordValidationPolicy
@@ -1258,7 +1373,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsPasswordVali
     [JsonPropertyName("reuseInterval")]
     public double? ReuseInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsSqlServerAuditConfig
@@ -1275,7 +1392,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsSqlServerAud
     [JsonPropertyName("uploadInterval")]
     public string? UploadInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
@@ -1400,7 +1519,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProvider
@@ -1461,7 +1582,9 @@ public partial class V1beta1DatabaseInstanceSpecInitProvider
     [JsonPropertyName("settings")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecProviderConfigRefPolicy
@@ -1474,7 +1597,9 @@ public partial class V1beta1DatabaseInstanceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecProviderConfigRef
@@ -1487,7 +1612,9 @@ public partial class V1beta1DatabaseInstanceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseInstanceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef
@@ -1500,7 +1627,9 @@ public partial class V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseInstanceSpec defines the desired state of DatabaseInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpec
@@ -1529,7 +1658,9 @@ public partial class V1beta1DatabaseInstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderClone
@@ -1554,7 +1685,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderClone
     [JsonPropertyName("sourceInstanceName")]
     public string? SourceInstanceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderDnsNames
@@ -1571,7 +1704,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderDnsNames
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderIpAddress
@@ -1588,7 +1723,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderIpAddress
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
@@ -1637,7 +1774,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderReplicationCluster
@@ -1650,7 +1789,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicationCluster
     [JsonPropertyName("failoverDrReplicaName")]
     public string? FailoverDrReplicaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderRestoreBackupContext
@@ -1667,7 +1808,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderRestoreBackupContext
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsActiveDirectoryConfig
@@ -1676,7 +1819,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsActiveDirect
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsAdvancedMachineFeatures
@@ -1685,7 +1830,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsAdvancedMach
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfigurationBackupRetentionSettings
@@ -1698,7 +1845,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfig
     [JsonPropertyName("retentionUnit")]
     public string? RetentionUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfiguration
@@ -1731,7 +1880,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfig
     [JsonPropertyName("transactionLogRetentionDays")]
     public double? TransactionLogRetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfigFlags
@@ -1744,7 +1895,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfig
@@ -1757,7 +1910,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPo
     [JsonPropertyName("flags")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDataCacheConfig
@@ -1766,7 +1921,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDataCacheCon
     [JsonPropertyName("dataCacheEnabled")]
     public bool? DataCacheEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDatabaseFlags
@@ -1779,7 +1936,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDatabaseFlag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDenyMaintenancePeriod
@@ -1796,7 +1955,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDenyMaintena
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsInsightsConfig
@@ -1821,7 +1982,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsInsightsConf
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationAuthorizedNetworks
@@ -1838,7 +2001,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfigPscAutoConnections
@@ -1851,7 +2016,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("consumerServiceProjectId")]
     public string? ConsumerServiceProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfig
@@ -1868,7 +2035,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("pscEnabled")]
     public bool? PscEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfiguration
@@ -1913,7 +2082,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsLocationPreference
@@ -1930,7 +2101,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsLocationPref
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsMaintenanceWindow
@@ -1947,7 +2120,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsMaintenanceW
     [JsonPropertyName("updateTrack")]
     public string? UpdateTrack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsPasswordValidationPolicy
@@ -1976,7 +2151,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsPasswordVali
     [JsonPropertyName("reuseInterval")]
     public double? ReuseInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsSqlServerAuditConfig
@@ -1993,7 +2170,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsSqlServerAud
     [JsonPropertyName("uploadInterval")]
     public string? UploadInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
@@ -2122,7 +2301,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProvider
@@ -2231,7 +2412,9 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     [JsonPropertyName("settings")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettings>? Settings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusConditions
@@ -2260,7 +2443,9 @@ public partial class V1beta1DatabaseInstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseInstanceStatus defines the observed state of DatabaseInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatus
@@ -2277,7 +2462,9 @@ public partial class V1beta1DatabaseInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseInstance is the Schema for the DatabaseInstances API. Creates a new SQL database instance in Google Cloud SQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2307,3 +2494,4 @@ public partial class V1beta1DatabaseInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1DatabaseInstanceStatus? Status { get; set; }
 }
+#nullable disable

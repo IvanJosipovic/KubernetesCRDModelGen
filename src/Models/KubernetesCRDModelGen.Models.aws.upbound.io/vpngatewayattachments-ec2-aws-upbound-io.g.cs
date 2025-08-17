@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VPNGatewayAttachment is the Schema for the VPNGatewayAttachments API. Provides a Virtual Private Gateway attachment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNGatewayAttachmentList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1VPNGatewayAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelec
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecForProvider
     [JsonPropertyName("vpnGatewayIdSelector")]
     public V1beta1VPNGatewayAttachmentSpecForProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSele
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecInitProvider
     [JsonPropertyName("vpnGatewayIdSelector")]
     public V1beta1VPNGatewayAttachmentSpecInitProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewayAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1VPNGatewayAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGatewayAttachmentSpec defines the desired state of VPNGatewayAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentSpec
@@ -387,7 +432,9 @@ public partial class V1beta1VPNGatewayAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNGatewayAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1VPNGatewayAttachmentStatusAtProvider
     [JsonPropertyName("vpnGatewayId")]
     public string? VpnGatewayId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1VPNGatewayAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGatewayAttachmentStatus defines the observed state of VPNGatewayAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayAttachmentStatus
@@ -454,7 +505,9 @@ public partial class V1beta1VPNGatewayAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGatewayAttachment is the Schema for the VPNGatewayAttachments API. Provides a Virtual Private Gateway attachment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1VPNGatewayAttachment : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1VPNGatewayAttachmentStatus? Status { get; set; }
 }
+#nullable disable

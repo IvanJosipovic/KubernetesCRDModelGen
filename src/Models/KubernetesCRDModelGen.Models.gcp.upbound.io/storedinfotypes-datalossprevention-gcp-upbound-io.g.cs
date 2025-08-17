@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datalossprevention.gcp.upbound.io;
+#nullable enable
 /// <summary>StoredInfoType is the Schema for the StoredInfoTypes API. Allows creation of custom info types.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StoredInfoTypeList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1StoredInfoType> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryCloudStoragePath
@@ -42,7 +45,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryCloudStorageP
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryWordList
@@ -51,7 +56,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryWordList
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionary
@@ -64,7 +71,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionary
     [JsonPropertyName("wordList")]
     public IList<V1beta1StoredInfoTypeSpecForProviderDictionaryWordList>? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldField
@@ -73,7 +82,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldTable
@@ -90,7 +101,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryField
@@ -103,7 +116,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     [JsonPropertyName("table")]
     public IList<V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryCloudStorageFileSet
@@ -112,7 +127,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryCl
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOutputPath
@@ -121,7 +138,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOu
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionary
@@ -138,7 +157,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionary
     [JsonPropertyName("outputPath")]
     public IList<V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProviderRegex
@@ -151,7 +172,9 @@ public partial class V1beta1StoredInfoTypeSpecForProviderRegex
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecForProvider
@@ -184,7 +207,9 @@ public partial class V1beta1StoredInfoTypeSpecForProvider
     [JsonPropertyName("storedInfoTypeId")]
     public string? StoredInfoTypeId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryCloudStoragePath
@@ -193,7 +218,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryCloudStorage
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList
@@ -202,7 +229,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionary
@@ -215,7 +244,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionary
     [JsonPropertyName("wordList")]
     public IList<V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList>? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldField
@@ -224,7 +255,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldTable
@@ -241,7 +274,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryField
@@ -254,7 +289,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     [JsonPropertyName("table")]
     public IList<V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryCloudStorageFileSet
@@ -263,7 +300,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryC
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryOutputPath
@@ -272,7 +311,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryO
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionary
@@ -289,7 +330,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionary
     [JsonPropertyName("outputPath")]
     public IList<V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProviderRegex
@@ -302,7 +345,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderRegex
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecInitProvider
@@ -335,7 +380,9 @@ public partial class V1beta1StoredInfoTypeSpecInitProvider
     [JsonPropertyName("storedInfoTypeId")]
     public string? StoredInfoTypeId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecProviderConfigRefPolicy
@@ -348,7 +395,9 @@ public partial class V1beta1StoredInfoTypeSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecProviderConfigRef
@@ -361,7 +410,9 @@ public partial class V1beta1StoredInfoTypeSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1StoredInfoTypeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef
@@ -374,7 +425,9 @@ public partial class V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StoredInfoTypeSpec defines the desired state of StoredInfoType</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeSpec
@@ -403,7 +456,9 @@ public partial class V1beta1StoredInfoTypeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryCloudStoragePath
@@ -412,7 +467,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryCloudStorage
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList
@@ -421,7 +478,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionary
@@ -434,7 +493,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionary
     [JsonPropertyName("wordList")]
     public IList<V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList>? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldField
@@ -443,7 +504,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldTable
@@ -460,7 +523,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryField
@@ -473,7 +538,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     [JsonPropertyName("table")]
     public IList<V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryCloudStorageFileSet
@@ -482,7 +549,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryC
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryOutputPath
@@ -491,7 +560,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryO
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionary
@@ -508,7 +579,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionary
     [JsonPropertyName("outputPath")]
     public IList<V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProviderRegex
@@ -521,7 +594,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderRegex
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusAtProvider
@@ -562,7 +637,9 @@ public partial class V1beta1StoredInfoTypeStatusAtProvider
     [JsonPropertyName("storedInfoTypeId")]
     public string? StoredInfoTypeId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatusConditions
@@ -591,7 +668,9 @@ public partial class V1beta1StoredInfoTypeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StoredInfoTypeStatus defines the observed state of StoredInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoredInfoTypeStatus
@@ -608,7 +687,9 @@ public partial class V1beta1StoredInfoTypeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StoredInfoType is the Schema for the StoredInfoTypes API. Allows creation of custom info types.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +719,4 @@ public partial class V1beta1StoredInfoType : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1StoredInfoTypeStatus? Status { get; set; }
 }
+#nullable disable

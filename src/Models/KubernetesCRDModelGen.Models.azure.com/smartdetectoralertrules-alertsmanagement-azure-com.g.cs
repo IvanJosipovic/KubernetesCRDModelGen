@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alertsmanagement.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20210401.SmartDetectorAlertRule Generator information: - Generated from: /alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2021-04-01/SmartDetectorAlertRulesApi.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1api20210401storageSmartDetectorAlertRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecActionGroupsGroupReferences
@@ -54,7 +57,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecActionGroupsG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.ActionGroupsInformation The Action Groups information, used by the alert rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecActionGroups
@@ -75,7 +80,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecActionGroups
     [JsonPropertyName("groupReferences")]
     public IList<V1api20210401storageSmartDetectorAlertRuleSpecActionGroupsGroupReferences>? GroupReferences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.Detector The detector information. By default this is not populated, unless it's specified in expandDetector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecDetector
@@ -92,7 +99,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecDetector
     [JsonPropertyName("parameters")]
     public IDictionary<string, JsonNode>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpecConfigMapExpressions
@@ -109,7 +118,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpecC
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpecSecretExpressions
@@ -126,7 +137,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpecS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.SmartDetectorAlertRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpec
@@ -143,7 +156,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20210401storageSmartDetectorAlertRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecOwner
@@ -156,7 +171,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecScopeReferences
@@ -177,7 +194,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecScopeReferenc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.ThrottlingInformation Optional throttling information for the alert rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpecThrottling
@@ -190,7 +209,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpecThrottling
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.SmartDetectorAlertRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleSpec
@@ -255,7 +276,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleSpec
     [JsonPropertyName("throttling")]
     public V1api20210401storageSmartDetectorAlertRuleSpecThrottling? Throttling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.ActionGroupsInformation_STATUS The Action Groups information, used by the alert rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatusActionGroups
@@ -276,7 +299,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatusActionGroup
     [JsonPropertyName("groupIds")]
     public IList<string>? GroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatusConditions
@@ -309,7 +334,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.DetectorParameterDefinition_STATUS The detector parameter definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatusDetectorParameterDefinitions
@@ -338,7 +365,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatusDetectorPar
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.Detector_STATUS The detector information. By default this is not populated, unless it's specified in expandDetector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatusDetector
@@ -379,7 +408,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatusDetector
     [JsonPropertyName("supportedResourceTypes")]
     public IList<string>? SupportedResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.ThrottlingInformation_STATUS Optional throttling information for the alert rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatusThrottling
@@ -392,7 +423,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatusThrottling
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.SmartDetectorAlertRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210401storageSmartDetectorAlertRuleStatus
@@ -457,7 +490,9 @@ public partial class V1api20210401storageSmartDetectorAlertRuleStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210401.SmartDetectorAlertRule Generator information: - Generated from: /alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2021-04-01/SmartDetectorAlertRulesApi.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +522,4 @@ public partial class V1api20210401storageSmartDetectorAlertRule : IKubernetesObj
     [JsonPropertyName("status")]
     public V1api20210401storageSmartDetectorAlertRuleStatus? Status { get; set; }
 }
+#nullable disable

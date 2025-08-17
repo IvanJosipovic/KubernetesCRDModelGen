@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.finops.databricks.crossplane.io;
+#nullable enable
 /// <summary>Budget is the Schema for the Budgets API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BudgetList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1alpha1Budget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderAlertConfigurationsActionConfigurations
@@ -50,7 +53,9 @@ public partial class V1alpha1BudgetSpecForProviderAlertConfigurationsActionConfi
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderAlertConfigurations
@@ -79,7 +84,9 @@ public partial class V1alpha1BudgetSpecForProviderAlertConfigurations
     [JsonPropertyName("triggerType")]
     public string? TriggerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderFilterTagsValue
@@ -92,7 +99,9 @@ public partial class V1alpha1BudgetSpecForProviderFilterTagsValue
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderFilterTags
@@ -105,7 +114,9 @@ public partial class V1alpha1BudgetSpecForProviderFilterTags
     [JsonPropertyName("value")]
     public IList<V1alpha1BudgetSpecForProviderFilterTagsValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderFilterWorkspaceId
@@ -118,7 +129,9 @@ public partial class V1alpha1BudgetSpecForProviderFilterWorkspaceId
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProviderFilter
@@ -131,7 +144,9 @@ public partial class V1alpha1BudgetSpecForProviderFilter
     [JsonPropertyName("workspaceId")]
     public IList<V1alpha1BudgetSpecForProviderFilterWorkspaceId>? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecForProvider
@@ -164,7 +179,9 @@ public partial class V1alpha1BudgetSpecForProvider
     [JsonPropertyName("updateTime")]
     public double? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderAlertConfigurationsActionConfigurations
@@ -181,7 +198,9 @@ public partial class V1alpha1BudgetSpecInitProviderAlertConfigurationsActionConf
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderAlertConfigurations
@@ -210,7 +229,9 @@ public partial class V1alpha1BudgetSpecInitProviderAlertConfigurations
     [JsonPropertyName("triggerType")]
     public string? TriggerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderFilterTagsValue
@@ -223,7 +244,9 @@ public partial class V1alpha1BudgetSpecInitProviderFilterTagsValue
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderFilterTags
@@ -236,7 +259,9 @@ public partial class V1alpha1BudgetSpecInitProviderFilterTags
     [JsonPropertyName("value")]
     public IList<V1alpha1BudgetSpecInitProviderFilterTagsValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderFilterWorkspaceId
@@ -249,7 +274,9 @@ public partial class V1alpha1BudgetSpecInitProviderFilterWorkspaceId
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProviderFilter
@@ -262,7 +289,9 @@ public partial class V1alpha1BudgetSpecInitProviderFilter
     [JsonPropertyName("workspaceId")]
     public IList<V1alpha1BudgetSpecInitProviderFilterWorkspaceId>? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecInitProvider
@@ -295,7 +324,9 @@ public partial class V1alpha1BudgetSpecInitProvider
     [JsonPropertyName("updateTime")]
     public double? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecProviderConfigRefPolicy
@@ -308,7 +339,9 @@ public partial class V1alpha1BudgetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecProviderConfigRef
@@ -321,7 +354,9 @@ public partial class V1alpha1BudgetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1BudgetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecPublishConnectionDetailsToConfigRefPolicy
@@ -334,7 +369,9 @@ public partial class V1alpha1BudgetSpecPublishConnectionDetailsToConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecPublishConnectionDetailsToConfigRef
@@ -347,7 +384,9 @@ public partial class V1alpha1BudgetSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1BudgetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecPublishConnectionDetailsToMetadata
@@ -364,7 +403,9 @@ public partial class V1alpha1BudgetSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecPublishConnectionDetailsTo
@@ -381,7 +422,9 @@ public partial class V1alpha1BudgetSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpecWriteConnectionSecretToRef
@@ -394,7 +437,9 @@ public partial class V1alpha1BudgetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetSpec defines the desired state of Budget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetSpec
@@ -427,7 +472,9 @@ public partial class V1alpha1BudgetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1BudgetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderAlertConfigurationsActionConfigurations
@@ -444,7 +491,9 @@ public partial class V1alpha1BudgetStatusAtProviderAlertConfigurationsActionConf
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderAlertConfigurations
@@ -473,7 +522,9 @@ public partial class V1alpha1BudgetStatusAtProviderAlertConfigurations
     [JsonPropertyName("triggerType")]
     public string? TriggerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderFilterTagsValue
@@ -486,7 +537,9 @@ public partial class V1alpha1BudgetStatusAtProviderFilterTagsValue
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderFilterTags
@@ -499,7 +552,9 @@ public partial class V1alpha1BudgetStatusAtProviderFilterTags
     [JsonPropertyName("value")]
     public IList<V1alpha1BudgetStatusAtProviderFilterTagsValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderFilterWorkspaceId
@@ -512,7 +567,9 @@ public partial class V1alpha1BudgetStatusAtProviderFilterWorkspaceId
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProviderFilter
@@ -525,7 +582,9 @@ public partial class V1alpha1BudgetStatusAtProviderFilter
     [JsonPropertyName("workspaceId")]
     public IList<V1alpha1BudgetStatusAtProviderFilterWorkspaceId>? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusAtProvider
@@ -562,7 +621,9 @@ public partial class V1alpha1BudgetStatusAtProvider
     [JsonPropertyName("updateTime")]
     public double? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatusConditions
@@ -591,7 +652,9 @@ public partial class V1alpha1BudgetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetStatus defines the observed state of Budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BudgetStatus
@@ -608,7 +671,9 @@ public partial class V1alpha1BudgetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Budget is the Schema for the Budgets API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +703,4 @@ public partial class V1alpha1Budget : IKubernetesObject<V1ObjectMeta>, ISpec<V1a
     [JsonPropertyName("status")]
     public V1alpha1BudgetStatus? Status { get; set; }
 }
+#nullable disable

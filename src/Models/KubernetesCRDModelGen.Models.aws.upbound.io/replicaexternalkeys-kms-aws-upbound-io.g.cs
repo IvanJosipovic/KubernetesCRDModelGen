@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.aws.upbound.io;
+#nullable enable
 /// <summary>ReplicaExternalKey is the Schema for the ReplicaExternalKeys API. Manages a KMS multi-Region replica key that uses external key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReplicaExternalKeyList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ReplicaExternalKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderKeyMaterialBase64SecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProviderKeyMaterialBase64Se
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExternalKey in kms to populate primaryKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnRef
@@ -76,7 +83,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExternalKey in kms to populate primaryKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelector
@@ -106,7 +117,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelect
     [JsonPropertyName("policy")]
     public V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProvider
@@ -159,7 +172,9 @@ public partial class V1beta1ReplicaExternalKeySpecForProvider
     [JsonPropertyName("validTo")]
     public string? ValidTo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProviderKeyMaterialBase64SecretRef
@@ -176,7 +191,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProviderKeyMaterialBase64S
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnRefPolicy
@@ -189,7 +206,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExternalKey in kms to populate primaryKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnRef
@@ -202,7 +221,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnSelectorPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExternalKey in kms to populate primaryKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnSelector
@@ -232,7 +255,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ReplicaExternalKeySpecInitProviderPrimaryKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecInitProvider
@@ -281,7 +306,9 @@ public partial class V1beta1ReplicaExternalKeySpecInitProvider
     [JsonPropertyName("validTo")]
     public string? ValidTo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecProviderConfigRefPolicy
@@ -294,7 +321,9 @@ public partial class V1beta1ReplicaExternalKeySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecProviderConfigRef
@@ -307,7 +336,9 @@ public partial class V1beta1ReplicaExternalKeySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicaExternalKeySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecWriteConnectionSecretToRef
@@ -320,7 +351,9 @@ public partial class V1beta1ReplicaExternalKeySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicaExternalKeySpec defines the desired state of ReplicaExternalKey</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpec
@@ -349,7 +382,9 @@ public partial class V1beta1ReplicaExternalKeySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReplicaExternalKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeyStatusAtProvider
@@ -418,7 +453,9 @@ public partial class V1beta1ReplicaExternalKeyStatusAtProvider
     [JsonPropertyName("validTo")]
     public string? ValidTo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeyStatusConditions
@@ -447,7 +484,9 @@ public partial class V1beta1ReplicaExternalKeyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicaExternalKeyStatus defines the observed state of ReplicaExternalKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeyStatus
@@ -464,7 +503,9 @@ public partial class V1beta1ReplicaExternalKeyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicaExternalKey is the Schema for the ReplicaExternalKeys API. Manages a KMS multi-Region replica key that uses external key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -494,3 +535,4 @@ public partial class V1beta1ReplicaExternalKey : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ReplicaExternalKeyStatus? Status { get; set; }
 }
+#nullable disable

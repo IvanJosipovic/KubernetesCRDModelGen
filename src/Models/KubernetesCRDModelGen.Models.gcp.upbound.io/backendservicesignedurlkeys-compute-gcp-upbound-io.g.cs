@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>BackendServiceSignedURLKey is the Schema for the BackendServiceSignedURLKeys API. A key for signing Cloud CDN signed URLs for Backend Services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackendServiceSignedURLKeyList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1BackendServiceSignedURLKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRef
@@ -59,7 +64,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     [JsonPropertyName("policy")]
     public V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     [JsonPropertyName("policy")]
     public V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderKeyValueSecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderKeyValueSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecForProvider
@@ -135,7 +148,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRef
@@ -161,7 +178,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     [JsonPropertyName("policy")]
     public V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelectorPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelector
@@ -191,7 +212,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     [JsonPropertyName("policy")]
     public V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderKeyValueSecretRef
@@ -208,7 +231,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderKeyValueSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRef
@@ -263,7 +292,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretToRef
@@ -276,7 +307,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServiceSignedURLKeySpec defines the desired state of BackendServiceSignedURLKey</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeySpec
@@ -305,7 +338,9 @@ public partial class V1beta1BackendServiceSignedURLKeySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeyStatusAtProvider
@@ -326,7 +361,9 @@ public partial class V1beta1BackendServiceSignedURLKeyStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeyStatusConditions
@@ -355,7 +392,9 @@ public partial class V1beta1BackendServiceSignedURLKeyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServiceSignedURLKeyStatus defines the observed state of BackendServiceSignedURLKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSignedURLKeyStatus
@@ -372,7 +411,9 @@ public partial class V1beta1BackendServiceSignedURLKeyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServiceSignedURLKey is the Schema for the BackendServiceSignedURLKeys API. A key for signing Cloud CDN signed URLs for Backend Services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -402,3 +443,4 @@ public partial class V1beta1BackendServiceSignedURLKey : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1BackendServiceSignedURLKeyStatus? Status { get; set; }
 }
+#nullable disable

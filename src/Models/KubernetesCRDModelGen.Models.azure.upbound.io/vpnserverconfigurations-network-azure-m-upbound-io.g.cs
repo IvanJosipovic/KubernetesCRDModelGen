@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>VPNServerConfiguration is the Schema for the VPNServerConfigurations API. Manages a VPN Server Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNServerConfigurationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1VPNServerConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderAzureActiveDirectoryAuthentication
@@ -50,7 +53,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderAzureActiveDire
     [JsonPropertyName("tenant")]
     public string? Tenant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderClientRevokedCertificate
@@ -63,7 +68,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderClientRevokedCe
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderClientRootCertificate
@@ -76,7 +83,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderClientRootCerti
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipsec_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderIpsecPolicy
@@ -113,7 +122,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderIpsecPolicy
     [JsonPropertyName("saLifetimeSeconds")]
     public double? SaLifetimeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusClientRootCertificate
@@ -126,7 +137,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusClientRoo
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret used to communicate with the Radius Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerSecretSecretRef
@@ -139,7 +152,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServer
@@ -156,7 +171,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServer
     [JsonPropertyName("secretSecretRef")]
     public V1beta1VPNServerConfigurationSpecForProviderRadiusServerSecretSecretRef? SecretSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerRootCertificate
@@ -169,7 +186,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerRoo
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A radius block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadius
@@ -186,7 +205,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadius
     [JsonPropertyName("serverRootCertificate")]
     public IList<V1beta1VPNServerConfigurationSpecForProviderRadiusServerRootCertificate>? ServerRootCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRef
@@ -216,7 +239,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelector
@@ -250,7 +277,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProvider
@@ -303,7 +332,9 @@ public partial class V1beta1VPNServerConfigurationSpecForProvider
     [JsonPropertyName("vpnProtocols")]
     public IList<string>? VpnProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderAzureActiveDirectoryAuthentication
@@ -320,7 +351,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderAzureActiveDir
     [JsonPropertyName("tenant")]
     public string? Tenant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRevokedCertificate
@@ -333,7 +366,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRevokedC
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRootCertificate
@@ -346,7 +381,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRootCert
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipsec_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderIpsecPolicy
@@ -383,7 +420,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderIpsecPolicy
     [JsonPropertyName("saLifetimeSeconds")]
     public double? SaLifetimeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusClientRootCertificate
@@ -396,7 +435,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusClientRo
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret used to communicate with the Radius Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerSecretSecretRef
@@ -409,7 +450,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServer
@@ -426,7 +469,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServer
     [JsonPropertyName("secretSecretRef")]
     public V1beta1VPNServerConfigurationSpecInitProviderRadiusServerSecretSecretRef SecretSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRootCertificate
@@ -439,7 +484,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRo
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A radius block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadius
@@ -456,7 +503,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadius
     [JsonPropertyName("serverRootCertificate")]
     public IList<V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRootCertificate>? ServerRootCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecInitProvider
@@ -497,7 +546,9 @@ public partial class V1beta1VPNServerConfigurationSpecInitProvider
     [JsonPropertyName("vpnProtocols")]
     public IList<string>? VpnProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecProviderConfigRef
@@ -510,7 +561,9 @@ public partial class V1beta1VPNServerConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef
@@ -519,7 +572,9 @@ public partial class V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNServerConfigurationSpec defines the desired state of VPNServerConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpec
@@ -544,7 +599,9 @@ public partial class V1beta1VPNServerConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderAzureActiveDirectoryAuthentication
@@ -561,7 +618,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderAzureActiveDir
     [JsonPropertyName("tenant")]
     public string? Tenant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRevokedCertificate
@@ -574,7 +633,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRevokedC
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRootCertificate
@@ -587,7 +648,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRootCert
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipsec_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderIpsecPolicy
@@ -624,7 +687,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderIpsecPolicy
     [JsonPropertyName("saLifetimeSeconds")]
     public double? SaLifetimeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusClientRootCertificate
@@ -637,7 +702,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusClientRo
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServer
@@ -650,7 +717,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServer
     [JsonPropertyName("score")]
     public double? Score { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRootCertificate
@@ -663,7 +732,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRo
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A radius block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadius
@@ -680,7 +751,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadius
     [JsonPropertyName("serverRootCertificate")]
     public IList<V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRootCertificate>? ServerRootCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusAtProvider
@@ -729,7 +802,9 @@ public partial class V1beta1VPNServerConfigurationStatusAtProvider
     [JsonPropertyName("vpnProtocols")]
     public IList<string>? VpnProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatusConditions
@@ -758,7 +833,9 @@ public partial class V1beta1VPNServerConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNServerConfigurationStatus defines the observed state of VPNServerConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationStatus
@@ -775,7 +852,9 @@ public partial class V1beta1VPNServerConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNServerConfiguration is the Schema for the VPNServerConfigurations API. Manages a VPN Server Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -805,3 +884,4 @@ public partial class V1beta1VPNServerConfiguration : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1VPNServerConfigurationStatus? Status { get; set; }
 }
+#nullable disable

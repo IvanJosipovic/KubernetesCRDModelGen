@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>A ConfigurationRevision represents a revision of a Configuration. Crossplane creates new revisions when there are changes to a Configuration.  Crossplane creates and manages ConfigurationRevision. Don't directly edit ConfigurationRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ConfigurationRevisionList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1ConfigurationRevision> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionSpecPackagePullSecrets
@@ -42,7 +45,9 @@ public partial class V1ConfigurationRevisionSpecPackagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PackageRevisionSpec specifies the desired state of a PackageRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionSpec
@@ -79,7 +84,9 @@ public partial class V1ConfigurationRevisionSpec
     [JsonPropertyName("skipDependencyResolution")]
     public bool? SkipDependencyResolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionStatusAppliedImageConfigRefs
@@ -92,7 +99,9 @@ public partial class V1ConfigurationRevisionStatusAppliedImageConfigRefs
     [JsonPropertyName("reason")]
     public string Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionStatusConditions
@@ -121,7 +130,9 @@ public partial class V1ConfigurationRevisionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A TypedReference refers to an object by Name, Kind, and APIVersion. It is commonly used to reference cluster-scoped objects or objects where the namespace is already known.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionStatusObjectRefs
@@ -142,7 +153,9 @@ public partial class V1ConfigurationRevisionStatusObjectRefs
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PackageRevisionStatus represents the observed state of a PackageRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationRevisionStatus
@@ -179,7 +192,9 @@ public partial class V1ConfigurationRevisionStatus
     [JsonPropertyName("resolvedImage")]
     public string? ResolvedImage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ConfigurationRevision represents a revision of a Configuration. Crossplane creates new revisions when there are changes to a Configuration.  Crossplane creates and manages ConfigurationRevision. Don't directly edit ConfigurationRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -209,3 +224,4 @@ public partial class V1ConfigurationRevision : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1ConfigurationRevisionStatus? Status { get; set; }
 }
+#nullable disable

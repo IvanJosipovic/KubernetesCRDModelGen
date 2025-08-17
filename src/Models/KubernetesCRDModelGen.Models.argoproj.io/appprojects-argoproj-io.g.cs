@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+#nullable enable
 /// <summary>AppProject provides a logical grouping of applications, providing controls for: * where the apps may deploy to (cluster whitelist) * what may be deployed (repository whitelist, resource whitelist/blacklist) * who can access these applications (roles, OIDC group claims bindings) * and what they can do (RBAC policies) * automation access to these roles (JWT tokens)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppProjectList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1AppProject> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecClusterResourceBlacklist
@@ -46,7 +49,9 @@ public partial class V1alpha1AppProjectSpecClusterResourceBlacklist
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecClusterResourceWhitelist
@@ -59,7 +64,9 @@ public partial class V1alpha1AppProjectSpecClusterResourceWhitelist
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationDestinationServiceAccount holds information about the service account to be impersonated for the application sync operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecDestinationServiceAccounts
@@ -76,7 +83,9 @@ public partial class V1alpha1AppProjectSpecDestinationServiceAccounts
     [JsonPropertyName("server")]
     public string Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationDestination holds information about the application's destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecDestinations
@@ -93,7 +102,9 @@ public partial class V1alpha1AppProjectSpecDestinations
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecNamespaceResourceBlacklist
@@ -106,7 +117,9 @@ public partial class V1alpha1AppProjectSpecNamespaceResourceBlacklist
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecNamespaceResourceWhitelist
@@ -119,7 +132,9 @@ public partial class V1alpha1AppProjectSpecNamespaceResourceWhitelist
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrphanedResourceKey is a reference to a resource to be ignored from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecOrphanedResourcesIgnore
@@ -136,7 +151,9 @@ public partial class V1alpha1AppProjectSpecOrphanedResourcesIgnore
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrphanedResources specifies if controller should monitor orphaned resources of apps in this project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecOrphanedResources
@@ -149,7 +166,9 @@ public partial class V1alpha1AppProjectSpecOrphanedResources
     [JsonPropertyName("warn")]
     public bool? Warn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JWTToken holds the issuedAt and expiresAt values of a token</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecRolesJwtTokens
@@ -166,7 +185,9 @@ public partial class V1alpha1AppProjectSpecRolesJwtTokens
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectRole represents a role that has access to a project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecRoles
@@ -191,7 +212,9 @@ public partial class V1alpha1AppProjectSpecRoles
     [JsonPropertyName("policies")]
     public IList<string>? Policies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SignatureKey is the specification of a key required to verify commit signatures with</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecSignatureKeys
@@ -200,7 +223,9 @@ public partial class V1alpha1AppProjectSpecSignatureKeys
     [JsonPropertyName("keyID")]
     public string KeyID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SyncWindow contains the kind, time, duration and attributes that are used to assign the syncWindows to apps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecSyncWindows
@@ -245,7 +270,9 @@ public partial class V1alpha1AppProjectSpecSyncWindows
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProjectSpec is the specification of an AppProject</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpec
@@ -306,7 +333,9 @@ public partial class V1alpha1AppProjectSpec
     [JsonPropertyName("syncWindows")]
     public IList<V1alpha1AppProjectSpecSyncWindows>? SyncWindows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JWTToken holds the issuedAt and expiresAt values of a token</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectStatusJwtTokensByRoleItems
@@ -323,7 +352,9 @@ public partial class V1alpha1AppProjectStatusJwtTokensByRoleItems
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JWTTokens represents a list of JWT tokens</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectStatusJwtTokensByRole
@@ -332,7 +363,9 @@ public partial class V1alpha1AppProjectStatusJwtTokensByRole
     [JsonPropertyName("items")]
     public IList<V1alpha1AppProjectStatusJwtTokensByRoleItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProjectStatus contains status information for AppProject CRs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectStatus
@@ -341,7 +374,9 @@ public partial class V1alpha1AppProjectStatus
     [JsonPropertyName("jwtTokensByRole")]
     public IDictionary<string, V1alpha1AppProjectStatusJwtTokensByRole>? JwtTokensByRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProject provides a logical grouping of applications, providing controls for: * where the apps may deploy to (cluster whitelist) * what may be deployed (repository whitelist, resource whitelist/blacklist) * who can access these applications (roles, OIDC group claims bindings) * and what they can do (RBAC policies) * automation access to these roles (JWT tokens)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -371,3 +406,4 @@ public partial class V1alpha1AppProject : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1AppProjectStatus? Status { get; set; }
 }
+#nullable disable

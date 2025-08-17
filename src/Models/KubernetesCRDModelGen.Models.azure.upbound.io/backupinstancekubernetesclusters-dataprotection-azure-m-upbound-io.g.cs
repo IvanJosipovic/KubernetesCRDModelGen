@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupInstanceKubernetesCluster is the Schema for the BackupInstanceKubernetesClusters API. Manages a Backup Instance to back up a Kubernetes Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1BackupInstanceKubernetesCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup_datasource_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupDatasourceParameters
@@ -66,7 +69,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     [JsonPropertyName("volumeSnapshotEnabled")]
     public bool? VolumeSnapshotEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicy
@@ -79,7 +84,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRef
@@ -96,7 +103,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicy
@@ -109,7 +118,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelector
@@ -130,7 +141,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRef
@@ -160,7 +175,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelector
@@ -194,7 +213,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRef
@@ -224,7 +247,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelector
@@ -258,7 +285,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRef
@@ -288,7 +319,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector
@@ -322,7 +357,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProvider
@@ -383,7 +420,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProvider
     [JsonPropertyName("vaultIdSelector")]
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup_datasource_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupDatasourceParameters
@@ -416,7 +455,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     [JsonPropertyName("volumeSnapshotEnabled")]
     public bool? VolumeSnapshotEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicy
@@ -429,7 +470,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRef
@@ -446,7 +489,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicy
@@ -459,7 +504,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelector
@@ -480,7 +527,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicy
@@ -493,7 +542,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRef
@@ -510,7 +561,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicy
@@ -523,7 +576,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelector
@@ -544,7 +599,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicy
@@ -557,7 +614,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRef
@@ -574,7 +633,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicy
@@ -587,7 +648,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelector
@@ -608,7 +671,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     [JsonPropertyName("policy")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProvider
@@ -657,7 +722,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProvider
     [JsonPropertyName("snapshotResourceGroupNameSelector")]
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelector? SnapshotResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRef
@@ -670,7 +737,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSecretToRef
@@ -679,7 +748,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstanceKubernetesClusterSpec defines the desired state of BackupInstanceKubernetesCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpec
@@ -704,7 +775,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup_datasource_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProviderBackupDatasourceParameters
@@ -737,7 +810,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProviderBacku
     [JsonPropertyName("volumeSnapshotEnabled")]
     public bool? VolumeSnapshotEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProvider
@@ -770,7 +845,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProvider
     [JsonPropertyName("vaultId")]
     public string? VaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterStatusConditions
@@ -799,7 +876,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstanceKubernetesClusterStatus defines the observed state of BackupInstanceKubernetesCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterStatus
@@ -816,7 +895,9 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstanceKubernetesCluster is the Schema for the BackupInstanceKubernetesClusters API. Manages a Backup Instance to back up a Kubernetes Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -846,3 +927,4 @@ public partial class V1beta1BackupInstanceKubernetesCluster : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1BackupInstanceKubernetesClusterStatus? Status { get; set; }
 }
+#nullable disable

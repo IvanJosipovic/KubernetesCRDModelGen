@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupPolicyDisk is the Schema for the BackupPolicyDisks API. Manages a Backup Policy Disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupPolicyDiskList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1BackupPolicyDisk> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Disk to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderRetentionRuleCriteria
@@ -42,7 +45,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderRetentionRuleCriteria
     [JsonPropertyName("absoluteCriteria")]
     public string? AbsoluteCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderRetentionRule
@@ -63,7 +68,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderRetentionRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdRef
@@ -93,7 +102,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyDiskSpecForProviderVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdSelectorPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdSelector
@@ -127,7 +140,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProviderVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyDiskSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecForProvider
@@ -160,7 +175,9 @@ public partial class V1beta1BackupPolicyDiskSpecForProvider
     [JsonPropertyName("vaultIdSelector")]
     public V1beta1BackupPolicyDiskSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Disk to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecInitProviderRetentionRuleCriteria
@@ -169,7 +186,9 @@ public partial class V1beta1BackupPolicyDiskSpecInitProviderRetentionRuleCriteri
     [JsonPropertyName("absoluteCriteria")]
     public string? AbsoluteCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecInitProviderRetentionRule
@@ -190,7 +209,9 @@ public partial class V1beta1BackupPolicyDiskSpecInitProviderRetentionRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecInitProvider
@@ -211,7 +232,9 @@ public partial class V1beta1BackupPolicyDiskSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecProviderConfigRef
@@ -224,7 +247,9 @@ public partial class V1beta1BackupPolicyDiskSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpecWriteConnectionSecretToRef
@@ -233,7 +258,9 @@ public partial class V1beta1BackupPolicyDiskSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyDiskSpec defines the desired state of BackupPolicyDisk</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskSpec
@@ -258,7 +285,9 @@ public partial class V1beta1BackupPolicyDiskSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupPolicyDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Disk to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskStatusAtProviderRetentionRuleCriteria
@@ -267,7 +296,9 @@ public partial class V1beta1BackupPolicyDiskStatusAtProviderRetentionRuleCriteri
     [JsonPropertyName("absoluteCriteria")]
     public string? AbsoluteCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskStatusAtProviderRetentionRule
@@ -288,7 +319,9 @@ public partial class V1beta1BackupPolicyDiskStatusAtProviderRetentionRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskStatusAtProvider
@@ -317,7 +350,9 @@ public partial class V1beta1BackupPolicyDiskStatusAtProvider
     [JsonPropertyName("vaultId")]
     public string? VaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskStatusConditions
@@ -346,7 +381,9 @@ public partial class V1beta1BackupPolicyDiskStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyDiskStatus defines the observed state of BackupPolicyDisk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyDiskStatus
@@ -363,7 +400,9 @@ public partial class V1beta1BackupPolicyDiskStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyDisk is the Schema for the BackupPolicyDisks API. Manages a Backup Policy Disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -393,3 +432,4 @@ public partial class V1beta1BackupPolicyDisk : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyDiskStatus? Status { get; set; }
 }
+#nullable disable

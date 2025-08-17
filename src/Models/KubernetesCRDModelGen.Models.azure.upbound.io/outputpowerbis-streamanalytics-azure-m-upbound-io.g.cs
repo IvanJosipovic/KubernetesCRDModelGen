@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.m.upbound.io;
+#nullable enable
 /// <summary>OutputPowerBI is the Schema for the OutputPowerBIs API. Manages a Stream Analytics Output powerBI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OutputPowerBIList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1OutputPowerBI> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdRef
     [JsonPropertyName("policy")]
     public V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdSele
     [JsonPropertyName("policy")]
     public V1beta1OutputPowerBISpecForProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecForProvider
@@ -138,7 +149,9 @@ public partial class V1beta1OutputPowerBISpecForProvider
     [JsonPropertyName("tokenUserPrincipalName")]
     public string? TokenUserPrincipalName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdRefPolicy
@@ -151,7 +164,9 @@ public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdRef
@@ -168,7 +183,9 @@ public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdRef
     [JsonPropertyName("policy")]
     public V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdSelectorPolicy
@@ -181,7 +198,9 @@ public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdSelector
@@ -202,7 +221,9 @@ public partial class V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdSel
     [JsonPropertyName("policy")]
     public V1beta1OutputPowerBISpecInitProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecInitProvider
@@ -243,7 +264,9 @@ public partial class V1beta1OutputPowerBISpecInitProvider
     [JsonPropertyName("tokenUserPrincipalName")]
     public string? TokenUserPrincipalName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecProviderConfigRef
@@ -256,7 +279,9 @@ public partial class V1beta1OutputPowerBISpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpecWriteConnectionSecretToRef
@@ -265,7 +290,9 @@ public partial class V1beta1OutputPowerBISpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputPowerBISpec defines the desired state of OutputPowerBI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBISpec
@@ -290,7 +317,9 @@ public partial class V1beta1OutputPowerBISpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OutputPowerBISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBIStatusAtProvider
@@ -327,7 +356,9 @@ public partial class V1beta1OutputPowerBIStatusAtProvider
     [JsonPropertyName("tokenUserPrincipalName")]
     public string? TokenUserPrincipalName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBIStatusConditions
@@ -356,7 +387,9 @@ public partial class V1beta1OutputPowerBIStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputPowerBIStatus defines the observed state of OutputPowerBI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputPowerBIStatus
@@ -373,7 +406,9 @@ public partial class V1beta1OutputPowerBIStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputPowerBI is the Schema for the OutputPowerBIs API. Manages a Stream Analytics Output powerBI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -403,3 +438,4 @@ public partial class V1beta1OutputPowerBI : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1OutputPowerBIStatus? Status { get; set; }
 }
+#nullable disable

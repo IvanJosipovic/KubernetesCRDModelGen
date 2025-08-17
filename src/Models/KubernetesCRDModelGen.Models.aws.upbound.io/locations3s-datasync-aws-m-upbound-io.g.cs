@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datasync.aws.m.upbound.io;
+#nullable enable
 /// <summary>LocationS3 is the Schema for the LocationS3s API. Manages an AWS DataSync S3 Location</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LocationS3List : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1LocationS3> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3BucketArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LocationS3SpecForProviderS3BucketArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3BucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3BucketArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1LocationS3SpecForProviderS3BucketArnRef
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecForProviderS3BucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3BucketArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LocationS3SpecForProviderS3BucketArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3BucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3BucketArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LocationS3SpecForProviderS3BucketArnSelector
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecForProviderS3BucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate bucketAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArn
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate bucketAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArn
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing information for connecting to S3.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProviderS3Config
@@ -178,7 +197,9 @@ public partial class V1beta1LocationS3SpecForProviderS3Config
     [JsonPropertyName("bucketAccessRoleArnSelector")]
     public V1beta1LocationS3SpecForProviderS3ConfigBucketAccessRoleArnSelector? BucketAccessRoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1LocationS3SpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3BucketArnRefPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3BucketArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3BucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3BucketArnRef
@@ -249,7 +274,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3BucketArnRef
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecInitProviderS3BucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3BucketArnSelectorPolicy
@@ -262,7 +289,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3BucketArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3BucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3BucketArnSelector
@@ -283,7 +312,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3BucketArnSelector
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecInitProviderS3BucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnRefPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate bucketAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnRef
@@ -313,7 +346,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleAr
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate bucketAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnSelector
@@ -347,7 +384,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleAr
     [JsonPropertyName("policy")]
     public V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing information for connecting to S3.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProviderS3Config
@@ -364,7 +403,9 @@ public partial class V1beta1LocationS3SpecInitProviderS3Config
     [JsonPropertyName("bucketAccessRoleArnSelector")]
     public V1beta1LocationS3SpecInitProviderS3ConfigBucketAccessRoleArnSelector? BucketAccessRoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProvider
@@ -401,7 +442,9 @@ public partial class V1beta1LocationS3SpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecProviderConfigRef
@@ -414,7 +457,9 @@ public partial class V1beta1LocationS3SpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecWriteConnectionSecretToRef
@@ -423,7 +468,9 @@ public partial class V1beta1LocationS3SpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationS3Spec defines the desired state of LocationS3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3Spec
@@ -448,7 +495,9 @@ public partial class V1beta1LocationS3Spec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LocationS3SpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing information for connecting to S3.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3StatusAtProviderS3Config
@@ -457,7 +506,9 @@ public partial class V1beta1LocationS3StatusAtProviderS3Config
     [JsonPropertyName("bucketAccessRoleArn")]
     public string? BucketAccessRoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3StatusAtProvider
@@ -506,7 +557,9 @@ public partial class V1beta1LocationS3StatusAtProvider
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3StatusConditions
@@ -535,7 +588,9 @@ public partial class V1beta1LocationS3StatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationS3Status defines the observed state of LocationS3.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3Status
@@ -552,7 +607,9 @@ public partial class V1beta1LocationS3Status
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationS3 is the Schema for the LocationS3s API. Manages an AWS DataSync S3 Location</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -582,3 +639,4 @@ public partial class V1beta1LocationS3 : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1LocationS3Status? Status { get; set; }
 }
+#nullable disable

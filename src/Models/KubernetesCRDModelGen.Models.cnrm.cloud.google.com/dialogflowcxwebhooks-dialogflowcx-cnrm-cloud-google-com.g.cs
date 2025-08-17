@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DialogflowCXWebhookList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1DialogflowCXWebhook> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a generic web service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
@@ -50,7 +53,9 @@ public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of Service Directory service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebService
@@ -67,7 +72,9 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebSe
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a Service Directory service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
@@ -80,7 +87,9 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
     [JsonPropertyName("service")]
     public string Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookSpec
@@ -125,7 +134,9 @@ public partial class V1alpha1DialogflowCXWebhookSpec
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookStatusConditions
@@ -150,7 +161,9 @@ public partial class V1alpha1DialogflowCXWebhookStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXWebhookStatus
@@ -171,7 +184,9 @@ public partial class V1alpha1DialogflowCXWebhookStatus
     [JsonPropertyName("startFlow")]
     public string? StartFlow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -201,3 +216,4 @@ public partial class V1alpha1DialogflowCXWebhook : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1DialogflowCXWebhookStatus? Status { get; set; }
 }
+#nullable disable

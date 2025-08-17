@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RedisClusterList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1RedisCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPersistenceConfigAofConfig
@@ -42,7 +45,9 @@ public partial class V1beta1RedisClusterSpecPersistenceConfigAofConfig
     [JsonPropertyName("appendFsync")]
     public string? AppendFsync { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. RDB configuration. This field will be ignored if mode is not RDB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPersistenceConfigRdbConfig
@@ -55,7 +60,9 @@ public partial class V1beta1RedisClusterSpecPersistenceConfigRdbConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Persistence config (RDB, AOF) for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPersistenceConfig
@@ -72,7 +79,9 @@ public partial class V1beta1RedisClusterSpecPersistenceConfig
     [JsonPropertyName("rdbConfig")]
     public V1beta1RedisClusterSpecPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecProjectRef
@@ -93,7 +102,9 @@ public partial class V1beta1RedisClusterSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPscConfigsNetworkRef
@@ -110,7 +121,9 @@ public partial class V1beta1RedisClusterSpecPscConfigsNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPscConfigs
@@ -119,7 +132,9 @@ public partial class V1beta1RedisClusterSpecPscConfigs
     [JsonPropertyName("networkRef")]
     public V1beta1RedisClusterSpecPscConfigsNetworkRef NetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. This config will be used to determine how the customer wants us to distribute cluster resources within the region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecZoneDistributionConfig
@@ -132,7 +147,9 @@ public partial class V1beta1RedisClusterSpecZoneDistributionConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisClusterSpec defines the desired state of RedisCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpec
@@ -189,7 +206,9 @@ public partial class V1beta1RedisClusterSpec
     [JsonPropertyName("zoneDistributionConfig")]
     public V1beta1RedisClusterSpecZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusConditions
@@ -214,7 +233,9 @@ public partial class V1beta1RedisClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Customer configuration for where the endpoint is created and accessed from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedStateDiscoveryEndpointsPscConfig
@@ -223,7 +244,9 @@ public partial class V1beta1RedisClusterStatusObservedStateDiscoveryEndpointsPsc
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedStateDiscoveryEndpoints
@@ -240,7 +263,9 @@ public partial class V1beta1RedisClusterStatusObservedStateDiscoveryEndpoints
     [JsonPropertyName("pscConfig")]
     public V1beta1RedisClusterStatusObservedStateDiscoveryEndpointsPscConfig? PscConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedStatePscConnections
@@ -265,7 +290,9 @@ public partial class V1beta1RedisClusterStatusObservedStatePscConnections
     [JsonPropertyName("pscConnectionID")]
     public string? PscConnectionID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes ongoing update on the cluster when cluster state is UPDATING.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedStateStateInfoUpdateInfo
@@ -278,7 +305,9 @@ public partial class V1beta1RedisClusterStatusObservedStateStateInfoUpdateInfo
     [JsonPropertyName("targetShardCount")]
     public int? TargetShardCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Additional information about the current state of the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedStateStateInfo
@@ -287,7 +316,9 @@ public partial class V1beta1RedisClusterStatusObservedStateStateInfo
     [JsonPropertyName("updateInfo")]
     public V1beta1RedisClusterStatusObservedStateStateInfoUpdateInfo? UpdateInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatusObservedState
@@ -324,7 +355,9 @@ public partial class V1beta1RedisClusterStatusObservedState
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisClusterStatus defines the config connector machine state of RedisCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterStatus
@@ -345,7 +378,9 @@ public partial class V1beta1RedisClusterStatus
     [JsonPropertyName("observedState")]
     public V1beta1RedisClusterStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -375,3 +410,4 @@ public partial class V1beta1RedisCluster : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1RedisClusterStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.m.upbound.io;
+#nullable enable
 /// <summary>HostedPublicVirtualInterfaceAccepter is the Schema for the HostedPublicVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1HostedPublicVirtualInterfaceAccepter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HostedPublicVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderV
     [JsonPropertyName("policy")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HostedPublicVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderV
     [JsonPropertyName("policy")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecForProvider
     [JsonPropertyName("virtualInterfaceIdSelector")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelector? VirtualInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HostedPublicVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRef
@@ -152,7 +167,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HostedPublicVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelector
@@ -186,7 +205,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProvider
     [JsonPropertyName("virtualInterfaceIdSelector")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelector? VirtualInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecProviderConf
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpecWriteConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPublicVirtualInterfaceAccepterSpec defines the desired state of HostedPublicVirtualInterfaceAccepter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpec
@@ -254,7 +281,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HostedPublicVirtualInterfaceAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatusAtProvider
@@ -283,7 +312,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatusAtProvider
     [JsonPropertyName("virtualInterfaceId")]
     public string? VirtualInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatusConditions
@@ -312,7 +343,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPublicVirtualInterfaceAccepterStatus defines the observed state of HostedPublicVirtualInterfaceAccepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatus
@@ -329,7 +362,9 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedPublicVirtualInterfaceAccepter is the Schema for the HostedPublicVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -359,3 +394,4 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepter : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1HostedPublicVirtualInterfaceAccepterStatus? Status { get; set; }
 }
+#nullable disable

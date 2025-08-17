@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfunctions2.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudFunctions2FunctionList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudFunctions2Function> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If provided, get the source from this location in a Cloud Source Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSource
@@ -66,7 +69,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSou
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If provided, get the source from this location in Google Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorageSource
@@ -83,7 +88,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorage
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location of the function source code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSource
@@ -96,7 +103,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSource
     [JsonPropertyName("storageSource")]
     public V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorageSource? StorageSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Build step of the function that builds a container from the given source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfig
@@ -129,7 +138,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfig
     [JsonPropertyName("workerPool")]
     public string? WorkerPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters
@@ -146,7 +157,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An Eventarc trigger managed by Google Cloud Functions that fires events in response to a condition in another service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecEventTrigger
@@ -179,7 +192,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecEventTrigger
     [JsonPropertyName("triggerRegion")]
     public string? TriggerRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecProjectRef
@@ -196,7 +211,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables
@@ -217,7 +234,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvir
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions
@@ -230,7 +249,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolum
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumes
@@ -251,7 +272,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolum
     [JsonPropertyName("versions")]
     public IList<V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Service being deployed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfig
@@ -324,7 +347,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfig
     [JsonPropertyName("vpcConnectorEgressSettings")]
     public string? VpcConnectorEgressSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionSpec
@@ -361,7 +386,9 @@ public partial class V1alpha1CloudFunctions2FunctionSpec
     [JsonPropertyName("serviceConfig")]
     public V1alpha1CloudFunctions2FunctionSpecServiceConfig? ServiceConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionStatusConditions
@@ -386,7 +413,9 @@ public partial class V1alpha1CloudFunctions2FunctionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudFunctions2FunctionStatus
@@ -415,7 +444,9 @@ public partial class V1alpha1CloudFunctions2FunctionStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -445,3 +476,4 @@ public partial class V1alpha1CloudFunctions2Function : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1CloudFunctions2FunctionStatus? Status { get; set; }
 }
+#nullable disable

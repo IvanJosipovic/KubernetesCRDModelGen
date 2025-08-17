@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lexmodels.aws.upbound.io;
+#nullable enable
 /// <summary>Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IntentList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Intent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
@@ -50,7 +53,9 @@ public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConclusionStatement
@@ -63,7 +68,9 @@ public partial class V1beta1IntentSpecForProviderConclusionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
@@ -80,7 +87,9 @@ public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderConfirmationPrompt
@@ -97,7 +106,9 @@ public partial class V1beta1IntentSpecForProviderConfirmationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderDialogCodeHook
@@ -110,7 +121,9 @@ public partial class V1beta1IntentSpecForProviderDialogCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
@@ -127,7 +140,9 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
@@ -144,7 +159,9 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatementMessage
@@ -161,7 +178,9 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatement
@@ -174,7 +193,9 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFollowUpPrompt
@@ -187,7 +208,9 @@ public partial class V1beta1IntentSpecForProviderFollowUpPrompt
     [JsonPropertyName("rejectionStatement")]
     public IList<V1beta1IntentSpecForProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
@@ -200,7 +223,9 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderFulfillmentActivity
@@ -213,7 +238,9 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
@@ -230,7 +257,9 @@ public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderRejectionStatement
@@ -243,7 +272,9 @@ public partial class V1beta1IntentSpecForProviderRejectionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessage
@@ -260,7 +291,9 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessa
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
@@ -277,7 +310,9 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProviderSlot
@@ -318,7 +353,9 @@ public partial class V1beta1IntentSpecForProviderSlot
     [JsonPropertyName("valueElicitationPrompt")]
     public IList<V1beta1IntentSpecForProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecForProvider
@@ -371,7 +408,9 @@ public partial class V1beta1IntentSpecForProvider
     [JsonPropertyName("slot")]
     public IList<V1beta1IntentSpecForProviderSlot>? Slot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
@@ -388,7 +427,9 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConclusionStatement
@@ -401,7 +442,9 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
@@ -418,7 +461,9 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
@@ -435,7 +480,9 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderDialogCodeHook
@@ -448,7 +495,9 @@ public partial class V1beta1IntentSpecInitProviderDialogCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
@@ -465,7 +514,9 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
@@ -482,7 +533,9 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatementMessage
@@ -499,7 +552,9 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatement
@@ -512,7 +567,9 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
@@ -525,7 +582,9 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
     [JsonPropertyName("rejectionStatement")]
     public IList<V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
@@ -538,7 +597,9 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
@@ -551,7 +612,9 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
@@ -568,7 +631,9 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderRejectionStatement
@@ -581,7 +646,9 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMessage
@@ -598,7 +665,9 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMess
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
@@ -615,7 +684,9 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProviderSlot
@@ -656,7 +727,9 @@ public partial class V1beta1IntentSpecInitProviderSlot
     [JsonPropertyName("valueElicitationPrompt")]
     public IList<V1beta1IntentSpecInitProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecInitProvider
@@ -705,7 +778,9 @@ public partial class V1beta1IntentSpecInitProvider
     [JsonPropertyName("slot")]
     public IList<V1beta1IntentSpecInitProviderSlot>? Slot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecProviderConfigRefPolicy
@@ -718,7 +793,9 @@ public partial class V1beta1IntentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecProviderConfigRef
@@ -731,7 +808,9 @@ public partial class V1beta1IntentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1IntentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpecWriteConnectionSecretToRef
@@ -744,7 +823,9 @@ public partial class V1beta1IntentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntentSpec defines the desired state of Intent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentSpec
@@ -773,7 +854,9 @@ public partial class V1beta1IntentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IntentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
@@ -790,7 +873,9 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConclusionStatement
@@ -803,7 +888,9 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
@@ -820,7 +907,9 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
@@ -837,7 +926,9 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderDialogCodeHook
@@ -850,7 +941,9 @@ public partial class V1beta1IntentStatusAtProviderDialogCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
@@ -867,7 +960,9 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
@@ -884,7 +979,9 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatementMessage
@@ -901,7 +998,9 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatement
@@ -914,7 +1013,9 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
@@ -927,7 +1028,9 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
     [JsonPropertyName("rejectionStatement")]
     public IList<V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
@@ -940,7 +1043,9 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
@@ -953,7 +1058,9 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
@@ -970,7 +1077,9 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderRejectionStatement
@@ -983,7 +1092,9 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMessage
@@ -1000,7 +1111,9 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMess
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
@@ -1017,7 +1130,9 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProviderSlot
@@ -1058,7 +1173,9 @@ public partial class V1beta1IntentStatusAtProviderSlot
     [JsonPropertyName("valueElicitationPrompt")]
     public IList<V1beta1IntentStatusAtProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusAtProvider
@@ -1135,7 +1252,9 @@ public partial class V1beta1IntentStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatusConditions
@@ -1164,7 +1283,9 @@ public partial class V1beta1IntentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntentStatus defines the observed state of Intent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntentStatus
@@ -1181,7 +1302,9 @@ public partial class V1beta1IntentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1211,3 +1334,4 @@ public partial class V1beta1Intent : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1IntentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.amp.aws.upbound.io;
+#nullable enable
 /// <summary>AlertManagerDefinition is the Schema for the AlertManagerDefinitions API. Manages an Amazon Managed Service for Prometheus (AMP) Alert Manager Definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AlertManagerDefinitionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1AlertManagerDefinition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in amp to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in amp to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSele
     [JsonPropertyName("policy")]
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1AlertManagerDefinitionSpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in amp to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in amp to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelector
@@ -170,7 +189,9 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSel
     [JsonPropertyName("policy")]
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertManagerDefinitionSpec defines the desired state of AlertManagerDefinition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionSpec
@@ -259,7 +288,9 @@ public partial class V1beta1AlertManagerDefinitionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionStatusAtProvider
@@ -280,7 +311,9 @@ public partial class V1beta1AlertManagerDefinitionStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionStatusConditions
@@ -309,7 +342,9 @@ public partial class V1beta1AlertManagerDefinitionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertManagerDefinitionStatus defines the observed state of AlertManagerDefinition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertManagerDefinitionStatus
@@ -326,7 +361,9 @@ public partial class V1beta1AlertManagerDefinitionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertManagerDefinition is the Schema for the AlertManagerDefinitions API. Manages an Amazon Managed Service for Prometheus (AMP) Alert Manager Definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -356,3 +393,4 @@ public partial class V1beta1AlertManagerDefinition : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1AlertManagerDefinitionStatus? Status { get; set; }
 }
+#nullable disable

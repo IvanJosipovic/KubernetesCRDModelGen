@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigQueryJobList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1BigQueryJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguratio
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguration
@@ -63,7 +68,9 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguratio
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopyDestinationTableTableRef
@@ -80,7 +87,9 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationTableTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The destination table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopyDestinationTable
@@ -89,7 +98,9 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationTable
     [JsonPropertyName("tableRef")]
     public V1beta1BigQueryJobSpecCopyDestinationTableTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopySourceTablesTableRef
@@ -106,7 +117,9 @@ public partial class V1beta1BigQueryJobSpecCopySourceTablesTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopySourceTables
@@ -115,7 +128,9 @@ public partial class V1beta1BigQueryJobSpecCopySourceTables
     [JsonPropertyName("tableRef")]
     public V1beta1BigQueryJobSpecCopySourceTablesTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Copies a table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecCopy
@@ -140,7 +155,9 @@ public partial class V1beta1BigQueryJobSpecCopy
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecExtractSourceTableTableRef
@@ -157,7 +174,9 @@ public partial class V1beta1BigQueryJobSpecExtractSourceTableTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A reference to the table being exported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecExtractSourceTable
@@ -166,7 +185,9 @@ public partial class V1beta1BigQueryJobSpecExtractSourceTable
     [JsonPropertyName("tableRef")]
     public V1beta1BigQueryJobSpecExtractSourceTableTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configures an extract job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecExtract
@@ -199,7 +220,9 @@ public partial class V1beta1BigQueryJobSpecExtract
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef
@@ -216,7 +239,9 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguratio
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguration
@@ -229,7 +254,9 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguratio
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadDestinationTableTableRef
@@ -246,7 +273,9 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationTableTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The destination table to load the data into.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadDestinationTable
@@ -255,7 +284,9 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationTable
     [JsonPropertyName("tableRef")]
     public V1beta1BigQueryJobSpecLoadDestinationTableTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Parquet Options for load and make external tables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadParquetOptions
@@ -268,7 +299,9 @@ public partial class V1beta1BigQueryJobSpecLoadParquetOptions
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Time-based partitioning specification for the destination table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoadTimePartitioning
@@ -285,7 +318,9 @@ public partial class V1beta1BigQueryJobSpecLoadTimePartitioning
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configures a load job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecLoad
@@ -374,7 +409,9 @@ public partial class V1beta1BigQueryJobSpecLoad
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef
@@ -391,7 +428,9 @@ public partial class V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDefaultDataset
@@ -400,7 +439,9 @@ public partial class V1beta1BigQueryJobSpecQueryDefaultDataset
     [JsonPropertyName("datasetRef")]
     public V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef DatasetRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef
@@ -417,7 +458,9 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurati
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfiguration
@@ -430,7 +473,9 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurati
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDestinationTableTableRef
@@ -447,7 +492,9 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationTableTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryDestinationTable
@@ -456,7 +503,9 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationTable
     [JsonPropertyName("tableRef")]
     public V1beta1BigQueryJobSpecQueryDestinationTableTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Options controlling the execution of scripts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryScriptOptions
@@ -473,7 +522,9 @@ public partial class V1beta1BigQueryJobSpecQueryScriptOptions
     [JsonPropertyName("statementTimeoutMs")]
     public string? StatementTimeoutMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources
@@ -486,7 +537,9 @@ public partial class V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources
     [JsonPropertyName("resourceUri")]
     public string? ResourceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configures a query job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpecQuery
@@ -559,7 +612,9 @@ public partial class V1beta1BigQueryJobSpecQuery
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobSpec
@@ -592,7 +647,9 @@ public partial class V1beta1BigQueryJobSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobStatusConditions
@@ -617,7 +674,9 @@ public partial class V1beta1BigQueryJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobStatusStatusErrorResult
@@ -634,7 +693,9 @@ public partial class V1beta1BigQueryJobStatusStatusErrorResult
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobStatusStatusErrors
@@ -651,7 +712,9 @@ public partial class V1beta1BigQueryJobStatusStatusErrors
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobStatusStatus
@@ -668,7 +731,9 @@ public partial class V1beta1BigQueryJobStatusStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryJobStatus
@@ -693,7 +758,9 @@ public partial class V1beta1BigQueryJobStatus
     [JsonPropertyName("userEmail")]
     public string? UserEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -723,3 +790,4 @@ public partial class V1beta1BigQueryJob : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1BigQueryJobStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ManagedZone is the Schema for the ManagedZones API. A zone is a subtree of the DNS namespace under one administrative responsibility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedZoneList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedZone> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud logging configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderCloudLoggingConfig
@@ -42,7 +45,9 @@ public partial class V1beta1ManagedZoneSpecForProviderCloudLoggingConfig
     [JsonPropertyName("enableLogging")]
     public bool? EnableLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderDnssecConfigDefaultKeySpecs
@@ -63,7 +68,9 @@ public partial class V1beta1ManagedZoneSpecForProviderDnssecConfigDefaultKeySpec
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DNSSEC configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderDnssecConfig
@@ -84,7 +91,9 @@ public partial class V1beta1ManagedZoneSpecForProviderDnssecConfig
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderForwardingConfigTargetNameServers
@@ -101,7 +110,9 @@ public partial class V1beta1ManagedZoneSpecForProviderForwardingConfigTargetName
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderForwardingConfig
@@ -110,7 +121,9 @@ public partial class V1beta1ManagedZoneSpecForProviderForwardingConfig
     [JsonPropertyName("targetNameServers")]
     public IList<V1beta1ManagedZoneSpecForProviderForwardingConfigTargetNameServers>? TargetNameServers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRef
@@ -140,7 +155,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelector
@@ -174,7 +193,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network with which to peer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
@@ -191,7 +212,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfig
@@ -200,7 +223,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfig
     [JsonPropertyName("targetNetwork")]
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork? TargetNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRef
@@ -230,7 +257,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector
@@ -264,7 +295,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClusters
@@ -281,7 +314,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     [JsonPropertyName("gkeClusterNameSelector")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector? GkeClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy
@@ -294,7 +329,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRef
@@ -311,7 +348,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy
@@ -324,7 +363,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelector
@@ -345,7 +386,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworks
@@ -362,7 +405,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from. At least one of gke_clusters or networks must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfig
@@ -375,7 +420,9 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfig
     [JsonPropertyName("networks")]
     public IList<V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProvider
@@ -424,7 +471,9 @@ public partial class V1beta1ManagedZoneSpecForProvider
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud logging configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderCloudLoggingConfig
@@ -433,7 +482,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderCloudLoggingConfig
     [JsonPropertyName("enableLogging")]
     public bool? EnableLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfigDefaultKeySpecs
@@ -454,7 +505,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfigDefaultKeySpe
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DNSSEC configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfig
@@ -475,7 +528,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfig
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNameServers
@@ -492,7 +547,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNam
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfig
@@ -501,7 +558,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfig
     [JsonPropertyName("targetNameServers")]
     public IList<V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNameServers>? TargetNameServers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy
@@ -514,7 +573,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRef
@@ -531,7 +592,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy
@@ -544,7 +607,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelector
@@ -565,7 +630,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network with which to peer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwork
@@ -582,7 +649,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfig
@@ -591,7 +660,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfig
     [JsonPropertyName("targetNetwork")]
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwork? TargetNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy
@@ -604,7 +675,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRef
@@ -621,7 +694,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy
@@ -634,7 +709,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector
@@ -655,7 +732,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClusters
@@ -672,7 +751,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     [JsonPropertyName("gkeClusterNameSelector")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector? GkeClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy
@@ -685,7 +766,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRef
@@ -702,7 +785,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy
@@ -715,7 +800,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelector
@@ -736,7 +823,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworks
@@ -753,7 +842,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from. At least one of gke_clusters or networks must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfig
@@ -766,7 +857,9 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfig
     [JsonPropertyName("networks")]
     public IList<V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProvider
@@ -815,7 +908,9 @@ public partial class V1beta1ManagedZoneSpecInitProvider
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecProviderConfigRef
@@ -828,7 +923,9 @@ public partial class V1beta1ManagedZoneSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecWriteConnectionSecretToRef
@@ -837,7 +934,9 @@ public partial class V1beta1ManagedZoneSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZoneSpec defines the desired state of ManagedZone</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpec
@@ -862,7 +961,9 @@ public partial class V1beta1ManagedZoneSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagedZoneSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud logging configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderCloudLoggingConfig
@@ -871,7 +972,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderCloudLoggingConfig
     [JsonPropertyName("enableLogging")]
     public bool? EnableLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfigDefaultKeySpecs
@@ -892,7 +995,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfigDefaultKeySpe
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DNSSEC configuration Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfig
@@ -913,7 +1018,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfig
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNameServers
@@ -930,7 +1037,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNam
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfig
@@ -939,7 +1048,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfig
     [JsonPropertyName("targetNameServers")]
     public IList<V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNameServers>? TargetNameServers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network with which to peer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwork
@@ -948,7 +1059,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwor
     [JsonPropertyName("networkUrl")]
     public string? NetworkUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfig
@@ -957,7 +1070,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfig
     [JsonPropertyName("targetNetwork")]
     public V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwork? TargetNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigGkeClusters
@@ -966,7 +1081,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigGk
     [JsonPropertyName("gkeClusterName")]
     public string? GkeClusterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNetworks
@@ -975,7 +1092,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNe
     [JsonPropertyName("networkUrl")]
     public string? NetworkUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from. At least one of gke_clusters or networks must be specified. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfig
@@ -988,7 +1107,9 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfig
     [JsonPropertyName("networks")]
     public IList<V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProvider
@@ -1061,7 +1182,9 @@ public partial class V1beta1ManagedZoneStatusAtProvider
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusConditions
@@ -1090,7 +1213,9 @@ public partial class V1beta1ManagedZoneStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZoneStatus defines the observed state of ManagedZone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatus
@@ -1107,7 +1232,9 @@ public partial class V1beta1ManagedZoneStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZone is the Schema for the ManagedZones API. A zone is a subtree of the DNS namespace under one administrative responsibility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1137,3 +1264,4 @@ public partial class V1beta1ManagedZone : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ManagedZoneStatus? Status { get; set; }
 }
+#nullable disable

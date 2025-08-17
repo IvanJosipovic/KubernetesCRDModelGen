@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.gcp.upbound.io;
+#nullable enable
 /// <summary>Spoke is the Schema for the Spokes API. The NetworkConnectivity Spoke resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpokeList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Spoke> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderHubRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpokeSpecForProviderHubRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Hub in networkconnectivity to populate hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderHubRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpokeSpecForProviderHubRef
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderHubRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderHubSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpokeSpecForProviderHubSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Hub in networkconnectivity to populate hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderHubSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpokeSpecForProviderHubSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderHubSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefsPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefs
@@ -115,7 +128,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUri
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUri
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachments
@@ -170,7 +189,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachments
     [JsonPropertyName("urisSelector")]
     public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelector? UrisSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRefPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRef
@@ -196,7 +219,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkR
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelector
@@ -226,7 +253,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkS
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRefPolicy
@@ -239,7 +268,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRef
@@ -252,7 +283,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringR
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelectorPolicy
@@ -265,7 +298,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelector
@@ -282,7 +317,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringS
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetwork
@@ -319,7 +356,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetwork
     [JsonPropertyName("peeringSelector")]
     public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelector? PeeringSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate virtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRef
@@ -345,7 +386,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy
@@ -358,7 +401,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate virtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector
@@ -375,7 +420,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstances
@@ -396,7 +443,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     [JsonPropertyName("virtualMachineSelector")]
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector? VirtualMachineSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstances
@@ -413,7 +462,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstances
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicy
@@ -426,7 +477,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRef
@@ -439,7 +492,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRef
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicy
@@ -452,7 +507,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector
@@ -469,7 +526,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
@@ -494,7 +553,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
     [JsonPropertyName("uriSelector")]
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefsPolicy
@@ -507,7 +568,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefs
@@ -520,7 +583,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefs
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelectorPolicy
@@ -533,7 +598,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelector
@@ -550,7 +617,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
@@ -575,7 +644,9 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
     [JsonPropertyName("urisSelector")]
     public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelector? UrisSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProvider
@@ -636,7 +707,9 @@ public partial class V1beta1SpokeSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderHubRefPolicy
@@ -649,7 +722,9 @@ public partial class V1beta1SpokeSpecInitProviderHubRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Hub in networkconnectivity to populate hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderHubRef
@@ -662,7 +737,9 @@ public partial class V1beta1SpokeSpecInitProviderHubRef
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderHubRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderHubSelectorPolicy
@@ -675,7 +752,9 @@ public partial class V1beta1SpokeSpecInitProviderHubSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Hub in networkconnectivity to populate hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderHubSelector
@@ -692,7 +771,9 @@ public partial class V1beta1SpokeSpecInitProviderHubSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderHubSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefsPolicy
@@ -705,7 +786,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefs
@@ -718,7 +801,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUr
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelectorPolicy
@@ -731,7 +816,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelector
@@ -748,7 +835,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUr
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments
@@ -773,7 +862,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments
     [JsonPropertyName("urisSelector")]
     public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelector? UrisSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRefPolicy
@@ -786,7 +877,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRef
@@ -799,7 +892,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetwork
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelectorPolicy
@@ -812,7 +907,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelector
@@ -829,7 +926,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetwork
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRefPolicy
@@ -842,7 +941,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeering
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRef
@@ -855,7 +956,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeering
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelectorPolicy
@@ -868,7 +971,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeering
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelector
@@ -885,7 +990,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeering
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetwork
@@ -922,7 +1029,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetwork
     [JsonPropertyName("peeringSelector")]
     public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelector? PeeringSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy
@@ -935,7 +1044,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate virtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRef
@@ -948,7 +1059,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy
@@ -961,7 +1074,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate virtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector
@@ -978,7 +1093,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstances
@@ -999,7 +1116,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("virtualMachineSelector")]
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector? VirtualMachineSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstances
@@ -1016,7 +1135,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstances
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicy
@@ -1029,7 +1150,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRef
@@ -1042,7 +1165,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRef
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicy
@@ -1055,7 +1180,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector
@@ -1072,7 +1199,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
@@ -1097,7 +1226,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
     [JsonPropertyName("uriSelector")]
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefsPolicy
@@ -1110,7 +1241,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefs
@@ -1123,7 +1256,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefs
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelectorPolicy
@@ -1136,7 +1271,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelector
@@ -1153,7 +1290,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelector
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
@@ -1178,7 +1317,9 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
     [JsonPropertyName("urisSelector")]
     public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelector? UrisSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProvider
@@ -1239,7 +1380,9 @@ public partial class V1beta1SpokeSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecProviderConfigRefPolicy
@@ -1252,7 +1395,9 @@ public partial class V1beta1SpokeSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecProviderConfigRef
@@ -1265,7 +1410,9 @@ public partial class V1beta1SpokeSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpokeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecWriteConnectionSecretToRef
@@ -1278,7 +1425,9 @@ public partial class V1beta1SpokeSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpokeSpec defines the desired state of Spoke</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpec
@@ -1307,7 +1456,9 @@ public partial class V1beta1SpokeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpokeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
@@ -1324,7 +1475,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedProducerVpcNetwork
@@ -1349,7 +1502,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedProducerVpcNetwork
     [JsonPropertyName("producerNetwork")]
     public string? ProducerNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesInstances
@@ -1362,7 +1517,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesI
     [JsonPropertyName("virtualMachine")]
     public string? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstances
@@ -1379,7 +1536,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstances
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
@@ -1396,7 +1555,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
@@ -1413,7 +1574,9 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderReasons
@@ -1430,7 +1593,9 @@ public partial class V1beta1SpokeStatusAtProviderReasons
     [JsonPropertyName("userDetails")]
     public string? UserDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProvider
@@ -1515,7 +1680,9 @@ public partial class V1beta1SpokeStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusConditions
@@ -1544,7 +1711,9 @@ public partial class V1beta1SpokeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpokeStatus defines the observed state of Spoke.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatus
@@ -1561,7 +1730,9 @@ public partial class V1beta1SpokeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spoke is the Schema for the Spokes API. The NetworkConnectivity Spoke resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1591,3 +1762,4 @@ public partial class V1beta1Spoke : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1SpokeStatus? Status { get; set; }
 }
+#nullable disable

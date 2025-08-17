@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>RegionTargetTCPProxy is the Schema for the RegionTargetTCPProxys API. Represents a RegionTargetTcpProxy resource, which is used by one or more forwarding rules to route incoming TCP requests to a regional TCP proxy load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionTargetTCPProxyList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1RegionTargetTCPProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceRef
@@ -59,7 +64,9 @@ public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceRef
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetTCPProxySpecForProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RegionTargetTCPProxySpecForProviderBackendServiceSel
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetTCPProxySpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1RegionTargetTCPProxySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceRef
@@ -152,7 +167,9 @@ public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceRe
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceSelector
@@ -182,7 +201,9 @@ public partial class V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceSe
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetTCPProxySpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1RegionTargetTCPProxySpecInitProvider
     [JsonPropertyName("proxyHeader")]
     public string? ProxyHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecProviderConfigRefPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1RegionTargetTCPProxySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecProviderConfigRef
@@ -241,7 +266,9 @@ public partial class V1beta1RegionTargetTCPProxySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetTCPProxySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpecWriteConnectionSecretToRef
@@ -254,7 +281,9 @@ public partial class V1beta1RegionTargetTCPProxySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetTCPProxySpec defines the desired state of RegionTargetTCPProxy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxySpec
@@ -283,7 +312,9 @@ public partial class V1beta1RegionTargetTCPProxySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionTargetTCPProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxyStatusAtProvider
@@ -328,7 +359,9 @@ public partial class V1beta1RegionTargetTCPProxyStatusAtProvider
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxyStatusConditions
@@ -357,7 +390,9 @@ public partial class V1beta1RegionTargetTCPProxyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetTCPProxyStatus defines the observed state of RegionTargetTCPProxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetTCPProxyStatus
@@ -374,7 +409,9 @@ public partial class V1beta1RegionTargetTCPProxyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetTCPProxy is the Schema for the RegionTargetTCPProxys API. Represents a RegionTargetTcpProxy resource, which is used by one or more forwarding rules to route incoming TCP requests to a regional TCP proxy load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -404,3 +441,4 @@ public partial class V1beta1RegionTargetTCPProxy : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1RegionTargetTCPProxyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.amplify.aws.upbound.io;
+#nullable enable
 /// <summary>BackendEnvironment is the Schema for the BackendEnvironments API. Provides an Amplify Backend Environment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackendEnvironmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1BackendEnvironment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecForProviderAppIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackendEnvironmentSpecForProviderAppIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a App in amplify to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecForProviderAppIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1BackendEnvironmentSpecForProviderAppIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackendEnvironmentSpecForProviderAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecForProviderAppIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BackendEnvironmentSpecForProviderAppIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a App in amplify to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecForProviderAppIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BackendEnvironmentSpecForProviderAppIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BackendEnvironmentSpecForProviderAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1BackendEnvironmentSpecForProvider
     [JsonPropertyName("stackName")]
     public string? StackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecInitProvider
@@ -131,7 +144,9 @@ public partial class V1beta1BackendEnvironmentSpecInitProvider
     [JsonPropertyName("stackName")]
     public string? StackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecProviderConfigRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1BackendEnvironmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecProviderConfigRef
@@ -157,7 +174,9 @@ public partial class V1beta1BackendEnvironmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BackendEnvironmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpecWriteConnectionSecretToRef
@@ -170,7 +189,9 @@ public partial class V1beta1BackendEnvironmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendEnvironmentSpec defines the desired state of BackendEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentSpec
@@ -199,7 +220,9 @@ public partial class V1beta1BackendEnvironmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackendEnvironmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentStatusAtProvider
@@ -228,7 +251,9 @@ public partial class V1beta1BackendEnvironmentStatusAtProvider
     [JsonPropertyName("stackName")]
     public string? StackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentStatusConditions
@@ -257,7 +282,9 @@ public partial class V1beta1BackendEnvironmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendEnvironmentStatus defines the observed state of BackendEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendEnvironmentStatus
@@ -274,7 +301,9 @@ public partial class V1beta1BackendEnvironmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendEnvironment is the Schema for the BackendEnvironments API. Provides an Amplify Backend Environment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -304,3 +333,4 @@ public partial class V1beta1BackendEnvironment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1BackendEnvironmentStatus? Status { get; set; }
 }
+#nullable disable

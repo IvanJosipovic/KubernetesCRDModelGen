@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+#nullable enable
 /// <summary>WindowsFunctionAppSlot is the Schema for the WindowsFunctionAppSlots API. Manages a Windows Function App Slot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WindowsFunctionAppSlotList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1WindowsFunctionAppSlot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsAct
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an active_directory block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsActiveDirectory
@@ -67,7 +72,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsAct
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsFacebookAppSecretSecretRef
@@ -80,7 +87,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsFac
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a facebook block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsFacebook
@@ -101,7 +110,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsFac
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGithubClientSecretSecretRef
@@ -114,7 +125,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGit
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a github block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGithub
@@ -135,7 +148,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGit
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGoogleClientSecretSecretRef
@@ -148,7 +163,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGoo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a google block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGoogle
@@ -169,7 +186,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsGoo
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
@@ -182,7 +201,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsMic
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a microsoft block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsMicrosoft
@@ -203,7 +224,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsMic
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
@@ -216,7 +239,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsTwi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a twitter block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsTwitter
@@ -233,7 +258,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsTwi
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettings
@@ -298,7 +325,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettings
     [JsonPropertyName("unauthenticatedClientAction")]
     public string? UnauthenticatedClientAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An active_directory_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2ActiveDirectoryV2
@@ -351,7 +380,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2A
     [JsonPropertyName("wwwAuthenticationDisabled")]
     public bool? WwwAuthenticationDisabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An apple_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2AppleV2
@@ -364,7 +395,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2A
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_static_web_app_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2AzureStaticWebAppV2
@@ -373,7 +406,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2A
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2CustomOidcV2
@@ -398,7 +433,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2C
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A facebook_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2FacebookV2
@@ -419,7 +456,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2F
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A github_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2GithubV2
@@ -436,7 +475,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2G
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A google_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2GoogleV2
@@ -457,7 +498,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2G
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A login block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2Login
@@ -506,7 +549,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2L
     [JsonPropertyName("validateNonce")]
     public bool? ValidateNonce { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2MicrosoftV2
@@ -527,7 +572,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2M
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A twitter_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2TwitterV2
@@ -540,7 +587,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2T
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings_v2 block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2
@@ -633,7 +682,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2
     [JsonPropertyName("unauthenticatedAction")]
     public string? UnauthenticatedAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a schedule block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackupSchedule
@@ -658,7 +709,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackupSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef
@@ -671,7 +724,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackupStorageAc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a backup block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackup
@@ -692,7 +747,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackup
     [JsonPropertyName("storageAccountUrlSecretRef")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef? StorageAccountUrlSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string value. The connection string value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStringValueSecretRef
@@ -705,7 +762,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStrin
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderConnectionString
@@ -722,7 +781,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStrin
     [JsonPropertyName("valueSecretRef")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStringValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdRefPolicy
@@ -735,7 +796,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdRef
@@ -752,7 +815,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdRe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolicy
@@ -765,7 +830,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdSelector
@@ -786,7 +853,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdSe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an identity block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderIdentity
@@ -799,7 +868,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an app_service_logs block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppServiceLogs
@@ -812,7 +883,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppSe
     [JsonPropertyName("retentionPeriodDays")]
     public double? RetentionPeriodDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Connection String for linking the Windows Function App to Application Insights. The Connection String for linking the Windows Function App to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigApplicationInsightsConnectionStringSecretRef
@@ -825,7 +898,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppli
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Instrumentation Key for connecting the Windows Function App to Application Insights. The Instrumentation Key for connecting the Windows Function App to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigApplicationInsightsKeySecretRef
@@ -838,7 +913,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppli
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an application_stack block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigApplicationStack
@@ -867,7 +944,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppli
     [JsonPropertyName("useDotnetIsolatedRuntime")]
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a cors block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigCors
@@ -880,7 +959,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigCors
     [JsonPropertyName("supportCredentials")]
     public bool? SupportCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionHeaders
@@ -901,7 +982,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
@@ -914,7 +997,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
@@ -931,7 +1016,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
@@ -944,7 +1031,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
@@ -965,7 +1054,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestriction
@@ -1010,7 +1101,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRes
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionHeaders
@@ -1031,7 +1124,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
@@ -1044,7 +1139,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
@@ -1061,7 +1158,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
@@ -1074,7 +1173,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
@@ -1095,7 +1196,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestriction
@@ -1140,7 +1243,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIp
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a site_config block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
@@ -1281,7 +1386,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access key for the storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountAccessKeySecretRef
@@ -1294,7 +1401,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccount
@@ -1323,7 +1432,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccount
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameRefPolicy
@@ -1336,7 +1447,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameRef
@@ -1353,7 +1466,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountN
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicy
@@ -1366,7 +1481,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameSelector
@@ -1387,7 +1504,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountN
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRefPolicy
@@ -1400,7 +1519,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRef
@@ -1417,7 +1538,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkS
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
@@ -1430,7 +1553,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelector
@@ -1451,7 +1576,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkS
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProvider
@@ -1604,7 +1731,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProvider
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
     public bool? WebdeployPublishBasicAuthenticationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsActiveDirectoryClientSecretSecretRef
@@ -1617,7 +1746,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsAc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an active_directory block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsActiveDirectory
@@ -1638,7 +1769,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsAc
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsFacebookAppSecretSecretRef
@@ -1651,7 +1784,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsFa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a facebook block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsFacebook
@@ -1672,7 +1807,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsFa
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGithubClientSecretSecretRef
@@ -1685,7 +1822,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a github block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGithub
@@ -1706,7 +1845,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGi
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGoogleClientSecretSecretRef
@@ -1719,7 +1860,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a google block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGoogle
@@ -1740,7 +1883,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsGo
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsMicrosoftClientSecretSecretRef
@@ -1753,7 +1898,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsMi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a microsoft block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsMicrosoft
@@ -1774,7 +1921,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsMi
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsTwitterConsumerSecretSecretRef
@@ -1787,7 +1936,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsTw
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a twitter block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsTwitter
@@ -1804,7 +1955,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsTw
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettings
@@ -1869,7 +2022,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettings
     [JsonPropertyName("unauthenticatedClientAction")]
     public string? UnauthenticatedClientAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An active_directory_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2ActiveDirectoryV2
@@ -1922,7 +2077,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("wwwAuthenticationDisabled")]
     public bool? WwwAuthenticationDisabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An apple_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2AppleV2
@@ -1935,7 +2092,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_static_web_app_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2AzureStaticWebAppV2
@@ -1944,7 +2103,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2CustomOidcV2
@@ -1969,7 +2130,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A facebook_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2FacebookV2
@@ -1990,7 +2153,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A github_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2GithubV2
@@ -2007,7 +2172,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A google_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2GoogleV2
@@ -2028,7 +2195,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A login block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2Login
@@ -2077,7 +2246,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("validateNonce")]
     public bool? ValidateNonce { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2MicrosoftV2
@@ -2098,7 +2269,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A twitter_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2TwitterV2
@@ -2111,7 +2284,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings_v2 block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
@@ -2204,7 +2379,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("unauthenticatedAction")]
     public string? UnauthenticatedAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a schedule block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupSchedule
@@ -2229,7 +2406,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef
@@ -2242,7 +2421,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupStorageA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a backup block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackup
@@ -2263,7 +2444,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackup
     [JsonPropertyName("storageAccountUrlSecretRef")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string value. The connection string value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStringValueSecretRef
@@ -2276,7 +2459,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStri
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionString
@@ -2293,7 +2478,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStri
     [JsonPropertyName("valueSecretRef")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an identity block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderIdentity
@@ -2306,7 +2493,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an app_service_logs block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppServiceLogs
@@ -2319,7 +2508,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppS
     [JsonPropertyName("retentionPeriodDays")]
     public double? RetentionPeriodDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Connection String for linking the Windows Function App to Application Insights. The Connection String for linking the Windows Function App to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigApplicationInsightsConnectionStringSecretRef
@@ -2332,7 +2523,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppl
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Instrumentation Key for connecting the Windows Function App to Application Insights. The Instrumentation Key for connecting the Windows Function App to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigApplicationInsightsKeySecretRef
@@ -2345,7 +2538,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppl
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an application_stack block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigApplicationStack
@@ -2374,7 +2569,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppl
     [JsonPropertyName("useDotnetIsolatedRuntime")]
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a cors block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigCors
@@ -2387,7 +2584,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigCors
     [JsonPropertyName("supportCredentials")]
     public bool? SupportCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionHeaders
@@ -2408,7 +2607,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
@@ -2421,7 +2622,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
@@ -2438,7 +2641,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
@@ -2451,7 +2656,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
@@ -2472,7 +2679,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestriction
@@ -2517,7 +2726,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRe
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionHeaders
@@ -2538,7 +2749,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
@@ -2551,7 +2764,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
@@ -2568,7 +2783,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
@@ -2581,7 +2798,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
@@ -2602,7 +2821,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestriction
@@ -2647,7 +2868,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmI
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a site_config block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
@@ -2788,7 +3011,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access key for the storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountAccessKeySecretRef
@@ -2801,7 +3026,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
@@ -2830,7 +3057,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameRefPolicy
@@ -2843,7 +3072,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameRef
@@ -2860,7 +3091,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicy
@@ -2873,7 +3106,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameSelector
@@ -2894,7 +3129,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRefPolicy
@@ -2907,7 +3144,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRef
@@ -2924,7 +3163,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetwork
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
@@ -2937,7 +3178,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelector
@@ -2958,7 +3201,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetwork
     [JsonPropertyName("policy")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProvider
@@ -3099,7 +3344,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProvider
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
     public bool? WebdeployPublishBasicAuthenticationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecProviderConfigRef
@@ -3112,7 +3359,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecWriteConnectionSecretToRef
@@ -3121,7 +3370,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFunctionAppSlotSpec defines the desired state of WindowsFunctionAppSlot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpec
@@ -3146,7 +3397,9 @@ public partial class V1beta1WindowsFunctionAppSlotSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WindowsFunctionAppSlotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an active_directory block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsActiveDirectory
@@ -3163,7 +3416,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsAc
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a facebook block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsFacebook
@@ -3180,7 +3435,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsFa
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a github block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsGithub
@@ -3197,7 +3454,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsGi
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a google block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsGoogle
@@ -3214,7 +3473,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsGo
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a microsoft block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsMicrosoft
@@ -3231,7 +3492,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsMi
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a twitter block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsTwitter
@@ -3244,7 +3507,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsTw
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettings
@@ -3309,7 +3574,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettings
     [JsonPropertyName("unauthenticatedClientAction")]
     public string? UnauthenticatedClientAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An active_directory_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2ActiveDirectoryV2
@@ -3362,7 +3629,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("wwwAuthenticationDisabled")]
     public bool? WwwAuthenticationDisabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An apple_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2AppleV2
@@ -3379,7 +3648,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_static_web_app_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2AzureStaticWebAppV2
@@ -3388,7 +3659,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2CustomOidcV2
@@ -3437,7 +3710,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("tokenEndpoint")]
     public string? TokenEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A facebook_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2FacebookV2
@@ -3458,7 +3733,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A github_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2GithubV2
@@ -3475,7 +3752,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A google_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2GoogleV2
@@ -3496,7 +3775,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A login block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2Login
@@ -3545,7 +3826,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("validateNonce")]
     public bool? ValidateNonce { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2MicrosoftV2
@@ -3566,7 +3849,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginScopes")]
     public IList<string>? LoginScopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A twitter_v2 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2TwitterV2
@@ -3579,7 +3864,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an auth_settings_v2 block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
@@ -3672,7 +3959,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("unauthenticatedAction")]
     public string? UnauthenticatedAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a schedule block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderBackupSchedule
@@ -3701,7 +3990,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderBackupSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a backup block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderBackup
@@ -3718,7 +4009,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderBackup
     [JsonPropertyName("schedule")]
     public V1beta1WindowsFunctionAppSlotStatusAtProviderBackupSchedule? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderConnectionString
@@ -3731,7 +4024,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderConnectionStri
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an identity block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderIdentity
@@ -3752,7 +4047,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an app_service_logs block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigAppServiceLogs
@@ -3765,7 +4062,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigAppS
     [JsonPropertyName("retentionPeriodDays")]
     public double? RetentionPeriodDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an application_stack block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigApplicationStack
@@ -3794,7 +4093,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigAppl
     [JsonPropertyName("useDotnetIsolatedRuntime")]
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a cors block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigCors
@@ -3807,7 +4108,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigCors
     [JsonPropertyName("supportCredentials")]
     public bool? SupportCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigIpRestrictionHeaders
@@ -3828,7 +4131,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigIpRe
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigIpRestriction
@@ -3865,7 +4170,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigIpRe
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a headers block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigScmIpRestrictionHeaders
@@ -3886,7 +4193,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigScmI
     [JsonPropertyName("xForwardedHost")]
     public IList<string>? XForwardedHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigScmIpRestriction
@@ -3923,7 +4232,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigScmI
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a site_config block as detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
@@ -4068,7 +4379,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderStorageAccount
@@ -4093,7 +4406,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderStorageAccount
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProvider
@@ -4250,7 +4565,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProvider
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
     public bool? WebdeployPublishBasicAuthenticationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusConditions
@@ -4279,7 +4596,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFunctionAppSlotStatus defines the observed state of WindowsFunctionAppSlot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatus
@@ -4296,7 +4615,9 @@ public partial class V1beta1WindowsFunctionAppSlotStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFunctionAppSlot is the Schema for the WindowsFunctionAppSlots API. Manages a Windows Function App Slot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4326,3 +4647,4 @@ public partial class V1beta1WindowsFunctionAppSlot : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1WindowsFunctionAppSlotStatus? Status { get; set; }
 }
+#nullable disable

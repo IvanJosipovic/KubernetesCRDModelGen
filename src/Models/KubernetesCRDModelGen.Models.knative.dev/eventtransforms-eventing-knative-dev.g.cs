@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1EventTransformList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1EventTransform> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpecJsonata
@@ -42,7 +45,9 @@ public partial class V1alpha1EventTransformSpecJsonata
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpecReplyJsonata
@@ -51,7 +56,9 @@ public partial class V1alpha1EventTransformSpecReplyJsonata
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reply is the configuration on how to handle responses from Sink. It can only be set if Sink is set. Only one "type" can be used. The used type must match the top-level transformation, if you need to mix transformation types, use compositions and chain transformations together to achieve your desired outcome. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpecReply
@@ -64,7 +71,9 @@ public partial class V1alpha1EventTransformSpecReply
     [JsonPropertyName("discard")]
     public bool? Discard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpecSinkRef
@@ -93,7 +102,9 @@ public partial class V1alpha1EventTransformSpecSinkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.  If not present, the transformation will send back the transformed event as response, this is useful to leverage the built-in Broker reply feature to re-publish a transformed event back to the broker. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpecSink
@@ -114,7 +125,9 @@ public partial class V1alpha1EventTransformSpecSink
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the EventTransform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformSpec
@@ -131,7 +144,9 @@ public partial class V1alpha1EventTransformSpec
     [JsonPropertyName("sink")]
     public V1alpha1EventTransformSpecSink? Sink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Address is a single Addressable address. If Addresses is present, Address will be ignored by clients.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusAddress
@@ -152,7 +167,9 @@ public partial class V1alpha1EventTransformStatusAddress
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusAddresses
@@ -173,7 +190,9 @@ public partial class V1alpha1EventTransformStatusAddresses
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth defines the attributes that provide the generated service account name in the resource status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusAuth
@@ -186,7 +205,9 @@ public partial class V1alpha1EventTransformStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusConditions
@@ -215,7 +236,9 @@ public partial class V1alpha1EventTransformStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusJsonataDeploymentConditions
@@ -244,7 +267,9 @@ public partial class V1alpha1EventTransformStatusJsonataDeploymentConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusJsonataDeployment
@@ -281,7 +306,9 @@ public partial class V1alpha1EventTransformStatusJsonataDeployment
     [JsonPropertyName("updatedReplicas")]
     public int? UpdatedReplicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JsonataTransformationStatus is the status associated with JsonataEventTransformationSpec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatusJsonata
@@ -290,7 +317,9 @@ public partial class V1alpha1EventTransformStatusJsonata
     [JsonPropertyName("deployment")]
     public V1alpha1EventTransformStatusJsonataDeployment? Deployment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the EventTransform. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventTransformStatus
@@ -335,7 +364,9 @@ public partial class V1alpha1EventTransformStatus
     [JsonPropertyName("sinkUri")]
     public string? SinkUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -365,3 +396,4 @@ public partial class V1alpha1EventTransform : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1EventTransformStatus? Status { get; set; }
 }
+#nullable disable

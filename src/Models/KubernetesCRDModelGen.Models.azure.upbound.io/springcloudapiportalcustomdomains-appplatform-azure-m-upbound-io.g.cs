@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+#nullable enable
 /// <summary>SpringCloudAPIPortalCustomDomain is the Schema for the SpringCloudAPIPortalCustomDomains API. Manages a Spring Cloud API Portal Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudAPIPortalCustomDomain> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSprin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudAPIPortal in appplatform to populate springCloudApiPortalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSprin
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSprin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudAPIPortal in appplatform to populate springCloudApiPortalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSprin
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAPIPortalCustomDomainSpecForProviderSpringCloudApiPortalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecForProvider
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudAPIPortal in appplatform to populate springCloudApiPortalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdRef
@@ -152,7 +167,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpri
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudAPIPortal in appplatform to populate springCloudApiPortalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdSelector
@@ -186,7 +205,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpri
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAPIPortalCustomDomainSpecInitProviderSpringCloudApiPortalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProvider
@@ -211,7 +232,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecInitProvider
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecProviderConfigRef
@@ -224,7 +247,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecWriteConnectionSecretToRef
@@ -233,7 +258,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAPIPortalCustomDomainSpec defines the desired state of SpringCloudAPIPortalCustomDomain</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainSpec
@@ -258,7 +285,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudAPIPortalCustomDomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainStatusAtProvider
@@ -279,7 +308,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainStatusAtProvider
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainStatusConditions
@@ -308,7 +339,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAPIPortalCustomDomainStatus defines the observed state of SpringCloudAPIPortalCustomDomain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAPIPortalCustomDomainStatus
@@ -325,7 +358,9 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomainStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAPIPortalCustomDomain is the Schema for the SpringCloudAPIPortalCustomDomains API. Manages a Spring Cloud API Portal Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -355,3 +390,4 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomain : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAPIPortalCustomDomainStatus? Status { get; set; }
 }
+#nullable disable

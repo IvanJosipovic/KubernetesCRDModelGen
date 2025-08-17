@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataplexZone is the Schema for the DataplexZone API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataplexZoneList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1DataplexZone> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpecDiscoverySpecCsvOptions
@@ -54,7 +57,9 @@ public partial class V1alpha1DataplexZoneSpecDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public int? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpecDiscoverySpecJsonOptions
@@ -67,7 +72,9 @@ public partial class V1alpha1DataplexZoneSpecDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specification of the discovery feature applied to data in this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpecDiscoverySpec
@@ -96,7 +103,9 @@ public partial class V1alpha1DataplexZoneSpecDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the parent DataplexLake that owns this Zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpecLakeRef
@@ -113,7 +122,9 @@ public partial class V1alpha1DataplexZoneSpecLakeRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the resources that are referenced by the assets within this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpecResourceSpec
@@ -122,7 +133,9 @@ public partial class V1alpha1DataplexZoneSpecResourceSpec
     [JsonPropertyName("locationType")]
     public string? LocationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexZoneSpec defines the desired state of DataplexZone</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneSpec
@@ -159,7 +172,9 @@ public partial class V1alpha1DataplexZoneSpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneStatusConditions
@@ -184,7 +199,9 @@ public partial class V1alpha1DataplexZoneStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Aggregated status of the underlying assets of the zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneStatusObservedStateAssetStatus
@@ -201,7 +218,9 @@ public partial class V1alpha1DataplexZoneStatusObservedStateAssetStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneStatusObservedState
@@ -226,7 +245,9 @@ public partial class V1alpha1DataplexZoneStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexZoneStatus defines the config connector machine state of DataplexZone</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexZoneStatus
@@ -247,7 +268,9 @@ public partial class V1alpha1DataplexZoneStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataplexZoneStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexZone is the Schema for the DataplexZone API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -277,3 +300,4 @@ public partial class V1alpha1DataplexZone : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1DataplexZoneStatus? Status { get; set; }
 }
+#nullable disable

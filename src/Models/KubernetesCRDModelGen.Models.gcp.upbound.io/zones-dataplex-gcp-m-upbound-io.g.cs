@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Zone is the Schema for the Zones API. The Dataplex Zone resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ZoneList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Zone> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderDiscoverySpecCsvOptions
@@ -54,7 +57,9 @@ public partial class V1beta1ZoneSpecForProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderDiscoverySpecJsonOptions
@@ -67,7 +72,9 @@ public partial class V1beta1ZoneSpecForProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data in this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderDiscoverySpec
@@ -96,7 +103,9 @@ public partial class V1beta1ZoneSpecForProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderLakeRefPolicy
@@ -109,7 +118,9 @@ public partial class V1beta1ZoneSpecForProviderLakeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderLakeRef
@@ -126,7 +137,9 @@ public partial class V1beta1ZoneSpecForProviderLakeRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneSpecForProviderLakeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderLakeSelectorPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1ZoneSpecForProviderLakeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderLakeSelector
@@ -160,7 +175,9 @@ public partial class V1beta1ZoneSpecForProviderLakeSelector
     [JsonPropertyName("policy")]
     public V1beta1ZoneSpecForProviderLakeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resources that are referenced by the assets within this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProviderResourceSpec
@@ -169,7 +186,9 @@ public partial class V1beta1ZoneSpecForProviderResourceSpec
     [JsonPropertyName("locationType")]
     public string? LocationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecForProvider
@@ -218,7 +237,9 @@ public partial class V1beta1ZoneSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecInitProviderDiscoverySpecCsvOptions
@@ -239,7 +260,9 @@ public partial class V1beta1ZoneSpecInitProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecInitProviderDiscoverySpecJsonOptions
@@ -252,7 +275,9 @@ public partial class V1beta1ZoneSpecInitProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data in this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecInitProviderDiscoverySpec
@@ -281,7 +306,9 @@ public partial class V1beta1ZoneSpecInitProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resources that are referenced by the assets within this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecInitProviderResourceSpec
@@ -290,7 +317,9 @@ public partial class V1beta1ZoneSpecInitProviderResourceSpec
     [JsonPropertyName("locationType")]
     public string? LocationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecInitProvider
@@ -323,7 +352,9 @@ public partial class V1beta1ZoneSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecProviderConfigRef
@@ -336,7 +367,9 @@ public partial class V1beta1ZoneSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpecWriteConnectionSecretToRef
@@ -345,7 +378,9 @@ public partial class V1beta1ZoneSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ZoneSpec defines the desired state of Zone</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneSpec
@@ -370,7 +405,9 @@ public partial class V1beta1ZoneSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ZoneSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProviderAssetStatus
@@ -387,7 +424,9 @@ public partial class V1beta1ZoneStatusAtProviderAssetStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProviderDiscoverySpecCsvOptions
@@ -408,7 +447,9 @@ public partial class V1beta1ZoneStatusAtProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProviderDiscoverySpecJsonOptions
@@ -421,7 +462,9 @@ public partial class V1beta1ZoneStatusAtProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data in this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProviderDiscoverySpec
@@ -450,7 +493,9 @@ public partial class V1beta1ZoneStatusAtProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resources that are referenced by the assets within this zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProviderResourceSpec
@@ -459,7 +504,9 @@ public partial class V1beta1ZoneStatusAtProviderResourceSpec
     [JsonPropertyName("locationType")]
     public string? LocationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusAtProvider
@@ -532,7 +579,9 @@ public partial class V1beta1ZoneStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatusConditions
@@ -561,7 +610,9 @@ public partial class V1beta1ZoneStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ZoneStatus defines the observed state of Zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneStatus
@@ -578,7 +629,9 @@ public partial class V1beta1ZoneStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Zone is the Schema for the Zones API. The Dataplex Zone resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -608,3 +661,4 @@ public partial class V1beta1Zone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1ZoneStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2023-07-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1api20230701storageRedisEnterpriseDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID of a database resource to link with this database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabasesReference
@@ -54,7 +57,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.LinkedDatabase Specifies details of a linked database resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabases
@@ -67,7 +72,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     [JsonPropertyName("reference")]
     public V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabasesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.DatabaseProperties_GeoReplication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplication
@@ -84,7 +91,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     [JsonPropertyName("linkedDatabases")]
     public IList<V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabases>? LinkedDatabases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Module Specifies configuration of a redis module</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecModules
@@ -101,7 +110,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecModules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpecConfigMapExpressions
@@ -118,7 +129,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpecSecretExpressions
@@ -135,7 +148,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpec
@@ -152,7 +167,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230701storageRedisEnterpriseDatabaseSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/RedisEnterprise resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOwner
@@ -165,7 +182,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Persistence Persistence-related configuration for the RedisEnterprise database</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecPersistence
@@ -190,7 +209,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecPersistence
     [JsonPropertyName("rdbFrequency")]
     public string? RdbFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpec
@@ -243,7 +264,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpec
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusConditions
@@ -276,7 +299,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.LinkedDatabase_STATUS Specifies details of a linked database resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplicationLinkedDatabases
@@ -293,7 +318,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplica
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.DatabaseProperties_GeoReplication_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplication
@@ -310,7 +337,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplica
     [JsonPropertyName("linkedDatabases")]
     public IList<V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplicationLinkedDatabases>? LinkedDatabases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Module_STATUS Specifies configuration of a redis module</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusModules
@@ -331,7 +360,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusModules
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Persistence_STATUS Persistence-related configuration for the RedisEnterprise database</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusPersistence
@@ -356,7 +387,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusPersistenc
     [JsonPropertyName("rdbFrequency")]
     public string? RdbFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatus
@@ -417,7 +450,9 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2023-07-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -447,3 +482,4 @@ public partial class V1api20230701storageRedisEnterpriseDatabase : IKubernetesOb
     [JsonPropertyName("status")]
     public V1api20230701storageRedisEnterpriseDatabaseStatus? Status { get; set; }
 }
+#nullable disable

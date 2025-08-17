@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.m.upbound.io;
+#nullable enable
 /// <summary>LogAnalyticsDataSourceWindowsEvent is the Schema for the LogAnalyticsDataSourceWindowsEvents API. Manages a Log Analytics Windows Event DataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1LogAnalyticsDataSourceWindowsEvent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWor
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWor
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecForProvider
     [JsonPropertyName("workspaceNameSelector")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecForProviderWorkspaceNameSelector? WorkspaceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecInitProvider
@@ -211,7 +232,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecInitProvider
     [JsonPropertyName("eventTypes")]
     public IList<string>? EventTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecProviderConfigRef
@@ -224,7 +247,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecProviderConfig
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecWriteConnectionSecretToRef
@@ -233,7 +258,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpecWriteConnectio
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsDataSourceWindowsEventSpec defines the desired state of LogAnalyticsDataSourceWindowsEvent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpec
@@ -258,7 +285,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LogAnalyticsDataSourceWindowsEventSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatusAtProvider
@@ -283,7 +312,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatusAtProvider
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatusConditions
@@ -312,7 +343,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsDataSourceWindowsEventStatus defines the observed state of LogAnalyticsDataSourceWindowsEvent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatus
@@ -329,7 +362,9 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEventStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsDataSourceWindowsEvent is the Schema for the LogAnalyticsDataSourceWindowsEvents API. Manages a Log Analytics Windows Event DataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -359,3 +394,4 @@ public partial class V1beta1LogAnalyticsDataSourceWindowsEvent : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1LogAnalyticsDataSourceWindowsEventStatus? Status { get; set; }
 }
+#nullable disable

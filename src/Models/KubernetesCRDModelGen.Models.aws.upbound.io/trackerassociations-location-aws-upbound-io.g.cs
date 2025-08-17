@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.location.aws.upbound.io;
+#nullable enable
 /// <summary>TrackerAssociation is the Schema for the TrackerAssociations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrackerAssociationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1TrackerAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GeofenceCollection in location to populate consumerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRef
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GeofenceCollection in location to populate consumerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecForProviderConsumerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tracker in location to populate trackerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRef
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tracker in location to populate trackerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1TrackerAssociationSpecForProvider
     [JsonPropertyName("trackerNameSelector")]
     public V1beta1TrackerAssociationSpecForProviderTrackerNameSelector? TrackerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GeofenceCollection in location to populate consumerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRef
@@ -204,7 +227,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRef
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GeofenceCollection in location to populate consumerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelector
@@ -234,7 +261,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecInitProviderConsumerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tracker in location to populate trackerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRef
@@ -260,7 +291,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRef
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tracker in location to populate trackerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelector
@@ -290,7 +325,9 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1TrackerAssociationSpecInitProvider
     [JsonPropertyName("trackerNameSelector")]
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameSelector? TrackerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1TrackerAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1TrackerAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TrackerAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1TrackerAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrackerAssociationSpec defines the desired state of TrackerAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationSpec
@@ -387,7 +432,9 @@ public partial class V1beta1TrackerAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrackerAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1TrackerAssociationStatusAtProvider
     [JsonPropertyName("trackerName")]
     public string? TrackerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1TrackerAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrackerAssociationStatus defines the observed state of TrackerAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrackerAssociationStatus
@@ -454,7 +505,9 @@ public partial class V1beta1TrackerAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrackerAssociation is the Schema for the TrackerAssociations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1TrackerAssociation : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1TrackerAssociationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20210601.Workspace Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20210601storageWorkspaceList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1api20210601storageWorkspace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CspWorkspaceAdminProperties Initial workspace AAD admin properties for a CSP subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecCspWorkspaceAdminProperties
@@ -46,7 +49,9 @@ public partial class V1api20210601storageWorkspaceSpecCspWorkspaceAdminPropertie
     [JsonPropertyName("initialWorkspaceAdminObjectId")]
     public string? InitialWorkspaceAdminObjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAccountUrlFromConfig
@@ -59,7 +64,9 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAcco
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: ARM resource Id of this storage account</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageResourceReference
@@ -80,7 +87,9 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageReso
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DataLakeStorageAccountDetails Details of the data lake storage account associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorage
@@ -109,7 +118,9 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorage
     [JsonPropertyName("resourceReference")]
     public V1api20210601storageWorkspaceSpecDefaultDataLakeStorageResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserAssignedIdentityReference: User assigned identity resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUserAssignedIdentityReference
@@ -130,7 +141,9 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUs
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.KekIdentityProperties Key encryption key properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentity
@@ -147,7 +160,9 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentity
     [JsonPropertyName("userAssignedIdentityReference")]
     public V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspaceKeyDetails Details of the customer managed key associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKey
@@ -164,7 +179,9 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKey
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CustomerManagedKeyDetails Details of the customer managed key associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmk
@@ -181,7 +198,9 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmk
     [JsonPropertyName("key")]
     public V1api20210601storageWorkspaceSpecEncryptionCmkKey? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EncryptionDetails Details of the encryption associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecEncryption
@@ -194,7 +213,9 @@ public partial class V1api20210601storageWorkspaceSpecEncryption
     [JsonPropertyName("cmk")]
     public V1api20210601storageWorkspaceSpecEncryptionCmk? Cmk { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference
@@ -215,7 +236,9 @@ public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdenti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentities
@@ -228,7 +251,9 @@ public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdenti
     [JsonPropertyName("reference")]
     public V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ManagedIdentity The workspace managed identity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecIdentity
@@ -245,7 +270,9 @@ public partial class V1api20210601storageWorkspaceSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ManagedVirtualNetworkSettings Managed Virtual Network Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecManagedVirtualNetworkSettings
@@ -266,7 +293,9 @@ public partial class V1api20210601storageWorkspaceSpecManagedVirtualNetworkSetti
     [JsonPropertyName("preventDataExfiltration")]
     public bool? PreventDataExfiltration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecOperatorSpecConfigMapExpressions
@@ -283,7 +312,9 @@ public partial class V1api20210601storageWorkspaceSpecOperatorSpecConfigMapExpre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecOperatorSpecSecretExpressions
@@ -300,7 +331,9 @@ public partial class V1api20210601storageWorkspaceSpecOperatorSpecSecretExpressi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecOperatorSpec
@@ -317,7 +350,9 @@ public partial class V1api20210601storageWorkspaceSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20210601storageWorkspaceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecOwner
@@ -330,7 +365,9 @@ public partial class V1api20210601storageWorkspaceSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PurviewResourceReference: Purview Resource ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecPurviewConfigurationPurviewResourceReference
@@ -351,7 +388,9 @@ public partial class V1api20210601storageWorkspaceSpecPurviewConfigurationPurvie
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.PurviewConfiguration Purview Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecPurviewConfiguration
@@ -364,7 +403,9 @@ public partial class V1api20210601storageWorkspaceSpecPurviewConfiguration
     [JsonPropertyName("purviewResourceReference")]
     public V1api20210601storageWorkspaceSpecPurviewConfigurationPurviewResourceReference? PurviewResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassword
@@ -377,7 +418,9 @@ public partial class V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassw
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.VirtualNetworkProfile Virtual Network Profile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecVirtualNetworkProfile
@@ -390,7 +433,9 @@ public partial class V1api20210601storageWorkspaceSpecVirtualNetworkProfile
     [JsonPropertyName("computeSubnetId")]
     public string? ComputeSubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspaceRepositoryConfiguration Git integration settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfiguration
@@ -435,7 +480,9 @@ public partial class V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfigu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.Workspace_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpec
@@ -528,7 +575,9 @@ public partial class V1api20210601storageWorkspaceSpec
     [JsonPropertyName("workspaceRepositoryConfiguration")]
     public V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfiguration? WorkspaceRepositoryConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusConditions
@@ -561,7 +610,9 @@ public partial class V1api20210601storageWorkspaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CspWorkspaceAdminProperties_STATUS Initial workspace AAD admin properties for a CSP subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusCspWorkspaceAdminProperties
@@ -574,7 +625,9 @@ public partial class V1api20210601storageWorkspaceStatusCspWorkspaceAdminPropert
     [JsonPropertyName("initialWorkspaceAdminObjectId")]
     public string? InitialWorkspaceAdminObjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DataLakeStorageAccountDetails_STATUS Details of the data lake storage account associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusDefaultDataLakeStorage
@@ -599,7 +652,9 @@ public partial class V1api20210601storageWorkspaceStatusDefaultDataLakeStorage
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.KekIdentityProperties_STATUS Key encryption key properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKekIdentity
@@ -616,7 +671,9 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKekIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspaceKeyDetails_STATUS Details of the customer managed key associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKey
@@ -633,7 +690,9 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKey
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CustomerManagedKeyDetails_STATUS Details of the customer managed key associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmk
@@ -654,7 +713,9 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmk
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EncryptionDetails_STATUS Details of the encryption associated with the workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusEncryption
@@ -671,7 +732,9 @@ public partial class V1api20210601storageWorkspaceStatusEncryption
     [JsonPropertyName("doubleEncryptionEnabled")]
     public bool? DoubleEncryptionEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UserAssignedManagedIdentity_STATUS User Assigned Managed Identity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusIdentityUserAssignedIdentities
@@ -688,7 +751,9 @@ public partial class V1api20210601storageWorkspaceStatusIdentityUserAssignedIden
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ManagedIdentity_STATUS The workspace managed identity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusIdentity
@@ -713,7 +778,9 @@ public partial class V1api20210601storageWorkspaceStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20210601storageWorkspaceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ManagedVirtualNetworkSettings_STATUS Managed Virtual Network Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusManagedVirtualNetworkSettings
@@ -734,7 +801,9 @@ public partial class V1api20210601storageWorkspaceStatusManagedVirtualNetworkSet
     [JsonPropertyName("preventDataExfiltration")]
     public bool? PreventDataExfiltration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.PrivateEndpointConnection_STATUS A private endpoint connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusPrivateEndpointConnections
@@ -747,7 +816,9 @@ public partial class V1api20210601storageWorkspaceStatusPrivateEndpointConnectio
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.PurviewConfiguration_STATUS Purview Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusPurviewConfiguration
@@ -760,7 +831,9 @@ public partial class V1api20210601storageWorkspaceStatusPurviewConfiguration
     [JsonPropertyName("purviewResourceId")]
     public string? PurviewResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.VirtualNetworkProfile_STATUS Virtual Network Profile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusVirtualNetworkProfile
@@ -773,7 +846,9 @@ public partial class V1api20210601storageWorkspaceStatusVirtualNetworkProfile
     [JsonPropertyName("computeSubnetId")]
     public string? ComputeSubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspaceRepositoryConfiguration_STATUS Git integration settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusWorkspaceRepositoryConfiguration
@@ -818,7 +893,9 @@ public partial class V1api20210601storageWorkspaceStatusWorkspaceRepositoryConfi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.Workspace_STATUS A workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatus
@@ -935,7 +1012,9 @@ public partial class V1api20210601storageWorkspaceStatus
     [JsonPropertyName("workspaceUID")]
     public string? WorkspaceUID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.Workspace Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -965,3 +1044,4 @@ public partial class V1api20210601storageWorkspace : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1api20210601storageWorkspaceStatus? Status { get; set; }
 }
+#nullable disable

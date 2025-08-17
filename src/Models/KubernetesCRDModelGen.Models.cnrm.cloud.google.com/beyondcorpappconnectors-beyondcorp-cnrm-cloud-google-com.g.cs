@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BeyondCorpAppConnectorList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1alpha1BeyondCorpAppConnector> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAccount represents a GCP service account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccount
@@ -42,7 +45,9 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccou
     [JsonPropertyName("email")]
     public string Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Principal information about the Identity of the AppConnector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
@@ -51,7 +56,9 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
     [JsonPropertyName("serviceAccount")]
     public V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccount ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
@@ -68,7 +75,9 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorSpec
@@ -93,7 +102,9 @@ public partial class V1alpha1BeyondCorpAppConnectorSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
@@ -118,7 +129,9 @@ public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectorStatus
@@ -135,7 +148,9 @@ public partial class V1alpha1BeyondCorpAppConnectorStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -165,3 +180,4 @@ public partial class V1alpha1BeyondCorpAppConnector : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1alpha1BeyondCorpAppConnectorStatus? Status { get; set; }
 }
+#nullable disable

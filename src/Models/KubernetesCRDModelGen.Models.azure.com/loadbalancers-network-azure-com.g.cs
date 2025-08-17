@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageLoadBalancerList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1api20240301storageLoadBalancer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference
@@ -54,7 +57,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
@@ -67,7 +72,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference
@@ -88,7 +95,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet
@@ -101,7 +110,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference
@@ -122,7 +133,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
@@ -135,7 +148,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancerBackendAddress Load balancer backend addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses
@@ -168,7 +183,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoad
     [JsonPropertyName("virtualNetwork")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GatewayLoadBalancerTunnelInterface Gateway load balancer tunnel interface of a load balancer backend address pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsTunnelInterfaces
@@ -193,7 +210,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsTunn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetworkReference
@@ -214,7 +233,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirt
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetwork
@@ -227,7 +248,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirt
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetworkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecBackendAddressPools
@@ -264,7 +287,9 @@ public partial class V1api20240301storageLoadBalancerSpecBackendAddressPools
     [JsonPropertyName("virtualNetwork")]
     public V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetwork? VirtualNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecExtendedLocation
@@ -281,7 +306,9 @@ public partial class V1api20240301storageLoadBalancerSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancerReference
@@ -302,7 +329,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancer
@@ -315,7 +344,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancerReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference
@@ -336,7 +367,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress
@@ -349,7 +382,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference
@@ -370,7 +405,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix
@@ -383,7 +420,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference
@@ -404,7 +443,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnet
@@ -417,7 +458,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurations
@@ -462,7 +505,9 @@ public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference
@@ -483,7 +528,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontend
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration
@@ -496,7 +543,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontend
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatPool Inbound NAT pool of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatPools
@@ -541,7 +590,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatPools
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPoolReference
@@ -562,7 +613,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPool
@@ -575,7 +628,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendA
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference
@@ -596,7 +651,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontend
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration
@@ -609,7 +666,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontend
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecInboundNatRules
@@ -662,7 +721,9 @@ public partial class V1api20240301storageLoadBalancerSpecInboundNatRules
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference
@@ -683,7 +744,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBacke
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool
@@ -696,7 +759,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBacke
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolsReference
@@ -717,7 +782,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBacke
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPools
@@ -730,7 +797,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBacke
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference
@@ -751,7 +820,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFront
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration
@@ -764,7 +835,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFront
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbeReference
@@ -785,7 +858,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbe
@@ -798,7 +873,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbe
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbeReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancingRule A load balancing rule for a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRules
@@ -859,7 +936,9 @@ public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRules
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOperatorSpecConfigMapExpressions
@@ -876,7 +955,9 @@ public partial class V1api20240301storageLoadBalancerSpecOperatorSpecConfigMapEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOperatorSpecSecretExpressions
@@ -893,7 +974,9 @@ public partial class V1api20240301storageLoadBalancerSpecOperatorSpecSecretExpre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOperatorSpec
@@ -910,7 +993,9 @@ public partial class V1api20240301storageLoadBalancerSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageLoadBalancerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference
@@ -931,7 +1016,9 @@ public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAdd
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPool
@@ -944,7 +1031,9 @@ public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAdd
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference
@@ -965,7 +1054,9 @@ public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations
@@ -978,7 +1069,9 @@ public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIP
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OutboundRule Outbound rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOutboundRules
@@ -1015,7 +1108,9 @@ public partial class V1api20240301storageLoadBalancerSpecOutboundRules
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecOwner
@@ -1028,7 +1123,9 @@ public partial class V1api20240301storageLoadBalancerSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Probe A load balancer probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecProbes
@@ -1069,7 +1166,9 @@ public partial class V1api20240301storageLoadBalancerSpecProbes
     [JsonPropertyName("requestPath")]
     public string? RequestPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancerSku SKU of a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpecSku
@@ -1086,7 +1185,9 @@ public partial class V1api20240301storageLoadBalancerSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerSpec
@@ -1155,7 +1256,9 @@ public partial class V1api20240301storageLoadBalancerSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations
@@ -1168,7 +1271,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsBa
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsInboundNatRules
@@ -1181,7 +1286,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsIn
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatRulePortMapping_STATUS Individual port mappings for inbound NAT rule created for backend pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesInboundNatRulesPortMapping
@@ -1202,7 +1309,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("inboundNatRuleName")]
     public string? InboundNatRuleName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
@@ -1215,7 +1324,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration
@@ -1228,7 +1339,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet
@@ -1241,7 +1354,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
@@ -1254,7 +1369,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses
@@ -1295,7 +1412,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("virtualNetwork")]
     public V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules
@@ -1308,7 +1427,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRule
@@ -1321,7 +1442,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOu
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRules
@@ -1334,7 +1457,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOu
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GatewayLoadBalancerTunnelInterface_STATUS Gateway load balancer tunnel interface of a load balancer backend address pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsTunnelInterfaces
@@ -1359,7 +1484,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsTu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsVirtualNetwork
@@ -1372,7 +1499,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsVi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusBackendAddressPools
@@ -1445,7 +1574,9 @@ public partial class V1api20240301storageLoadBalancerStatusBackendAddressPools
     [JsonPropertyName("virtualNetwork")]
     public V1api20240301storageLoadBalancerStatusBackendAddressPoolsVirtualNetwork? VirtualNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusConditions
@@ -1478,7 +1609,9 @@ public partial class V1api20240301storageLoadBalancerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusExtendedLocation
@@ -1495,7 +1628,9 @@ public partial class V1api20240301storageLoadBalancerStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsGatewayLoadBalancer
@@ -1508,7 +1643,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools
@@ -1521,7 +1658,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules
@@ -1534,7 +1673,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules
@@ -1547,7 +1688,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules
@@ -1560,7 +1703,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress
@@ -1573,7 +1718,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix
@@ -1586,7 +1733,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsSubnet
@@ -1599,7 +1748,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurations
@@ -1676,7 +1827,9 @@ public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration
@@ -1689,7 +1842,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatPoolsFronte
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatPool_STATUS Inbound NAT pool of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatPools
@@ -1750,7 +1905,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatPools
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBackendAddressPool
@@ -1763,7 +1920,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBacken
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration
@@ -1776,7 +1935,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBacken
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration
@@ -1789,7 +1950,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesFronte
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusInboundNatRules
@@ -1862,7 +2025,9 @@ public partial class V1api20240301storageLoadBalancerStatusInboundNatRules
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool
@@ -1875,7 +2040,9 @@ public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBac
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPools
@@ -1888,7 +2055,9 @@ public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBac
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration
@@ -1901,7 +2070,9 @@ public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesFro
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesProbe
@@ -1914,7 +2085,9 @@ public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesPro
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancingRule_STATUS A load balancing rule for a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRules
@@ -1991,7 +2164,9 @@ public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRules
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusOutboundRulesBackendAddressPool
@@ -2004,7 +2179,9 @@ public partial class V1api20240301storageLoadBalancerStatusOutboundRulesBackendA
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations
@@ -2017,7 +2194,9 @@ public partial class V1api20240301storageLoadBalancerStatusOutboundRulesFrontend
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OutboundRule_STATUS Outbound rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusOutboundRules
@@ -2070,7 +2249,9 @@ public partial class V1api20240301storageLoadBalancerStatusOutboundRules
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusProbesLoadBalancingRules
@@ -2083,7 +2264,9 @@ public partial class V1api20240301storageLoadBalancerStatusProbesLoadBalancingRu
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Probe_STATUS A load balancer probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusProbes
@@ -2144,7 +2327,9 @@ public partial class V1api20240301storageLoadBalancerStatusProbes
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatusSku
@@ -2161,7 +2346,9 @@ public partial class V1api20240301storageLoadBalancerStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancer_STATUS LoadBalancer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancerStatus
@@ -2242,7 +2429,9 @@ public partial class V1api20240301storageLoadBalancerStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2272,3 +2461,4 @@ public partial class V1api20240301storageLoadBalancer : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1api20240301storageLoadBalancerStatus? Status { get; set; }
 }
+#nullable disable

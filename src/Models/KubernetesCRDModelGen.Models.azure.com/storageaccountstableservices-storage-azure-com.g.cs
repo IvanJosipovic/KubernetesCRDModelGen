@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsTableService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/table.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceList : IKube
     [JsonPropertyName("items")]
     public IList<V1api20230101storageStorageAccountsTableService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecCorsCorsRules
@@ -62,7 +65,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecCorsCors
     [JsonPropertyName("maxAgeInSeconds")]
     public int? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecCors
@@ -75,7 +80,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecCors
     [JsonPropertyName("corsRules")]
     public IList<V1api20230101storageStorageAccountsTableServiceSpecCorsCorsRules>? CorsRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecOperatorSpecConfigMapExpressions
@@ -92,7 +99,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecOperator
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecOperatorSpecSecretExpressions
@@ -109,7 +118,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecOperator
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsTableServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecOperatorSpec
@@ -126,7 +137,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecOperator
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageStorageAccountsTableServiceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpecOwner
@@ -139,7 +152,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsTableService_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceSpec
@@ -164,7 +179,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceSpec
     [JsonPropertyName("owner")]
     public V1api20230101storageStorageAccountsTableServiceSpecOwner Owner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusConditions
@@ -197,7 +214,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCondit
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusCorsCorsRules
@@ -226,7 +245,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCorsCo
     [JsonPropertyName("maxAgeInSeconds")]
     public int? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatusCors
@@ -239,7 +260,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatusCors
     [JsonPropertyName("corsRules")]
     public IList<V1api20230101storageStorageAccountsTableServiceStatusCorsCorsRules>? CorsRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsTableService_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServiceStatus
@@ -268,7 +291,9 @@ public partial class V1api20230101storageStorageAccountsTableServiceStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsTableService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/table.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -298,3 +323,4 @@ public partial class V1api20230101storageStorageAccountsTableService : IKubernet
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsTableServiceStatus? Status { get; set; }
 }
+#nullable disable

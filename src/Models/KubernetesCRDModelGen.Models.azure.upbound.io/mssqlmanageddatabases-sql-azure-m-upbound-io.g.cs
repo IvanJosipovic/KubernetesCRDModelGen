@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+#nullable enable
 /// <summary>MSSQLManagedDatabase is the Schema for the MSSQLManagedDatabases API. Manages an Azure SQL Azure Managed Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLManagedDatabaseList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLManagedDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A long_term_retention_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderLongTermRetentionPolicy
@@ -58,7 +61,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderLongTermRetention
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdRefPolicy
@@ -71,7 +76,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLManagedInstance in sql to populate managedInstanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdRef
@@ -88,7 +95,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceId
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdSelectorPolicy
@@ -101,7 +110,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLManagedInstance in sql to populate managedInstanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdSelector
@@ -122,7 +133,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceId
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedDatabaseSpecForProviderManagedInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A point_in_time_restore block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderPointInTimeRestore
@@ -135,7 +148,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderPointInTimeRestor
     [JsonPropertyName("sourceDatabaseId")]
     public string? SourceDatabaseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProvider
@@ -168,7 +183,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A long_term_retention_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderLongTermRetentionPolicy
@@ -193,7 +210,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderLongTermRetentio
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A point_in_time_restore block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderPointInTimeRestore
@@ -206,7 +225,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderPointInTimeResto
     [JsonPropertyName("sourceDatabaseId")]
     public string? SourceDatabaseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecInitProvider
@@ -227,7 +248,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecProviderConfigRef
@@ -240,7 +263,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecWriteConnectionSecretToRef
@@ -249,7 +274,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedDatabaseSpec defines the desired state of MSSQLManagedDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpec
@@ -274,7 +301,9 @@ public partial class V1beta1MSSQLManagedDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLManagedDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A long_term_retention_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderLongTermRetentionPolicy
@@ -299,7 +328,9 @@ public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderLongTermRetentio
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A point_in_time_restore block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderPointInTimeRestore
@@ -312,7 +343,9 @@ public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderPointInTimeResto
     [JsonPropertyName("sourceDatabaseId")]
     public string? SourceDatabaseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatusAtProvider
@@ -341,7 +374,9 @@ public partial class V1beta1MSSQLManagedDatabaseStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatusConditions
@@ -370,7 +405,9 @@ public partial class V1beta1MSSQLManagedDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedDatabaseStatus defines the observed state of MSSQLManagedDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatus
@@ -387,7 +424,9 @@ public partial class V1beta1MSSQLManagedDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedDatabase is the Schema for the MSSQLManagedDatabases API. Manages an Azure SQL Azure Managed Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -417,3 +456,4 @@ public partial class V1beta1MSSQLManagedDatabase : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1MSSQLManagedDatabaseStatus? Status { get; set; }
 }
+#nullable disable

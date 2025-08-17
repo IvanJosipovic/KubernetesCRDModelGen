@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1IAMWorkloadIdentityPoolProvider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An Amazon Web Services identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
@@ -46,7 +49,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
     [JsonPropertyName("stsUri")]
     public IList<string>? StsUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An OpenId Connect 1.0 identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
@@ -59,7 +64,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
     [JsonPropertyName("issuerUri")]
     public string IssuerUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
@@ -76,7 +83,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef
@@ -93,7 +102,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityP
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
@@ -142,7 +153,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
     [JsonPropertyName("workloadIdentityPoolRef")]
     public V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef WorkloadIdentityPoolRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
@@ -167,7 +180,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
@@ -184,7 +199,9 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -214,3 +231,4 @@ public partial class V1beta1IAMWorkloadIdentityPoolProvider : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1IAMWorkloadIdentityPoolProviderStatus? Status { get; set; }
 }
+#nullable disable

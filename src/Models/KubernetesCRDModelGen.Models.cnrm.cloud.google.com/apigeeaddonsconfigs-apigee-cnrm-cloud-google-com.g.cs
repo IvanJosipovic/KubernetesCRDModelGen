@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ApigeeAddonsConfigList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1ApigeeAddonsConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsCon
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
@@ -55,7 +60,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatformConfig
@@ -68,7 +75,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatfor
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
@@ -77,7 +86,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfig
@@ -86,7 +97,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfi
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Addon configurations of the Apigee organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
@@ -111,7 +124,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
     [JsonPropertyName("monetizationConfig")]
     public V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigSpec
@@ -128,7 +143,9 @@ public partial class V1alpha1ApigeeAddonsConfigSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigStatusConditions
@@ -153,7 +170,9 @@ public partial class V1alpha1ApigeeAddonsConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApigeeAddonsConfigStatus
@@ -166,7 +185,9 @@ public partial class V1alpha1ApigeeAddonsConfigStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -196,3 +217,4 @@ public partial class V1alpha1ApigeeAddonsConfig : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1ApigeeAddonsConfigStatus? Status { get; set; }
 }
+#nullable disable

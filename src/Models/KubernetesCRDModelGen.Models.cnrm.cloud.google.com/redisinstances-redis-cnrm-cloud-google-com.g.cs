@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RedisInstanceList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1RedisInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network to which the instance is connected. If left unspecified, the default network will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecAuthorizedNetworkRef
@@ -50,7 +53,9 @@ public partial class V1beta1RedisInstanceSpecAuthorizedNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis instance. If this is provided, CMEK is enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecCustomerManagedKeyRef
@@ -67,7 +72,9 @@ public partial class V1beta1RedisInstanceSpecCustomerManagedKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
@@ -88,7 +95,9 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceW
     [JsonPropertyName("seconds")]
     public int? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
@@ -105,7 +114,9 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceW
     [JsonPropertyName("startTime")]
     public V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance policy for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecMaintenancePolicy
@@ -126,7 +137,9 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicy
     [JsonPropertyName("weeklyMaintenanceWindow")]
     public IList<V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecMaintenanceSchedule
@@ -143,7 +156,9 @@ public partial class V1beta1RedisInstanceSpecMaintenanceSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Persistence configuration for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpecPersistenceConfig
@@ -164,7 +179,9 @@ public partial class V1beta1RedisInstanceSpecPersistenceConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceSpec
@@ -257,7 +274,9 @@ public partial class V1beta1RedisInstanceSpec
     [JsonPropertyName("transitEncryptionMode")]
     public string? TransitEncryptionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatusConditions
@@ -282,7 +301,9 @@ public partial class V1beta1RedisInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatusMaintenanceSchedule
@@ -299,7 +320,9 @@ public partial class V1beta1RedisInstanceStatusMaintenanceSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatusNodes
@@ -312,7 +335,9 @@ public partial class V1beta1RedisInstanceStatusNodes
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatusObservedState
@@ -321,7 +346,9 @@ public partial class V1beta1RedisInstanceStatusObservedState
     [JsonPropertyName("authString")]
     public string? AuthString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatusServerCaCerts
@@ -346,7 +373,9 @@ public partial class V1beta1RedisInstanceStatusServerCaCerts
     [JsonPropertyName("sha1Fingerprint")]
     public string? Sha1Fingerprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisInstanceStatus
@@ -403,7 +432,9 @@ public partial class V1beta1RedisInstanceStatus
     [JsonPropertyName("serverCaCerts")]
     public IList<V1beta1RedisInstanceStatusServerCaCerts>? ServerCaCerts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -433,3 +464,4 @@ public partial class V1beta1RedisInstance : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1RedisInstanceStatus? Status { get; set; }
 }
+#nullable disable

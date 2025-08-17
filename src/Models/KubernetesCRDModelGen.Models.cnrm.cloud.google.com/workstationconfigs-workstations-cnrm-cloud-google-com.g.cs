@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workstations.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>WorkstationConfig is the Schema for the WorkstationConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkstationConfigList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1WorkstationConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecAnnotations
@@ -46,7 +49,9 @@ public partial class V1beta1WorkstationConfigSpecAnnotations
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecContainerEnv
@@ -59,7 +64,9 @@ public partial class V1beta1WorkstationConfigSpecContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Container that runs upon startup for each workstation using this workstation configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecContainer
@@ -88,7 +95,9 @@ public partial class V1beta1WorkstationConfigSpecContainer
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A reference to the Google Cloud KMS encryption key. For example, `"projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"`. The key must be in the same region as the workstation configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecEncryptionKeyKmsCryptoKeyRef
@@ -105,7 +114,9 @@ public partial class V1beta1WorkstationConfigSpecEncryptionKeyKmsCryptoKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A reference to a service account to use with the specified KMS key. We recommend that you use a separate service account and follow KMS best practices. For more information, see [Separation of duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-policy-binding#--member).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecEncryptionKeyServiceAccountRef
@@ -122,7 +133,9 @@ public partial class V1beta1WorkstationConfigSpecEncryptionKeyServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Encrypts resources of this workstation configuration using a  customer-managed encryption key (CMEK).   If specified, the boot disk of the Compute Engine instance and the  persistent disk are encrypted using this encryption key. If  this field is not set, the disks are encrypted using a generated  key. Customer-managed encryption keys do not protect disk metadata.   If the customer-managed encryption key is rotated, when the workstation  instance is stopped, the system attempts to recreate the  persistent disk with the new version of the key. Be sure to keep  older versions of the key until the persistent disk is recreated.  Otherwise, data on the persistent disk might be lost.   If the encryption key is revoked, the workstation session automatically  stops within 7 hours.   Immutable after the workstation configuration is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecEncryptionKey
@@ -135,7 +148,9 @@ public partial class V1beta1WorkstationConfigSpecEncryptionKey
     [JsonPropertyName("serviceAccountRef")]
     public V1beta1WorkstationConfigSpecEncryptionKeyServiceAccountRef? ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A set of Compute Engine Confidential VM instance options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecHostGceInstanceConfidentialInstanceConfig
@@ -144,7 +159,9 @@ public partial class V1beta1WorkstationConfigSpecHostGceInstanceConfidentialInst
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A reference to the service account for Cloud  Workstations VMs created with this configuration. When specified, be  sure that the service account has `logginglogEntries.create` permission  on the project so it can write logs out to Cloud Logging. If using a  custom container image, the service account must have permissions to  pull the specified image.   If you as the administrator want to be able to `ssh` into the  underlying VM, you need to set this value to a service account  for which you have the `iam.serviceAccounts.actAs` permission.  Conversely, if you don't want anyone to be able to `ssh` into the  underlying VM, use a service account where no one has that  permission.   If not set, VMs run with a service account provided by the  Cloud Workstations service, and the image must be publicly  accessible.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecHostGceInstanceServiceAccountRef
@@ -161,7 +178,9 @@ public partial class V1beta1WorkstationConfigSpecHostGceInstanceServiceAccountRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A set of Compute Engine Shielded instance options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecHostGceInstanceShieldedInstanceConfig
@@ -178,7 +197,9 @@ public partial class V1beta1WorkstationConfigSpecHostGceInstanceShieldedInstance
     [JsonPropertyName("enableVTPM")]
     public bool? EnableVTPM { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a Compute Engine instance as the host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecHostGceInstance
@@ -223,7 +244,9 @@ public partial class V1beta1WorkstationConfigSpecHostGceInstance
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Runtime host for the workstation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecHost
@@ -232,7 +255,9 @@ public partial class V1beta1WorkstationConfigSpecHost
     [JsonPropertyName("gceInstance")]
     public V1beta1WorkstationConfigSpecHostGceInstance? GceInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecLabels
@@ -245,7 +270,9 @@ public partial class V1beta1WorkstationConfigSpecLabels
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parent is a reference to the parent WorkstationCluster for this WorkstationConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecParentRef
@@ -262,7 +289,9 @@ public partial class V1beta1WorkstationConfigSpecParentRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A PersistentDirectory backed by a Compute Engine persistent disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecPersistentDirectoriesGcePD
@@ -287,7 +316,9 @@ public partial class V1beta1WorkstationConfigSpecPersistentDirectoriesGcePD
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecPersistentDirectories
@@ -300,7 +331,9 @@ public partial class V1beta1WorkstationConfigSpecPersistentDirectories
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecReadinessChecks
@@ -313,7 +346,9 @@ public partial class V1beta1WorkstationConfigSpecReadinessChecks
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkstationConfigSpec defines the desired state of WorkstationConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpec
@@ -370,7 +405,9 @@ public partial class V1beta1WorkstationConfigSpec
     [JsonPropertyName("runningTimeout")]
     public string? RunningTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatusConditions
@@ -395,7 +432,9 @@ public partial class V1beta1WorkstationConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatusObservedStateGcpConditions
@@ -408,7 +447,9 @@ public partial class V1beta1WorkstationConfigStatusObservedStateGcpConditions
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Observed state of the Compute Engine runtime host for the workstation configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatusObservedStateHostGceInstance
@@ -417,7 +458,9 @@ public partial class V1beta1WorkstationConfigStatusObservedStateHostGceInstance
     [JsonPropertyName("pooledInstances")]
     public int? PooledInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Observed state of the runtime host for the workstation configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatusObservedStateHost
@@ -426,7 +469,9 @@ public partial class V1beta1WorkstationConfigStatusObservedStateHost
     [JsonPropertyName("gceInstance")]
     public V1beta1WorkstationConfigStatusObservedStateHostGceInstance? GceInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatusObservedState
@@ -463,7 +508,9 @@ public partial class V1beta1WorkstationConfigStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkstationConfigStatus defines the config connector machine state of WorkstationConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigStatus
@@ -484,7 +531,9 @@ public partial class V1beta1WorkstationConfigStatus
     [JsonPropertyName("observedState")]
     public V1beta1WorkstationConfigStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkstationConfig is the Schema for the WorkstationConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -514,3 +563,4 @@ public partial class V1beta1WorkstationConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1WorkstationConfigStatus? Status { get; set; }
 }
+#nullable disable

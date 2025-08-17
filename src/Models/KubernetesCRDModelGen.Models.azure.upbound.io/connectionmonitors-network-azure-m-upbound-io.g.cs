@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ConnectionMonitor is the Schema for the ConnectionMonitors API. Manages a Network Connection Monitor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectionMonitorList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1ConnectionMonitor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderEndpointFilterItem
@@ -46,7 +49,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderEndpointFilterItem
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderEndpointFilter
@@ -59,7 +64,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderEndpointFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderEndpoint
@@ -96,7 +103,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderEndpoint
     [JsonPropertyName("targetResourceType")]
     public string? TargetResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdRefPolicy
@@ -109,7 +118,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Watcher in network to populate networkWatcherId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdRef
@@ -126,7 +137,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSelectorPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Watcher in network to populate networkWatcherId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSelector
@@ -160,7 +175,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSele
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefsPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefs
@@ -190,7 +209,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResou
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelectorPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelector
@@ -224,7 +247,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResou
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationHttpConfigurationRequestHeader
@@ -237,7 +262,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationHtt
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationHttpConfiguration
@@ -266,7 +293,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationHtt
     [JsonPropertyName("validStatusCodeRanges")]
     public IList<string>? ValidStatusCodeRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A icmp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationIcmpConfiguration
@@ -275,7 +304,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationIcm
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A success_threshold block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationSuccessThreshold
@@ -288,7 +319,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationSuc
     [JsonPropertyName("roundTripTimeMs")]
     public double? RoundTripTimeMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tcp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationTcpConfiguration
@@ -305,7 +338,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationTcp
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfiguration
@@ -342,7 +377,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestConfiguration
     [JsonPropertyName("testFrequencyInSeconds")]
     public double? TestFrequencyInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestGroup
@@ -367,7 +404,9 @@ public partial class V1beta1ConnectionMonitorSpecForProviderTestGroup
     [JsonPropertyName("testConfigurationNames")]
     public IList<string>? TestConfigurationNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProvider
@@ -420,7 +459,9 @@ public partial class V1beta1ConnectionMonitorSpecForProvider
     [JsonPropertyName("testGroup")]
     public IList<V1beta1ConnectionMonitorSpecForProviderTestGroup>? TestGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderEndpointFilterItem
@@ -433,7 +474,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderEndpointFilterItem
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderEndpointFilter
@@ -446,7 +489,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderEndpointFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderEndpoint
@@ -483,7 +528,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderEndpoint
     [JsonPropertyName("targetResourceType")]
     public string? TargetResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefsPolicy
@@ -496,7 +543,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefs
@@ -513,7 +562,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceReso
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelectorPolicy
@@ -526,7 +577,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelector
@@ -547,7 +600,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceReso
     [JsonPropertyName("policy")]
     public V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationHttpConfigurationRequestHeader
@@ -560,7 +615,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationHt
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationHttpConfiguration
@@ -589,7 +646,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationHt
     [JsonPropertyName("validStatusCodeRanges")]
     public IList<string>? ValidStatusCodeRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A icmp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationIcmpConfiguration
@@ -598,7 +657,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationIc
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A success_threshold block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationSuccessThreshold
@@ -611,7 +672,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationSu
     [JsonPropertyName("roundTripTimeMs")]
     public double? RoundTripTimeMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tcp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationTcpConfiguration
@@ -628,7 +691,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfigurationTc
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfiguration
@@ -665,7 +730,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestConfiguration
     [JsonPropertyName("testFrequencyInSeconds")]
     public double? TestFrequencyInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProviderTestGroup
@@ -690,7 +757,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderTestGroup
     [JsonPropertyName("testConfigurationNames")]
     public IList<string>? TestConfigurationNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecInitProvider
@@ -731,7 +800,9 @@ public partial class V1beta1ConnectionMonitorSpecInitProvider
     [JsonPropertyName("testGroup")]
     public IList<V1beta1ConnectionMonitorSpecInitProviderTestGroup>? TestGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecProviderConfigRef
@@ -744,7 +815,9 @@ public partial class V1beta1ConnectionMonitorSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecWriteConnectionSecretToRef
@@ -753,7 +826,9 @@ public partial class V1beta1ConnectionMonitorSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionMonitorSpec defines the desired state of ConnectionMonitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpec
@@ -778,7 +853,9 @@ public partial class V1beta1ConnectionMonitorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectionMonitorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderEndpointFilterItem
@@ -791,7 +868,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderEndpointFilterItem
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderEndpointFilter
@@ -804,7 +883,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderEndpointFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderEndpoint
@@ -841,7 +922,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderEndpoint
     [JsonPropertyName("targetResourceType")]
     public string? TargetResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationHttpConfigurationRequestHeader
@@ -854,7 +937,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationHt
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationHttpConfiguration
@@ -883,7 +968,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationHt
     [JsonPropertyName("validStatusCodeRanges")]
     public IList<string>? ValidStatusCodeRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A icmp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationIcmpConfiguration
@@ -892,7 +979,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationIc
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A success_threshold block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationSuccessThreshold
@@ -905,7 +994,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationSu
     [JsonPropertyName("roundTripTimeMs")]
     public double? RoundTripTimeMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tcp_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationTcpConfiguration
@@ -922,7 +1013,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfigurationTc
     [JsonPropertyName("traceRouteEnabled")]
     public bool? TraceRouteEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfiguration
@@ -959,7 +1052,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestConfiguration
     [JsonPropertyName("testFrequencyInSeconds")]
     public double? TestFrequencyInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProviderTestGroup
@@ -984,7 +1079,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProviderTestGroup
     [JsonPropertyName("testConfigurationNames")]
     public IList<string>? TestConfigurationNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusAtProvider
@@ -1025,7 +1122,9 @@ public partial class V1beta1ConnectionMonitorStatusAtProvider
     [JsonPropertyName("testGroup")]
     public IList<V1beta1ConnectionMonitorStatusAtProviderTestGroup>? TestGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatusConditions
@@ -1054,7 +1153,9 @@ public partial class V1beta1ConnectionMonitorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionMonitorStatus defines the observed state of ConnectionMonitor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorStatus
@@ -1071,7 +1172,9 @@ public partial class V1beta1ConnectionMonitorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionMonitor is the Schema for the ConnectionMonitors API. Manages a Network Connection Monitor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1101,3 +1204,4 @@ public partial class V1beta1ConnectionMonitor : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ConnectionMonitorStatus? Status { get; set; }
 }
+#nullable disable

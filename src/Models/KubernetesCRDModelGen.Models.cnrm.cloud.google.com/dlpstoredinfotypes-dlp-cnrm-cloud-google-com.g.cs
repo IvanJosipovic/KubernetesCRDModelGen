@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DLPStoredInfoTypeList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DLPStoredInfoType> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionaryCloudStoragePath
@@ -42,7 +45,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionaryCloudStoragePath
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionaryWordList
@@ -51,7 +56,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionaryWordList
     [JsonPropertyName("words")]
     public IList<string> Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Store dictionary-based CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecDictionary
@@ -64,7 +71,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecDictionary
     [JsonPropertyName("wordList")]
     public V1beta1DLPStoredInfoTypeSpecDictionaryWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Designated field in the BigQuery table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldField
@@ -73,7 +82,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableDatasetRef
@@ -90,7 +101,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableProjectRef
@@ -107,7 +120,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableTableRef
@@ -124,7 +139,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source table of the field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTable
@@ -141,7 +158,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("tableRef")]
     public V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTableTableRef? TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryField
@@ -154,7 +173,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFi
     [JsonPropertyName("table")]
     public V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryBigQueryFieldTable? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set of files containing newline-delimited lists of dictionary phrases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryCloudStorageFileSet
@@ -163,7 +184,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryCloudStora
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryOutputPath
@@ -172,7 +195,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryOutputPath
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StoredInfoType where findings are defined by a dictionary of phrases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionary
@@ -189,7 +214,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecLargeCustomDictionary
     [JsonPropertyName("outputPath")]
     public V1beta1DLPStoredInfoTypeSpecLargeCustomDictionaryOutputPath? OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecOrganizationRef
@@ -206,7 +233,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecOrganizationRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecProjectRef
@@ -223,7 +252,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Store regular expression-based StoredInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpecRegex
@@ -236,7 +267,9 @@ public partial class V1beta1DLPStoredInfoTypeSpecRegex
     [JsonPropertyName("pattern")]
     public string Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeSpec
@@ -277,7 +310,9 @@ public partial class V1beta1DLPStoredInfoTypeSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeStatusConditions
@@ -302,7 +337,9 @@ public partial class V1beta1DLPStoredInfoTypeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPStoredInfoTypeStatus
@@ -315,7 +352,9 @@ public partial class V1beta1DLPStoredInfoTypeStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -345,3 +384,4 @@ public partial class V1beta1DLPStoredInfoType : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DLPStoredInfoTypeStatus? Status { get; set; }
 }
+#nullable disable

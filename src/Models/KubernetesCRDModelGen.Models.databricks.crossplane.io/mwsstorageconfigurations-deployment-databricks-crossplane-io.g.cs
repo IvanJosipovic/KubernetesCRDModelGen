@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+#nullable enable
 /// <summary>MwsStorageConfigurations is the Schema for the MwsStorageConfigurationss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MwsStorageConfigurationsList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1MwsStorageConfigurations> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account Id that could be found in the top right corner of Accounts Console</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecForProviderAccountIdSecretRef
@@ -50,7 +53,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecForProviderAccountIdSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecForProvider
@@ -67,7 +72,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecForProvider
     [JsonPropertyName("storageConfigurationName")]
     public string? StorageConfigurationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account Id that could be found in the top right corner of Accounts Console</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecInitProviderAccountIdSecretRef
@@ -84,7 +91,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecInitProviderAccountIdSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecInitProvider
@@ -101,7 +110,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecInitProvider
     [JsonPropertyName("storageConfigurationName")]
     public string? StorageConfigurationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecProviderConfigRefPolicy
@@ -114,7 +125,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecProviderConfigRef
@@ -127,7 +140,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MwsStorageConfigurationsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetailsToConfigRefPolicy
@@ -140,7 +155,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetail
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetailsToConfigRef
@@ -153,7 +170,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetail
     [JsonPropertyName("policy")]
     public V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetailsToMetadata
@@ -170,7 +189,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetail
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetailsTo
@@ -187,7 +208,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecPublishConnectionDetail
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpecWriteConnectionSecretToRef
@@ -200,7 +223,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsStorageConfigurationsSpec defines the desired state of MwsStorageConfigurations</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsSpec
@@ -233,7 +258,9 @@ public partial class V1alpha1MwsStorageConfigurationsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MwsStorageConfigurationsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsStatusAtProvider
@@ -258,7 +285,9 @@ public partial class V1alpha1MwsStorageConfigurationsStatusAtProvider
     [JsonPropertyName("storageConfigurationName")]
     public string? StorageConfigurationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsStatusConditions
@@ -287,7 +316,9 @@ public partial class V1alpha1MwsStorageConfigurationsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsStorageConfigurationsStatus defines the observed state of MwsStorageConfigurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsStorageConfigurationsStatus
@@ -304,7 +335,9 @@ public partial class V1alpha1MwsStorageConfigurationsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsStorageConfigurations is the Schema for the MwsStorageConfigurationss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -334,3 +367,4 @@ public partial class V1alpha1MwsStorageConfigurations : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1MwsStorageConfigurationsStatus? Status { get; set; }
 }
+#nullable disable

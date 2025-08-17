@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigtableCluster is the Schema for the BigtableCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BigtableClusterList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1BigtableCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Autoscaling limits for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingConfigAutoscalingLimits
@@ -46,7 +49,9 @@ public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingC
     [JsonPropertyName("minServeNodes")]
     public int? MinServeNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Autoscaling targets for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingConfigAutoscalingTargets
@@ -59,7 +64,9 @@ public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingC
     [JsonPropertyName("storageUtilizationGiBPerNode")]
     public int? StorageUtilizationGiBPerNode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Autoscaling configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingConfig
@@ -72,7 +79,9 @@ public partial class V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingC
     [JsonPropertyName("autoscalingTargets")]
     public V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecClusterConfig
@@ -81,7 +90,9 @@ public partial class V1alpha1BigtableClusterSpecClusterConfig
     [JsonPropertyName("clusterAutoscalingConfig")]
     public V1alpha1BigtableClusterSpecClusterConfigClusterAutoscalingConfig? ClusterAutoscalingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecEncryptionConfigKmsKeyRef
@@ -98,7 +109,9 @@ public partial class V1alpha1BigtableClusterSpecEncryptionConfigKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The encryption configuration for CMEK-protected clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecEncryptionConfig
@@ -107,7 +120,9 @@ public partial class V1alpha1BigtableClusterSpecEncryptionConfig
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1BigtableClusterSpecEncryptionConfigKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRef defines the resource reference to BigtableInstance, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpecInstanceRef
@@ -124,7 +139,9 @@ public partial class V1alpha1BigtableClusterSpecInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableClusterSpec defines the desired state of BigtableCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterSpec
@@ -161,7 +178,9 @@ public partial class V1alpha1BigtableClusterSpec
     [JsonPropertyName("serveNodes")]
     public int? ServeNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterStatusConditions
@@ -186,7 +205,9 @@ public partial class V1alpha1BigtableClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterStatusObservedState
@@ -195,7 +216,9 @@ public partial class V1alpha1BigtableClusterStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableClusterStatus defines the config connector machine state of BigtableCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableClusterStatus
@@ -216,7 +239,9 @@ public partial class V1alpha1BigtableClusterStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BigtableClusterStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableCluster is the Schema for the BigtableCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -246,3 +271,4 @@ public partial class V1alpha1BigtableCluster : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1BigtableClusterStatus? Status { get; set; }
 }
+#nullable disable

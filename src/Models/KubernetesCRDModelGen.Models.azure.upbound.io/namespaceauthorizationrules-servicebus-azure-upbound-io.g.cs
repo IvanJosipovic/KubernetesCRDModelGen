@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+#nullable enable
 /// <summary>NamespaceAuthorizationRule is the Schema for the NamespaceAuthorizationRules API. Manages a ServiceBus Namespace authorization Rule within a ServiceBus.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NamespaceAuthorizationRuleList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1NamespaceAuthorizationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceId
     [JsonPropertyName("policy")]
     public V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceId
     [JsonPropertyName("policy")]
     public V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecInitProvider
@@ -135,7 +148,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecInitProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecProviderConfigRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecProviderConfigRef
@@ -161,7 +178,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NamespaceAuthorizationRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecWriteConnectionSecretToRef
@@ -174,7 +193,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceAuthorizationRuleSpec defines the desired state of NamespaceAuthorizationRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpec
@@ -203,7 +224,9 @@ public partial class V1beta1NamespaceAuthorizationRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NamespaceAuthorizationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleStatusAtProvider
@@ -228,7 +251,9 @@ public partial class V1beta1NamespaceAuthorizationRuleStatusAtProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleStatusConditions
@@ -257,7 +282,9 @@ public partial class V1beta1NamespaceAuthorizationRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceAuthorizationRuleStatus defines the observed state of NamespaceAuthorizationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleStatus
@@ -274,7 +301,9 @@ public partial class V1beta1NamespaceAuthorizationRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceAuthorizationRule is the Schema for the NamespaceAuthorizationRules API. Manages a ServiceBus Namespace authorization Rule within a ServiceBus.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -304,3 +333,4 @@ public partial class V1beta1NamespaceAuthorizationRule : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1NamespaceAuthorizationRuleStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FeatureGroupList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1FeatureGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfigVectorConfig
@@ -42,7 +45,9 @@ public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollecti
     [JsonPropertyName("dimension")]
     public double? Dimension { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfig
@@ -51,7 +56,9 @@ public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollecti
     [JsonPropertyName("vectorConfig")]
     public IList<V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinition
@@ -72,7 +79,9 @@ public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinition
     [JsonPropertyName("featureType")]
     public string? FeatureType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfigDataCatalogConfig
@@ -89,7 +98,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfigDataCat
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfigS3StorageConfig
@@ -106,7 +117,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfigS3Stora
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfig
@@ -127,7 +140,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOfflineStoreConfig
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfigSecurityConfig
@@ -136,7 +151,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfigSecurity
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfigTtlDuration
@@ -149,7 +166,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfigTtlDurat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfig
@@ -170,7 +189,9 @@ public partial class V1beta1FeatureGroupSpecForProviderOnlineStoreConfig
     [JsonPropertyName("ttlDuration")]
     public IList<V1beta1FeatureGroupSpecForProviderOnlineStoreConfigTtlDuration>? TtlDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderRoleArnRefPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1FeatureGroupSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderRoleArnRef
@@ -196,7 +219,9 @@ public partial class V1beta1FeatureGroupSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FeatureGroupSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderRoleArnSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1FeatureGroupSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderRoleArnSelector
@@ -226,7 +253,9 @@ public partial class V1beta1FeatureGroupSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FeatureGroupSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderThroughputConfig
@@ -243,7 +272,9 @@ public partial class V1beta1FeatureGroupSpecForProviderThroughputConfig
     [JsonPropertyName("throughputMode")]
     public string? ThroughputMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProvider
@@ -296,7 +327,9 @@ public partial class V1beta1FeatureGroupSpecForProvider
     [JsonPropertyName("throughputConfig")]
     public IList<V1beta1FeatureGroupSpecForProviderThroughputConfig>? ThroughputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfigVectorConfig
@@ -305,7 +338,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollect
     [JsonPropertyName("dimension")]
     public double? Dimension { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfig
@@ -314,7 +349,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollect
     [JsonPropertyName("vectorConfig")]
     public IList<V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinition
@@ -335,7 +372,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinition
     [JsonPropertyName("featureType")]
     public string? FeatureType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfigDataCatalogConfig
@@ -352,7 +391,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfigDataCa
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfigS3StorageConfig
@@ -369,7 +410,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfigS3Stor
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfig
@@ -390,7 +433,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOfflineStoreConfig
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfigSecurityConfig
@@ -399,7 +444,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfigSecurit
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfigTtlDuration
@@ -412,7 +459,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfigTtlDura
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfig
@@ -433,7 +482,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderOnlineStoreConfig
     [JsonPropertyName("ttlDuration")]
     public IList<V1beta1FeatureGroupSpecInitProviderOnlineStoreConfigTtlDuration>? TtlDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderRoleArnRefPolicy
@@ -446,7 +497,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderRoleArnRef
@@ -459,7 +512,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FeatureGroupSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderRoleArnSelectorPolicy
@@ -472,7 +527,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderRoleArnSelector
@@ -489,7 +546,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FeatureGroupSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderThroughputConfig
@@ -506,7 +565,9 @@ public partial class V1beta1FeatureGroupSpecInitProviderThroughputConfig
     [JsonPropertyName("throughputMode")]
     public string? ThroughputMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProvider
@@ -555,7 +616,9 @@ public partial class V1beta1FeatureGroupSpecInitProvider
     [JsonPropertyName("throughputConfig")]
     public IList<V1beta1FeatureGroupSpecInitProviderThroughputConfig>? ThroughputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecProviderConfigRefPolicy
@@ -568,7 +631,9 @@ public partial class V1beta1FeatureGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecProviderConfigRef
@@ -581,7 +646,9 @@ public partial class V1beta1FeatureGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FeatureGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecWriteConnectionSecretToRef
@@ -594,7 +661,9 @@ public partial class V1beta1FeatureGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeatureGroupSpec defines the desired state of FeatureGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpec
@@ -623,7 +692,9 @@ public partial class V1beta1FeatureGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FeatureGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfigVectorConfig
@@ -632,7 +703,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollect
     [JsonPropertyName("dimension")]
     public double? Dimension { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfig
@@ -641,7 +714,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollect
     [JsonPropertyName("vectorConfig")]
     public IList<V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinition
@@ -662,7 +737,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinition
     [JsonPropertyName("featureType")]
     public string? FeatureType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfigDataCatalogConfig
@@ -679,7 +756,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfigDataCa
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfigS3StorageConfig
@@ -696,7 +775,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfigS3Stor
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfig
@@ -717,7 +798,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOfflineStoreConfig
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfigSecurityConfig
@@ -726,7 +809,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfigSecurit
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfigTtlDuration
@@ -739,7 +824,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfigTtlDura
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfig
@@ -760,7 +847,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfig
     [JsonPropertyName("ttlDuration")]
     public IList<V1beta1FeatureGroupStatusAtProviderOnlineStoreConfigTtlDuration>? TtlDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderThroughputConfig
@@ -777,7 +866,9 @@ public partial class V1beta1FeatureGroupStatusAtProviderThroughputConfig
     [JsonPropertyName("throughputMode")]
     public string? ThroughputMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProvider
@@ -834,7 +925,9 @@ public partial class V1beta1FeatureGroupStatusAtProvider
     [JsonPropertyName("throughputConfig")]
     public IList<V1beta1FeatureGroupStatusAtProviderThroughputConfig>? ThroughputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusConditions
@@ -863,7 +956,9 @@ public partial class V1beta1FeatureGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeatureGroupStatus defines the observed state of FeatureGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatus
@@ -880,7 +975,9 @@ public partial class V1beta1FeatureGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -910,3 +1007,4 @@ public partial class V1beta1FeatureGroup : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1FeatureGroupStatus? Status { get; set; }
 }
+#nullable disable

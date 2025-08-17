@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataCatalogEntry is the Schema for the DataCatalogEntry API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataCatalogEntryList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1DataCatalogEntry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecBusinessContextContactsPeople
@@ -46,7 +49,9 @@ public partial class V1alpha1DataCatalogEntrySpecBusinessContextContactsPeople
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contact people for the entry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecBusinessContextContacts
@@ -55,7 +60,9 @@ public partial class V1alpha1DataCatalogEntrySpecBusinessContextContacts
     [JsonPropertyName("people")]
     public IList<V1alpha1DataCatalogEntrySpecBusinessContextContactsPeople>? People { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Entry overview fields for rich text descriptions of entries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecBusinessContextEntryOverview
@@ -64,7 +71,9 @@ public partial class V1alpha1DataCatalogEntrySpecBusinessContextEntryOverview
     [JsonPropertyName("overview")]
     public string? Overview { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Business Context of the entry. Not supported for BigQuery datasets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecBusinessContext
@@ -77,7 +86,9 @@ public partial class V1alpha1DataCatalogEntrySpecBusinessContext
     [JsonPropertyName("entryOverview")]
     public V1alpha1DataCatalogEntrySpecBusinessContextEntryOverview? EntryOverview { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to Cloud Bigtable system. Only settable when `integrated_system` is equal to `CLOUD_BIGTABLE`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecCloudBigtableSystemSpec
@@ -86,7 +97,9 @@ public partial class V1alpha1DataCatalogEntrySpecCloudBigtableSystemSpec
     [JsonPropertyName("instanceDisplayName")]
     public string? InstanceDisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification for the BigQuery connection to a Cloud SQL instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpecBigqueryConnectionSpecCloudSQL
@@ -103,7 +116,9 @@ public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpecBigquer
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Fields specific to BigQuery connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpecBigqueryConnectionSpec
@@ -120,7 +135,9 @@ public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpecBigquer
     [JsonPropertyName("hasCredential")]
     public bool? HasCredential { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpec
@@ -129,7 +146,9 @@ public partial class V1alpha1DataCatalogEntrySpecDataSourceConnectionSpec
     [JsonPropertyName("bigqueryConnectionSpec")]
     public V1alpha1DataCatalogEntrySpecDataSourceConnectionSpecBigqueryConnectionSpec? BigqueryConnectionSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec what aplies to tables that are actually views. Not set for "real" tables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDatabaseTableSpecDatabaseViewSpec
@@ -146,7 +165,9 @@ public partial class V1alpha1DataCatalogEntrySpecDatabaseTableSpecDatabaseViewSp
     [JsonPropertyName("viewType")]
     public string? ViewType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a table resource. Valid only for entries with the `TABLE` or `EXPLORE` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDatabaseTableSpec
@@ -159,7 +180,9 @@ public partial class V1alpha1DataCatalogEntrySpecDatabaseTableSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Vertex AI Dataset specific fields</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDatasetSpecVertexDatasetSpec
@@ -172,7 +195,9 @@ public partial class V1alpha1DataCatalogEntrySpecDatasetSpecVertexDatasetSpec
     [JsonPropertyName("dataType")]
     public string? DataType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecDatasetSpec
@@ -181,7 +206,9 @@ public partial class V1alpha1DataCatalogEntrySpecDatasetSpec
     [JsonPropertyName("vertexDatasetSpec")]
     public V1alpha1DataCatalogEntrySpecDatasetSpecVertexDatasetSpec? VertexDatasetSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the entry group that contains the entry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecEntryGroupRef
@@ -198,13 +225,17 @@ public partial class V1alpha1DataCatalogEntrySpecEntryGroupRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeatureonlineStore spec for Vertex AI Feature Store.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFeatureOnlineStoreSpec
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in Avro JSON format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatAvro
@@ -213,25 +244,33 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDatap
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks a CSV-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatCsv
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks an ORC-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatOrc
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks a Parquet-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatParquet
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in protocol buffer format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatProtobuf
@@ -240,7 +279,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDatap
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in Thrift format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatThrift
@@ -249,7 +290,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDatap
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Format of the data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormat
@@ -278,7 +321,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDatap
     [JsonPropertyName("thrift")]
     public V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpecDataFormatThrift? Thrift { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common Dataplex fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpec
@@ -299,7 +344,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDatap
     [JsonPropertyName("projectID")]
     public string? ProjectID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fields specific to a Dataplex fileset and present only in the Dataplex fileset entries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFileset
@@ -308,7 +355,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFileset
     [JsonPropertyName("dataplexSpec")]
     public V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFilesetDataplexSpec? DataplexSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecFilesetSpec
@@ -317,7 +366,9 @@ public partial class V1alpha1DataCatalogEntrySpecFilesetSpec
     [JsonPropertyName("dataplexFileset")]
     public V1alpha1DataCatalogEntrySpecFilesetSpecDataplexFileset? DataplexFileset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
@@ -326,7 +377,9 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
     [JsonPropertyName("filePatterns")]
     public IList<string> FilePatterns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to Looker sysstem. Only settable when `user_specified_system` is equal to `LOOKER`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecLookerSystemSpec
@@ -355,7 +408,9 @@ public partial class V1alpha1DataCatalogEntrySpecLookerSystemSpec
     [JsonPropertyName("parentViewID")]
     public string? ParentViewID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source of a Vertex model.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpecVertexModelSourceInfo
@@ -368,7 +423,9 @@ public partial class V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpecVertexM
     [JsonPropertyName("sourceType")]
     public string? SourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification for vertex model resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpec
@@ -393,7 +450,9 @@ public partial class V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpec
     [JsonPropertyName("vertexModelSourceInfo")]
     public V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpecVertexModelSourceInfo? VertexModelSourceInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Model specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecModelSpec
@@ -402,7 +461,9 @@ public partial class V1alpha1DataCatalogEntrySpecModelSpec
     [JsonPropertyName("vertexModelSpec")]
     public V1alpha1DataCatalogEntrySpecModelSpecVertexModelSpec? VertexModelSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fields specific for BigQuery routines.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecRoutineSpecBigqueryRoutineSpec
@@ -411,7 +472,9 @@ public partial class V1alpha1DataCatalogEntrySpecRoutineSpecBigqueryRoutineSpec
     [JsonPropertyName("importedLibraries")]
     public IList<string>? ImportedLibraries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecRoutineSpecRoutineArguments
@@ -428,7 +491,9 @@ public partial class V1alpha1DataCatalogEntrySpecRoutineSpecRoutineArguments
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecRoutineSpec
@@ -457,7 +522,9 @@ public partial class V1alpha1DataCatalogEntrySpecRoutineSpec
     [JsonPropertyName("routineType")]
     public string? RoutineType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Looker specific column info of this column.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSchemaColumnsLookerColumnSpec
@@ -466,7 +533,9 @@ public partial class V1alpha1DataCatalogEntrySpecSchemaColumnsLookerColumnSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE, this field is required. Possible values for the field element type of a RANGE include: * DATE * DATETIME * TIMESTAMP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSchemaColumnsRangeElementType
@@ -475,7 +544,9 @@ public partial class V1alpha1DataCatalogEntrySpecSchemaColumnsRangeElementType
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSchemaColumns
@@ -524,7 +595,9 @@ public partial class V1alpha1DataCatalogEntrySpecSchemaColumns
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema of the entry. An entry might not have any schema attached to it.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSchema
@@ -533,7 +606,9 @@ public partial class V1alpha1DataCatalogEntrySpecSchema
     [JsonPropertyName("columns")]
     public IList<V1alpha1DataCatalogEntrySpecSchemaColumns>? Columns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanceSpecCloudBigtableClusterSpecs
@@ -554,7 +629,9 @@ public partial class V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanc
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to Instance entries of `CLOUD_BIGTABLE` system.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanceSpec
@@ -563,7 +640,9 @@ public partial class V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanc
     [JsonPropertyName("cloudBigtableClusterSpecs")]
     public IList<V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanceSpecCloudBigtableClusterSpecs>? CloudBigtableClusterSpecs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a Service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecServiceSpec
@@ -572,7 +651,9 @@ public partial class V1alpha1DataCatalogEntrySpecServiceSpec
     [JsonPropertyName("cloudBigtableInstanceSpec")]
     public V1alpha1DataCatalogEntrySpecServiceSpecCloudBigtableInstanceSpec? CloudBigtableInstanceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Timestamps from the underlying resource, not from the Data Catalog  entry.   Output only when the entry has a system listed in the `IntegratedSystem`  enum. For entries with `user_specified_system`, this field is optional  and defaults to an empty timestamp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSourceSystemTimestamps
@@ -585,7 +666,9 @@ public partial class V1alpha1DataCatalogEntrySpecSourceSystemTimestamps
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a relational database system. Only settable when `user_specified_system` is equal to `SQL_DATABASE`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecSqlDatabaseSystemSpec
@@ -602,7 +685,9 @@ public partial class V1alpha1DataCatalogEntrySpecSqlDatabaseSystemSpec
     [JsonPropertyName("sqlEngine")]
     public string? SqlEngine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource usage statistics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpecUsageSignal
@@ -615,7 +700,9 @@ public partial class V1alpha1DataCatalogEntrySpecUsageSignal
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogEntrySpec defines the desired state of DataCatalogEntry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntrySpec
@@ -716,7 +803,9 @@ public partial class V1alpha1DataCatalogEntrySpec
     [JsonPropertyName("userSpecifiedType")]
     public string? UserSpecifiedType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusConditions
@@ -741,7 +830,9 @@ public partial class V1alpha1DataCatalogEntryStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Specification for a group of BigQuery tables with  the `[prefix]YYYYMMDD` name pattern.   For more information, see [Introduction to partitioned tables]  (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryDateShardedSpec
@@ -762,7 +853,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryDateShar
     [JsonPropertyName("tablePrefix")]
     public string? TablePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpecTableSpec
@@ -771,7 +864,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpe
     [JsonPropertyName("groupedEntry")]
     public string? GroupedEntry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpecViewSpec
@@ -780,7 +875,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpe
     [JsonPropertyName("viewQuery")]
     public string? ViewQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpec
@@ -797,7 +894,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpe
     [JsonPropertyName("viewSpec")]
     public V1alpha1DataCatalogEntryStatusObservedStateBigqueryTableSpecViewSpec? ViewSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Detailed properties of the underlying storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDataSourceStorageProperties
@@ -810,7 +909,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDataSourceStorag
     [JsonPropertyName("fileType")]
     public string? FileType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Physical location of the entry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDataSource
@@ -831,7 +932,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDataSource
     [JsonPropertyName("storageProperties")]
     public V1alpha1DataCatalogEntryStatusObservedStateDataSourceStorageProperties? StorageProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in Avro JSON format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatAvro
@@ -840,25 +943,33 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks a CSV-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatCsv
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks an ORC-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatOrc
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Marks a Parquet-encoded data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatParquet
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in protocol buffer format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatProtobuf
@@ -867,7 +978,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema in Thrift format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatThrift
@@ -876,7 +989,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Format of the data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormat
@@ -905,7 +1020,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("thrift")]
     public V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpecDataFormatThrift? Thrift { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common Dataplex fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableDataplexSpec
@@ -926,7 +1043,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("projectID")]
     public string? ProjectID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTableExternalTables
@@ -947,7 +1066,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Fields specific to a Dataplex table and present only in the Dataplex table entries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTable
@@ -964,7 +1085,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("userManaged")]
     public bool? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a table resource. Valid only for entries with the `TABLE` or `EXPLORE` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpec
@@ -973,7 +1096,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpe
     [JsonPropertyName("dataplexTable")]
     public V1alpha1DataCatalogEntryStatusObservedStateDatabaseTableSpecDataplexTable? DataplexTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeatureonlineStore spec for Vertex AI Feature Store.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateFeatureOnlineStoreSpec
@@ -982,7 +1107,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateFeatureOnlineSto
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateGcsFilesetSpecSampleGCSFileSpecs
@@ -991,7 +1118,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateGcsFilesetSpecSa
     [JsonPropertyName("filePath")]
     public string FilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateGcsFilesetSpec
@@ -1000,7 +1129,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStateGcsFilesetSpec
     [JsonPropertyName("sampleGCSFileSpecs")]
     public IList<V1alpha1DataCatalogEntryStatusObservedStateGcsFilesetSpecSampleGCSFileSpecs>? SampleGCSFileSpecs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Additional information related to the entry. Private to the current user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStatePersonalDetails
@@ -1013,13 +1144,17 @@ public partial class V1alpha1DataCatalogEntryStatusObservedStatePersonalDetails
     [JsonPropertyName("starred")]
     public bool? Starred { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource usage statistics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedStateUsageSignal
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatusObservedState
@@ -1064,7 +1199,9 @@ public partial class V1alpha1DataCatalogEntryStatusObservedState
     [JsonPropertyName("usageSignal")]
     public V1alpha1DataCatalogEntryStatusObservedStateUsageSignal? UsageSignal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogEntryStatus defines the config connector machine state of DataCatalogEntry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogEntryStatus
@@ -1085,7 +1222,9 @@ public partial class V1alpha1DataCatalogEntryStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataCatalogEntryStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogEntry is the Schema for the DataCatalogEntry API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1115,3 +1254,4 @@ public partial class V1alpha1DataCatalogEntry : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1DataCatalogEntryStatus? Status { get; set; }
 }
+#nullable disable

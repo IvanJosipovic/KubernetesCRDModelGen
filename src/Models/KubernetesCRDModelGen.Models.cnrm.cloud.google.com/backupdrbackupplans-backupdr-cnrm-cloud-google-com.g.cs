@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backupdr.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BackupDRBackupPlan is the Schema for the BackupDRBackupPlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BackupDRBackupPlanList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1BackupDRBackupPlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A BackupWindow defines the window of day during which backup jobs  will run. Jobs are queued at the beginning of the window and will be marked  as `NOT_RUN` if they do not start by the end of the window.   Note: running jobs will not be cancelled at the end of the window.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleBackupWindow
@@ -46,7 +49,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleBa
     [JsonPropertyName("startHourOfDay")]
     public int? StartHourOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies a week day of the month like, FIRST SUNDAY or LAST  MONDAY, on which jobs will run. This will be specified by two fields in  `WeekDayOfMonth`, one for the day, e.g. `MONDAY`, and one for the week,  e.g. `LAST`.   This field is only applicable for `recurrence_type`, `MONTHLY` and  `YEARLY`. A validation error will occur if other values are supplied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleWeekDayOfMonth
@@ -59,7 +64,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleWe
     [JsonPropertyName("weekOfMonth")]
     public string? WeekOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Defines a schedule that runs within the confines of a defined window of time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardSchedule
@@ -96,7 +103,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardSchedule
     [JsonPropertyName("weekDayOfMonth")]
     public V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleWeekDayOfMonth? WeekDayOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupRules
@@ -113,7 +122,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecBackupRules
     [JsonPropertyName("standardSchedule")]
     public V1alpha1BackupDRBackupPlanSpecBackupRulesStandardSchedule? StandardSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Resource name of backup vault which will be used as storage location for backups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupVaultRef
@@ -130,7 +141,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecBackupVaultRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecProjectRef
@@ -151,7 +164,9 @@ public partial class V1alpha1BackupDRBackupPlanSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlanSpec defines the desired state of BackupDRBackupPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpec
@@ -192,7 +207,9 @@ public partial class V1alpha1BackupDRBackupPlanSpec
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanStatusConditions
@@ -217,7 +234,9 @@ public partial class V1alpha1BackupDRBackupPlanStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanStatusObservedState
@@ -238,7 +257,9 @@ public partial class V1alpha1BackupDRBackupPlanStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlanStatus defines the config connector machine state of BackupDRBackupPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanStatus
@@ -259,7 +280,9 @@ public partial class V1alpha1BackupDRBackupPlanStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BackupDRBackupPlanStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlan is the Schema for the BackupDRBackupPlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -289,3 +312,4 @@ public partial class V1alpha1BackupDRBackupPlan : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1BackupDRBackupPlanStatus? Status { get; set; }
 }
+#nullable disable

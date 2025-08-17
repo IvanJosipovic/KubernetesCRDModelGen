@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComputeNetworkEdgeSecurityService is the Schema for the ComputeNetworkEdgeSecurityService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeNetworkEdgeSecurityService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource URL for the network edge security service associated with this network edge security service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpecSecurityPolicyRef
@@ -71,7 +76,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpecSecurityPolicy
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkEdgeSecurityServiceSpec defines the desired state of ComputeNetworkEdgeSecurityService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpec
@@ -100,7 +107,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceSpec
     [JsonPropertyName("securityPolicyRef")]
     public V1alpha1ComputeNetworkEdgeSecurityServiceSpecSecurityPolicyRef? SecurityPolicyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatusConditions
@@ -125,7 +134,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatusObservedState
@@ -154,7 +165,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatusObservedStat
     [JsonPropertyName("selfLinkWithID")]
     public string? SelfLinkWithID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkEdgeSecurityServiceStatus defines the config connector machine state of ComputeNetworkEdgeSecurityService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatus
@@ -175,7 +188,9 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityServiceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ComputeNetworkEdgeSecurityServiceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkEdgeSecurityService is the Schema for the ComputeNetworkEdgeSecurityService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -205,3 +220,4 @@ public partial class V1alpha1ComputeNetworkEdgeSecurityService : IKubernetesObje
     [JsonPropertyName("status")]
     public V1alpha1ComputeNetworkEdgeSecurityServiceStatus? Status { get; set; }
 }
+#nullable disable

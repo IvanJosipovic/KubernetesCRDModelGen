@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupPolicyKubernetesCluster is the Schema for the BackupPolicyKubernetesClusters API. Manages a Backup Policy to back up Kubernetes Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1BackupPolicyKubernetesCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRuleLifeCycle
@@ -46,7 +49,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultR
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRule
@@ -55,7 +60,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultR
     [JsonPropertyName("lifeCycle")]
     public IList<V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicy
@@ -68,7 +75,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRef
@@ -85,7 +94,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelector
@@ -119,7 +132,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleCriteria
@@ -144,7 +159,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     [JsonPropertyName("weeksOfMonth")]
     public IList<string>? WeeksOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleLifeCycle
@@ -157,7 +174,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRule
@@ -178,7 +197,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupVault in dataprotection to populate vaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRef
@@ -208,7 +231,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupVault in dataprotection to populate vaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
@@ -242,7 +269,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
@@ -287,7 +316,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
     [JsonPropertyName("vaultNameSelector")]
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector? VaultNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRuleLifeCycle
@@ -300,7 +331,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRule
@@ -309,7 +342,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
     [JsonPropertyName("lifeCycle")]
     public IList<V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleCriteria
@@ -334,7 +369,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     [JsonPropertyName("weeksOfMonth")]
     public IList<string>? WeeksOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleLifeCycle
@@ -347,7 +384,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRule
@@ -368,7 +407,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProvider
@@ -389,7 +430,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRef
@@ -402,7 +445,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecretToRef
@@ -411,7 +456,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyKubernetesClusterSpec defines the desired state of BackupPolicyKubernetesCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterSpec
@@ -436,7 +483,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRuleLifeCycle
@@ -449,7 +498,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRule
@@ -458,7 +509,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
     [JsonPropertyName("lifeCycle")]
     public IList<V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleCriteria
@@ -483,7 +536,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     [JsonPropertyName("weeksOfMonth")]
     public IList<string>? WeeksOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleLifeCycle
@@ -496,7 +551,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRule
@@ -517,7 +574,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
@@ -550,7 +609,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
     [JsonPropertyName("vaultName")]
     public string? VaultName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
@@ -579,7 +640,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyKubernetesClusterStatus defines the observed state of BackupPolicyKubernetesCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyKubernetesClusterStatus
@@ -596,7 +659,9 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyKubernetesCluster is the Schema for the BackupPolicyKubernetesClusters API. Manages a Backup Policy to back up Kubernetes Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -626,3 +691,4 @@ public partial class V1beta1BackupPolicyKubernetesCluster : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyKubernetesClusterStatus? Status { get; set; }
 }
+#nullable disable

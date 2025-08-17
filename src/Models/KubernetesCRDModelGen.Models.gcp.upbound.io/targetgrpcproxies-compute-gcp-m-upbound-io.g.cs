@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>TargetGRPCProxy is the Schema for the TargetGRPCProxys API. Represents a Target gRPC Proxy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TargetGRPCProxyList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1TargetGRPCProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a URLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapRef
@@ -63,7 +68,9 @@ public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapRef
     [JsonPropertyName("policy")]
     public V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a URLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapSelector
     [JsonPropertyName("policy")]
     public V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1TargetGRPCProxySpecForProvider
     [JsonPropertyName("validateForProxyless")]
     public bool? ValidateForProxyless { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a URLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapRef
@@ -156,7 +171,9 @@ public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapRef
     [JsonPropertyName("policy")]
     public V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a URLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapSelector
@@ -190,7 +209,9 @@ public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapSelector
     [JsonPropertyName("policy")]
     public V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1TargetGRPCProxySpecInitProvider
     [JsonPropertyName("validateForProxyless")]
     public bool? ValidateForProxyless { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1TargetGRPCProxySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpecWriteConnectionSecretToRef
@@ -241,7 +266,9 @@ public partial class V1beta1TargetGRPCProxySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetGRPCProxySpec defines the desired state of TargetGRPCProxy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxySpec
@@ -266,7 +293,9 @@ public partial class V1beta1TargetGRPCProxySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TargetGRPCProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxyStatusAtProvider
@@ -307,7 +336,9 @@ public partial class V1beta1TargetGRPCProxyStatusAtProvider
     [JsonPropertyName("validateForProxyless")]
     public bool? ValidateForProxyless { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxyStatusConditions
@@ -336,7 +367,9 @@ public partial class V1beta1TargetGRPCProxyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetGRPCProxyStatus defines the observed state of TargetGRPCProxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetGRPCProxyStatus
@@ -353,7 +386,9 @@ public partial class V1beta1TargetGRPCProxyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetGRPCProxy is the Schema for the TargetGRPCProxys API. Represents a Target gRPC Proxy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -383,3 +418,4 @@ public partial class V1beta1TargetGRPCProxy : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1TargetGRPCProxyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>LaunchTemplate is the Schema for the LaunchTemplates API. Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LaunchTemplateList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1LaunchTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsK
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsK
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbsKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure EBS volume properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbs
@@ -146,7 +157,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappings
@@ -167,7 +180,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappings
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used to target a specific Capacity Reservation:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -180,7 +195,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderCapacityReservationSpec
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderCapacityReservationSpecification
@@ -193,7 +210,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderCapacityReservationSpec
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1LaunchTemplateSpecForProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderCpuOptions
@@ -210,7 +229,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the credit specification of the instance. See Credit Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderCreditSpecification
@@ -219,7 +240,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderCreditSpecification
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderEnclaveOptions
@@ -228,7 +251,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The hibernation options for the instance. See Hibernation Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderHibernationOptions
@@ -237,7 +262,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderHibernationOptions
     [JsonPropertyName("configured")]
     public bool? Configured { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnRef
@@ -267,7 +296,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnRe
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnSelector
@@ -301,7 +334,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnSe
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderIamInstanceProfileArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameRefPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameRef
@@ -331,7 +368,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameR
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameSelectorPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameSelector
@@ -365,7 +406,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameS
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IAM Instance Profile to launch the instance with. See Instance Profile below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfile
@@ -394,7 +437,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderIamInstanceProfile
     [JsonPropertyName("nameSelector")]
     public V1beta1LaunchTemplateSpecForProviderIamInstanceProfileNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for Spot Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceMarketOptionsSpotOptions
@@ -419,7 +464,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceMarketOptionsSp
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The market (purchasing) option for the instance. See Market Options below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceMarketOptions
@@ -432,7 +479,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceMarketOptions
     [JsonPropertyName("spotOptions")]
     public V1beta1LaunchTemplateSpecForProviderInstanceMarketOptionsSpotOptions? SpotOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsAcceleratorCount
@@ -445,7 +494,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsAcc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsAcceleratorTotalMemoryMib
@@ -458,7 +509,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsAcc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsBaselineEbsBandwidthMbps
@@ -471,7 +524,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsBas
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsMemoryGibPerVcpu
@@ -484,7 +539,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsMem
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (MiB). Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsMemoryMib
@@ -497,7 +554,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsMem
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsNetworkBandwidthGbps
@@ -510,7 +569,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsNet
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsNetworkInterfaceCount
@@ -523,7 +584,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsNet
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsTotalLocalStorageGb
@@ -536,7 +599,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsTot
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsVcpuCount
@@ -549,7 +614,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirementsVcp
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The attribute requirements for the type of instance. If present then instance_type cannot be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirements
@@ -650,7 +717,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirements
     [JsonPropertyName("vcpuCount")]
     public V1beta1LaunchTemplateSpecForProviderInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderLicenseSpecification
@@ -659,7 +728,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderLicenseSpecification
     [JsonPropertyName("licenseConfigurationArn")]
     public string? LicenseConfigurationArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maintenance options for the instance. See Maintenance Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderMaintenanceOptions
@@ -668,7 +739,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderMaintenanceOptions
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the metadata options for the instance. See Metadata Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderMetadataOptions
@@ -693,7 +766,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The monitoring option for the instance. See Monitoring below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderMonitoring
@@ -702,7 +777,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderMonitoring
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesConnectionTrackingSpecification
@@ -719,7 +796,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesConnec
     [JsonPropertyName("udpTimeout")]
     public double? UdpTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
@@ -728,7 +807,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrd
     [JsonPropertyName("enaSrdUdpEnabled")]
     public bool? EnaSrdUdpEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecification
@@ -741,7 +822,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrd
     [JsonPropertyName("enaSrdUdpSpecification")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification? EnaSrdUdpSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdRefPolicy
@@ -754,7 +837,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetwor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdRef
@@ -771,7 +856,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetwor
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdSelectorPolicy
@@ -784,7 +871,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetwor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdSelector
@@ -805,7 +894,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetwor
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupRefsPolicy
@@ -818,7 +909,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecuri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupRefs
@@ -835,7 +928,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecuri
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupSelectorPolicy
@@ -848,7 +943,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecuri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupSelector
@@ -869,7 +966,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecuri
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdRefPolicy
@@ -882,7 +981,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdRef
@@ -899,7 +1000,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnet
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdSelectorPolicy
@@ -912,7 +1015,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdSelector
@@ -933,7 +1038,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnet
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfaces
@@ -1050,7 +1157,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfaces
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The placement of the instance. See Placement below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderPlacement
@@ -1087,7 +1196,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderPlacement
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderPrivateDnsNameOptions
@@ -1104,7 +1215,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderPrivateDnsNameOptions
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameRefsPolicy
@@ -1117,7 +1230,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameRefs
@@ -1134,7 +1249,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameRefs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderSecurityGroupNameRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameSelectorPolicy
@@ -1147,7 +1264,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameSelector
@@ -1168,7 +1287,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderSecurityGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderSecurityGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderTagSpecifications
@@ -1181,7 +1302,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderTagSpecifications
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdRefsPolicy
@@ -1194,7 +1317,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdRefs
@@ -1211,7 +1336,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdSelectorPolicy
@@ -1224,7 +1351,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdSelector
@@ -1245,7 +1374,9 @@ public partial class V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecForProvider
@@ -1406,7 +1537,9 @@ public partial class V1beta1LaunchTemplateSpecForProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdRefPolicy
@@ -1419,7 +1552,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdRef
@@ -1436,7 +1571,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdSelectorPolicy
@@ -1449,7 +1586,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdSelector
@@ -1470,7 +1609,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbsKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure EBS volume properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
@@ -1519,7 +1660,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappings
@@ -1540,7 +1683,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappings
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used to target a specific Capacity Reservation:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -1553,7 +1698,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderCapacityReservationSpe
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderCapacityReservationSpecification
@@ -1566,7 +1713,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderCapacityReservationSpe
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1LaunchTemplateSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderCpuOptions
@@ -1583,7 +1732,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the credit specification of the instance. See Credit Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderCreditSpecification
@@ -1592,7 +1743,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderCreditSpecification
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderEnclaveOptions
@@ -1601,7 +1754,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The hibernation options for the instance. See Hibernation Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderHibernationOptions
@@ -1610,7 +1765,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderHibernationOptions
     [JsonPropertyName("configured")]
     public bool? Configured { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnRefPolicy
@@ -1623,7 +1780,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnRef
@@ -1640,7 +1799,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnR
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnSelectorPolicy
@@ -1653,7 +1814,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnSelector
@@ -1674,7 +1837,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnS
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameRefPolicy
@@ -1687,7 +1852,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameRef
@@ -1704,7 +1871,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileName
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameSelectorPolicy
@@ -1717,7 +1886,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameSelector
@@ -1738,7 +1909,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileName
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IAM Instance Profile to launch the instance with. See Instance Profile below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfile
@@ -1767,7 +1940,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderIamInstanceProfile
     [JsonPropertyName("nameSelector")]
     public V1beta1LaunchTemplateSpecInitProviderIamInstanceProfileNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for Spot Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceMarketOptionsSpotOptions
@@ -1792,7 +1967,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceMarketOptionsS
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The market (purchasing) option for the instance. See Market Options below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceMarketOptions
@@ -1805,7 +1982,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceMarketOptions
     [JsonPropertyName("spotOptions")]
     public V1beta1LaunchTemplateSpecInitProviderInstanceMarketOptionsSpotOptions? SpotOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsAcceleratorCount
@@ -1818,7 +1997,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsAc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsAcceleratorTotalMemoryMib
@@ -1831,7 +2012,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsAc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsBaselineEbsBandwidthMbps
@@ -1844,7 +2027,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsBa
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsMemoryGibPerVcpu
@@ -1857,7 +2042,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsMe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (MiB). Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsMemoryMib
@@ -1870,7 +2057,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsMe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsNetworkBandwidthGbps
@@ -1883,7 +2072,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsNe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsNetworkInterfaceCount
@@ -1896,7 +2087,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsNe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsTotalLocalStorageGb
@@ -1909,7 +2102,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsTo
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsVcpuCount
@@ -1922,7 +2117,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsVc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The attribute requirements for the type of instance. If present then instance_type cannot be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirements
@@ -2023,7 +2220,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirements
     [JsonPropertyName("vcpuCount")]
     public V1beta1LaunchTemplateSpecInitProviderInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderLicenseSpecification
@@ -2032,7 +2231,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderLicenseSpecification
     [JsonPropertyName("licenseConfigurationArn")]
     public string? LicenseConfigurationArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maintenance options for the instance. See Maintenance Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderMaintenanceOptions
@@ -2041,7 +2242,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderMaintenanceOptions
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the metadata options for the instance. See Metadata Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderMetadataOptions
@@ -2066,7 +2269,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The monitoring option for the instance. See Monitoring below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderMonitoring
@@ -2075,7 +2280,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderMonitoring
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesConnectionTrackingSpecification
@@ -2092,7 +2299,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesConne
     [JsonPropertyName("udpTimeout")]
     public double? UdpTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
@@ -2101,7 +2310,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSr
     [JsonPropertyName("enaSrdUdpEnabled")]
     public bool? EnaSrdUdpEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecification
@@ -2114,7 +2325,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSr
     [JsonPropertyName("enaSrdUdpSpecification")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification? EnaSrdUdpSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdRefPolicy
@@ -2127,7 +2340,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdRef
@@ -2144,7 +2359,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetwo
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdSelectorPolicy
@@ -2157,7 +2374,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdSelector
@@ -2178,7 +2397,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetwo
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupRefsPolicy
@@ -2191,7 +2412,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupRefs
@@ -2208,7 +2431,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecur
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupSelectorPolicy
@@ -2221,7 +2446,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupSelector
@@ -2242,7 +2469,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecur
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdRefPolicy
@@ -2255,7 +2484,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdRef
@@ -2272,7 +2503,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubne
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdSelectorPolicy
@@ -2285,7 +2518,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdSelector
@@ -2306,7 +2541,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubne
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfaces
@@ -2423,7 +2660,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfaces
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The placement of the instance. See Placement below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderPlacement
@@ -2460,7 +2699,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderPlacement
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderPrivateDnsNameOptions
@@ -2477,7 +2718,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderPrivateDnsNameOptions
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameRefsPolicy
@@ -2490,7 +2733,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameRefs
@@ -2507,7 +2752,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameRefs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameSelectorPolicy
@@ -2520,7 +2767,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameSelector
@@ -2541,7 +2790,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameSelec
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderSecurityGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderTagSpecifications
@@ -2554,7 +2805,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderTagSpecifications
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdRefsPolicy
@@ -2567,7 +2820,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdRefs
@@ -2584,7 +2839,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdSelectorPolicy
@@ -2597,7 +2854,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdSelector
@@ -2618,7 +2877,9 @@ public partial class V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdSele
     [JsonPropertyName("policy")]
     public V1beta1LaunchTemplateSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecInitProvider
@@ -2775,7 +3036,9 @@ public partial class V1beta1LaunchTemplateSpecInitProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecProviderConfigRef
@@ -2788,7 +3051,9 @@ public partial class V1beta1LaunchTemplateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpecWriteConnectionSecretToRef
@@ -2797,7 +3062,9 @@ public partial class V1beta1LaunchTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LaunchTemplateSpec defines the desired state of LaunchTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateSpec
@@ -2822,7 +3089,9 @@ public partial class V1beta1LaunchTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LaunchTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure EBS volume properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderBlockDeviceMappingsEbs
@@ -2863,7 +3132,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderBlockDeviceMappingsEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderBlockDeviceMappings
@@ -2884,7 +3155,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderBlockDeviceMappings
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used to target a specific Capacity Reservation:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -2897,7 +3170,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderCapacityReservationSpe
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderCapacityReservationSpecification
@@ -2910,7 +3185,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderCapacityReservationSpe
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1LaunchTemplateStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderCpuOptions
@@ -2927,7 +3204,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the credit specification of the instance. See Credit Specification below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderCreditSpecification
@@ -2936,7 +3215,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderCreditSpecification
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderEnclaveOptions
@@ -2945,7 +3226,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The hibernation options for the instance. See Hibernation Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderHibernationOptions
@@ -2954,7 +3237,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderHibernationOptions
     [JsonPropertyName("configured")]
     public bool? Configured { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IAM Instance Profile to launch the instance with. See Instance Profile below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderIamInstanceProfile
@@ -2967,7 +3252,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderIamInstanceProfile
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for Spot Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceMarketOptionsSpotOptions
@@ -2992,7 +3279,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceMarketOptionsS
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The market (purchasing) option for the instance. See Market Options below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceMarketOptions
@@ -3005,7 +3294,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceMarketOptions
     [JsonPropertyName("spotOptions")]
     public V1beta1LaunchTemplateStatusAtProviderInstanceMarketOptionsSpotOptions? SpotOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsAcceleratorCount
@@ -3018,7 +3309,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsAc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsAcceleratorTotalMemoryMib
@@ -3031,7 +3324,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsAc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsBaselineEbsBandwidthMbps
@@ -3044,7 +3339,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsBa
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsMemoryGibPerVcpu
@@ -3057,7 +3354,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsMe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (MiB). Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsMemoryMib
@@ -3070,7 +3369,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsMe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsNetworkBandwidthGbps
@@ -3083,7 +3384,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsNe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsNetworkInterfaceCount
@@ -3096,7 +3399,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsNe
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsTotalLocalStorageGb
@@ -3109,7 +3414,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsTo
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsVcpuCount
@@ -3122,7 +3429,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsVc
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The attribute requirements for the type of instance. If present then instance_type cannot be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirements
@@ -3223,7 +3532,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirements
     [JsonPropertyName("vcpuCount")]
     public V1beta1LaunchTemplateStatusAtProviderInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderLicenseSpecification
@@ -3232,7 +3543,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderLicenseSpecification
     [JsonPropertyName("licenseConfigurationArn")]
     public string? LicenseConfigurationArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maintenance options for the instance. See Maintenance Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderMaintenanceOptions
@@ -3241,7 +3554,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderMaintenanceOptions
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customize the metadata options for the instance. See Metadata Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderMetadataOptions
@@ -3266,7 +3581,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The monitoring option for the instance. See Monitoring below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderMonitoring
@@ -3275,7 +3592,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderMonitoring
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesConnectionTrackingSpecification
@@ -3292,7 +3611,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesConne
     [JsonPropertyName("udpTimeout")]
     public double? UdpTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
@@ -3301,7 +3622,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSr
     [JsonPropertyName("enaSrdUdpEnabled")]
     public bool? EnaSrdUdpEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecification
@@ -3314,7 +3637,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSr
     [JsonPropertyName("enaSrdUdpSpecification")]
     public V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification? EnaSrdUdpSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
@@ -3407,7 +3732,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The placement of the instance. See Placement below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderPlacement
@@ -3444,7 +3771,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderPlacement
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderPrivateDnsNameOptions
@@ -3461,7 +3790,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderPrivateDnsNameOptions
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderTagSpecifications
@@ -3474,7 +3805,9 @@ public partial class V1beta1LaunchTemplateStatusAtProviderTagSpecifications
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProvider
@@ -3635,7 +3968,9 @@ public partial class V1beta1LaunchTemplateStatusAtProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusConditions
@@ -3664,7 +3999,9 @@ public partial class V1beta1LaunchTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LaunchTemplateStatus defines the observed state of LaunchTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatus
@@ -3681,7 +4018,9 @@ public partial class V1beta1LaunchTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LaunchTemplate is the Schema for the LaunchTemplates API. Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3711,3 +4050,4 @@ public partial class V1beta1LaunchTemplate : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1LaunchTemplateStatus? Status { get; set; }
 }
+#nullable disable

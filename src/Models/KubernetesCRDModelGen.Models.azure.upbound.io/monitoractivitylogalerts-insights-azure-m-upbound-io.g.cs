@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorActivityLogAlert is the Schema for the MonitorActivityLogAlerts API. Manages an Activity Log Alert within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorActivityLogAlertList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorActivityLogAlert> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderAction
@@ -118,7 +129,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain resource health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceHealth
@@ -135,7 +148,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     [JsonPropertyName("reason")]
     public IList<string>? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRef
@@ -165,7 +182,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelector
@@ -199,7 +220,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain service health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaServiceHealth
@@ -216,7 +239,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaServic
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteria
@@ -317,7 +342,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteria
     [JsonPropertyName("subStatuses")]
     public IList<string>? SubStatuses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRefPolicy
@@ -330,7 +357,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRef
@@ -347,7 +376,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelectorPolicy
@@ -360,7 +391,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelector
@@ -381,7 +414,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPolicy
@@ -394,7 +429,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefs
@@ -411,7 +448,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicy
@@ -424,7 +463,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
@@ -445,7 +486,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecForProvider
@@ -502,7 +545,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRefPolicy
@@ -515,7 +560,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRef
@@ -532,7 +579,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelectorPolicy
@@ -545,7 +594,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelector
@@ -566,7 +617,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderAction
@@ -587,7 +640,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain resource health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceHealth
@@ -604,7 +659,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     [JsonPropertyName("reason")]
     public IList<string>? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRefPolicy
@@ -617,7 +674,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRef
@@ -634,7 +693,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelectorPolicy
@@ -647,7 +708,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelector
@@ -668,7 +731,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain service health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaServiceHealth
@@ -685,7 +750,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaServi
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteria
@@ -786,7 +853,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteria
     [JsonPropertyName("subStatuses")]
     public IList<string>? SubStatuses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRefPolicy
@@ -799,7 +868,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRef
@@ -816,7 +887,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelectorPolicy
@@ -829,7 +902,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelector
@@ -850,7 +925,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPolicy
@@ -863,7 +940,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefs
@@ -880,7 +959,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicy
@@ -893,7 +974,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelector
@@ -914,7 +997,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelecto
     [JsonPropertyName("policy")]
     public V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecInitProvider
@@ -971,7 +1056,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecProviderConfigRef
@@ -984,7 +1071,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRef
@@ -993,7 +1082,9 @@ public partial class V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActivityLogAlertSpec defines the desired state of MonitorActivityLogAlert</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertSpec
@@ -1018,7 +1109,9 @@ public partial class V1beta1MonitorActivityLogAlertSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderAction
@@ -1031,7 +1124,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain resource health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaResourceHealth
@@ -1048,7 +1143,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaResou
     [JsonPropertyName("reason")]
     public IList<string>? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to define fine grain service health settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaServiceHealth
@@ -1065,7 +1162,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaServi
     [JsonPropertyName("services")]
     public IList<string>? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteria
@@ -1158,7 +1257,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteria
     [JsonPropertyName("subStatuses")]
     public IList<string>? SubStatuses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusAtProvider
@@ -1203,7 +1304,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatusConditions
@@ -1232,7 +1335,9 @@ public partial class V1beta1MonitorActivityLogAlertStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActivityLogAlertStatus defines the observed state of MonitorActivityLogAlert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActivityLogAlertStatus
@@ -1249,7 +1354,9 @@ public partial class V1beta1MonitorActivityLogAlertStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActivityLogAlert is the Schema for the MonitorActivityLogAlerts API. Manages an Activity Log Alert within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1279,3 +1386,4 @@ public partial class V1beta1MonitorActivityLogAlert : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1MonitorActivityLogAlertStatus? Status { get; set; }
 }
+#nullable disable

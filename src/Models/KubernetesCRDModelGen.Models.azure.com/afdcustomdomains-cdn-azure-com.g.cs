@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230501.AfdCustomDomain Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/customDomains/{customDomainName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230501storageAfdCustomDomainList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1api20230501storageAfdCustomDomain> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecAzureDnsZoneReference
@@ -54,7 +57,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecAzureDnsZoneReferenc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecAzureDnsZone
@@ -67,7 +72,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecAzureDnsZone
     [JsonPropertyName("reference")]
     public V1api20230501storageAfdCustomDomainSpecAzureDnsZoneReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpecConfigMapExpressions
@@ -84,7 +91,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpecConfigMa
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpecSecretExpressions
@@ -101,7 +110,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpecSecretEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AfdCustomDomainOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpec
@@ -118,7 +129,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230501storageAfdCustomDomainSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecOwner
@@ -131,7 +144,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecPreValidatedCustomDomainResourceIdReference
@@ -152,7 +167,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecPreValidatedCustomDo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecPreValidatedCustomDomainResourceId
@@ -165,7 +182,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecPreValidatedCustomDo
     [JsonPropertyName("reference")]
     public V1api20230501storageAfdCustomDomainSpecPreValidatedCustomDomainResourceIdReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecTlsSettingsSecretReference
@@ -186,7 +205,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecTlsSettingsSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecTlsSettingsSecret
@@ -199,7 +220,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecTlsSettingsSecret
     [JsonPropertyName("reference")]
     public V1api20230501storageAfdCustomDomainSpecTlsSettingsSecretReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AFDDomainHttpsParameters The JSON object that contains the properties to secure a domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpecTlsSettings
@@ -220,7 +243,9 @@ public partial class V1api20230501storageAfdCustomDomainSpecTlsSettings
     [JsonPropertyName("secret")]
     public V1api20230501storageAfdCustomDomainSpecTlsSettingsSecret? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AfdCustomDomain_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpec
@@ -265,7 +290,9 @@ public partial class V1api20230501storageAfdCustomDomainSpec
     [JsonPropertyName("tlsSettings")]
     public V1api20230501storageAfdCustomDomainSpecTlsSettings? TlsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusAzureDnsZone
@@ -278,7 +305,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusAzureDnsZone
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusConditions
@@ -311,7 +340,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusPreValidatedCustomDomainResourceId
@@ -324,7 +355,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusPreValidatedCustom
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusSystemData
@@ -357,7 +390,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusTlsSettingsSecret
@@ -370,7 +405,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusTlsSettingsSecret
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AFDDomainHttpsParameters_STATUS The JSON object that contains the properties to secure a domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusTlsSettings
@@ -391,7 +428,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusTlsSettings
     [JsonPropertyName("secret")]
     public V1api20230501storageAfdCustomDomainStatusTlsSettingsSecret? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.DomainValidationProperties_STATUS The JSON object that contains the properties to validate a domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatusValidationProperties
@@ -408,7 +447,9 @@ public partial class V1api20230501storageAfdCustomDomainStatusValidationProperti
     [JsonPropertyName("validationToken")]
     public string? ValidationToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AfdCustomDomain_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatus
@@ -477,7 +518,9 @@ public partial class V1api20230501storageAfdCustomDomainStatus
     [JsonPropertyName("validationProperties")]
     public V1api20230501storageAfdCustomDomainStatusValidationProperties? ValidationProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.AfdCustomDomain Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/customDomains/{customDomainName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +550,4 @@ public partial class V1api20230501storageAfdCustomDomain : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1api20230501storageAfdCustomDomainStatus? Status { get; set; }
 }
+#nullable disable

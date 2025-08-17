@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1KMSCryptoKeyVersionList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1KMSCryptoKeyVersion> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionSpec
@@ -50,7 +53,9 @@ public partial class V1alpha1KMSCryptoKeyVersionSpec
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The certificate chains needed to validate the attestation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
@@ -67,7 +72,9 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
     [JsonPropertyName("googlePartitionCerts")]
     public string? GooglePartitionCerts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions
@@ -80,7 +87,9 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtect
     [JsonPropertyName("externalKeyUri")]
     public string? ExternalKeyUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
@@ -101,7 +110,9 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
@@ -126,7 +137,9 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSCryptoKeyVersionStatus
@@ -159,7 +172,9 @@ public partial class V1alpha1KMSCryptoKeyVersionStatus
     [JsonPropertyName("protectionLevel")]
     public string? ProtectionLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -189,3 +204,4 @@ public partial class V1alpha1KMSCryptoKeyVersion : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1KMSCryptoKeyVersionStatus? Status { get; set; }
 }
+#nullable disable

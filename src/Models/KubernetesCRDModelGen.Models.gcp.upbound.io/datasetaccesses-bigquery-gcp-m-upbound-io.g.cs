@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>DatasetAccess is the Schema for the DatasetAccesss API. Gives dataset access for a single entity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DatasetAccessList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1DatasetAccess> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderCondition
@@ -54,7 +57,9 @@ public partial class V1beta1DatasetAccessSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdRef
@@ -84,7 +91,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdR
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdSelector
@@ -118,7 +129,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdS
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The dataset this entry applies to Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDataset
@@ -139,7 +152,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDataset
@@ -152,7 +167,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDataset
     [JsonPropertyName("targetTypes")]
     public IList<string>? TargetTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetIdRefPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetIdRef
@@ -182,7 +201,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetIdSelectorPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetIdSelector
@@ -216,7 +239,9 @@ public partial class V1beta1DatasetAccessSpecForProviderDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdRef
@@ -246,7 +273,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdSelectorPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdSelector
@@ -280,7 +311,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdRefPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdRef
@@ -310,7 +345,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdSelectorPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdSelector
@@ -344,7 +383,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineProjectIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdRefPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate routineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdRef
@@ -374,7 +417,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineRoutineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelectorPolicy
@@ -387,7 +432,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate routineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelector
@@ -408,7 +455,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderRoutine
@@ -449,7 +498,9 @@ public partial class V1beta1DatasetAccessSpecForProviderRoutine
     [JsonPropertyName("routineIdSelector")]
     public V1beta1DatasetAccessSpecForProviderRoutineRoutineIdSelector? RoutineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderUserByEmailRefPolicy
@@ -462,7 +513,9 @@ public partial class V1beta1DatasetAccessSpecForProviderUserByEmailRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderUserByEmailRef
@@ -479,7 +532,9 @@ public partial class V1beta1DatasetAccessSpecForProviderUserByEmailRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderUserByEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderUserByEmailSelectorPolicy
@@ -492,7 +547,9 @@ public partial class V1beta1DatasetAccessSpecForProviderUserByEmailSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderUserByEmailSelector
@@ -513,7 +570,9 @@ public partial class V1beta1DatasetAccessSpecForProviderUserByEmailSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderUserByEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdRefPolicy
@@ -526,7 +585,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdRef
@@ -543,7 +604,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderViewDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdSelectorPolicy
@@ -556,7 +619,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdSelector
@@ -577,7 +642,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderViewDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewTableIdRefPolicy
@@ -590,7 +657,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewTableIdRef
@@ -607,7 +676,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderViewTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewTableIdSelectorPolicy
@@ -620,7 +691,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewTableIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderViewTableIdSelector
@@ -641,7 +714,9 @@ public partial class V1beta1DatasetAccessSpecForProviderViewTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecForProviderViewTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderView
@@ -674,7 +749,9 @@ public partial class V1beta1DatasetAccessSpecForProviderView
     [JsonPropertyName("tableIdSelector")]
     public V1beta1DatasetAccessSpecForProviderViewTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProvider
@@ -743,7 +820,9 @@ public partial class V1beta1DatasetAccessSpecForProvider
     [JsonPropertyName("view")]
     public V1beta1DatasetAccessSpecForProviderView? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderCondition
@@ -764,7 +843,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdRefPolicy
@@ -777,7 +858,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdRef
@@ -794,7 +877,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetId
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdSelectorPolicy
@@ -807,7 +892,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdSelector
@@ -828,7 +915,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetId
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderDatasetDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The dataset this entry applies to Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetDataset
@@ -849,7 +938,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDataset
@@ -862,7 +953,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDataset
     [JsonPropertyName("targetTypes")]
     public IList<string>? TargetTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdRefPolicy
@@ -875,7 +968,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdRef
@@ -892,7 +987,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdSelectorPolicy
@@ -905,7 +1002,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdSelector
@@ -926,7 +1025,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdRefPolicy
@@ -939,7 +1040,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdRef
@@ -956,7 +1059,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdSelectorPolicy
@@ -969,7 +1074,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdSelector
@@ -990,7 +1097,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdRefPolicy
@@ -1003,7 +1112,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdRef
@@ -1020,7 +1131,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdSelectorPolicy
@@ -1033,7 +1146,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdSelector
@@ -1054,7 +1169,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineProjectIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdRefPolicy
@@ -1067,7 +1184,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Routine in bigquery to populate routineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdRef
@@ -1084,7 +1203,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelectorPolicy
@@ -1097,7 +1218,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Routine in bigquery to populate routineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelector
@@ -1118,7 +1241,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderRoutine
@@ -1159,7 +1284,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderRoutine
     [JsonPropertyName("routineIdSelector")]
     public V1beta1DatasetAccessSpecInitProviderRoutineRoutineIdSelector? RoutineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailRefPolicy
@@ -1172,7 +1299,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailRef
@@ -1189,7 +1318,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderUserByEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailSelectorPolicy
@@ -1202,7 +1333,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailSelector
@@ -1223,7 +1356,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderUserByEmailSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderUserByEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdRefPolicy
@@ -1236,7 +1371,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdRef
@@ -1253,7 +1390,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderViewDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdSelectorPolicy
@@ -1266,7 +1405,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdSelector
@@ -1287,7 +1428,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderViewDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdRefPolicy
@@ -1300,7 +1443,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdRef
@@ -1317,7 +1462,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderViewTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdSelectorPolicy
@@ -1330,7 +1477,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdSelector
@@ -1351,7 +1500,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderViewTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DatasetAccessSpecInitProviderViewTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProviderView
@@ -1384,7 +1535,9 @@ public partial class V1beta1DatasetAccessSpecInitProviderView
     [JsonPropertyName("tableIdSelector")]
     public V1beta1DatasetAccessSpecInitProviderViewTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProvider
@@ -1453,7 +1606,9 @@ public partial class V1beta1DatasetAccessSpecInitProvider
     [JsonPropertyName("view")]
     public V1beta1DatasetAccessSpecInitProviderView? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecProviderConfigRef
@@ -1466,7 +1621,9 @@ public partial class V1beta1DatasetAccessSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecWriteConnectionSecretToRef
@@ -1475,7 +1632,9 @@ public partial class V1beta1DatasetAccessSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatasetAccessSpec defines the desired state of DatasetAccess</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpec
@@ -1500,7 +1659,9 @@ public partial class V1beta1DatasetAccessSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DatasetAccessSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderCondition
@@ -1521,7 +1682,9 @@ public partial class V1beta1DatasetAccessStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The dataset this entry applies to Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderDatasetDataset
@@ -1534,7 +1697,9 @@ public partial class V1beta1DatasetAccessStatusAtProviderDatasetDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderDataset
@@ -1547,7 +1712,9 @@ public partial class V1beta1DatasetAccessStatusAtProviderDataset
     [JsonPropertyName("targetTypes")]
     public IList<string>? TargetTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderRoutine
@@ -1564,7 +1731,9 @@ public partial class V1beta1DatasetAccessStatusAtProviderRoutine
     [JsonPropertyName("routineId")]
     public string? RoutineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderView
@@ -1581,7 +1750,9 @@ public partial class V1beta1DatasetAccessStatusAtProviderView
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProvider
@@ -1642,7 +1813,9 @@ public partial class V1beta1DatasetAccessStatusAtProvider
     [JsonPropertyName("view")]
     public V1beta1DatasetAccessStatusAtProviderView? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusConditions
@@ -1671,7 +1844,9 @@ public partial class V1beta1DatasetAccessStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatasetAccessStatus defines the observed state of DatasetAccess.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatus
@@ -1688,7 +1863,9 @@ public partial class V1beta1DatasetAccessStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatasetAccess is the Schema for the DatasetAccesss API. Gives dataset access for a single entity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1718,3 +1895,4 @@ public partial class V1beta1DatasetAccess : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1DatasetAccessStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.databricks.crossplane.io;
+#nullable enable
 /// <summary>Permissions is the Schema for the Permissionss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1PermissionsList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1alpha1Permissions> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrinc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServicePrincipal in security to populate servicePrincipalName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameRef
@@ -59,7 +64,9 @@ public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrinc
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrinc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServicePrincipal in security to populate servicePrincipalName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameSelector
@@ -89,7 +98,9 @@ public partial class V1alpha1PermissionsSpecForProviderAccessControlServicePrinc
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderAccessControlServicePrincipalNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderAccessControl
@@ -118,7 +129,9 @@ public partial class V1alpha1PermissionsSpecForProviderAccessControl
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterIdRefPolicy
@@ -131,7 +144,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in compute to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterIdRef
@@ -144,7 +159,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterIdSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in compute to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterIdSelector
@@ -174,7 +193,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ClusterPolicy in compute to populate clusterPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdRef
@@ -200,7 +223,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderClusterPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ClusterPolicy in compute to populate clusterPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdSelector
@@ -230,7 +257,9 @@ public partial class V1alpha1PermissionsSpecForProviderClusterPolicyIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderClusterPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstancePool in compute to populate instancePoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdRef
@@ -256,7 +287,9 @@ public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderInstancePoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstancePool in compute to populate instancePoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdSelector
@@ -286,7 +321,9 @@ public partial class V1alpha1PermissionsSpecForProviderInstancePoolIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderInstancePoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderJobIdRefPolicy
@@ -299,7 +336,9 @@ public partial class V1alpha1PermissionsSpecForProviderJobIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in compute to populate jobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderJobIdRef
@@ -312,7 +351,9 @@ public partial class V1alpha1PermissionsSpecForProviderJobIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderJobIdSelectorPolicy
@@ -325,7 +366,9 @@ public partial class V1alpha1PermissionsSpecForProviderJobIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in compute to populate jobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderJobIdSelector
@@ -342,7 +385,9 @@ public partial class V1alpha1PermissionsSpecForProviderJobIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderNotebookIdRefPolicy
@@ -355,7 +400,9 @@ public partial class V1alpha1PermissionsSpecForProviderNotebookIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Notebook in workspace to populate notebookId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderNotebookIdRef
@@ -368,7 +415,9 @@ public partial class V1alpha1PermissionsSpecForProviderNotebookIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderNotebookIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderNotebookIdSelectorPolicy
@@ -381,7 +430,9 @@ public partial class V1alpha1PermissionsSpecForProviderNotebookIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Notebook in workspace to populate notebookId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderNotebookIdSelector
@@ -398,7 +449,9 @@ public partial class V1alpha1PermissionsSpecForProviderNotebookIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderNotebookIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderPipelineIdRefPolicy
@@ -411,7 +464,9 @@ public partial class V1alpha1PermissionsSpecForProviderPipelineIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in compute to populate pipelineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderPipelineIdRef
@@ -424,7 +479,9 @@ public partial class V1alpha1PermissionsSpecForProviderPipelineIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderPipelineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderPipelineIdSelectorPolicy
@@ -437,7 +494,9 @@ public partial class V1alpha1PermissionsSpecForProviderPipelineIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in compute to populate pipelineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderPipelineIdSelector
@@ -454,7 +513,9 @@ public partial class V1alpha1PermissionsSpecForProviderPipelineIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderPipelineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdRefPolicy
@@ -467,7 +528,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLAlert in sql to populate sqlAlertId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdRef
@@ -480,7 +543,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlAlertIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdSelectorPolicy
@@ -493,7 +558,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLAlert in sql to populate sqlAlertId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdSelector
@@ -510,7 +577,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlAlertIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlAlertIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdRefPolicy
@@ -523,7 +592,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDashboard in sql to populate sqlDashboardId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdRef
@@ -536,7 +607,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlDashboardIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdSelectorPolicy
@@ -549,7 +622,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDashboard in sql to populate sqlDashboardId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdSelector
@@ -566,7 +641,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlDashboardIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlDashboardIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdRefPolicy
@@ -579,7 +656,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLEndpoint in sql to populate sqlEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdRef
@@ -592,7 +671,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdSelectorPolicy
@@ -605,7 +686,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLEndpoint in sql to populate sqlEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdSelector
@@ -622,7 +705,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlEndpointIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdRefPolicy
@@ -635,7 +720,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLQuery in sql to populate sqlQueryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdRef
@@ -648,7 +735,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlQueryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdSelectorPolicy
@@ -661,7 +750,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLQuery in sql to populate sqlQueryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdSelector
@@ -678,7 +769,9 @@ public partial class V1alpha1PermissionsSpecForProviderSqlQueryIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecForProviderSqlQueryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecForProvider
@@ -875,7 +968,9 @@ public partial class V1alpha1PermissionsSpecForProvider
     [JsonPropertyName("workspaceFilePath")]
     public string? WorkspaceFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameRefPolicy
@@ -888,7 +983,9 @@ public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServicePrincipal in security to populate servicePrincipalName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameRef
@@ -901,7 +998,9 @@ public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrin
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameSelectorPolicy
@@ -914,7 +1013,9 @@ public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServicePrincipal in security to populate servicePrincipalName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameSelector
@@ -931,7 +1032,9 @@ public partial class V1alpha1PermissionsSpecInitProviderAccessControlServicePrin
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderAccessControlServicePrincipalNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderAccessControl
@@ -960,7 +1063,9 @@ public partial class V1alpha1PermissionsSpecInitProviderAccessControl
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterIdRefPolicy
@@ -973,7 +1078,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in compute to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterIdRef
@@ -986,7 +1093,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterIdSelectorPolicy
@@ -999,7 +1108,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in compute to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterIdSelector
@@ -1016,7 +1127,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdRefPolicy
@@ -1029,7 +1142,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ClusterPolicy in compute to populate clusterPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdRef
@@ -1042,7 +1157,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderClusterPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdSelectorPolicy
@@ -1055,7 +1172,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ClusterPolicy in compute to populate clusterPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdSelector
@@ -1072,7 +1191,9 @@ public partial class V1alpha1PermissionsSpecInitProviderClusterPolicyIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderClusterPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdRefPolicy
@@ -1085,7 +1206,9 @@ public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstancePool in compute to populate instancePoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdRef
@@ -1098,7 +1221,9 @@ public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderInstancePoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdSelectorPolicy
@@ -1111,7 +1236,9 @@ public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstancePool in compute to populate instancePoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdSelector
@@ -1128,7 +1255,9 @@ public partial class V1alpha1PermissionsSpecInitProviderInstancePoolIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderInstancePoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderJobIdRefPolicy
@@ -1141,7 +1270,9 @@ public partial class V1alpha1PermissionsSpecInitProviderJobIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in compute to populate jobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderJobIdRef
@@ -1154,7 +1285,9 @@ public partial class V1alpha1PermissionsSpecInitProviderJobIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderJobIdSelectorPolicy
@@ -1167,7 +1300,9 @@ public partial class V1alpha1PermissionsSpecInitProviderJobIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in compute to populate jobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderJobIdSelector
@@ -1184,7 +1319,9 @@ public partial class V1alpha1PermissionsSpecInitProviderJobIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderNotebookIdRefPolicy
@@ -1197,7 +1334,9 @@ public partial class V1alpha1PermissionsSpecInitProviderNotebookIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Notebook in workspace to populate notebookId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderNotebookIdRef
@@ -1210,7 +1349,9 @@ public partial class V1alpha1PermissionsSpecInitProviderNotebookIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderNotebookIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderNotebookIdSelectorPolicy
@@ -1223,7 +1364,9 @@ public partial class V1alpha1PermissionsSpecInitProviderNotebookIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Notebook in workspace to populate notebookId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderNotebookIdSelector
@@ -1240,7 +1383,9 @@ public partial class V1alpha1PermissionsSpecInitProviderNotebookIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderNotebookIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderPipelineIdRefPolicy
@@ -1253,7 +1398,9 @@ public partial class V1alpha1PermissionsSpecInitProviderPipelineIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in compute to populate pipelineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderPipelineIdRef
@@ -1266,7 +1413,9 @@ public partial class V1alpha1PermissionsSpecInitProviderPipelineIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderPipelineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderPipelineIdSelectorPolicy
@@ -1279,7 +1428,9 @@ public partial class V1alpha1PermissionsSpecInitProviderPipelineIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in compute to populate pipelineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderPipelineIdSelector
@@ -1296,7 +1447,9 @@ public partial class V1alpha1PermissionsSpecInitProviderPipelineIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderPipelineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdRefPolicy
@@ -1309,7 +1462,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLAlert in sql to populate sqlAlertId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdRef
@@ -1322,7 +1477,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlAlertIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdSelectorPolicy
@@ -1335,7 +1492,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLAlert in sql to populate sqlAlertId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdSelector
@@ -1352,7 +1511,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlAlertIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlAlertIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdRefPolicy
@@ -1365,7 +1526,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDashboard in sql to populate sqlDashboardId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdRef
@@ -1378,7 +1541,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlDashboardIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdSelectorPolicy
@@ -1391,7 +1556,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDashboard in sql to populate sqlDashboardId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdSelector
@@ -1408,7 +1575,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlDashboardIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlDashboardIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdRefPolicy
@@ -1421,7 +1590,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLEndpoint in sql to populate sqlEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdRef
@@ -1434,7 +1605,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdSelectorPolicy
@@ -1447,7 +1620,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLEndpoint in sql to populate sqlEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdSelector
@@ -1464,7 +1639,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlEndpointIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdRefPolicy
@@ -1477,7 +1654,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLQuery in sql to populate sqlQueryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdRef
@@ -1490,7 +1669,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlQueryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdSelectorPolicy
@@ -1503,7 +1684,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLQuery in sql to populate sqlQueryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdSelector
@@ -1520,7 +1703,9 @@ public partial class V1alpha1PermissionsSpecInitProviderSqlQueryIdSelector
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecInitProviderSqlQueryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecInitProvider
@@ -1717,7 +1902,9 @@ public partial class V1alpha1PermissionsSpecInitProvider
     [JsonPropertyName("workspaceFilePath")]
     public string? WorkspaceFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecProviderConfigRefPolicy
@@ -1730,7 +1917,9 @@ public partial class V1alpha1PermissionsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecProviderConfigRef
@@ -1743,7 +1932,9 @@ public partial class V1alpha1PermissionsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToConfigRefPolicy
@@ -1756,7 +1947,9 @@ public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToConfigRef
@@ -1769,7 +1962,9 @@ public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToMetadata
@@ -1786,7 +1981,9 @@ public partial class V1alpha1PermissionsSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecPublishConnectionDetailsTo
@@ -1803,7 +2000,9 @@ public partial class V1alpha1PermissionsSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpecWriteConnectionSecretToRef
@@ -1816,7 +2015,9 @@ public partial class V1alpha1PermissionsSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionsSpec defines the desired state of Permissions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsSpec
@@ -1849,7 +2050,9 @@ public partial class V1alpha1PermissionsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1PermissionsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsStatusAtProviderAccessControl
@@ -1870,7 +2073,9 @@ public partial class V1alpha1PermissionsStatusAtProviderAccessControl
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsStatusAtProvider
@@ -1991,7 +2196,9 @@ public partial class V1alpha1PermissionsStatusAtProvider
     [JsonPropertyName("workspaceFilePath")]
     public string? WorkspaceFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsStatusConditions
@@ -2020,7 +2227,9 @@ public partial class V1alpha1PermissionsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionsStatus defines the observed state of Permissions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionsStatus
@@ -2037,7 +2246,9 @@ public partial class V1alpha1PermissionsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Permissions is the Schema for the Permissionss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2067,3 +2278,4 @@ public partial class V1alpha1Permissions : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1alpha1PermissionsStatus? Status { get; set; }
 }
+#nullable disable

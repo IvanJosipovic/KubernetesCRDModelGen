@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.management.azure.m.upbound.io;
+#nullable enable
 /// <summary>ManagementGroupSubscriptionAssociation is the Schema for the ManagementGroupSubscriptionAssociations API. Manages a Management Group Subscription Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationList : IKubern
     [JsonPropertyName("items")]
     public IList<V1beta1ManagementGroupSubscriptionAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecForProvide
     [JsonPropertyName("subscriptionIdSelector")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecForProviderSubscriptionIdSelector? SubscriptionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecInitProvid
     [JsonPropertyName("subscriptionIdSelector")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecInitProviderSubscriptionIdSelector? SubscriptionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecProviderCo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpecWriteConne
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupSubscriptionAssociationSpec defines the desired state of ManagementGroupSubscriptionAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationSpec
@@ -394,7 +437,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagementGroupSubscriptionAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationStatusAtProvider
@@ -411,7 +456,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationStatusAtProvid
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationStatusConditions
@@ -440,7 +487,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationStatusConditio
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupSubscriptionAssociationStatus defines the observed state of ManagementGroupSubscriptionAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupSubscriptionAssociationStatus
@@ -457,7 +506,9 @@ public partial class V1beta1ManagementGroupSubscriptionAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupSubscriptionAssociation is the Schema for the ManagementGroupSubscriptionAssociations API. Manages a Management Group Subscription Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +538,4 @@ public partial class V1beta1ManagementGroupSubscriptionAssociation : IKubernetes
     [JsonPropertyName("status")]
     public V1beta1ManagementGroupSubscriptionAssociationStatus? Status { get; set; }
 }
+#nullable disable

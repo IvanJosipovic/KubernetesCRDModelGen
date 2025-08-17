@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.azuread.m.upbound.io;
+#nullable enable
 /// <summary>A ClusterProviderConfig configures the AzureAD provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterProviderConfigList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ClusterProviderConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigSpecCredentialsEnv
@@ -42,7 +45,9 @@ public partial class V1beta1ClusterProviderConfigSpecCredentialsEnv
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigSpecCredentialsFs
@@ -51,7 +56,9 @@ public partial class V1beta1ClusterProviderConfigSpecCredentialsFs
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigSpecCredentialsSecretRef
@@ -68,7 +75,9 @@ public partial class V1beta1ClusterProviderConfigSpecCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Credentials required to authenticate to this provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigSpecCredentials
@@ -89,7 +98,9 @@ public partial class V1beta1ClusterProviderConfigSpecCredentials
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigSpec
@@ -118,7 +129,9 @@ public partial class V1beta1ClusterProviderConfigSpec
     [JsonPropertyName("tenantID")]
     public string? TenantID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigStatusConditions
@@ -147,7 +160,9 @@ public partial class V1beta1ClusterProviderConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterProviderConfigStatus
@@ -160,7 +175,9 @@ public partial class V1beta1ClusterProviderConfigStatus
     [JsonPropertyName("users")]
     public long? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ClusterProviderConfig configures the AzureAD provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -190,3 +207,4 @@ public partial class V1beta1ClusterProviderConfig : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ClusterProviderConfigStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VPNSite is the Schema for the VPNSites API. Manages a VPN Site.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNSiteList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1VPNSite> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderLinkBgp
@@ -46,7 +49,9 @@ public partial class V1beta1VPNSiteSpecForProviderLinkBgp
     [JsonPropertyName("peeringAddress")]
     public string? PeeringAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderLink
@@ -75,7 +80,9 @@ public partial class V1beta1VPNSiteSpecForProviderLink
     [JsonPropertyName("speedInMbps")]
     public double? SpeedInMbps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderO365PolicyTrafficCategory
@@ -92,7 +99,9 @@ public partial class V1beta1VPNSiteSpecForProviderO365PolicyTrafficCategory
     [JsonPropertyName("optimizeEndpointEnabled")]
     public bool? OptimizeEndpointEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderO365Policy
@@ -101,7 +110,9 @@ public partial class V1beta1VPNSiteSpecForProviderO365Policy
     [JsonPropertyName("trafficCategory")]
     public IList<V1beta1VPNSiteSpecForProviderO365PolicyTrafficCategory>? TrafficCategory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameRefPolicy
@@ -114,7 +125,9 @@ public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameSelector
@@ -157,7 +174,9 @@ public partial class V1beta1VPNSiteSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdRefPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualWAN in network to populate virtualWanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdRef
@@ -183,7 +204,9 @@ public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecForProviderVirtualWanIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdSelectorPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualWAN in network to populate virtualWanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdSelector
@@ -213,7 +238,9 @@ public partial class V1beta1VPNSiteSpecForProviderVirtualWanIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecForProviderVirtualWanIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1VPNSiteSpecForProvider
     [JsonPropertyName("virtualWanIdSelector")]
     public V1beta1VPNSiteSpecForProviderVirtualWanIdSelector? VirtualWanIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderLinkBgp
@@ -283,7 +312,9 @@ public partial class V1beta1VPNSiteSpecInitProviderLinkBgp
     [JsonPropertyName("peeringAddress")]
     public string? PeeringAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderLink
@@ -312,7 +343,9 @@ public partial class V1beta1VPNSiteSpecInitProviderLink
     [JsonPropertyName("speedInMbps")]
     public double? SpeedInMbps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderO365PolicyTrafficCategory
@@ -329,7 +362,9 @@ public partial class V1beta1VPNSiteSpecInitProviderO365PolicyTrafficCategory
     [JsonPropertyName("optimizeEndpointEnabled")]
     public bool? OptimizeEndpointEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderO365Policy
@@ -338,7 +373,9 @@ public partial class V1beta1VPNSiteSpecInitProviderO365Policy
     [JsonPropertyName("trafficCategory")]
     public IList<V1beta1VPNSiteSpecInitProviderO365PolicyTrafficCategory>? TrafficCategory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualWAN in network to populate virtualWanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdRef
@@ -364,7 +403,9 @@ public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecInitProviderVirtualWanIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdSelectorPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualWAN in network to populate virtualWanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdSelector
@@ -394,7 +437,9 @@ public partial class V1beta1VPNSiteSpecInitProviderVirtualWanIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecInitProviderVirtualWanIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecInitProvider
@@ -439,7 +484,9 @@ public partial class V1beta1VPNSiteSpecInitProvider
     [JsonPropertyName("virtualWanIdSelector")]
     public V1beta1VPNSiteSpecInitProviderVirtualWanIdSelector? VirtualWanIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecProviderConfigRefPolicy
@@ -452,7 +499,9 @@ public partial class V1beta1VPNSiteSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecProviderConfigRef
@@ -465,7 +514,9 @@ public partial class V1beta1VPNSiteSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VPNSiteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpecWriteConnectionSecretToRef
@@ -478,7 +529,9 @@ public partial class V1beta1VPNSiteSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNSiteSpec defines the desired state of VPNSite</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteSpec
@@ -507,7 +560,9 @@ public partial class V1beta1VPNSiteSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNSiteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusAtProviderLinkBgp
@@ -520,7 +575,9 @@ public partial class V1beta1VPNSiteStatusAtProviderLinkBgp
     [JsonPropertyName("peeringAddress")]
     public string? PeeringAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusAtProviderLink
@@ -553,7 +610,9 @@ public partial class V1beta1VPNSiteStatusAtProviderLink
     [JsonPropertyName("speedInMbps")]
     public double? SpeedInMbps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusAtProviderO365PolicyTrafficCategory
@@ -570,7 +629,9 @@ public partial class V1beta1VPNSiteStatusAtProviderO365PolicyTrafficCategory
     [JsonPropertyName("optimizeEndpointEnabled")]
     public bool? OptimizeEndpointEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusAtProviderO365Policy
@@ -579,7 +640,9 @@ public partial class V1beta1VPNSiteStatusAtProviderO365Policy
     [JsonPropertyName("trafficCategory")]
     public IList<V1beta1VPNSiteStatusAtProviderO365PolicyTrafficCategory>? TrafficCategory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusAtProvider
@@ -624,7 +687,9 @@ public partial class V1beta1VPNSiteStatusAtProvider
     [JsonPropertyName("virtualWanId")]
     public string? VirtualWanId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatusConditions
@@ -653,7 +718,9 @@ public partial class V1beta1VPNSiteStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNSiteStatus defines the observed state of VPNSite.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNSiteStatus
@@ -670,7 +737,9 @@ public partial class V1beta1VPNSiteStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNSite is the Schema for the VPNSites API. Manages a VPN Site.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -700,3 +769,4 @@ public partial class V1beta1VPNSite : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1VPNSiteStatus? Status { get; set; }
 }
+#nullable disable

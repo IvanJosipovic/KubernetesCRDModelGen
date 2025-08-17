@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.waf.aws.upbound.io;
+#nullable enable
 /// <summary>RegexMatchSet is the Schema for the RegexMatchSets API. Provides a AWS WAF Regex Match Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegexMatchSetList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1RegexMatchSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleFieldToMatch
@@ -46,7 +49,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleFieldToMa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegexPatternSet in waf to populate regexPatternSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatt
     [JsonPropertyName("policy")]
     public V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegexPatternSet in waf to populate regexPatternSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatt
     [JsonPropertyName("policy")]
     public V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTuple
@@ -127,7 +140,9 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProvider
@@ -140,7 +155,9 @@ public partial class V1beta1RegexMatchSetSpecForProvider
     [JsonPropertyName("regexMatchTuple")]
     public IList<V1beta1RegexMatchSetSpecForProviderRegexMatchTuple>? RegexMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleFieldToMatch
@@ -153,7 +170,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleFieldToM
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRefPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegexPatternSet in waf to populate regexPatternSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRef
@@ -179,7 +200,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPat
     [JsonPropertyName("policy")]
     public V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdSelectorPolicy
@@ -192,7 +215,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegexPatternSet in waf to populate regexPatternSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdSelector
@@ -209,7 +234,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPat
     [JsonPropertyName("policy")]
     public V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTuple
@@ -234,7 +261,9 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecInitProvider
@@ -247,7 +276,9 @@ public partial class V1beta1RegexMatchSetSpecInitProvider
     [JsonPropertyName("regexMatchTuple")]
     public IList<V1beta1RegexMatchSetSpecInitProviderRegexMatchTuple>? RegexMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecProviderConfigRefPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1RegexMatchSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecProviderConfigRef
@@ -273,7 +306,9 @@ public partial class V1beta1RegexMatchSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegexMatchSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecWriteConnectionSecretToRef
@@ -286,7 +321,9 @@ public partial class V1beta1RegexMatchSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegexMatchSetSpec defines the desired state of RegexMatchSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpec
@@ -315,7 +352,9 @@ public partial class V1beta1RegexMatchSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegexMatchSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetStatusAtProviderRegexMatchTupleFieldToMatch
@@ -328,7 +367,9 @@ public partial class V1beta1RegexMatchSetStatusAtProviderRegexMatchTupleFieldToM
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetStatusAtProviderRegexMatchTuple
@@ -345,7 +386,9 @@ public partial class V1beta1RegexMatchSetStatusAtProviderRegexMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetStatusAtProvider
@@ -366,7 +409,9 @@ public partial class V1beta1RegexMatchSetStatusAtProvider
     [JsonPropertyName("regexMatchTuple")]
     public IList<V1beta1RegexMatchSetStatusAtProviderRegexMatchTuple>? RegexMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetStatusConditions
@@ -395,7 +440,9 @@ public partial class V1beta1RegexMatchSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegexMatchSetStatus defines the observed state of RegexMatchSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetStatus
@@ -412,7 +459,9 @@ public partial class V1beta1RegexMatchSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegexMatchSet is the Schema for the RegexMatchSets API. Provides a AWS WAF Regex Match Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -442,3 +491,4 @@ public partial class V1beta1RegexMatchSet : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1RegexMatchSetStatus? Status { get; set; }
 }
+#nullable disable

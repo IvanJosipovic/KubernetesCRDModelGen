@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudActiveDeployment is the Schema for the SpringCloudActiveDeployments API. Manages an Active Azure Spring Cloud Deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudActiveDeploymentList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudActiveDeployment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProvider
     [JsonPropertyName("springCloudAppIdSelector")]
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelector? SpringCloudAppIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRef
@@ -200,7 +223,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelector
@@ -230,7 +257,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRef
@@ -256,7 +287,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelector
@@ -286,7 +321,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProvider
     [JsonPropertyName("springCloudAppIdSelector")]
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelector? SpringCloudAppIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudActiveDeploymentSpec defines the desired state of SpringCloudActiveDeployment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentSpec
@@ -383,7 +428,9 @@ public partial class V1beta1SpringCloudActiveDeploymentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentStatusAtProvider
@@ -400,7 +447,9 @@ public partial class V1beta1SpringCloudActiveDeploymentStatusAtProvider
     [JsonPropertyName("springCloudAppId")]
     public string? SpringCloudAppId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentStatusConditions
@@ -429,7 +478,9 @@ public partial class V1beta1SpringCloudActiveDeploymentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudActiveDeploymentStatus defines the observed state of SpringCloudActiveDeployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudActiveDeploymentStatus
@@ -446,7 +497,9 @@ public partial class V1beta1SpringCloudActiveDeploymentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudActiveDeployment is the Schema for the SpringCloudActiveDeployments API. Manages an Active Azure Spring Cloud Deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +529,4 @@ public partial class V1beta1SpringCloudActiveDeployment : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SpringCloudActiveDeploymentStatus? Status { get; set; }
 }
+#nullable disable

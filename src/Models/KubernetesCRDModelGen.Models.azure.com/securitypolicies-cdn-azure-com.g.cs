@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicy Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/securityPolicies/{securityPolicyName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230501storageSecurityPolicyList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1api20230501storageSecurityPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230501storageSecurityPolicySpecOperatorSpecConfigMap
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230501storageSecurityPolicySpecOperatorSpecSecretExp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230501storageSecurityPolicySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230501storageSecurityPolicySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230501storageSecurityPolicySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomainsReference
@@ -118,7 +129,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ActivatedResourceReference Reference to another resource along with its state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomains
@@ -131,7 +144,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("reference")]
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomainsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallAssociation settings for security policy patterns to match</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociations
@@ -148,7 +163,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("patternsToMatch")]
     public IList<string>? PatternsToMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicyReference
@@ -169,7 +186,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicy
@@ -182,7 +201,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("reference")]
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallParameters</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewall
@@ -203,7 +224,9 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     [JsonPropertyName("wafPolicy")]
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicy? WafPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyPropertiesParameters</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpecParameters
@@ -216,7 +239,9 @@ public partial class V1api20230501storageSecurityPolicySpecParameters
     [JsonPropertyName("webApplicationFirewall")]
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewall? WebApplicationFirewall { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicySpec
@@ -245,7 +270,9 @@ public partial class V1api20230501storageSecurityPolicySpec
     [JsonPropertyName("parameters")]
     public V1api20230501storageSecurityPolicySpecParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusConditions
@@ -278,7 +305,9 @@ public partial class V1api20230501storageSecurityPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ActivatedResourceReference_STATUS_Profiles_SecurityPolicy_SubResourceEmbedded Reference to another resource along with its state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallAssociationsDomains
@@ -291,7 +320,9 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallAssociation_STATUS settings for security policy patterns to match</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallAssociations
@@ -308,7 +339,9 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     [JsonPropertyName("patternsToMatch")]
     public IList<string>? PatternsToMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallWafPolicy
@@ -321,7 +354,9 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallParameters_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewall
@@ -342,7 +377,9 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     [JsonPropertyName("wafPolicy")]
     public V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallWafPolicy? WafPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicyPropertiesParameters_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusParameters
@@ -355,7 +392,9 @@ public partial class V1api20230501storageSecurityPolicyStatusParameters
     [JsonPropertyName("webApplicationFirewall")]
     public V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewall? WebApplicationFirewall { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatusSystemData
@@ -388,7 +427,9 @@ public partial class V1api20230501storageSecurityPolicyStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecurityPolicyStatus
@@ -433,7 +474,9 @@ public partial class V1api20230501storageSecurityPolicyStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230501.SecurityPolicy Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/securityPolicies/{securityPolicyName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -463,3 +506,4 @@ public partial class V1api20230501storageSecurityPolicy : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1api20230501storageSecurityPolicyStatus? Status { get; set; }
 }
+#nullable disable

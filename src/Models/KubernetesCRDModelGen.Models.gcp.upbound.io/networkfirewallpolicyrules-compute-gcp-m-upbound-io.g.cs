@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkFirewallPolicyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkFirewallPolicy in compute to populate firewallPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicyRef
@@ -63,7 +68,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPoli
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicySelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkFirewallPolicy in compute to populate firewallPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicySelector
@@ -97,7 +106,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPoli
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchLayer4Configs
@@ -110,7 +121,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchLayer4C
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsRefsPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsRefs
@@ -140,7 +155,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddr
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AddressGroup in networksecurity to populate srcAddressGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsSelector
@@ -174,7 +193,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddr
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagValue in tags to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRef
@@ -204,7 +227,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagValue in tags to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelector
@@ -238,7 +265,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTags
@@ -255,7 +284,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     [JsonPropertyName("nameSelector")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
@@ -316,7 +347,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderTargetSecureTags
@@ -325,7 +358,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderTargetSecure
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
@@ -394,7 +429,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchLayer4Configs
@@ -407,7 +444,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchLayer4
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsRefsPolicy
@@ -420,7 +459,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAdd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsRefs
@@ -437,7 +478,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAdd
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsSelectorPolicy
@@ -450,7 +493,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAdd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AddressGroup in networksecurity to populate srcAddressGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsSelector
@@ -471,7 +516,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAdd
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRefPolicy
@@ -484,7 +531,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagValue in tags to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRef
@@ -501,7 +550,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelectorPolicy
@@ -514,7 +565,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagValue in tags to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelector
@@ -535,7 +588,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     [JsonPropertyName("policy")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTags
@@ -552,7 +607,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     [JsonPropertyName("nameSelector")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
@@ -613,7 +670,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderTargetSecureTags
@@ -622,7 +681,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderTargetSecur
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
@@ -675,7 +736,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecProviderConfigRef
@@ -688,7 +751,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecWriteConnectionSecretToRef
@@ -697,7 +762,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkFirewallPolicyRuleSpec defines the desired state of NetworkFirewallPolicyRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpec
@@ -722,7 +789,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkFirewallPolicyRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchLayer4Configs
@@ -735,7 +804,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchLayer4
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchSrcSecureTags
@@ -748,7 +819,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchSrcSec
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
@@ -801,7 +874,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderTargetSecureTags
@@ -814,7 +889,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderTargetSecur
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
@@ -891,7 +968,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusConditions
@@ -920,7 +999,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkFirewallPolicyRuleStatus defines the observed state of NetworkFirewallPolicyRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatus
@@ -937,7 +1018,9 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -967,3 +1050,4 @@ public partial class V1beta1NetworkFirewallPolicyRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1NetworkFirewallPolicyRuleStatus? Status { get; set; }
 }
+#nullable disable

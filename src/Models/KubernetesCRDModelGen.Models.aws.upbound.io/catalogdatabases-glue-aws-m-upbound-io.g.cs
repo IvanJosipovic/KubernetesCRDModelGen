@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+#nullable enable
 /// <summary>CatalogDatabase is the Schema for the CatalogDatabases API. Provides a Glue Catalog Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CatalogDatabaseList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1CatalogDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The principal who is granted permissions.. See principal below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecForProviderCreateTableDefaultPermissionPrincipal
@@ -42,7 +45,9 @@ public partial class V1beta1CatalogDatabaseSpecForProviderCreateTableDefaultPerm
     [JsonPropertyName("dataLakePrincipalIdentifier")]
     public string? DataLakePrincipalIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecForProviderCreateTableDefaultPermission
@@ -55,7 +60,9 @@ public partial class V1beta1CatalogDatabaseSpecForProviderCreateTableDefaultPerm
     [JsonPropertyName("principal")]
     public V1beta1CatalogDatabaseSpecForProviderCreateTableDefaultPermissionPrincipal? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that references an entity outside the AWS Glue Data Catalog. See federated_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecForProviderFederatedDatabase
@@ -68,7 +75,9 @@ public partial class V1beta1CatalogDatabaseSpecForProviderFederatedDatabase
     [JsonPropertyName("identifier")]
     public string? Identifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for a target database for resource linking. See target_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecForProviderTargetDatabase
@@ -85,7 +94,9 @@ public partial class V1beta1CatalogDatabaseSpecForProviderTargetDatabase
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1CatalogDatabaseSpecForProvider
     [JsonPropertyName("targetDatabase")]
     public V1beta1CatalogDatabaseSpecForProviderTargetDatabase? TargetDatabase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The principal who is granted permissions.. See principal below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecInitProviderCreateTableDefaultPermissionPrincipal
@@ -135,7 +148,9 @@ public partial class V1beta1CatalogDatabaseSpecInitProviderCreateTableDefaultPer
     [JsonPropertyName("dataLakePrincipalIdentifier")]
     public string? DataLakePrincipalIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecInitProviderCreateTableDefaultPermission
@@ -148,7 +163,9 @@ public partial class V1beta1CatalogDatabaseSpecInitProviderCreateTableDefaultPer
     [JsonPropertyName("principal")]
     public V1beta1CatalogDatabaseSpecInitProviderCreateTableDefaultPermissionPrincipal? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that references an entity outside the AWS Glue Data Catalog. See federated_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecInitProviderFederatedDatabase
@@ -161,7 +178,9 @@ public partial class V1beta1CatalogDatabaseSpecInitProviderFederatedDatabase
     [JsonPropertyName("identifier")]
     public string? Identifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for a target database for resource linking. See target_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecInitProviderTargetDatabase
@@ -170,7 +189,9 @@ public partial class V1beta1CatalogDatabaseSpecInitProviderTargetDatabase
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1CatalogDatabaseSpecInitProvider
     [JsonPropertyName("targetDatabase")]
     public V1beta1CatalogDatabaseSpecInitProviderTargetDatabase? TargetDatabase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecProviderConfigRef
@@ -216,7 +239,9 @@ public partial class V1beta1CatalogDatabaseSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpecWriteConnectionSecretToRef
@@ -225,7 +250,9 @@ public partial class V1beta1CatalogDatabaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogDatabaseSpec defines the desired state of CatalogDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseSpec
@@ -250,7 +277,9 @@ public partial class V1beta1CatalogDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CatalogDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The principal who is granted permissions.. See principal below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusAtProviderCreateTableDefaultPermissionPrincipal
@@ -259,7 +288,9 @@ public partial class V1beta1CatalogDatabaseStatusAtProviderCreateTableDefaultPer
     [JsonPropertyName("dataLakePrincipalIdentifier")]
     public string? DataLakePrincipalIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusAtProviderCreateTableDefaultPermission
@@ -272,7 +303,9 @@ public partial class V1beta1CatalogDatabaseStatusAtProviderCreateTableDefaultPer
     [JsonPropertyName("principal")]
     public V1beta1CatalogDatabaseStatusAtProviderCreateTableDefaultPermissionPrincipal? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that references an entity outside the AWS Glue Data Catalog. See federated_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusAtProviderFederatedDatabase
@@ -285,7 +318,9 @@ public partial class V1beta1CatalogDatabaseStatusAtProviderFederatedDatabase
     [JsonPropertyName("identifier")]
     public string? Identifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for a target database for resource linking. See target_database below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusAtProviderTargetDatabase
@@ -302,7 +337,9 @@ public partial class V1beta1CatalogDatabaseStatusAtProviderTargetDatabase
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusAtProvider
@@ -355,7 +392,9 @@ public partial class V1beta1CatalogDatabaseStatusAtProvider
     [JsonPropertyName("targetDatabase")]
     public V1beta1CatalogDatabaseStatusAtProviderTargetDatabase? TargetDatabase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatusConditions
@@ -384,7 +423,9 @@ public partial class V1beta1CatalogDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogDatabaseStatus defines the observed state of CatalogDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogDatabaseStatus
@@ -401,7 +442,9 @@ public partial class V1beta1CatalogDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogDatabase is the Schema for the CatalogDatabases API. Provides a Glue Catalog Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -431,3 +474,4 @@ public partial class V1beta1CatalogDatabase : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1CatalogDatabaseStatus? Status { get; set; }
 }
+#nullable disable

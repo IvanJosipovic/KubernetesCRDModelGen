@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+#nullable enable
 /// <summary>MonitorAutoscaleSetting is the Schema for the MonitorAutoscaleSettings API. Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorAutoscaleSettingList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorAutoscaleSetting> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationEmail
@@ -50,7 +53,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationEm
     [JsonPropertyName("sendToSubscriptionCoAdministrator")]
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWebhook
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWe
     [JsonPropertyName("serviceUri")]
     public string? ServiceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotification
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotification
     [JsonPropertyName("webhook")]
     public IList<V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWebhook>? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderPredictive
@@ -89,7 +98,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderPredictive
     [JsonPropertyName("scaleMode")]
     public string? ScaleMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileCapacity
@@ -106,7 +117,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileCapacit
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileFixedDate
@@ -123,7 +136,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileFixedDa
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRecurrence
@@ -144,7 +159,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRecurre
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerDimensions
@@ -161,7 +178,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRef
@@ -187,7 +208,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelector
@@ -217,7 +242,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTrigger
@@ -274,7 +301,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     [JsonPropertyName("timeWindow")]
     public string? TimeWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleScaleAction
@@ -295,7 +324,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleSca
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRule
@@ -308,7 +339,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRule
     [JsonPropertyName("scaleAction")]
     public IList<V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfile
@@ -333,7 +366,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfile
     [JsonPropertyName("rule")]
     public IList<V1beta1MonitorAutoscaleSettingSpecForProviderProfileRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRefPolicy
@@ -346,7 +381,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRef
@@ -359,7 +396,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelectorPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelector
@@ -389,7 +430,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRefPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRef
@@ -415,7 +460,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelectorPolicy
@@ -428,7 +475,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelector
@@ -445,7 +494,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecForProvider
@@ -502,7 +553,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationEmail
@@ -519,7 +572,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationE
     [JsonPropertyName("sendToSubscriptionCoAdministrator")]
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationWebhook
@@ -532,7 +587,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationW
     [JsonPropertyName("serviceUri")]
     public string? ServiceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotification
@@ -545,7 +602,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotification
     [JsonPropertyName("webhook")]
     public IList<V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationWebhook>? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderPredictive
@@ -558,7 +617,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderPredictive
     [JsonPropertyName("scaleMode")]
     public string? ScaleMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileCapacity
@@ -575,7 +636,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileCapaci
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileFixedDate
@@ -592,7 +655,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileFixedD
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRecurrence
@@ -613,7 +678,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRecurr
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerDimensions
@@ -630,7 +697,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy
@@ -643,7 +712,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRef
@@ -656,7 +727,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy
@@ -669,7 +742,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelector
@@ -686,7 +761,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTrigger
@@ -743,7 +820,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     [JsonPropertyName("timeWindow")]
     public string? TimeWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleScaleAction
@@ -764,7 +843,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleSc
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRule
@@ -777,7 +858,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRule
     [JsonPropertyName("scaleAction")]
     public IList<V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfile
@@ -802,7 +885,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfile
     [JsonPropertyName("rule")]
     public IList<V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRefPolicy
@@ -815,7 +900,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRef
@@ -828,7 +915,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelectorPolicy
@@ -841,7 +930,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelector
@@ -858,7 +949,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRefPolicy
@@ -871,7 +964,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRef
@@ -884,7 +979,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelectorPolicy
@@ -897,7 +994,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelector
@@ -914,7 +1013,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProvider
@@ -971,7 +1072,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicy
@@ -984,7 +1087,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRef
@@ -997,7 +1102,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRef
@@ -1010,7 +1117,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorAutoscaleSettingSpec defines the desired state of MonitorAutoscaleSetting</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingSpec
@@ -1039,7 +1148,9 @@ public partial class V1beta1MonitorAutoscaleSettingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationEmail
@@ -1056,7 +1167,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationE
     [JsonPropertyName("sendToSubscriptionCoAdministrator")]
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationWebhook
@@ -1069,7 +1182,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationW
     [JsonPropertyName("serviceUri")]
     public string? ServiceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotification
@@ -1082,7 +1197,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotification
     [JsonPropertyName("webhook")]
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationWebhook>? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderPredictive
@@ -1095,7 +1212,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderPredictive
     [JsonPropertyName("scaleMode")]
     public string? ScaleMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileCapacity
@@ -1112,7 +1231,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileCapaci
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileFixedDate
@@ -1129,7 +1250,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileFixedD
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRecurrence
@@ -1150,7 +1273,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRecurr
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMetricTriggerDimensions
@@ -1167,7 +1292,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMe
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMetricTrigger
@@ -1216,7 +1343,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMe
     [JsonPropertyName("timeWindow")]
     public string? TimeWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleScaleAction
@@ -1237,7 +1366,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleSc
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule
@@ -1250,7 +1381,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule
     [JsonPropertyName("scaleAction")]
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfile
@@ -1275,7 +1408,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfile
     [JsonPropertyName("rule")]
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProvider
@@ -1320,7 +1455,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatusConditions
@@ -1349,7 +1486,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorAutoscaleSettingStatus defines the observed state of MonitorAutoscaleSetting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorAutoscaleSettingStatus
@@ -1366,7 +1505,9 @@ public partial class V1beta1MonitorAutoscaleSettingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorAutoscaleSetting is the Schema for the MonitorAutoscaleSettings API. Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1396,3 +1537,4 @@ public partial class V1beta1MonitorAutoscaleSetting : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1MonitorAutoscaleSettingStatus? Status { get; set; }
 }
+#nullable disable

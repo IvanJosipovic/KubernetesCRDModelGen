@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VirtualHubSecurityPartnerProvider is the Schema for the VirtualHubSecurityPartnerProviders API. Manages a Security Partner Provider which could be associated to virtual hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualHubSecurityPartnerProvider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVir
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVir
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProvider
@@ -271,7 +300,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRef
@@ -297,7 +330,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigR
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecWriteConnectionSecretToRef
@@ -310,7 +345,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecWriteConnection
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubSecurityPartnerProviderSpec defines the desired state of VirtualHubSecurityPartnerProvider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpec
@@ -339,7 +376,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualHubSecurityPartnerProviderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderStatusAtProvider
@@ -368,7 +407,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderStatusAtProvider
     [JsonPropertyName("virtualHubId")]
     public string? VirtualHubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderStatusConditions
@@ -397,7 +438,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubSecurityPartnerProviderStatus defines the observed state of VirtualHubSecurityPartnerProvider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderStatus
@@ -414,7 +457,9 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubSecurityPartnerProvider is the Schema for the VirtualHubSecurityPartnerProviders API. Manages a Security Partner Provider which could be associated to virtual hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -444,3 +489,4 @@ public partial class V1beta1VirtualHubSecurityPartnerProvider : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1VirtualHubSecurityPartnerProviderStatus? Status { get; set; }
 }
+#nullable disable

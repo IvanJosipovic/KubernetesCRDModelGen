@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLVirtualNetworkRule is the Schema for the MSSQLVirtualNetworkRules API. Manages an Azure SQL Virtual Network Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLVirtualNetworkRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelect
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelect
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProvider
@@ -255,7 +284,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRef
@@ -281,7 +314,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecWriteConnectionSecretToRef
@@ -294,7 +329,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLVirtualNetworkRuleSpec defines the desired state of MSSQLVirtualNetworkRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpec
@@ -323,7 +360,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLVirtualNetworkRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleStatusAtProvider
@@ -344,7 +383,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleStatusAtProvider
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleStatusConditions
@@ -373,7 +414,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLVirtualNetworkRuleStatus defines the observed state of MSSQLVirtualNetworkRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleStatus
@@ -390,7 +433,9 @@ public partial class V1beta1MSSQLVirtualNetworkRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLVirtualNetworkRule is the Schema for the MSSQLVirtualNetworkRules API. Manages an Azure SQL Virtual Network Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -420,3 +465,4 @@ public partial class V1beta1MSSQLVirtualNetworkRule : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1MSSQLVirtualNetworkRuleStatus? Status { get; set; }
 }
+#nullable disable

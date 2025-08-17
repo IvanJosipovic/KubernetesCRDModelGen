@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,13 +34,17 @@ public partial class V1alpha1DatastreamConnectionProfileList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1DatastreamConnectionProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQuery Connection Profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecBigQueryProfile
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SSH tunnel. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivitySecretRef
@@ -52,7 +57,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivi
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Forward SSH tunnel connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivity
@@ -73,7 +80,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivi
     [JsonPropertyName("secretRef")]
     public V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivitySecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud Storage ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
@@ -86,7 +95,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
     [JsonPropertyName("rootPath")]
     public string? RootPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the MySQL connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSecretRef
@@ -99,7 +110,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSecretRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL configuration for the MySQL connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSslConfig
@@ -116,7 +129,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSslConfi
     [JsonPropertyName("clientKey")]
     public string? ClientKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MySQL ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfile
@@ -137,7 +152,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfile
     [JsonPropertyName("sslConfig")]
     public V1alpha1DatastreamConnectionProfileSpecMySQLProfileSslConfig? SslConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigOracleSSLConfig
@@ -146,7 +163,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleA
     [JsonPropertyName("caCertificate")]
     public string? CaCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle ASM connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigSecretRef
@@ -159,7 +178,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleA
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Oracle ASM connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfig
@@ -188,7 +209,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleA
     [JsonPropertyName("secretRef")]
     public V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleSSLConfig
@@ -197,7 +220,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleS
     [JsonPropertyName("caCertificate")]
     public string? CaCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A reference to a Secret Manager resource name storing the Oracle connection password. Mutually exclusive with the `secretRef` field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretManagerSecretRef
@@ -214,7 +239,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretM
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretRef
@@ -227,7 +254,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretR
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Oracle ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
@@ -264,7 +293,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
     [JsonPropertyName("secretRef")]
     public V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A reference to a private connection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivityPrivateConnectionRef
@@ -281,7 +312,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivityP
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Private connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
@@ -290,7 +323,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
     [JsonPropertyName("privateConnectionRef")]
     public V1alpha1DatastreamConnectionProfileSpecPrivateConnectivityPrivateConnectionRef PrivateConnectionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
@@ -311,7 +346,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SQLServer connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfileSecretRef
@@ -324,7 +361,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfileSecr
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLServer Connection Profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfile
@@ -345,13 +384,17 @@ public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfile
     [JsonPropertyName("secretRef")]
     public V1alpha1DatastreamConnectionProfileSpecSqlServerProfileSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Static Service IP connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecStaticServiceIPConnectivity
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatastreamConnectionProfileSpec defines the desired state of DatastreamConnectionProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpec
@@ -408,7 +451,9 @@ public partial class V1alpha1DatastreamConnectionProfileSpec
     [JsonPropertyName("staticServiceIPConnectivity")]
     public V1alpha1DatastreamConnectionProfileSpecStaticServiceIPConnectivity? StaticServiceIPConnectivity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusConditions
@@ -433,7 +478,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL configuration for the MySQL connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfileSslConfig
@@ -450,7 +497,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQL
     [JsonPropertyName("clientKeySet")]
     public bool? ClientKeySet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MySQL ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfile
@@ -459,7 +508,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQL
     [JsonPropertyName("sslConfig")]
     public V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfileSslConfig? SslConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfileOracleSSLConfig
@@ -468,7 +519,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracl
     [JsonPropertyName("caCertificateSet")]
     public bool? CaCertificateSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Oracle ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfile
@@ -477,7 +530,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracl
     [JsonPropertyName("oracleSSLConfig")]
     public V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfileOracleSSLConfig? OracleSSLConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatusObservedState
@@ -498,7 +553,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatastreamConnectionProfileStatus defines the config connector machine state of DatastreamConnectionProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileStatus
@@ -519,7 +576,9 @@ public partial class V1alpha1DatastreamConnectionProfileStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DatastreamConnectionProfileStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -549,3 +608,4 @@ public partial class V1alpha1DatastreamConnectionProfile : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1DatastreamConnectionProfileStatus? Status { get; set; }
 }
+#nullable disable

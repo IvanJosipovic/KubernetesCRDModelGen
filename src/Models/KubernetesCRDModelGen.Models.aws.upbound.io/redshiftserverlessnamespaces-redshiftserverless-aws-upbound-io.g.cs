@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshiftserverless.aws.upbound.io;
+#nullable enable
 /// <summary>RedshiftServerlessNamespace is the Schema for the RedshiftServerlessNamespaces API. Provides a Redshift Serverless Namespace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RedshiftServerlessNamespaceList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1RedshiftServerlessNamespace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the administrator for the first database created in the namespace. Conflicts with manage_admin_password and admin_user_password_wo.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUserPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUserP
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The username of the administrator for the first database created in the namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUsernameSecretRef
@@ -67,7 +72,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUsern
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicy
@@ -80,7 +87,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate defaultIamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRef
@@ -93,7 +102,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate defaultIamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelector
@@ -123,7 +136,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefs
@@ -149,7 +166,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRef
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Role in iam to populate iamRoles.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelector
@@ -179,7 +200,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSel
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicy
@@ -192,7 +215,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRef
@@ -205,7 +230,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRe
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicy
@@ -218,7 +245,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelector
@@ -235,7 +264,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSe
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProvider
@@ -316,7 +347,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the administrator for the first database created in the namespace. Conflicts with manage_admin_password and admin_user_password_wo.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUserPasswordSecretRef
@@ -333,7 +366,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUser
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The username of the administrator for the first database created in the namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUsernameSecretRef
@@ -350,7 +385,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUser
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate defaultIamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRef
@@ -376,7 +415,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate defaultIamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelector
@@ -406,7 +449,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicy
@@ -419,7 +464,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefs
@@ -432,7 +479,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRe
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicy
@@ -445,7 +494,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Role in iam to populate iamRoles.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelector
@@ -462,7 +513,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSe
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicy
@@ -475,7 +528,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRef
@@ -488,7 +543,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdR
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicy
@@ -501,7 +558,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelector
@@ -518,7 +577,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdS
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProvider
@@ -595,7 +656,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicy
@@ -608,7 +671,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRef
@@ -621,7 +686,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecretToRef
@@ -634,7 +701,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedshiftServerlessNamespaceSpec defines the desired state of RedshiftServerlessNamespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpec
@@ -663,7 +732,9 @@ public partial class V1beta1RedshiftServerlessNamespaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceStatusAtProvider
@@ -732,7 +803,9 @@ public partial class V1beta1RedshiftServerlessNamespaceStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceStatusConditions
@@ -761,7 +834,9 @@ public partial class V1beta1RedshiftServerlessNamespaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedshiftServerlessNamespaceStatus defines the observed state of RedshiftServerlessNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceStatus
@@ -778,7 +853,9 @@ public partial class V1beta1RedshiftServerlessNamespaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedshiftServerlessNamespace is the Schema for the RedshiftServerlessNamespaces API. Provides a Redshift Serverless Namespace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -808,3 +885,4 @@ public partial class V1beta1RedshiftServerlessNamespace : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1RedshiftServerlessNamespaceStatus? Status { get; set; }
 }
+#nullable disable

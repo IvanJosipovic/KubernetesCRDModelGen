@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketWebsiteConfiguration is the Schema for the BucketWebsiteConfigurations API. Provides an S3 bucket website configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketWebsiteConfigurationList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1BucketWebsiteConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelec
     [JsonPropertyName("policy")]
     public V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderErrorDocument
@@ -98,7 +109,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderErrorDocume
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderIndexDocument
@@ -107,7 +120,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderIndexDocume
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRedirectAllRequestsTo
@@ -120,7 +135,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRedirectAll
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleCondition
@@ -133,7 +150,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     [JsonPropertyName("keyPrefixEquals")]
     public string? KeyPrefixEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleRedirect
@@ -158,7 +177,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     [JsonPropertyName("replaceKeyWith")]
     public string? ReplaceKeyWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
@@ -171,7 +192,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     [JsonPropertyName("redirect")]
     public IList<V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecForProvider
@@ -216,7 +239,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProvider
     [JsonPropertyName("routingRules")]
     public string? RoutingRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRef
@@ -242,7 +269,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelector
@@ -272,7 +303,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSele
     [JsonPropertyName("policy")]
     public V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderErrorDocument
@@ -281,7 +314,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderErrorDocum
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderIndexDocument
@@ -290,7 +325,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderIndexDocum
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRedirectAllRequestsTo
@@ -303,7 +340,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRedirectAl
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleCondition
@@ -316,7 +355,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     [JsonPropertyName("keyPrefixEquals")]
     public string? KeyPrefixEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleRedirect
@@ -341,7 +382,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     [JsonPropertyName("replaceKeyWith")]
     public string? ReplaceKeyWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRule
@@ -354,7 +397,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     [JsonPropertyName("redirect")]
     public IList<V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProvider
@@ -395,7 +440,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProvider
     [JsonPropertyName("routingRules")]
     public string? RoutingRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolicy
@@ -408,7 +455,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRef
@@ -421,7 +470,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretToRef
@@ -434,7 +485,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketWebsiteConfigurationSpec defines the desired state of BucketWebsiteConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationSpec
@@ -463,7 +516,9 @@ public partial class V1beta1BucketWebsiteConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderErrorDocument
@@ -472,7 +527,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderErrorDocum
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderIndexDocument
@@ -481,7 +538,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderIndexDocum
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRedirectAllRequestsTo
@@ -494,7 +553,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRedirectAl
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleCondition
@@ -507,7 +568,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     [JsonPropertyName("keyPrefixEquals")]
     public string? KeyPrefixEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleRedirect
@@ -532,7 +595,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     [JsonPropertyName("replaceKeyWith")]
     public string? ReplaceKeyWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRule
@@ -545,7 +610,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     [JsonPropertyName("redirect")]
     public IList<V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProvider
@@ -594,7 +661,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProvider
     [JsonPropertyName("websiteEndpoint")]
     public string? WebsiteEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatusConditions
@@ -623,7 +692,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketWebsiteConfigurationStatus defines the observed state of BucketWebsiteConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketWebsiteConfigurationStatus
@@ -640,7 +711,9 @@ public partial class V1beta1BucketWebsiteConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketWebsiteConfiguration is the Schema for the BucketWebsiteConfigurations API. Provides an S3 bucket website configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -670,3 +743,4 @@ public partial class V1beta1BucketWebsiteConfiguration : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1BucketWebsiteConfigurationStatus? Status { get; set; }
 }
+#nullable disable

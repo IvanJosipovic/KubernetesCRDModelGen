@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.gcp.upbound.io;
+#nullable enable
 /// <summary>Flow is the Schema for the Flows API. Flows represents the conversation flows when you build your chatbot agent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FlowList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Flow> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsAudioExportGcsDestination
@@ -42,7 +45,9 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsAudioExportGcsDes
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsDtmfSettings
@@ -59,7 +64,9 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsLoggingSettings
@@ -76,7 +83,9 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsSpeechSettings
@@ -97,7 +106,9 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderAdvancedSettings
@@ -118,7 +129,9 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowSpecForProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentConditionalCases
@@ -127,7 +140,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentCo
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
@@ -136,7 +151,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
@@ -145,7 +162,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
@@ -158,7 +177,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
@@ -167,7 +188,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
@@ -176,7 +199,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesText
@@ -185,7 +210,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessages
@@ -222,7 +249,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentSetParameterActions
@@ -235,7 +264,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentSe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment
@@ -268,7 +299,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderEventHandlers
@@ -289,7 +322,9 @@ public partial class V1beta1FlowSpecForProviderEventHandlers
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsDataStoreConnections
@@ -306,7 +341,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsDataSto
     [JsonPropertyName("documentProcessingMode")]
     public string? DocumentProcessingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowRef
@@ -332,7 +371,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetF
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowSelector
@@ -362,7 +405,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetF
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTargetFlowSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
@@ -387,7 +432,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
@@ -404,7 +451,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
@@ -425,7 +474,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
@@ -442,7 +493,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
@@ -451,7 +504,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
@@ -460,13 +515,17 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
@@ -475,7 +534,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
@@ -488,7 +549,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
@@ -497,7 +560,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
@@ -506,7 +571,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
@@ -515,7 +582,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
@@ -556,7 +625,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
@@ -569,7 +640,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy
@@ -582,7 +655,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef
@@ -595,7 +670,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy
@@ -608,7 +685,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector
@@ -625,7 +704,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillment
@@ -670,7 +751,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTrigger
     [JsonPropertyName("webhookSelector")]
     public V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector? WebhookSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettings
@@ -703,7 +786,9 @@ public partial class V1beta1FlowSpecForProviderKnowledgeConnectorSettings
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecForProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderNluSettings
@@ -720,7 +805,9 @@ public partial class V1beta1FlowSpecForProviderNluSettings
     [JsonPropertyName("modelType")]
     public string? ModelType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderParentRefPolicy
@@ -733,7 +820,9 @@ public partial class V1beta1FlowSpecForProviderParentRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderParentRef
@@ -746,7 +835,9 @@ public partial class V1beta1FlowSpecForProviderParentRef
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderParentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderParentSelectorPolicy
@@ -759,7 +850,9 @@ public partial class V1beta1FlowSpecForProviderParentSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderParentSelector
@@ -776,7 +869,9 @@ public partial class V1beta1FlowSpecForProviderParentSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderParentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPolicy
@@ -789,7 +884,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRef
@@ -802,7 +899,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRef
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicy
@@ -815,7 +914,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelector
@@ -832,7 +933,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelecto
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentConditionalCases
@@ -841,7 +944,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
@@ -850,7 +955,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
@@ -859,7 +966,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
@@ -872,7 +981,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
@@ -881,7 +992,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
@@ -890,7 +1003,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesText
@@ -899,7 +1014,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessages
@@ -936,7 +1053,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentSetParameterActions
@@ -949,7 +1068,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillment
@@ -978,7 +1099,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderTransitionRoutes
@@ -1011,7 +1134,9 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutes
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProvider
@@ -1068,7 +1193,9 @@ public partial class V1beta1FlowSpecForProvider
     [JsonPropertyName("transitionRoutes")]
     public IList<V1beta1FlowSpecForProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsAudioExportGcsDestination
@@ -1077,7 +1204,9 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsAudioExportGcsDe
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsDtmfSettings
@@ -1094,7 +1223,9 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsLoggingSettings
@@ -1111,7 +1242,9 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsSpeechSettings
@@ -1132,7 +1265,9 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderAdvancedSettings
@@ -1153,7 +1288,9 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowSpecInitProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentConditionalCases
@@ -1162,7 +1299,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentC
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
@@ -1171,7 +1310,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
@@ -1180,7 +1321,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
@@ -1193,7 +1336,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
@@ -1202,7 +1347,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
@@ -1211,7 +1358,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesText
@@ -1220,7 +1369,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessages
@@ -1257,7 +1408,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentSetParameterActions
@@ -1270,7 +1423,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment
@@ -1303,7 +1458,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderEventHandlers
@@ -1324,7 +1481,9 @@ public partial class V1beta1FlowSpecInitProviderEventHandlers
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsDataStoreConnections
@@ -1341,7 +1500,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsDataSt
     [JsonPropertyName("documentProcessingMode")]
     public string? DocumentProcessingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowRefPolicy
@@ -1354,7 +1515,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowRef
@@ -1367,7 +1530,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTarget
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowSelectorPolicy
@@ -1380,7 +1545,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowSelector
@@ -1397,7 +1564,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTarget
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTargetFlowSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
@@ -1422,7 +1591,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
@@ -1439,7 +1610,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
@@ -1460,7 +1633,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
@@ -1477,7 +1652,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
@@ -1486,7 +1663,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
@@ -1495,13 +1674,17 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
@@ -1510,7 +1693,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
@@ -1523,7 +1708,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
@@ -1532,7 +1719,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
@@ -1541,7 +1730,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
@@ -1550,7 +1741,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
@@ -1591,7 +1784,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
@@ -1604,7 +1799,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy
@@ -1617,7 +1814,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef
@@ -1630,7 +1829,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy
@@ -1643,7 +1844,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector
@@ -1660,7 +1863,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillment
@@ -1705,7 +1910,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("webhookSelector")]
     public V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector? WebhookSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettings
@@ -1738,7 +1945,9 @@ public partial class V1beta1FlowSpecInitProviderKnowledgeConnectorSettings
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderNluSettings
@@ -1755,7 +1964,9 @@ public partial class V1beta1FlowSpecInitProviderNluSettings
     [JsonPropertyName("modelType")]
     public string? ModelType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderParentRefPolicy
@@ -1768,7 +1979,9 @@ public partial class V1beta1FlowSpecInitProviderParentRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderParentRef
@@ -1781,7 +1994,9 @@ public partial class V1beta1FlowSpecInitProviderParentRef
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderParentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderParentSelectorPolicy
@@ -1794,7 +2009,9 @@ public partial class V1beta1FlowSpecInitProviderParentSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderParentSelector
@@ -1811,7 +2028,9 @@ public partial class V1beta1FlowSpecInitProviderParentSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderParentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPolicy
@@ -1824,7 +2043,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRef
@@ -1837,7 +2058,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRef
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicy
@@ -1850,7 +2073,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelector
@@ -1867,7 +2092,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelect
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentConditionalCases
@@ -1876,7 +2103,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
@@ -1885,7 +2114,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
@@ -1894,7 +2125,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
@@ -1907,7 +2140,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
@@ -1916,7 +2151,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
@@ -1925,7 +2162,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesText
@@ -1934,7 +2173,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessages
@@ -1971,7 +2212,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public IList<V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentSetParameterActions
@@ -1984,7 +2227,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillment
@@ -2013,7 +2258,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderTransitionRoutes
@@ -2046,7 +2293,9 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutes
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProvider
@@ -2103,7 +2352,9 @@ public partial class V1beta1FlowSpecInitProvider
     [JsonPropertyName("transitionRoutes")]
     public IList<V1beta1FlowSpecInitProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecProviderConfigRefPolicy
@@ -2116,7 +2367,9 @@ public partial class V1beta1FlowSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecProviderConfigRef
@@ -2129,7 +2382,9 @@ public partial class V1beta1FlowSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FlowSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecWriteConnectionSecretToRef
@@ -2142,7 +2397,9 @@ public partial class V1beta1FlowSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlowSpec defines the desired state of Flow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpec
@@ -2171,7 +2428,9 @@ public partial class V1beta1FlowSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FlowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsAudioExportGcsDestination
@@ -2180,7 +2439,9 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsAudioExportGcsDe
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsDtmfSettings
@@ -2197,7 +2458,9 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsLoggingSettings
@@ -2214,7 +2477,9 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsSpeechSettings
@@ -2235,7 +2500,9 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderAdvancedSettings
@@ -2256,7 +2523,9 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowStatusAtProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentConditionalCases
@@ -2265,7 +2534,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentC
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
@@ -2274,7 +2545,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
@@ -2283,7 +2556,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
@@ -2300,7 +2575,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
@@ -2313,7 +2590,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
@@ -2322,7 +2601,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesText
@@ -2335,7 +2616,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessages
@@ -2372,7 +2655,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     [JsonPropertyName("text")]
     public IList<V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentSetParameterActions
@@ -2385,7 +2670,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment
@@ -2418,7 +2705,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderEventHandlers
@@ -2443,7 +2732,9 @@ public partial class V1beta1FlowStatusAtProviderEventHandlers
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsDataStoreConnections
@@ -2460,7 +2751,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsDataSt
     [JsonPropertyName("documentProcessingMode")]
     public string? DocumentProcessingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
@@ -2485,7 +2778,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
@@ -2502,7 +2797,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
@@ -2523,7 +2820,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
@@ -2540,7 +2839,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("speechSettings")]
     public IList<V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
@@ -2549,7 +2850,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
@@ -2558,19 +2861,25 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
@@ -2579,7 +2888,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments
@@ -2596,7 +2907,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio
@@ -2605,7 +2918,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("segments")]
     public IList<V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments>? Segments { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
@@ -2622,7 +2937,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
@@ -2635,7 +2952,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
@@ -2644,7 +2963,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
@@ -2657,7 +2978,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
@@ -2706,7 +3029,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("text")]
     public IList<V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
@@ -2719,7 +3044,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillment
@@ -2756,7 +3083,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTrigge
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettings
@@ -2781,7 +3110,9 @@ public partial class V1beta1FlowStatusAtProviderKnowledgeConnectorSettings
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderNluSettings
@@ -2798,7 +3129,9 @@ public partial class V1beta1FlowStatusAtProviderNluSettings
     [JsonPropertyName("modelType")]
     public string? ModelType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentConditionalCases
@@ -2807,7 +3140,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
@@ -2816,7 +3151,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
@@ -2825,7 +3162,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
@@ -2842,7 +3181,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
@@ -2855,7 +3196,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("audioUri")]
     public string? AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
@@ -2864,7 +3207,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesText
@@ -2877,7 +3222,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessages
@@ -2914,7 +3261,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("text")]
     public IList<V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentSetParameterActions
@@ -2927,7 +3276,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillment
@@ -2956,7 +3307,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderTransitionRoutes
@@ -2985,7 +3338,9 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutes
     [JsonPropertyName("triggerFulfillment")]
     public IList<V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProvider
@@ -3042,7 +3397,9 @@ public partial class V1beta1FlowStatusAtProvider
     [JsonPropertyName("transitionRoutes")]
     public IList<V1beta1FlowStatusAtProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusConditions
@@ -3071,7 +3428,9 @@ public partial class V1beta1FlowStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlowStatus defines the observed state of Flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatus
@@ -3088,7 +3447,9 @@ public partial class V1beta1FlowStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Flow is the Schema for the Flows API. Flows represents the conversation flows when you build your chatbot agent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3118,3 +3479,4 @@ public partial class V1beta1Flow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1FlowStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.m.upbound.io;
+#nullable enable
 /// <summary>StreamInputIOTHub is the Schema for the StreamInputIOTHubs API. Manages a Stream Analytics Stream Input IoTHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StreamInputIOTHubList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1StreamInputIOTHub> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRef
@@ -127,7 +140,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelector
@@ -161,7 +178,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelec
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A serialization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderSerialization
@@ -242,7 +269,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared access policy key for the specified shared access policy. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderSharedAccessPolicyKeySecretRef
@@ -255,7 +284,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderSharedAccessPolicyKe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRefPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRef
@@ -285,7 +318,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy
@@ -298,7 +333,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelector
@@ -319,7 +356,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecForProvider
@@ -392,7 +431,9 @@ public partial class V1beta1StreamInputIOTHubSpecForProvider
     [JsonPropertyName("streamAnalyticsJobNameSelector")]
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelector? StreamAnalyticsJobNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRefPolicy
@@ -405,7 +446,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRef
@@ -422,7 +465,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicy
@@ -435,7 +480,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelector
@@ -456,7 +503,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefPolicy
@@ -469,7 +518,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRef
@@ -486,7 +537,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelectorPolicy
@@ -499,7 +552,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelector
@@ -520,7 +575,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSele
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRefPolicy
@@ -533,7 +590,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRef
@@ -550,7 +609,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPolicy
@@ -563,7 +624,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelector
@@ -584,7 +647,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A serialization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderSerialization
@@ -601,7 +666,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared access policy key for the specified shared access policy. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderSharedAccessPolicyKeySecretRef
@@ -614,7 +681,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderSharedAccessPolicyK
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRefPolicy
@@ -627,7 +696,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRef
@@ -644,7 +715,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
@@ -657,7 +730,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelector
@@ -678,7 +753,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     [JsonPropertyName("policy")]
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecInitProvider
@@ -751,7 +828,9 @@ public partial class V1beta1StreamInputIOTHubSpecInitProvider
     [JsonPropertyName("streamAnalyticsJobNameSelector")]
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelector? StreamAnalyticsJobNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecProviderConfigRef
@@ -764,7 +843,9 @@ public partial class V1beta1StreamInputIOTHubSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef
@@ -773,7 +854,9 @@ public partial class V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputIOTHubSpec defines the desired state of StreamInputIOTHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubSpec
@@ -798,7 +881,9 @@ public partial class V1beta1StreamInputIOTHubSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A serialization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubStatusAtProviderSerialization
@@ -815,7 +900,9 @@ public partial class V1beta1StreamInputIOTHubStatusAtProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubStatusAtProvider
@@ -856,7 +943,9 @@ public partial class V1beta1StreamInputIOTHubStatusAtProvider
     [JsonPropertyName("streamAnalyticsJobName")]
     public string? StreamAnalyticsJobName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubStatusConditions
@@ -885,7 +974,9 @@ public partial class V1beta1StreamInputIOTHubStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputIOTHubStatus defines the observed state of StreamInputIOTHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputIOTHubStatus
@@ -902,7 +993,9 @@ public partial class V1beta1StreamInputIOTHubStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputIOTHub is the Schema for the StreamInputIOTHubs API. Manages a Stream Analytics Stream Input IoTHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -932,3 +1025,4 @@ public partial class V1beta1StreamInputIOTHub : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1StreamInputIOTHubStatus? Status { get; set; }
 }
+#nullable disable

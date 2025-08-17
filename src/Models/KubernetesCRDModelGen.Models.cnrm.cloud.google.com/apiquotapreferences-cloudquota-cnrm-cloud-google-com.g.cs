@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudquota.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>APIQuotaPreference is the Schema for the APIQuotaPreference API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIQuotaPreferenceList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1APIQuotaPreference> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderRef represents the Folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpecFolderRef
@@ -50,7 +53,9 @@ public partial class V1alpha1APIQuotaPreferenceSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrganizationRef represents the Organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpecOrganizationRef
@@ -59,7 +64,9 @@ public partial class V1alpha1APIQuotaPreferenceSpecOrganizationRef
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpecProjectRef
@@ -80,7 +87,9 @@ public partial class V1alpha1APIQuotaPreferenceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Preferred quota configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpecQuotaConfig
@@ -93,7 +102,9 @@ public partial class V1alpha1APIQuotaPreferenceSpecQuotaConfig
     [JsonPropertyName("preferredValue")]
     public long? PreferredValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpec
@@ -138,7 +149,9 @@ public partial class V1alpha1APIQuotaPreferenceSpec
     [JsonPropertyName("service")]
     public string Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceStatusConditions
@@ -163,7 +176,9 @@ public partial class V1alpha1APIQuotaPreferenceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Preferred quota configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceStatusObservedStateQuotaConfig
@@ -184,7 +199,9 @@ public partial class V1alpha1APIQuotaPreferenceStatusObservedStateQuotaConfig
     [JsonPropertyName("traceID")]
     public string? TraceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceStatusObservedState
@@ -209,7 +226,9 @@ public partial class V1alpha1APIQuotaPreferenceStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIQuotaPreferenceStatus defines the config connector machine state of APIQuotaPreference</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceStatus
@@ -230,7 +249,9 @@ public partial class V1alpha1APIQuotaPreferenceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1APIQuotaPreferenceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIQuotaPreference is the Schema for the APIQuotaPreference API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -260,3 +281,4 @@ public partial class V1alpha1APIQuotaPreference : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1APIQuotaPreferenceStatus? Status { get; set; }
 }
+#nullable disable

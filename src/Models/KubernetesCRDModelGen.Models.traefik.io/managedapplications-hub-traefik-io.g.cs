@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>ManagedApplication represents a managed application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ManagedApplicationList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1ManagedApplication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedApplicationSpecApiKeys
@@ -54,7 +57,9 @@ public partial class V1alpha1ManagedApplicationSpecApiKeys
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedApplicationSpec describes the ManagedApplication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedApplicationSpec
@@ -75,7 +80,9 @@ public partial class V1alpha1ManagedApplicationSpec
     [JsonPropertyName("owner")]
     public string Owner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this ManagedApplication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedApplicationStatus
@@ -96,7 +103,9 @@ public partial class V1alpha1ManagedApplicationStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedApplication represents a managed application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -126,3 +135,4 @@ public partial class V1alpha1ManagedApplication : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1ManagedApplicationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>ImageUpdateAutomation is the Schema for the imageupdateautomations API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2ImageUpdateAutomationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta2ImageUpdateAutomation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference gives a branch, tag or commit to clone from the Git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCheckoutRef
@@ -58,7 +61,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCheckoutRef
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Checkout gives the parameters for cloning the git repository, ready to make changes. If not present, the `spec.ref` field from the referenced `GitRepository` or its default will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCheckout
@@ -67,7 +72,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCheckout
     [JsonPropertyName("ref")]
     public V1beta2ImageUpdateAutomationSpecGitCheckoutRef Ref { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Author gives the email and optionally the name to use as the author of commits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitAuthor
@@ -80,7 +87,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitAuthor
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef holds the name to a secret that contains a 'git.asc' key corresponding to the ASCII Armored file containing the GPG signing keypair as the value. It must be in the same namespace as the ImageUpdateAutomation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef
@@ -89,7 +98,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningKey provides the option to sign commits with a GPG key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKey
@@ -98,7 +109,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKey
     [JsonPropertyName("secretRef")]
     public V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Commit specifies how to commit to the git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitCommit
@@ -119,7 +132,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommit
     [JsonPropertyName("signingKey")]
     public V1beta2ImageUpdateAutomationSpecGitCommitSigningKey? SigningKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Push specifies how and where to push commits made by the automation. If missing, commits are pushed (back) to `.spec.checkout.branch` or its default.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGitPush
@@ -136,7 +151,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGitPush
     [JsonPropertyName("refspec")]
     public string? Refspec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitSpec contains all the git-specific definitions. This is technically optional, but in practice mandatory until there are other kinds of source allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecGit
@@ -153,7 +170,9 @@ public partial class V1beta2ImageUpdateAutomationSpecGit
     [JsonPropertyName("push")]
     public V1beta2ImageUpdateAutomationSpecGitPush? Push { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecPolicySelectorMatchExpressions
@@ -170,7 +189,9 @@ public partial class V1beta2ImageUpdateAutomationSpecPolicySelectorMatchExpressi
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicySelector allows to filter applied policies based on labels. By default includes all policies in namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecPolicySelector
@@ -183,7 +204,9 @@ public partial class V1beta2ImageUpdateAutomationSpecPolicySelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceRef refers to the resource giving access details to a git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecSourceRef
@@ -204,7 +227,9 @@ public partial class V1beta2ImageUpdateAutomationSpecSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Update gives the specification for how to update the files in the repository. This can be left empty, to use the default value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecUpdate
@@ -217,7 +242,9 @@ public partial class V1beta2ImageUpdateAutomationSpecUpdate
     [JsonPropertyName("strategy")]
     public string Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageUpdateAutomationSpec defines the desired state of ImageUpdateAutomation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpec
@@ -246,7 +273,9 @@ public partial class V1beta2ImageUpdateAutomationSpec
     [JsonPropertyName("update")]
     public V1beta2ImageUpdateAutomationSpecUpdate? Update { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatusConditions
@@ -275,7 +304,9 @@ public partial class V1beta2ImageUpdateAutomationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageRef represents an image reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatusObservedPolicies
@@ -292,7 +323,9 @@ public partial class V1beta2ImageUpdateAutomationStatusObservedPolicies
     [JsonPropertyName("tag")]
     public string Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageUpdateAutomationStatus defines the observed state of ImageUpdateAutomation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatus
@@ -329,7 +362,9 @@ public partial class V1beta2ImageUpdateAutomationStatus
     [JsonPropertyName("observedSourceRevision")]
     public string? ObservedSourceRevision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageUpdateAutomation is the Schema for the imageupdateautomations API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -359,3 +394,4 @@ public partial class V1beta2ImageUpdateAutomation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta2ImageUpdateAutomationStatus? Status { get; set; }
 }
+#nullable disable

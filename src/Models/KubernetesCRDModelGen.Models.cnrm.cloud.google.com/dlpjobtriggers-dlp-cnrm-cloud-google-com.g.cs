@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DLPJobTriggerList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1DLPJobTrigger> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
@@ -50,7 +53,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Publish a notification to a pubsub topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSub
@@ -59,7 +64,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSub
     [JsonPropertyName("topicRef")]
     public V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef? TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef
@@ -76,7 +83,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef
@@ -93,7 +102,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef
@@ -110,7 +121,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable
@@ -127,7 +140,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     [JsonPropertyName("tableRef")]
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef? TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location to store findings outside of DLP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig
@@ -144,7 +159,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     [JsonPropertyName("table")]
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Save resulting findings in a provided location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings
@@ -153,7 +170,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings
     [JsonPropertyName("outputConfig")]
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig? OutputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobActions
@@ -182,7 +201,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActions
     [JsonPropertyName("saveFindings")]
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings? SaveFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex
@@ -195,7 +216,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment
@@ -208,7 +231,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("relativeLikelihood")]
     public long? RelativeLikelihood { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity
@@ -221,7 +246,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("windowBefore")]
     public long? WindowBefore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hotword-based detection rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule
@@ -238,7 +265,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("proximity")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity? Proximity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules
@@ -247,7 +276,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("hotwordRule")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule? HotwordRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
@@ -256,7 +287,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList
@@ -265,7 +298,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary
@@ -278,7 +313,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("wordList")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType
@@ -291,7 +328,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression based CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex
@@ -304,7 +343,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef
@@ -321,7 +362,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType
@@ -334,7 +377,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("nameRef")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef? NameRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes
@@ -371,7 +416,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     [JsonPropertyName("surrogateType")]
     public JsonNode? SurrogateType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
@@ -380,7 +427,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
@@ -393,7 +442,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType
@@ -406,7 +457,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
     [JsonPropertyName("maxFindings")]
     public long? MaxFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to control the number of findings returned. This is not used for data profiling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
@@ -423,7 +476,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
     [JsonPropertyName("maxFindingsPerRequest")]
     public long? MaxFindingsPerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes
@@ -436,7 +491,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoT
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
@@ -445,7 +502,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
@@ -454,7 +513,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dictionary which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
@@ -467,7 +528,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("wordList")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
@@ -480,7 +543,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set of infoTypes for which findings would affect this rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
@@ -489,7 +554,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("infoTypes")]
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
@@ -502,7 +569,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exclusion rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule
@@ -523,7 +592,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("regex")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex? Regex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
@@ -536,7 +607,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
@@ -549,7 +622,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("relativeLikelihood")]
     public long? RelativeLikelihood { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
@@ -562,7 +637,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("windowBefore")]
     public long? WindowBefore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule
@@ -579,7 +656,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("proximity")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity? Proximity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
@@ -592,7 +671,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     [JsonPropertyName("hotwordRule")]
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule? HotwordRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet
@@ -605,7 +686,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet
     [JsonPropertyName("rules")]
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>How and what to scan for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
@@ -638,7 +721,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
     [JsonPropertyName("ruleSet")]
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
@@ -655,7 +740,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields
@@ -664,7 +751,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields
@@ -673,7 +762,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields
@@ -682,7 +773,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef
@@ -699,7 +792,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef
@@ -716,7 +811,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef
@@ -733,7 +830,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Complete BigQuery table reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference
@@ -750,7 +849,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("tableRef")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef? TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQuery options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions
@@ -783,7 +884,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     [JsonPropertyName("tableReference")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference TableReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef
@@ -800,7 +903,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
@@ -817,7 +922,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     [JsonPropertyName("includeRegex")]
     public IList<string>? IncludeRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The set of one or more files to scan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet
@@ -830,7 +937,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Google Cloud Storage options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions
@@ -859,7 +968,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     [JsonPropertyName("sampleMethod")]
     public string? SampleMethod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The kind to process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind
@@ -868,7 +979,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef
@@ -885,7 +998,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A partition ID identifies a grouping of entities. The grouping is always by project namespace ID may be empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId
@@ -898,7 +1013,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     [JsonPropertyName("projectRef")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef? ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Google Cloud Datastore options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions
@@ -911,7 +1028,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     [JsonPropertyName("partitionId")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId? PartitionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
@@ -920,7 +1039,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions
@@ -929,7 +1050,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     [JsonPropertyName("identifyingFields")]
     public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hybrid inspection options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptions
@@ -950,7 +1073,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     [JsonPropertyName("tableOptions")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions? TableOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField
@@ -959,7 +1084,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig
@@ -980,7 +1107,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
     [JsonPropertyName("timestampField")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField? TimestampField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data to scan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfig
@@ -1005,7 +1134,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfig
     [JsonPropertyName("timespanConfig")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig? TimespanConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For inspect jobs, a snapshot of the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecInspectJob
@@ -1026,7 +1157,9 @@ public partial class V1beta1DLPJobTriggerSpecInspectJob
     [JsonPropertyName("storageConfig")]
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfig StorageConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecProjectRef
@@ -1043,7 +1176,9 @@ public partial class V1beta1DLPJobTriggerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Create a job on a repeating basis based on the elapse of time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
@@ -1052,7 +1187,9 @@ public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
     [JsonPropertyName("recurrencePeriodDuration")]
     public string? RecurrencePeriodDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpecTriggers
@@ -1065,7 +1202,9 @@ public partial class V1beta1DLPJobTriggerSpecTriggers
     [JsonPropertyName("schedule")]
     public V1beta1DLPJobTriggerSpecTriggersSchedule? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerSpec
@@ -1102,7 +1241,9 @@ public partial class V1beta1DLPJobTriggerSpec
     [JsonPropertyName("triggers")]
     public IList<V1beta1DLPJobTriggerSpecTriggers> Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerStatusConditions
@@ -1127,7 +1268,9 @@ public partial class V1beta1DLPJobTriggerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
@@ -1140,7 +1283,9 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Detailed error codes and messages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerStatusErrorsDetails
@@ -1157,7 +1302,9 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetails
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerStatusErrors
@@ -1170,7 +1317,9 @@ public partial class V1beta1DLPJobTriggerStatusErrors
     [JsonPropertyName("timestamps")]
     public IList<string>? Timestamps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPJobTriggerStatus
@@ -1203,7 +1352,9 @@ public partial class V1beta1DLPJobTriggerStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1233,3 +1384,4 @@ public partial class V1beta1DLPJobTrigger : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1DLPJobTriggerStatus? Status { get; set; }
 }
+#nullable disable

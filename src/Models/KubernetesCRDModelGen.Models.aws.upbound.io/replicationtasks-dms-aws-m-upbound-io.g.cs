@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dms.aws.m.upbound.io;
+#nullable enable
 /// <summary>ReplicationTask is the Schema for the ReplicationTasks API. Provides a DMS (Data Migration Service) replication task resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReplicationTaskList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ReplicationTask> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Endpoint in dms to populate sourceEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Endpoint in dms to populate sourceEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Endpoint in dms to populate targetEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Endpoint in dms to populate targetEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecForProvider
@@ -302,7 +329,9 @@ public partial class V1beta1ReplicationTaskSpecForProvider
     [JsonPropertyName("targetEndpointArnSelector")]
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelector? TargetEndpointArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicy
@@ -315,7 +344,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRef
@@ -332,7 +363,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicy
@@ -345,7 +378,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelector
@@ -366,7 +401,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicy
@@ -379,7 +416,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Endpoint in dms to populate sourceEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRef
@@ -396,7 +435,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicy
@@ -409,7 +450,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Endpoint in dms to populate sourceEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelector
@@ -430,7 +473,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSele
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicy
@@ -443,7 +488,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Endpoint in dms to populate targetEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRef
@@ -460,7 +507,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicy
@@ -473,7 +522,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Endpoint in dms to populate targetEndpointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelector
@@ -494,7 +545,9 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSele
     [JsonPropertyName("policy")]
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecInitProvider
@@ -567,7 +620,9 @@ public partial class V1beta1ReplicationTaskSpecInitProvider
     [JsonPropertyName("targetEndpointArnSelector")]
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelector? TargetEndpointArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecProviderConfigRef
@@ -580,7 +635,9 @@ public partial class V1beta1ReplicationTaskSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpecWriteConnectionSecretToRef
@@ -589,7 +646,9 @@ public partial class V1beta1ReplicationTaskSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationTaskSpec defines the desired state of ReplicationTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskSpec
@@ -614,7 +673,9 @@ public partial class V1beta1ReplicationTaskSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReplicationTaskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskStatusAtProvider
@@ -683,7 +744,9 @@ public partial class V1beta1ReplicationTaskStatusAtProvider
     [JsonPropertyName("targetEndpointArn")]
     public string? TargetEndpointArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskStatusConditions
@@ -712,7 +775,9 @@ public partial class V1beta1ReplicationTaskStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationTaskStatus defines the observed state of ReplicationTask.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationTaskStatus
@@ -729,7 +794,9 @@ public partial class V1beta1ReplicationTaskStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationTask is the Schema for the ReplicationTasks API. Provides a DMS (Data Migration Service) replication task resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -759,3 +826,4 @@ public partial class V1beta1ReplicationTask : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ReplicationTaskStatus? Status { get; set; }
 }
+#nullable disable

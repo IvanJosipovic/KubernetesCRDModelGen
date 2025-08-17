@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlert Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20180301storageMetricAlertList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1api20180301storageMetricAlert> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertAction An alert action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecActions
@@ -50,7 +53,9 @@ public partial class V1api20180301storageMetricAlertSpecActions
     [JsonPropertyName("webHookProperties")]
     public IDictionary<string, string>? WebHookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionDimensions
@@ -71,7 +76,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.DynamicThresholdFailingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionFailingPeriods
@@ -88,7 +95,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("numberOfEvaluationPeriods")]
     public double? NumberOfEvaluationPeriods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.DynamicMetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterion
@@ -145,7 +154,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterionDimensions
@@ -166,7 +177,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion
@@ -215,7 +228,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MultiMetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOf
@@ -232,7 +247,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("staticThresholdCriterion")]
     public V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion? StaticThresholdCriterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteria
@@ -253,7 +270,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("odata.type")]
     public string? OdataType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOfDimensions
@@ -274,7 +293,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOf
@@ -323,7 +344,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertSingleResourceMultipleMetricCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteria
@@ -344,7 +367,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("odata.type")]
     public string? OdataType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComponentReference: The Application Insights resource Id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteriaComponentReference
@@ -365,7 +390,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.WebtestLocationAvailabilityCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria
@@ -394,7 +421,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     [JsonPropertyName("webTestId")]
     public string? WebTestId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertCriteria</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecCriteria
@@ -415,7 +444,9 @@ public partial class V1api20180301storageMetricAlertSpecCriteria
     [JsonPropertyName("microsoftAzureMonitorWebtestLocationAvailabilityCriteria")]
     public V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria? MicrosoftAzureMonitorWebtestLocationAvailabilityCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecOperatorSpecConfigMapExpressions
@@ -432,7 +463,9 @@ public partial class V1api20180301storageMetricAlertSpecOperatorSpecConfigMapExp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecOperatorSpecSecretExpressions
@@ -449,7 +482,9 @@ public partial class V1api20180301storageMetricAlertSpecOperatorSpecSecretExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecOperatorSpec
@@ -466,7 +501,9 @@ public partial class V1api20180301storageMetricAlertSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20180301storageMetricAlertSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecOwner
@@ -479,7 +516,9 @@ public partial class V1api20180301storageMetricAlertSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecScopesReferences
@@ -500,7 +539,9 @@ public partial class V1api20180301storageMetricAlertSpecScopesReferences
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlert_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpec
@@ -577,7 +618,9 @@ public partial class V1api20180301storageMetricAlertSpec
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertAction_STATUS An alert action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusActions
@@ -594,7 +637,9 @@ public partial class V1api20180301storageMetricAlertStatusActions
     [JsonPropertyName("webHookProperties")]
     public IDictionary<string, string>? WebHookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusConditions
@@ -627,7 +672,9 @@ public partial class V1api20180301storageMetricAlertStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionDimensions
@@ -648,7 +695,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.DynamicThresholdFailingPeriods_STATUS The minimum number of violations required within the selected lookback time window required to raise an alert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionFailingPeriods
@@ -665,7 +714,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("numberOfEvaluationPeriods")]
     public double? NumberOfEvaluationPeriods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.DynamicMetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterion
@@ -722,7 +773,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterionDimensions
@@ -743,7 +796,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion
@@ -792,7 +847,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MultiMetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOf
@@ -809,7 +866,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("staticThresholdCriterion")]
     public V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion? StaticThresholdCriterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteria
@@ -830,7 +889,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("odata.type")]
     public string? OdataType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOfDimensions
@@ -851,7 +912,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOf
@@ -900,7 +963,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertSingleResourceMultipleMetricCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteria
@@ -921,7 +986,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("odata.type")]
     public string? OdataType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.WebtestLocationAvailabilityCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria
@@ -950,7 +1017,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     [JsonPropertyName("webTestId")]
     public string? WebTestId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlertCriteria_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusCriteria
@@ -971,7 +1040,9 @@ public partial class V1api20180301storageMetricAlertStatusCriteria
     [JsonPropertyName("microsoftAzureMonitorWebtestLocationAvailabilityCriteria")]
     public V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria? MicrosoftAzureMonitorWebtestLocationAvailabilityCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlert_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatus
@@ -1056,7 +1127,9 @@ public partial class V1api20180301storageMetricAlertStatus
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180301.MetricAlert Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1086,3 +1159,4 @@ public partial class V1api20180301storageMetricAlert : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1api20180301storageMetricAlertStatus? Status { get; set; }
 }
+#nullable disable

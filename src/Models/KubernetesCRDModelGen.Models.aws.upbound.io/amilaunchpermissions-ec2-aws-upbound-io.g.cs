@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>AMILaunchPermission is the Schema for the AMILaunchPermissions API. Adds a launch permission to an Amazon Machine Image (AMI).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AMILaunchPermissionList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1AMILaunchPermission> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AMI in ec2 to populate imageId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdRef
     [JsonPropertyName("policy")]
     public V1beta1AMILaunchPermissionSpecForProviderImageIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AMI in ec2 to populate imageId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AMILaunchPermissionSpecForProviderImageIdSelector
     [JsonPropertyName("policy")]
     public V1beta1AMILaunchPermissionSpecForProviderImageIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1AMILaunchPermissionSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AMI in ec2 to populate imageId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdRef
@@ -152,7 +167,9 @@ public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdRef
     [JsonPropertyName("policy")]
     public V1beta1AMILaunchPermissionSpecInitProviderImageIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AMI in ec2 to populate imageId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdSelector
@@ -182,7 +201,9 @@ public partial class V1beta1AMILaunchPermissionSpecInitProviderImageIdSelector
     [JsonPropertyName("policy")]
     public V1beta1AMILaunchPermissionSpecInitProviderImageIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1AMILaunchPermissionSpecInitProvider
     [JsonPropertyName("organizationalUnitArn")]
     public string? OrganizationalUnitArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecProviderConfigRefPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1AMILaunchPermissionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecProviderConfigRef
@@ -241,7 +266,9 @@ public partial class V1beta1AMILaunchPermissionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AMILaunchPermissionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpecWriteConnectionSecretToRef
@@ -254,7 +281,9 @@ public partial class V1beta1AMILaunchPermissionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMILaunchPermissionSpec defines the desired state of AMILaunchPermission</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionSpec
@@ -283,7 +312,9 @@ public partial class V1beta1AMILaunchPermissionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AMILaunchPermissionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionStatusAtProvider
@@ -316,7 +347,9 @@ public partial class V1beta1AMILaunchPermissionStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionStatusConditions
@@ -345,7 +378,9 @@ public partial class V1beta1AMILaunchPermissionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMILaunchPermissionStatus defines the observed state of AMILaunchPermission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMILaunchPermissionStatus
@@ -362,7 +397,9 @@ public partial class V1beta1AMILaunchPermissionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMILaunchPermission is the Schema for the AMILaunchPermissions API. Adds a launch permission to an Amazon Machine Image (AMI).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -392,3 +429,4 @@ public partial class V1beta1AMILaunchPermission : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1AMILaunchPermissionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>ServiceAttachment is the Schema for the ServiceAttachments API. Represents a ServiceAttachment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServiceAttachmentList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1ServiceAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRef
@@ -59,7 +64,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptLists
@@ -114,7 +125,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptLists
     [JsonPropertyName("projectIdOrNum")]
     public string? ProjectIdOrNum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefs
@@ -140,7 +155,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefs
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate natSubnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelector
@@ -170,7 +189,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelector
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ForwardingRule in compute to populate targetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRef
@@ -196,7 +219,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ForwardingRule in compute to populate targetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelector
@@ -226,7 +253,9 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelecto
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecForProvider
@@ -299,7 +328,9 @@ public partial class V1beta1ServiceAttachmentSpecForProvider
     [JsonPropertyName("targetServiceSelector")]
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceSelector? TargetServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRefPolicy
@@ -312,7 +343,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRef
@@ -325,7 +358,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelectorPolicy
@@ -338,7 +373,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelector
@@ -355,7 +392,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
@@ -380,7 +419,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     [JsonPropertyName("projectIdOrNum")]
     public string? ProjectIdOrNum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefs
@@ -406,7 +449,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefs
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorPolicy
@@ -419,7 +464,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate natSubnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelector
@@ -436,7 +483,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelector
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPolicy
@@ -449,7 +498,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ForwardingRule in compute to populate targetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRef
@@ -462,7 +513,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicy
@@ -475,7 +528,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ForwardingRule in compute to populate targetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelector
@@ -492,7 +547,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelect
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecInitProvider
@@ -561,7 +618,9 @@ public partial class V1beta1ServiceAttachmentSpecInitProvider
     [JsonPropertyName("targetServiceSelector")]
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelector? TargetServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecProviderConfigRefPolicy
@@ -574,7 +633,9 @@ public partial class V1beta1ServiceAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecProviderConfigRef
@@ -587,7 +648,9 @@ public partial class V1beta1ServiceAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef
@@ -600,7 +663,9 @@ public partial class V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAttachmentSpec defines the desired state of ServiceAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentSpec
@@ -629,7 +694,9 @@ public partial class V1beta1ServiceAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatusAtProviderConnectedEndpoints
@@ -654,7 +721,9 @@ public partial class V1beta1ServiceAttachmentStatusAtProviderConnectedEndpoints
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatusAtProviderConsumerAcceptLists
@@ -671,7 +740,9 @@ public partial class V1beta1ServiceAttachmentStatusAtProviderConsumerAcceptLists
     [JsonPropertyName("projectIdOrNum")]
     public string? ProjectIdOrNum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatusAtProvider
@@ -744,7 +815,9 @@ public partial class V1beta1ServiceAttachmentStatusAtProvider
     [JsonPropertyName("targetService")]
     public string? TargetService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatusConditions
@@ -773,7 +846,9 @@ public partial class V1beta1ServiceAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAttachmentStatus defines the observed state of ServiceAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatus
@@ -790,7 +865,9 @@ public partial class V1beta1ServiceAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAttachment is the Schema for the ServiceAttachments API. Represents a ServiceAttachment resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -820,3 +897,4 @@ public partial class V1beta1ServiceAttachment : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ServiceAttachmentStatus? Status { get; set; }
 }
+#nullable disable

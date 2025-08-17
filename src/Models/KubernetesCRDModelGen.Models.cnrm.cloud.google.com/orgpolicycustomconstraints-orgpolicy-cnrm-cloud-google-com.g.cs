@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>OrgPolicyCustomConstraint is the Schema for the OrgPolicyCustomConstraint API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1alpha1OrgPolicyCustomConstraint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintSpecOrganizationRef
@@ -42,7 +45,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintSpecOrganizationRef
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrgPolicyCustomConstraintSpec defines the desired state of OrgPolicyCustomConstraint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintSpec
@@ -79,7 +84,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintSpec
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
@@ -104,7 +111,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintStatusObservedState
@@ -113,7 +122,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrgPolicyCustomConstraintStatus defines the config connector machine state of OrgPolicyCustomConstraint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintStatus
@@ -134,7 +145,9 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatus
     [JsonPropertyName("observedState")]
     public V1alpha1OrgPolicyCustomConstraintStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrgPolicyCustomConstraint is the Schema for the OrgPolicyCustomConstraint API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -164,3 +177,4 @@ public partial class V1alpha1OrgPolicyCustomConstraint : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1alpha1OrgPolicyCustomConstraintStatus? Status { get; set; }
 }
+#nullable disable

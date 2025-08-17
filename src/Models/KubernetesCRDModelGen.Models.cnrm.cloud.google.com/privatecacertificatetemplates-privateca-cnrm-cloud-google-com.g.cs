@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateCACertificateTemplateList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateCACertificateTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecIdentityConstraintsCelExpression
@@ -54,7 +57,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecIdentityConstraintsC
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecIdentityConstraints
@@ -71,7 +76,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecIdentityConstraints
     [JsonPropertyName("celExpression")]
     public V1beta1PrivateCACertificateTemplateSpecIdentityConstraintsCelExpression? CelExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPassthroughExtensionsAdditionalExtensions
@@ -80,7 +87,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPassthroughExtension
     [JsonPropertyName("objectIdPath")]
     public IList<long> ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPassthroughExtensions
@@ -93,7 +102,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPassthroughExtension
     [JsonPropertyName("knownExtensions")]
     public IList<string>? KnownExtensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The OID for this X.509 extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesAdditionalExtensionsObjectId
@@ -102,7 +113,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesAddi
     [JsonPropertyName("objectIdPath")]
     public IList<long> ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesAdditionalExtensions
@@ -119,7 +132,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesAddi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesCaOptions
@@ -132,7 +147,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesCaOp
     [JsonPropertyName("maxIssuerPathLength")]
     public long? MaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes high-level ways in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyUsageBaseKeyUsage
@@ -173,7 +190,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyU
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Detailed scenarios in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyUsageExtendedKeyUsage
@@ -202,7 +221,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyU
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyUsageUnknownExtendedKeyUsages
@@ -211,7 +232,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyU
     [JsonPropertyName("objectIdPath")]
     public IList<long> ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyUsage
@@ -228,7 +251,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyU
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1PrivateCACertificateTemplateSpecPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesPolicyIds
@@ -237,7 +262,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValuesPoli
     [JsonPropertyName("objectIdPath")]
     public IList<long> ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValues
@@ -262,7 +289,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecPredefinedValues
     [JsonPropertyName("policyIds")]
     public IList<V1beta1PrivateCACertificateTemplateSpecPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpecProjectRef
@@ -279,7 +308,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateSpec
@@ -312,7 +343,9 @@ public partial class V1beta1PrivateCACertificateTemplateSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateStatusConditions
@@ -337,7 +370,9 @@ public partial class V1beta1PrivateCACertificateTemplateStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateTemplateStatus
@@ -358,7 +393,9 @@ public partial class V1beta1PrivateCACertificateTemplateStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -388,3 +425,4 @@ public partial class V1beta1PrivateCACertificateTemplate : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1PrivateCACertificateTemplateStatus? Status { get; set; }
 }
+#nullable disable

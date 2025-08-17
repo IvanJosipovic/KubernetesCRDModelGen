@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformariadb.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20180601.Server Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20180601storageServerList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1api20180601storageServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20180601storageServerSpecOperatorSpecConfigMapExpressi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20180601storageServerSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOperatorSpecSecretsFullyQualifiedDomainName
@@ -80,7 +87,9 @@ public partial class V1api20180601storageServerSpecOperatorSpecSecretsFullyQuali
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOperatorSpecSecrets
@@ -93,7 +102,9 @@ public partial class V1api20180601storageServerSpecOperatorSpecSecrets
     [JsonPropertyName("fullyQualifiedDomainName")]
     public V1api20180601storageServerSpecOperatorSpecSecretsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOperatorSpec
@@ -114,7 +125,9 @@ public partial class V1api20180601storageServerSpecOperatorSpec
     [JsonPropertyName("secrets")]
     public V1api20180601storageServerSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecOwner
@@ -127,7 +140,9 @@ public partial class V1api20180601storageServerSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesDefaultAdministratorLoginPassword
@@ -140,7 +155,9 @@ public partial class V1api20180601storageServerSpecPropertiesDefaultAdministrato
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesDefaultStorageProfile
@@ -165,7 +182,9 @@ public partial class V1api20180601storageServerSpecPropertiesDefaultStorageProfi
     [JsonPropertyName("storageMB")]
     public int? StorageMB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPropertiesForDefaultCreate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesDefault
@@ -206,7 +225,9 @@ public partial class V1api20180601storageServerSpecPropertiesDefault
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesGeoRestoreStorageProfile
@@ -231,7 +252,9 @@ public partial class V1api20180601storageServerSpecPropertiesGeoRestoreStoragePr
     [JsonPropertyName("storageMB")]
     public int? StorageMB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPropertiesForGeoRestore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesGeoRestore
@@ -268,7 +291,9 @@ public partial class V1api20180601storageServerSpecPropertiesGeoRestore
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestoreStorageProfile
@@ -293,7 +318,9 @@ public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestoreS
     [JsonPropertyName("storageMB")]
     public int? StorageMB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPropertiesForRestore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestore
@@ -334,7 +361,9 @@ public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestore
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesReplicaStorageProfile
@@ -359,7 +388,9 @@ public partial class V1api20180601storageServerSpecPropertiesReplicaStorageProfi
     [JsonPropertyName("storageMB")]
     public int? StorageMB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPropertiesForReplica</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecPropertiesReplica
@@ -396,7 +427,9 @@ public partial class V1api20180601storageServerSpecPropertiesReplica
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPropertiesForCreate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecProperties
@@ -421,7 +454,9 @@ public partial class V1api20180601storageServerSpecProperties
     [JsonPropertyName("replica")]
     public V1api20180601storageServerSpecPropertiesReplica? Replica { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.Sku Billing information related properties of a server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpecSku
@@ -450,7 +485,9 @@ public partial class V1api20180601storageServerSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.Server_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerSpec
@@ -491,7 +528,9 @@ public partial class V1api20180601storageServerSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusConditions
@@ -524,7 +563,9 @@ public partial class V1api20180601storageServerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.PrivateEndpointProperty_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsPropertiesPrivateEndpoint
@@ -537,7 +578,9 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPrivateLinkServiceConnectionStateProperty_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsPropertiesPrivateLinkServiceConnectionState
@@ -558,7 +601,9 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPrivateEndpointConnectionProperties_STATUS Properties of a private endpoint connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsProperties
@@ -579,7 +624,9 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.ServerPrivateEndpointConnection_STATUS A private endpoint connection under a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusPrivateEndpointConnections
@@ -596,7 +643,9 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnections
     [JsonPropertyName("properties")]
     public V1api20180601storageServerStatusPrivateEndpointConnectionsProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.Sku_STATUS Billing information related properties of a server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusSku
@@ -625,7 +674,9 @@ public partial class V1api20180601storageServerStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.StorageProfile_STATUS Storage Profile properties of a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatusStorageProfile
@@ -650,7 +701,9 @@ public partial class V1api20180601storageServerStatusStorageProfile
     [JsonPropertyName("storageMB")]
     public int? StorageMB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.Server_STATUS Represents a server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageServerStatus
@@ -739,7 +792,9 @@ public partial class V1api20180601storageServerStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180601.Server Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -769,3 +824,4 @@ public partial class V1api20180601storageServer : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1api20180601storageServerStatus? Status { get; set; }
 }
+#nullable disable

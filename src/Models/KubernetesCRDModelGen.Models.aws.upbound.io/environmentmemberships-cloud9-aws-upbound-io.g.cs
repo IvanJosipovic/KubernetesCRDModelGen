@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloud9.aws.upbound.io;
+#nullable enable
 /// <summary>EnvironmentMembership is the Schema for the EnvironmentMemberships API. Provides an environment member to an AWS Cloud9 development environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EnvironmentMembershipList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1EnvironmentMembership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EnvironmentEC2 in cloud9 to populate environmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EnvironmentEC2 in cloud9 to populate environmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdSel
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentMembershipSpecForProviderEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in iam to populate userArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentMembershipSpecForProviderUserArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in iam to populate userArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProviderUserArnSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentMembershipSpecForProviderUserArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1EnvironmentMembershipSpecForProvider
     [JsonPropertyName("userArnSelector")]
     public V1beta1EnvironmentMembershipSpecForProviderUserArnSelector? UserArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1EnvironmentMembershipSpecInitProvider
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1EnvironmentMembershipSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1EnvironmentMembershipSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentMembershipSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1EnvironmentMembershipSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentMembershipSpec defines the desired state of EnvironmentMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipSpec
@@ -259,7 +288,9 @@ public partial class V1beta1EnvironmentMembershipSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EnvironmentMembershipSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipStatusAtProvider
@@ -288,7 +319,9 @@ public partial class V1beta1EnvironmentMembershipStatusAtProvider
     [JsonPropertyName("userId")]
     public string? UserId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipStatusConditions
@@ -317,7 +350,9 @@ public partial class V1beta1EnvironmentMembershipStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentMembershipStatus defines the observed state of EnvironmentMembership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentMembershipStatus
@@ -334,7 +369,9 @@ public partial class V1beta1EnvironmentMembershipStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentMembership is the Schema for the EnvironmentMemberships API. Provides an environment member to an AWS Cloud9 development environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -364,3 +401,4 @@ public partial class V1beta1EnvironmentMembership : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1EnvironmentMembershipStatus? Status { get; set; }
 }
+#nullable disable

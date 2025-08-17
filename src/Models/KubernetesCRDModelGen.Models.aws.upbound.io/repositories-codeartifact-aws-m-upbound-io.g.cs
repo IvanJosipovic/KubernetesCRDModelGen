@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codeartifact.aws.m.upbound.io;
+#nullable enable
 /// <summary>Repository is the Schema for the Repositorys API. Provides a CodeArtifact Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RepositoryList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Repository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderDomainRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RepositorySpecForProviderDomainRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Domain in codeartifact to populate domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderDomainRef
@@ -63,7 +68,9 @@ public partial class V1beta1RepositorySpecForProviderDomainRef
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderDomainRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderDomainSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RepositorySpecForProviderDomainSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Domain in codeartifact to populate domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderDomainSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RepositorySpecForProviderDomainSelector
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderDomainSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderExternalConnections
@@ -106,7 +117,9 @@ public partial class V1beta1RepositorySpecForProviderExternalConnections
     [JsonPropertyName("externalConnectionName")]
     public string? ExternalConnectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in codeartifact to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameRef
@@ -136,7 +151,9 @@ public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameRef
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderUpstreamRepositoryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in codeartifact to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelec
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderUpstream
@@ -187,7 +208,9 @@ public partial class V1beta1RepositorySpecForProviderUpstream
     [JsonPropertyName("repositoryNameSelector")]
     public V1beta1RepositorySpecForProviderUpstreamRepositoryNameSelector? RepositoryNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProvider
@@ -232,7 +255,9 @@ public partial class V1beta1RepositorySpecForProvider
     [JsonPropertyName("upstream")]
     public IList<V1beta1RepositorySpecForProviderUpstream>? Upstream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderExternalConnections
@@ -241,7 +266,9 @@ public partial class V1beta1RepositorySpecInitProviderExternalConnections
     [JsonPropertyName("externalConnectionName")]
     public string? ExternalConnectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameRefPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in codeartifact to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameRef
@@ -271,7 +300,9 @@ public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameRef
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderUpstreamRepositoryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSelectorPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in codeartifact to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSelector
@@ -305,7 +338,9 @@ public partial class V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSele
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderUpstream
@@ -322,7 +357,9 @@ public partial class V1beta1RepositorySpecInitProviderUpstream
     [JsonPropertyName("repositoryNameSelector")]
     public V1beta1RepositorySpecInitProviderUpstreamRepositoryNameSelector? RepositoryNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1RepositorySpecInitProvider
     [JsonPropertyName("upstream")]
     public IList<V1beta1RepositorySpecInitProviderUpstream>? Upstream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecProviderConfigRef
@@ -364,7 +403,9 @@ public partial class V1beta1RepositorySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
@@ -373,7 +414,9 @@ public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RepositorySpec defines the desired state of Repository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpec
@@ -398,7 +441,9 @@ public partial class V1beta1RepositorySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RepositorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProviderExternalConnections
@@ -415,7 +460,9 @@ public partial class V1beta1RepositoryStatusAtProviderExternalConnections
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProviderUpstream
@@ -424,7 +471,9 @@ public partial class V1beta1RepositoryStatusAtProviderUpstream
     [JsonPropertyName("repositoryName")]
     public string? RepositoryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProvider
@@ -477,7 +526,9 @@ public partial class V1beta1RepositoryStatusAtProvider
     [JsonPropertyName("upstream")]
     public IList<V1beta1RepositoryStatusAtProviderUpstream>? Upstream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusConditions
@@ -506,7 +557,9 @@ public partial class V1beta1RepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RepositoryStatus defines the observed state of Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatus
@@ -523,7 +576,9 @@ public partial class V1beta1RepositoryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Repository is the Schema for the Repositorys API. Provides a CodeArtifact Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -553,3 +608,4 @@ public partial class V1beta1Repository : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RepositoryStatus? Status { get; set; }
 }
+#nullable disable

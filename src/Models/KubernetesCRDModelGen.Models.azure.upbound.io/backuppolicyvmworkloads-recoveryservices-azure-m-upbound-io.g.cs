@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupPolicyVMWorkload is the Schema for the BackupPolicyVMWorkloads API. Manages an Azure VM Workload Backup Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupPolicyVMWorkloadList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1BackupPolicyVMWorkload> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyBackup
@@ -54,7 +57,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_daily block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionDaily
@@ -63,7 +68,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_monthly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionMonthly
@@ -88,7 +95,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_weekly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionWeekly
@@ -101,7 +110,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_yearly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicyRetentionYearly
@@ -130,7 +141,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A simple_retention block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicySimpleRetention
@@ -139,7 +152,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicy
@@ -172,7 +187,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolic
     [JsonPropertyName("simpleRetention")]
     public V1beta1BackupPolicyVMWorkloadSpecForProviderProtectionPolicySimpleRetention? SimpleRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRef
@@ -202,7 +221,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelector
@@ -236,7 +259,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNa
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyVMWorkloadSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRef
@@ -266,7 +293,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelectorPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelector
@@ -300,7 +331,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyVMWorkloadSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderSettings
@@ -313,7 +346,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProviderSettings
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecForProvider
@@ -354,7 +389,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecForProvider
     [JsonPropertyName("workloadType")]
     public string? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyBackup
@@ -375,7 +412,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_daily block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionDaily
@@ -384,7 +423,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_monthly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionMonthly
@@ -409,7 +450,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_weekly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionWeekly
@@ -422,7 +465,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_yearly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicyRetentionYearly
@@ -451,7 +496,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A simple_retention block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicySimpleRetention
@@ -460,7 +507,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicy
@@ -493,7 +542,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPoli
     [JsonPropertyName("simpleRetention")]
     public V1beta1BackupPolicyVMWorkloadSpecInitProviderProtectionPolicySimpleRetention? SimpleRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderSettings
@@ -506,7 +557,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProviderSettings
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecInitProvider
@@ -523,7 +576,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecInitProvider
     [JsonPropertyName("workloadType")]
     public string? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRef
@@ -536,7 +591,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpecWriteConnectionSecretToRef
@@ -545,7 +602,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyVMWorkloadSpec defines the desired state of BackupPolicyVMWorkload</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadSpec
@@ -570,7 +629,9 @@ public partial class V1beta1BackupPolicyVMWorkloadSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupPolicyVMWorkloadSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backup block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyBackup
@@ -591,7 +652,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_daily block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionDaily
@@ -600,7 +663,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_monthly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionMonthly
@@ -625,7 +690,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_weekly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionWeekly
@@ -638,7 +705,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A retention_yearly block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicyRetentionYearly
@@ -667,7 +736,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A simple_retention block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicySimpleRetention
@@ -676,7 +747,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicy
@@ -709,7 +782,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPoli
     [JsonPropertyName("simpleRetention")]
     public V1beta1BackupPolicyVMWorkloadStatusAtProviderProtectionPolicySimpleRetention? SimpleRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderSettings
@@ -722,7 +797,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProviderSettings
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusAtProvider
@@ -751,7 +828,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusAtProvider
     [JsonPropertyName("workloadType")]
     public string? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatusConditions
@@ -780,7 +859,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyVMWorkloadStatus defines the observed state of BackupPolicyVMWorkload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMWorkloadStatus
@@ -797,7 +878,9 @@ public partial class V1beta1BackupPolicyVMWorkloadStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyVMWorkload is the Schema for the BackupPolicyVMWorkloads API. Manages an Azure VM Workload Backup Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -827,3 +910,4 @@ public partial class V1beta1BackupPolicyVMWorkload : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyVMWorkloadStatus? Status { get; set; }
 }
+#nullable disable

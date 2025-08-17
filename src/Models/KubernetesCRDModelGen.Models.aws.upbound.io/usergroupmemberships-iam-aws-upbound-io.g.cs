@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
+#nullable enable
 /// <summary>UserGroupMembership is the Schema for the UserGroupMemberships API. Provides a resource for adding an IAM User to IAM Groups without conflicting with itself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserGroupMembershipList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1UserGroupMembership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderGroupRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderGroupRefs
@@ -59,7 +64,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecForProviderGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderGroupSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderGroupSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Group in iam to populate groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderGroupSelector
@@ -89,7 +98,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecForProviderGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderUserRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderUserRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in iam to populate user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderUserRef
@@ -115,7 +128,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderUserRef
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecForProviderUserRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderUserSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderUserSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in iam to populate user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProviderUserSelector
@@ -145,7 +162,9 @@ public partial class V1beta1UserGroupMembershipSpecForProviderUserSelector
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecForProviderUserSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1UserGroupMembershipSpecForProvider
     [JsonPropertyName("userSelector")]
     public V1beta1UserGroupMembershipSpecForProviderUserSelector? UserSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderGroupRefsPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderGroupRefs
@@ -200,7 +223,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecInitProviderGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderGroupSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderGroupSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Group in iam to populate groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderGroupSelector
@@ -230,7 +257,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecInitProviderGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderUserRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderUserRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in iam to populate user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderUserRef
@@ -256,7 +287,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderUserRef
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecInitProviderUserRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderUserSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderUserSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in iam to populate user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProviderUserSelector
@@ -286,7 +321,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProviderUserSelector
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecInitProviderUserSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1UserGroupMembershipSpecInitProvider
     [JsonPropertyName("userSelector")]
     public V1beta1UserGroupMembershipSpecInitProviderUserSelector? UserSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1UserGroupMembershipSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1UserGroupMembershipSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UserGroupMembershipSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1UserGroupMembershipSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserGroupMembershipSpec defines the desired state of UserGroupMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipSpec
@@ -383,7 +428,9 @@ public partial class V1beta1UserGroupMembershipSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserGroupMembershipSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipStatusAtProvider
@@ -400,7 +447,9 @@ public partial class V1beta1UserGroupMembershipStatusAtProvider
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipStatusConditions
@@ -429,7 +478,9 @@ public partial class V1beta1UserGroupMembershipStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserGroupMembershipStatus defines the observed state of UserGroupMembership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupMembershipStatus
@@ -446,7 +497,9 @@ public partial class V1beta1UserGroupMembershipStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserGroupMembership is the Schema for the UserGroupMemberships API. Provides a resource for adding an IAM User to IAM Groups without conflicting with itself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +529,4 @@ public partial class V1beta1UserGroupMembership : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1UserGroupMembershipStatus? Status { get; set; }
 }
+#nullable disable

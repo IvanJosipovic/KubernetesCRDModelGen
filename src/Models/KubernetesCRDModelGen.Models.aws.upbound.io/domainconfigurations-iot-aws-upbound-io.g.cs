@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+#nullable enable
 /// <summary>DomainConfiguration is the Schema for the DomainConfigurations API. Creates and manages an AWS IoT domain configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DomainConfigurationList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1DomainConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderAuthorizerConfig
@@ -46,7 +49,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderAuthorizerConfig
     [JsonPropertyName("defaultAuthorizerName")]
     public string? DefaultAuthorizerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateArnsRefsPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateArnsRefs
@@ -72,7 +79,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateA
     [JsonPropertyName("policy")]
     public V1beta1DomainConfigurationSpecForProviderServerCertificateArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateArnsSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Certificate in acm to populate serverCertificateArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateArnsSelector
@@ -102,7 +113,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderServerCertificateA
     [JsonPropertyName("policy")]
     public V1beta1DomainConfigurationSpecForProviderServerCertificateArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the TLS configuration for a domain. See the tls_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderTlsConfig
@@ -111,7 +124,9 @@ public partial class V1beta1DomainConfigurationSpecForProviderTlsConfig
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProvider
@@ -168,7 +183,9 @@ public partial class V1beta1DomainConfigurationSpecForProvider
     [JsonPropertyName("validationCertificateArn")]
     public string? ValidationCertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderAuthorizerConfig
@@ -181,7 +198,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderAuthorizerConfig
     [JsonPropertyName("defaultAuthorizerName")]
     public string? DefaultAuthorizerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsRefsPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsRefs
@@ -207,7 +228,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificate
     [JsonPropertyName("policy")]
     public V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsSelectorPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Certificate in acm to populate serverCertificateArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsSelector
@@ -237,7 +262,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderServerCertificate
     [JsonPropertyName("policy")]
     public V1beta1DomainConfigurationSpecInitProviderServerCertificateArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the TLS configuration for a domain. See the tls_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProviderTlsConfig
@@ -246,7 +273,9 @@ public partial class V1beta1DomainConfigurationSpecInitProviderTlsConfig
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProvider
@@ -299,7 +328,9 @@ public partial class V1beta1DomainConfigurationSpecInitProvider
     [JsonPropertyName("validationCertificateArn")]
     public string? ValidationCertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecProviderConfigRefPolicy
@@ -312,7 +343,9 @@ public partial class V1beta1DomainConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecProviderConfigRef
@@ -325,7 +358,9 @@ public partial class V1beta1DomainConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DomainConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecWriteConnectionSecretToRef
@@ -338,7 +373,9 @@ public partial class V1beta1DomainConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainConfigurationSpec defines the desired state of DomainConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpec
@@ -367,7 +404,9 @@ public partial class V1beta1DomainConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DomainConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatusAtProviderAuthorizerConfig
@@ -380,7 +419,9 @@ public partial class V1beta1DomainConfigurationStatusAtProviderAuthorizerConfig
     [JsonPropertyName("defaultAuthorizerName")]
     public string? DefaultAuthorizerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object that specifies the TLS configuration for a domain. See the tls_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatusAtProviderTlsConfig
@@ -389,7 +430,9 @@ public partial class V1beta1DomainConfigurationStatusAtProviderTlsConfig
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatusAtProvider
@@ -454,7 +497,9 @@ public partial class V1beta1DomainConfigurationStatusAtProvider
     [JsonPropertyName("validationCertificateArn")]
     public string? ValidationCertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatusConditions
@@ -483,7 +528,9 @@ public partial class V1beta1DomainConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainConfigurationStatus defines the observed state of DomainConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatus
@@ -500,7 +547,9 @@ public partial class V1beta1DomainConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainConfiguration is the Schema for the DomainConfigurations API. Creates and manages an AWS IoT domain configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -530,3 +579,4 @@ public partial class V1beta1DomainConfiguration : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1DomainConfigurationStatus? Status { get; set; }
 }
+#nullable disable

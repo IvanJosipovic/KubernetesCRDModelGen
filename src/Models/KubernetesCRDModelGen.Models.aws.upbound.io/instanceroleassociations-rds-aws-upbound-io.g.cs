@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+#nullable enable
 /// <summary>InstanceRoleAssociation is the Schema for the InstanceRoleAssociations API. Manages an RDS DB Instance association with an IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceRoleAssociationList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1InstanceRoleAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierRef
@@ -59,7 +64,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIden
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierSelector
@@ -89,7 +98,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIden
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecForProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1InstanceRoleAssociationSpecForProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1InstanceRoleAssociationSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierRef
@@ -208,7 +231,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIde
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierSelector
@@ -238,7 +265,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIde
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecInitProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnRef
@@ -264,7 +295,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelector
@@ -294,7 +329,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1InstanceRoleAssociationSpecInitProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1InstanceRoleAssociationSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1InstanceRoleAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1InstanceRoleAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceRoleAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1InstanceRoleAssociationSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRoleAssociationSpec defines the desired state of InstanceRoleAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationSpec
@@ -395,7 +440,9 @@ public partial class V1beta1InstanceRoleAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceRoleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationStatusAtProvider
@@ -420,7 +467,9 @@ public partial class V1beta1InstanceRoleAssociationStatusAtProvider
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationStatusConditions
@@ -449,7 +498,9 @@ public partial class V1beta1InstanceRoleAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRoleAssociationStatus defines the observed state of InstanceRoleAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceRoleAssociationStatus
@@ -466,7 +517,9 @@ public partial class V1beta1InstanceRoleAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRoleAssociation is the Schema for the InstanceRoleAssociations API. Manages an RDS DB Instance association with an IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -496,3 +549,4 @@ public partial class V1beta1InstanceRoleAssociation : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1InstanceRoleAssociationStatus? Status { get; set; }
 }
+#nullable disable

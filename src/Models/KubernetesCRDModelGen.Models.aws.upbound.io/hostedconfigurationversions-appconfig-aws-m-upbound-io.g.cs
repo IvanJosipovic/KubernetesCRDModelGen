@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfig.aws.m.upbound.io;
+#nullable enable
 /// <summary>HostedConfigurationVersion is the Schema for the HostedConfigurationVersions API. Provides an AppConfig Hosted Configuration Version resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HostedConfigurationVersionList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1HostedConfigurationVersion> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurati
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurati
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Content of the configuration or the configuration data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProviderContentSecretRef
@@ -174,7 +193,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderContentSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1HostedConfigurationVersionSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRef
@@ -249,7 +274,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelectorPolicy
@@ -262,7 +289,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelector
@@ -283,7 +312,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRefPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRef
@@ -313,7 +346,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurat
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdSelector
@@ -347,7 +384,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurat
     [JsonPropertyName("policy")]
     public V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Content of the configuration or the configuration data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProviderContentSecretRef
@@ -360,7 +399,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderContentSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecInitProvider
@@ -401,7 +442,9 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecProviderConfigRef
@@ -414,7 +457,9 @@ public partial class V1beta1HostedConfigurationVersionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpecWriteConnectionSecretToRef
@@ -423,7 +468,9 @@ public partial class V1beta1HostedConfigurationVersionSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedConfigurationVersionSpec defines the desired state of HostedConfigurationVersion</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionSpec
@@ -448,7 +495,9 @@ public partial class V1beta1HostedConfigurationVersionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HostedConfigurationVersionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionStatusAtProvider
@@ -485,7 +534,9 @@ public partial class V1beta1HostedConfigurationVersionStatusAtProvider
     [JsonPropertyName("versionNumber")]
     public double? VersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionStatusConditions
@@ -514,7 +565,9 @@ public partial class V1beta1HostedConfigurationVersionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedConfigurationVersionStatus defines the observed state of HostedConfigurationVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedConfigurationVersionStatus
@@ -531,7 +584,9 @@ public partial class V1beta1HostedConfigurationVersionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostedConfigurationVersion is the Schema for the HostedConfigurationVersions API. Provides an AppConfig Hosted Configuration Version resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -561,3 +616,4 @@ public partial class V1beta1HostedConfigurationVersion : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1HostedConfigurationVersionStatus? Status { get; set; }
 }
+#nullable disable

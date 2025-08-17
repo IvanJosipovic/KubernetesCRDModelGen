@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fsx.aws.upbound.io;
+#nullable enable
 /// <summary>OntapFileSystem is the Schema for the OntapFileSystems API. Manages an Amazon FSx for NetApp ONTAP file system.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OntapFileSystemList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1OntapFileSystem> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderDiskIopsConfiguration
@@ -46,7 +49,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderDiskIopsConfiguration
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderFsxAdminPasswordSecretRef
@@ -63,7 +68,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderFsxAdminPasswordSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelector
@@ -119,7 +132,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate preferredSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRef
@@ -145,7 +162,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelectorPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate preferredSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelector
@@ -175,7 +196,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPolicy
@@ -188,7 +211,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefs
@@ -201,7 +226,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelector
@@ -231,7 +260,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicy
@@ -244,7 +275,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefs
@@ -257,7 +290,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy
@@ -270,7 +305,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelector
@@ -287,7 +324,9 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecForProvider
@@ -400,7 +439,9 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderDiskIopsConfiguration
@@ -413,7 +454,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderDiskIopsConfiguration
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderFsxAdminPasswordSecretRef
@@ -430,7 +473,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderFsxAdminPasswordSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicy
@@ -443,7 +488,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRef
@@ -456,7 +503,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
@@ -469,7 +518,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelector
@@ -486,7 +537,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefPolicy
@@ -499,7 +552,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate preferredSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRef
@@ -512,7 +567,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelectorPolicy
@@ -525,7 +582,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate preferredSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelector
@@ -542,7 +601,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSele
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
@@ -555,7 +616,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefs
@@ -568,7 +631,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -581,7 +646,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelector
@@ -598,7 +665,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelect
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicy
@@ -611,7 +680,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefs
@@ -624,7 +695,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicy
@@ -637,7 +710,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelector
@@ -654,7 +729,9 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecInitProvider
@@ -763,7 +840,9 @@ public partial class V1beta1OntapFileSystemSpecInitProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecProviderConfigRefPolicy
@@ -776,7 +855,9 @@ public partial class V1beta1OntapFileSystemSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecProviderConfigRef
@@ -789,7 +870,9 @@ public partial class V1beta1OntapFileSystemSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1OntapFileSystemSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpecWriteConnectionSecretToRef
@@ -802,7 +885,9 @@ public partial class V1beta1OntapFileSystemSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OntapFileSystemSpec defines the desired state of OntapFileSystem</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemSpec
@@ -831,7 +916,9 @@ public partial class V1beta1OntapFileSystemSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OntapFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration
@@ -844,7 +931,9 @@ public partial class V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
@@ -857,7 +946,9 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsManagement
@@ -870,7 +961,9 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsManagement
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpoints
@@ -883,7 +976,9 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpoints
     [JsonPropertyName("management")]
     public IList<V1beta1OntapFileSystemStatusAtProviderEndpointsManagement>? Management { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProvider
@@ -992,7 +1087,9 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusConditions
@@ -1021,7 +1118,9 @@ public partial class V1beta1OntapFileSystemStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OntapFileSystemStatus defines the observed state of OntapFileSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatus
@@ -1038,7 +1137,9 @@ public partial class V1beta1OntapFileSystemStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OntapFileSystem is the Schema for the OntapFileSystems API. Manages an Amazon FSx for NetApp ONTAP file system.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1068,3 +1169,4 @@ public partial class V1beta1OntapFileSystem : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1OntapFileSystemStatus? Status { get; set; }
 }
+#nullable disable

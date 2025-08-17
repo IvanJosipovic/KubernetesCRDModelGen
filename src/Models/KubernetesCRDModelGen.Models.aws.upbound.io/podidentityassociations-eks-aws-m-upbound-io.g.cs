@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.m.upbound.io;
+#nullable enable
 /// <summary>PodIdentityAssociation is the Schema for the PodIdentityAssociations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PodIdentityAssociationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1PodIdentityAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameSele
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate targetRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnRe
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate targetRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSe
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProvider
@@ -286,7 +313,9 @@ public partial class V1beta1PodIdentityAssociationSpecForProvider
     [JsonPropertyName("targetRoleArnSelector")]
     public V1beta1PodIdentityAssociationSpecForProviderTargetRoleArnSelector? TargetRoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameRefPolicy
@@ -299,7 +328,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameRef
@@ -316,7 +347,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameSelectorPolicy
@@ -329,7 +362,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameSelector
@@ -350,7 +385,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderClusterNameSel
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnRefPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnRef
@@ -380,7 +419,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnSelectorPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnSelector
@@ -414,7 +457,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnRefPolicy
@@ -427,7 +472,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate targetRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnRef
@@ -444,7 +491,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnSelectorPolicy
@@ -457,7 +506,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate targetRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnSelector
@@ -478,7 +529,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecInitProvider
@@ -535,7 +588,9 @@ public partial class V1beta1PodIdentityAssociationSpecInitProvider
     [JsonPropertyName("targetRoleArnSelector")]
     public V1beta1PodIdentityAssociationSpecInitProviderTargetRoleArnSelector? TargetRoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecProviderConfigRef
@@ -548,7 +603,9 @@ public partial class V1beta1PodIdentityAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecWriteConnectionSecretToRef
@@ -557,7 +614,9 @@ public partial class V1beta1PodIdentityAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodIdentityAssociationSpec defines the desired state of PodIdentityAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpec
@@ -582,7 +641,9 @@ public partial class V1beta1PodIdentityAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PodIdentityAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationStatusAtProvider
@@ -639,7 +700,9 @@ public partial class V1beta1PodIdentityAssociationStatusAtProvider
     [JsonPropertyName("targetRoleArn")]
     public string? TargetRoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationStatusConditions
@@ -668,7 +731,9 @@ public partial class V1beta1PodIdentityAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodIdentityAssociationStatus defines the observed state of PodIdentityAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationStatus
@@ -685,7 +750,9 @@ public partial class V1beta1PodIdentityAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodIdentityAssociation is the Schema for the PodIdentityAssociations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -715,3 +782,4 @@ public partial class V1beta1PodIdentityAssociation : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1PodIdentityAssociationStatus? Status { get; set; }
 }
+#nullable disable

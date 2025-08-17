@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apphub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AppHubDiscoveredService is the Schema for the AppHubDiscoveredService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppHubDiscoveredServiceList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1AppHubDiscoveredService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1AppHubDiscoveredServiceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredServiceSpec defines the desired state of AppHubDiscoveredService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1AppHubDiscoveredServiceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1AppHubDiscoveredServiceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Properties of an underlying compute resource that can comprise a Service. These are immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceStatusObservedStateServiceProperties
@@ -113,7 +122,9 @@ public partial class V1alpha1AppHubDiscoveredServiceStatusObservedStateServicePr
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Reference to an underlying networking resource that can comprise a Service. These are immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceStatusObservedStateServiceReference
@@ -122,7 +133,9 @@ public partial class V1alpha1AppHubDiscoveredServiceStatusObservedStateServiceRe
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceStatusObservedState
@@ -135,7 +148,9 @@ public partial class V1alpha1AppHubDiscoveredServiceStatusObservedState
     [JsonPropertyName("serviceReference")]
     public V1alpha1AppHubDiscoveredServiceStatusObservedStateServiceReference? ServiceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredServiceStatus defines the config connector machine state of AppHubDiscoveredService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredServiceStatus
@@ -156,7 +171,9 @@ public partial class V1alpha1AppHubDiscoveredServiceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1AppHubDiscoveredServiceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredService is the Schema for the AppHubDiscoveredService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -186,3 +203,4 @@ public partial class V1alpha1AppHubDiscoveredService : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1AppHubDiscoveredServiceStatus? Status { get; set; }
 }
+#nullable disable

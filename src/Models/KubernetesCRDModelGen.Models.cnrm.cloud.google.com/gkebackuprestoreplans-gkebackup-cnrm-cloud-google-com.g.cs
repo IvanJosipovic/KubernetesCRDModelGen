@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkebackup.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>GKEBackupRestorePlan is the Schema for the GKEBackupRestorePlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1GKEBackupRestorePlanList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1GKEBackupRestorePlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. A reference to the [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may be used as the source for Restores created via this RestorePlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecBackupPlanRef
@@ -50,7 +53,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecBackupPlanRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. The target cluster into which Restores created via this RestorePlan will restore data. NOTE: the cluster's region must be the same as the RestorePlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecClusterRef
@@ -67,7 +72,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecProjectRef
@@ -88,7 +95,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourceRestoreScopeExcludedGroupKinds
@@ -101,7 +110,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourc
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourceRestoreScopeSelectedGroupKinds
@@ -114,7 +125,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourc
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Identifies the cluster-scoped resources to restore from the Backup. Not specifying it means NO cluster resource will be restored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourceRestoreScope
@@ -135,7 +148,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourc
     [JsonPropertyName("selectedGroupKinds")]
     public IList<V1alpha1GKEBackupRestorePlanSpecRestoreConfigClusterResourceRestoreScopeSelectedGroupKinds>? SelectedGroupKinds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of selected namespaces excluded from restoration. All namespaces except those in this list will be restored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigExcludedNamespaces
@@ -144,7 +159,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigExcludedNamesp
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The requiring group kind requires that the other group kind be restored first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGroupKindDependenciesRequiring
@@ -157,7 +174,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGr
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The satisfying group kind must be restored first in order to satisfy the dependency.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGroupKindDependenciesSatisfying
@@ -170,7 +189,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGr
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGroupKindDependencies
@@ -183,7 +204,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGr
     [JsonPropertyName("satisfying")]
     public V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGroupKindDependenciesSatisfying Satisfying { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. RestoreOrder contains custom ordering to use on a Restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrder
@@ -192,7 +215,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrder
     [JsonPropertyName("groupKindDependencies")]
     public IList<V1alpha1GKEBackupRestorePlanSpecRestoreConfigRestoreOrderGroupKindDependencies>? GroupKindDependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedApplicationsNamespacedNames
@@ -205,7 +230,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedApplic
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of selected ProtectedApplications to restore. The listed ProtectedApplications and all the resources to which they refer will be restored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedApplications
@@ -214,7 +241,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedApplic
     [JsonPropertyName("namespacedNames")]
     public IList<V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of selected Namespaces to restore from the Backup. The listed Namespaces and all resources contained in them will be restored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedNamespaces
@@ -223,7 +252,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSelectedNamesp
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSubstitutionRulesTargetGroupKinds
@@ -236,7 +267,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSubstitutionRu
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSubstitutionRules
@@ -261,7 +294,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigSubstitutionRu
     [JsonPropertyName("targetNamespaces")]
     public IList<string>? TargetNamespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformationRulesFieldActions
@@ -282,7 +317,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformation
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformationRulesResourceFilterGroupKinds
@@ -295,7 +332,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformation
     [JsonPropertyName("resourceKind")]
     public string? ResourceKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. This field is used to specify a set of fields that should be used to determine which resources in backup should be acted upon by the supplied transformation rule actions, and this will ensure that only specific resources are affected by transformation rule actions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformationRulesResourceFilter
@@ -312,7 +351,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformation
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformationRules
@@ -329,7 +370,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformation
     [JsonPropertyName("resourceFilter")]
     public V1alpha1GKEBackupRestorePlanSpecRestoreConfigTransformationRulesResourceFilter? ResourceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigVolumeDataRestorePolicyBindings
@@ -342,7 +385,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfigVolumeDataRest
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Configuration of Restores created via this RestorePlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfig
@@ -399,7 +444,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpecRestoreConfig
     [JsonPropertyName("volumeDataRestorePolicyBindings")]
     public IList<V1alpha1GKEBackupRestorePlanSpecRestoreConfigVolumeDataRestorePolicyBindings>? VolumeDataRestorePolicyBindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupRestorePlanSpec defines the desired state of GKEBackupRestorePlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpec
@@ -436,7 +483,9 @@ public partial class V1alpha1GKEBackupRestorePlanSpec
     [JsonPropertyName("restoreConfig")]
     public V1alpha1GKEBackupRestorePlanSpecRestoreConfig RestoreConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanStatusConditions
@@ -461,7 +510,9 @@ public partial class V1alpha1GKEBackupRestorePlanStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanStatusObservedState
@@ -490,7 +541,9 @@ public partial class V1alpha1GKEBackupRestorePlanStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupRestorePlanStatus defines the config connector machine state of GKEBackupRestorePlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanStatus
@@ -511,7 +564,9 @@ public partial class V1alpha1GKEBackupRestorePlanStatus
     [JsonPropertyName("observedState")]
     public V1alpha1GKEBackupRestorePlanStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupRestorePlan is the Schema for the GKEBackupRestorePlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -541,3 +596,4 @@ public partial class V1alpha1GKEBackupRestorePlan : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1GKEBackupRestorePlanStatus? Status { get; set; }
 }
+#nullable disable

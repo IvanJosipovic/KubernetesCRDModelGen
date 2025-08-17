@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.m.upbound.io;
+#nullable enable
 /// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserPoolList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1UserPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism
@@ -46,7 +49,9 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecover
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
@@ -55,7 +60,9 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
     [JsonPropertyName("recoveryMechanism")]
     public IList<V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Invite message template structure. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMessageTemplate
@@ -72,7 +79,9 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMe
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for creating a new user profile. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
@@ -85,7 +94,9 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
     [JsonPropertyName("inviteMessageTemplate")]
     public V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMessageTemplate? InviteMessageTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the user pool's device tracking. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
@@ -98,7 +109,9 @@ public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
     [JsonPropertyName("deviceOnlyRememberedOnUserPrompt")]
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
@@ -123,7 +136,9 @@ public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderEmailMfaConfiguration
@@ -136,7 +151,9 @@ public partial class V1beta1UserPoolSpecForProviderEmailMfaConfiguration
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRef
@@ -166,7 +185,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelector
@@ -200,7 +223,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRef
@@ -230,7 +257,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelector
@@ -264,7 +295,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom email sender AWS Lambda trigger. See custom_email_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
@@ -285,7 +318,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicy
@@ -298,7 +333,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate customMessage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRef
@@ -315,7 +352,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate customMessage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelector
@@ -349,7 +390,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSele
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRef
@@ -379,7 +424,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
@@ -392,7 +439,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelector
@@ -413,7 +462,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSender
@@ -434,7 +485,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSender
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicy
@@ -447,7 +500,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRef
@@ -464,7 +519,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicy
@@ -477,7 +534,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelector
@@ -498,7 +557,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
@@ -511,7 +572,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRef
@@ -528,7 +591,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicy
@@ -541,7 +606,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelector
@@ -562,7 +629,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicy
@@ -575,7 +644,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRef
@@ -592,7 +663,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicy
@@ -605,7 +678,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
@@ -626,7 +701,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicy
@@ -639,7 +716,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRef
@@ -656,7 +735,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationR
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicy
@@ -669,7 +750,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelector
@@ -690,7 +773,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationS
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
@@ -703,7 +788,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRef
@@ -720,7 +807,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicy
@@ -733,7 +822,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelector
@@ -754,7 +845,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicy
@@ -767,7 +860,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRef
@@ -784,7 +879,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicy
@@ -797,7 +894,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
@@ -818,7 +917,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allow to customize access tokens. See pre_token_configuration_type</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationConfig
@@ -831,7 +932,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicy
@@ -844,7 +947,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRef
@@ -861,7 +966,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicy
@@ -874,7 +981,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
@@ -895,7 +1004,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicy
@@ -908,7 +1019,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate userMigration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRef
@@ -925,7 +1038,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicy
@@ -938,7 +1053,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate userMigration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelector
@@ -959,7 +1076,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSele
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
@@ -972,7 +1091,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRef
@@ -989,7 +1110,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
@@ -1002,7 +1125,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelector
@@ -1023,7 +1148,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfig
@@ -1172,7 +1299,9 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfig
     [JsonPropertyName("verifyAuthChallengeResponseSelector")]
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelector? VerifyAuthChallengeResponseSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool password policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
@@ -1205,7 +1334,9 @@ public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
     [JsonPropertyName("temporaryPasswordValidityDays")]
     public double? TemporaryPasswordValidityDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the constraints for an attribute of the number type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstraints
@@ -1218,7 +1349,9 @@ public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstrai
     [JsonPropertyName("minValue")]
     public string? MinValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Constraints for an attribute of the string type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints
@@ -1231,7 +1364,9 @@ public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstrai
     [JsonPropertyName("minLength")]
     public string? MinLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSchema
@@ -1264,7 +1399,9 @@ public partial class V1beta1UserPoolSpecForProviderSchema
     [JsonPropertyName("stringAttributeConstraints")]
     public V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints? StringAttributeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSignInPolicy
@@ -1273,7 +1410,9 @@ public partial class V1beta1UserPoolSpecForProviderSignInPolicy
     [JsonPropertyName("allowedFirstAuthFactors")]
     public IList<string>? AllowedFirstAuthFactors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy
@@ -1286,7 +1425,9 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRef
@@ -1303,7 +1444,9 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnR
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicy
@@ -1316,7 +1459,9 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelector
@@ -1337,7 +1482,9 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the taint command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
@@ -1362,7 +1509,9 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
     [JsonPropertyName("snsRegion")]
     public string? SnsRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
@@ -1371,7 +1520,9 @@ public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user attribute update settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
@@ -1380,7 +1531,9 @@ public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
     [JsonPropertyName("attributesRequireVerificationBeforeUpdate")]
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
@@ -1389,7 +1542,9 @@ public partial class V1beta1UserPoolSpecForProviderUserPoolAddOnsAdvancedSecurit
     [JsonPropertyName("customAuthMode")]
     public string? CustomAuthMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
@@ -1402,7 +1557,9 @@ public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for username configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
@@ -1411,7 +1568,9 @@ public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
     [JsonPropertyName("caseSensitive")]
     public bool? CaseSensitive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for verification message templates. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
@@ -1440,7 +1599,9 @@ public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderWebAuthnConfiguration
@@ -1453,7 +1614,9 @@ public partial class V1beta1UserPoolSpecForProviderWebAuthnConfiguration
     [JsonPropertyName("userVerification")]
     public string? UserVerification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProvider
@@ -1574,7 +1737,9 @@ public partial class V1beta1UserPoolSpecForProvider
     [JsonPropertyName("webAuthnConfiguration")]
     public V1beta1UserPoolSpecForProviderWebAuthnConfiguration? WebAuthnConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecoveryMechanism
@@ -1587,7 +1752,9 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecove
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
@@ -1596,7 +1763,9 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
     [JsonPropertyName("recoveryMechanism")]
     public IList<V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Invite message template structure. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteMessageTemplate
@@ -1613,7 +1782,9 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteM
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for creating a new user profile. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
@@ -1626,7 +1797,9 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
     [JsonPropertyName("inviteMessageTemplate")]
     public V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteMessageTemplate? InviteMessageTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the user pool's device tracking. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
@@ -1639,7 +1812,9 @@ public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
     [JsonPropertyName("deviceOnlyRememberedOnUserPrompt")]
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
@@ -1664,7 +1839,9 @@ public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderEmailMfaConfiguration
@@ -1677,7 +1854,9 @@ public partial class V1beta1UserPoolSpecInitProviderEmailMfaConfiguration
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicy
@@ -1690,7 +1869,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRef
@@ -1707,7 +1888,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicy
@@ -1720,7 +1903,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelector
@@ -1741,7 +1926,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
@@ -1754,7 +1941,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRef
@@ -1771,7 +1960,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
@@ -1784,7 +1975,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelector
@@ -1805,7 +1998,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom email sender AWS Lambda trigger. See custom_email_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSender
@@ -1826,7 +2021,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicy
@@ -1839,7 +2036,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate customMessage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
@@ -1856,7 +2055,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicy
@@ -1869,7 +2070,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate customMessage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelector
@@ -1890,7 +2093,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSel
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
@@ -1903,7 +2108,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRef
@@ -1920,7 +2127,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
@@ -1933,7 +2142,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelector
@@ -1954,7 +2165,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSender
@@ -1975,7 +2188,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSender
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicy
@@ -1988,7 +2203,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRef
@@ -2005,7 +2222,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicy
@@ -2018,7 +2237,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelector
@@ -2039,7 +2260,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicy
@@ -2052,7 +2275,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRef
@@ -2069,7 +2294,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicy
@@ -2082,7 +2309,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
@@ -2103,7 +2332,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicy
@@ -2116,7 +2347,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRef
@@ -2133,7 +2366,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicy
@@ -2146,7 +2381,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelector
@@ -2167,7 +2404,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
@@ -2180,7 +2419,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRef
@@ -2197,7 +2438,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicy
@@ -2210,7 +2453,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelector
@@ -2231,7 +2476,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicy
@@ -2244,7 +2491,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRef
@@ -2261,7 +2510,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicy
@@ -2274,7 +2525,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
@@ -2295,7 +2548,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicy
@@ -2308,7 +2563,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRef
@@ -2325,7 +2582,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicy
@@ -2338,7 +2597,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelector
@@ -2359,7 +2620,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allow to customize access tokens. See pre_token_configuration_type</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationConfig
@@ -2372,7 +2635,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicy
@@ -2385,7 +2650,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRef
@@ -2402,7 +2669,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicy
@@ -2415,7 +2684,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelector
@@ -2436,7 +2707,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicy
@@ -2449,7 +2722,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate userMigration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
@@ -2466,7 +2741,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicy
@@ -2479,7 +2756,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate userMigration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelector
@@ -2500,7 +2779,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSel
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
@@ -2513,7 +2794,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRef
@@ -2530,7 +2813,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
@@ -2543,7 +2828,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelector
@@ -2564,7 +2851,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
@@ -2713,7 +3002,9 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
     [JsonPropertyName("verifyAuthChallengeResponseSelector")]
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelector? VerifyAuthChallengeResponseSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool password policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
@@ -2746,7 +3037,9 @@ public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
     [JsonPropertyName("temporaryPasswordValidityDays")]
     public double? TemporaryPasswordValidityDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the constraints for an attribute of the number type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstraints
@@ -2759,7 +3052,9 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstra
     [JsonPropertyName("minValue")]
     public string? MinValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Constraints for an attribute of the string type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints
@@ -2772,7 +3067,9 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstra
     [JsonPropertyName("minLength")]
     public string? MinLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSchema
@@ -2805,7 +3102,9 @@ public partial class V1beta1UserPoolSpecInitProviderSchema
     [JsonPropertyName("stringAttributeConstraints")]
     public V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints? StringAttributeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSignInPolicy
@@ -2814,7 +3113,9 @@ public partial class V1beta1UserPoolSpecInitProviderSignInPolicy
     [JsonPropertyName("allowedFirstAuthFactors")]
     public IList<string>? AllowedFirstAuthFactors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
@@ -2827,7 +3128,9 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRef
@@ -2844,7 +3147,9 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicy
@@ -2857,7 +3162,9 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelector
@@ -2878,7 +3185,9 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     [JsonPropertyName("policy")]
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the taint command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
@@ -2903,7 +3212,9 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
     [JsonPropertyName("snsRegion")]
     public string? SnsRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguration
@@ -2912,7 +3223,9 @@ public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguratio
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user attribute update settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
@@ -2921,7 +3234,9 @@ public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
     [JsonPropertyName("attributesRequireVerificationBeforeUpdate")]
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
@@ -2930,7 +3245,9 @@ public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOnsAdvancedSecuri
     [JsonPropertyName("customAuthMode")]
     public string? CustomAuthMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
@@ -2943,7 +3260,9 @@ public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for username configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
@@ -2952,7 +3271,9 @@ public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
     [JsonPropertyName("caseSensitive")]
     public bool? CaseSensitive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for verification message templates. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
@@ -2981,7 +3302,9 @@ public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderWebAuthnConfiguration
@@ -2994,7 +3317,9 @@ public partial class V1beta1UserPoolSpecInitProviderWebAuthnConfiguration
     [JsonPropertyName("userVerification")]
     public string? UserVerification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProvider
@@ -3111,7 +3436,9 @@ public partial class V1beta1UserPoolSpecInitProvider
     [JsonPropertyName("webAuthnConfiguration")]
     public V1beta1UserPoolSpecInitProviderWebAuthnConfiguration? WebAuthnConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecProviderConfigRef
@@ -3124,7 +3451,9 @@ public partial class V1beta1UserPoolSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
@@ -3133,7 +3462,9 @@ public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolSpec defines the desired state of UserPool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpec
@@ -3158,7 +3489,9 @@ public partial class V1beta1UserPoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecoveryMechanism
@@ -3171,7 +3504,9 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecove
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
@@ -3180,7 +3515,9 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
     [JsonPropertyName("recoveryMechanism")]
     public IList<V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Invite message template structure. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteMessageTemplate
@@ -3197,7 +3534,9 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteM
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for creating a new user profile. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
@@ -3210,7 +3549,9 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
     [JsonPropertyName("inviteMessageTemplate")]
     public V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteMessageTemplate? InviteMessageTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the user pool's device tracking. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
@@ -3223,7 +3564,9 @@ public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
     [JsonPropertyName("deviceOnlyRememberedOnUserPrompt")]
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
@@ -3248,7 +3591,9 @@ public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderEmailMfaConfiguration
@@ -3261,7 +3606,9 @@ public partial class V1beta1UserPoolStatusAtProviderEmailMfaConfiguration
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom email sender AWS Lambda trigger. See custom_email_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSender
@@ -3274,7 +3621,9 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSende
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
@@ -3287,7 +3636,9 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allow to customize access tokens. See pre_token_configuration_type</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerationConfig
@@ -3300,7 +3651,9 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
@@ -3361,7 +3714,9 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
     [JsonPropertyName("verifyAuthChallengeResponse")]
     public string? VerifyAuthChallengeResponse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool password policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
@@ -3394,7 +3749,9 @@ public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
     [JsonPropertyName("temporaryPasswordValidityDays")]
     public double? TemporaryPasswordValidityDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the constraints for an attribute of the number type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstraints
@@ -3407,7 +3764,9 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstra
     [JsonPropertyName("minValue")]
     public string? MinValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Constraints for an attribute of the string type. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstraints
@@ -3420,7 +3779,9 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstra
     [JsonPropertyName("minLength")]
     public string? MinLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSchema
@@ -3453,7 +3814,9 @@ public partial class V1beta1UserPoolStatusAtProviderSchema
     [JsonPropertyName("stringAttributeConstraints")]
     public V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstraints? StringAttributeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSignInPolicy
@@ -3462,7 +3825,9 @@ public partial class V1beta1UserPoolStatusAtProviderSignInPolicy
     [JsonPropertyName("allowedFirstAuthFactors")]
     public IList<string>? AllowedFirstAuthFactors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the taint command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
@@ -3479,7 +3844,9 @@ public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
     [JsonPropertyName("snsRegion")]
     public string? SnsRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguration
@@ -3488,7 +3855,9 @@ public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguratio
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user attribute update settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
@@ -3497,7 +3866,9 @@ public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
     [JsonPropertyName("attributesRequireVerificationBeforeUpdate")]
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
@@ -3506,7 +3877,9 @@ public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOnsAdvancedSecuri
     [JsonPropertyName("customAuthMode")]
     public string? CustomAuthMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
@@ -3519,7 +3892,9 @@ public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for username configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
@@ -3528,7 +3903,9 @@ public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
     [JsonPropertyName("caseSensitive")]
     public bool? CaseSensitive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for verification message templates. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
@@ -3557,7 +3934,9 @@ public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderWebAuthnConfiguration
@@ -3570,7 +3949,9 @@ public partial class V1beta1UserPoolStatusAtProviderWebAuthnConfiguration
     [JsonPropertyName("userVerification")]
     public string? UserVerification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProvider
@@ -3727,7 +4108,9 @@ public partial class V1beta1UserPoolStatusAtProvider
     [JsonPropertyName("webAuthnConfiguration")]
     public V1beta1UserPoolStatusAtProviderWebAuthnConfiguration? WebAuthnConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusConditions
@@ -3756,7 +4139,9 @@ public partial class V1beta1UserPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolStatus defines the observed state of UserPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatus
@@ -3773,7 +4158,9 @@ public partial class V1beta1UserPoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3803,3 +4190,4 @@ public partial class V1beta1UserPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1UserPoolStatus? Status { get; set; }
 }
+#nullable disable

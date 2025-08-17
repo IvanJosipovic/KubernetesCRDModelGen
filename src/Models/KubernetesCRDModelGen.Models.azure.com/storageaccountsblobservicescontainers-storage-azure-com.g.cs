@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerLis
     [JsonPropertyName("items")]
     public IList<V1api20230101storageStorageAccountsBlobServicesContainer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ImmutableStorageWithVersioning Object level immutability properties of the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecImmutableStorageWithVersioning
@@ -46,7 +49,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecOperatorSpecConfigMapExpressions
@@ -63,7 +68,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecOperatorSpecSecretExpressions
@@ -80,7 +87,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecOperatorSpec
@@ -97,7 +106,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageStorageAccountsBlobServicesContainerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpecOwner
@@ -110,7 +121,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpec
@@ -163,7 +176,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     [JsonPropertyName("publicAccess")]
     public string? PublicAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusConditions
@@ -196,7 +211,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.UpdateHistoryProperty_STATUS An update history of the ImmutabilityPolicy of a blob container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutabilityPolicyUpdateHistory
@@ -237,7 +254,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("upn")]
     public string? Upn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ImmutabilityPolicyProperties_STATUS The properties of an ImmutabilityPolicy of a blob container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutabilityPolicy
@@ -270,7 +289,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("updateHistory")]
     public IList<V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutabilityPolicyUpdateHistory>? UpdateHistory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ImmutableStorageWithVersioning_STATUS Object level immutability properties of the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusImmutableStorageWithVersioning
@@ -291,7 +312,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("timeStamp")]
     public string? TimeStamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ProtectedAppendWritesHistory_STATUS Protected append writes history setting for the blob container with Legal holds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldProtectedAppendWritesHistory
@@ -308,7 +331,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("timestamp")]
     public string? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.TagProperty_STATUS A tag of the LegalHold of a blob container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldTags
@@ -337,7 +362,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("upn")]
     public string? Upn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.LegalHoldProperties_STATUS The LegalHold property of a blob container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHold
@@ -358,7 +385,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("tags")]
     public IList<V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatus
@@ -463,7 +492,9 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -493,3 +524,4 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainer : 
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsBlobServicesContainerStatus? Status { get; set; }
 }
+#nullable disable

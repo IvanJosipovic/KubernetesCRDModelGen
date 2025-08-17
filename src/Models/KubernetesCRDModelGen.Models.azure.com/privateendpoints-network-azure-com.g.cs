@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpoint Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storagePrivateEndpointList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1api20240301storagePrivateEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityGroupsReference
@@ -54,7 +57,9 @@ public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationSecurityGroupSpec_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityGroups
@@ -67,7 +72,9 @@ public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityG
     [JsonPropertyName("reference")]
     public V1api20240301storagePrivateEndpointSpecApplicationSecurityGroupsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecExtendedLocation
@@ -84,7 +91,9 @@ public partial class V1api20240301storagePrivateEndpointSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpointIPConfiguration An IP Configuration of the private endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecIpConfigurations
@@ -109,7 +118,9 @@ public partial class V1api20240301storagePrivateEndpointSpecIpConfigurations
     [JsonPropertyName("privateIPAddress")]
     public string? PrivateIPAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
@@ -130,7 +141,9 @@ public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkSer
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceReference
@@ -151,7 +164,9 @@ public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkSer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnections
@@ -180,7 +195,9 @@ public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkSer
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapExpressions
@@ -197,7 +214,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMa
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress
@@ -210,7 +229,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpointOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMaps
@@ -223,7 +244,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMa
     [JsonPropertyName("primaryNicPrivateIpAddress")]
     public V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress? PrimaryNicPrivateIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecSecretExpressions
@@ -240,7 +263,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecSecretEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOperatorSpec
@@ -261,7 +286,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storagePrivateEndpointSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecOwner
@@ -274,7 +301,9 @@ public partial class V1api20240301storagePrivateEndpointSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
@@ -295,7 +324,9 @@ public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceCo
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceReference
@@ -316,7 +347,9 @@ public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnections
@@ -345,7 +378,9 @@ public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceCo
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecSubnetReference
@@ -366,7 +401,9 @@ public partial class V1api20240301storagePrivateEndpointSpecSubnetReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpecSubnet
@@ -379,7 +416,9 @@ public partial class V1api20240301storagePrivateEndpointSpecSubnet
     [JsonPropertyName("reference")]
     public V1api20240301storagePrivateEndpointSpecSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointSpec
@@ -440,7 +479,9 @@ public partial class V1api20240301storagePrivateEndpointSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationSecurityGroup_STATUS_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusApplicationSecurityGroups
@@ -453,7 +494,9 @@ public partial class V1api20240301storagePrivateEndpointStatusApplicationSecurit
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusConditions
@@ -486,7 +529,9 @@ public partial class V1api20240301storagePrivateEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomDnsConfigPropertiesFormat_STATUS Contains custom Dns resolution configuration from customer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusCustomDnsConfigs
@@ -503,7 +548,9 @@ public partial class V1api20240301storagePrivateEndpointStatusCustomDnsConfigs
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusExtendedLocation
@@ -520,7 +567,9 @@ public partial class V1api20240301storagePrivateEndpointStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpointIPConfiguration_STATUS An IP Configuration of the private endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusIpConfigurations
@@ -553,7 +602,9 @@ public partial class V1api20240301storagePrivateEndpointStatusIpConfigurations
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
@@ -574,7 +625,9 @@ public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkS
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnections
@@ -619,7 +672,9 @@ public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkS
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterface_STATUS_PrivateEndpoint_SubResourceEmbedded A network interface in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusNetworkInterfaces
@@ -632,7 +687,9 @@ public partial class V1api20240301storagePrivateEndpointStatusNetworkInterfaces
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
@@ -653,7 +710,9 @@ public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkService
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnections
@@ -698,7 +757,9 @@ public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkService
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_STATUS_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatusSubnet
@@ -711,7 +772,9 @@ public partial class V1api20240301storagePrivateEndpointStatusSubnet
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpoint_STATUS_PrivateEndpoint_SubResourceEmbedded Private endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateEndpointStatus
@@ -788,7 +851,9 @@ public partial class V1api20240301storagePrivateEndpointStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpoint Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -818,3 +883,4 @@ public partial class V1api20240301storagePrivateEndpoint : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1api20240301storagePrivateEndpointStatus? Status { get; set; }
 }
+#nullable disable

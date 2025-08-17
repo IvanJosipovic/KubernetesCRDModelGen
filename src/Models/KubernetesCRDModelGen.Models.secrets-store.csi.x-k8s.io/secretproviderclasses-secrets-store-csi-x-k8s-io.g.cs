@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsstore.csi.xk8s.io;
+#nullable enable
 /// <summary>SecretProviderClass is the Schema for the secretproviderclasses API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SecretProviderClassList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1SecretProviderClass> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretObjectData defines the desired state of synced K8s secret object data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpecSecretObjectsData
@@ -46,7 +49,9 @@ public partial class V1SecretProviderClassSpecSecretObjectsData
     [JsonPropertyName("objectName")]
     public string? ObjectName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretObject defines the desired state of synced K8s secret objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpecSecretObjects
@@ -71,7 +76,9 @@ public partial class V1SecretProviderClassSpecSecretObjects
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClassSpec defines the desired state of SecretProviderClass</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassSpec
@@ -88,13 +95,17 @@ public partial class V1SecretProviderClassSpec
     [JsonPropertyName("secretObjects")]
     public IList<V1SecretProviderClassSpecSecretObjects>? SecretObjects { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClassStatus defines the observed state of SecretProviderClass</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassStatus
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClass is the Schema for the secretproviderclasses API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -124,3 +135,4 @@ public partial class V1SecretProviderClass : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1SecretProviderClassStatus? Status { get; set; }
 }
+#nullable disable

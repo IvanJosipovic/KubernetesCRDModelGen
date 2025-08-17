@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.discoveryengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DiscoveryEngineEngine is the Schema for the DiscoveryEngineEngine API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DiscoveryEngineEngineList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1alpha1DiscoveryEngineEngine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configurationt generate the Dialogflow agent that is associated to  this Engine.   Note that these configurations are one-time consumed by  and passed to Dialogflow service. It means they cannot be retrieved using  [EngineService.GetEngine][google.cloud.discoveryengine.v1.EngineService.GetEngine]  or  [EngineService.ListEngines][google.cloud.discoveryengine.v1.EngineService.ListEngines]  API after engine creation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecChatEngineConfigAgentCreationConfig
@@ -54,7 +57,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecChatEngineConfigAgentCreat
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecChatEngineConfig
@@ -67,7 +72,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecChatEngineConfig
     [JsonPropertyName("dialogflowAgentToLink")]
     public string? DialogflowAgentToLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common config spec that specifies the metadata of the engine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecCommonConfig
@@ -76,7 +83,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecCommonConfig
     [JsonPropertyName("companyName")]
     public string? CompanyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreRef defines the resource reference to DiscoveryEngineDataStore, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecDataStoreRefs
@@ -93,7 +102,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecDataStoreRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecProjectRef
@@ -114,7 +125,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the Search Engine. Only applicable if solution_type is SOLUTION_TYPE_SEARCH.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecSearchEngineConfig
@@ -127,7 +140,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpecSearchEngineConfig
     [JsonPropertyName("searchTier")]
     public string? SearchTier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineEngineSpec defines the desired state of DiscoveryEngineEngine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpec
@@ -180,7 +195,9 @@ public partial class V1alpha1DiscoveryEngineEngineSpec
     [JsonPropertyName("solutionType")]
     public string SolutionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineStatusConditions
@@ -205,13 +222,17 @@ public partial class V1alpha1DiscoveryEngineEngineStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineEngineStatus defines the config connector machine state of DiscoveryEngineEngine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineStatus
@@ -232,7 +253,9 @@ public partial class V1alpha1DiscoveryEngineEngineStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DiscoveryEngineEngineStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineEngine is the Schema for the DiscoveryEngineEngine API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -262,3 +285,4 @@ public partial class V1alpha1DiscoveryEngineEngine : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1alpha1DiscoveryEngineEngineStatus? Status { get; set; }
 }
+#nullable disable

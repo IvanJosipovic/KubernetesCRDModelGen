@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.m.upbound.io;
+#nullable enable
 /// <summary>RoleDefinition is the Schema for the RoleDefinitions API. Manages a custom Role Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RoleDefinitionList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1RoleDefinition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefs
@@ -63,7 +68,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecForProviderAssignableScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelecto
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecForProviderAssignableScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderPermissions
@@ -118,7 +129,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderPermissions
     [JsonPropertyName("notDataActions")]
     public IList<string>? NotDataActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderScopeRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderScopeRef
@@ -148,7 +163,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderScopeSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderScopeSelector
@@ -182,7 +201,9 @@ public partial class V1beta1RoleDefinitionSpecForProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProvider
@@ -227,7 +248,9 @@ public partial class V1beta1RoleDefinitionSpecForProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1RoleDefinitionSpecForProviderScopeSelector? ScopeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefsPolicy
@@ -240,7 +263,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefs
@@ -257,7 +282,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelectorPolicy
@@ -270,7 +297,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelector
@@ -291,7 +320,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelect
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderPermissions
@@ -312,7 +343,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderPermissions
     [JsonPropertyName("notDataActions")]
     public IList<string>? NotDataActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderScopeRefPolicy
@@ -325,7 +358,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderScopeRef
@@ -342,7 +377,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelectorPolicy
@@ -355,7 +392,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelector
@@ -376,7 +415,9 @@ public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1RoleDefinitionSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProvider
@@ -421,7 +462,9 @@ public partial class V1beta1RoleDefinitionSpecInitProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1RoleDefinitionSpecInitProviderScopeSelector? ScopeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecProviderConfigRef
@@ -434,7 +477,9 @@ public partial class V1beta1RoleDefinitionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecWriteConnectionSecretToRef
@@ -443,7 +488,9 @@ public partial class V1beta1RoleDefinitionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleDefinitionSpec defines the desired state of RoleDefinition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpec
@@ -468,7 +515,9 @@ public partial class V1beta1RoleDefinitionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RoleDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionStatusAtProviderPermissions
@@ -489,7 +538,9 @@ public partial class V1beta1RoleDefinitionStatusAtProviderPermissions
     [JsonPropertyName("notDataActions")]
     public IList<string>? NotDataActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionStatusAtProvider
@@ -526,7 +577,9 @@ public partial class V1beta1RoleDefinitionStatusAtProvider
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionStatusConditions
@@ -555,7 +608,9 @@ public partial class V1beta1RoleDefinitionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleDefinitionStatus defines the observed state of RoleDefinition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionStatus
@@ -572,7 +627,9 @@ public partial class V1beta1RoleDefinitionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleDefinition is the Schema for the RoleDefinitions API. Manages a custom Role Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -602,3 +659,4 @@ public partial class V1beta1RoleDefinition : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1RoleDefinitionStatus? Status { get; set; }
 }
+#nullable disable

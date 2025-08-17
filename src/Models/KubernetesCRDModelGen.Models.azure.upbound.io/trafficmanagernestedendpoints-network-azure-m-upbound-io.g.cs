@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>TrafficManagerNestedEndpoint is the Schema for the TrafficManagerNestedEndpoints API. Manages a Nested Endpoint within a Traffic Manager Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrafficManagerNestedEndpointList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1TrafficManagerNestedEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderCustomHeader
@@ -46,7 +49,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderCustomHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficManagerProfile in network to populate profileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileId
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficManagerProfile in network to populate profileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderProfileId
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecForProviderProfileIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderSubnet
@@ -127,7 +140,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficManagerProfile in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdRef
@@ -157,7 +174,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetRes
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdSelectorPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficManagerProfile in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdSelector
@@ -191,7 +212,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProviderTargetRes
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecForProvider
@@ -260,7 +283,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderCustomHeader
@@ -273,7 +298,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderCustomHe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderSubnet
@@ -290,7 +317,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdRefPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficManagerProfile in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdRef
@@ -320,7 +351,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetRe
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdSelectorPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficManagerProfile in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdSelector
@@ -354,7 +389,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetRe
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecInitProvider
@@ -411,7 +448,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecProviderConfigRef
@@ -424,7 +463,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpecWriteConnectionSecretToRef
@@ -433,7 +474,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecWriteConnectionSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerNestedEndpointSpec defines the desired state of TrafficManagerNestedEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointSpec
@@ -458,7 +501,9 @@ public partial class V1beta1TrafficManagerNestedEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrafficManagerNestedEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointStatusAtProviderCustomHeader
@@ -471,7 +516,9 @@ public partial class V1beta1TrafficManagerNestedEndpointStatusAtProviderCustomHe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointStatusAtProviderSubnet
@@ -488,7 +535,9 @@ public partial class V1beta1TrafficManagerNestedEndpointStatusAtProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointStatusAtProvider
@@ -545,7 +594,9 @@ public partial class V1beta1TrafficManagerNestedEndpointStatusAtProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointStatusConditions
@@ -574,7 +625,9 @@ public partial class V1beta1TrafficManagerNestedEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerNestedEndpointStatus defines the observed state of TrafficManagerNestedEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerNestedEndpointStatus
@@ -591,7 +644,9 @@ public partial class V1beta1TrafficManagerNestedEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerNestedEndpoint is the Schema for the TrafficManagerNestedEndpoints API. Manages a Nested Endpoint within a Traffic Manager Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -621,3 +676,4 @@ public partial class V1beta1TrafficManagerNestedEndpoint : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1TrafficManagerNestedEndpointStatus? Status { get; set; }
 }
+#nullable disable

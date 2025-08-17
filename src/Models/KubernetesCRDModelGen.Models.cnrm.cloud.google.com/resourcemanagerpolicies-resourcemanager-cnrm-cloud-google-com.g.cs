@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceManagerPolicyList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceManagerPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A boolean policy is a constraint that is either enforced or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
@@ -42,7 +45,9 @@ public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
     [JsonPropertyName("enforced")]
     public bool Enforced { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The folder on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecFolderRef
@@ -59,7 +64,9 @@ public partial class V1beta1ResourceManagerPolicySpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or the other must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
@@ -72,7 +79,9 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or the other must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
@@ -85,7 +94,9 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. .</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecListPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicy
     [JsonPropertyName("suggestedValue")]
     public string? SuggestedValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The organization on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
@@ -123,7 +136,9 @@ public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecProjectRef
@@ -140,7 +155,9 @@ public partial class V1beta1ResourceManagerPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A restore policy is a constraint to restore the default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
@@ -149,7 +166,9 @@ public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
     [JsonPropertyName("default")]
     public bool Default { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicySpec
@@ -186,7 +205,9 @@ public partial class V1beta1ResourceManagerPolicySpec
     [JsonPropertyName("version")]
     public int? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicyStatusConditions
@@ -211,7 +232,9 @@ public partial class V1beta1ResourceManagerPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceManagerPolicyStatus
@@ -232,7 +255,9 @@ public partial class V1beta1ResourceManagerPolicyStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -262,3 +287,4 @@ public partial class V1beta1ResourceManagerPolicy : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ResourceManagerPolicyStatus? Status { get; set; }
 }
+#nullable disable

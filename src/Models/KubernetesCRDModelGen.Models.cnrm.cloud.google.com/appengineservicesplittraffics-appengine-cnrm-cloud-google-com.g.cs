@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppEngineServiceSplitTrafficList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1alpha1AppEngineServiceSplitTraffic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Mapping that defines fractional HTTP traffic diversion to different versions within the service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineServiceSplitTrafficSpecSplit
@@ -46,7 +49,9 @@ public partial class V1alpha1AppEngineServiceSplitTrafficSpecSplit
     [JsonPropertyName("shardBy")]
     public string? ShardBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineServiceSplitTrafficSpec
@@ -67,7 +72,9 @@ public partial class V1alpha1AppEngineServiceSplitTrafficSpec
     [JsonPropertyName("split")]
     public V1alpha1AppEngineServiceSplitTrafficSpecSplit Split { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineServiceSplitTrafficStatusConditions
@@ -92,7 +99,9 @@ public partial class V1alpha1AppEngineServiceSplitTrafficStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineServiceSplitTrafficStatus
@@ -105,7 +114,9 @@ public partial class V1alpha1AppEngineServiceSplitTrafficStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -135,3 +146,4 @@ public partial class V1alpha1AppEngineServiceSplitTraffic : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1alpha1AppEngineServiceSplitTrafficStatus? Status { get; set; }
 }
+#nullable disable

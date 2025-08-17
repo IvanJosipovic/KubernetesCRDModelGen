@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.gcp.m.upbound.io;
+#nullable enable
 /// <summary>LiteTopic is the Schema for the LiteTopics API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LiteTopicList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1LiteTopic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capacity configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
@@ -46,7 +49,9 @@ public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's partitions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfig
@@ -59,7 +64,9 @@ public partial class V1beta1LiteTopicSpecForProviderPartitionConfig
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LiteReservation in pubsub to populate throughputReservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRef
@@ -89,7 +98,9 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     [JsonPropertyName("policy")]
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LiteReservation in pubsub to populate throughputReservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelector
@@ -123,7 +136,9 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     [JsonPropertyName("policy")]
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's Reservation usage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderReservationConfig
@@ -140,7 +155,9 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfig
     [JsonPropertyName("throughputReservationSelector")]
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelector? ThroughputReservationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for a topic's message retention. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderRetentionConfig
@@ -153,7 +170,9 @@ public partial class V1beta1LiteTopicSpecForProviderRetentionConfig
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1LiteTopicSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capacity configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderPartitionConfigCapacity
@@ -195,7 +216,9 @@ public partial class V1beta1LiteTopicSpecInitProviderPartitionConfigCapacity
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's partitions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderPartitionConfig
@@ -208,7 +231,9 @@ public partial class V1beta1LiteTopicSpecInitProviderPartitionConfig
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRefPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LiteReservation in pubsub to populate throughputReservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRef
@@ -238,7 +265,9 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     [JsonPropertyName("policy")]
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelectorPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LiteReservation in pubsub to populate throughputReservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelector
@@ -272,7 +303,9 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     [JsonPropertyName("policy")]
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's Reservation usage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfig
@@ -289,7 +322,9 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfig
     [JsonPropertyName("throughputReservationSelector")]
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelector? ThroughputReservationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for a topic's message retention. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProviderRetentionConfig
@@ -302,7 +337,9 @@ public partial class V1beta1LiteTopicSpecInitProviderRetentionConfig
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1LiteTopicSpecInitProvider
     [JsonPropertyName("retentionConfig")]
     public V1beta1LiteTopicSpecInitProviderRetentionConfig? RetentionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecProviderConfigRef
@@ -340,7 +379,9 @@ public partial class V1beta1LiteTopicSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecWriteConnectionSecretToRef
@@ -349,7 +390,9 @@ public partial class V1beta1LiteTopicSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LiteTopicSpec defines the desired state of LiteTopic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpec
@@ -374,7 +417,9 @@ public partial class V1beta1LiteTopicSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LiteTopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capacity configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusAtProviderPartitionConfigCapacity
@@ -387,7 +432,9 @@ public partial class V1beta1LiteTopicStatusAtProviderPartitionConfigCapacity
     [JsonPropertyName("subscribeMibPerSec")]
     public double? SubscribeMibPerSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's partitions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusAtProviderPartitionConfig
@@ -400,7 +447,9 @@ public partial class V1beta1LiteTopicStatusAtProviderPartitionConfig
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for this topic's Reservation usage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusAtProviderReservationConfig
@@ -409,7 +458,9 @@ public partial class V1beta1LiteTopicStatusAtProviderReservationConfig
     [JsonPropertyName("throughputReservation")]
     public string? ThroughputReservation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for a topic's message retention. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusAtProviderRetentionConfig
@@ -422,7 +473,9 @@ public partial class V1beta1LiteTopicStatusAtProviderRetentionConfig
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusAtProvider
@@ -455,7 +508,9 @@ public partial class V1beta1LiteTopicStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatusConditions
@@ -484,7 +539,9 @@ public partial class V1beta1LiteTopicStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LiteTopicStatus defines the observed state of LiteTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicStatus
@@ -501,7 +558,9 @@ public partial class V1beta1LiteTopicStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LiteTopic is the Schema for the LiteTopics API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -531,3 +590,4 @@ public partial class V1beta1LiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1LiteTopicStatus? Status { get; set; }
 }
+#nullable disable

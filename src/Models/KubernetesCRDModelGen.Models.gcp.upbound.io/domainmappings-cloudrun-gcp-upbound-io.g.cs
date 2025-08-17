@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudrun.gcp.upbound.io;
+#nullable enable
 /// <summary>DomainMapping is the Schema for the DomainMappings API. Resource to hold the state and status of a user's domain mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DomainMappingList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1DomainMapping> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRef
@@ -59,7 +64,9 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelecto
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderMetadata
@@ -114,7 +125,9 @@ public partial class V1beta1DomainMappingSpecForProviderMetadata
     [JsonPropertyName("namespaceSelector")]
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceSelector? NamespaceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in cloudrun to populate routeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRef
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in cloudrun to populate routeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProviderSpec
@@ -195,7 +216,9 @@ public partial class V1beta1DomainMappingSpecForProviderSpec
     [JsonPropertyName("routeNameSelector")]
     public V1beta1DomainMappingSpecForProviderSpecRouteNameSelector? RouteNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecForProvider
@@ -220,7 +243,9 @@ public partial class V1beta1DomainMappingSpecForProvider
     [JsonPropertyName("spec")]
     public IList<V1beta1DomainMappingSpecForProviderSpec>? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRef
@@ -246,7 +273,9 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelector
@@ -276,7 +307,9 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelect
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderMetadata
@@ -301,7 +334,9 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadata
     [JsonPropertyName("namespaceSelector")]
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelector? NamespaceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in cloudrun to populate routeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRef
@@ -327,7 +364,9 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRef
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in cloudrun to populate routeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector
@@ -357,7 +398,9 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProviderSpec
@@ -382,7 +425,9 @@ public partial class V1beta1DomainMappingSpecInitProviderSpec
     [JsonPropertyName("routeNameSelector")]
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector? RouteNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecInitProvider
@@ -407,7 +452,9 @@ public partial class V1beta1DomainMappingSpecInitProvider
     [JsonPropertyName("spec")]
     public IList<V1beta1DomainMappingSpecInitProviderSpec>? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecProviderConfigRefPolicy
@@ -420,7 +467,9 @@ public partial class V1beta1DomainMappingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecProviderConfigRef
@@ -433,7 +482,9 @@ public partial class V1beta1DomainMappingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DomainMappingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecWriteConnectionSecretToRef
@@ -446,7 +497,9 @@ public partial class V1beta1DomainMappingSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainMappingSpec defines the desired state of DomainMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpec
@@ -475,7 +528,9 @@ public partial class V1beta1DomainMappingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DomainMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProviderMetadata
@@ -520,7 +575,9 @@ public partial class V1beta1DomainMappingStatusAtProviderMetadata
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProviderSpec
@@ -537,7 +594,9 @@ public partial class V1beta1DomainMappingStatusAtProviderSpec
     [JsonPropertyName("routeName")]
     public string? RouteName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProviderStatusConditions
@@ -558,7 +617,9 @@ public partial class V1beta1DomainMappingStatusAtProviderStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProviderStatusResourceRecords
@@ -575,7 +636,9 @@ public partial class V1beta1DomainMappingStatusAtProviderStatusResourceRecords
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProviderStatus
@@ -596,7 +659,9 @@ public partial class V1beta1DomainMappingStatusAtProviderStatus
     [JsonPropertyName("resourceRecords")]
     public IList<V1beta1DomainMappingStatusAtProviderStatusResourceRecords>? ResourceRecords { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusAtProvider
@@ -629,7 +694,9 @@ public partial class V1beta1DomainMappingStatusAtProvider
     [JsonPropertyName("status")]
     public IList<V1beta1DomainMappingStatusAtProviderStatus>? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatusConditions
@@ -658,7 +725,9 @@ public partial class V1beta1DomainMappingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainMappingStatus defines the observed state of DomainMapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingStatus
@@ -675,7 +744,9 @@ public partial class V1beta1DomainMappingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainMapping is the Schema for the DomainMappings API. Resource to hold the state and status of a user's domain mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -705,3 +776,4 @@ public partial class V1beta1DomainMapping : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1DomainMappingStatus? Status { get; set; }
 }
+#nullable disable

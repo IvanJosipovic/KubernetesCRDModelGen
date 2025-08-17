@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notificationhubs.azure.upbound.io;
+#nullable enable
 /// <summary>NotificationHub is the Schema for the NotificationHubs API. Manages a Notification Hub within a Notification Hub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NotificationHubList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1NotificationHub> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1NotificationHubSpecForProviderApnsCredentialTokenSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderApnsCredential
@@ -75,7 +80,9 @@ public partial class V1beta1NotificationHubSpecForProviderApnsCredential
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef? TokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderBrowserCredentialVapidPrivateKeySecretRef
@@ -92,7 +99,9 @@ public partial class V1beta1NotificationHubSpecForProviderBrowserCredentialVapid
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderBrowserCredential
@@ -109,7 +118,9 @@ public partial class V1beta1NotificationHubSpecForProviderBrowserCredential
     [JsonPropertyName("vapidPublicKey")]
     public string? VapidPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySecretRef
@@ -126,7 +137,9 @@ public partial class V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderGcmCredential
@@ -135,7 +148,9 @@ public partial class V1beta1NotificationHubSpecForProviderGcmCredential
     [JsonPropertyName("apiKeySecretRef")]
     public V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySecretRef? ApiKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRef
@@ -161,7 +178,9 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelectorPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelector
@@ -191,7 +212,9 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1NotificationHubSpecForProviderNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRef
@@ -217,7 +242,9 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationHubSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicy
@@ -230,7 +257,9 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelector
@@ -247,7 +276,9 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelec
     [JsonPropertyName("policy")]
     public V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecForProvider
@@ -296,7 +327,9 @@ public partial class V1beta1NotificationHubSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderApnsCredentialTokenSecretRef
@@ -313,7 +346,9 @@ public partial class V1beta1NotificationHubSpecInitProviderApnsCredentialTokenSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
@@ -338,7 +373,9 @@ public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1NotificationHubSpecInitProviderApnsCredentialTokenSecretRef TokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderBrowserCredentialVapidPrivateKeySecretRef
@@ -355,7 +392,9 @@ public partial class V1beta1NotificationHubSpecInitProviderBrowserCredentialVapi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderBrowserCredential
@@ -372,7 +411,9 @@ public partial class V1beta1NotificationHubSpecInitProviderBrowserCredential
     [JsonPropertyName("vapidPublicKey")]
     public string? VapidPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderGcmCredentialApiKeySecretRef
@@ -389,7 +430,9 @@ public partial class V1beta1NotificationHubSpecInitProviderGcmCredentialApiKeySe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderGcmCredential
@@ -398,7 +441,9 @@ public partial class V1beta1NotificationHubSpecInitProviderGcmCredential
     [JsonPropertyName("apiKeySecretRef")]
     public V1beta1NotificationHubSpecInitProviderGcmCredentialApiKeySecretRef ApiKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProvider
@@ -423,7 +468,9 @@ public partial class V1beta1NotificationHubSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecProviderConfigRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1NotificationHubSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecProviderConfigRef
@@ -449,7 +498,9 @@ public partial class V1beta1NotificationHubSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationHubSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecWriteConnectionSecretToRef
@@ -462,7 +513,9 @@ public partial class V1beta1NotificationHubSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationHubSpec defines the desired state of NotificationHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpec
@@ -491,7 +544,9 @@ public partial class V1beta1NotificationHubSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NotificationHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProviderApnsCredential
@@ -512,7 +567,9 @@ public partial class V1beta1NotificationHubStatusAtProviderApnsCredential
     [JsonPropertyName("teamId")]
     public string? TeamId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProviderBrowserCredential
@@ -525,7 +582,9 @@ public partial class V1beta1NotificationHubStatusAtProviderBrowserCredential
     [JsonPropertyName("vapidPublicKey")]
     public string? VapidPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef
@@ -542,7 +601,9 @@ public partial class V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProviderGcmCredential
@@ -551,7 +612,9 @@ public partial class V1beta1NotificationHubStatusAtProviderGcmCredential
     [JsonPropertyName("apiKeySecretRef")]
     public V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef? ApiKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProvider
@@ -588,7 +651,9 @@ public partial class V1beta1NotificationHubStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusConditions
@@ -617,7 +682,9 @@ public partial class V1beta1NotificationHubStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationHubStatus defines the observed state of NotificationHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatus
@@ -634,7 +701,9 @@ public partial class V1beta1NotificationHubStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationHub is the Schema for the NotificationHubs API. Manages a Notification Hub within a Notification Hub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -664,3 +733,4 @@ public partial class V1beta1NotificationHub : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1NotificationHubStatus? Status { get; set; }
 }
+#nullable disable

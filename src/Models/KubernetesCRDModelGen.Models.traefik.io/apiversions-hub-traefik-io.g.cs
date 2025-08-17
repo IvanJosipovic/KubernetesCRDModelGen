@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>APIVersion defines a version of an API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIVersionList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1APIVersion> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecCors
@@ -70,7 +73,9 @@ public partial class V1alpha1APIVersionSpecCors
     [JsonPropertyName("maxAge")]
     public long? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationMatcher defines criteria for matching an OpenAPI operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSetsMatchers
@@ -91,7 +96,9 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSetsMatchers
     [JsonPropertyName("pathRegex")]
     public string? PathRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APICatalogItems or ManagedSubscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSets
@@ -104,7 +111,9 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpecOverrideServers
@@ -113,7 +122,9 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOverrideServers
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Override holds data used to override OpenAPI specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpecOverride
@@ -122,7 +133,9 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOverride
     [JsonPropertyName("servers")]
     public IList<V1alpha1APIVersionSpecOpenApiSpecOverrideServers> Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpec
@@ -147,7 +160,9 @@ public partial class V1alpha1APIVersionSpecOpenApiSpec
     [JsonPropertyName("validateRequestMethodAndPath")]
     public bool? ValidateRequestMethodAndPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this APIVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpec
@@ -172,7 +187,9 @@ public partial class V1alpha1APIVersionSpec
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this APIVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionStatus
@@ -189,7 +206,9 @@ public partial class V1alpha1APIVersionStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIVersion defines a version of an API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -219,3 +238,4 @@ public partial class V1alpha1APIVersion : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1APIVersionStatus? Status { get; set; }
 }
+#nullable disable

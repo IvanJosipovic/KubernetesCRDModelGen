@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+#nullable enable
 /// <summary>UserHierarchyStructure is the Schema for the UserHierarchyStructures API. Provides details about a specific Amazon Connect User Hierarchy Structure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserHierarchyStructureList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1UserHierarchyStructure> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelFive
@@ -42,7 +45,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelFour
@@ -51,7 +56,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelOne
@@ -60,7 +67,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelThree
@@ -69,7 +78,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelTwo
@@ -78,7 +89,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStructure
@@ -103,7 +116,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderHierarchyStruct
     [JsonPropertyName("levelTwo")]
     public IList<V1beta1UserHierarchyStructureSpecForProviderHierarchyStructureLevelTwo>? LevelTwo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicy
@@ -116,7 +131,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRef
@@ -129,7 +146,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserHierarchyStructureSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicy
@@ -142,7 +161,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelector
@@ -159,7 +180,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelec
     [JsonPropertyName("policy")]
     public V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecForProvider
@@ -184,7 +207,9 @@ public partial class V1beta1UserHierarchyStructureSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelFive
@@ -193,7 +218,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelFour
@@ -202,7 +229,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelOne
@@ -211,7 +240,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelThree
@@ -220,7 +251,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelTwo
@@ -229,7 +262,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructure
@@ -254,7 +289,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderHierarchyStruc
     [JsonPropertyName("levelTwo")]
     public IList<V1beta1UserHierarchyStructureSpecInitProviderHierarchyStructureLevelTwo>? LevelTwo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicy
@@ -267,7 +304,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRef
@@ -280,7 +319,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserHierarchyStructureSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolicy
@@ -293,7 +334,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelector
@@ -310,7 +353,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSele
     [JsonPropertyName("policy")]
     public V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecInitProvider
@@ -331,7 +376,9 @@ public partial class V1beta1UserHierarchyStructureSpecInitProvider
     [JsonPropertyName("instanceIdSelector")]
     public V1beta1UserHierarchyStructureSpecInitProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy
@@ -344,7 +391,9 @@ public partial class V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecProviderConfigRef
@@ -357,7 +406,9 @@ public partial class V1beta1UserHierarchyStructureSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UserHierarchyStructureSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpecWriteConnectionSecretToRef
@@ -370,7 +421,9 @@ public partial class V1beta1UserHierarchyStructureSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserHierarchyStructureSpec defines the desired state of UserHierarchyStructure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureSpec
@@ -399,7 +452,9 @@ public partial class V1beta1UserHierarchyStructureSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserHierarchyStructureSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelFive
@@ -416,7 +471,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelFour
@@ -433,7 +490,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelOne
@@ -450,7 +509,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelThree
@@ -467,7 +528,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelTwo
@@ -484,7 +547,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructure
@@ -509,7 +574,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProviderHierarchyStruc
     [JsonPropertyName("levelTwo")]
     public IList<V1beta1UserHierarchyStructureStatusAtProviderHierarchyStructureLevelTwo>? LevelTwo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusAtProvider
@@ -530,7 +597,9 @@ public partial class V1beta1UserHierarchyStructureStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatusConditions
@@ -559,7 +628,9 @@ public partial class V1beta1UserHierarchyStructureStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserHierarchyStructureStatus defines the observed state of UserHierarchyStructure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserHierarchyStructureStatus
@@ -576,7 +647,9 @@ public partial class V1beta1UserHierarchyStructureStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserHierarchyStructure is the Schema for the UserHierarchyStructures API. Provides details about a specific Amazon Connect User Hierarchy Structure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -606,3 +679,4 @@ public partial class V1beta1UserHierarchyStructure : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1UserHierarchyStructureStatus? Status { get; set; }
 }
+#nullable disable

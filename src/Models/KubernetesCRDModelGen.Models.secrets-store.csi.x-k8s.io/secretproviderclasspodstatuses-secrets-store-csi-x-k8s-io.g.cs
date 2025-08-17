@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsstore.csi.xk8s.io;
+#nullable enable
 /// <summary>SecretProviderClassPodStatus is the Schema for the secretproviderclassespodstatus API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SecretProviderClassPodStatusList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1SecretProviderClassPodStatus> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClassObject defines the object fetched from external secrets store</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassPodStatusStatusObjects
@@ -46,7 +49,9 @@ public partial class V1SecretProviderClassPodStatusStatusObjects
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClassPodStatusStatus defines the observed state of SecretProviderClassPodStatus</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecretProviderClassPodStatusStatus
@@ -71,7 +76,9 @@ public partial class V1SecretProviderClassPodStatusStatus
     [JsonPropertyName("targetPath")]
     public string? TargetPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretProviderClassPodStatus is the Schema for the secretproviderclassespodstatus API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -97,3 +104,4 @@ public partial class V1SecretProviderClassPodStatus : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1SecretProviderClassPodStatusStatus? Status { get; set; }
 }
+#nullable disable

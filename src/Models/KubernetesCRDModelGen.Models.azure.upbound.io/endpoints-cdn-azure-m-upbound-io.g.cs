@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.m.upbound.io;
+#nullable enable
 /// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN (classic) Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Endpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAction
@@ -46,7 +49,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAc
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStringAction
@@ -59,7 +64,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStri
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
@@ -84,7 +91,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A device_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
@@ -101,7 +110,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondition
@@ -118,7 +129,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondit
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHeaderAction
@@ -135,7 +148,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHead
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHeaderAction
@@ -152,7 +167,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
@@ -177,7 +194,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondition
@@ -198,7 +217,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCondition
@@ -215,7 +236,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCond
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondition
@@ -236,7 +259,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCondition
@@ -261,7 +286,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCond
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_method_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCondition
@@ -278,7 +305,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCond
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_scheme_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCondition
@@ -295,7 +324,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCond
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriCondition
@@ -316,7 +347,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriConditi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionCondition
@@ -337,7 +370,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionC
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondition
@@ -358,7 +393,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
@@ -379,7 +416,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
@@ -408,7 +447,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
@@ -425,7 +466,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRule
@@ -518,7 +561,9 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGeoFilter
@@ -535,7 +580,9 @@ public partial class V1beta1EndpointSpecForProviderGeoFilter
     [JsonPropertyName("relativePath")]
     public string? RelativePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpirationAction
@@ -548,7 +595,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpira
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQueryStringAction
@@ -561,7 +610,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQue
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRequestHeaderAction
@@ -578,7 +629,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyReque
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyResponseHeaderAction
@@ -595,7 +648,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRespo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirectAction
@@ -624,7 +679,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirect
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteAction
@@ -641,7 +698,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteA
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that are valid for all resources regardless of any conditions. A global_delivery_rule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
@@ -670,7 +729,9 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderOrigin
@@ -691,7 +752,9 @@ public partial class V1beta1EndpointSpecForProviderOrigin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
@@ -704,7 +767,9 @@ public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Profile in cdn to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameRef
@@ -721,7 +786,9 @@ public partial class V1beta1EndpointSpecForProviderProfileNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
@@ -734,7 +801,9 @@ public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Profile in cdn to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderProfileNameSelector
@@ -755,7 +824,9 @@ public partial class V1beta1EndpointSpecForProviderProfileNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
@@ -768,7 +839,9 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRef
@@ -785,7 +858,9 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicy
@@ -798,7 +873,9 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
@@ -819,7 +896,9 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProvider
@@ -908,7 +987,9 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationAction
@@ -921,7 +1002,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationA
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStringAction
@@ -934,7 +1017,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStr
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
@@ -959,7 +1044,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A device_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
@@ -976,7 +1063,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondition
@@ -993,7 +1082,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondi
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHeaderAction
@@ -1010,7 +1101,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHeaderAction
@@ -1027,7 +1120,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
@@ -1052,7 +1147,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondition
@@ -1073,7 +1170,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCondition
@@ -1090,7 +1189,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondition
@@ -1111,7 +1212,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCondition
@@ -1136,7 +1239,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_method_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCondition
@@ -1153,7 +1258,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_scheme_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCondition
@@ -1170,7 +1277,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondition
@@ -1191,7 +1300,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtensionCondition
@@ -1212,7 +1323,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtension
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondition
@@ -1233,7 +1346,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
@@ -1254,7 +1369,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectAction
@@ -1283,7 +1400,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectActio
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
@@ -1300,7 +1419,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeliveryRule
@@ -1393,7 +1514,9 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGeoFilter
@@ -1410,7 +1533,9 @@ public partial class V1beta1EndpointSpecInitProviderGeoFilter
     [JsonPropertyName("relativePath")]
     public string? RelativePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpirationAction
@@ -1423,7 +1548,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpir
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQueryStringAction
@@ -1436,7 +1563,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQu
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequestHeaderAction
@@ -1453,7 +1582,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResponseHeaderAction
@@ -1470,7 +1601,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirectAction
@@ -1499,7 +1632,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirec
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewriteAction
@@ -1516,7 +1651,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewrite
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that are valid for all resources regardless of any conditions. A global_delivery_rule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
@@ -1545,7 +1682,9 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderOrigin
@@ -1566,7 +1705,9 @@ public partial class V1beta1EndpointSpecInitProviderOrigin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProvider
@@ -1631,7 +1772,9 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecProviderConfigRef
@@ -1644,7 +1787,9 @@ public partial class V1beta1EndpointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
@@ -1653,7 +1798,9 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointSpec defines the desired state of Endpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpec
@@ -1678,7 +1825,9 @@ public partial class V1beta1EndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationAction
@@ -1691,7 +1840,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationA
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStringAction
@@ -1704,7 +1855,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStr
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
@@ -1729,7 +1882,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A device_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
@@ -1746,7 +1901,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondition
@@ -1763,7 +1920,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondi
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHeaderAction
@@ -1780,7 +1939,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHeaderAction
@@ -1797,7 +1958,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
@@ -1822,7 +1985,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondition
@@ -1843,7 +2008,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCondition
@@ -1860,7 +2027,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondition
@@ -1881,7 +2050,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCondition
@@ -1906,7 +2077,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_method_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCondition
@@ -1923,7 +2096,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request_scheme_condition block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCondition
@@ -1940,7 +2115,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondition
@@ -1961,7 +2138,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtensionCondition
@@ -1982,7 +2161,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtension
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondition
@@ -2003,7 +2184,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
@@ -2024,7 +2207,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectAction
@@ -2053,7 +2238,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectActio
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
@@ -2070,7 +2257,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeliveryRule
@@ -2163,7 +2352,9 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGeoFilter
@@ -2180,7 +2371,9 @@ public partial class V1beta1EndpointStatusAtProviderGeoFilter
     [JsonPropertyName("relativePath")]
     public string? RelativePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpirationAction
@@ -2193,7 +2386,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpir
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cache_key_query_string_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQueryStringAction
@@ -2206,7 +2401,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQu
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequestHeaderAction
@@ -2223,7 +2420,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResponseHeaderAction
@@ -2240,7 +2439,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirectAction
@@ -2269,7 +2470,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirec
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewriteAction
@@ -2286,7 +2489,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewrite
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that are valid for all resources regardless of any conditions. A global_delivery_rule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
@@ -2315,7 +2520,9 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderOrigin
@@ -2336,7 +2543,9 @@ public partial class V1beta1EndpointStatusAtProviderOrigin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProvider
@@ -2417,7 +2626,9 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusConditions
@@ -2446,7 +2657,9 @@ public partial class V1beta1EndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatus
@@ -2463,7 +2676,9 @@ public partial class V1beta1EndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN (classic) Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2493,3 +2708,4 @@ public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1EndpointStatus? Status { get; set; }
 }
+#nullable disable

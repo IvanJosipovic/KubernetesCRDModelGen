@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SecretManagerSecret is the Schema for the SecretManagerSecret API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecretManagerSecretList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1SecretManagerSecret> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The resource name of the Cloud KMS CryptoKey used to encrypt  secret payloads.   For secrets using the  [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged]  replication policy type, Cloud KMS CryptoKeys must reside in the same  location as the [replica location][Secret.UserManaged.Replica.location].   For secrets using the  [Automatic][google.cloud.secretmanager.v1.Replication.Automatic]  replication policy type, Cloud KMS CryptoKeys must reside in `global`.   The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryptionKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManage
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The customer-managed encryption configuration of the  [Secret][google.cloud.secretmanager.v1.Secret]. If no configuration is  provided, Google-managed default encryption is used.   Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption  configuration only apply to  [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added  afterwards. They do not apply retroactively to existing  [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryption
@@ -59,7 +64,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManage
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryptionKmsKeyRef KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [Secret][google.cloud.secretmanager.v1.Secret] will automatically be replicated without any restrictions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationAuto
@@ -68,7 +75,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAuto
     [JsonPropertyName("customerManagedEncryption")]
     public V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryption? CustomerManagedEncryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The resource name of the Cloud KMS CryptoKey used to encrypt  secret payloads.   For secrets using the  [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged]  replication policy type, Cloud KMS CryptoKeys must reside in the same  location as the [replica location][Secret.UserManaged.Replica.location].   For secrets using the  [Automatic][google.cloud.secretmanager.v1.Replication.Automatic]  replication policy type, Cloud KMS CryptoKeys must reside in `global`.   The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryptionKmsKeyRef
@@ -85,7 +94,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The customer-managed encryption configuration of the  [User-Managed Replica][Replication.UserManaged.Replica]. If no  configuration is provided, Google-managed default encryption is used.   Updates to the [Secret][google.cloud.secretmanager.v1.Secret]  encryption configuration only apply to  [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added  afterwards. They do not apply retroactively to existing  [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryption
@@ -94,7 +105,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryptionKmsKeyRef KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicas
@@ -107,7 +120,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     [JsonPropertyName("location")]
     public string Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [Secret][google.cloud.secretmanager.v1.Secret] will only be replicated into the locations specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManaged
@@ -116,7 +131,9 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManaged
     [JsonPropertyName("replicas")]
     public IList<V1beta1SecretManagerSecretSpecReplicationUserManagedReplicas> Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Immutable. The replication policy of the secret data attached to  the [Secret][google.cloud.secretmanager.v1.Secret].   The replication policy cannot be changed after the Secret has been created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplication
@@ -133,7 +150,9 @@ public partial class V1beta1SecretManagerSecretSpecReplication
     [JsonPropertyName("userManaged")]
     public V1beta1SecretManagerSecretSpecReplicationUserManaged? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Rotation policy attached to the [Secret][google.cloud.secretmanager.v1.Secret]. May be excluded if there is no rotation policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecRotation
@@ -146,7 +165,9 @@ public partial class V1beta1SecretManagerSecretSpecRotation
     [JsonPropertyName("rotationPeriod")]
     public string? RotationPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PubSubTopicRef defines the resource reference to PubSubTopic, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
@@ -163,7 +184,9 @@ public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecTopics
@@ -172,7 +195,9 @@ public partial class V1beta1SecretManagerSecretSpecTopics
     [JsonPropertyName("topicRef")]
     public V1beta1SecretManagerSecretSpecTopicsTopicRef TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecretSpec defines the desired state of SecretManagerSecret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpec
@@ -213,7 +238,9 @@ public partial class V1beta1SecretManagerSecretSpec
     [JsonPropertyName("versionAliases")]
     public IDictionary<string, string>? VersionAliases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretStatusConditions
@@ -238,7 +265,9 @@ public partial class V1beta1SecretManagerSecretStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretStatusObservedState
@@ -247,7 +276,9 @@ public partial class V1beta1SecretManagerSecretStatusObservedState
     [JsonPropertyName("versionAliases")]
     public IDictionary<string, string>? VersionAliases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecretStatus defines the config connector machine state of SecretManagerSecret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretStatus
@@ -272,7 +303,9 @@ public partial class V1beta1SecretManagerSecretStatus
     [JsonPropertyName("observedState")]
     public V1beta1SecretManagerSecretStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecret is the Schema for the SecretManagerSecret API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -302,3 +335,4 @@ public partial class V1beta1SecretManagerSecret : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1SecretManagerSecretStatus? Status { get; set; }
 }
+#nullable disable

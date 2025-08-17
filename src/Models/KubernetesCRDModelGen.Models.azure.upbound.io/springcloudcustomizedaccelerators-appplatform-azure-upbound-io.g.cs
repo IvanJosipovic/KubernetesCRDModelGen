@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudCustomizedAccelerator is the Schema for the SpringCloudCustomizedAccelerators API. Manages a Spring Cloud Customized Accelerator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudCustomizedAccelerator> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the password of git repository basic auth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositoryBasicAuthPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositoryBasicAuth
@@ -63,7 +68,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the Public SSH Key of git repository basic auth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositorySshAuthHostKeySecretRef
@@ -80,7 +87,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the Private SSH Key of git repository basic auth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositorySshAuthPrivateKeySecretRef
@@ -97,7 +106,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositorySshAuth
@@ -114,7 +125,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("privateKeySecretRef")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositorySshAuthPrivateKeySecretRef PrivateKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepository
@@ -155,7 +168,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRe
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdRefPolicy
@@ -168,7 +183,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSprin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudAccelerator in appplatform to populate springCloudAcceleratorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdRef
@@ -181,7 +198,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSprin
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdSelectorPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSprin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudAccelerator in appplatform to populate springCloudAcceleratorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdSelector
@@ -211,7 +232,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSprin
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProvider
@@ -252,7 +275,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProvider
     [JsonPropertyName("springCloudAcceleratorIdSelector")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecForProviderSpringCloudAcceleratorIdSelector? SpringCloudAcceleratorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitRepositoryBasicAuth
@@ -261,7 +286,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitR
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitRepositorySshAuth
@@ -270,7 +297,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitR
     [JsonPropertyName("hostKeyAlgorithm")]
     public string? HostKeyAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitRepository
@@ -311,7 +340,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProviderGitR
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProvider
@@ -340,7 +371,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecInitProvider
     [JsonPropertyName("iconUrl")]
     public string? IconUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecProviderConfigRefPolicy
@@ -353,7 +386,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecProviderConfigRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecProviderConfigRef
@@ -366,7 +401,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecProviderConfigRe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecWriteConnectionSecretToRef
@@ -379,7 +416,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpecWriteConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCustomizedAcceleratorSpec defines the desired state of SpringCloudCustomizedAccelerator</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpec
@@ -408,7 +447,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudCustomizedAcceleratorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitRepositoryBasicAuth
@@ -417,7 +458,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitR
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitRepositorySshAuth
@@ -426,7 +469,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitR
     [JsonPropertyName("hostKeyAlgorithm")]
     public string? HostKeyAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitRepository
@@ -467,7 +512,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProviderGitR
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProvider
@@ -504,7 +551,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatusAtProvider
     [JsonPropertyName("springCloudAcceleratorId")]
     public string? SpringCloudAcceleratorId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatusConditions
@@ -533,7 +582,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCustomizedAcceleratorStatus defines the observed state of SpringCloudCustomizedAccelerator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorStatus
@@ -550,7 +601,9 @@ public partial class V1beta1SpringCloudCustomizedAcceleratorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCustomizedAccelerator is the Schema for the SpringCloudCustomizedAccelerators API. Manages a Spring Cloud Customized Accelerator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -580,3 +633,4 @@ public partial class V1beta1SpringCloudCustomizedAccelerator : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1SpringCloudCustomizedAcceleratorStatus? Status { get; set; }
 }
+#nullable disable

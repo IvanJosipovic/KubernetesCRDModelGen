@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>NotebooksEnvironment is the Schema for the NotebooksEnvironment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NotebooksEnvironmentList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1NotebooksEnvironment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a container image to start the notebook instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
@@ -46,7 +49,9 @@ public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
@@ -67,7 +72,9 @@ public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a Compute Engine VM image to start the notebook instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpecVmImage
@@ -84,7 +91,9 @@ public partial class V1alpha1NotebooksEnvironmentSpecVmImage
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebooksEnvironmentSpec defines the desired state of NotebooksEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentSpec
@@ -121,7 +130,9 @@ public partial class V1alpha1NotebooksEnvironmentSpec
     [JsonPropertyName("vmImage")]
     public V1alpha1NotebooksEnvironmentSpecVmImage? VmImage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentStatusConditions
@@ -146,7 +157,9 @@ public partial class V1alpha1NotebooksEnvironmentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentStatusObservedState
@@ -155,7 +168,9 @@ public partial class V1alpha1NotebooksEnvironmentStatusObservedState
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebooksEnvironmentStatus defines the config connector machine state of NotebooksEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotebooksEnvironmentStatus
@@ -176,7 +191,9 @@ public partial class V1alpha1NotebooksEnvironmentStatus
     [JsonPropertyName("observedState")]
     public V1alpha1NotebooksEnvironmentStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebooksEnvironment is the Schema for the NotebooksEnvironment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -206,3 +223,4 @@ public partial class V1alpha1NotebooksEnvironment : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1NotebooksEnvironmentStatus? Status { get; set; }
 }
+#nullable disable

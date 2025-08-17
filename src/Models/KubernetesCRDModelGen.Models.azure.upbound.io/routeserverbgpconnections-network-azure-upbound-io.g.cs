@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>RouteServerBGPConnection is the Schema for the RouteServerBGPConnections API. Manages a BGP Connection for a Route Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RouteServerBGPConnectionList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1RouteServerBGPConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouteServer in network to populate routeServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerId
     [JsonPropertyName("policy")]
     public V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouteServer in network to populate routeServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerId
     [JsonPropertyName("policy")]
     public V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecForProvider
     [JsonPropertyName("routeServerIdSelector")]
     public V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdSelector? RouteServerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecInitProvider
@@ -127,7 +140,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecInitProvider
     [JsonPropertyName("peerIp")]
     public string? PeerIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecProviderConfigRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecProviderConfigRef
@@ -153,7 +170,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RouteServerBGPConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecWriteConnectionSecretToRef
@@ -166,7 +185,9 @@ public partial class V1beta1RouteServerBGPConnectionSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteServerBGPConnectionSpec defines the desired state of RouteServerBGPConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpec
@@ -195,7 +216,9 @@ public partial class V1beta1RouteServerBGPConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RouteServerBGPConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionStatusAtProvider
@@ -216,7 +239,9 @@ public partial class V1beta1RouteServerBGPConnectionStatusAtProvider
     [JsonPropertyName("routeServerId")]
     public string? RouteServerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionStatusConditions
@@ -245,7 +270,9 @@ public partial class V1beta1RouteServerBGPConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteServerBGPConnectionStatus defines the observed state of RouteServerBGPConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionStatus
@@ -262,7 +289,9 @@ public partial class V1beta1RouteServerBGPConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteServerBGPConnection is the Schema for the RouteServerBGPConnections API. Manages a BGP Connection for a Route Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -292,3 +321,4 @@ public partial class V1beta1RouteServerBGPConnection : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1RouteServerBGPConnectionStatus? Status { get; set; }
 }
+#nullable disable

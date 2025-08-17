@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redhatopenshift.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftCluster Generator information: - Generated from: /redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/openshiftclusters/stable/2023-11-22/redhatopenshift.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20231122storageOpenShiftClusterList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1api20231122storageOpenShiftCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.APIServerProfile APIServerProfile represents an API server profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
@@ -46,7 +49,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret
@@ -59,7 +64,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ClusterProfile ClusterProfile represents a cluster profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
@@ -88,7 +95,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.IngressProfile IngressProfile represents an ingress profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
@@ -105,7 +114,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEncryptionSetReference
@@ -126,7 +137,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetReference: The Azure resource ID of the master subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnetReference
@@ -147,7 +160,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnet
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.MasterProfile MasterProfile represents a master profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
@@ -172,7 +187,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ManagedOutboundIPs ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIps
@@ -185,7 +202,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
     [JsonPropertyName("count")]
     public int? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.LoadBalancerProfile LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfile
@@ -198,7 +217,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
     [JsonPropertyName("managedOutboundIps")]
     public V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIps? ManagedOutboundIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.NetworkProfile NetworkProfile represents a network profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
@@ -227,7 +248,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
     [JsonPropertyName("serviceCidr")]
     public string? ServiceCidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecConfigMapExpressions
@@ -244,7 +267,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecConfigM
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretExpressions
@@ -261,7 +286,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretE
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsAdminCredentials
@@ -274,7 +301,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsPassword
@@ -287,7 +316,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsUsername
@@ -300,7 +331,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftClusterOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
@@ -321,7 +354,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
     [JsonPropertyName("username")]
     public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsUsername? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpec
@@ -342,7 +377,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpec
     [JsonPropertyName("secrets")]
     public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOwner
@@ -355,7 +392,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig
@@ -368,7 +407,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret
@@ -381,7 +422,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ServicePrincipalProfile ServicePrincipalProfile represents a service principal profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfile
@@ -402,7 +445,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     [JsonPropertyName("clientSecret")]
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret? ClientSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskEncryptionSetReference
@@ -423,7 +468,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskE
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetReference: The Azure resource ID of the worker subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubnetReference
@@ -444,7 +491,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubne
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.WorkerProfile WorkerProfile represents a worker profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
@@ -481,7 +530,9 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftCluster_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpec
@@ -542,7 +593,9 @@ public partial class V1api20231122storageOpenShiftClusterSpec
     [JsonPropertyName("workerProfiles")]
     public IList<V1api20231122storageOpenShiftClusterSpecWorkerProfiles>? WorkerProfiles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.APIServerProfile_STATUS APIServerProfile represents an API server profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
@@ -563,7 +616,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ClusterProfile_STATUS ClusterProfile represents a cluster profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
@@ -588,7 +643,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConditions
@@ -621,7 +678,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ConsoleProfile_STATUS ConsoleProfile represents a console profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
@@ -634,7 +693,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.IngressProfile_STATUS IngressProfile represents an ingress profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
@@ -655,7 +716,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
     [JsonPropertyName("visibility")]
     public string? Visibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.MasterProfile_STATUS MasterProfile represents a master profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
@@ -680,7 +743,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.EffectiveOutboundIP_STATUS EffectiveOutboundIP represents an effective outbound IP resource of the cluster public load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIps
@@ -693,7 +758,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ManagedOutboundIPs_STATUS ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIps
@@ -706,7 +773,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     [JsonPropertyName("count")]
     public int? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.LoadBalancerProfile_STATUS LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfile
@@ -723,7 +792,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     [JsonPropertyName("managedOutboundIps")]
     public V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIps? ManagedOutboundIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.NetworkProfile_STATUS NetworkProfile represents a network profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
@@ -752,7 +823,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
     [JsonPropertyName("serviceCidr")]
     public string? ServiceCidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.ServicePrincipalProfile_STATUS ServicePrincipalProfile represents a service principal profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalProfile
@@ -765,7 +838,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalP
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusSystemData
@@ -798,7 +873,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
@@ -835,7 +912,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesStatus
@@ -872,7 +951,9 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesSta
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftCluster_STATUS OpenShiftCluster represents an Azure Red Hat OpenShift cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatus
@@ -949,7 +1030,9 @@ public partial class V1api20231122storageOpenShiftClusterStatus
     [JsonPropertyName("workerProfilesStatus")]
     public IList<V1api20231122storageOpenShiftClusterStatusWorkerProfilesStatus>? WorkerProfilesStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231122.OpenShiftCluster Generator information: - Generated from: /redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/openshiftclusters/stable/2023-11-22/redhatopenshift.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -979,3 +1062,4 @@ public partial class V1api20231122storageOpenShiftCluster : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1api20231122storageOpenShiftClusterStatus? Status { get; set; }
 }
+#nullable disable

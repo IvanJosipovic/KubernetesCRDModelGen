@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.gcp.upbound.io;
+#nullable enable
 /// <summary>Topic is the Schema for the Topics API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Topic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKinesis
@@ -54,7 +57,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKi
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsMsk
@@ -75,7 +80,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsMs
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAzureEventHubs
@@ -108,19 +115,25 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAzure
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageTextFormat
@@ -129,7 +142,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloud
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorage
@@ -158,7 +173,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloud
     [JsonPropertyName("textFormat")]
     public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsConfluentCloud
@@ -183,7 +200,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsConfl
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsPlatformLogsSettings
@@ -192,7 +211,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsPlatf
     [JsonPropertyName("severity")]
     public string? Severity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettings
@@ -221,7 +242,9 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettings
     [JsonPropertyName("platformLogsSettings")]
     public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderKmsKeyNameRefPolicy
@@ -234,7 +257,9 @@ public partial class V1beta1TopicSpecForProviderKmsKeyNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderKmsKeyNameRef
@@ -247,7 +272,9 @@ public partial class V1beta1TopicSpecForProviderKmsKeyNameRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderKmsKeyNameSelectorPolicy
@@ -260,7 +287,9 @@ public partial class V1beta1TopicSpecForProviderKmsKeyNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderKmsKeyNameSelector
@@ -277,7 +306,9 @@ public partial class V1beta1TopicSpecForProviderKmsKeyNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderMessageStoragePolicy
@@ -290,7 +321,9 @@ public partial class V1beta1TopicSpecForProviderMessageStoragePolicy
     [JsonPropertyName("enforceInTransit")]
     public bool? EnforceInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderMessageTransformsJavascriptUdf
@@ -303,7 +336,9 @@ public partial class V1beta1TopicSpecForProviderMessageTransformsJavascriptUdf
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderMessageTransforms
@@ -316,7 +351,9 @@ public partial class V1beta1TopicSpecForProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public IList<V1beta1TopicSpecForProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSchemaSettings
@@ -329,7 +366,9 @@ public partial class V1beta1TopicSpecForProviderSchemaSettings
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProvider
@@ -374,7 +413,9 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("schemaSettings")]
     public IList<V1beta1TopicSpecForProviderSchemaSettings>? SchemaSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsKinesis
@@ -395,7 +436,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsK
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsMsk
@@ -416,7 +459,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsM
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAzureEventHubs
@@ -449,19 +494,25 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAzur
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageTextFormat
@@ -470,7 +521,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsClou
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorage
@@ -499,7 +552,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsClou
     [JsonPropertyName("textFormat")]
     public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsConfluentCloud
@@ -524,7 +579,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsConf
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsPlatformLogsSettings
@@ -533,7 +590,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsPlat
     [JsonPropertyName("severity")]
     public string? Severity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettings
@@ -562,7 +621,9 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettings
     [JsonPropertyName("platformLogsSettings")]
     public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderKmsKeyNameRefPolicy
@@ -575,7 +636,9 @@ public partial class V1beta1TopicSpecInitProviderKmsKeyNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderKmsKeyNameRef
@@ -588,7 +651,9 @@ public partial class V1beta1TopicSpecInitProviderKmsKeyNameRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderKmsKeyNameSelectorPolicy
@@ -601,7 +666,9 @@ public partial class V1beta1TopicSpecInitProviderKmsKeyNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderKmsKeyNameSelector
@@ -618,7 +685,9 @@ public partial class V1beta1TopicSpecInitProviderKmsKeyNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderMessageStoragePolicy
@@ -631,7 +700,9 @@ public partial class V1beta1TopicSpecInitProviderMessageStoragePolicy
     [JsonPropertyName("enforceInTransit")]
     public bool? EnforceInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderMessageTransformsJavascriptUdf
@@ -644,7 +715,9 @@ public partial class V1beta1TopicSpecInitProviderMessageTransformsJavascriptUdf
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderMessageTransforms
@@ -657,7 +730,9 @@ public partial class V1beta1TopicSpecInitProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public IList<V1beta1TopicSpecInitProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSchemaSettings
@@ -670,7 +745,9 @@ public partial class V1beta1TopicSpecInitProviderSchemaSettings
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProvider
@@ -715,7 +792,9 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("schemaSettings")]
     public IList<V1beta1TopicSpecInitProviderSchemaSettings>? SchemaSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecProviderConfigRefPolicy
@@ -728,7 +807,9 @@ public partial class V1beta1TopicSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecProviderConfigRef
@@ -741,7 +822,9 @@ public partial class V1beta1TopicSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecWriteConnectionSecretToRef
@@ -754,7 +837,9 @@ public partial class V1beta1TopicSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicSpec defines the desired state of Topic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpec
@@ -783,7 +868,9 @@ public partial class V1beta1TopicSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsKinesis
@@ -804,7 +891,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsK
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsMsk
@@ -825,7 +914,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsM
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAzureEventHubs
@@ -858,19 +949,25 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAzur
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageTextFormat
@@ -879,7 +976,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsClou
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorage
@@ -908,7 +1007,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsClou
     [JsonPropertyName("textFormat")]
     public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsConfluentCloud
@@ -933,7 +1034,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsConf
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsPlatformLogsSettings
@@ -942,7 +1045,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsPlat
     [JsonPropertyName("severity")]
     public string? Severity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettings
@@ -971,7 +1076,9 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettings
     [JsonPropertyName("platformLogsSettings")]
     public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderMessageStoragePolicy
@@ -984,7 +1091,9 @@ public partial class V1beta1TopicStatusAtProviderMessageStoragePolicy
     [JsonPropertyName("enforceInTransit")]
     public bool? EnforceInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderMessageTransformsJavascriptUdf
@@ -997,7 +1106,9 @@ public partial class V1beta1TopicStatusAtProviderMessageTransformsJavascriptUdf
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderMessageTransforms
@@ -1010,7 +1121,9 @@ public partial class V1beta1TopicStatusAtProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public IList<V1beta1TopicStatusAtProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderSchemaSettings
@@ -1023,7 +1136,9 @@ public partial class V1beta1TopicStatusAtProviderSchemaSettings
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProvider
@@ -1072,7 +1187,9 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusConditions
@@ -1101,7 +1218,9 @@ public partial class V1beta1TopicStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicStatus defines the observed state of Topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatus
@@ -1118,7 +1237,9 @@ public partial class V1beta1TopicStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Topic is the Schema for the Topics API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1148,3 +1269,4 @@ public partial class V1beta1Topic : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1TopicStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>URLMap is the Schema for the URLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1URLMapList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1URLMap> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -50,7 +53,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRef
@@ -76,7 +83,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelector
@@ -106,7 +117,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicy
@@ -127,7 +140,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolic
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionCorsPolicy
@@ -164,7 +179,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionCorsPolicy
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -177,7 +194,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectio
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -190,7 +209,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectio
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -203,7 +224,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectio
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectio
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionMaxStreamDuration
@@ -229,7 +254,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionMaxStreamDura
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -242,7 +269,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirror
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -255,7 +284,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirror
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirror
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -285,7 +318,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirror
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirror
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -315,7 +352,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRetryPolicyPe
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRetryPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRetryPolicy
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionTimeout
@@ -345,7 +386,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionTimeout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionUrlRewrite
@@ -358,7 +401,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionUrlRewrite
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -375,7 +420,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBacke
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -392,7 +439,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBacke
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -413,7 +462,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBacke
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBackendServices
@@ -430,7 +481,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBacke
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteAction
@@ -467,7 +520,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecForProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultServiceRefPolicy
@@ -480,7 +535,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultServiceRef
@@ -493,7 +550,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultServiceSelectorPolicy
@@ -506,7 +565,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultServiceSelector
@@ -523,7 +584,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultUrlRedirect
@@ -552,7 +615,9 @@ public partial class V1beta1URLMapSpecForProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderHeaderActionRequestHeadersToAdd
@@ -569,7 +634,9 @@ public partial class V1beta1URLMapSpecForProviderHeaderActionRequestHeadersToAdd
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderHeaderActionResponseHeadersToAdd
@@ -586,7 +653,9 @@ public partial class V1beta1URLMapSpecForProviderHeaderActionResponseHeadersToAd
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderHeaderAction
@@ -607,7 +676,9 @@ public partial class V1beta1URLMapSpecForProviderHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderHostRule
@@ -624,7 +695,9 @@ public partial class V1beta1URLMapSpecForProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -641,7 +714,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -654,7 +729,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef
@@ -667,7 +744,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -680,7 +759,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector
@@ -697,7 +778,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicy
@@ -718,7 +801,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorRe
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -755,7 +840,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionCo
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -768,7 +855,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFa
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -781,7 +870,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFa
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -794,7 +885,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFa
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -807,7 +900,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFa
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -820,7 +915,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionMa
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -833,7 +930,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -846,7 +945,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -859,7 +960,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -876,7 +979,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -893,7 +998,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -906,7 +1013,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -923,7 +1032,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRe
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionTimeout
@@ -936,7 +1047,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionTi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -949,7 +1062,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionUr
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -966,7 +1081,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWe
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -983,7 +1100,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWe
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -1004,7 +1123,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWe
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -1021,7 +1142,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWe
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteAction
@@ -1058,7 +1181,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
@@ -1071,7 +1196,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceRef
@@ -1084,7 +1211,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy
@@ -1097,7 +1226,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceSelector
@@ -1114,7 +1245,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultServiceSelect
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultUrlRedirect
@@ -1143,7 +1276,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderActionRequestHeadersToAdd
@@ -1160,7 +1295,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderActionRequestH
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderActionResponseHeadersToAdd
@@ -1177,7 +1314,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderActionResponse
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderAction
@@ -1198,7 +1337,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
@@ -1215,7 +1356,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -1228,7 +1371,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef
@@ -1241,7 +1386,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -1254,7 +1401,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector
@@ -1271,7 +1420,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicy
@@ -1292,7 +1443,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorR
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -1329,7 +1482,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionC
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -1342,7 +1497,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -1355,7 +1512,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionF
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -1368,7 +1527,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -1381,7 +1542,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionF
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionMaxStreamDuration
@@ -1394,7 +1557,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionM
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -1407,7 +1572,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
@@ -1420,7 +1587,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -1433,7 +1602,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -1450,7 +1621,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -1467,7 +1640,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -1480,7 +1655,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -1497,7 +1674,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionR
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionTimeout
@@ -1510,7 +1689,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionT
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -1523,7 +1704,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionU
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -1536,7 +1719,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
@@ -1549,7 +1734,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -1562,7 +1749,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
@@ -1579,7 +1768,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -1596,7 +1787,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -1613,7 +1806,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -1634,7 +1829,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -1659,7 +1856,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionW
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteAction
@@ -1696,7 +1895,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy
@@ -1709,7 +1910,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceRef
@@ -1722,7 +1925,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy
@@ -1735,7 +1940,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceSelector
@@ -1752,7 +1959,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceSelec
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleUrlRedirect
@@ -1781,7 +1990,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRule
@@ -1814,7 +2025,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
@@ -1831,7 +2044,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErro
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicy
@@ -1844,7 +2059,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErro
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -1861,7 +2078,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -1878,7 +2097,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderAction
@@ -1899,7 +2120,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderActi
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -1912,7 +2135,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -1949,7 +2174,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -1962,7 +2189,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -1975,7 +2204,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -1996,7 +2227,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
@@ -2033,7 +2266,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -2070,7 +2305,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -2083,7 +2320,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -2096,7 +2335,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -2109,7 +2350,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -2122,7 +2365,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
@@ -2135,7 +2380,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -2144,7 +2391,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -2157,7 +2406,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -2174,7 +2425,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionTimeout
@@ -2187,7 +2440,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -2204,7 +2459,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -2221,7 +2478,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -2238,7 +2497,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -2259,7 +2520,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -2276,7 +2539,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteAction
@@ -2313,7 +2578,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy
@@ -2326,7 +2593,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceRef
@@ -2339,7 +2608,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy
@@ -2352,7 +2623,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceSelector
@@ -2369,7 +2642,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceSel
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesUrlRedirect
@@ -2398,7 +2673,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesUrlRedirec
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRules
@@ -2439,7 +2716,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcher
@@ -2488,7 +2767,9 @@ public partial class V1beta1URLMapSpecForProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTestHeaders
@@ -2501,7 +2782,9 @@ public partial class V1beta1URLMapSpecForProviderTestHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTestServiceRefPolicy
@@ -2514,7 +2797,9 @@ public partial class V1beta1URLMapSpecForProviderTestServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTestServiceRef
@@ -2527,7 +2812,9 @@ public partial class V1beta1URLMapSpecForProviderTestServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderTestServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTestServiceSelectorPolicy
@@ -2540,7 +2827,9 @@ public partial class V1beta1URLMapSpecForProviderTestServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTestServiceSelector
@@ -2557,7 +2846,9 @@ public partial class V1beta1URLMapSpecForProviderTestServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecForProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderTest
@@ -2598,7 +2889,9 @@ public partial class V1beta1URLMapSpecForProviderTest
     [JsonPropertyName("serviceSelector")]
     public V1beta1URLMapSpecForProviderTestServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProvider
@@ -2651,7 +2944,9 @@ public partial class V1beta1URLMapSpecForProvider
     [JsonPropertyName("test")]
     public IList<V1beta1URLMapSpecForProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -2668,7 +2963,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -2681,7 +2978,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRef
@@ -2694,7 +2993,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -2707,7 +3008,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelector
@@ -2724,7 +3027,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicy
@@ -2745,7 +3050,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionCorsPolicy
@@ -2782,7 +3089,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionCorsPolicy
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -2795,7 +3104,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -2808,7 +3119,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -2821,7 +3134,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicy
@@ -2834,7 +3149,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionMaxStreamDuration
@@ -2847,7 +3164,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionMaxStreamDur
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -2860,7 +3179,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -2873,7 +3194,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -2886,7 +3209,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -2903,7 +3228,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicy
@@ -2920,7 +3247,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -2933,7 +3262,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRetryPolicyP
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRetryPolicy
@@ -2950,7 +3281,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRetryPolicy
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionTimeout
@@ -2963,7 +3296,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionTimeout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionUrlRewrite
@@ -2976,7 +3311,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionUrlRewrite
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -2993,7 +3330,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -3010,7 +3349,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -3031,7 +3372,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBackendServices
@@ -3048,7 +3391,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteAction
@@ -3085,7 +3430,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecInitProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultServiceRefPolicy
@@ -3098,7 +3445,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultServiceRef
@@ -3111,7 +3460,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultServiceSelectorPolicy
@@ -3124,7 +3475,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultServiceSelector
@@ -3141,7 +3494,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultUrlRedirect
@@ -3170,7 +3525,9 @@ public partial class V1beta1URLMapSpecInitProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderHeaderActionRequestHeadersToAdd
@@ -3187,7 +3544,9 @@ public partial class V1beta1URLMapSpecInitProviderHeaderActionRequestHeadersToAd
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderHeaderActionResponseHeadersToAdd
@@ -3204,7 +3563,9 @@ public partial class V1beta1URLMapSpecInitProviderHeaderActionResponseHeadersToA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderHeaderAction
@@ -3225,7 +3586,9 @@ public partial class V1beta1URLMapSpecInitProviderHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderHostRule
@@ -3242,7 +3605,9 @@ public partial class V1beta1URLMapSpecInitProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -3259,7 +3624,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -3272,7 +3639,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef
@@ -3285,7 +3654,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -3298,7 +3669,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector
@@ -3315,7 +3688,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicy
@@ -3336,7 +3711,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -3373,7 +3750,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionC
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -3386,7 +3765,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -3399,7 +3780,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -3412,7 +3795,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -3425,7 +3810,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -3438,7 +3825,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionM
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -3451,7 +3840,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -3464,7 +3855,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -3477,7 +3870,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -3494,7 +3889,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -3511,7 +3908,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -3524,7 +3923,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -3541,7 +3942,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionTimeout
@@ -3554,7 +3957,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionT
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -3567,7 +3972,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionU
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -3584,7 +3991,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -3601,7 +4010,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -3622,7 +4033,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -3639,7 +4052,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteAction
@@ -3676,7 +4091,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy
@@ -3689,7 +4106,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceRef
@@ -3702,7 +4121,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy
@@ -3715,7 +4136,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceSelector
@@ -3732,7 +4155,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceSelec
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultUrlRedirect
@@ -3761,7 +4186,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderActionRequestHeadersToAdd
@@ -3778,7 +4205,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderActionRequest
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderActionResponseHeadersToAdd
@@ -3795,7 +4224,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderActionRespons
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderAction
@@ -3816,7 +4247,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
@@ -3833,7 +4266,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy
@@ -3846,7 +4281,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef
@@ -3859,7 +4296,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy
@@ -3872,7 +4311,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector
@@ -3889,7 +4330,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicy
@@ -3910,7 +4353,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("errorServiceSelector")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -3947,7 +4392,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -3960,7 +4407,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -3973,7 +4422,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -3986,7 +4437,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -3999,7 +4452,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionMaxStreamDuration
@@ -4012,7 +4467,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -4025,7 +4482,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
@@ -4038,7 +4497,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -4051,7 +4512,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -4068,7 +4531,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -4085,7 +4550,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -4098,7 +4565,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -4115,7 +4584,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionTimeout
@@ -4128,7 +4599,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -4141,7 +4614,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -4154,7 +4629,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
@@ -4167,7 +4644,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -4180,7 +4659,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
@@ -4197,7 +4678,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -4214,7 +4697,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -4231,7 +4716,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -4252,7 +4739,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -4277,7 +4766,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
@@ -4314,7 +4805,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy
@@ -4327,7 +4820,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceRef
@@ -4340,7 +4835,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy
@@ -4353,7 +4850,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceSelector
@@ -4370,7 +4869,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceSele
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
@@ -4399,7 +4900,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRule
@@ -4432,7 +4935,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
@@ -4449,7 +4954,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErr
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicy
@@ -4462,7 +4969,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErr
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -4479,7 +4988,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -4496,7 +5007,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderAction
@@ -4517,7 +5030,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -4530,7 +5045,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -4567,7 +5084,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -4580,7 +5099,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -4593,7 +5114,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -4614,7 +5137,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRules
@@ -4651,7 +5176,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -4688,7 +5215,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -4701,7 +5230,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -4714,7 +5245,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -4727,7 +5260,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -4740,7 +5275,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
@@ -4753,7 +5290,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -4762,7 +5301,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -4775,7 +5316,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -4792,7 +5335,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionTimeout
@@ -4805,7 +5350,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -4822,7 +5369,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -4839,7 +5388,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -4856,7 +5407,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -4877,7 +5430,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -4894,7 +5449,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteAction
@@ -4931,7 +5488,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy
@@ -4944,7 +5503,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceRef
@@ -4957,7 +5518,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceRe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy
@@ -4970,7 +5533,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceSelector
@@ -4987,7 +5552,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceSe
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect
@@ -5016,7 +5583,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesUrlRedire
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRules
@@ -5057,7 +5626,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcher
@@ -5106,7 +5677,9 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTestHeaders
@@ -5119,7 +5692,9 @@ public partial class V1beta1URLMapSpecInitProviderTestHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTestServiceRefPolicy
@@ -5132,7 +5707,9 @@ public partial class V1beta1URLMapSpecInitProviderTestServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTestServiceRef
@@ -5145,7 +5722,9 @@ public partial class V1beta1URLMapSpecInitProviderTestServiceRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderTestServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTestServiceSelectorPolicy
@@ -5158,7 +5737,9 @@ public partial class V1beta1URLMapSpecInitProviderTestServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendBucket in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTestServiceSelector
@@ -5175,7 +5756,9 @@ public partial class V1beta1URLMapSpecInitProviderTestServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecInitProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderTest
@@ -5216,7 +5799,9 @@ public partial class V1beta1URLMapSpecInitProviderTest
     [JsonPropertyName("serviceSelector")]
     public V1beta1URLMapSpecInitProviderTestServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProvider
@@ -5269,7 +5854,9 @@ public partial class V1beta1URLMapSpecInitProvider
     [JsonPropertyName("test")]
     public IList<V1beta1URLMapSpecInitProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecProviderConfigRefPolicy
@@ -5282,7 +5869,9 @@ public partial class V1beta1URLMapSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecProviderConfigRef
@@ -5295,7 +5884,9 @@ public partial class V1beta1URLMapSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1URLMapSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecWriteConnectionSecretToRef
@@ -5308,7 +5899,9 @@ public partial class V1beta1URLMapSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URLMapSpec defines the desired state of URLMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpec
@@ -5337,7 +5930,9 @@ public partial class V1beta1URLMapSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1URLMapSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -5354,7 +5949,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicy
@@ -5367,7 +5964,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePoli
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionCorsPolicy
@@ -5404,7 +6003,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionCorsPolicy
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -5417,7 +6018,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -5430,7 +6033,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -5443,7 +6048,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicy
@@ -5456,7 +6063,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjecti
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionMaxStreamDuration
@@ -5469,7 +6078,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionMaxStreamDur
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRequestMirrorPolicy
@@ -5478,7 +6089,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRequestMirro
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -5491,7 +6104,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRetryPolicyP
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRetryPolicy
@@ -5508,7 +6123,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionRetryPolicy
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionTimeout
@@ -5521,7 +6138,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionTimeout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionUrlRewrite
@@ -5534,7 +6153,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionUrlRewrite
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -5551,7 +6172,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -5568,7 +6191,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -5589,7 +6214,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBackendServices
@@ -5606,7 +6233,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBack
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteAction
@@ -5643,7 +6272,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultUrlRedirect
@@ -5672,7 +6303,9 @@ public partial class V1beta1URLMapStatusAtProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderHeaderActionRequestHeadersToAdd
@@ -5689,7 +6322,9 @@ public partial class V1beta1URLMapStatusAtProviderHeaderActionRequestHeadersToAd
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderHeaderActionResponseHeadersToAdd
@@ -5706,7 +6341,9 @@ public partial class V1beta1URLMapStatusAtProviderHeaderActionResponseHeadersToA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderHeaderAction
@@ -5727,7 +6364,9 @@ public partial class V1beta1URLMapStatusAtProviderHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderHostRule
@@ -5744,7 +6383,9 @@ public partial class V1beta1URLMapStatusAtProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
@@ -5761,7 +6402,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicy
@@ -5774,7 +6417,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorR
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -5811,7 +6456,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionC
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -5824,7 +6471,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -5837,7 +6486,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -5850,7 +6501,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -5863,7 +6516,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionF
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -5876,7 +6531,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionM
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -5885,7 +6542,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -5898,7 +6557,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -5915,7 +6576,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionR
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionTimeout
@@ -5928,7 +6591,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionT
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -5941,7 +6606,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionU
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -5958,7 +6625,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -5975,7 +6644,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -5996,7 +6667,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -6013,7 +6686,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionW
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteAction
@@ -6050,7 +6725,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultUrlRedirect
@@ -6079,7 +6756,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderActionRequestHeadersToAdd
@@ -6096,7 +6775,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderActionRequest
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderActionResponseHeadersToAdd
@@ -6113,7 +6794,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderActionRespons
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderAction
@@ -6134,7 +6817,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
@@ -6151,7 +6836,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicy
@@ -6164,7 +6851,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomError
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -6201,7 +6890,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -6214,7 +6905,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -6227,7 +6920,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -6240,7 +6935,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -6253,7 +6950,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionMaxStreamDuration
@@ -6266,7 +6965,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -6275,7 +6976,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -6288,7 +6991,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -6305,7 +7010,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionTimeout
@@ -6318,7 +7025,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -6331,7 +7040,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -6348,7 +7059,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -6365,7 +7078,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -6386,7 +7101,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -6403,7 +7120,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
@@ -6440,7 +7159,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
@@ -6469,7 +7190,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRule
@@ -6494,7 +7217,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
@@ -6511,7 +7236,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErr
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicy
@@ -6524,7 +7251,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErr
     [JsonPropertyName("errorService")]
     public string? ErrorService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -6541,7 +7270,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -6558,7 +7289,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderAction
@@ -6579,7 +7312,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderAct
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -6592,7 +7327,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -6629,7 +7366,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -6642,7 +7381,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -6655,7 +7396,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -6676,7 +7419,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRules
@@ -6713,7 +7458,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -6750,7 +7497,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -6763,7 +7512,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -6776,7 +7527,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -6789,7 +7542,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -6802,7 +7557,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
@@ -6815,7 +7572,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -6824,7 +7583,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -6837,7 +7598,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -6854,7 +7617,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionTimeout
@@ -6867,7 +7632,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -6884,7 +7651,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -6901,7 +7670,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -6918,7 +7689,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -6939,7 +7712,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -6956,7 +7731,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteAction
@@ -6993,7 +7770,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect
@@ -7022,7 +7801,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesUrlRedire
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRules
@@ -7055,7 +7836,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcher
@@ -7096,7 +7879,9 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderTestHeaders
@@ -7109,7 +7894,9 @@ public partial class V1beta1URLMapStatusAtProviderTestHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderTest
@@ -7142,7 +7929,9 @@ public partial class V1beta1URLMapStatusAtProviderTest
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProvider
@@ -7207,7 +7996,9 @@ public partial class V1beta1URLMapStatusAtProvider
     [JsonPropertyName("test")]
     public IList<V1beta1URLMapStatusAtProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusConditions
@@ -7236,7 +8027,9 @@ public partial class V1beta1URLMapStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URLMapStatus defines the observed state of URLMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatus
@@ -7253,7 +8046,9 @@ public partial class V1beta1URLMapStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URLMap is the Schema for the URLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -7283,3 +8078,4 @@ public partial class V1beta1URLMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1URLMapStatus? Status { get; set; }
 }
+#nullable disable

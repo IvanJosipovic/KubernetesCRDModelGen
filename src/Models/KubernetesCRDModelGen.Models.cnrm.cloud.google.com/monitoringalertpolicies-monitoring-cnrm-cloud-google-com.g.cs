@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitoringAlertPolicyList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1MonitoringAlertPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationCh
     [JsonPropertyName("renotifyInterval")]
     public string? RenotifyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit
@@ -55,7 +60,9 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRa
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Control over how this alert policy's notification channels are notified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
@@ -72,7 +79,9 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
     [JsonPropertyName("notificationRateLimit")]
     public V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit? NotificationRateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAggregations
@@ -93,7 +102,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAg
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger
@@ -106,7 +117,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTr
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that checks that a time series continues to receive new data points.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
@@ -127,7 +140,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
     [JsonPropertyName("trigger")]
     public V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that checks for log messages matching given constraints. If set, no other conditions can be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedLog
@@ -140,7 +155,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedL
     [JsonPropertyName("labelExtractors")]
     public IDictionary<string, string>? LabelExtractors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger
@@ -153,7 +170,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Monitoring Query Language query that outputs a boolean stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage
@@ -174,7 +193,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
     [JsonPropertyName("trigger")]
     public V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Monitoring Query Language query that outputs a boolean stream  A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL).  The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage
@@ -203,7 +224,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPromethe
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdAggregations
@@ -224,7 +247,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations
@@ -245,7 +270,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this field is present, the 'MetricThreshold' condition forecasts whether the time series is predicted to violate the threshold within the 'forecastHorizon'. When this field is not set, the 'MetricThreshold' tests the current value of the timeseries against the threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions
@@ -254,7 +281,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     [JsonPropertyName("forecastHorizon")]
     public string ForecastHorizon { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger
@@ -267,7 +296,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition that compares a time series against a threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshold
@@ -312,7 +343,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     [JsonPropertyName("trigger")]
     public V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecConditions
@@ -345,7 +378,9 @@ public partial class V1beta1MonitoringAlertPolicySpecConditions
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecDocumentation
@@ -358,7 +393,9 @@ public partial class V1beta1MonitoringAlertPolicySpecDocumentation
     [JsonPropertyName("mimeType")]
     public string? MimeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when new violations occur on an already opened incident.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
@@ -375,7 +412,9 @@ public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicySpec
@@ -416,7 +455,9 @@ public partial class V1beta1MonitoringAlertPolicySpec
     [JsonPropertyName("severity")]
     public string? Severity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicyStatusConditions
@@ -441,7 +482,9 @@ public partial class V1beta1MonitoringAlertPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
@@ -454,7 +497,9 @@ public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
     [JsonPropertyName("mutatedBy")]
     public string? MutatedBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringAlertPolicyStatus
@@ -475,7 +520,9 @@ public partial class V1beta1MonitoringAlertPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -505,3 +552,4 @@ public partial class V1beta1MonitoringAlertPolicy : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1MonitoringAlertPolicyStatus? Status { get; set; }
 }
+#nullable disable

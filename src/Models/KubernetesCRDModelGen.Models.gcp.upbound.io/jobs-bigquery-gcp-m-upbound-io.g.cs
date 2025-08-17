@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1JobList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1Job> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfiguration
@@ -42,7 +45,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigura
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRef
@@ -136,7 +151,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelector
@@ -170,7 +189,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationTable
@@ -203,7 +224,9 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRef
@@ -233,7 +258,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelectorPolicy
@@ -246,7 +273,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelector
@@ -267,7 +296,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRef
@@ -297,7 +330,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelectorPolicy
@@ -310,7 +345,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelector
@@ -331,7 +368,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRefPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRef
@@ -361,7 +402,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelectorPolicy
@@ -374,7 +417,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelector
@@ -395,7 +440,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderCopySourceTablesTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTables
@@ -436,7 +483,9 @@ public partial class V1beta1JobSpecForProviderCopySourceTables
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecForProviderCopySourceTablesTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Copies a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopy
@@ -461,7 +510,9 @@ public partial class V1beta1JobSpecForProviderCopy
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the model being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceModel
@@ -478,7 +529,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceModel
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPolicy
@@ -491,7 +544,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRef
@@ -508,7 +563,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelectorPolicy
@@ -521,7 +578,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelector
@@ -542,7 +601,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicy
@@ -555,7 +616,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRef
@@ -572,7 +635,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicy
@@ -585,7 +650,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelector
@@ -606,7 +673,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtractSourceTable
@@ -639,7 +708,9 @@ public partial class V1beta1JobSpecForProviderExtractSourceTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecForProviderExtractSourceTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures an extract job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderExtract
@@ -676,7 +747,9 @@ public partial class V1beta1JobSpecForProviderExtract
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationEncryptionConfiguration
@@ -685,7 +758,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationEncryptionConfigura
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPolicy
@@ -698,7 +773,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRef
@@ -715,7 +792,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelectorPolicy
@@ -728,7 +807,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelector
@@ -749,7 +830,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPolicy
@@ -762,7 +845,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRef
@@ -779,7 +864,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicy
@@ -792,7 +879,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelector
@@ -813,7 +902,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table to load the data into. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadDestinationTable
@@ -846,7 +937,9 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parquet Options for load and make external tables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadParquetOptions
@@ -859,7 +952,9 @@ public partial class V1beta1JobSpecForProviderLoadParquetOptions
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time-based partitioning specification for the destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoadTimePartitioning
@@ -876,7 +971,9 @@ public partial class V1beta1JobSpecForProviderLoadTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a load job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderLoad
@@ -965,7 +1062,9 @@ public partial class V1beta1JobSpecForProviderLoad
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPolicy
@@ -978,7 +1077,9 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRef
@@ -995,7 +1096,9 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicy
@@ -1008,7 +1111,9 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelector
@@ -1029,7 +1134,9 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelect
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDefaultDataset
@@ -1050,7 +1157,9 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationEncryptionConfiguration
@@ -1059,7 +1168,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationEncryptionConfigur
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefPolicy
@@ -1072,7 +1183,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRef
@@ -1089,7 +1202,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelectorPolicy
@@ -1102,7 +1217,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelector
@@ -1123,7 +1240,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSele
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPolicy
@@ -1136,7 +1255,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRef
@@ -1153,7 +1274,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicy
@@ -1166,7 +1289,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelector
@@ -1187,7 +1312,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelect
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryDestinationTable
@@ -1220,7 +1347,9 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options controlling the execution of scripts. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryScriptOptions
@@ -1237,7 +1366,9 @@ public partial class V1beta1JobSpecForProviderQueryScriptOptions
     [JsonPropertyName("statementTimeoutMs")]
     public string? StatementTimeoutMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQueryUserDefinedFunctionResources
@@ -1250,7 +1381,9 @@ public partial class V1beta1JobSpecForProviderQueryUserDefinedFunctionResources
     [JsonPropertyName("resourceUri")]
     public string? ResourceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a query job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderQuery
@@ -1323,7 +1456,9 @@ public partial class V1beta1JobSpecForProviderQuery
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProvider
@@ -1364,7 +1499,9 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("query")]
     public V1beta1JobSpecForProviderQuery? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfiguration
@@ -1373,7 +1510,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigur
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefPolicy
@@ -1386,7 +1525,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRef
@@ -1403,7 +1544,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelectorPolicy
@@ -1416,7 +1559,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelector
@@ -1437,7 +1582,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSele
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPolicy
@@ -1450,7 +1597,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRef
@@ -1467,7 +1616,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicy
@@ -1480,7 +1631,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelector
@@ -1501,7 +1654,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelect
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationTable
@@ -1534,7 +1689,9 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRefPolicy
@@ -1547,7 +1704,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRef
@@ -1564,7 +1723,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelectorPolicy
@@ -1577,7 +1738,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelector
@@ -1598,7 +1761,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRefPolicy
@@ -1611,7 +1776,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRef
@@ -1628,7 +1795,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelectorPolicy
@@ -1641,7 +1810,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelector
@@ -1662,7 +1833,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRefPolicy
@@ -1675,7 +1848,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRef
@@ -1692,7 +1867,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelectorPolicy
@@ -1705,7 +1882,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelector
@@ -1726,7 +1905,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderCopySourceTablesTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTables
@@ -1767,7 +1948,9 @@ public partial class V1beta1JobSpecInitProviderCopySourceTables
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecInitProviderCopySourceTablesTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Copies a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopy
@@ -1792,7 +1975,9 @@ public partial class V1beta1JobSpecInitProviderCopy
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the model being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceModel
@@ -1809,7 +1994,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceModel
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPolicy
@@ -1822,7 +2009,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRef
@@ -1839,7 +2028,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelectorPolicy
@@ -1852,7 +2043,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelector
@@ -1873,7 +2066,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelect
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolicy
@@ -1886,7 +2081,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRef
@@ -1903,7 +2100,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicy
@@ -1916,7 +2115,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
@@ -1937,7 +2138,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtractSourceTable
@@ -1970,7 +2173,9 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures an extract job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderExtract
@@ -2007,7 +2212,9 @@ public partial class V1beta1JobSpecInitProviderExtract
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationEncryptionConfiguration
@@ -2016,7 +2223,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationEncryptionConfigur
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefPolicy
@@ -2029,7 +2238,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRef
@@ -2046,7 +2257,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelectorPolicy
@@ -2059,7 +2272,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelector
@@ -2080,7 +2295,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSele
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPolicy
@@ -2093,7 +2310,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRef
@@ -2110,7 +2329,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicy
@@ -2123,7 +2344,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelector
@@ -2144,7 +2367,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelect
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table to load the data into. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadDestinationTable
@@ -2177,7 +2402,9 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parquet Options for load and make external tables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadParquetOptions
@@ -2190,7 +2417,9 @@ public partial class V1beta1JobSpecInitProviderLoadParquetOptions
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time-based partitioning specification for the destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoadTimePartitioning
@@ -2207,7 +2436,9 @@ public partial class V1beta1JobSpecInitProviderLoadTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a load job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderLoad
@@ -2296,7 +2527,9 @@ public partial class V1beta1JobSpecInitProviderLoad
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPolicy
@@ -2309,7 +2542,9 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRef
@@ -2326,7 +2561,9 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicy
@@ -2339,7 +2576,9 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelector
@@ -2360,7 +2599,9 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDefaultDataset
@@ -2381,7 +2622,9 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationEncryptionConfiguration
@@ -2390,7 +2633,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationEncryptionConfigu
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRefPolicy
@@ -2403,7 +2648,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRef
@@ -2420,7 +2667,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelectorPolicy
@@ -2433,7 +2682,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelector
@@ -2454,7 +2705,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSel
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPolicy
@@ -2467,7 +2720,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRef
@@ -2484,7 +2739,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicy
@@ -2497,7 +2754,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelector
@@ -2518,7 +2777,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelec
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryDestinationTable
@@ -2551,7 +2812,9 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTable
     [JsonPropertyName("tableIdSelector")]
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options controlling the execution of scripts. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryScriptOptions
@@ -2568,7 +2831,9 @@ public partial class V1beta1JobSpecInitProviderQueryScriptOptions
     [JsonPropertyName("statementTimeoutMs")]
     public string? StatementTimeoutMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQueryUserDefinedFunctionResources
@@ -2581,7 +2846,9 @@ public partial class V1beta1JobSpecInitProviderQueryUserDefinedFunctionResources
     [JsonPropertyName("resourceUri")]
     public string? ResourceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a query job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderQuery
@@ -2654,7 +2921,9 @@ public partial class V1beta1JobSpecInitProviderQuery
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProvider
@@ -2695,7 +2964,9 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("query")]
     public V1beta1JobSpecInitProviderQuery? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecProviderConfigRef
@@ -2708,7 +2979,9 @@ public partial class V1beta1JobSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
@@ -2717,7 +2990,9 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobSpec defines the desired state of Job</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpec
@@ -2742,7 +3017,9 @@ public partial class V1beta1JobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderCopyDestinationEncryptionConfiguration
@@ -2755,7 +3032,9 @@ public partial class V1beta1JobStatusAtProviderCopyDestinationEncryptionConfigur
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderCopyDestinationTable
@@ -2772,7 +3051,9 @@ public partial class V1beta1JobStatusAtProviderCopyDestinationTable
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderCopySourceTables
@@ -2789,7 +3070,9 @@ public partial class V1beta1JobStatusAtProviderCopySourceTables
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Copies a table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderCopy
@@ -2814,7 +3097,9 @@ public partial class V1beta1JobStatusAtProviderCopy
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the model being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderExtractSourceModel
@@ -2831,7 +3116,9 @@ public partial class V1beta1JobStatusAtProviderExtractSourceModel
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the table being exported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderExtractSourceTable
@@ -2848,7 +3135,9 @@ public partial class V1beta1JobStatusAtProviderExtractSourceTable
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures an extract job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderExtract
@@ -2885,7 +3174,9 @@ public partial class V1beta1JobStatusAtProviderExtract
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderLoadDestinationEncryptionConfiguration
@@ -2898,7 +3189,9 @@ public partial class V1beta1JobStatusAtProviderLoadDestinationEncryptionConfigur
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination table to load the data into. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderLoadDestinationTable
@@ -2915,7 +3208,9 @@ public partial class V1beta1JobStatusAtProviderLoadDestinationTable
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parquet Options for load and make external tables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderLoadParquetOptions
@@ -2928,7 +3223,9 @@ public partial class V1beta1JobStatusAtProviderLoadParquetOptions
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time-based partitioning specification for the destination table. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderLoadTimePartitioning
@@ -2945,7 +3242,9 @@ public partial class V1beta1JobStatusAtProviderLoadTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a load job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderLoad
@@ -3034,7 +3333,9 @@ public partial class V1beta1JobStatusAtProviderLoad
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQueryDefaultDataset
@@ -3047,7 +3348,9 @@ public partial class V1beta1JobStatusAtProviderQueryDefaultDataset
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQueryDestinationEncryptionConfiguration
@@ -3060,7 +3363,9 @@ public partial class V1beta1JobStatusAtProviderQueryDestinationEncryptionConfigu
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQueryDestinationTable
@@ -3077,7 +3382,9 @@ public partial class V1beta1JobStatusAtProviderQueryDestinationTable
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options controlling the execution of scripts. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQueryScriptOptions
@@ -3094,7 +3401,9 @@ public partial class V1beta1JobStatusAtProviderQueryScriptOptions
     [JsonPropertyName("statementTimeoutMs")]
     public string? StatementTimeoutMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQueryUserDefinedFunctionResources
@@ -3107,7 +3416,9 @@ public partial class V1beta1JobStatusAtProviderQueryUserDefinedFunctionResources
     [JsonPropertyName("resourceUri")]
     public string? ResourceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures a query job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderQuery
@@ -3180,7 +3491,9 @@ public partial class V1beta1JobStatusAtProviderQuery
     [JsonPropertyName("writeDisposition")]
     public string? WriteDisposition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderStatusErrorResult
@@ -3197,7 +3510,9 @@ public partial class V1beta1JobStatusAtProviderStatusErrorResult
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderStatusErrors
@@ -3214,7 +3529,9 @@ public partial class V1beta1JobStatusAtProviderStatusErrors
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderStatus
@@ -3231,7 +3548,9 @@ public partial class V1beta1JobStatusAtProviderStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProvider
@@ -3296,7 +3615,9 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("userEmail")]
     public string? UserEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusConditions
@@ -3325,7 +3646,9 @@ public partial class V1beta1JobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobStatus defines the observed state of Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatus
@@ -3342,7 +3665,9 @@ public partial class V1beta1JobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3372,3 +3697,4 @@ public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1JobStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1NetworkServicesEdgeCacheKeyset> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef
@@ -63,7 +68,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueVal
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom
@@ -72,7 +79,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueVal
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes). Representations or encodings of the public key other than this will be rejected with an error.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue
@@ -85,7 +94,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue
     [JsonPropertyName("valueFrom")]
     public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKey
@@ -102,7 +113,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKey
     [JsonPropertyName("value")]
     public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys
@@ -111,7 +124,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedK
     [JsonPropertyName("secretVersion")]
     public string SecretVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpec
@@ -136,7 +151,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpec
     [JsonPropertyName("validationSharedKeys")]
     public IList<V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys>? ValidationSharedKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatusConditions
@@ -161,7 +178,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatus
@@ -174,7 +193,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -204,3 +225,4 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeyset : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1NetworkServicesEdgeCacheKeysetStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkforceList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Workforce> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRef
@@ -115,7 +128,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRef
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelector
@@ -145,7 +162,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelecto
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfig
@@ -174,7 +193,9 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfig
     [JsonPropertyName("userPoolSelector")]
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelector? UserPoolSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OIDC IdP client secret used to configure your private workforce.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderOidcConfigClientSecretSecretRef
@@ -191,7 +212,9 @@ public partial class V1beta1WorkforceSpecForProviderOidcConfigClientSecretSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderOidcConfig
@@ -236,7 +259,9 @@ public partial class V1beta1WorkforceSpecForProviderOidcConfig
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderSourceIpConfig
@@ -245,7 +270,9 @@ public partial class V1beta1WorkforceSpecForProviderSourceIpConfig
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderWorkforceVpcConfig
@@ -262,7 +289,9 @@ public partial class V1beta1WorkforceSpecForProviderWorkforceVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProvider
@@ -287,7 +316,9 @@ public partial class V1beta1WorkforceSpecForProvider
     [JsonPropertyName("workforceVpcConfig")]
     public IList<V1beta1WorkforceSpecForProviderWorkforceVpcConfig>? WorkforceVpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRef
@@ -313,7 +346,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelector
@@ -343,7 +380,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelect
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPolicy
@@ -356,7 +395,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRef
@@ -369,7 +410,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRef
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicy
@@ -382,7 +425,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelector
@@ -399,7 +444,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelect
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfig
@@ -428,7 +475,9 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfig
     [JsonPropertyName("userPoolSelector")]
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelector? UserPoolSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OIDC IdP client secret used to configure your private workforce.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderOidcConfigClientSecretSecretRef
@@ -445,7 +494,9 @@ public partial class V1beta1WorkforceSpecInitProviderOidcConfigClientSecretSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderOidcConfig
@@ -490,7 +541,9 @@ public partial class V1beta1WorkforceSpecInitProviderOidcConfig
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderSourceIpConfig
@@ -499,7 +552,9 @@ public partial class V1beta1WorkforceSpecInitProviderSourceIpConfig
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProviderWorkforceVpcConfig
@@ -516,7 +571,9 @@ public partial class V1beta1WorkforceSpecInitProviderWorkforceVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecInitProvider
@@ -537,7 +594,9 @@ public partial class V1beta1WorkforceSpecInitProvider
     [JsonPropertyName("workforceVpcConfig")]
     public IList<V1beta1WorkforceSpecInitProviderWorkforceVpcConfig>? WorkforceVpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecProviderConfigRefPolicy
@@ -550,7 +609,9 @@ public partial class V1beta1WorkforceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecProviderConfigRef
@@ -563,7 +624,9 @@ public partial class V1beta1WorkforceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WorkforceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecWriteConnectionSecretToRef
@@ -576,7 +639,9 @@ public partial class V1beta1WorkforceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkforceSpec defines the desired state of Workforce</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpec
@@ -605,7 +670,9 @@ public partial class V1beta1WorkforceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkforceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusAtProviderCognitoConfig
@@ -618,7 +685,9 @@ public partial class V1beta1WorkforceStatusAtProviderCognitoConfig
     [JsonPropertyName("userPool")]
     public string? UserPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusAtProviderOidcConfig
@@ -659,7 +728,9 @@ public partial class V1beta1WorkforceStatusAtProviderOidcConfig
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusAtProviderSourceIpConfig
@@ -668,7 +739,9 @@ public partial class V1beta1WorkforceStatusAtProviderSourceIpConfig
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusAtProviderWorkforceVpcConfig
@@ -689,7 +762,9 @@ public partial class V1beta1WorkforceStatusAtProviderWorkforceVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusAtProvider
@@ -726,7 +801,9 @@ public partial class V1beta1WorkforceStatusAtProvider
     [JsonPropertyName("workforceVpcConfig")]
     public IList<V1beta1WorkforceStatusAtProviderWorkforceVpcConfig>? WorkforceVpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatusConditions
@@ -755,7 +832,9 @@ public partial class V1beta1WorkforceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkforceStatus defines the observed state of Workforce.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceStatus
@@ -772,7 +851,9 @@ public partial class V1beta1WorkforceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -802,3 +883,4 @@ public partial class V1beta1Workforce : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1WorkforceStatus? Status { get; set; }
 }
+#nullable disable

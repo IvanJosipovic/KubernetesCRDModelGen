@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>NetworkInsightsPath is the Schema for the NetworkInsightsPaths API. Provides a Network Insights Path resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkInsightsPathList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkInsightsPath> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationRef
@@ -59,7 +64,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecForProviderDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationSelecto
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecForProviderDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationDestinationPortRange
@@ -102,7 +113,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinatio
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationSourcePortRange
@@ -115,7 +128,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinatio
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestination
@@ -136,7 +151,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinatio
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceDestinationPortRange
@@ -149,7 +166,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceDest
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceSourcePortRange
@@ -162,7 +181,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceSour
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSource
@@ -183,7 +204,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSource
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderSourceRefPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderSourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderSourceRef
@@ -209,7 +234,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderSourceRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecForProviderSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderSourceSelectorPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderSourceSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderSourceSelector
@@ -239,7 +268,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderSourceSelector
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecForProviderSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProvider
@@ -300,7 +331,9 @@ public partial class V1beta1NetworkInsightsPathSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationRefPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationRef
@@ -326,7 +361,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecInitProviderDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationSelectorPolicy
@@ -339,7 +376,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationSelector
@@ -356,7 +395,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationSelect
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecInitProviderDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationDestinationPortRange
@@ -369,7 +410,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinati
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationSourcePortRange
@@ -382,7 +425,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinati
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestination
@@ -403,7 +448,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinati
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceDestinationPortRange
@@ -416,7 +463,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceDes
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceSourcePortRange
@@ -429,7 +478,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceSou
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSource
@@ -450,7 +501,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSource
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceRefPolicy
@@ -463,7 +516,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceRef
@@ -476,7 +531,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecInitProviderSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceSelectorPolicy
@@ -489,7 +546,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceSelector
@@ -506,7 +565,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceSelector
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecInitProviderSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProvider
@@ -563,7 +624,9 @@ public partial class V1beta1NetworkInsightsPathSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecProviderConfigRefPolicy
@@ -576,7 +639,9 @@ public partial class V1beta1NetworkInsightsPathSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecProviderConfigRef
@@ -589,7 +654,9 @@ public partial class V1beta1NetworkInsightsPathSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkInsightsPathSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecWriteConnectionSecretToRef
@@ -602,7 +669,9 @@ public partial class V1beta1NetworkInsightsPathSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInsightsPathSpec defines the desired state of NetworkInsightsPath</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpec
@@ -631,7 +700,9 @@ public partial class V1beta1NetworkInsightsPathSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkInsightsPathSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationDestinationPortRange
@@ -644,7 +715,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinati
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationSourcePortRange
@@ -657,7 +730,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinati
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestination
@@ -678,7 +753,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinati
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceDestinationPortRange
@@ -691,7 +768,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceDes
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source port range. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceSourcePortRange
@@ -704,7 +783,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceSou
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSource
@@ -725,7 +806,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSource
     [JsonPropertyName("sourcePortRange")]
     public V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProvider
@@ -790,7 +873,9 @@ public partial class V1beta1NetworkInsightsPathStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusConditions
@@ -819,7 +904,9 @@ public partial class V1beta1NetworkInsightsPathStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInsightsPathStatus defines the observed state of NetworkInsightsPath.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatus
@@ -836,7 +923,9 @@ public partial class V1beta1NetworkInsightsPathStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInsightsPath is the Schema for the NetworkInsightsPaths API. Provides a Network Insights Path resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -866,3 +955,4 @@ public partial class V1beta1NetworkInsightsPath : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1NetworkInsightsPathStatus? Status { get; set; }
 }
+#nullable disable

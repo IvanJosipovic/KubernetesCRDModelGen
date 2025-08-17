@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EdgeContainerClusterList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1EdgeContainerCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsernameRef
@@ -50,7 +53,9 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsern
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>User that will be granted the cluster-admin role on the cluster, providing full access to the cluster. Currently, this is a singular field, but will be expanded to allow multiple admins in the future.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers
@@ -59,7 +64,9 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers
     [JsonPropertyName("usernameRef")]
     public V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsernameRef UsernameRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. RBAC policy that will be applied and managed by GEC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecAuthorization
@@ -68,7 +75,9 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorization
     [JsonPropertyName("adminUsers")]
     public V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers AdminUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Local control plane configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneLocal
@@ -89,7 +98,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneLocal
     [JsonPropertyName("sharedDeploymentPolicy")]
     public string? SharedDeploymentPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Remote control plane configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneRemote
@@ -98,7 +109,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneRemote
     [JsonPropertyName("nodeLocation")]
     public string? NodeLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the cluster control plane.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlane
@@ -111,7 +124,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlane
     [JsonPropertyName("remote")]
     public V1beta1EdgeContainerClusterSpecControlPlaneRemote? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsKeyRef
@@ -128,7 +143,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsKey
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsStatus
@@ -141,7 +158,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsSta
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remote control plane disk encryption options. This field is only used when enabling CMEK support.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryption
@@ -162,7 +181,9 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryption
     [JsonPropertyName("kmsStatus")]
     public IList<V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsStatus>? KmsStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecFleetProjectRef
@@ -179,7 +200,9 @@ public partial class V1beta1EdgeContainerClusterSpecFleetProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Fleet related configuration. Fleets are a Google Cloud concept for logically organizing clusters, letting you use and manage multi-cluster capabilities and apply consistent policies across your systems.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecFleet
@@ -192,7 +215,9 @@ public partial class V1beta1EdgeContainerClusterSpecFleet
     [JsonPropertyName("projectRef")]
     public V1beta1EdgeContainerClusterSpecFleetProjectRef ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents an arbitrary window of time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindowWindow
@@ -205,7 +230,9 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecur
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents an arbitrary window of time that recurs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindow
@@ -218,7 +245,9 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecur
     [JsonPropertyName("window")]
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindowWindow? Window { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the maintenance window in which maintenance may be performed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow
@@ -227,7 +256,9 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow
     [JsonPropertyName("recurringWindow")]
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindow RecurringWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster-wide maintenance policy configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicy
@@ -236,7 +267,9 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicy
     [JsonPropertyName("window")]
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow Window { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet related configuration. Fleets are a Google Cloud concept for logically organizing clusters, letting you use and manage multi-cluster capabilities and apply consistent policies across your systems.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecNetworking
@@ -261,7 +294,9 @@ public partial class V1beta1EdgeContainerClusterSpecNetworking
     [JsonPropertyName("servicesIpv6CidrBlocks")]
     public IList<string>? ServicesIpv6CidrBlocks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecProjectRef
@@ -278,7 +313,9 @@ public partial class V1beta1EdgeContainerClusterSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config for the Ingress add-on which allows customers to create an Ingress object to manage external access to the servers in a cluster. The add-on consists of istiod and istio-ingress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress
@@ -291,7 +328,9 @@ public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress
     [JsonPropertyName("ipv4Vip")]
     public string? Ipv4Vip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config that customers are allowed to define for GDCE system add-ons.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfig
@@ -300,7 +339,9 @@ public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfig
     [JsonPropertyName("ingress")]
     public V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress? Ingress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterSpec
@@ -361,7 +402,9 @@ public partial class V1beta1EdgeContainerClusterSpec
     [JsonPropertyName("targetVersion")]
     public string? TargetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterStatusConditions
@@ -386,7 +429,9 @@ public partial class V1beta1EdgeContainerClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterStatusMaintenanceEvents
@@ -431,7 +476,9 @@ public partial class V1beta1EdgeContainerClusterStatusMaintenanceEvents
     [JsonPropertyName("uuid")]
     public string? Uuid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerClusterStatus
@@ -480,7 +527,9 @@ public partial class V1beta1EdgeContainerClusterStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -510,3 +559,4 @@ public partial class V1beta1EdgeContainerCluster : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1EdgeContainerClusterStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+#nullable enable
 /// <summary>ScaledObject is a specification for a ScaledObject resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ScaledObjectList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1ScaledObject> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleDownPolicies
@@ -50,7 +53,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("value")]
     public int Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleDown
@@ -67,7 +72,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("stabilizationWindowSeconds")]
     public int? StabilizationWindowSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUpPolicies
@@ -84,7 +91,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("value")]
     public int Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:   * increase no more than 4 pods per 60 seconds   * double the number of pods per 60 seconds No stabilization is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUp
@@ -101,7 +110,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("stabilizationWindowSeconds")]
     public int? StabilizationWindowSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehavior
@@ -114,7 +125,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("scaleUp")]
     public V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUp? ScaleUp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HorizontalPodAutoscalerConfig specifies horizontal scale config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfig
@@ -127,7 +140,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScalingModifiers describes advanced scaling logic options like formula</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvancedScalingModifiers
@@ -148,7 +163,9 @@ public partial class V1alpha1ScaledObjectSpecAdvancedScalingModifiers
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdvancedConfig specifies advance scaling options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecAdvanced
@@ -165,7 +182,9 @@ public partial class V1alpha1ScaledObjectSpecAdvanced
     [JsonPropertyName("scalingModifiers")]
     public V1alpha1ScaledObjectSpecAdvancedScalingModifiers? ScalingModifiers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fallback is the spec for fallback options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecFallback
@@ -182,7 +201,9 @@ public partial class V1alpha1ScaledObjectSpecFallback
     [JsonPropertyName("replicas")]
     public int Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaleTarget holds the reference to the scale target Object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecScaleTargetRef
@@ -203,7 +224,9 @@ public partial class V1alpha1ScaledObjectSpecScaleTargetRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecTriggersAuthenticationRef
@@ -216,7 +239,9 @@ public partial class V1alpha1ScaledObjectSpecTriggersAuthenticationRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaleTriggers reference the scaler that will be used</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpecTriggers
@@ -245,7 +270,9 @@ public partial class V1alpha1ScaledObjectSpecTriggers
     [JsonPropertyName("useCachedMetrics")]
     public bool? UseCachedMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledObjectSpec is the spec for a ScaledObject resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectSpec
@@ -290,7 +317,9 @@ public partial class V1alpha1ScaledObjectSpec
     [JsonPropertyName("triggers")]
     public IList<V1alpha1ScaledObjectSpecTriggers> Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition to store the condition state</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectStatusConditions
@@ -311,7 +340,9 @@ public partial class V1alpha1ScaledObjectStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthStatus is the status for a ScaledObject's health</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectStatusHealth
@@ -324,7 +355,9 @@ public partial class V1alpha1ScaledObjectStatusHealth
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GroupVersionKindResource provides unified structure for schema.GroupVersionKind and Resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectStatusScaleTargetGVKR
@@ -345,7 +378,9 @@ public partial class V1alpha1ScaledObjectStatusScaleTargetGVKR
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledObjectStatus is the status for a ScaledObject resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledObjectStatus
@@ -402,7 +437,9 @@ public partial class V1alpha1ScaledObjectStatus
     [JsonPropertyName("triggersTypes")]
     public string? TriggersTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledObject is a specification for a ScaledObject resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -432,3 +469,4 @@ public partial class V1alpha1ScaledObject : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1ScaledObjectStatus? Status { get; set; }
 }
+#nullable disable

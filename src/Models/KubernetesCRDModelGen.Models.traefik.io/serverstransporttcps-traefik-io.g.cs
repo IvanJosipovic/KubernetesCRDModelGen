@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#serverstransport_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ServersTransportTCPList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1ServersTransportTCP> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RootCA defines a reference to a Secret or a ConfigMap that holds a CA certificate. If both a Secret and a ConfigMap reference are defined, the Secret reference takes precedence.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportTCPSpecTlsRootCAs
@@ -46,7 +49,9 @@ public partial class V1alpha1ServersTransportTCPSpecTlsRootCAs
     [JsonPropertyName("secret")]
     public string? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spiffe defines the SPIFFE configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportTCPSpecTlsSpiffe
@@ -59,7 +64,9 @@ public partial class V1alpha1ServersTransportTCPSpecTlsSpiffe
     [JsonPropertyName("trustDomain")]
     public string? TrustDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS defines the TLS configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportTCPSpecTls
@@ -92,7 +99,9 @@ public partial class V1alpha1ServersTransportTCPSpecTls
     [JsonPropertyName("spiffe")]
     public V1alpha1ServersTransportTCPSpecTlsSpiffe? Spiffe { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServersTransportTCPSpec defines the desired state of a ServersTransportTCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportTCPSpec
@@ -113,7 +122,9 @@ public partial class V1alpha1ServersTransportTCPSpec
     [JsonPropertyName("tls")]
     public V1alpha1ServersTransportTCPSpecTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#serverstransport_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -139,3 +150,4 @@ public partial class V1alpha1ServersTransportTCP : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("spec")]
     public V1alpha1ServersTransportTCPSpec Spec { get; set; }
 }
+#nullable disable

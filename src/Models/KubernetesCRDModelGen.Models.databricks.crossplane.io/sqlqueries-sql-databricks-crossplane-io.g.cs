@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+#nullable enable
 /// <summary>SQLQuery is the Schema for the SQLQuerys API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1SQLQueryList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1alpha1SQLQuery> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDate
@@ -42,7 +45,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDate
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDateRangeRange
@@ -55,7 +60,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDateRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDateRange
@@ -68,7 +75,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDateRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetime
@@ -77,7 +86,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetime
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimeRangeRange
@@ -90,7 +101,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimeRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimeRange
@@ -103,7 +116,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimeRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesec
@@ -112,7 +127,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesec
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesecRangeRange
@@ -125,7 +142,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesecRangeRan
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesecRange
@@ -138,7 +157,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterDatetimesecRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterEnumMultiple
@@ -155,7 +176,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterEnumMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterEnum
@@ -176,7 +199,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterEnum
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterNumber
@@ -185,7 +210,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterQueryMultiple
@@ -202,7 +229,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterQueryMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterQuery
@@ -223,7 +252,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterQuery
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameterText
@@ -232,7 +263,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameterText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderParameter
@@ -285,7 +318,9 @@ public partial class V1alpha1SQLQuerySpecForProviderParameter
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderScheduleContinuous
@@ -298,7 +333,9 @@ public partial class V1alpha1SQLQuerySpecForProviderScheduleContinuous
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderScheduleDaily
@@ -315,7 +352,9 @@ public partial class V1alpha1SQLQuerySpecForProviderScheduleDaily
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderScheduleWeekly
@@ -336,7 +375,9 @@ public partial class V1alpha1SQLQuerySpecForProviderScheduleWeekly
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProviderSchedule
@@ -353,7 +394,9 @@ public partial class V1alpha1SQLQuerySpecForProviderSchedule
     [JsonPropertyName("weekly")]
     public IList<V1alpha1SQLQuerySpecForProviderScheduleWeekly>? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecForProvider
@@ -402,7 +445,9 @@ public partial class V1alpha1SQLQuerySpecForProvider
     [JsonPropertyName("updatedAt")]
     public string? UpdatedAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDate
@@ -411,7 +456,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDate
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDateRangeRange
@@ -424,7 +471,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDateRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDateRange
@@ -437,7 +486,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDateRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetime
@@ -446,7 +497,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetime
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimeRangeRange
@@ -459,7 +512,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimeRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimeRange
@@ -472,7 +527,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimeRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesec
@@ -481,7 +538,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesec
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesecRangeRange
@@ -494,7 +553,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesecRangeRa
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesecRange
@@ -507,7 +568,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterDatetimesecRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterEnumMultiple
@@ -524,7 +587,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterEnumMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterEnum
@@ -545,7 +610,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterEnum
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterNumber
@@ -554,7 +621,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterQueryMultiple
@@ -571,7 +640,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterQueryMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterQuery
@@ -592,7 +663,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterQuery
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameterText
@@ -601,7 +674,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameterText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderParameter
@@ -654,7 +729,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderParameter
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderScheduleContinuous
@@ -667,7 +744,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderScheduleContinuous
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderScheduleDaily
@@ -684,7 +763,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderScheduleDaily
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderScheduleWeekly
@@ -705,7 +786,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderScheduleWeekly
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProviderSchedule
@@ -722,7 +805,9 @@ public partial class V1alpha1SQLQuerySpecInitProviderSchedule
     [JsonPropertyName("weekly")]
     public IList<V1alpha1SQLQuerySpecInitProviderScheduleWeekly>? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecInitProvider
@@ -771,7 +856,9 @@ public partial class V1alpha1SQLQuerySpecInitProvider
     [JsonPropertyName("updatedAt")]
     public string? UpdatedAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecProviderConfigRefPolicy
@@ -784,7 +871,9 @@ public partial class V1alpha1SQLQuerySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecProviderConfigRef
@@ -797,7 +886,9 @@ public partial class V1alpha1SQLQuerySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1SQLQuerySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToConfigRefPolicy
@@ -810,7 +901,9 @@ public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToConfigRef
@@ -823,7 +916,9 @@ public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1SQLQuerySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToMetadata
@@ -840,7 +935,9 @@ public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsTo
@@ -857,7 +954,9 @@ public partial class V1alpha1SQLQuerySpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpecWriteConnectionSecretToRef
@@ -870,7 +969,9 @@ public partial class V1alpha1SQLQuerySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLQuerySpec defines the desired state of SQLQuery</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQuerySpec
@@ -903,7 +1004,9 @@ public partial class V1alpha1SQLQuerySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1SQLQuerySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDate
@@ -912,7 +1015,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDate
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDateRangeRange
@@ -925,7 +1030,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDateRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDateRange
@@ -938,7 +1045,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDateRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetime
@@ -947,7 +1056,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetime
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimeRangeRange
@@ -960,7 +1071,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimeRangeRange
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimeRange
@@ -973,7 +1086,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimeRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesec
@@ -982,7 +1097,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesec
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesecRangeRange
@@ -995,7 +1112,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesecRangeRa
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesecRange
@@ -1008,7 +1127,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterDatetimesecRange
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterEnumMultiple
@@ -1025,7 +1146,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterEnumMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterEnum
@@ -1046,7 +1169,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterEnum
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterNumber
@@ -1055,7 +1180,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterQueryMultiple
@@ -1072,7 +1199,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterQueryMultiple
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterQuery
@@ -1093,7 +1222,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterQuery
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameterText
@@ -1102,7 +1233,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameterText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderParameter
@@ -1155,7 +1288,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderParameter
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderScheduleContinuous
@@ -1168,7 +1303,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderScheduleContinuous
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderScheduleDaily
@@ -1185,7 +1322,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderScheduleDaily
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderScheduleWeekly
@@ -1206,7 +1345,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderScheduleWeekly
     [JsonPropertyName("untilDate")]
     public string? UntilDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProviderSchedule
@@ -1223,7 +1364,9 @@ public partial class V1alpha1SQLQueryStatusAtProviderSchedule
     [JsonPropertyName("weekly")]
     public IList<V1alpha1SQLQueryStatusAtProviderScheduleWeekly>? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusAtProvider
@@ -1276,7 +1419,9 @@ public partial class V1alpha1SQLQueryStatusAtProvider
     [JsonPropertyName("updatedAt")]
     public string? UpdatedAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatusConditions
@@ -1305,7 +1450,9 @@ public partial class V1alpha1SQLQueryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLQueryStatus defines the observed state of SQLQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLQueryStatus
@@ -1322,7 +1469,9 @@ public partial class V1alpha1SQLQueryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLQuery is the Schema for the SQLQuerys API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1352,3 +1501,4 @@ public partial class V1alpha1SQLQuery : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1alpha1SQLQueryStatus? Status { get; set; }
 }
+#nullable disable

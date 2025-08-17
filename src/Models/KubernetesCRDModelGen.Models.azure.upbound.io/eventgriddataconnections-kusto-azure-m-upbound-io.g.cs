@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.m.upbound.io;
+#nullable enable
 /// <summary>EventGridDataConnection is the Schema for the EventGridDataConnections API. Manages Kusto / Data Explorer Event Grid Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EventGridDataConnectionList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1EventGridDataConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameSel
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRe
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSe
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdRef
@@ -255,7 +284,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdRef
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelector
@@ -289,7 +322,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdSele
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRef
@@ -319,7 +356,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelectorPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelector
@@ -353,7 +394,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPolicy
@@ -366,7 +409,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRef
@@ -383,7 +428,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelectorPolicy
@@ -396,7 +443,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelector
@@ -417,7 +466,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecForProvider
@@ -538,7 +589,9 @@ public partial class V1beta1EventGridDataConnectionSpecForProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRefPolicy
@@ -551,7 +604,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRef
@@ -568,7 +623,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelectorPolicy
@@ -581,7 +638,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelector
@@ -602,7 +661,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicy
@@ -615,7 +676,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRef
@@ -632,7 +695,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRef
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPolicy
@@ -645,7 +710,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelector
@@ -666,7 +733,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSel
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPolicy
@@ -679,7 +748,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRef
@@ -696,7 +767,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelectorPolicy
@@ -709,7 +782,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelector
@@ -730,7 +805,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecInitProvider
@@ -815,7 +892,9 @@ public partial class V1beta1EventGridDataConnectionSpecInitProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecProviderConfigRef
@@ -828,7 +907,9 @@ public partial class V1beta1EventGridDataConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpecWriteConnectionSecretToRef
@@ -837,7 +918,9 @@ public partial class V1beta1EventGridDataConnectionSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventGridDataConnectionSpec defines the desired state of EventGridDataConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionSpec
@@ -862,7 +945,9 @@ public partial class V1beta1EventGridDataConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EventGridDataConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionStatusAtProvider
@@ -939,7 +1024,9 @@ public partial class V1beta1EventGridDataConnectionStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionStatusConditions
@@ -968,7 +1055,9 @@ public partial class V1beta1EventGridDataConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventGridDataConnectionStatus defines the observed state of EventGridDataConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventGridDataConnectionStatus
@@ -985,7 +1074,9 @@ public partial class V1beta1EventGridDataConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventGridDataConnection is the Schema for the EventGridDataConnections API. Manages Kusto / Data Explorer Event Grid Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1015,3 +1106,4 @@ public partial class V1beta1EventGridDataConnection : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1EventGridDataConnectionStatus? Status { get; set; }
 }
+#nullable disable

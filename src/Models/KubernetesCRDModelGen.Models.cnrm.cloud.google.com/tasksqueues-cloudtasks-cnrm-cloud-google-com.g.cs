@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtasks.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>TasksQueue is the Schema for the TasksQueue API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1TasksQueueList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1TasksQueue> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Overrides for  [task-level  app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].  These settings apply only to  [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this  queue. [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.   If set, `app_engine_routing_override` is used for all  [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the  queue, no matter what the setting is for the [task-level  app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecAppEngineRoutingOverride
@@ -54,7 +57,9 @@ public partial class V1alpha1TasksQueueSpecAppEngineRoutingOverride
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecProjectRef
@@ -75,7 +80,9 @@ public partial class V1alpha1TasksQueueSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rate limits for task dispatches.   [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and  [retry_config][google.cloud.tasks.v2.Queue.retry_config] are related  because they both control task attempts. However they control task attempts  in different ways:   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total  rate of    dispatches from a queue (i.e. all traffic dispatched from the    queue, regardless of whether the dispatch is from a first    attempt or a retry).  * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what  happens to    particular a task after its first attempt fails. That is,    [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task    retries (the second attempt, third attempt, etc).   The queue's actual dispatch rate is the result of:   * Number of tasks in the queue  * User-specified throttling:  [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],    [retry_config][google.cloud.tasks.v2.Queue.retry_config], and the    [queue's state][google.cloud.tasks.v2.Queue.state].  * System throttling due to `429` (Too Many Requests) or `503` (Service    Unavailable) responses from the worker, high error rates, or to smooth    sudden large traffic spikes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecRateLimits
@@ -92,7 +99,9 @@ public partial class V1alpha1TasksQueueSpecRateLimits
     [JsonPropertyName("maxDispatchesPerSecond")]
     public double? MaxDispatchesPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that determine the retry behavior.   * For tasks created using Cloud Tasks: the queue-level retry settings    apply to all tasks in the queue that were created using Cloud Tasks.    Retry settings cannot be set on individual tasks.  * For tasks created using the App Engine SDK: the queue-level retry    settings apply to all tasks in the queue which do not have retry settings    explicitly set on the task and were created by the App Engine SDK. See    [App Engine    documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecRetryConfig
@@ -117,7 +126,9 @@ public partial class V1alpha1TasksQueueSpecRetryConfig
     [JsonPropertyName("minBackoff")]
     public string? MinBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for writing logs to [Stackdriver Logging](https://cloud.google.com/logging/docs/). If this field is unset, then no logs are written.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecStackdriverLoggingConfig
@@ -126,7 +137,9 @@ public partial class V1alpha1TasksQueueSpecStackdriverLoggingConfig
     [JsonPropertyName("samplingRatio")]
     public double? SamplingRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TasksQueueSpec defines the desired state of TasksQueue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpec
@@ -159,7 +172,9 @@ public partial class V1alpha1TasksQueueSpec
     [JsonPropertyName("stackdriverLoggingConfig")]
     public V1alpha1TasksQueueSpecStackdriverLoggingConfig? StackdriverLoggingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueStatusConditions
@@ -184,7 +199,9 @@ public partial class V1alpha1TasksQueueStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueStatusObservedState
@@ -197,7 +214,9 @@ public partial class V1alpha1TasksQueueStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TasksQueueStatus defines the config connector machine state of TasksQueue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueStatus
@@ -218,7 +237,9 @@ public partial class V1alpha1TasksQueueStatus
     [JsonPropertyName("observedState")]
     public V1alpha1TasksQueueStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TasksQueue is the Schema for the TasksQueue API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -248,3 +269,4 @@ public partial class V1alpha1TasksQueue : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1TasksQueueStatus? Status { get; set; }
 }
+#nullable disable

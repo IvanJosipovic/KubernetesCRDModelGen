@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+#nullable enable
 /// <summary>ClusterComplianceReport is a specification for the ClusterComplianceReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ClusterComplianceReportList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1ClusterComplianceReport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpecCheck represent the scanner who perform the control check</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportSpecComplianceControlsChecks
@@ -42,7 +45,9 @@ public partial class V1alpha1ClusterComplianceReportSpecComplianceControlsChecks
     [JsonPropertyName("id")]
     public string Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Commands represent the commands to be executed by the node-collector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportSpecComplianceControlsCommands
@@ -51,7 +56,9 @@ public partial class V1alpha1ClusterComplianceReportSpecComplianceControlsComman
     [JsonPropertyName("id")]
     public string Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Control represent the cps controls data and mapping checks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportSpecComplianceControls
@@ -84,7 +91,9 @@ public partial class V1alpha1ClusterComplianceReportSpecComplianceControls
     [JsonPropertyName("severity")]
     public string Severity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportSpecCompliance
@@ -121,7 +130,9 @@ public partial class V1alpha1ClusterComplianceReportSpecCompliance
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReportSpec represent the compliance specification</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportSpec
@@ -138,7 +149,9 @@ public partial class V1alpha1ClusterComplianceReportSpec
     [JsonPropertyName("reportType")]
     public string ReportType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportStatusSummary
@@ -151,7 +164,9 @@ public partial class V1alpha1ClusterComplianceReportStatusSummary
     [JsonPropertyName("passCount")]
     public int? PassCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterComplianceReportStatus
@@ -172,7 +187,9 @@ public partial class V1alpha1ClusterComplianceReportStatus
     [JsonPropertyName("updateTimestamp")]
     public string UpdateTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterComplianceReport is a specification for the ClusterComplianceReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -205,3 +222,4 @@ public partial class V1alpha1ClusterComplianceReport : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1ClusterComplianceReportStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeInstanceGroupManagerList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeInstanceGroupManager> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
@@ -63,7 +68,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
     [JsonPropertyName("initialDelaySec")]
     public long? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones
@@ -72,7 +79,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZon
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
     [JsonPropertyName("zones")]
     public IList<V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
@@ -102,7 +113,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
@@ -115,7 +128,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
     [JsonPropertyName("port")]
     public long? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
@@ -132,7 +147,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
@@ -149,7 +166,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks
@@ -158,7 +177,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     [JsonPropertyName("autoDelete")]
     public string? AutoDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps
@@ -167,7 +188,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     [JsonPropertyName("autoDelete")]
     public string? AutoDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps
@@ -176,7 +199,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     [JsonPropertyName("autoDelete")]
     public string? AutoDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState
@@ -193,7 +218,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     [JsonPropertyName("internalIps")]
     public IDictionary<string, V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps>? InternalIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stateful configuration for this Instanced Group Manager</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy
@@ -202,7 +229,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy
     [JsonPropertyName("preservedState")]
     public V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState? PreservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
@@ -219,7 +248,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum number of instances that can be created above the specified `targetSize` during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxSurge` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxSurge`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_surge).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
@@ -232,7 +263,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
     [JsonPropertyName("percent")]
     public long? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance's [status](/compute/docs/instances/checking-instance-status) is `RUNNING`. - If there is a [health check](/compute/docs/instance-groups/autohealing-instances-in-migs) on the instance group, the instance's health check status must be `HEALTHY` at least once. If there is no health check on the group, then the instance only needs to have a status of `RUNNING` to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxUnavailable` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxUnavailable`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_unavailable).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable
@@ -245,7 +278,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavai
     [JsonPropertyName("percent")]
     public long? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The update policy for this managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
@@ -282,7 +317,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef
@@ -299,7 +336,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTempl
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the intended number of instances to be created from the `instanceTemplate`. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either `targetSize.fixed` or `instanceGroupManager.targetSize` is used. - if expressed as a `percent`, the `targetSize` would be `(targetSize.percent/100 * InstanceGroupManager.targetSize)` If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another `version`. Read [Starting a canary update](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#starting_a_canary_update) for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
@@ -316,7 +355,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
     [JsonPropertyName("percent")]
     public long? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
@@ -333,7 +374,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
     [JsonPropertyName("targetSize")]
     public V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerSpec
@@ -402,7 +445,9 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
     [JsonPropertyName("versions")]
     public IList<V1beta1ComputeInstanceGroupManagerSpecVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
@@ -427,7 +472,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
@@ -468,7 +515,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
     [JsonPropertyName("verifying")]
     public long? Verifying { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Output Only] Status of per-instance configs on the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs
@@ -477,7 +526,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerIn
     [JsonPropertyName("allEffective")]
     public bool? AllEffective { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Output Only] Stateful status of the given Instance Group Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
@@ -494,7 +545,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
     [JsonPropertyName("perInstanceConfigs")]
     public V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs? PerInstanceConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Output Only] A status of consistency of Instances' versions with their target version specified by `version` field on Instance Group Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
@@ -503,7 +556,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
     [JsonPropertyName("isReached")]
     public bool? IsReached { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Output Only] The status of this managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
@@ -524,7 +579,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
     [JsonPropertyName("versionTarget")]
     public V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget? VersionTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge
@@ -533,7 +590,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurg
     [JsonPropertyName("calculated")]
     public long? Calculated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable
@@ -542,7 +601,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnav
     [JsonPropertyName("calculated")]
     public long? Calculated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy
@@ -555,7 +616,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy
     [JsonPropertyName("maxUnavailable")]
     public V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceGroupManagerStatus
@@ -608,7 +671,9 @@ public partial class V1beta1ComputeInstanceGroupManagerStatus
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +703,4 @@ public partial class V1beta1ComputeInstanceGroupManager : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ComputeInstanceGroupManagerStatus? Status { get; set; }
 }
+#nullable disable

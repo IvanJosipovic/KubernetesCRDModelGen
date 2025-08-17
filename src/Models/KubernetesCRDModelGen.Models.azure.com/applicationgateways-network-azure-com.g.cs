@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/applicationGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220701storageApplicationGatewayList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1api20220701storageApplicationGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCertificatesData
@@ -46,7 +49,9 @@ public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCer
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayAuthenticationCertificate Authentication certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCertificates
@@ -63,7 +68,9 @@ public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayAutoscaleConfiguration Application Gateway autoscale configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecAutoscaleConfiguration
@@ -80,7 +87,9 @@ public partial class V1api20220701storageApplicationGatewaySpecAutoscaleConfigur
     [JsonPropertyName("minCapacity")]
     public int? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendAddress Backend address of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendAddressPoolsBackendAddresses
@@ -97,7 +106,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendAddressPoo
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendAddressPool Backend Address Pool of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendAddressPools
@@ -114,7 +125,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendAddressPoo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionAuthenticationCertificatesReference
@@ -135,7 +148,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionAuthenticationCertificates
@@ -148,7 +163,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionAuthenticationCertificatesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayConnectionDraining Connection draining allows open connections to a backend server to be active for a specified time after the backend server got removed from the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionConnectionDraining
@@ -165,7 +182,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionProbeReference
@@ -186,7 +205,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionProbe
@@ -199,7 +220,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionProbeReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionTrustedRootCertificatesReference
@@ -220,7 +243,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionTrustedRootCertificates
@@ -233,7 +258,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionTrustedRootCertificatesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendHttpSettings Backend address pool settings of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollection
@@ -298,7 +325,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendHttpSettin
     [JsonPropertyName("trustedRootCertificates")]
     public IList<V1api20220701storageApplicationGatewaySpecBackendHttpSettingsCollectionTrustedRootCertificates>? TrustedRootCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionProbeReference
@@ -319,7 +348,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionProbe
@@ -332,7 +363,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCo
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionProbeReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionTrustedRootCertificatesReference
@@ -353,7 +386,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionTrustedRootCertificates
@@ -366,7 +401,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCo
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionTrustedRootCertificatesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendSettings Backend address pool settings of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCollection
@@ -407,7 +444,9 @@ public partial class V1api20220701storageApplicationGatewaySpecBackendSettingsCo
     [JsonPropertyName("trustedRootCertificates")]
     public IList<V1api20220701storageApplicationGatewaySpecBackendSettingsCollectionTrustedRootCertificates>? TrustedRootCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayCustomError Customer error of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecCustomErrorConfigurations
@@ -424,7 +463,9 @@ public partial class V1api20220701storageApplicationGatewaySpecCustomErrorConfig
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFirewallPolicyReference
@@ -445,7 +486,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFirewallPolicyRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFirewallPolicy
@@ -458,7 +501,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFirewallPolicy
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecFirewallPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPrivateLinkConfigurationReference
@@ -479,7 +524,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPrivateLinkConfiguration
@@ -492,7 +539,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPrivateLinkConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPublicIPAddressReference
@@ -513,7 +562,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPublicIPAddress
@@ -526,7 +577,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsSubnetReference
@@ -547,7 +600,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsSubnet
@@ -560,7 +615,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFrontendIPConfiguration Frontend IP configuration of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigurations
@@ -593,7 +650,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendIPConfigu
     [JsonPropertyName("subnet")]
     public V1api20220701storageApplicationGatewaySpecFrontendIPConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFrontendPort Frontend port of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecFrontendPorts
@@ -610,7 +669,9 @@ public partial class V1api20220701storageApplicationGatewaySpecFrontendPorts
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigurationsSubnetReference
@@ -631,7 +692,9 @@ public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigur
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigurationsSubnet
@@ -644,7 +707,9 @@ public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigur
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecGatewayIPConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayIPConfiguration_ApplicationGateway_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigurations
@@ -661,7 +726,9 @@ public partial class V1api20220701storageApplicationGatewaySpecGatewayIPConfigur
     [JsonPropertyName("subnet")]
     public V1api20220701storageApplicationGatewaySpecGatewayIPConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayGlobalConfiguration Application Gateway global configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecGlobalConfiguration
@@ -678,7 +745,9 @@ public partial class V1api20220701storageApplicationGatewaySpecGlobalConfigurati
     [JsonPropertyName("enableResponseBuffering")]
     public bool? EnableResponseBuffering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayCustomError Customer error of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersCustomErrorConfigurations
@@ -695,7 +764,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersCust
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFirewallPolicyReference
@@ -716,7 +787,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFire
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFirewallPolicy
@@ -729,7 +802,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFire
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersFirewallPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFrontendIPConfigurationReference
@@ -750,7 +825,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFron
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFrontendIPConfiguration
@@ -763,7 +840,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFron
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFrontendPortReference
@@ -784,7 +863,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFron
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFrontendPort
@@ -797,7 +878,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersFron
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersFrontendPortReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslCertificateReference
@@ -818,7 +901,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslC
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslCertificate
@@ -831,7 +916,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslC
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersSslCertificateReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslProfileReference
@@ -852,7 +939,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslProfile
@@ -865,7 +954,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListenersSslP
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersSslProfileReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayHttpListener Http listener of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecHttpListeners
@@ -918,7 +1009,9 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListeners
     [JsonPropertyName("sslProfile")]
     public V1api20220701storageApplicationGatewaySpecHttpListenersSslProfile? SslProfile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentitiesReference
@@ -939,7 +1032,9 @@ public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssig
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentities
@@ -952,7 +1047,9 @@ public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssig
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ManagedServiceIdentity Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecIdentity
@@ -969,7 +1066,9 @@ public partial class V1api20220701storageApplicationGatewaySpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersFrontendIPConfigurationReference
@@ -990,7 +1089,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersFrontend
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersFrontendIPConfiguration
@@ -1003,7 +1104,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersFrontend
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecListenersFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersFrontendPortReference
@@ -1024,7 +1127,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersFrontend
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersFrontendPort
@@ -1037,7 +1142,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersFrontend
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecListenersFrontendPortReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersSslCertificateReference
@@ -1058,7 +1165,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersSslCerti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersSslCertificate
@@ -1071,7 +1180,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersSslCerti
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecListenersSslCertificateReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersSslProfileReference
@@ -1092,7 +1203,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersSslProfi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListenersSslProfile
@@ -1105,7 +1218,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListenersSslProfi
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecListenersSslProfileReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayListener Listener of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecListeners
@@ -1138,7 +1253,9 @@ public partial class V1api20220701storageApplicationGatewaySpecListeners
     [JsonPropertyName("sslProfile")]
     public V1api20220701storageApplicationGatewaySpecListenersSslProfile? SslProfile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionPoliciesLoadDistributionTargetsReference
@@ -1159,7 +1276,9 @@ public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayLoadDistributionTarget Load Distribution Target of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionPoliciesLoadDistributionTargets
@@ -1172,7 +1291,9 @@ public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionP
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecLoadDistributionPoliciesLoadDistributionTargetsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayLoadDistributionPolicy Load Distribution Policy of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionPolicies
@@ -1193,7 +1314,9 @@ public partial class V1api20220701storageApplicationGatewaySpecLoadDistributionP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecOperatorSpecConfigMapExpressions
@@ -1210,7 +1333,9 @@ public partial class V1api20220701storageApplicationGatewaySpecOperatorSpecConfi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecOperatorSpecSecretExpressions
@@ -1227,7 +1352,9 @@ public partial class V1api20220701storageApplicationGatewaySpecOperatorSpecSecre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecOperatorSpec
@@ -1244,7 +1371,9 @@ public partial class V1api20220701storageApplicationGatewaySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220701storageApplicationGatewaySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecOwner
@@ -1257,7 +1386,9 @@ public partial class V1api20220701storageApplicationGatewaySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfigurationsIpConfigurationsReference
@@ -1278,7 +1409,9 @@ public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfig
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPrivateLinkIpConfiguration The application gateway private link ip configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfigurationsIpConfigurations
@@ -1291,7 +1424,9 @@ public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfig
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecPrivateLinkConfigurationsIpConfigurationsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPrivateLinkConfiguration Private Link Configuration on an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfigurations
@@ -1308,7 +1443,9 @@ public partial class V1api20220701storageApplicationGatewaySpecPrivateLinkConfig
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayProbeHealthResponseMatch Application gateway probe health response match.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecProbesMatch
@@ -1325,7 +1462,9 @@ public partial class V1api20220701storageApplicationGatewaySpecProbesMatch
     [JsonPropertyName("statusCodes")]
     public IList<string>? StatusCodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayProbe Probe of the application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecProbes
@@ -1382,7 +1521,9 @@ public partial class V1api20220701storageApplicationGatewaySpecProbes
     [JsonPropertyName("unhealthyThreshold")]
     public int? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsPathRulesReference
@@ -1403,7 +1544,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsPathRules
@@ -1416,7 +1559,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRedirectConfigurationsPathRulesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsRequestRoutingRulesReference
@@ -1437,7 +1582,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsRequestRoutingRules
@@ -1450,7 +1597,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRedirectConfigurationsRequestRoutingRulesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsTargetListenerReference
@@ -1471,7 +1620,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsTargetListener
@@ -1484,7 +1635,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRedirectConfigurationsTargetListenerReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsUrlPathMapsReference
@@ -1505,7 +1658,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurationsUrlPathMaps
@@ -1518,7 +1673,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRedirectConfigurationsUrlPathMapsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRedirectConfiguration Redirect configuration of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigurations
@@ -1563,7 +1720,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRedirectConfigura
     [JsonPropertyName("urlPathMaps")]
     public IList<V1api20220701storageApplicationGatewaySpecRedirectConfigurationsUrlPathMaps>? UrlPathMaps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendAddressPoolReference
@@ -1584,7 +1743,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendAddressPool
@@ -1597,7 +1758,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendHttpSettingsReference
@@ -1618,7 +1781,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendHttpSettings
@@ -1631,7 +1796,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesBackendHttpSettingsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesHttpListenerReference
@@ -1652,7 +1819,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesHttpListener
@@ -1665,7 +1834,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesHttpListenerReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesLoadDistributionPolicyReference
@@ -1686,7 +1857,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesLoadDistributionPolicy
@@ -1699,7 +1872,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesLoadDistributionPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRedirectConfigurationReference
@@ -1720,7 +1895,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRedirectConfiguration
@@ -1733,7 +1910,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRedirectConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRewriteRuleSetReference
@@ -1754,7 +1933,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRewriteRuleSet
@@ -1767,7 +1948,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesRewriteRuleSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesUrlPathMapReference
@@ -1788,7 +1971,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRulesUrlPathMap
@@ -1801,7 +1986,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesUrlPathMapReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRequestRoutingRule Request routing rule of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRules
@@ -1850,7 +2037,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRequestRoutingRul
     [JsonPropertyName("urlPathMap")]
     public V1api20220701storageApplicationGatewaySpecRequestRoutingRulesUrlPathMap? UrlPathMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayHeaderConfiguration Header configuration of the Actions set in Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesActionSetRequestHeaderConfigurations
@@ -1867,7 +2056,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayHeaderConfiguration Header configuration of the Actions set in Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesActionSetResponseHeaderConfigurations
@@ -1884,7 +2075,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayUrlConfiguration Url configuration of the Actions set in Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesActionSetUrlConfiguration
@@ -1905,7 +2098,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("reroute")]
     public bool? Reroute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRewriteRuleActionSet Set of actions in the Rewrite Rule in Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesActionSet
@@ -1926,7 +2121,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("urlConfiguration")]
     public V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesActionSetUrlConfiguration? UrlConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRewriteRuleCondition Set of conditions in the Rewrite Rule in Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRulesConditions
@@ -1951,7 +2148,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRewriteRule Rewrite rule of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRules
@@ -1976,7 +2175,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRe
     [JsonPropertyName("ruleSequence")]
     public int? RuleSequence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRewriteRuleSet Rewrite rule set of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSets
@@ -1993,7 +2194,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRewriteRuleSets
     [JsonPropertyName("rewriteRules")]
     public IList<V1api20220701storageApplicationGatewaySpecRewriteRuleSetsRewriteRules>? RewriteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBackendAddressPoolReference
@@ -2014,7 +2217,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBacke
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBackendAddressPool
@@ -2027,7 +2232,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBacke
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRoutingRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBackendSettingsReference
@@ -2048,7 +2255,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBacke
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBackendSettings
@@ -2061,7 +2270,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesBacke
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRoutingRulesBackendSettingsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesListenerReference
@@ -2082,7 +2293,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesListe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesListener
@@ -2095,7 +2308,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRulesListe
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecRoutingRulesListenerReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRoutingRule Routing rule of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecRoutingRules
@@ -2128,7 +2343,9 @@ public partial class V1api20220701storageApplicationGatewaySpecRoutingRules
     [JsonPropertyName("ruleType")]
     public string? RuleType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySku SKU of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSku
@@ -2149,7 +2366,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesData
@@ -2162,7 +2381,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesDa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesPassword
@@ -2175,7 +2396,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesPa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslCertificate SSL certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslCertificates
@@ -2200,7 +2423,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificates
     [JsonPropertyName("password")]
     public V1api20220701storageApplicationGatewaySpecSslCertificatesPassword? Password { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslPolicy Application Gateway Ssl policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslPolicy
@@ -2229,7 +2454,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayClientAuthConfiguration Application gateway client authentication configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslProfilesClientAuthConfiguration
@@ -2246,7 +2473,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfilesClient
     [JsonPropertyName("verifyClientRevocation")]
     public string? VerifyClientRevocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslPolicy Application Gateway Ssl policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslProfilesSslPolicy
@@ -2275,7 +2504,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfilesSslPol
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslProfilesTrustedClientCertificatesReference
@@ -2296,7 +2527,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfilesTruste
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslProfilesTrustedClientCertificates
@@ -2309,7 +2542,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfilesTruste
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecSslProfilesTrustedClientCertificatesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslProfile SSL profile of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslProfiles
@@ -2334,7 +2569,9 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfiles
     [JsonPropertyName("trustedClientCertificates")]
     public IList<V1api20220701storageApplicationGatewaySpecSslProfilesTrustedClientCertificates>? TrustedClientCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCertificatesData
@@ -2347,7 +2584,9 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCert
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayTrustedClientCertificate Trusted client certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCertificates
@@ -2364,7 +2603,9 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCert
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertificatesData
@@ -2377,7 +2618,9 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertif
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayTrustedRootCertificate Trusted Root certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertificates
@@ -2398,7 +2641,9 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertif
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendAddressPoolReference
@@ -2419,7 +2664,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendAddressPool
@@ -2432,7 +2679,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendHttpSettingsReference
@@ -2453,7 +2702,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendHttpSettings
@@ -2466,7 +2717,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultBackendHttpSettingsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultLoadDistributionPolicyReference
@@ -2487,7 +2740,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultLoadDistributionPolicy
@@ -2500,7 +2755,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultLoadDistributionPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRedirectConfigurationReference
@@ -2521,7 +2778,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRedirectConfiguration
@@ -2534,7 +2793,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRedirectConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRewriteRuleSetReference
@@ -2555,7 +2816,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRewriteRuleSet
@@ -2568,7 +2831,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaultRewriteRuleSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPoolReference
@@ -2589,7 +2854,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPool
@@ -2602,7 +2869,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettingsReference
@@ -2623,7 +2892,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettings
@@ -2636,7 +2907,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettingsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicyReference
@@ -2657,7 +2930,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicy
@@ -2670,7 +2945,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicyReference
@@ -2691,7 +2968,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicy
@@ -2704,7 +2983,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicyReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfigurationReference
@@ -2725,7 +3006,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfiguration
@@ -2738,7 +3021,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSetReference
@@ -2759,7 +3044,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSet
@@ -2772,7 +3059,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPathRule Path rule of URL path map of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRules
@@ -2813,7 +3102,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("rewriteRuleSet")]
     public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSet? RewriteRuleSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayUrlPathMap UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMaps
@@ -2850,7 +3141,9 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMaps
     [JsonPropertyName("pathRules")]
     public IList<V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRules>? PathRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFirewallDisabledRuleGroup Allows to disable rules within a rule group or an entire rule group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFirewallConfigurationDisabledRuleGroups
@@ -2867,7 +3160,9 @@ public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFir
     [JsonPropertyName("rules")]
     public IList<int>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFirewallExclusion Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFirewallConfigurationExclusions
@@ -2888,7 +3183,9 @@ public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFir
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayWebApplicationFirewallConfiguration Application gateway web application firewall configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFirewallConfiguration
@@ -2937,7 +3234,9 @@ public partial class V1api20220701storageApplicationGatewaySpecWebApplicationFir
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGateway_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpec
@@ -3102,7 +3401,9 @@ public partial class V1api20220701storageApplicationGatewaySpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayAuthenticationCertificate_STATUS Authentication certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusAuthenticationCertificates
@@ -3115,7 +3416,9 @@ public partial class V1api20220701storageApplicationGatewayStatusAuthenticationC
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayAutoscaleConfiguration_STATUS Application Gateway autoscale configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusAutoscaleConfiguration
@@ -3132,7 +3435,9 @@ public partial class V1api20220701storageApplicationGatewayStatusAutoscaleConfig
     [JsonPropertyName("minCapacity")]
     public int? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendAddressPool_STATUS Backend Address Pool of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusBackendAddressPools
@@ -3145,7 +3450,9 @@ public partial class V1api20220701storageApplicationGatewayStatusBackendAddressP
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendHttpSettings_STATUS Backend address pool settings of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusBackendHttpSettingsCollection
@@ -3158,7 +3465,9 @@ public partial class V1api20220701storageApplicationGatewayStatusBackendHttpSett
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayBackendSettings_STATUS Backend address pool settings of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusBackendSettingsCollection
@@ -3171,7 +3480,9 @@ public partial class V1api20220701storageApplicationGatewayStatusBackendSettings
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusConditions
@@ -3204,7 +3515,9 @@ public partial class V1api20220701storageApplicationGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayCustomError_STATUS Customer error of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusCustomErrorConfigurations
@@ -3221,7 +3534,9 @@ public partial class V1api20220701storageApplicationGatewayStatusCustomErrorConf
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.SubResource_STATUS Reference to another ARM resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusFirewallPolicy
@@ -3234,7 +3549,9 @@ public partial class V1api20220701storageApplicationGatewayStatusFirewallPolicy
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFrontendIPConfiguration_STATUS Frontend IP configuration of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusFrontendIPConfigurations
@@ -3247,7 +3564,9 @@ public partial class V1api20220701storageApplicationGatewayStatusFrontendIPConfi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFrontendPort_STATUS Frontend port of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusFrontendPorts
@@ -3260,7 +3579,9 @@ public partial class V1api20220701storageApplicationGatewayStatusFrontendPorts
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayIPConfiguration_STATUS_ApplicationGateway_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusGatewayIPConfigurations
@@ -3273,7 +3594,9 @@ public partial class V1api20220701storageApplicationGatewayStatusGatewayIPConfig
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayGlobalConfiguration_STATUS Application Gateway global configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusGlobalConfiguration
@@ -3290,7 +3613,9 @@ public partial class V1api20220701storageApplicationGatewayStatusGlobalConfigura
     [JsonPropertyName("enableResponseBuffering")]
     public bool? EnableResponseBuffering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayHttpListener_STATUS Http listener of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusHttpListeners
@@ -3303,7 +3628,9 @@ public partial class V1api20220701storageApplicationGatewayStatusHttpListeners
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ManagedServiceIdentity_UserAssignedIdentities_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusIdentityUserAssignedIdentities
@@ -3320,7 +3647,9 @@ public partial class V1api20220701storageApplicationGatewayStatusIdentityUserAss
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ManagedServiceIdentity_STATUS Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusIdentity
@@ -3345,7 +3674,9 @@ public partial class V1api20220701storageApplicationGatewayStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20220701storageApplicationGatewayStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayListener_STATUS Listener of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusListeners
@@ -3358,7 +3689,9 @@ public partial class V1api20220701storageApplicationGatewayStatusListeners
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayLoadDistributionPolicy_STATUS Load Distribution Policy of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusLoadDistributionPolicies
@@ -3371,7 +3704,9 @@ public partial class V1api20220701storageApplicationGatewayStatusLoadDistributio
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPrivateEndpointConnection_STATUS Private Endpoint connection on an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusPrivateEndpointConnections
@@ -3384,7 +3719,9 @@ public partial class V1api20220701storageApplicationGatewayStatusPrivateEndpoint
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPrivateLinkConfiguration_STATUS Private Link Configuration on an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusPrivateLinkConfigurations
@@ -3397,7 +3734,9 @@ public partial class V1api20220701storageApplicationGatewayStatusPrivateLinkConf
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayProbe_STATUS Probe of the application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusProbes
@@ -3410,7 +3749,9 @@ public partial class V1api20220701storageApplicationGatewayStatusProbes
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRedirectConfiguration_STATUS Redirect configuration of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusRedirectConfigurations
@@ -3423,7 +3764,9 @@ public partial class V1api20220701storageApplicationGatewayStatusRedirectConfigu
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRequestRoutingRule_STATUS Request routing rule of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusRequestRoutingRules
@@ -3436,7 +3779,9 @@ public partial class V1api20220701storageApplicationGatewayStatusRequestRoutingR
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRewriteRuleSet_STATUS Rewrite rule set of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusRewriteRuleSets
@@ -3449,7 +3794,9 @@ public partial class V1api20220701storageApplicationGatewayStatusRewriteRuleSets
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayRoutingRule_STATUS Routing rule of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusRoutingRules
@@ -3462,7 +3809,9 @@ public partial class V1api20220701storageApplicationGatewayStatusRoutingRules
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySku_STATUS SKU of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusSku
@@ -3483,7 +3832,9 @@ public partial class V1api20220701storageApplicationGatewayStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslCertificate_STATUS SSL certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusSslCertificates
@@ -3496,7 +3847,9 @@ public partial class V1api20220701storageApplicationGatewayStatusSslCertificates
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslPolicy_STATUS Application Gateway Ssl policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusSslPolicy
@@ -3525,7 +3878,9 @@ public partial class V1api20220701storageApplicationGatewayStatusSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewaySslProfile_STATUS SSL profile of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusSslProfiles
@@ -3538,7 +3893,9 @@ public partial class V1api20220701storageApplicationGatewayStatusSslProfiles
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayTrustedClientCertificate_STATUS Trusted client certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusTrustedClientCertificates
@@ -3551,7 +3908,9 @@ public partial class V1api20220701storageApplicationGatewayStatusTrustedClientCe
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayTrustedRootCertificate_STATUS Trusted Root certificates of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusTrustedRootCertificates
@@ -3564,7 +3923,9 @@ public partial class V1api20220701storageApplicationGatewayStatusTrustedRootCert
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayUrlPathMap_STATUS UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusUrlPathMaps
@@ -3577,7 +3938,9 @@ public partial class V1api20220701storageApplicationGatewayStatusUrlPathMaps
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFirewallDisabledRuleGroup_STATUS Allows to disable rules within a rule group or an entire rule group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusWebApplicationFirewallConfigurationDisabledRuleGroups
@@ -3594,7 +3957,9 @@ public partial class V1api20220701storageApplicationGatewayStatusWebApplicationF
     [JsonPropertyName("rules")]
     public IList<int>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayFirewallExclusion_STATUS Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusWebApplicationFirewallConfigurationExclusions
@@ -3615,7 +3980,9 @@ public partial class V1api20220701storageApplicationGatewayStatusWebApplicationF
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGatewayWebApplicationFirewallConfiguration_STATUS Application gateway web application firewall configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusWebApplicationFirewallConfiguration
@@ -3664,7 +4031,9 @@ public partial class V1api20220701storageApplicationGatewayStatusWebApplicationF
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGateway_STATUS_ApplicationGateway_SubResourceEmbedded Application gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatus
@@ -3849,7 +4218,9 @@ public partial class V1api20220701storageApplicationGatewayStatus
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220701.ApplicationGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/applicationGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3879,3 +4250,4 @@ public partial class V1api20220701storageApplicationGateway : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1api20220701storageApplicationGatewayStatus? Status { get; set; }
 }
+#nullable disable

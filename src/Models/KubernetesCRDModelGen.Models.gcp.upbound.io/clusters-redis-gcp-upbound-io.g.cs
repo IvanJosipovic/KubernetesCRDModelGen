@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.gcp.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. A Google Cloud Redis Cluster instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime
@@ -42,7 +45,9 @@ public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfigFixedFreq
     [JsonPropertyName("hours")]
     public double? Hours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Trigger automated backups at a fixed frequency. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfigFixedFrequencySchedule
@@ -51,7 +56,9 @@ public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfigFixedFreq
     [JsonPropertyName("startTime")]
     public V1beta1ClusterSpecForProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The automated backup config for a instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfig
@@ -64,7 +71,9 @@ public partial class V1beta1ClusterSpecForProviderAutomatedBackupConfig
     [JsonPropertyName("retention")]
     public string? Retention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterRefPolicy
@@ -77,7 +86,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redis to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterRef
@@ -90,7 +101,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigP
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterSelectorPolicy
@@ -103,7 +116,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redis to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterSelector
@@ -120,7 +135,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigP
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryCluster
@@ -137,7 +154,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigP
     [JsonPropertyName("clusterSelector")]
     public V1beta1ClusterSpecForProviderCrossClusterReplicationConfigPrimaryClusterClusterSelector? ClusterSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigSecondaryClusters
@@ -146,7 +165,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfigS
     [JsonPropertyName("cluster")]
     public string? Cluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field to the configuration file to match the latest value in the state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfig
@@ -163,7 +184,9 @@ public partial class V1beta1ClusterSpecForProviderCrossClusterReplicationConfig
     [JsonPropertyName("secondaryClusters")]
     public IList<V1beta1ClusterSpecForProviderCrossClusterReplicationConfigSecondaryClusters>? SecondaryClusters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the same region as the clusters. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderGcsSource
@@ -172,7 +195,9 @@ public partial class V1beta1ClusterSpecForProviderGcsSource
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
@@ -193,7 +218,9 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMainten
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMaintenanceWindow
@@ -206,7 +233,9 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMainten
     [JsonPropertyName("startTime")]
     public V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance policy for a cluster Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
@@ -215,7 +244,9 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
     [JsonPropertyName("weeklyMaintenanceWindow")]
     public IList<V1beta1ClusterSpecForProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups that generated and managed by memorystore. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderManagedBackupSource
@@ -224,7 +255,9 @@ public partial class V1beta1ClusterSpecForProviderManagedBackupSource
     [JsonPropertyName("backup")]
     public string? Backup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AOF configuration. This field will be ignored if mode is not AOF. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPersistenceConfigAofConfig
@@ -233,7 +266,9 @@ public partial class V1beta1ClusterSpecForProviderPersistenceConfigAofConfig
     [JsonPropertyName("appendFsync")]
     public string? AppendFsync { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RDB configuration. This field will be ignored if mode is not RDB. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPersistenceConfigRdbConfig
@@ -246,7 +281,9 @@ public partial class V1beta1ClusterSpecForProviderPersistenceConfigRdbConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Persistence config (RDB, AOF) for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPersistenceConfig
@@ -263,7 +300,9 @@ public partial class V1beta1ClusterSpecForProviderPersistenceConfig
     [JsonPropertyName("rdbConfig")]
     public V1beta1ClusterSpecForProviderPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkRefPolicy
@@ -276,7 +315,9 @@ public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkRef
@@ -289,7 +330,9 @@ public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderPscConfigsNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkSelectorPolicy
@@ -302,7 +345,9 @@ public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkSelector
@@ -319,7 +364,9 @@ public partial class V1beta1ClusterSpecForProviderPscConfigsNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderPscConfigsNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfigs
@@ -336,7 +383,9 @@ public partial class V1beta1ClusterSpecForProviderPscConfigs
     [JsonPropertyName("networkSelector")]
     public V1beta1ClusterSpecForProviderPscConfigsNetworkSelector? NetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Zone distribution config for Memorystore Redis cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderZoneDistributionConfig
@@ -349,7 +398,9 @@ public partial class V1beta1ClusterSpecForProviderZoneDistributionConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -426,7 +477,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("zoneDistributionConfig")]
     public V1beta1ClusterSpecForProviderZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime
@@ -435,7 +488,9 @@ public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfigFixedFre
     [JsonPropertyName("hours")]
     public double? Hours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Trigger automated backups at a fixed frequency. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfigFixedFrequencySchedule
@@ -444,7 +499,9 @@ public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfigFixedFre
     [JsonPropertyName("startTime")]
     public V1beta1ClusterSpecInitProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The automated backup config for a instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfig
@@ -457,7 +514,9 @@ public partial class V1beta1ClusterSpecInitProviderAutomatedBackupConfig
     [JsonPropertyName("retention")]
     public string? Retention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterRefPolicy
@@ -470,7 +529,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redis to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterRef
@@ -483,7 +544,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterSelectorPolicy
@@ -496,7 +559,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redis to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterSelector
@@ -513,7 +578,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryCluster
@@ -530,7 +597,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("clusterSelector")]
     public V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigPrimaryClusterClusterSelector? ClusterSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigSecondaryClusters
@@ -539,7 +608,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("cluster")]
     public string? Cluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field to the configuration file to match the latest value in the state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
@@ -556,7 +627,9 @@ public partial class V1beta1ClusterSpecInitProviderCrossClusterReplicationConfig
     [JsonPropertyName("secondaryClusters")]
     public IList<V1beta1ClusterSpecInitProviderCrossClusterReplicationConfigSecondaryClusters>? SecondaryClusters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the same region as the clusters. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderGcsSource
@@ -565,7 +638,9 @@ public partial class V1beta1ClusterSpecInitProviderGcsSource
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
@@ -586,7 +661,9 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMainte
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindow
@@ -599,7 +676,9 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMainte
     [JsonPropertyName("startTime")]
     public V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance policy for a cluster Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
@@ -608,7 +687,9 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
     [JsonPropertyName("weeklyMaintenanceWindow")]
     public IList<V1beta1ClusterSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups that generated and managed by memorystore. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderManagedBackupSource
@@ -617,7 +698,9 @@ public partial class V1beta1ClusterSpecInitProviderManagedBackupSource
     [JsonPropertyName("backup")]
     public string? Backup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AOF configuration. This field will be ignored if mode is not AOF. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPersistenceConfigAofConfig
@@ -626,7 +709,9 @@ public partial class V1beta1ClusterSpecInitProviderPersistenceConfigAofConfig
     [JsonPropertyName("appendFsync")]
     public string? AppendFsync { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RDB configuration. This field will be ignored if mode is not RDB. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPersistenceConfigRdbConfig
@@ -639,7 +724,9 @@ public partial class V1beta1ClusterSpecInitProviderPersistenceConfigRdbConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Persistence config (RDB, AOF) for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPersistenceConfig
@@ -656,7 +743,9 @@ public partial class V1beta1ClusterSpecInitProviderPersistenceConfig
     [JsonPropertyName("rdbConfig")]
     public V1beta1ClusterSpecInitProviderPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkRefPolicy
@@ -669,7 +758,9 @@ public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkRef
@@ -682,7 +773,9 @@ public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderPscConfigsNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkSelectorPolicy
@@ -695,7 +788,9 @@ public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkSelector
@@ -712,7 +807,9 @@ public partial class V1beta1ClusterSpecInitProviderPscConfigsNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderPscConfigsNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPscConfigs
@@ -729,7 +826,9 @@ public partial class V1beta1ClusterSpecInitProviderPscConfigs
     [JsonPropertyName("networkSelector")]
     public V1beta1ClusterSpecInitProviderPscConfigsNetworkSelector? NetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Zone distribution config for Memorystore Redis cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderZoneDistributionConfig
@@ -742,7 +841,9 @@ public partial class V1beta1ClusterSpecInitProviderZoneDistributionConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -815,7 +916,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("zoneDistributionConfig")]
     public V1beta1ClusterSpecInitProviderZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
@@ -828,7 +931,9 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -841,7 +946,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -854,7 +961,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -883,7 +992,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime
@@ -892,7 +1003,9 @@ public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfigFixedFre
     [JsonPropertyName("hours")]
     public double? Hours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Trigger automated backups at a fixed frequency. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfigFixedFrequencySchedule
@@ -901,7 +1014,9 @@ public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfigFixedFre
     [JsonPropertyName("startTime")]
     public V1beta1ClusterStatusAtProviderAutomatedBackupConfigFixedFrequencyScheduleStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The automated backup config for a instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfig
@@ -914,7 +1029,9 @@ public partial class V1beta1ClusterStatusAtProviderAutomatedBackupConfig
     [JsonPropertyName("retention")]
     public string? Retention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigMembershipPrimaryCluster
@@ -927,7 +1044,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigMembershipSecondaryClusters
@@ -940,7 +1059,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigMembership
@@ -953,7 +1074,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("secondaryClusters")]
     public IList<V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigMembershipSecondaryClusters>? SecondaryClusters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigPrimaryCluster
@@ -966,7 +1089,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfigSecondaryClusters
@@ -979,7 +1104,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>field to the configuration file to match the latest value in the state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
@@ -1004,7 +1131,9 @@ public partial class V1beta1ClusterStatusAtProviderCrossClusterReplicationConfig
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Customer configuration for where the endpoint is created and accessed from. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDiscoveryEndpointsPscConfig
@@ -1013,7 +1142,9 @@ public partial class V1beta1ClusterStatusAtProviderDiscoveryEndpointsPscConfig
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDiscoveryEndpoints
@@ -1030,7 +1161,9 @@ public partial class V1beta1ClusterStatusAtProviderDiscoveryEndpoints
     [JsonPropertyName("pscConfig")]
     public V1beta1ClusterStatusAtProviderDiscoveryEndpointsPscConfig? PscConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the same region as the clusters. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderGcsSource
@@ -1039,7 +1172,9 @@ public partial class V1beta1ClusterStatusAtProviderGcsSource
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
@@ -1060,7 +1195,9 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMainte
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindow
@@ -1077,7 +1214,9 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMainte
     [JsonPropertyName("startTime")]
     public V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance policy for a cluster Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
@@ -1094,7 +1233,9 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
     [JsonPropertyName("weeklyMaintenanceWindow")]
     public IList<V1beta1ClusterStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMaintenanceSchedule
@@ -1111,7 +1252,9 @@ public partial class V1beta1ClusterStatusAtProviderMaintenanceSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backups that generated and managed by memorystore. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderManagedBackupSource
@@ -1120,7 +1263,9 @@ public partial class V1beta1ClusterStatusAtProviderManagedBackupSource
     [JsonPropertyName("backup")]
     public string? Backup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderManagedServerCaCaCerts
@@ -1129,7 +1274,9 @@ public partial class V1beta1ClusterStatusAtProviderManagedServerCaCaCerts
     [JsonPropertyName("certificates")]
     public IList<string>? Certificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderManagedServerCa
@@ -1138,7 +1285,9 @@ public partial class V1beta1ClusterStatusAtProviderManagedServerCa
     [JsonPropertyName("caCerts")]
     public IList<V1beta1ClusterStatusAtProviderManagedServerCaCaCerts>? CaCerts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AOF configuration. This field will be ignored if mode is not AOF. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPersistenceConfigAofConfig
@@ -1147,7 +1296,9 @@ public partial class V1beta1ClusterStatusAtProviderPersistenceConfigAofConfig
     [JsonPropertyName("appendFsync")]
     public string? AppendFsync { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RDB configuration. This field will be ignored if mode is not RDB. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPersistenceConfigRdbConfig
@@ -1160,7 +1311,9 @@ public partial class V1beta1ClusterStatusAtProviderPersistenceConfigRdbConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Persistence config (RDB, AOF) for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPersistenceConfig
@@ -1177,7 +1330,9 @@ public partial class V1beta1ClusterStatusAtProviderPersistenceConfig
     [JsonPropertyName("rdbConfig")]
     public V1beta1ClusterStatusAtProviderPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPscConfigs
@@ -1186,7 +1341,9 @@ public partial class V1beta1ClusterStatusAtProviderPscConfigs
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPscConnections
@@ -1211,7 +1368,9 @@ public partial class V1beta1ClusterStatusAtProviderPscConnections
     [JsonPropertyName("pscConnectionId")]
     public string? PscConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderPscServiceAttachments
@@ -1224,7 +1383,9 @@ public partial class V1beta1ClusterStatusAtProviderPscServiceAttachments
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStateInfoUpdateInfo
@@ -1237,7 +1398,9 @@ public partial class V1beta1ClusterStatusAtProviderStateInfoUpdateInfo
     [JsonPropertyName("targetShardCount")]
     public double? TargetShardCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStateInfo
@@ -1246,7 +1409,9 @@ public partial class V1beta1ClusterStatusAtProviderStateInfo
     [JsonPropertyName("updateInfo")]
     public V1beta1ClusterStatusAtProviderStateInfoUpdateInfo? UpdateInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Zone distribution config for Memorystore Redis cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderZoneDistributionConfig
@@ -1259,7 +1424,9 @@ public partial class V1beta1ClusterStatusAtProviderZoneDistributionConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -1388,7 +1555,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("zoneDistributionConfig")]
     public V1beta1ClusterStatusAtProviderZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -1417,7 +1586,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -1434,7 +1605,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. A Google Cloud Redis Cluster instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1464,3 +1637,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

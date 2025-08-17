@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kinesisanalyticsv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationSnapshot is the Schema for the ApplicationSnapshots API. Manages a Kinesis Analytics v2 Application Snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationSnapshotList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationSnapshot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in kinesisanalyticsv2 to populate applicationName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSnapshotSpecForProviderApplicationNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in kinesisanalyticsv2 to populate applicationName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ApplicationSnapshotSpecForProviderApplicationNameSel
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSnapshotSpecForProviderApplicationNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1ApplicationSnapshotSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in kinesisanalyticsv2 to populate applicationName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameRef
@@ -148,7 +163,9 @@ public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameRe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSnapshotSpecInitProviderApplicationNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in kinesisanalyticsv2 to populate applicationName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSelector
@@ -182,7 +201,9 @@ public partial class V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecInitProvider
@@ -199,7 +220,9 @@ public partial class V1beta1ApplicationSnapshotSpecInitProvider
     [JsonPropertyName("applicationNameSelector")]
     public V1beta1ApplicationSnapshotSpecInitProviderApplicationNameSelector? ApplicationNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecProviderConfigRef
@@ -212,7 +235,9 @@ public partial class V1beta1ApplicationSnapshotSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpecWriteConnectionSecretToRef
@@ -221,7 +246,9 @@ public partial class V1beta1ApplicationSnapshotSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationSnapshotSpec defines the desired state of ApplicationSnapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotSpec
@@ -246,7 +273,9 @@ public partial class V1beta1ApplicationSnapshotSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationSnapshotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotStatusAtProvider
@@ -271,7 +300,9 @@ public partial class V1beta1ApplicationSnapshotStatusAtProvider
     [JsonPropertyName("snapshotCreationTimestamp")]
     public string? SnapshotCreationTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotStatusConditions
@@ -300,7 +331,9 @@ public partial class V1beta1ApplicationSnapshotStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationSnapshotStatus defines the observed state of ApplicationSnapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSnapshotStatus
@@ -317,7 +350,9 @@ public partial class V1beta1ApplicationSnapshotStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationSnapshot is the Schema for the ApplicationSnapshots API. Manages a Kinesis Analytics v2 Application Snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -347,3 +382,4 @@ public partial class V1beta1ApplicationSnapshot : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ApplicationSnapshotStatus? Status { get; set; }
 }
+#nullable disable

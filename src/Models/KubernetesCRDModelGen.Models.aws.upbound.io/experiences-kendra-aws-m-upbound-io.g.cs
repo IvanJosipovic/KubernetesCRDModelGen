@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.m.upbound.io;
+#nullable enable
 /// <summary>Experience is the Schema for the Experiences API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExperienceList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Experience> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderConfigurationContentSourceConfiguration
@@ -50,7 +53,9 @@ public partial class V1beta1ExperienceSpecForProviderConfigurationContentSourceC
     [JsonPropertyName("faqIds")]
     public IList<string>? FaqIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderConfigurationUserIdentityConfiguration
@@ -59,7 +64,9 @@ public partial class V1beta1ExperienceSpecForProviderConfigurationUserIdentityCo
     [JsonPropertyName("identityAttributeName")]
     public string? IdentityAttributeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration information for your Amazon Kendra experience. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderConfiguration
@@ -72,7 +79,9 @@ public partial class V1beta1ExperienceSpecForProviderConfiguration
     [JsonPropertyName("userIdentityConfiguration")]
     public V1beta1ExperienceSpecForProviderConfigurationUserIdentityConfiguration? UserIdentityConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderIndexIdRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderIndexIdRef
@@ -102,7 +113,9 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecForProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderIndexIdSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderIndexIdSelector
@@ -136,7 +151,9 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecForProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderRoleArnRefPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderRoleArnRef
@@ -166,7 +185,9 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProviderRoleArnSelector
@@ -200,7 +223,9 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecForProvider
@@ -245,7 +270,9 @@ public partial class V1beta1ExperienceSpecForProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ExperienceSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderConfigurationContentSourceConfiguration
@@ -262,7 +289,9 @@ public partial class V1beta1ExperienceSpecInitProviderConfigurationContentSource
     [JsonPropertyName("faqIds")]
     public IList<string>? FaqIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderConfigurationUserIdentityConfiguration
@@ -271,7 +300,9 @@ public partial class V1beta1ExperienceSpecInitProviderConfigurationUserIdentityC
     [JsonPropertyName("identityAttributeName")]
     public string? IdentityAttributeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration information for your Amazon Kendra experience. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderConfiguration
@@ -284,7 +315,9 @@ public partial class V1beta1ExperienceSpecInitProviderConfiguration
     [JsonPropertyName("userIdentityConfiguration")]
     public V1beta1ExperienceSpecInitProviderConfigurationUserIdentityConfiguration? UserIdentityConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderIndexIdRefPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderIndexIdRef
@@ -314,7 +349,9 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecInitProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicy
@@ -327,7 +364,9 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderIndexIdSelector
@@ -348,7 +387,9 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderRoleArnRefPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderRoleArnRef
@@ -378,7 +421,9 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy
@@ -391,7 +436,9 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProviderRoleArnSelector
@@ -412,7 +459,9 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecInitProvider
@@ -453,7 +502,9 @@ public partial class V1beta1ExperienceSpecInitProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ExperienceSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecProviderConfigRef
@@ -466,7 +517,9 @@ public partial class V1beta1ExperienceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpecWriteConnectionSecretToRef
@@ -475,7 +528,9 @@ public partial class V1beta1ExperienceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExperienceSpec defines the desired state of Experience</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceSpec
@@ -500,7 +555,9 @@ public partial class V1beta1ExperienceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExperienceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusAtProviderConfigurationContentSourceConfiguration
@@ -517,7 +574,9 @@ public partial class V1beta1ExperienceStatusAtProviderConfigurationContentSource
     [JsonPropertyName("faqIds")]
     public IList<string>? FaqIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusAtProviderConfigurationUserIdentityConfiguration
@@ -526,7 +585,9 @@ public partial class V1beta1ExperienceStatusAtProviderConfigurationUserIdentityC
     [JsonPropertyName("identityAttributeName")]
     public string? IdentityAttributeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration information for your Amazon Kendra experience. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusAtProviderConfiguration
@@ -539,7 +600,9 @@ public partial class V1beta1ExperienceStatusAtProviderConfiguration
     [JsonPropertyName("userIdentityConfiguration")]
     public V1beta1ExperienceStatusAtProviderConfigurationUserIdentityConfiguration? UserIdentityConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusAtProviderEndpoints
@@ -552,7 +615,9 @@ public partial class V1beta1ExperienceStatusAtProviderEndpoints
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusAtProvider
@@ -601,7 +666,9 @@ public partial class V1beta1ExperienceStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatusConditions
@@ -630,7 +697,9 @@ public partial class V1beta1ExperienceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExperienceStatus defines the observed state of Experience.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperienceStatus
@@ -647,7 +716,9 @@ public partial class V1beta1ExperienceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Experience is the Schema for the Experiences API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -677,3 +748,4 @@ public partial class V1beta1Experience : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ExperienceStatus? Status { get; set; }
 }
+#nullable disable

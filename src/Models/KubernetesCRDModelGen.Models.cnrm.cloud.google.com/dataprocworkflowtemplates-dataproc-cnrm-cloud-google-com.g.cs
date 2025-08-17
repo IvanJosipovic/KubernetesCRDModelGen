@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataprocWorkflowTemplateList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1DataprocWorkflowTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig
@@ -42,7 +45,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConf
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a Hadoop job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
@@ -79,7 +84,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
@@ -88,7 +95,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
     [JsonPropertyName("queries")]
     public IList<string> Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a Hive job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
@@ -117,7 +126,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
@@ -126,7 +137,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
@@ -135,7 +148,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
     [JsonPropertyName("queries")]
     public IList<string> Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a Pig job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
@@ -168,7 +183,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig
@@ -177,7 +194,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConf
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
@@ -186,7 +205,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
     [JsonPropertyName("queries")]
     public IList<string> Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a Presto job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
@@ -219,7 +240,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
     [JsonPropertyName("queryList")]
     public V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig
@@ -228,7 +251,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingCon
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a PySpark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
@@ -265,7 +290,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
     [JsonPropertyName("pythonFileUris")]
     public IList<string>? PythonFileUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job scheduling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
@@ -278,7 +305,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
     [JsonPropertyName("maxFailuresTotal")]
     public long? MaxFailuresTotal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig
@@ -287,7 +316,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfi
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a Spark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
@@ -324,7 +355,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig
@@ -333,7 +366,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConf
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a SparkR job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
@@ -362,7 +397,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig
@@ -371,7 +408,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingCo
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
@@ -380,7 +419,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
     [JsonPropertyName("queries")]
     public IList<string> Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Job is a SparkSql job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
@@ -409,7 +450,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecJobs
@@ -462,7 +505,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobs
     [JsonPropertyName("stepId")]
     public string StepId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Validation based on regular expressions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRegex
@@ -471,7 +516,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRege
     [JsonPropertyName("regexes")]
     public IList<string> Regexes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Validation based on a list of allowed values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValues
@@ -480,7 +527,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValu
     [JsonPropertyName("values")]
     public IList<string> Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Validation rules to be applied to this parameter's value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidation
@@ -493,7 +542,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidation
     [JsonPropertyName("values")]
     public V1beta1DataprocWorkflowTemplateSpecParametersValidationValues? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecParameters
@@ -514,7 +565,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParameters
     [JsonPropertyName("validation")]
     public V1beta1DataprocWorkflowTemplateSpecParametersValidation? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
@@ -527,7 +580,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef
@@ -544,7 +599,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig
@@ -553,7 +610,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("policyRef")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef? PolicyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef
@@ -570,7 +629,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Encryption settings for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig
@@ -579,7 +640,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("gcePdKmsKeyRef")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef? GcePdKmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Port/endpoint configuration for this cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig
@@ -588,7 +651,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("enableHttpPortAccess")]
     public bool? EnableHttpPortAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef
@@ -605,7 +670,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef
@@ -622,7 +689,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Node Group Affinity for sole-tenant clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
@@ -631,7 +700,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("nodeGroupRef")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef NodeGroupRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Reservation Affinity for consuming Zonal reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity
@@ -648,7 +719,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef
@@ -665,7 +738,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
@@ -682,7 +757,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef
@@ -699,7 +776,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The shared Compute Engine config settings for all instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig
@@ -752,7 +831,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions
@@ -765,7 +846,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("executionTimeout")]
     public string? ExecutionTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Lifecycle setting for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig
@@ -782,7 +865,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("idleDeleteTtl")]
     public string? IdleDeleteTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators
@@ -795,7 +880,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig
@@ -812,7 +899,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("numLocalSsds")]
     public long? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef
@@ -829,7 +918,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The Compute Engine config settings for the master instance in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig
@@ -862,7 +953,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
@@ -875,7 +968,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
@@ -892,7 +987,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("numLocalSsds")]
     public long? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef
@@ -909,7 +1006,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The Compute Engine config settings for additional worker instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig
@@ -942,7 +1041,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef
@@ -959,7 +1060,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Kerberos related configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig
@@ -1024,7 +1127,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("truststorePassword")]
     public string? TruststorePassword { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Security settings for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig
@@ -1033,7 +1138,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("kerberosConfig")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The config settings for software inside the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig
@@ -1050,7 +1157,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef
@@ -1067,7 +1176,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef
@@ -1084,7 +1195,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators
@@ -1097,7 +1210,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig
@@ -1114,7 +1229,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("numLocalSsds")]
     public long? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef
@@ -1131,7 +1248,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The Compute Engine config settings for worker instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig
@@ -1164,7 +1283,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Required. The cluster configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfig
@@ -1221,7 +1342,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     [JsonPropertyName("workerConfig")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A cluster that is managed by the workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
@@ -1238,7 +1361,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Required. WorkflowTemplate scheduling information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacement
@@ -1251,7 +1376,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacement
     [JsonPropertyName("managedCluster")]
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster? ManagedCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
@@ -1268,7 +1395,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateSpec
@@ -1301,7 +1430,9 @@ public partial class V1beta1DataprocWorkflowTemplateSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusConditions
@@ -1326,7 +1457,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig
@@ -1335,7 +1468,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("httpPorts")]
     public IDictionary<string, string>? HttpPorts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig
@@ -1344,7 +1479,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("idleStartTime")]
     public string? IdleStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig
@@ -1357,7 +1494,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("instanceTemplateName")]
     public string? InstanceTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig
@@ -1374,7 +1513,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("managedGroupConfig")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig
@@ -1387,7 +1528,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("instanceTemplateName")]
     public string? InstanceTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig
@@ -1404,7 +1547,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("managedGroupConfig")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig
@@ -1417,7 +1562,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("instanceTemplateName")]
     public string? InstanceTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig
@@ -1434,7 +1581,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("managedGroupConfig")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig
@@ -1459,7 +1608,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("workerConfig")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster
@@ -1468,7 +1619,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     [JsonPropertyName("config")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig? Config { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacement
@@ -1477,7 +1630,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacement
     [JsonPropertyName("managedCluster")]
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster? ManagedCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocWorkflowTemplateStatus
@@ -1506,7 +1661,9 @@ public partial class V1beta1DataprocWorkflowTemplateStatus
     [JsonPropertyName("version")]
     public long? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1536,3 +1693,4 @@ public partial class V1beta1DataprocWorkflowTemplate : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1DataprocWorkflowTemplateStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.upbound.io;
+#nullable enable
 /// <summary>UserStackAssociation is the Schema for the UserStackAssociations API. Manages an AppStream User Stack association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserStackAssociationList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1UserStackAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTypeRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTyp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in appstream to populate authenticationType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTypeRef
@@ -59,7 +64,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTyp
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderAuthenticationTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTypeSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTyp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in appstream to populate authenticationType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTypeSelector
@@ -89,7 +98,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderAuthenticationTyp
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderAuthenticationTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderStackNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderStackNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stack in appstream to populate stackName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderStackNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderStackNameRef
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderStackNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderStackNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderStackNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stack in appstream to populate stackName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderStackNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderStackNameSelector
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderStackNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderUserNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderUserNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in appstream to populate userName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderUserNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderUserNameRef
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderUserNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderUserNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderUserNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in appstream to populate userName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProviderUserNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1UserStackAssociationSpecForProviderUserNameSelector
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecForProviderUserNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1UserStackAssociationSpecForProvider
     [JsonPropertyName("userNameSelector")]
     public V1beta1UserStackAssociationSpecForProviderUserNameSelector? UserNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecInitProvider
@@ -259,7 +288,9 @@ public partial class V1beta1UserStackAssociationSpecInitProvider
     [JsonPropertyName("sendEmailNotification")]
     public bool? SendEmailNotification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecProviderConfigRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1UserStackAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecProviderConfigRef
@@ -285,7 +318,9 @@ public partial class V1beta1UserStackAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UserStackAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpecWriteConnectionSecretToRef
@@ -298,7 +333,9 @@ public partial class V1beta1UserStackAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserStackAssociationSpec defines the desired state of UserStackAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationSpec
@@ -327,7 +364,9 @@ public partial class V1beta1UserStackAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserStackAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationStatusAtProvider
@@ -356,7 +395,9 @@ public partial class V1beta1UserStackAssociationStatusAtProvider
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationStatusConditions
@@ -385,7 +426,9 @@ public partial class V1beta1UserStackAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserStackAssociationStatus defines the observed state of UserStackAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStackAssociationStatus
@@ -402,7 +445,9 @@ public partial class V1beta1UserStackAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserStackAssociation is the Schema for the UserStackAssociations API. Manages an AppStream User Stack association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -432,3 +477,4 @@ public partial class V1beta1UserStackAssociation : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1UserStackAssociationStatus? Status { get; set; }
 }
+#nullable disable

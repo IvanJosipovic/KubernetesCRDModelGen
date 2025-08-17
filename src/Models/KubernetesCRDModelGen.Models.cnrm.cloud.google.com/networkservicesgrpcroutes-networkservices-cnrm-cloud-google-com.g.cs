@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkServicesGRPCRouteList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkServicesGRPCRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
@@ -50,7 +53,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
@@ -67,7 +72,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef
@@ -101,7 +110,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsS
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
@@ -114,7 +125,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for aborting to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort
@@ -127,7 +140,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("percentage")]
     public long? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for injecting delay to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay
@@ -140,7 +155,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("percentage")]
     public long? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced on a percentage of requests before sending those requests to the destination service. Similarly requests from clients can be aborted by for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("delay")]
     public V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A detailed rule defining how to route traffic. This field is required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
@@ -187,7 +208,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
@@ -204,7 +227,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A gRPC method to match against. If this field is empty or omitted, will match all methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
@@ -225,7 +250,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatches
@@ -238,7 +265,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatches
     [JsonPropertyName("method")]
     public V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod? Method { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRules
@@ -251,7 +280,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRules
     [JsonPropertyName("matches")]
     public IList<V1beta1NetworkServicesGRPCRouteSpecRulesMatches>? Matches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpec
@@ -288,7 +319,9 @@ public partial class V1beta1NetworkServicesGRPCRouteSpec
     [JsonPropertyName("rules")]
     public IList<V1beta1NetworkServicesGRPCRouteSpecRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
@@ -313,7 +346,9 @@ public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteStatus
@@ -338,7 +373,9 @@ public partial class V1beta1NetworkServicesGRPCRouteStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -368,3 +405,4 @@ public partial class V1beta1NetworkServicesGRPCRoute : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1NetworkServicesGRPCRouteStatus? Status { get; set; }
 }
+#nullable disable

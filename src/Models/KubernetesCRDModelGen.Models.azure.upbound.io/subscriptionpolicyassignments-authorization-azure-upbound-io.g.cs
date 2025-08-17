@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+#nullable enable
 /// <summary>SubscriptionPolicyAssignment is the Schema for the SubscriptionPolicyAssignments API. Manages a Subscription Policy Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1SubscriptionPolicyAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderIdentity
@@ -46,7 +49,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderNonComplianceMessage
@@ -59,7 +64,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderNonCompli
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderOverridesSelectors
@@ -72,7 +79,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderOverrides
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderOverrides
@@ -85,7 +94,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderOverrides
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdRef
@@ -111,7 +124,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy
@@ -124,7 +139,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdSelector
@@ -141,7 +158,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionPolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderResourceSelectorsSelectors
@@ -158,7 +177,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderResourceS
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderResourceSelectors
@@ -171,7 +192,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderResourceS
     [JsonPropertyName("selectors")]
     public IList<V1beta1SubscriptionPolicyAssignmentSpecForProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProvider
@@ -236,7 +259,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecForProvider
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderIdentity
@@ -249,7 +274,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderNonComplianceMessage
@@ -262,7 +289,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderNonCompl
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderOverridesSelectors
@@ -275,7 +304,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderOverride
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderOverrides
@@ -288,7 +319,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderOverride
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdRef
@@ -314,7 +349,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDe
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy
@@ -327,7 +364,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelector
@@ -344,7 +383,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDe
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionPolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderResourceSelectorsSelectors
@@ -361,7 +402,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderResource
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderResourceSelectors
@@ -374,7 +417,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProviderResource
     [JsonPropertyName("selectors")]
     public IList<V1beta1SubscriptionPolicyAssignmentSpecInitProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProvider
@@ -439,7 +484,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecInitProvider
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecProviderConfigRefPolicy
@@ -452,7 +499,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecProviderConfigRef
@@ -465,7 +514,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionPolicyAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecWriteConnectionSecretToRef
@@ -478,7 +529,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionPolicyAssignmentSpec defines the desired state of SubscriptionPolicyAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpec
@@ -507,7 +560,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubscriptionPolicyAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderIdentity
@@ -528,7 +583,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderNonComplianceMessage
@@ -541,7 +598,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderNonCompl
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderOverridesSelectors
@@ -558,7 +617,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderOverride
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderOverrides
@@ -571,7 +632,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderOverride
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderResourceSelectorsSelectors
@@ -588,7 +651,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderResource
     [JsonPropertyName("notIn")]
     public IList<string>? NotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderResourceSelectors
@@ -601,7 +666,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProviderResource
     [JsonPropertyName("selectors")]
     public IList<V1beta1SubscriptionPolicyAssignmentStatusAtProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProvider
@@ -662,7 +729,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusAtProvider
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatusConditions
@@ -691,7 +760,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionPolicyAssignmentStatus defines the observed state of SubscriptionPolicyAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentStatus
@@ -708,7 +779,9 @@ public partial class V1beta1SubscriptionPolicyAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionPolicyAssignment is the Schema for the SubscriptionPolicyAssignments API. Manages a Subscription Policy Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -738,3 +811,4 @@ public partial class V1beta1SubscriptionPolicyAssignment : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1SubscriptionPolicyAssignmentStatus? Status { get; set; }
 }
+#nullable disable

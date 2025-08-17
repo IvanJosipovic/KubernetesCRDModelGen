@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vmwareengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>VMwareEnginePrivateCloud is the Schema for the VMwareEnginePrivateCloud API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1VMwareEnginePrivateCloud> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpecManagementClusterNodeTypeConfigs
@@ -50,7 +53,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpecManagementClusterNodeTy
     [JsonPropertyName("nodeTypeID")]
     public string NodeTypeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Input only. The management cluster for this private cloud.  This field is required during creation of the private cloud to provide  details for the default cluster.   The following fields can't be changed after private cloud creation:  `ManagementCluster.clusterId`, `ManagementCluster.nodeTypeId`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpecManagementCluster
@@ -63,7 +68,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpecManagementCluster
     [JsonPropertyName("nodeTypeConfigs")]
     public IList<V1alpha1VMwareEnginePrivateCloudSpecManagementClusterNodeTypeConfigs> NodeTypeConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The name of the VMware Engine network attached to the private cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpecNetworkConfigVmwareEngineNetworkRef
@@ -80,7 +87,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpecNetworkConfigVmwareEngi
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Network configuration of the private cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpecNetworkConfig
@@ -93,7 +102,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpecNetworkConfig
     [JsonPropertyName("vmwareEngineNetworkRef")]
     public V1alpha1VMwareEnginePrivateCloudSpecNetworkConfigVmwareEngineNetworkRef? VmwareEngineNetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpecProjectRef
@@ -114,7 +125,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEnginePrivateCloudSpec defines the desired state of VMwareEnginePrivateCloud</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudSpec
@@ -147,7 +160,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusConditions
@@ -172,7 +187,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. HCX appliance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateHcx
@@ -193,7 +210,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateHcx
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration of the private cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateNetworkConfig
@@ -210,7 +229,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateNetworkC
     [JsonPropertyName("vmwareEngineNetworkCanonical")]
     public string? VmwareEngineNetworkCanonical { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. NSX appliance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateNsx
@@ -231,7 +252,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateNsx
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Vcenter appliance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateVcenter
@@ -252,7 +275,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedStateVcenter
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedState
@@ -297,7 +322,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatusObservedState
     [JsonPropertyName("vcenter")]
     public V1alpha1VMwareEnginePrivateCloudStatusObservedStateVcenter? Vcenter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEnginePrivateCloudStatus defines the config connector machine state of VMwareEnginePrivateCloud</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEnginePrivateCloudStatus
@@ -318,7 +345,9 @@ public partial class V1alpha1VMwareEnginePrivateCloudStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VMwareEnginePrivateCloudStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEnginePrivateCloud is the Schema for the VMwareEnginePrivateCloud API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -348,3 +377,4 @@ public partial class V1alpha1VMwareEnginePrivateCloud : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1VMwareEnginePrivateCloudStatus? Status { get; set; }
 }
+#nullable disable

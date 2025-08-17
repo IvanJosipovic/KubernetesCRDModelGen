@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+#nullable enable
 /// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AttachmentAccepterList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1AttachmentAccepter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate attachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdRef
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate attachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate attachmentType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeRef
@@ -127,7 +140,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeRef
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate attachmentType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelector
@@ -161,7 +178,9 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelec
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1AttachmentAccepterSpecForProvider
     [JsonPropertyName("attachmentTypeSelector")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelector? AttachmentTypeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate attachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdRef
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate attachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelect
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate attachmentType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeRef
@@ -284,7 +315,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeRef
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate attachmentType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSelector
@@ -318,7 +353,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSele
     [JsonPropertyName("policy")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1AttachmentAccepterSpecInitProvider
     [JsonPropertyName("attachmentTypeSelector")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSelector? AttachmentTypeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1AttachmentAccepterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1AttachmentAccepterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttachmentAccepterSpec defines the desired state of AttachmentAccepter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpec
@@ -394,7 +437,9 @@ public partial class V1beta1AttachmentAccepterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AttachmentAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterStatusAtProvider
@@ -447,7 +492,9 @@ public partial class V1beta1AttachmentAccepterStatusAtProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterStatusConditions
@@ -476,7 +523,9 @@ public partial class V1beta1AttachmentAccepterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttachmentAccepterStatus defines the observed state of AttachmentAccepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterStatus
@@ -493,7 +542,9 @@ public partial class V1beta1AttachmentAccepterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -523,3 +574,4 @@ public partial class V1beta1AttachmentAccepter : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1AttachmentAccepterStatus? Status { get; set; }
 }
+#nullable disable

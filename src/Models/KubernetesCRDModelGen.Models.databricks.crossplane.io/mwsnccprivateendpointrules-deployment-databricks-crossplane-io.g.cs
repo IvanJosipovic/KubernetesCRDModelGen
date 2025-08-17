@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+#nullable enable
 /// <summary>MwsNccPrivateEndpointRule is the Schema for the MwsNccPrivateEndpointRules API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1alpha1MwsNccPrivateEndpointRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecForProvider
@@ -102,7 +105,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecForProvider
     [JsonPropertyName("vpcEndpointId")]
     public string? VpcEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecInitProvider
@@ -171,7 +176,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecInitProvider
     [JsonPropertyName("vpcEndpointId")]
     public string? VpcEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecProviderConfigRefPolicy
@@ -184,7 +191,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecProviderConfigRef
@@ -197,7 +206,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MwsNccPrivateEndpointRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetailsToConfigRefPolicy
@@ -210,7 +221,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetailsToConfigRef
@@ -223,7 +236,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetai
     [JsonPropertyName("policy")]
     public V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetailsToMetadata
@@ -240,7 +255,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetai
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetailsTo
@@ -257,7 +274,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecPublishConnectionDetai
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpecWriteConnectionSecretToRef
@@ -270,7 +289,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsNccPrivateEndpointRuleSpec defines the desired state of MwsNccPrivateEndpointRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleSpec
@@ -303,7 +324,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MwsNccPrivateEndpointRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleStatusAtProvider
@@ -376,7 +399,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleStatusAtProvider
     [JsonPropertyName("vpcEndpointId")]
     public string? VpcEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleStatusConditions
@@ -405,7 +430,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsNccPrivateEndpointRuleStatus defines the observed state of MwsNccPrivateEndpointRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNccPrivateEndpointRuleStatus
@@ -422,7 +449,9 @@ public partial class V1alpha1MwsNccPrivateEndpointRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsNccPrivateEndpointRule is the Schema for the MwsNccPrivateEndpointRules API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -452,3 +481,4 @@ public partial class V1alpha1MwsNccPrivateEndpointRule : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1alpha1MwsNccPrivateEndpointRuleStatus? Status { get; set; }
 }
+#nullable disable

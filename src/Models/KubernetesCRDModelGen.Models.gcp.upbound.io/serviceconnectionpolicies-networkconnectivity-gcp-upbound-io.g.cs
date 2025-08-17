@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.gcp.upbound.io;
+#nullable enable
 /// <summary>ServiceConnectionPolicy is the Schema for the ServiceConnectionPolicys API. Manage Service Connection Policies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServiceConnectionPolicyList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1ServiceConnectionPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkRef
@@ -59,7 +64,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkSelecto
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksRefsPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksRefs
@@ -115,7 +128,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubne
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate subnetworks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubne
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration used for Private Service Connect connections. Used when Infrastructure is PSC. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfig
@@ -174,7 +193,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProviderPscConfig
     [JsonPropertyName("subnetworksSelector")]
     public V1beta1ServiceConnectionPolicySpecForProviderPscConfigSubnetworksSelector? SubnetworksSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1ServiceConnectionPolicySpecForProvider
     [JsonPropertyName("serviceClass")]
     public string? ServiceClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkRefPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkRef
@@ -241,7 +266,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkSelectorPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkSelector
@@ -271,7 +300,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderNetworkSelect
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksRefsPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksRefs
@@ -297,7 +330,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubn
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksSelectorPolicy
@@ -310,7 +345,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate subnetworks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksSelector
@@ -327,7 +364,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubn
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration used for Private Service Connect connections. Used when Infrastructure is PSC. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfig
@@ -356,7 +395,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProviderPscConfig
     [JsonPropertyName("subnetworksSelector")]
     public V1beta1ServiceConnectionPolicySpecInitProviderPscConfigSubnetworksSelector? SubnetworksSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecInitProvider
@@ -393,7 +434,9 @@ public partial class V1beta1ServiceConnectionPolicySpecInitProvider
     [JsonPropertyName("serviceClass")]
     public string? ServiceClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecProviderConfigRefPolicy
@@ -406,7 +449,9 @@ public partial class V1beta1ServiceConnectionPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecProviderConfigRef
@@ -419,7 +464,9 @@ public partial class V1beta1ServiceConnectionPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceConnectionPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecWriteConnectionSecretToRef
@@ -432,7 +479,9 @@ public partial class V1beta1ServiceConnectionPolicySpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceConnectionPolicySpec defines the desired state of ServiceConnectionPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpec
@@ -461,7 +510,9 @@ public partial class V1beta1ServiceConnectionPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServiceConnectionPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration used for Private Service Connect connections. Used when Infrastructure is PSC. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConfig
@@ -482,7 +533,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConfig
     [JsonPropertyName("subnetworks")]
     public IList<string>? Subnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The most recent error during operating this connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnectionsError
@@ -499,7 +552,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnection
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The error info for the latest error during operating this connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnectionsErrorInfo
@@ -516,7 +571,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnection
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnections
@@ -557,7 +614,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusAtProviderPscConnection
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusAtProvider
@@ -622,7 +681,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatusConditions
@@ -651,7 +712,9 @@ public partial class V1beta1ServiceConnectionPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceConnectionPolicyStatus defines the observed state of ServiceConnectionPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicyStatus
@@ -668,7 +731,9 @@ public partial class V1beta1ServiceConnectionPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceConnectionPolicy is the Schema for the ServiceConnectionPolicys API. Manage Service Connection Policies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -698,3 +763,4 @@ public partial class V1beta1ServiceConnectionPolicy : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1ServiceConnectionPolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>RouterPeer is the Schema for the RouterPeers API. BGP information that must be configured into the routing stack to establish BGP peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RouterPeerList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1RouterPeer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderAdvertisedIpRanges
@@ -46,7 +49,9 @@ public partial class V1beta1RouterPeerSpecForProviderAdvertisedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderBfd
@@ -67,7 +72,9 @@ public partial class V1beta1RouterPeerSpecForProviderBfd
     [JsonPropertyName("sessionInitializationMode")]
     public string? SessionInitializationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderCustomLearnedIpRanges
@@ -76,7 +83,9 @@ public partial class V1beta1RouterPeerSpecForProviderCustomLearnedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderInterfaceRefPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouterInterface in compute to populate interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderInterfaceRef
@@ -102,7 +113,9 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderInterfaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouterInterface in compute to populate interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderInterfaceSelector
@@ -132,7 +147,9 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKeyKeySecretRef
@@ -149,7 +166,9 @@ public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKeyKeySecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKey
@@ -162,7 +181,9 @@ public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKey
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate peerIpAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRef
@@ -188,7 +211,9 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicy
@@ -201,7 +226,9 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate peerIpAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelector
@@ -218,7 +245,9 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRegionRefPolicy
@@ -231,7 +260,9 @@ public partial class V1beta1RouterPeerSpecForProviderRegionRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRegionRef
@@ -244,7 +275,9 @@ public partial class V1beta1RouterPeerSpecForProviderRegionRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRegionSelectorPolicy
@@ -257,7 +290,9 @@ public partial class V1beta1RouterPeerSpecForProviderRegionSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRegionSelector
@@ -274,7 +309,9 @@ public partial class V1beta1RouterPeerSpecForProviderRegionSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefPolicy
@@ -287,7 +324,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate routerApplianceInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRef
@@ -300,7 +339,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelectorPolicy
@@ -313,7 +354,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate routerApplianceInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelector
@@ -330,7 +373,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSele
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterRefPolicy
@@ -343,7 +388,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterRef
@@ -356,7 +403,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterSelectorPolicy
@@ -369,7 +418,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProviderRouterSelector
@@ -386,7 +437,9 @@ public partial class V1beta1RouterPeerSpecForProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecForProvider
@@ -539,7 +592,9 @@ public partial class V1beta1RouterPeerSpecForProvider
     [JsonPropertyName("zeroCustomLearnedRoutePriority")]
     public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderAdvertisedIpRanges
@@ -552,7 +607,9 @@ public partial class V1beta1RouterPeerSpecInitProviderAdvertisedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderBfd
@@ -573,7 +630,9 @@ public partial class V1beta1RouterPeerSpecInitProviderBfd
     [JsonPropertyName("sessionInitializationMode")]
     public string? SessionInitializationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderCustomLearnedIpRanges
@@ -582,7 +641,9 @@ public partial class V1beta1RouterPeerSpecInitProviderCustomLearnedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceRefPolicy
@@ -595,7 +656,9 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouterInterface in compute to populate interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceRef
@@ -608,7 +671,9 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderInterfaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy
@@ -621,7 +686,9 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouterInterface in compute to populate interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelector
@@ -638,7 +705,9 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderMd5AuthenticationKey
@@ -647,7 +716,9 @@ public partial class V1beta1RouterPeerSpecInitProviderMd5AuthenticationKey
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicy
@@ -660,7 +731,9 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate peerIpAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRef
@@ -673,7 +746,9 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolicy
@@ -686,7 +761,9 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate peerIpAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelector
@@ -703,7 +780,9 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRegionRefPolicy
@@ -716,7 +795,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRegionRef
@@ -729,7 +810,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRegionSelectorPolicy
@@ -742,7 +825,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRegionSelector
@@ -759,7 +844,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRefPolicy
@@ -772,7 +859,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate routerApplianceInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRef
@@ -785,7 +874,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPolicy
@@ -798,7 +889,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate routerApplianceInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelector
@@ -815,7 +908,9 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSel
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecInitProvider
@@ -956,7 +1051,9 @@ public partial class V1beta1RouterPeerSpecInitProvider
     [JsonPropertyName("zeroCustomLearnedRoutePriority")]
     public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecProviderConfigRefPolicy
@@ -969,7 +1066,9 @@ public partial class V1beta1RouterPeerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecProviderConfigRef
@@ -982,7 +1081,9 @@ public partial class V1beta1RouterPeerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RouterPeerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpecWriteConnectionSecretToRef
@@ -995,7 +1096,9 @@ public partial class V1beta1RouterPeerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterPeerSpec defines the desired state of RouterPeer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerSpec
@@ -1024,7 +1127,9 @@ public partial class V1beta1RouterPeerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RouterPeerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusAtProviderAdvertisedIpRanges
@@ -1037,7 +1142,9 @@ public partial class V1beta1RouterPeerStatusAtProviderAdvertisedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusAtProviderBfd
@@ -1058,7 +1165,9 @@ public partial class V1beta1RouterPeerStatusAtProviderBfd
     [JsonPropertyName("sessionInitializationMode")]
     public string? SessionInitializationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusAtProviderCustomLearnedIpRanges
@@ -1067,7 +1176,9 @@ public partial class V1beta1RouterPeerStatusAtProviderCustomLearnedIpRanges
     [JsonPropertyName("range")]
     public string? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusAtProviderMd5AuthenticationKey
@@ -1076,7 +1187,9 @@ public partial class V1beta1RouterPeerStatusAtProviderMd5AuthenticationKey
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusAtProvider
@@ -1205,7 +1318,9 @@ public partial class V1beta1RouterPeerStatusAtProvider
     [JsonPropertyName("zeroCustomLearnedRoutePriority")]
     public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatusConditions
@@ -1234,7 +1349,9 @@ public partial class V1beta1RouterPeerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterPeerStatus defines the observed state of RouterPeer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterPeerStatus
@@ -1251,7 +1368,9 @@ public partial class V1beta1RouterPeerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterPeer is the Schema for the RouterPeers API. BGP information that must be configured into the routing stack to establish BGP peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1281,3 +1400,4 @@ public partial class V1beta1RouterPeer : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RouterPeerStatus? Status { get; set; }
 }
+#nullable disable

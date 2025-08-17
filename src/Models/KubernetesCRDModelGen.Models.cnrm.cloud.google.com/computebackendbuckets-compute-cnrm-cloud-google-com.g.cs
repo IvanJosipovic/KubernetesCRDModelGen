@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeBackendBucketList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeBackendBucket> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpecBucketRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeBackendBucketSpecBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnReques
     [JsonPropertyName("headerName")]
     public string? HeaderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CacheKeyPolicy for this CdnPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPoli
     [JsonPropertyName("ttl")]
     public int? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud CDN configuration for this Backend Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicy
@@ -134,7 +145,9 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicy
     [JsonPropertyName("signedUrlCacheMaxAgeSec")]
     public int? SignedUrlCacheMaxAgeSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketSpec
@@ -171,7 +184,9 @@ public partial class V1beta1ComputeBackendBucketSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketStatusConditions
@@ -196,7 +211,9 @@ public partial class V1beta1ComputeBackendBucketStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendBucketStatus
@@ -217,7 +234,9 @@ public partial class V1beta1ComputeBackendBucketStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -247,3 +266,4 @@ public partial class V1beta1ComputeBackendBucket : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ComputeBackendBucketStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>Subscription is the Schema for the subscriptions API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SubscriptionList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1Subscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the PostgreSQL cluster that identifies the "subscriber"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpecCluster
@@ -42,7 +45,9 @@ public partial class V1SubscriptionSpecCluster
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionSpec defines the desired state of Subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpec
@@ -79,7 +84,9 @@ public partial class V1SubscriptionSpec
     [JsonPropertyName("subscriptionReclaimPolicy")]
     public string? SubscriptionReclaimPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionStatus defines the observed state of Subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionStatus
@@ -96,7 +103,9 @@ public partial class V1SubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription is the Schema for the subscriptions API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -126,3 +135,4 @@ public partial class V1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1S
     [JsonPropertyName("status")]
     public V1SubscriptionStatus? Status { get; set; }
 }
+#nullable disable

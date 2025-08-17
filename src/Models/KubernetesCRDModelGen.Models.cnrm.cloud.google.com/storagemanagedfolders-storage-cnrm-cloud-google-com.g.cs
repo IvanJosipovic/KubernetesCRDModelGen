@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>StorageManagedFolder is the Schema for the StorageManagedFolder API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1StorageManagedFolderList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1StorageManagedFolder> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1StorageManagedFolderSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The storage bucket where the folder will be created in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderSpecStoragebucketRef
@@ -71,7 +76,9 @@ public partial class V1alpha1StorageManagedFolderSpecStoragebucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageManagedFolderSpec defines the desired state of StorageManagedFolder</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderSpec
@@ -88,7 +95,9 @@ public partial class V1alpha1StorageManagedFolderSpec
     [JsonPropertyName("storagebucketRef")]
     public V1alpha1StorageManagedFolderSpecStoragebucketRef? StoragebucketRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderStatusConditions
@@ -113,7 +122,9 @@ public partial class V1alpha1StorageManagedFolderStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderStatusObservedState
@@ -130,7 +141,9 @@ public partial class V1alpha1StorageManagedFolderStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageManagedFolderStatus defines the config connector machine state of StorageManagedFolder</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageManagedFolderStatus
@@ -151,7 +164,9 @@ public partial class V1alpha1StorageManagedFolderStatus
     [JsonPropertyName("observedState")]
     public V1alpha1StorageManagedFolderStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageManagedFolder is the Schema for the StorageManagedFolder API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -181,3 +196,4 @@ public partial class V1alpha1StorageManagedFolder : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1StorageManagedFolderStatus? Status { get; set; }
 }
+#nullable disable

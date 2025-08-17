@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220615storageScheduledQueryRuleList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1api20220615storageScheduledQueryRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecActionsActionGroupsReferences
@@ -54,7 +57,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecActionsActionGrou
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Actions Actions to invoke when the alert fires.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecActions
@@ -71,7 +76,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecActions
     [JsonPropertyName("customProperties")]
     public IDictionary<string, string>? CustomProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Dimension Dimension splitting and filtering definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfDimensions
@@ -92,7 +99,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfDime
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Condition_FailingPeriods</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfFailingPeriods
@@ -109,7 +118,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfFail
     [JsonPropertyName("numberOfEvaluationPeriods")]
     public int? NumberOfEvaluationPeriods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfResourceIdColumnReference
@@ -130,7 +141,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOfReso
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Condition A condition of the scheduled query rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOf
@@ -175,7 +188,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteriaAllOf
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRuleCriteria The rule criteria that defines the conditions of the scheduled query rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecCriteria
@@ -188,7 +203,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecCriteria
     [JsonPropertyName("allOf")]
     public IList<V1api20220615storageScheduledQueryRuleSpecCriteriaAllOf>? AllOf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpecConfigMapExpressions
@@ -205,7 +222,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpecConfi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpecSecretExpressions
@@ -222,7 +241,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpecSecre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpec
@@ -239,7 +260,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220615storageScheduledQueryRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecOwner
@@ -252,7 +275,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpecScopesReferences
@@ -273,7 +298,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpecScopesReferences
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleSpec
@@ -370,7 +397,9 @@ public partial class V1api20220615storageScheduledQueryRuleSpec
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Actions_STATUS Actions to invoke when the alert fires.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusActions
@@ -387,7 +416,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusActions
     [JsonPropertyName("customProperties")]
     public IDictionary<string, string>? CustomProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusConditions
@@ -420,7 +451,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Dimension_STATUS Dimension splitting and filtering definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfDimensions
@@ -441,7 +474,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfDi
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Condition_FailingPeriods_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfFailingPeriods
@@ -458,7 +493,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOfFa
     [JsonPropertyName("numberOfEvaluationPeriods")]
     public int? NumberOfEvaluationPeriods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Condition_STATUS A condition of the scheduled query rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOf
@@ -503,7 +540,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteriaAllOf
     [JsonPropertyName("timeAggregation")]
     public string? TimeAggregation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRuleCriteria_STATUS The rule criteria that defines the conditions of the scheduled query rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusCriteria
@@ -516,7 +555,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusCriteria
     [JsonPropertyName("allOf")]
     public IList<V1api20220615storageScheduledQueryRuleStatusCriteriaAllOf>? AllOf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatusSystemData
@@ -549,7 +590,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageScheduledQueryRuleStatus
@@ -666,7 +709,9 @@ public partial class V1api20220615storageScheduledQueryRuleStatus
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.ScheduledQueryRule Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -696,3 +741,4 @@ public partial class V1api20220615storageScheduledQueryRule : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1api20220615storageScheduledQueryRuleStatus? Status { get; set; }
 }
+#nullable disable

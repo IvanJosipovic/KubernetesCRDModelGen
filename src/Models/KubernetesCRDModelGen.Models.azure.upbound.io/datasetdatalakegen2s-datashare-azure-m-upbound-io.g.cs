@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datashare.azure.m.upbound.io;
+#nullable enable
 /// <summary>DataSetDataLakeGen2 is the Schema for the DataSetDataLakeGen2s API. Manages a Data Share Data Lake Gen2 Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetDataLakeGen2List : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetDataLakeGen2> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataLakeGen2FileSystem in storage to populate fileSystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataLakeGen2FileSystem in storage to populate fileSystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameSele
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderFileSystemNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataShare in datashare to populate shareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderShareIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataShare in datashare to populate shareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderShareIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderShareIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdRe
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSe
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecForProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1DataSetDataLakeGen2SpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataLakeGen2FileSystem in storage to populate fileSystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameRef
@@ -304,7 +335,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataLakeGen2FileSystem in storage to populate fileSystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameSelector
@@ -338,7 +373,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameSel
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecInitProviderFileSystemNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdRef
@@ -368,7 +407,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdR
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdSelectorPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdSelector
@@ -402,7 +445,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdS
     [JsonPropertyName("policy")]
     public V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecInitProvider
@@ -439,7 +484,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1DataSetDataLakeGen2SpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecProviderConfigRef
@@ -452,7 +499,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2SpecWriteConnectionSecretToRef
@@ -461,7 +510,9 @@ public partial class V1beta1DataSetDataLakeGen2SpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDataLakeGen2Spec defines the desired state of DataSetDataLakeGen2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2Spec
@@ -486,7 +537,9 @@ public partial class V1beta1DataSetDataLakeGen2Spec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetDataLakeGen2SpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2StatusAtProvider
@@ -519,7 +572,9 @@ public partial class V1beta1DataSetDataLakeGen2StatusAtProvider
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2StatusConditions
@@ -548,7 +603,9 @@ public partial class V1beta1DataSetDataLakeGen2StatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDataLakeGen2Status defines the observed state of DataSetDataLakeGen2.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDataLakeGen2Status
@@ -565,7 +622,9 @@ public partial class V1beta1DataSetDataLakeGen2Status
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDataLakeGen2 is the Schema for the DataSetDataLakeGen2s API. Manages a Data Share Data Lake Gen2 Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -595,3 +654,4 @@ public partial class V1beta1DataSetDataLakeGen2 : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1DataSetDataLakeGen2Status? Status { get; set; }
 }
+#nullable disable

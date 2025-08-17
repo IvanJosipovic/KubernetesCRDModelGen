@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VPNConnectionRoute is the Schema for the VPNConnectionRoutes API. Provides a static route between a VPN connection and a customer gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNConnectionRouteList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1VPNConnectionRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNConnection in ec2 to populate vpnConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNConnection in ec2 to populate vpnConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSele
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1VPNConnectionRouteSpecForProvider
     [JsonPropertyName("vpnConnectionIdSelector")]
     public V1beta1VPNConnectionRouteSpecForProviderVpnConnectionIdSelector? VpnConnectionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNConnection in ec2 to populate vpnConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNConnection in ec2 to populate vpnConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSelector
@@ -170,7 +189,9 @@ public partial class V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSel
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1VPNConnectionRouteSpecInitProvider
     [JsonPropertyName("vpnConnectionIdSelector")]
     public V1beta1VPNConnectionRouteSpecInitProviderVpnConnectionIdSelector? VpnConnectionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1VPNConnectionRouteSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1VPNConnectionRouteSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionRouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1VPNConnectionRouteSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnectionRouteSpec defines the desired state of VPNConnectionRoute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteSpec
@@ -259,7 +288,9 @@ public partial class V1beta1VPNConnectionRouteSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNConnectionRouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteStatusAtProvider
@@ -280,7 +311,9 @@ public partial class V1beta1VPNConnectionRouteStatusAtProvider
     [JsonPropertyName("vpnConnectionId")]
     public string? VpnConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteStatusConditions
@@ -309,7 +342,9 @@ public partial class V1beta1VPNConnectionRouteStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnectionRouteStatus defines the observed state of VPNConnectionRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionRouteStatus
@@ -326,7 +361,9 @@ public partial class V1beta1VPNConnectionRouteStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnectionRoute is the Schema for the VPNConnectionRoutes API. Provides a static route between a VPN connection and a customer gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -356,3 +393,4 @@ public partial class V1beta1VPNConnectionRoute : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1VPNConnectionRouteStatus? Status { get; set; }
 }
+#nullable disable

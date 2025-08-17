@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudGateway is the Schema for the SpringCloudGateways API. Manages a Spring Cloud Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudGatewayList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderApiMetadata
@@ -58,7 +61,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderApiMetadata
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderClientAuthorization
@@ -71,7 +76,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderClientAuthorization
     [JsonPropertyName("verificationEnabled")]
     public bool? VerificationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderCors
@@ -104,7 +111,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderCors
     [JsonPropertyName("maxAgeSeconds")]
     public double? MaxAgeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCachePerInstance
@@ -117,7 +126,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCacheP
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCachePerRoute
@@ -130,7 +141,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCacheP
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderQuota
@@ -143,7 +156,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderQuota
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the sensitive environment variables of the Spring Cloud Gateway as a map of key-value pairs. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSensitiveEnvironmentVariablesSecretRef
@@ -156,7 +171,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSensitiveEnvironmen
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRefPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRef
@@ -182,7 +201,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelectorPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelector
@@ -212,7 +235,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProviderSso
@@ -233,7 +258,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecForProvider
@@ -306,7 +333,9 @@ public partial class V1beta1SpringCloudGatewaySpecForProvider
     [JsonPropertyName("sso")]
     public IList<V1beta1SpringCloudGatewaySpecForProviderSso>? Sso { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderApiMetadata
@@ -331,7 +360,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderApiMetadata
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderClientAuthorization
@@ -344,7 +375,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderClientAuthorizatio
     [JsonPropertyName("verificationEnabled")]
     public bool? VerificationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderCors
@@ -377,7 +410,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderCors
     [JsonPropertyName("maxAgeSeconds")]
     public double? MaxAgeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCachePerInstance
@@ -390,7 +425,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCache
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCachePerRoute
@@ -403,7 +440,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCache
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderQuota
@@ -416,7 +455,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderQuota
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProviderSso
@@ -437,7 +478,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecInitProvider
@@ -494,7 +537,9 @@ public partial class V1beta1SpringCloudGatewaySpecInitProvider
     [JsonPropertyName("sso")]
     public IList<V1beta1SpringCloudGatewaySpecInitProviderSso>? Sso { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecProviderConfigRefPolicy
@@ -507,7 +552,9 @@ public partial class V1beta1SpringCloudGatewaySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecProviderConfigRef
@@ -520,7 +567,9 @@ public partial class V1beta1SpringCloudGatewaySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudGatewaySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef
@@ -533,7 +582,9 @@ public partial class V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudGatewaySpec defines the desired state of SpringCloudGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewaySpec
@@ -562,7 +613,9 @@ public partial class V1beta1SpringCloudGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderApiMetadata
@@ -587,7 +640,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderApiMetadata
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderClientAuthorization
@@ -600,7 +655,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderClientAuthorizatio
     [JsonPropertyName("verificationEnabled")]
     public bool? VerificationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderCors
@@ -633,7 +690,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderCors
     [JsonPropertyName("maxAgeSeconds")]
     public double? MaxAgeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCachePerInstance
@@ -646,7 +705,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCache
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCachePerRoute
@@ -659,7 +720,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCache
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderQuota
@@ -672,7 +735,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderQuota
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProviderSso
@@ -693,7 +758,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusAtProvider
@@ -762,7 +829,9 @@ public partial class V1beta1SpringCloudGatewayStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatusConditions
@@ -791,7 +860,9 @@ public partial class V1beta1SpringCloudGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudGatewayStatus defines the observed state of SpringCloudGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudGatewayStatus
@@ -808,7 +879,9 @@ public partial class V1beta1SpringCloudGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudGateway is the Schema for the SpringCloudGateways API. Manages a Spring Cloud Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -838,3 +911,4 @@ public partial class V1beta1SpringCloudGateway : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudGatewayStatus? Status { get; set; }
 }
+#nullable disable

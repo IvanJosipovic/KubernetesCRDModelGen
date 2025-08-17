@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.azure.upbound.io;
+#nullable enable
 /// <summary>ResourceProviderRegistration is the Schema for the ResourceProviderRegistrations API. Manages the Registration of a Resource Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceProviderRegistrationList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceProviderRegistration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecForProviderFeature
@@ -46,7 +49,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecForProviderFeature
     [JsonPropertyName("registered")]
     public bool? Registered { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecForProvider
@@ -59,7 +64,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecInitProviderFeature
@@ -72,7 +79,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecInitProviderFeature
     [JsonPropertyName("registered")]
     public bool? Registered { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecInitProvider
@@ -85,7 +94,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecProviderConfigRefPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecProviderConfigRef
@@ -111,7 +124,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceProviderRegistrationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpecWriteConnectionSecretToRef
@@ -124,7 +139,9 @@ public partial class V1beta1ResourceProviderRegistrationSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceProviderRegistrationSpec defines the desired state of ResourceProviderRegistration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationSpec
@@ -153,7 +170,9 @@ public partial class V1beta1ResourceProviderRegistrationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceProviderRegistrationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationStatusAtProviderFeature
@@ -166,7 +185,9 @@ public partial class V1beta1ResourceProviderRegistrationStatusAtProviderFeature
     [JsonPropertyName("registered")]
     public bool? Registered { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationStatusAtProvider
@@ -183,7 +204,9 @@ public partial class V1beta1ResourceProviderRegistrationStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationStatusConditions
@@ -212,7 +235,9 @@ public partial class V1beta1ResourceProviderRegistrationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceProviderRegistrationStatus defines the observed state of ResourceProviderRegistration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceProviderRegistrationStatus
@@ -229,7 +254,9 @@ public partial class V1beta1ResourceProviderRegistrationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceProviderRegistration is the Schema for the ResourceProviderRegistrations API. Manages the Registration of a Resource Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -259,3 +286,4 @@ public partial class V1beta1ResourceProviderRegistration : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1ResourceProviderRegistrationStatus? Status { get; set; }
 }
+#nullable disable

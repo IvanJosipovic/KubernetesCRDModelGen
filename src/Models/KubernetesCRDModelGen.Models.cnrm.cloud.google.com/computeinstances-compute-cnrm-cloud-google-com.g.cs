@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeInstanceList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Controls for advanced machine-related behavior features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAdvancedMachineFeatures
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeInstanceSpecAdvancedMachineFeatures
     [JsonPropertyName("visibleCoreCount")]
     public int? VisibleCoreCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFromSecretKeyRef
@@ -63,7 +68,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawV
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFrom
@@ -72,7 +79,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawV
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRaw
@@ -85,7 +94,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRaw
     [JsonPropertyName("valueFrom")]
     public V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDiskKmsKeyRef
@@ -102,7 +113,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef
@@ -119,7 +132,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecAttachedDisk
@@ -148,7 +163,9 @@ public partial class V1beta1ComputeInstanceSpecAttachedDisk
     [JsonPropertyName("sourceDiskRef")]
     public V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef SourceDiskRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFromSecretKeyRef
@@ -161,7 +178,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValue
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFrom
@@ -170,7 +189,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValue
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRaw
@@ -183,7 +204,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRaw
     [JsonPropertyName("valueFrom")]
     public V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The image from which to initialize this disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParamsSourceImageRef
@@ -200,7 +223,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParamsSourceIma
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Parameters with which a disk was created alongside the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParams
@@ -225,7 +250,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParams
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskKmsKeyRef
@@ -242,7 +269,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The source disk used to create this disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDiskSourceDiskRef
@@ -259,7 +288,9 @@ public partial class V1beta1ComputeInstanceSpecBootDiskSourceDiskRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The boot disk for the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecBootDisk
@@ -296,7 +327,9 @@ public partial class V1beta1ComputeInstanceSpecBootDisk
     [JsonPropertyName("sourceDiskRef")]
     public V1beta1ComputeInstanceSpecBootDiskSourceDiskRef? SourceDiskRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Confidential VM config being used by the instance.  on_host_maintenance has to be set to TERMINATE or this will fail to create.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecConfidentialInstanceConfig
@@ -305,7 +338,9 @@ public partial class V1beta1ComputeInstanceSpecConfidentialInstanceConfig
     [JsonPropertyName("enableConfidentialCompute")]
     public bool EnableConfidentialCompute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecGuestAccelerator
@@ -318,7 +353,9 @@ public partial class V1beta1ComputeInstanceSpecGuestAccelerator
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecInstanceTemplateRef
@@ -335,7 +372,9 @@ public partial class V1beta1ComputeInstanceSpecInstanceTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecMetadata
@@ -348,7 +387,9 @@ public partial class V1beta1ComputeInstanceSpecMetadata
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfigNatIpRef
@@ -365,7 +406,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfigNatIp
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfig
@@ -382,7 +425,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfig
     [JsonPropertyName("publicPtrDomainName")]
     public string? PublicPtrDomainName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAliasIpRange
@@ -395,7 +440,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAliasIpRange
     [JsonPropertyName("subnetworkRangeName")]
     public string? SubnetworkRangeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceIpv6AccessConfig
@@ -420,7 +467,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceIpv6AccessConfig
     [JsonPropertyName("publicPtrDomainName")]
     public string? PublicPtrDomainName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkIpRef
@@ -441,7 +490,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkIpRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkRef
@@ -458,7 +509,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef
@@ -475,7 +528,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkInterface
@@ -540,7 +595,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterface
     [JsonPropertyName("subnetworkRef")]
     public V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef? SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecNetworkPerformanceConfig
@@ -549,7 +606,9 @@ public partial class V1beta1ComputeInstanceSpecNetworkPerformanceConfig
     [JsonPropertyName("totalEgressBandwidthTier")]
     public string TotalEgressBandwidthTier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Stores additional params passed with the request, but not persisted as part of resource payload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecParams
@@ -558,7 +617,9 @@ public partial class V1beta1ComputeInstanceSpecParams
     [JsonPropertyName("resourceManagerTags")]
     public JsonNode? ResourceManagerTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies the label selector for the reservation to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecReservationAffinitySpecificReservation
@@ -571,7 +632,9 @@ public partial class V1beta1ComputeInstanceSpecReservationAffinitySpecificReserv
     [JsonPropertyName("values")]
     public IList<string> Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies the reservations that this instance can consume from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecReservationAffinity
@@ -584,7 +647,9 @@ public partial class V1beta1ComputeInstanceSpecReservationAffinity
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecResourcePolicies
@@ -601,7 +666,9 @@ public partial class V1beta1ComputeInstanceSpecResourcePolicies
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies the maximum amount of time a Local Ssd Vm should wait while   recovery of the Local Ssd state is attempted. Its value should be in   between 0 and 168 hours with hour granularity and the default value being 1   hour.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecSchedulingLocalSsdRecoveryTimeout
@@ -614,7 +681,9 @@ public partial class V1beta1ComputeInstanceSpecSchedulingLocalSsdRecoveryTimeout
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The timeout for new network connections to hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecSchedulingMaxRunDuration
@@ -627,7 +696,9 @@ public partial class V1beta1ComputeInstanceSpecSchedulingMaxRunDuration
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecSchedulingNodeAffinities
@@ -636,7 +707,9 @@ public partial class V1beta1ComputeInstanceSpecSchedulingNodeAffinities
     [JsonPropertyName("value")]
     public JsonNode? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The scheduling strategy being used by the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecScheduling
@@ -681,7 +754,9 @@ public partial class V1beta1ComputeInstanceSpecScheduling
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecScratchDisk
@@ -694,7 +769,9 @@ public partial class V1beta1ComputeInstanceSpecScratchDisk
     [JsonPropertyName("size")]
     public int? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef
@@ -711,7 +788,9 @@ public partial class V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service account to attach to the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecServiceAccount
@@ -724,7 +803,9 @@ public partial class V1beta1ComputeInstanceSpecServiceAccount
     [JsonPropertyName("serviceAccountRef")]
     public V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef? ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shielded vm config being used by the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecShieldedInstanceConfig
@@ -741,7 +822,9 @@ public partial class V1beta1ComputeInstanceSpecShieldedInstanceConfig
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpec
@@ -858,7 +941,9 @@ public partial class V1beta1ComputeInstanceSpec
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceStatusConditions
@@ -883,7 +968,9 @@ public partial class V1beta1ComputeInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceStatus
@@ -924,7 +1011,9 @@ public partial class V1beta1ComputeInstanceStatus
     [JsonPropertyName("tagsFingerprint")]
     public string? TagsFingerprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -954,3 +1043,4 @@ public partial class V1beta1ComputeInstance : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ComputeInstanceStatus? Status { get; set; }
 }
+#nullable disable

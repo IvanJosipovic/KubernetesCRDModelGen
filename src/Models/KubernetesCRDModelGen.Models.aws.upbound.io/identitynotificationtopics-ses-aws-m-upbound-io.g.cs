@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+#nullable enable
 /// <summary>IdentityNotificationTopic is the Schema for the IdentityNotificationTopics API. Setting AWS SES Identity Notification Topic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityNotificationTopicList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityNotificationTopic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainIdentity in ses to populate identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRef
@@ -63,7 +68,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRef
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainIdentity in ses to populate identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySelector
@@ -97,7 +106,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySele
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecForProviderIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSele
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1IdentityNotificationTopicSpecForProvider
     [JsonPropertyName("topicArnSelector")]
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainIdentity in ses to populate identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRef
@@ -232,7 +255,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRef
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecInitProviderIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainIdentity in ses to populate identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelector
@@ -266,7 +293,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySel
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRef
@@ -296,7 +327,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelector
@@ -330,7 +365,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSel
     [JsonPropertyName("policy")]
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecInitProvider
@@ -367,7 +404,9 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProvider
     [JsonPropertyName("topicArnSelector")]
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecProviderConfigRef
@@ -380,7 +419,9 @@ public partial class V1beta1IdentityNotificationTopicSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecWriteConnectionSecretToRef
@@ -389,7 +430,9 @@ public partial class V1beta1IdentityNotificationTopicSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityNotificationTopicSpec defines the desired state of IdentityNotificationTopic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpec
@@ -414,7 +457,9 @@ public partial class V1beta1IdentityNotificationTopicSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IdentityNotificationTopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicStatusAtProvider
@@ -443,7 +488,9 @@ public partial class V1beta1IdentityNotificationTopicStatusAtProvider
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicStatusConditions
@@ -472,7 +519,9 @@ public partial class V1beta1IdentityNotificationTopicStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityNotificationTopicStatus defines the observed state of IdentityNotificationTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicStatus
@@ -489,7 +538,9 @@ public partial class V1beta1IdentityNotificationTopicStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityNotificationTopic is the Schema for the IdentityNotificationTopics API. Setting AWS SES Identity Notification Topic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -519,3 +570,4 @@ public partial class V1beta1IdentityNotificationTopic : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1IdentityNotificationTopicStatus? Status { get; set; }
 }
+#nullable disable

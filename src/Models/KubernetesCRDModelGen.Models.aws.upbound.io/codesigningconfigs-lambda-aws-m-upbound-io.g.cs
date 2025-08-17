@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.m.upbound.io;
+#nullable enable
 /// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Manages an AWS Lambda Code Signing Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CodeSigningConfigList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1CodeSigningConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsRefs
@@ -63,7 +68,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSig
     [JsonPropertyName("policy")]
     public V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SigningProfile in signer to populate signingProfileVersionArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSig
     [JsonPropertyName("policy")]
     public V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishers
@@ -114,7 +125,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishers
     [JsonPropertyName("signingProfileVersionArnsSelector")]
     public V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSigningProfileVersionArnsSelector? SigningProfileVersionArnsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderPolicies
@@ -123,7 +136,9 @@ public partial class V1beta1CodeSigningConfigSpecForProviderPolicies
     [JsonPropertyName("untrustedArtifactOnDeployment")]
     public string? UntrustedArtifactOnDeployment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProvider
@@ -148,7 +163,9 @@ public partial class V1beta1CodeSigningConfigSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsRefsPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsRefs
@@ -178,7 +197,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSi
     [JsonPropertyName("policy")]
     public V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SigningProfile in signer to populate signingProfileVersionArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsSelector
@@ -212,7 +235,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSi
     [JsonPropertyName("policy")]
     public V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishers
@@ -229,7 +254,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishers
     [JsonPropertyName("signingProfileVersionArnsSelector")]
     public V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSigningProfileVersionArnsSelector? SigningProfileVersionArnsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderPolicies
@@ -238,7 +265,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderPolicies
     [JsonPropertyName("untrustedArtifactOnDeployment")]
     public string? UntrustedArtifactOnDeployment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProvider
@@ -259,7 +288,9 @@ public partial class V1beta1CodeSigningConfigSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecProviderConfigRef
@@ -272,7 +303,9 @@ public partial class V1beta1CodeSigningConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecWriteConnectionSecretToRef
@@ -281,7 +314,9 @@ public partial class V1beta1CodeSigningConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeSigningConfigSpec defines the desired state of CodeSigningConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpec
@@ -306,7 +341,9 @@ public partial class V1beta1CodeSigningConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CodeSigningConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusAtProviderAllowedPublishers
@@ -315,7 +352,9 @@ public partial class V1beta1CodeSigningConfigStatusAtProviderAllowedPublishers
     [JsonPropertyName("signingProfileVersionArns")]
     public IList<string>? SigningProfileVersionArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusAtProviderPolicies
@@ -324,7 +363,9 @@ public partial class V1beta1CodeSigningConfigStatusAtProviderPolicies
     [JsonPropertyName("untrustedArtifactOnDeployment")]
     public string? UntrustedArtifactOnDeployment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusAtProvider
@@ -369,7 +410,9 @@ public partial class V1beta1CodeSigningConfigStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusConditions
@@ -398,7 +441,9 @@ public partial class V1beta1CodeSigningConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeSigningConfigStatus defines the observed state of CodeSigningConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatus
@@ -415,7 +460,9 @@ public partial class V1beta1CodeSigningConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Manages an AWS Lambda Code Signing Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -445,3 +492,4 @@ public partial class V1beta1CodeSigningConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1CodeSigningConfigStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.maintenance.azure.m.upbound.io;
+#nullable enable
 /// <summary>MaintenanceConfiguration is the Schema for the MaintenanceConfigurations API. Manages a Maintenance Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MaintenanceConfigurationList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1MaintenanceConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatchesLinux
@@ -50,7 +53,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatche
     [JsonPropertyName("packageNamesMaskToInclude")]
     public IList<string>? PackageNamesMaskToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatchesWindows
@@ -67,7 +72,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatche
     [JsonPropertyName("kbNumbersToInclude")]
     public IList<string>? KbNumbersToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An install_patches block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatches
@@ -84,7 +91,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderInstallPatche
     [JsonPropertyName("windows")]
     public IList<V1beta1MaintenanceConfigurationSpecForProviderInstallPatchesWindows>? Windows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameRefPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameRef
@@ -114,7 +125,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameSelectorPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameSelector
@@ -148,7 +163,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceConfigurationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProviderWindow
@@ -173,7 +190,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProviderWindow
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecForProvider
@@ -222,7 +241,9 @@ public partial class V1beta1MaintenanceConfigurationSpecForProvider
     [JsonPropertyName("window")]
     public V1beta1MaintenanceConfigurationSpecForProviderWindow? Window { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatchesLinux
@@ -239,7 +260,9 @@ public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatch
     [JsonPropertyName("packageNamesMaskToInclude")]
     public IList<string>? PackageNamesMaskToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatchesWindows
@@ -256,7 +279,9 @@ public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatch
     [JsonPropertyName("kbNumbersToInclude")]
     public IList<string>? KbNumbersToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An install_patches block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatches
@@ -273,7 +298,9 @@ public partial class V1beta1MaintenanceConfigurationSpecInitProviderInstallPatch
     [JsonPropertyName("windows")]
     public IList<V1beta1MaintenanceConfigurationSpecInitProviderInstallPatchesWindows>? Windows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecInitProviderWindow
@@ -298,7 +325,9 @@ public partial class V1beta1MaintenanceConfigurationSpecInitProviderWindow
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecInitProvider
@@ -335,7 +364,9 @@ public partial class V1beta1MaintenanceConfigurationSpecInitProvider
     [JsonPropertyName("window")]
     public V1beta1MaintenanceConfigurationSpecInitProviderWindow? Window { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecProviderConfigRef
@@ -348,7 +379,9 @@ public partial class V1beta1MaintenanceConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpecWriteConnectionSecretToRef
@@ -357,7 +390,9 @@ public partial class V1beta1MaintenanceConfigurationSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceConfigurationSpec defines the desired state of MaintenanceConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationSpec
@@ -382,7 +417,9 @@ public partial class V1beta1MaintenanceConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MaintenanceConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatchesLinux
@@ -399,7 +436,9 @@ public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatch
     [JsonPropertyName("packageNamesMaskToInclude")]
     public IList<string>? PackageNamesMaskToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatchesWindows
@@ -416,7 +455,9 @@ public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatch
     [JsonPropertyName("kbNumbersToInclude")]
     public IList<string>? KbNumbersToInclude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An install_patches block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatches
@@ -433,7 +474,9 @@ public partial class V1beta1MaintenanceConfigurationStatusAtProviderInstallPatch
     [JsonPropertyName("windows")]
     public IList<V1beta1MaintenanceConfigurationStatusAtProviderInstallPatchesWindows>? Windows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusAtProviderWindow
@@ -458,7 +501,9 @@ public partial class V1beta1MaintenanceConfigurationStatusAtProviderWindow
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusAtProvider
@@ -503,7 +548,9 @@ public partial class V1beta1MaintenanceConfigurationStatusAtProvider
     [JsonPropertyName("window")]
     public V1beta1MaintenanceConfigurationStatusAtProviderWindow? Window { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatusConditions
@@ -532,7 +579,9 @@ public partial class V1beta1MaintenanceConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceConfigurationStatus defines the observed state of MaintenanceConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceConfigurationStatus
@@ -549,7 +598,9 @@ public partial class V1beta1MaintenanceConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceConfiguration is the Schema for the MaintenanceConfigurations API. Manages a Maintenance Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +630,4 @@ public partial class V1beta1MaintenanceConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1MaintenanceConfigurationStatus? Status { get; set; }
 }
+#nullable disable

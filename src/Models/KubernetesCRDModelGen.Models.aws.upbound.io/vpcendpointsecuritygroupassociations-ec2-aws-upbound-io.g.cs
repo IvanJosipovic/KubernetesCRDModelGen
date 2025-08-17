@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VPCEndpointSecurityGroupAssociation is the Schema for the VPCEndpointSecurityGroupAssociations API. Provides a resource to create an association between a VPC endpoint and a security group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1beta1VPCEndpointSecurityGroupAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSe
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSe
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVp
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVp
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("vpcEndpointIdSelector")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderVpcEndpointIdSelector? VpcEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderS
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderS
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdRef
@@ -264,7 +295,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderV
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdSelector
@@ -294,7 +329,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderV
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecInitProvider
     [JsonPropertyName("vpcEndpointIdSelector")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecInitProviderVpcEndpointIdSelector? VpcEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecProviderConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecProviderConfi
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecWriteConnecti
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSecurityGroupAssociationSpec defines the desired state of VPCEndpointSecurityGroupAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpec
@@ -395,7 +440,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCEndpointSecurityGroupAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationStatusAtProvider
@@ -420,7 +467,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationStatusAtProvider
     [JsonPropertyName("vpcEndpointId")]
     public string? VpcEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationStatusConditions
@@ -449,7 +498,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSecurityGroupAssociationStatus defines the observed state of VPCEndpointSecurityGroupAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationStatus
@@ -466,7 +517,9 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSecurityGroupAssociation is the Schema for the VPCEndpointSecurityGroupAssociations API. Provides a resource to create an association between a VPC endpoint and a security group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -496,3 +549,4 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociation : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointSecurityGroupAssociationStatus? Status { get; set; }
 }
+#nullable disable

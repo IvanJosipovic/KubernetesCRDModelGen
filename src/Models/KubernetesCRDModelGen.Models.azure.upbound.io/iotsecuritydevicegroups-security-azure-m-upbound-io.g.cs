@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTSecurityDeviceGroup is the Schema for the IOTSecurityDeviceGroups API. Manages a Iot Security Device Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTSecurityDeviceGroupList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1IOTSecurityDeviceGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an allow_rule blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderAllowRule
@@ -54,7 +57,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderAllowRule
     [JsonPropertyName("processesNotAllowed")]
     public IList<string>? ProcessesNotAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdRef
@@ -84,7 +91,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdRef
     [JsonPropertyName("policy")]
     public V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdSelector
@@ -118,7 +129,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1IOTSecurityDeviceGroupSpecForProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderRangeRule
@@ -139,7 +152,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProviderRangeRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecForProvider
@@ -168,7 +183,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecForProvider
     [JsonPropertyName("rangeRule")]
     public IList<V1beta1IOTSecurityDeviceGroupSpecForProviderRangeRule>? RangeRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an allow_rule blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderAllowRule
@@ -189,7 +206,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderAllowRule
     [JsonPropertyName("processesNotAllowed")]
     public IList<string>? ProcessesNotAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdRefPolicy
@@ -202,7 +221,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdRef
@@ -219,7 +240,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdRef
     [JsonPropertyName("policy")]
     public V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdSelectorPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdSelector
@@ -253,7 +278,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdSelect
     [JsonPropertyName("policy")]
     public V1beta1IOTSecurityDeviceGroupSpecInitProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderRangeRule
@@ -274,7 +301,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProviderRangeRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecInitProvider
@@ -303,7 +332,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecInitProvider
     [JsonPropertyName("rangeRule")]
     public IList<V1beta1IOTSecurityDeviceGroupSpecInitProviderRangeRule>? RangeRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecProviderConfigRef
@@ -316,7 +347,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpecWriteConnectionSecretToRef
@@ -325,7 +358,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecurityDeviceGroupSpec defines the desired state of IOTSecurityDeviceGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupSpec
@@ -350,7 +385,9 @@ public partial class V1beta1IOTSecurityDeviceGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTSecurityDeviceGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>an allow_rule blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupStatusAtProviderAllowRule
@@ -371,7 +408,9 @@ public partial class V1beta1IOTSecurityDeviceGroupStatusAtProviderAllowRule
     [JsonPropertyName("processesNotAllowed")]
     public IList<string>? ProcessesNotAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupStatusAtProviderRangeRule
@@ -392,7 +431,9 @@ public partial class V1beta1IOTSecurityDeviceGroupStatusAtProviderRangeRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupStatusAtProvider
@@ -417,7 +458,9 @@ public partial class V1beta1IOTSecurityDeviceGroupStatusAtProvider
     [JsonPropertyName("rangeRule")]
     public IList<V1beta1IOTSecurityDeviceGroupStatusAtProviderRangeRule>? RangeRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupStatusConditions
@@ -446,7 +489,9 @@ public partial class V1beta1IOTSecurityDeviceGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecurityDeviceGroupStatus defines the observed state of IOTSecurityDeviceGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTSecurityDeviceGroupStatus
@@ -463,7 +508,9 @@ public partial class V1beta1IOTSecurityDeviceGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTSecurityDeviceGroup is the Schema for the IOTSecurityDeviceGroups API. Manages a Iot Security Device Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -493,3 +540,4 @@ public partial class V1beta1IOTSecurityDeviceGroup : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1IOTSecurityDeviceGroupStatus? Status { get; set; }
 }
+#nullable disable

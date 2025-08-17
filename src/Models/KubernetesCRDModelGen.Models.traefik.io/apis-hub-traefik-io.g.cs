@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>API defines an HTTP interface that is exposed to external clients. It specifies the supported versions and provides instructions for accessing its documentation. Once instantiated, an API object is associated with an Ingress, IngressRoute, or HTTPRoute resource, enabling the exposure of the described API to the outside world.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIList : IKubernetesObject<V1ListMeta>, IItems<V1a
     [JsonPropertyName("items")]
     public IList<V1alpha1API> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecCors
@@ -70,7 +73,9 @@ public partial class V1alpha1APISpecCors
     [JsonPropertyName("maxAge")]
     public long? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationMatcher defines criteria for matching an OpenAPI operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOperationSetsMatchers
@@ -91,7 +96,9 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSetsMatchers
     [JsonPropertyName("pathRegex")]
     public string? PathRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APICatalogItems or ManagedSubscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOperationSets
@@ -104,7 +111,9 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOverrideServers
@@ -113,7 +122,9 @@ public partial class V1alpha1APISpecOpenApiSpecOverrideServers
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Override holds data used to override OpenAPI specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOverride
@@ -122,7 +133,9 @@ public partial class V1alpha1APISpecOpenApiSpecOverride
     [JsonPropertyName("servers")]
     public IList<V1alpha1APISpecOpenApiSpecOverrideServers> Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpec
@@ -147,7 +160,9 @@ public partial class V1alpha1APISpecOpenApiSpec
     [JsonPropertyName("validateRequestMethodAndPath")]
     public bool? ValidateRequestMethodAndPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIVersionRef references an APIVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecVersions
@@ -156,7 +171,9 @@ public partial class V1alpha1APISpecVersions
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APISpec describes the API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpec
@@ -181,7 +198,9 @@ public partial class V1alpha1APISpec
     [JsonPropertyName("versions")]
     public IList<V1alpha1APISpecVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIStatus
@@ -198,7 +217,9 @@ public partial class V1alpha1APIStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>API defines an HTTP interface that is exposed to external clients. It specifies the supported versions and provides instructions for accessing its documentation. Once instantiated, an API object is associated with an Ingress, IngressRoute, or HTTPRoute resource, enabling the exposure of the described API to the outside world.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -228,3 +249,4 @@ public partial class V1alpha1API : IKubernetesObject<V1ObjectMeta>, ISpec<V1alph
     [JsonPropertyName("status")]
     public V1alpha1APIStatus? Status { get; set; }
 }
+#nullable disable

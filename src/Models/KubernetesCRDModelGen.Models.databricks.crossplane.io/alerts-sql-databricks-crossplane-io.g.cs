@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+#nullable enable
 /// <summary>Alert is the Schema for the Alerts API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AlertList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1alpha1Alert> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProviderConditionOperandColumn
@@ -42,7 +45,9 @@ public partial class V1alpha1AlertSpecForProviderConditionOperandColumn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProviderConditionOperand
@@ -51,7 +56,9 @@ public partial class V1alpha1AlertSpecForProviderConditionOperand
     [JsonPropertyName("column")]
     public IList<V1alpha1AlertSpecForProviderConditionOperandColumn>? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProviderConditionThresholdValue
@@ -68,7 +75,9 @@ public partial class V1alpha1AlertSpecForProviderConditionThresholdValue
     [JsonPropertyName("stringValue")]
     public string? StringValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProviderConditionThreshold
@@ -77,7 +86,9 @@ public partial class V1alpha1AlertSpecForProviderConditionThreshold
     [JsonPropertyName("value")]
     public IList<V1alpha1AlertSpecForProviderConditionThresholdValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProviderCondition
@@ -98,7 +109,9 @@ public partial class V1alpha1AlertSpecForProviderCondition
     [JsonPropertyName("threshold")]
     public IList<V1alpha1AlertSpecForProviderConditionThreshold>? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1alpha1AlertSpecForProvider
     [JsonPropertyName("secondsToRetrigger")]
     public double? SecondsToRetrigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProviderConditionOperandColumn
@@ -148,7 +163,9 @@ public partial class V1alpha1AlertSpecInitProviderConditionOperandColumn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProviderConditionOperand
@@ -157,7 +174,9 @@ public partial class V1alpha1AlertSpecInitProviderConditionOperand
     [JsonPropertyName("column")]
     public IList<V1alpha1AlertSpecInitProviderConditionOperandColumn>? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProviderConditionThresholdValue
@@ -174,7 +193,9 @@ public partial class V1alpha1AlertSpecInitProviderConditionThresholdValue
     [JsonPropertyName("stringValue")]
     public string? StringValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProviderConditionThreshold
@@ -183,7 +204,9 @@ public partial class V1alpha1AlertSpecInitProviderConditionThreshold
     [JsonPropertyName("value")]
     public IList<V1alpha1AlertSpecInitProviderConditionThresholdValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProviderCondition
@@ -204,7 +227,9 @@ public partial class V1alpha1AlertSpecInitProviderCondition
     [JsonPropertyName("threshold")]
     public IList<V1alpha1AlertSpecInitProviderConditionThreshold>? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecInitProvider
@@ -245,7 +270,9 @@ public partial class V1alpha1AlertSpecInitProvider
     [JsonPropertyName("secondsToRetrigger")]
     public double? SecondsToRetrigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecProviderConfigRefPolicy
@@ -258,7 +285,9 @@ public partial class V1alpha1AlertSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecProviderConfigRef
@@ -271,7 +300,9 @@ public partial class V1alpha1AlertSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1AlertSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecPublishConnectionDetailsToConfigRefPolicy
@@ -284,7 +315,9 @@ public partial class V1alpha1AlertSpecPublishConnectionDetailsToConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecPublishConnectionDetailsToConfigRef
@@ -297,7 +330,9 @@ public partial class V1alpha1AlertSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1AlertSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecPublishConnectionDetailsToMetadata
@@ -314,7 +349,9 @@ public partial class V1alpha1AlertSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecPublishConnectionDetailsTo
@@ -331,7 +368,9 @@ public partial class V1alpha1AlertSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpecWriteConnectionSecretToRef
@@ -344,7 +383,9 @@ public partial class V1alpha1AlertSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertSpec defines the desired state of Alert</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertSpec
@@ -377,7 +418,9 @@ public partial class V1alpha1AlertSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1AlertSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProviderConditionOperandColumn
@@ -386,7 +429,9 @@ public partial class V1alpha1AlertStatusAtProviderConditionOperandColumn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProviderConditionOperand
@@ -395,7 +440,9 @@ public partial class V1alpha1AlertStatusAtProviderConditionOperand
     [JsonPropertyName("column")]
     public IList<V1alpha1AlertStatusAtProviderConditionOperandColumn>? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProviderConditionThresholdValue
@@ -412,7 +459,9 @@ public partial class V1alpha1AlertStatusAtProviderConditionThresholdValue
     [JsonPropertyName("stringValue")]
     public string? StringValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProviderConditionThreshold
@@ -421,7 +470,9 @@ public partial class V1alpha1AlertStatusAtProviderConditionThreshold
     [JsonPropertyName("value")]
     public IList<V1alpha1AlertStatusAtProviderConditionThresholdValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProviderCondition
@@ -442,7 +493,9 @@ public partial class V1alpha1AlertStatusAtProviderCondition
     [JsonPropertyName("threshold")]
     public IList<V1alpha1AlertStatusAtProviderConditionThreshold>? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusAtProvider
@@ -507,7 +560,9 @@ public partial class V1alpha1AlertStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatusConditions
@@ -536,7 +591,9 @@ public partial class V1alpha1AlertStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertStatus defines the observed state of Alert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlertStatus
@@ -553,7 +610,9 @@ public partial class V1alpha1AlertStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Alert is the Schema for the Alerts API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -583,3 +642,4 @@ public partial class V1alpha1Alert : IKubernetesObject<V1ObjectMeta>, ISpec<V1al
     [JsonPropertyName("status")]
     public V1alpha1AlertStatus? Status { get; set; }
 }
+#nullable disable

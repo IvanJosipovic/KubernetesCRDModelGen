@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>GlobalForwardingRule is the Schema for the GlobalForwardingRules API. Represents a GlobalForwardingRule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GlobalForwardingRuleList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1GlobalForwardingRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalAddress in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRef
@@ -63,7 +68,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalAddress in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
@@ -97,7 +106,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFiltersFilterLabels
@@ -110,7 +121,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFiltersFi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFilters
@@ -123,7 +136,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFilters
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRef
@@ -153,7 +170,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelector
@@ -187,7 +208,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRef
@@ -217,7 +242,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicy
@@ -230,7 +257,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelector
@@ -251,7 +280,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderServiceDirectoryRegistrations
@@ -264,7 +295,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderServiceDirectoryR
     [JsonPropertyName("serviceDirectoryRegion")]
     public string? ServiceDirectoryRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRef
@@ -294,7 +329,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelectorPolicy
@@ -307,7 +344,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelector
@@ -328,7 +367,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelecto
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicy
@@ -341,7 +382,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TargetSSLProxy in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRef
@@ -358,7 +401,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicy
@@ -371,7 +416,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TargetSSLProxy in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelector
@@ -392,7 +439,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecForProvider
@@ -509,7 +558,9 @@ public partial class V1beta1GlobalForwardingRuleSpecForProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1GlobalForwardingRuleSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPolicy
@@ -522,7 +573,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalAddress in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRef
@@ -539,7 +592,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicy
@@ -552,7 +607,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalAddress in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelector
@@ -573,7 +630,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelecto
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFiltersFilterLabels
@@ -586,7 +645,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFiltersF
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFilters
@@ -599,7 +660,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFilters
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicy
@@ -612,7 +675,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRef
@@ -629,7 +694,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorPolicy
@@ -642,7 +709,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelector
@@ -663,7 +732,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicy
@@ -676,7 +747,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRef
@@ -693,7 +766,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicy
@@ -706,7 +781,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelector
@@ -727,7 +804,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderServiceDirectoryRegistrations
@@ -740,7 +819,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderServiceDirectory
     [JsonPropertyName("serviceDirectoryRegion")]
     public string? ServiceDirectoryRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPolicy
@@ -753,7 +834,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRef
@@ -770,7 +853,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelectorPolicy
@@ -783,7 +868,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelector
@@ -804,7 +891,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelect
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicy
@@ -817,7 +906,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TargetSSLProxy in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRef
@@ -834,7 +925,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicy
@@ -847,7 +940,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TargetSSLProxy in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelector
@@ -868,7 +963,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecInitProvider
@@ -985,7 +1082,9 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecProviderConfigRef
@@ -998,7 +1097,9 @@ public partial class V1beta1GlobalForwardingRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef
@@ -1007,7 +1108,9 @@ public partial class V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalForwardingRuleSpec defines the desired state of GlobalForwardingRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleSpec
@@ -1032,7 +1135,9 @@ public partial class V1beta1GlobalForwardingRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFiltersFilterLabels
@@ -1045,7 +1150,9 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFiltersF
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFilters
@@ -1058,7 +1165,9 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFilters
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderServiceDirectoryRegistrations
@@ -1071,7 +1180,9 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderServiceDirectory
     [JsonPropertyName("serviceDirectoryRegion")]
     public string? ServiceDirectoryRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatusAtProvider
@@ -1184,7 +1295,9 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatusConditions
@@ -1213,7 +1326,9 @@ public partial class V1beta1GlobalForwardingRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalForwardingRuleStatus defines the observed state of GlobalForwardingRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalForwardingRuleStatus
@@ -1230,7 +1345,9 @@ public partial class V1beta1GlobalForwardingRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalForwardingRule is the Schema for the GlobalForwardingRules API. Represents a GlobalForwardingRule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1260,3 +1377,4 @@ public partial class V1beta1GlobalForwardingRule : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1GlobalForwardingRuleStatus? Status { get; set; }
 }
+#nullable disable

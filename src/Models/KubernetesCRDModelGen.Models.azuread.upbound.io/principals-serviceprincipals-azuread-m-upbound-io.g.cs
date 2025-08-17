@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serviceprincipals.azuread.m.upbound.io;
+#nullable enable
 /// <summary>Principal is the Schema for the Principals API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrincipalList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Principal> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderClientIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrincipalSpecForProviderClientIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderClientIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PrincipalSpecForProviderClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1PrincipalSpecForProviderClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderClientIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PrincipalSpecForProviderClientIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderClientIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PrincipalSpecForProviderClientIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PrincipalSpecForProviderClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderFeatureTags
@@ -118,7 +129,9 @@ public partial class V1beta1PrincipalSpecForProviderFeatureTags
     [JsonPropertyName("hide")]
     public bool? Hide { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A saml_single_sign_on block as documented below. Settings related to SAML single sign-on</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderSamlSingleSignOn
@@ -127,7 +140,9 @@ public partial class V1beta1PrincipalSpecForProviderSamlSingleSignOn
     [JsonPropertyName("relayState")]
     public string? RelayState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProvider
@@ -196,7 +211,9 @@ public partial class V1beta1PrincipalSpecForProvider
     [JsonPropertyName("useExisting")]
     public bool? UseExisting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderClientIdRefPolicy
@@ -209,7 +226,9 @@ public partial class V1beta1PrincipalSpecInitProviderClientIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderClientIdRef
@@ -226,7 +245,9 @@ public partial class V1beta1PrincipalSpecInitProviderClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1PrincipalSpecInitProviderClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderClientIdSelectorPolicy
@@ -239,7 +260,9 @@ public partial class V1beta1PrincipalSpecInitProviderClientIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderClientIdSelector
@@ -260,7 +283,9 @@ public partial class V1beta1PrincipalSpecInitProviderClientIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PrincipalSpecInitProviderClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderFeatureTags
@@ -281,7 +306,9 @@ public partial class V1beta1PrincipalSpecInitProviderFeatureTags
     [JsonPropertyName("hide")]
     public bool? Hide { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A saml_single_sign_on block as documented below. Settings related to SAML single sign-on</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProviderSamlSingleSignOn
@@ -290,7 +317,9 @@ public partial class V1beta1PrincipalSpecInitProviderSamlSingleSignOn
     [JsonPropertyName("relayState")]
     public string? RelayState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecInitProvider
@@ -359,7 +388,9 @@ public partial class V1beta1PrincipalSpecInitProvider
     [JsonPropertyName("useExisting")]
     public bool? UseExisting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecProviderConfigRef
@@ -372,7 +403,9 @@ public partial class V1beta1PrincipalSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecWriteConnectionSecretToRef
@@ -381,7 +414,9 @@ public partial class V1beta1PrincipalSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrincipalSpec defines the desired state of Principal</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpec
@@ -406,7 +441,9 @@ public partial class V1beta1PrincipalSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrincipalSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusAtProviderAppRoles
@@ -435,7 +472,9 @@ public partial class V1beta1PrincipalStatusAtProviderAppRoles
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusAtProviderFeatureTags
@@ -456,7 +495,9 @@ public partial class V1beta1PrincipalStatusAtProviderFeatureTags
     [JsonPropertyName("hide")]
     public bool? Hide { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusAtProviderOauth2PermissionScopes
@@ -493,7 +534,9 @@ public partial class V1beta1PrincipalStatusAtProviderOauth2PermissionScopes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A saml_single_sign_on block as documented below. Settings related to SAML single sign-on</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusAtProviderSamlSingleSignOn
@@ -502,7 +545,9 @@ public partial class V1beta1PrincipalStatusAtProviderSamlSingleSignOn
     [JsonPropertyName("relayState")]
     public string? RelayState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusAtProvider
@@ -623,7 +668,9 @@ public partial class V1beta1PrincipalStatusAtProvider
     [JsonPropertyName("useExisting")]
     public bool? UseExisting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatusConditions
@@ -652,7 +699,9 @@ public partial class V1beta1PrincipalStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrincipalStatus defines the observed state of Principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalStatus
@@ -669,7 +718,9 @@ public partial class V1beta1PrincipalStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Principal is the Schema for the Principals API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -699,3 +750,4 @@ public partial class V1beta1Principal : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1PrincipalStatus? Status { get; set; }
 }
+#nullable disable

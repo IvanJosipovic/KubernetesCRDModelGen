@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>SubnetCidrReservation is the Schema for the SubnetCidrReservations API. Provides a subnet CIDR reservation resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubnetCidrReservationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1SubnetCidrReservation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1SubnetCidrReservationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1SubnetCidrReservationSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetCidrReservationSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdRef
@@ -148,7 +163,9 @@ public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1SubnetCidrReservationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelector
@@ -178,7 +197,9 @@ public partial class V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1SubnetCidrReservationSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetCidrReservationSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecProviderConfigRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1SubnetCidrReservationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1SubnetCidrReservationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SubnetCidrReservationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpecWriteConnectionSecretToRef
@@ -246,7 +273,9 @@ public partial class V1beta1SubnetCidrReservationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetCidrReservationSpec defines the desired state of SubnetCidrReservation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationSpec
@@ -275,7 +304,9 @@ public partial class V1beta1SubnetCidrReservationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubnetCidrReservationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationStatusAtProvider
@@ -308,7 +339,9 @@ public partial class V1beta1SubnetCidrReservationStatusAtProvider
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationStatusConditions
@@ -337,7 +370,9 @@ public partial class V1beta1SubnetCidrReservationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetCidrReservationStatus defines the observed state of SubnetCidrReservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetCidrReservationStatus
@@ -354,7 +389,9 @@ public partial class V1beta1SubnetCidrReservationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetCidrReservation is the Schema for the SubnetCidrReservations API. Provides a subnet CIDR reservation resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -384,3 +421,4 @@ public partial class V1beta1SubnetCidrReservation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1SubnetCidrReservationStatus? Status { get; set; }
 }
+#nullable disable

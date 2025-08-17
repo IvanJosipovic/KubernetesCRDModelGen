@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>FrontDoor is the Schema for the FrontDoors API. Manages an Azure Front Door (classic) instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FrontDoorList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1FrontDoor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolBackend
@@ -66,7 +69,9 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolBackend
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderBackendPool
@@ -87,7 +92,9 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolHealthProbe
@@ -116,7 +123,9 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolHealthProbe
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolLoadBalancing
@@ -137,7 +146,9 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolLoadBalancing
     [JsonPropertyName("successfulSamplesRequired")]
     public double? SuccessfulSamplesRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolSettings
@@ -150,7 +161,9 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolSettings
     [JsonPropertyName("enforceBackendPoolsCertificateNameCheck")]
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderFrontendEndpoint
@@ -175,7 +188,9 @@ public partial class V1beta1FrontDoorSpecForProviderFrontendEndpoint
     [JsonPropertyName("webApplicationFirewallPolicyLinkId")]
     public string? WebApplicationFirewallPolicyLinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicy
@@ -188,7 +203,9 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRef
@@ -205,7 +222,9 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicy
@@ -218,7 +237,9 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelector
@@ -239,7 +260,9 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A forwarding_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderRoutingRuleForwardingConfiguration
@@ -276,7 +299,9 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRuleForwardingConfigu
     [JsonPropertyName("forwardingProtocol")]
     public string? ForwardingProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A redirect_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfiguration
@@ -305,7 +330,9 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfigura
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProviderRoutingRule
@@ -338,7 +365,9 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRule
     [JsonPropertyName("redirectConfiguration")]
     public V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfiguration? RedirectConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecForProvider
@@ -391,7 +420,9 @@ public partial class V1beta1FrontDoorSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolBackend
@@ -424,7 +455,9 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolBackend
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderBackendPool
@@ -445,7 +478,9 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolHealthProbe
@@ -474,7 +509,9 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolHealthProbe
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolLoadBalancing
@@ -495,7 +532,9 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolLoadBalancing
     [JsonPropertyName("successfulSamplesRequired")]
     public double? SuccessfulSamplesRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolSettings
@@ -508,7 +547,9 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolSettings
     [JsonPropertyName("enforceBackendPoolsCertificateNameCheck")]
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderFrontendEndpoint
@@ -533,7 +574,9 @@ public partial class V1beta1FrontDoorSpecInitProviderFrontendEndpoint
     [JsonPropertyName("webApplicationFirewallPolicyLinkId")]
     public string? WebApplicationFirewallPolicyLinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A forwarding_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleForwardingConfiguration
@@ -570,7 +613,9 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleForwardingConfig
     [JsonPropertyName("forwardingProtocol")]
     public string? ForwardingProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A redirect_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfiguration
@@ -599,7 +644,9 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfigur
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRule
@@ -632,7 +679,9 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRule
     [JsonPropertyName("redirectConfiguration")]
     public V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfiguration? RedirectConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecInitProvider
@@ -673,7 +722,9 @@ public partial class V1beta1FrontDoorSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecProviderConfigRef
@@ -686,7 +737,9 @@ public partial class V1beta1FrontDoorSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpecWriteConnectionSecretToRef
@@ -695,7 +748,9 @@ public partial class V1beta1FrontDoorSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontDoorSpec defines the desired state of FrontDoor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorSpec
@@ -720,7 +775,9 @@ public partial class V1beta1FrontDoorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FrontDoorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolBackend
@@ -753,7 +810,9 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolBackend
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderBackendPool
@@ -778,7 +837,9 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolHealthProbe
@@ -811,7 +872,9 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolHealthProbe
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolLoadBalancing
@@ -836,7 +899,9 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolLoadBalancing
     [JsonPropertyName("successfulSamplesRequired")]
     public double? SuccessfulSamplesRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolSettings
@@ -849,7 +914,9 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolSettings
     [JsonPropertyName("enforceBackendPoolsCertificateNameCheck")]
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderExplicitResourceOrder
@@ -874,7 +941,9 @@ public partial class V1beta1FrontDoorStatusAtProviderExplicitResourceOrder
     [JsonPropertyName("routingRuleIds")]
     public IList<string>? RoutingRuleIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderFrontendEndpoint
@@ -903,7 +972,9 @@ public partial class V1beta1FrontDoorStatusAtProviderFrontendEndpoint
     [JsonPropertyName("webApplicationFirewallPolicyLinkId")]
     public string? WebApplicationFirewallPolicyLinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A forwarding_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleForwardingConfiguration
@@ -940,7 +1011,9 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleForwardingConfig
     [JsonPropertyName("forwardingProtocol")]
     public string? ForwardingProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A redirect_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfiguration
@@ -969,7 +1042,9 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfigur
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRule
@@ -1006,7 +1081,9 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRule
     [JsonPropertyName("redirectConfiguration")]
     public V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfiguration? RedirectConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusAtProvider
@@ -1087,7 +1164,9 @@ public partial class V1beta1FrontDoorStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatusConditions
@@ -1116,7 +1195,9 @@ public partial class V1beta1FrontDoorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontDoorStatus defines the observed state of FrontDoor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontDoorStatus
@@ -1133,7 +1214,9 @@ public partial class V1beta1FrontDoorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontDoor is the Schema for the FrontDoors API. Manages an Azure Front Door (classic) instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1163,3 +1246,4 @@ public partial class V1beta1FrontDoor : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1FrontDoorStatus? Status { get; set; }
 }
+#nullable disable

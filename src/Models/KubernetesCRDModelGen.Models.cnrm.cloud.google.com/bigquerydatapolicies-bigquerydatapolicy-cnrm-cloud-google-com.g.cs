@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquerydatapolicy.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryDataPolicy is the Schema for the BigQueryDataPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BigQueryDataPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1BigQueryDataPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data masking policy that specifies the data masking rule to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicySpecDataMaskingPolicy
@@ -42,7 +45,9 @@ public partial class V1alpha1BigQueryDataPolicySpecDataMaskingPolicy
     [JsonPropertyName("predefinedExpression")]
     public string? PredefinedExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Data Catalog Policy Tag resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicySpecPolicyTagRef
@@ -59,7 +64,9 @@ public partial class V1alpha1BigQueryDataPolicySpecPolicyTagRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicySpecProjectRef
@@ -80,7 +87,9 @@ public partial class V1alpha1BigQueryDataPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDataPolicySpec defines the desired state of BigQueryDataPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicySpec
@@ -113,7 +122,9 @@ public partial class V1alpha1BigQueryDataPolicySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicyStatusConditions
@@ -138,13 +149,17 @@ public partial class V1alpha1BigQueryDataPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicyStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDataPolicyStatus defines the config connector machine state of BigQueryDataPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDataPolicyStatus
@@ -165,7 +180,9 @@ public partial class V1alpha1BigQueryDataPolicyStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BigQueryDataPolicyStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDataPolicy is the Schema for the BigQueryDataPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -195,3 +212,4 @@ public partial class V1alpha1BigQueryDataPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1BigQueryDataPolicyStatus? Status { get; set; }
 }
+#nullable disable

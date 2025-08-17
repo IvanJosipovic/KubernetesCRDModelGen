@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1HealthcareHL7V2StoreList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1HealthcareHL7V2Store> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DEPRECATED. `notification_config` is deprecated. Use `notification_configs` instead. A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreSpecNotificationConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1HealthcareHL7V2StoreSpecNotificationConfig
     [JsonPropertyName("pubsubTopic")]
     public string PubsubTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreSpecNotificationConfigs
@@ -55,7 +60,9 @@ public partial class V1alpha1HealthcareHL7V2StoreSpecNotificationConfigs
     [JsonPropertyName("pubsubTopic")]
     public string PubsubTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreSpecParserConfig
@@ -76,7 +83,9 @@ public partial class V1alpha1HealthcareHL7V2StoreSpecParserConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreSpec
@@ -101,7 +110,9 @@ public partial class V1alpha1HealthcareHL7V2StoreSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreStatusConditions
@@ -126,7 +137,9 @@ public partial class V1alpha1HealthcareHL7V2StoreStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareHL7V2StoreStatus
@@ -143,7 +156,9 @@ public partial class V1alpha1HealthcareHL7V2StoreStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -173,3 +188,4 @@ public partial class V1alpha1HealthcareHL7V2Store : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1HealthcareHL7V2StoreStatus? Status { get; set; }
 }
+#nullable disable

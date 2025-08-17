@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.snapshot.storage.k8s.io;
+#nullable enable
 /// <summary>VolumeSnapshotContent represents the actual "on-disk" snapshot object in the underlying storage system</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1VolumeSnapshotContentList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1VolumeSnapshotContent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>source specifies whether the snapshot is (or should be) dynamically provisioned or already exists, and just requires a Kubernetes object representation. This field is immutable after creation. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentSpecSource
@@ -46,7 +49,9 @@ public partial class V1VolumeSnapshotContentSpecSource
     [JsonPropertyName("volumeHandle")]
     public string? VolumeHandle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeSnapshotRef specifies the VolumeSnapshot object to which this VolumeSnapshotContent object is bound. VolumeSnapshot.Spec.VolumeSnapshotContentName field must reference to this VolumeSnapshotContent's name for the bidirectional binding to be valid. For a pre-existing VolumeSnapshotContent object, name and namespace of the VolumeSnapshot object MUST be provided for binding to happen. This field is immutable after creation. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentSpecVolumeSnapshotRef
@@ -79,7 +84,9 @@ public partial class V1VolumeSnapshotContentSpecVolumeSnapshotRef
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>spec defines properties of a VolumeSnapshotContent created by the underlying storage system. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentSpec
@@ -108,7 +115,9 @@ public partial class V1VolumeSnapshotContentSpec
     [JsonPropertyName("volumeSnapshotRef")]
     public V1VolumeSnapshotContentSpecVolumeSnapshotRef VolumeSnapshotRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>error is the last observed error during snapshot creation, if any. Upon success after retry, this error field will be cleared.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentStatusError
@@ -121,7 +130,9 @@ public partial class V1VolumeSnapshotContentStatusError
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>status represents the current information of a snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentStatus
@@ -150,7 +161,9 @@ public partial class V1VolumeSnapshotContentStatus
     [JsonPropertyName("volumeGroupSnapshotHandle")]
     public string? VolumeGroupSnapshotHandle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeSnapshotContent represents the actual "on-disk" snapshot object in the underlying storage system</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -180,3 +193,4 @@ public partial class V1VolumeSnapshotContent : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1VolumeSnapshotContentStatus? Status { get; set; }
 }
+#nullable disable

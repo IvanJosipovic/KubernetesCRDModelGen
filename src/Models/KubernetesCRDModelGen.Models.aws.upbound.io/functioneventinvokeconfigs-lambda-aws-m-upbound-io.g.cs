@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.m.upbound.io;
+#nullable enable
 /// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionEventInvokeConfigList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1FunctionEventInvokeConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRef
@@ -63,7 +68,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailure
@@ -114,7 +125,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("destinationSelector")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelector? DestinationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRef
@@ -144,7 +159,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelector
@@ -178,7 +197,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess
@@ -195,7 +216,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("destinationSelector")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelector? DestinationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfig
@@ -208,7 +231,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     [JsonPropertyName("onSuccess")]
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
@@ -237,7 +262,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRef
@@ -267,7 +296,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelector
@@ -301,7 +334,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailure
@@ -318,7 +353,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("destinationSelector")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelector? DestinationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRef
@@ -348,7 +387,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelector
@@ -382,7 +425,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess
@@ -399,7 +444,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("destinationSelector")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelector? DestinationSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfig
@@ -412,7 +459,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     [JsonPropertyName("onSuccess")]
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
@@ -437,7 +486,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRef
@@ -450,7 +501,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretToRef
@@ -459,7 +512,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionEventInvokeConfigSpec defines the desired state of FunctionEventInvokeConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpec
@@ -484,7 +539,9 @@ public partial class V1beta1FunctionEventInvokeConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnFailure
@@ -493,7 +550,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess
@@ -502,7 +561,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with destination configuration. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfig
@@ -515,7 +576,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     [JsonPropertyName("onSuccess")]
     public V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
@@ -548,7 +611,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusConditions
@@ -577,7 +642,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionEventInvokeConfigStatus defines the observed state of FunctionEventInvokeConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatus
@@ -594,7 +661,9 @@ public partial class V1beta1FunctionEventInvokeConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -624,3 +693,4 @@ public partial class V1beta1FunctionEventInvokeConfig : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1FunctionEventInvokeConfigStatus? Status { get; set; }
 }
+#nullable disable

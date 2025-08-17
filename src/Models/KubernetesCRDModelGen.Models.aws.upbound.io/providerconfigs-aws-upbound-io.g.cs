@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aws.upbound.io;
+#nullable enable
 /// <summary>A ProviderConfig configures the AWS provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ProviderConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Tag is session tag that can be used to assume an IAM Role</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecAssumeRoleChainTags
@@ -46,7 +49,9 @@ public partial class V1beta1ProviderConfigSpecAssumeRoleChainTags
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssumeRoleOptions define the options for assuming an IAM Role Fields are similar to the STS AssumeRoleOptions in the AWS SDK</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecAssumeRoleChain
@@ -67,7 +72,9 @@ public partial class V1beta1ProviderConfigSpecAssumeRoleChain
     [JsonPropertyName("transitiveTagKeys")]
     public IList<string>? TransitiveTagKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
@@ -76,7 +83,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsFs
@@ -85,7 +94,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
@@ -102,7 +113,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigFs
@@ -111,7 +124,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to obtain the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSecretRef
@@ -128,7 +143,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfig
@@ -145,7 +162,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity
@@ -162,7 +181,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity
     [JsonPropertyName("tokenConfig")]
     public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfig? TokenConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpbound
@@ -171,7 +192,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpbound
     [JsonPropertyName("webIdentity")]
     public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity? WebIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigFs
@@ -180,7 +203,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigF
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to obtain the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSecretRef
@@ -197,7 +222,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
@@ -214,7 +241,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentity
@@ -231,7 +260,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentity
     [JsonPropertyName("tokenConfig")]
     public V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig? TokenConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Credentials required to authenticate to this provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentials
@@ -260,7 +291,9 @@ public partial class V1beta1ProviderConfigSpecCredentials
     [JsonPropertyName("webIdentity")]
     public V1beta1ProviderConfigSpecCredentialsWebIdentity? WebIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dynamic lets you configure the behavior of endpoint URL resolver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecEndpointUrlDynamic
@@ -273,7 +306,9 @@ public partial class V1beta1ProviderConfigSpecEndpointUrlDynamic
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URL lets you configure the endpoint URL to be used in SDK calls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecEndpointUrl
@@ -290,7 +325,9 @@ public partial class V1beta1ProviderConfigSpecEndpointUrl
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Endpoint is where you can override the default endpoint configuration of AWS calls made by the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecEndpoint
@@ -327,7 +364,9 @@ public partial class V1beta1ProviderConfigSpecEndpoint
     [JsonPropertyName("url")]
     public V1beta1ProviderConfigSpecEndpointUrl Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpec
@@ -364,7 +403,9 @@ public partial class V1beta1ProviderConfigSpec
     [JsonPropertyName("skip_requesting_account_id")]
     public bool? SkipRequestingAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatusConditions
@@ -393,7 +434,9 @@ public partial class V1beta1ProviderConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatus
@@ -406,7 +449,9 @@ public partial class V1beta1ProviderConfigStatus
     [JsonPropertyName("users")]
     public long? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfig configures the AWS provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -436,3 +481,4 @@ public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ProviderConfigStatus? Status { get; set; }
 }
+#nullable disable

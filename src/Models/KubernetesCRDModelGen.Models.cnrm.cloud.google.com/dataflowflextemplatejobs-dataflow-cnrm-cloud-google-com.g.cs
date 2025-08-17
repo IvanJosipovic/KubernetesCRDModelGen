@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataflow.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataflowFlexTemplateJob is the Schema for the DataflowFlexTemplateJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataflowFlexTemplateJobList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1DataflowFlexTemplateJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud KMS key for the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpecKmsKeyNameRef
@@ -50,7 +53,9 @@ public partial class V1beta1DataflowFlexTemplateJobSpecKmsKeyNameRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network to which VMs will be assigned.  If empty or unspecified, the service will use the network "default".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpecNetworkRef
@@ -67,7 +72,9 @@ public partial class V1beta1DataflowFlexTemplateJobSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The email address of the service account to run the job as.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpecServiceAccountEmailRef
@@ -84,7 +91,9 @@ public partial class V1beta1DataflowFlexTemplateJobSpecServiceAccountEmailRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpecSubnetworkRef
@@ -101,7 +110,9 @@ public partial class V1beta1DataflowFlexTemplateJobSpecSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataflowFlexTemplateJobSpec defines the desired state of DataflowFlexTemplateJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpec
@@ -182,7 +193,9 @@ public partial class V1beta1DataflowFlexTemplateJobSpec
     [JsonPropertyName("transformNameMapping")]
     public JsonNode? TransformNameMapping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobStatusConditions
@@ -207,7 +220,9 @@ public partial class V1beta1DataflowFlexTemplateJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataflowFlexTemplateJobStatus defines the config connector machine state of DataflowFlexTemplateJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobStatus
@@ -232,7 +247,9 @@ public partial class V1beta1DataflowFlexTemplateJobStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataflowFlexTemplateJob is the Schema for the DataflowFlexTemplateJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -262,3 +279,4 @@ public partial class V1beta1DataflowFlexTemplateJob : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1DataflowFlexTemplateJobStatus? Status { get; set; }
 }
+#nullable disable

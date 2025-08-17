@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.upbound.io;
+#nullable enable
 /// <summary>HPCCacheBlobTarget is the Schema for the HPCCacheBlobTargets API. Manages a Blob Target within a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HPCCacheBlobTargetList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1HPCCacheBlobTarget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderCacheNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderCacheNameSelector
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdR
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdS
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecForProvider
     [JsonPropertyName("storageContainerIdSelector")]
     public V1beta1HPCCacheBlobTargetSpecForProviderStorageContainerIdSelector? StorageContainerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameRef
@@ -276,7 +307,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameSelector
@@ -306,7 +341,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameSelector
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecInitProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdRef
@@ -332,7 +371,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerId
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdSelector
@@ -362,7 +405,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerId
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecInitProvider
@@ -399,7 +444,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecInitProvider
     [JsonPropertyName("storageContainerIdSelector")]
     public V1beta1HPCCacheBlobTargetSpecInitProviderStorageContainerIdSelector? StorageContainerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecProviderConfigRefPolicy
@@ -412,7 +459,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecProviderConfigRef
@@ -425,7 +474,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobTargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpecWriteConnectionSecretToRef
@@ -438,7 +489,9 @@ public partial class V1beta1HPCCacheBlobTargetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobTargetSpec defines the desired state of HPCCacheBlobTarget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetSpec
@@ -467,7 +520,9 @@ public partial class V1beta1HPCCacheBlobTargetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HPCCacheBlobTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetStatusAtProvider
@@ -496,7 +551,9 @@ public partial class V1beta1HPCCacheBlobTargetStatusAtProvider
     [JsonPropertyName("storageContainerId")]
     public string? StorageContainerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetStatusConditions
@@ -525,7 +582,9 @@ public partial class V1beta1HPCCacheBlobTargetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobTargetStatus defines the observed state of HPCCacheBlobTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobTargetStatus
@@ -542,7 +601,9 @@ public partial class V1beta1HPCCacheBlobTargetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobTarget is the Schema for the HPCCacheBlobTargets API. Manages a Blob Target within a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -572,3 +633,4 @@ public partial class V1beta1HPCCacheBlobTarget : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1HPCCacheBlobTargetStatus? Status { get; set; }
 }
+#nullable disable

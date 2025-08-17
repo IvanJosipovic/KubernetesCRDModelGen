@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
+#nullable enable
 /// <summary>UsagePlanKey is the Schema for the UsagePlanKeys API. Provides an API Gateway Usage Plan Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UsagePlanKeyList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1UsagePlanKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderKeyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a APIKey in apigateway to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderKeyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecForProviderKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderKeyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a APIKey in apigateway to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderKeyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecForProviderKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UsagePlan in apigateway to populate usagePlanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecForProviderUsagePlanIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UsagePlan in apigateway to populate usagePlanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1UsagePlanKeySpecForProvider
     [JsonPropertyName("usagePlanIdSelector")]
     public V1beta1UsagePlanKeySpecForProviderUsagePlanIdSelector? UsagePlanIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a APIKey in apigateway to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecInitProviderKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a APIKey in apigateway to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecInitProviderKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UsagePlan in apigateway to populate usagePlanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdRef
@@ -264,7 +295,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecInitProviderUsagePlanIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UsagePlan in apigateway to populate usagePlanId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelector
@@ -294,7 +329,9 @@ public partial class V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1UsagePlanKeySpecInitProvider
     [JsonPropertyName("usagePlanIdSelector")]
     public V1beta1UsagePlanKeySpecInitProviderUsagePlanIdSelector? UsagePlanIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1UsagePlanKeySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1UsagePlanKeySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanKeySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1UsagePlanKeySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlanKeySpec defines the desired state of UsagePlanKey</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeySpec
@@ -395,7 +440,9 @@ public partial class V1beta1UsagePlanKeySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UsagePlanKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeyStatusAtProvider
@@ -428,7 +475,9 @@ public partial class V1beta1UsagePlanKeyStatusAtProvider
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeyStatusConditions
@@ -457,7 +506,9 @@ public partial class V1beta1UsagePlanKeyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlanKeyStatus defines the observed state of UsagePlanKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanKeyStatus
@@ -474,7 +525,9 @@ public partial class V1beta1UsagePlanKeyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlanKey is the Schema for the UsagePlanKeys API. Provides an API Gateway Usage Plan Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -504,3 +557,4 @@ public partial class V1beta1UsagePlanKey : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1UsagePlanKeyStatus? Status { get; set; }
 }
+#nullable disable

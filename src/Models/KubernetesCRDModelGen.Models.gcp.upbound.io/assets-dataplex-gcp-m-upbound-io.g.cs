@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Asset is the Schema for the Assets API. The Dataplex Asset resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AssetList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Asset> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDataplexZoneRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AssetSpecForProviderDataplexZoneRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in dataplex to populate dataplexZone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDataplexZoneRef
@@ -63,7 +68,9 @@ public partial class V1beta1AssetSpecForProviderDataplexZoneRef
     [JsonPropertyName("policy")]
     public V1beta1AssetSpecForProviderDataplexZoneRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDataplexZoneSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AssetSpecForProviderDataplexZoneSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in dataplex to populate dataplexZone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDataplexZoneSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AssetSpecForProviderDataplexZoneSelector
     [JsonPropertyName("policy")]
     public V1beta1AssetSpecForProviderDataplexZoneSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDiscoverySpecCsvOptions
@@ -118,7 +129,9 @@ public partial class V1beta1AssetSpecForProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDiscoverySpecJsonOptions
@@ -131,7 +144,9 @@ public partial class V1beta1AssetSpecForProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data referenced by this asset. When this spec is left unset, the asset will use the spec set on the parent zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderDiscoverySpec
@@ -160,7 +175,9 @@ public partial class V1beta1AssetSpecForProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderLakeRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1AssetSpecForProviderLakeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderLakeRef
@@ -190,7 +209,9 @@ public partial class V1beta1AssetSpecForProviderLakeRef
     [JsonPropertyName("policy")]
     public V1beta1AssetSpecForProviderLakeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderLakeSelectorPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1AssetSpecForProviderLakeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderLakeSelector
@@ -224,7 +247,9 @@ public partial class V1beta1AssetSpecForProviderLakeSelector
     [JsonPropertyName("policy")]
     public V1beta1AssetSpecForProviderLakeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resource that is referenced by this asset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProviderResourceSpec
@@ -241,7 +266,9 @@ public partial class V1beta1AssetSpecForProviderResourceSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecForProvider
@@ -298,7 +325,9 @@ public partial class V1beta1AssetSpecForProvider
     [JsonPropertyName("resourceSpec")]
     public V1beta1AssetSpecForProviderResourceSpec? ResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecInitProviderDiscoverySpecCsvOptions
@@ -319,7 +348,9 @@ public partial class V1beta1AssetSpecInitProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecInitProviderDiscoverySpecJsonOptions
@@ -332,7 +363,9 @@ public partial class V1beta1AssetSpecInitProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data referenced by this asset. When this spec is left unset, the asset will use the spec set on the parent zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecInitProviderDiscoverySpec
@@ -361,7 +394,9 @@ public partial class V1beta1AssetSpecInitProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resource that is referenced by this asset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecInitProviderResourceSpec
@@ -378,7 +413,9 @@ public partial class V1beta1AssetSpecInitProviderResourceSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecInitProvider
@@ -407,7 +444,9 @@ public partial class V1beta1AssetSpecInitProvider
     [JsonPropertyName("resourceSpec")]
     public V1beta1AssetSpecInitProviderResourceSpec? ResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecProviderConfigRef
@@ -420,7 +459,9 @@ public partial class V1beta1AssetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpecWriteConnectionSecretToRef
@@ -429,7 +470,9 @@ public partial class V1beta1AssetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetSpec defines the desired state of Asset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetSpec
@@ -454,7 +497,9 @@ public partial class V1beta1AssetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AssetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for CSV data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderDiscoverySpecCsvOptions
@@ -475,7 +520,9 @@ public partial class V1beta1AssetStatusAtProviderDiscoverySpecCsvOptions
     [JsonPropertyName("headerRows")]
     public double? HeaderRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for Json data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderDiscoverySpecJsonOptions
@@ -488,7 +535,9 @@ public partial class V1beta1AssetStatusAtProviderDiscoverySpecJsonOptions
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specification of the discovery feature applied to data referenced by this asset. When this spec is left unset, the asset will use the spec set on the parent zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderDiscoverySpec
@@ -517,7 +566,9 @@ public partial class V1beta1AssetStatusAtProviderDiscoverySpec
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderDiscoveryStatusStats
@@ -538,7 +589,9 @@ public partial class V1beta1AssetStatusAtProviderDiscoveryStatusStats
     [JsonPropertyName("tables")]
     public double? Tables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderDiscoveryStatus
@@ -567,7 +620,9 @@ public partial class V1beta1AssetStatusAtProviderDiscoveryStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Specification of the resource that is referenced by this asset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderResourceSpec
@@ -584,7 +639,9 @@ public partial class V1beta1AssetStatusAtProviderResourceSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderResourceStatus
@@ -601,7 +658,9 @@ public partial class V1beta1AssetStatusAtProviderResourceStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProviderSecurityStatus
@@ -618,7 +677,9 @@ public partial class V1beta1AssetStatusAtProviderSecurityStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusAtProvider
@@ -699,7 +760,9 @@ public partial class V1beta1AssetStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatusConditions
@@ -728,7 +791,9 @@ public partial class V1beta1AssetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetStatus defines the observed state of Asset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssetStatus
@@ -745,7 +810,9 @@ public partial class V1beta1AssetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Asset is the Schema for the Assets API. The Dataplex Asset resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -775,3 +842,4 @@ public partial class V1beta1Asset : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1AssetStatus? Status { get; set; }
 }
+#nullable disable

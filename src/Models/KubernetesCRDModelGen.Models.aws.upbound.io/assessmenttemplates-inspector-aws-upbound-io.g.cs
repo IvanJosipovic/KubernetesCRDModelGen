@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.inspector.aws.upbound.io;
+#nullable enable
 /// <summary>AssessmentTemplate is the Schema for the AssessmentTemplates API. Provides an Inspector Classic Assessment Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AssessmentTemplateList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1AssessmentTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscription
@@ -110,7 +121,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscription
     [JsonPropertyName("topicArnSelector")]
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AssessmentTarget in inspector to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRef
@@ -136,7 +151,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AssessmentTarget in inspector to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelector
@@ -166,7 +185,9 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelector
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1AssessmentTemplateSpecForProvider
     [JsonPropertyName("targetArnSelector")]
     public V1beta1AssessmentTemplateSpecForProviderTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRef
@@ -233,7 +258,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelectorPolicy
@@ -246,7 +273,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelector
@@ -263,7 +292,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscription
@@ -284,7 +315,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscription
     [JsonPropertyName("topicArnSelector")]
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AssessmentTarget in inspector to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRef
@@ -310,7 +345,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AssessmentTarget in inspector to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelector
@@ -340,7 +379,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelector
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecInitProvider
@@ -377,7 +418,9 @@ public partial class V1beta1AssessmentTemplateSpecInitProvider
     [JsonPropertyName("targetArnSelector")]
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecProviderConfigRefPolicy
@@ -390,7 +433,9 @@ public partial class V1beta1AssessmentTemplateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecProviderConfigRef
@@ -403,7 +448,9 @@ public partial class V1beta1AssessmentTemplateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AssessmentTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef
@@ -416,7 +463,9 @@ public partial class V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssessmentTemplateSpec defines the desired state of AssessmentTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpec
@@ -445,7 +494,9 @@ public partial class V1beta1AssessmentTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateStatusAtProviderEventSubscription
@@ -458,7 +509,9 @@ public partial class V1beta1AssessmentTemplateStatusAtProviderEventSubscription
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateStatusAtProvider
@@ -503,7 +556,9 @@ public partial class V1beta1AssessmentTemplateStatusAtProvider
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateStatusConditions
@@ -532,7 +587,9 @@ public partial class V1beta1AssessmentTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssessmentTemplateStatus defines the observed state of AssessmentTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateStatus
@@ -549,7 +606,9 @@ public partial class V1beta1AssessmentTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssessmentTemplate is the Schema for the AssessmentTemplates API. Provides an Inspector Classic Assessment Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +638,4 @@ public partial class V1beta1AssessmentTemplate : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1AssessmentTemplateStatus? Status { get; set; }
 }
+#nullable disable

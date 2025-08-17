@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.metastore.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>MetastoreFederation is the Schema for the MetastoreFederation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MetastoreFederationList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1MetastoreFederation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The relative resource name of the metastore that is being federated.  The formats of the relative resource names for the currently supported  metastores are listed below:   * BigQuery      * `projects/{project_id}`  * Dataproc Metastore      * `projects/{project_id}/locations/{location}/services/{service_id}`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationSpecBackendMetastoresServiceRef
@@ -50,7 +53,9 @@ public partial class V1alpha1MetastoreFederationSpecBackendMetastoresServiceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationSpecBackendMetastores
@@ -63,7 +68,9 @@ public partial class V1alpha1MetastoreFederationSpecBackendMetastores
     [JsonPropertyName("serviceRef")]
     public V1alpha1MetastoreFederationSpecBackendMetastoresServiceRef? ServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1alpha1MetastoreFederationSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreFederationSpec defines the desired state of MetastoreFederation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationSpec
@@ -113,7 +122,9 @@ public partial class V1alpha1MetastoreFederationSpec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationStatusConditions
@@ -138,7 +149,9 @@ public partial class V1alpha1MetastoreFederationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationStatusObservedState
@@ -167,7 +180,9 @@ public partial class V1alpha1MetastoreFederationStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreFederationStatus defines the config connector machine state of MetastoreFederation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationStatus
@@ -188,7 +203,9 @@ public partial class V1alpha1MetastoreFederationStatus
     [JsonPropertyName("observedState")]
     public V1alpha1MetastoreFederationStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreFederation is the Schema for the MetastoreFederation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -218,3 +235,4 @@ public partial class V1alpha1MetastoreFederation : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1MetastoreFederationStatus? Status { get; set; }
 }
+#nullable disable

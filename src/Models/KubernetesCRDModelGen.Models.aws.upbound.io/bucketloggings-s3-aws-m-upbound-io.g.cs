@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.m.upbound.io;
+#nullable enable
 /// <summary>BucketLogging is the Schema for the BucketLoggings API. Provides an S3 bucket (server access) logging resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketLoggingList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1BucketLogging> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketLoggingSpecForProviderBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderBucketRef
@@ -63,7 +68,9 @@ public partial class V1beta1BucketLoggingSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderBucketSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BucketLoggingSpecForProviderBucketSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderBucketSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BucketLoggingSpecForProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetBucketRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate targetBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetBucketRef
@@ -127,7 +140,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecForProviderTargetBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetBucketSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetBucketSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate targetBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetBucketSelector
@@ -161,7 +178,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecForProviderTargetBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the person being granted permissions. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetGrantGrantee
@@ -182,7 +201,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetGrantGrantee
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetGrant
@@ -195,7 +216,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetGrant
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partitioned S3 key for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormatPartitionedPrefix
@@ -204,13 +227,17 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormatPar
     [JsonPropertyName("partitionDateSource")]
     public string? PartitionDateSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use the simple format for S3 keys for log objects. To use, set simple_prefix {}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormatSimplePrefix
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 key format for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormat
@@ -223,7 +250,9 @@ public partial class V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormat
     [JsonPropertyName("simplePrefix")]
     public V1beta1BucketLoggingSpecForProviderTargetObjectKeyFormatSimplePrefix? SimplePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProvider
@@ -272,7 +301,9 @@ public partial class V1beta1BucketLoggingSpecForProvider
     [JsonPropertyName("targetPrefix")]
     public string? TargetPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderBucketRefPolicy
@@ -285,7 +316,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderBucketRef
@@ -302,7 +335,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderBucketSelectorPolicy
@@ -315,7 +350,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderBucketSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderBucketSelector
@@ -336,7 +373,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketRefPolicy
@@ -349,7 +388,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate targetBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketRef
@@ -366,7 +407,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecInitProviderTargetBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketSelectorPolicy
@@ -379,7 +422,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate targetBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketSelector
@@ -400,7 +445,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketLoggingSpecInitProviderTargetBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the person being granted permissions. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetGrantGrantee
@@ -421,7 +468,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetGrantGrantee
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetGrant
@@ -434,7 +483,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetGrant
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partitioned S3 key for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormatPartitionedPrefix
@@ -443,13 +494,17 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormatPa
     [JsonPropertyName("partitionDateSource")]
     public string? PartitionDateSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use the simple format for S3 keys for log objects. To use, set simple_prefix {}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormatSimplePrefix
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 key format for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormat
@@ -462,7 +517,9 @@ public partial class V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormat
     [JsonPropertyName("simplePrefix")]
     public V1beta1BucketLoggingSpecInitProviderTargetObjectKeyFormatSimplePrefix? SimplePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecInitProvider
@@ -507,7 +564,9 @@ public partial class V1beta1BucketLoggingSpecInitProvider
     [JsonPropertyName("targetPrefix")]
     public string? TargetPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecProviderConfigRef
@@ -520,7 +579,9 @@ public partial class V1beta1BucketLoggingSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecWriteConnectionSecretToRef
@@ -529,7 +590,9 @@ public partial class V1beta1BucketLoggingSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketLoggingSpec defines the desired state of BucketLogging</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpec
@@ -554,7 +617,9 @@ public partial class V1beta1BucketLoggingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketLoggingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the person being granted permissions. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProviderTargetGrantGrantee
@@ -579,7 +644,9 @@ public partial class V1beta1BucketLoggingStatusAtProviderTargetGrantGrantee
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProviderTargetGrant
@@ -592,7 +659,9 @@ public partial class V1beta1BucketLoggingStatusAtProviderTargetGrant
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Partitioned S3 key for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormatPartitionedPrefix
@@ -601,13 +670,17 @@ public partial class V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormatPa
     [JsonPropertyName("partitionDateSource")]
     public string? PartitionDateSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use the simple format for S3 keys for log objects. To use, set simple_prefix {}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormatSimplePrefix
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 key format for log objects. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormat
@@ -620,7 +693,9 @@ public partial class V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormat
     [JsonPropertyName("simplePrefix")]
     public V1beta1BucketLoggingStatusAtProviderTargetObjectKeyFormatSimplePrefix? SimplePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusAtProvider
@@ -657,7 +732,9 @@ public partial class V1beta1BucketLoggingStatusAtProvider
     [JsonPropertyName("targetPrefix")]
     public string? TargetPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatusConditions
@@ -686,7 +763,9 @@ public partial class V1beta1BucketLoggingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketLoggingStatus defines the observed state of BucketLogging.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingStatus
@@ -703,7 +782,9 @@ public partial class V1beta1BucketLoggingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketLogging is the Schema for the BucketLoggings API. Provides an S3 bucket (server access) logging resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -733,3 +814,4 @@ public partial class V1beta1BucketLogging : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1BucketLoggingStatus? Status { get; set; }
 }
+#nullable disable

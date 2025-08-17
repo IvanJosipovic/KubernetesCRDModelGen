@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudasset.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudAssetFolderFeedList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudAssetFolderFeed> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedSpecCondition
@@ -54,7 +57,9 @@ public partial class V1alpha1CloudAssetFolderFeedSpecCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination on Cloud Pubsub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination
@@ -63,7 +68,9 @@ public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDesti
     [JsonPropertyName("topic")]
     public string Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output configuration for asset feed destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfig
@@ -72,7 +79,9 @@ public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfig
     [JsonPropertyName("pubsubDestination")]
     public V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedSpecFolderRef
@@ -89,7 +98,9 @@ public partial class V1alpha1CloudAssetFolderFeedSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedSpec
@@ -134,7 +145,9 @@ public partial class V1alpha1CloudAssetFolderFeedSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedStatusConditions
@@ -159,7 +172,9 @@ public partial class V1alpha1CloudAssetFolderFeedStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudAssetFolderFeedStatus
@@ -180,7 +195,9 @@ public partial class V1alpha1CloudAssetFolderFeedStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -210,3 +227,4 @@ public partial class V1alpha1CloudAssetFolderFeed : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1CloudAssetFolderFeedStatus? Status { get; set; }
 }
+#nullable disable

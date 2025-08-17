@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RegionTargetHTTPSProxy is the Schema for the RegionTargetHTTPSProxys API. Represents a RegionTargetHttpsProxy resource, which is used by one or more forwarding rules to route incoming HTTPS requests to a URL map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionTargetHTTPSProxyList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1RegionTargetHTTPSProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefs
@@ -63,7 +68,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RegionSSLCertificate in compute to populate sslCertificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionURLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRef
@@ -127,7 +140,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRef
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionURLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelector
@@ -161,7 +178,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecForProvider
@@ -218,7 +237,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProvider
     [JsonPropertyName("urlMapSelector")]
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelector? UrlMapSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicy
@@ -231,7 +252,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefs
@@ -248,7 +271,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicy
@@ -261,7 +286,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RegionSSLCertificate in compute to populate sslCertificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelector
@@ -282,7 +309,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionURLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRef
@@ -312,7 +343,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRef
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicy
@@ -325,7 +358,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionURLMap in compute to populate urlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
@@ -346,7 +381,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProvider
@@ -399,7 +436,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProvider
     [JsonPropertyName("urlMapSelector")]
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector? UrlMapSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecProviderConfigRef
@@ -412,7 +451,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef
@@ -421,7 +462,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetHTTPSProxySpec defines the desired state of RegionTargetHTTPSProxy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxySpec
@@ -446,7 +489,9 @@ public partial class V1beta1RegionTargetHTTPSProxySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxyStatusAtProvider
@@ -503,7 +548,9 @@ public partial class V1beta1RegionTargetHTTPSProxyStatusAtProvider
     [JsonPropertyName("urlMap")]
     public string? UrlMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxyStatusConditions
@@ -532,7 +579,9 @@ public partial class V1beta1RegionTargetHTTPSProxyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetHTTPSProxyStatus defines the observed state of RegionTargetHTTPSProxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPSProxyStatus
@@ -549,7 +598,9 @@ public partial class V1beta1RegionTargetHTTPSProxyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionTargetHTTPSProxy is the Schema for the RegionTargetHTTPSProxys API. Represents a RegionTargetHttpsProxy resource, which is used by one or more forwarding rules to route incoming HTTPS requests to a URL map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +630,4 @@ public partial class V1beta1RegionTargetHTTPSProxy : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1RegionTargetHTTPSProxyStatus? Status { get; set; }
 }
+#nullable disable

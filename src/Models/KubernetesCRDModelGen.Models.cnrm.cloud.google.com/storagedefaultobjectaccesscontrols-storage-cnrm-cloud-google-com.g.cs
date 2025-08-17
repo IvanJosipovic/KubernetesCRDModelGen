@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1StorageDefaultObjectAccessControl> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageDefaultObjectAccessControlSpecBucketRef
@@ -50,7 +53,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlSpecBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageDefaultObjectAccessControlSpec
@@ -71,7 +76,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlSpec
     [JsonPropertyName("role")]
     public string Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageDefaultObjectAccessControlStatusConditions
@@ -96,7 +103,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project team associated with the entity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageDefaultObjectAccessControlStatusProjectTeam
@@ -109,7 +118,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatusProjectTeam
     [JsonPropertyName("team")]
     public string? Team { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageDefaultObjectAccessControlStatus
@@ -142,7 +153,9 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatus
     [JsonPropertyName("projectTeam")]
     public V1beta1StorageDefaultObjectAccessControlStatusProjectTeam? ProjectTeam { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -172,3 +185,4 @@ public partial class V1beta1StorageDefaultObjectAccessControl : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1StorageDefaultObjectAccessControlStatus? Status { get; set; }
 }
+#nullable disable

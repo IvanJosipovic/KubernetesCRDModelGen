@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.extensions.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1WasmPluginList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1WasmPlugin> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatchPorts
@@ -42,7 +45,9 @@ public partial class V1alpha1WasmPluginSpecMatchPorts
     [JsonPropertyName("number")]
     public int Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatch
@@ -55,7 +60,9 @@ public partial class V1alpha1WasmPluginSpecMatch
     [JsonPropertyName("ports")]
     public IList<V1alpha1WasmPluginSpecMatchPorts>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criteria used to select the specific set of pods/VMs on which this plugin configuration should be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecSelector
@@ -64,7 +71,9 @@ public partial class V1alpha1WasmPluginSpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecTargetRef
@@ -85,7 +94,9 @@ public partial class V1alpha1WasmPluginSpecTargetRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecTargetRefs
@@ -106,7 +117,9 @@ public partial class V1alpha1WasmPluginSpecTargetRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecVmConfigEnv
@@ -123,7 +136,9 @@ public partial class V1alpha1WasmPluginSpecVmConfigEnv
     [JsonPropertyName("valueFrom")]
     public string? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a Wasm VM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecVmConfig
@@ -132,7 +147,9 @@ public partial class V1alpha1WasmPluginSpecVmConfig
     [JsonPropertyName("env")]
     public IList<V1alpha1WasmPluginSpecVmConfigEnv>? Env { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Extend the functionality provided by the Istio proxy through WebAssembly filters. See more details at: https://istio.io/docs/reference/config/proxy_extensions/wasm-plugin.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpec
@@ -201,7 +218,9 @@ public partial class V1alpha1WasmPluginSpec
     [JsonPropertyName("vmConfig")]
     public V1alpha1WasmPluginSpecVmConfig? VmConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -231,3 +250,4 @@ public partial class V1alpha1WasmPlugin : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>APIPortal defines a developer portal for accessing the documentation of APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIPortalList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1APIPortal> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth references the APIPortalAuth resource for authentication configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpecAuth
@@ -42,7 +45,9 @@ public partial class V1alpha1APIPortalSpecAuth
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UI holds the UI customization options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpecUi
@@ -51,7 +56,9 @@ public partial class V1alpha1APIPortalSpecUi
     [JsonPropertyName("logoUrl")]
     public string? LogoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this APIPortal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpec
@@ -76,7 +83,9 @@ public partial class V1alpha1APIPortalSpec
     [JsonPropertyName("ui")]
     public V1alpha1APIPortalSpecUi? Ui { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDC is the OIDC configuration for accessing the exposed APIPortal WebUI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalStatusOidc
@@ -129,7 +138,9 @@ public partial class V1alpha1APIPortalStatusOidc
     [JsonPropertyName("userIdClaim")]
     public string? UserIdClaim { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this APIPortal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalStatus
@@ -150,7 +161,9 @@ public partial class V1alpha1APIPortalStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIPortal defines a developer portal for accessing the documentation of APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -180,3 +193,4 @@ public partial class V1alpha1APIPortal : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1alpha1APIPortalStatus? Status { get; set; }
 }
+#nullable disable

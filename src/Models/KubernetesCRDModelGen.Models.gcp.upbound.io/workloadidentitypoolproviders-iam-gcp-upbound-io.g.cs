@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.gcp.upbound.io;
+#nullable enable
 /// <summary>WorkloadIdentityPoolProvider is the Schema for the WorkloadIdentityPoolProviders API. A configuration for an external identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1WorkloadIdentityPoolProvider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderAws
@@ -42,7 +45,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderAws
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderOidc
@@ -59,7 +64,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderOidc
     [JsonPropertyName("jwksJson")]
     public string? JwksJson { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderSaml
@@ -68,7 +75,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderSaml
     [JsonPropertyName("idpMetadataXml")]
     public string? IdpMetadataXml { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdRefPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WorkloadIdentityPool in iam to populate workloadIdentityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdRef
@@ -94,7 +105,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadI
     [JsonPropertyName("policy")]
     public V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdSelectorPolicy
@@ -107,7 +120,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WorkloadIdentityPool in iam to populate workloadIdentityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdSelector
@@ -124,7 +139,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadI
     [JsonPropertyName("policy")]
     public V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreIntermediateCas
@@ -133,7 +150,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509Trust
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreTrustAnchors
@@ -142,7 +161,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509Trust
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStore
@@ -155,7 +176,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509Trust
     [JsonPropertyName("trustAnchors")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509
@@ -164,7 +187,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509
     [JsonPropertyName("trustStore")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStore>? TrustStore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProvider
@@ -221,7 +246,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProvider
     [JsonPropertyName("x509")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509>? X509 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderAws
@@ -230,7 +257,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderAws
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderOidc
@@ -247,7 +276,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderOidc
     [JsonPropertyName("jwksJson")]
     public string? JwksJson { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderSaml
@@ -256,7 +287,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderSaml
     [JsonPropertyName("idpMetadataXml")]
     public string? IdpMetadataXml { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreIntermediateCas
@@ -265,7 +298,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509Trus
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreTrustAnchors
@@ -274,7 +309,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509Trus
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStore
@@ -287,7 +324,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509Trus
     [JsonPropertyName("trustAnchors")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509
@@ -296,7 +335,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509
     [JsonPropertyName("trustStore")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStore>? TrustStore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProvider
@@ -341,7 +382,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProvider
     [JsonPropertyName("x509")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509>? X509 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecProviderConfigRefPolicy
@@ -354,7 +397,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecProviderConfigRef
@@ -367,7 +412,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WorkloadIdentityPoolProviderSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecWriteConnectionSecretToRef
@@ -380,7 +427,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkloadIdentityPoolProviderSpec defines the desired state of WorkloadIdentityPoolProvider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpec
@@ -409,7 +458,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkloadIdentityPoolProviderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderAws
@@ -418,7 +469,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderAws
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderOidc
@@ -435,7 +488,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderOidc
     [JsonPropertyName("jwksJson")]
     public string? JwksJson { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderSaml
@@ -444,7 +499,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderSaml
     [JsonPropertyName("idpMetadataXml")]
     public string? IdpMetadataXml { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreIntermediateCas
@@ -453,7 +510,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509Trus
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreTrustAnchors
@@ -462,7 +521,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509Trus
     [JsonPropertyName("pemCertificate")]
     public string? PemCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStore
@@ -475,7 +536,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509Trus
     [JsonPropertyName("trustAnchors")]
     public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509
@@ -484,7 +547,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509
     [JsonPropertyName("trustStore")]
     public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStore>? TrustStore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProvider
@@ -545,7 +610,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProvider
     [JsonPropertyName("x509")]
     public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509>? X509 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusConditions
@@ -574,7 +641,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkloadIdentityPoolProviderStatus defines the observed state of WorkloadIdentityPoolProvider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatus
@@ -591,7 +660,9 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkloadIdentityPoolProvider is the Schema for the WorkloadIdentityPoolProviders API. A configuration for an external identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -621,3 +692,4 @@ public partial class V1beta1WorkloadIdentityPoolProvider : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1WorkloadIdentityPoolProviderStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketObjectLockConfiguration is the Schema for the BucketObjectLockConfigurations API. Provides an S3 bucket Object Lock configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketObjectLockConfigurationList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1BucketObjectLockConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRe
     [JsonPropertyName("policy")]
     public V1beta1BucketObjectLockConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSe
     [JsonPropertyName("policy")]
     public V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefaultRetention
@@ -106,7 +117,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefa
     [JsonPropertyName("years")]
     public double? Years { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRule
@@ -115,7 +128,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRule
     [JsonPropertyName("defaultRetention")]
     public IList<V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderTokenSecretRef
@@ -132,7 +147,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderTokenSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProvider
@@ -169,7 +186,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProvider
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1BucketObjectLockConfigurationSpecForProviderTokenSecretRef? TokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRefPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRef
@@ -195,7 +216,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketR
     [JsonPropertyName("policy")]
     public V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPolicy
@@ -208,7 +231,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelector
@@ -225,7 +250,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketS
     [JsonPropertyName("policy")]
     public V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDefaultRetention
@@ -242,7 +269,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDef
     [JsonPropertyName("years")]
     public double? Years { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRule
@@ -251,7 +280,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRule
     [JsonPropertyName("defaultRetention")]
     public IList<V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSecretRef
@@ -268,7 +299,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProvider
@@ -301,7 +334,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProvider
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSecretRef? TokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRef
@@ -327,7 +364,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecretToRef
@@ -340,7 +379,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketObjectLockConfigurationSpec defines the desired state of BucketObjectLockConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpec
@@ -369,7 +410,9 @@ public partial class V1beta1BucketObjectLockConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDefaultRetention
@@ -386,7 +429,9 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDef
     [JsonPropertyName("years")]
     public double? Years { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRule
@@ -395,7 +440,9 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRule
     [JsonPropertyName("defaultRetention")]
     public IList<V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProvider
@@ -424,7 +471,9 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketObjectLockConfigurationStatusAtProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationStatusConditions
@@ -453,7 +502,9 @@ public partial class V1beta1BucketObjectLockConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketObjectLockConfigurationStatus defines the observed state of BucketObjectLockConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationStatus
@@ -470,7 +521,9 @@ public partial class V1beta1BucketObjectLockConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketObjectLockConfiguration is the Schema for the BucketObjectLockConfigurations API. Provides an S3 bucket Object Lock configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -500,3 +553,4 @@ public partial class V1beta1BucketObjectLockConfiguration : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1BucketObjectLockConfigurationStatus? Status { get; set; }
 }
+#nullable disable

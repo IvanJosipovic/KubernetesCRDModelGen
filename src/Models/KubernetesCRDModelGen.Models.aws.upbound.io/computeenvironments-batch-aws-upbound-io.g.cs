@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.aws.upbound.io;
+#nullable enable
 /// <summary>ComputeEnvironment is the Schema for the ComputeEnvironments API. Creates a AWS Batch compute environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeEnvironmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeEnvironment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesEc2Configuration
@@ -46,7 +49,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesEc2
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesIns
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate instanceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleRef
@@ -72,7 +79,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesIns
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesIns
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate instanceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleSelector
@@ -102,7 +113,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesIns
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesInstanceRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesLaunchTemplate
@@ -119,7 +132,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesLau
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupRef
@@ -145,7 +162,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPla
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupSelectorPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupSelector
@@ -175,7 +196,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPla
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesPlacementGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsRefsPolicy
@@ -188,7 +211,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsRefs
@@ -201,7 +226,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSec
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsSelectorPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsSelector
@@ -231,7 +260,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSec
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSecurityGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsRefsPolicy
@@ -244,7 +275,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsRefs
@@ -257,7 +290,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSub
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsSelectorPolicy
@@ -270,7 +305,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsSelector
@@ -287,7 +324,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSub
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderComputeResourcesSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResources
@@ -392,7 +431,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderComputeResources
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for the Amazon EKS cluster that supports the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderEksConfiguration
@@ -405,7 +446,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderEksConfiguration
     [JsonPropertyName("kubernetesNamespace")]
     public string? KubernetesNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleRefPolicy
@@ -418,7 +461,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleRef
@@ -431,7 +476,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderServiceRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleSelectorPolicy
@@ -444,7 +491,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleSelector
@@ -461,7 +510,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderServiceRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecForProviderServiceRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the infrastructure update policy for the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProviderUpdatePolicy
@@ -474,7 +525,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProviderUpdatePolicy
     [JsonPropertyName("terminateJobsOnUpdate")]
     public bool? TerminateJobsOnUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecForProvider
@@ -519,7 +572,9 @@ public partial class V1beta1ComputeEnvironmentSpecForProvider
     [JsonPropertyName("updatePolicy")]
     public V1beta1ComputeEnvironmentSpecForProviderUpdatePolicy? UpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesEc2Configuration
@@ -532,7 +587,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesEc
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleRefPolicy
@@ -545,7 +602,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceProfile in iam to populate instanceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleRef
@@ -558,7 +617,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesIn
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleSelectorPolicy
@@ -571,7 +632,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceProfile in iam to populate instanceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleSelector
@@ -588,7 +651,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesIn
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesInstanceRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesLaunchTemplate
@@ -605,7 +670,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesLa
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupRefPolicy
@@ -618,7 +685,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupRef
@@ -631,7 +700,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPl
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupSelectorPolicy
@@ -644,7 +715,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupSelector
@@ -661,7 +734,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPl
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesPlacementGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsRefsPolicy
@@ -674,7 +749,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsRefs
@@ -687,7 +764,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSe
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsSelectorPolicy
@@ -700,7 +779,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsSelector
@@ -717,7 +798,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSe
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSecurityGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsRefsPolicy
@@ -730,7 +813,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsRefs
@@ -743,7 +828,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSu
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsSelectorPolicy
@@ -756,7 +843,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsSelector
@@ -773,7 +862,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSu
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderComputeResourcesSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResources
@@ -878,7 +969,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderComputeResources
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for the Amazon EKS cluster that supports the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderEksConfiguration
@@ -891,7 +984,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderEksConfiguration
     [JsonPropertyName("kubernetesNamespace")]
     public string? KubernetesNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleRefPolicy
@@ -904,7 +999,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleRef
@@ -917,7 +1014,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderServiceRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleSelectorPolicy
@@ -930,7 +1029,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleSelector
@@ -947,7 +1048,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderServiceRoleSelecto
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecInitProviderServiceRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the infrastructure update policy for the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProviderUpdatePolicy
@@ -960,7 +1063,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProviderUpdatePolicy
     [JsonPropertyName("terminateJobsOnUpdate")]
     public bool? TerminateJobsOnUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecInitProvider
@@ -1001,7 +1106,9 @@ public partial class V1beta1ComputeEnvironmentSpecInitProvider
     [JsonPropertyName("updatePolicy")]
     public V1beta1ComputeEnvironmentSpecInitProviderUpdatePolicy? UpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecProviderConfigRefPolicy
@@ -1014,7 +1121,9 @@ public partial class V1beta1ComputeEnvironmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecProviderConfigRef
@@ -1027,7 +1136,9 @@ public partial class V1beta1ComputeEnvironmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ComputeEnvironmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpecWriteConnectionSecretToRef
@@ -1040,7 +1151,9 @@ public partial class V1beta1ComputeEnvironmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeEnvironmentSpec defines the desired state of ComputeEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentSpec
@@ -1069,7 +1182,9 @@ public partial class V1beta1ComputeEnvironmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ComputeEnvironmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResourcesEc2Configuration
@@ -1082,7 +1197,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResourcesEc
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResourcesLaunchTemplate
@@ -1099,7 +1216,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResourcesLa
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResources
@@ -1172,7 +1291,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProviderComputeResources
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for the Amazon EKS cluster that supports the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProviderEksConfiguration
@@ -1185,7 +1306,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProviderEksConfiguration
     [JsonPropertyName("kubernetesNamespace")]
     public string? KubernetesNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the infrastructure update policy for the compute environment. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProviderUpdatePolicy
@@ -1198,7 +1321,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProviderUpdatePolicy
     [JsonPropertyName("terminateJobsOnUpdate")]
     public bool? TerminateJobsOnUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusAtProvider
@@ -1259,7 +1384,9 @@ public partial class V1beta1ComputeEnvironmentStatusAtProvider
     [JsonPropertyName("updatePolicy")]
     public V1beta1ComputeEnvironmentStatusAtProviderUpdatePolicy? UpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatusConditions
@@ -1288,7 +1415,9 @@ public partial class V1beta1ComputeEnvironmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeEnvironmentStatus defines the observed state of ComputeEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeEnvironmentStatus
@@ -1305,7 +1434,9 @@ public partial class V1beta1ComputeEnvironmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeEnvironment is the Schema for the ComputeEnvironments API. Creates a AWS Batch compute environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1335,3 +1466,4 @@ public partial class V1beta1ComputeEnvironment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ComputeEnvironmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fsx.aws.m.upbound.io;
+#nullable enable
 /// <summary>DataRepositoryAssociation is the Schema for the DataRepositoryAssociations API. Manages a FSx for Lustre Data Repository Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataRepositoryAssociationList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1DataRepositoryAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LustreFileSystem in fsx to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemId
     [JsonPropertyName("policy")]
     public V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LustreFileSystem in fsx to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderFileSystemId
     [JsonPropertyName("policy")]
     public V1beta1DataRepositoryAssociationSpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderS3AutoExportPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderS3AutoExport
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderS3AutoImportPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderS3AutoImport
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the s3 configuration block. Max of 1. The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProviderS3
@@ -128,7 +143,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProviderS3
     [JsonPropertyName("autoImportPolicy")]
     public V1beta1DataRepositoryAssociationSpecForProviderS3AutoImportPolicy? AutoImportPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecForProvider
@@ -177,7 +194,9 @@ public partial class V1beta1DataRepositoryAssociationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdRefPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LustreFileSystem in fsx to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdRef
@@ -207,7 +228,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemI
     [JsonPropertyName("policy")]
     public V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdSelectorPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LustreFileSystem in fsx to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdSelector
@@ -241,7 +266,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderFileSystemI
     [JsonPropertyName("policy")]
     public V1beta1DataRepositoryAssociationSpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3AutoExportPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3AutoExpor
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3AutoImportPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3AutoImpor
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the s3 configuration block. Max of 1. The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3
@@ -272,7 +303,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProviderS3
     [JsonPropertyName("autoImportPolicy")]
     public V1beta1DataRepositoryAssociationSpecInitProviderS3AutoImportPolicy? AutoImportPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecInitProvider
@@ -317,7 +350,9 @@ public partial class V1beta1DataRepositoryAssociationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecProviderConfigRef
@@ -330,7 +365,9 @@ public partial class V1beta1DataRepositoryAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpecWriteConnectionSecretToRef
@@ -339,7 +376,9 @@ public partial class V1beta1DataRepositoryAssociationSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataRepositoryAssociationSpec defines the desired state of DataRepositoryAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationSpec
@@ -364,7 +403,9 @@ public partial class V1beta1DataRepositoryAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataRepositoryAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3AutoExportPolicy
@@ -373,7 +414,9 @@ public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3AutoExpor
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the events configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3AutoImportPolicy
@@ -382,7 +425,9 @@ public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3AutoImpor
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the s3 configuration block. Max of 1. The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3
@@ -395,7 +440,9 @@ public partial class V1beta1DataRepositoryAssociationStatusAtProviderS3
     [JsonPropertyName("autoImportPolicy")]
     public V1beta1DataRepositoryAssociationStatusAtProviderS3AutoImportPolicy? AutoImportPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatusAtProvider
@@ -452,7 +499,9 @@ public partial class V1beta1DataRepositoryAssociationStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatusConditions
@@ -481,7 +530,9 @@ public partial class V1beta1DataRepositoryAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataRepositoryAssociationStatus defines the observed state of DataRepositoryAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataRepositoryAssociationStatus
@@ -498,7 +549,9 @@ public partial class V1beta1DataRepositoryAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataRepositoryAssociation is the Schema for the DataRepositoryAssociations API. Manages a FSx for Lustre Data Repository Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -528,3 +581,4 @@ public partial class V1beta1DataRepositoryAssociation : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1DataRepositoryAssociationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigurationRecorder is the Schema for the ConfigurationRecorders API. Provides an AWS Config Configuration Recorder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigurationRecorderList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigurationRecorder> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroupExclusionByResourceTypes
@@ -42,7 +45,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroupEx
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroupRecordingStrategy
@@ -51,7 +56,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroupRe
     [JsonPropertyName("useOnly")]
     public string? UseOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroup
@@ -76,7 +83,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingGroup
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingModeRecordingModeOverride
@@ -93,7 +102,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingModeRec
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingMode
@@ -106,7 +117,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingMode
     [JsonPropertyName("recordingModeOverride")]
     public IList<V1beta1ConfigurationRecorderSpecForProviderRecordingModeRecordingModeOverride>? RecordingModeOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnRef
@@ -132,7 +147,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationRecorderSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnSelector
@@ -162,7 +181,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationRecorderSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProvider
@@ -191,7 +212,9 @@ public partial class V1beta1ConfigurationRecorderSpecForProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ConfigurationRecorderSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroupExclusionByResourceTypes
@@ -200,7 +223,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroupE
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroupRecordingStrategy
@@ -209,7 +234,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroupR
     [JsonPropertyName("useOnly")]
     public string? UseOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroup
@@ -234,7 +261,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingGroup
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingModeRecordingModeOverride
@@ -251,7 +280,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingModeRe
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingMode
@@ -264,7 +295,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingMode
     [JsonPropertyName("recordingModeOverride")]
     public IList<V1beta1ConfigurationRecorderSpecInitProviderRecordingModeRecordingModeOverride>? RecordingModeOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnRefPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnRef
@@ -290,7 +325,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationRecorderSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelectorPolicy
@@ -303,7 +340,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelector
@@ -320,7 +359,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProvider
@@ -345,7 +386,9 @@ public partial class V1beta1ConfigurationRecorderSpecInitProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ConfigurationRecorderSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecProviderConfigRefPolicy
@@ -358,7 +401,9 @@ public partial class V1beta1ConfigurationRecorderSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecProviderConfigRef
@@ -371,7 +416,9 @@ public partial class V1beta1ConfigurationRecorderSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationRecorderSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecWriteConnectionSecretToRef
@@ -384,7 +431,9 @@ public partial class V1beta1ConfigurationRecorderSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationRecorderSpec defines the desired state of ConfigurationRecorder</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpec
@@ -413,7 +462,9 @@ public partial class V1beta1ConfigurationRecorderSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigurationRecorderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroupExclusionByResourceTypes
@@ -422,7 +473,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroupE
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroupRecordingStrategy
@@ -431,7 +484,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroupR
     [JsonPropertyName("useOnly")]
     public string? UseOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroup
@@ -456,7 +511,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingGroup
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingModeRecordingModeOverride
@@ -473,7 +530,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingModeRe
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingMode
@@ -486,7 +545,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingMode
     [JsonPropertyName("recordingModeOverride")]
     public IList<V1beta1ConfigurationRecorderStatusAtProviderRecordingModeRecordingModeOverride>? RecordingModeOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProvider
@@ -511,7 +572,9 @@ public partial class V1beta1ConfigurationRecorderStatusAtProvider
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusConditions
@@ -540,7 +603,9 @@ public partial class V1beta1ConfigurationRecorderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationRecorderStatus defines the observed state of ConfigurationRecorder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatus
@@ -557,7 +622,9 @@ public partial class V1beta1ConfigurationRecorderStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationRecorder is the Schema for the ConfigurationRecorders API. Provides an AWS Config Configuration Recorder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -587,3 +654,4 @@ public partial class V1beta1ConfigurationRecorder : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ConfigurationRecorderStatus? Status { get; set; }
 }
+#nullable disable

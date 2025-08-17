@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fsx.aws.upbound.io;
+#nullable enable
 /// <summary>LustreFileSystem is the Schema for the LustreFileSystems API. Manages a FSx Lustre File System.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LustreFileSystemList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1LustreFileSystem> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderDataReadCacheConfiguration
@@ -46,7 +49,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderDataReadCacheConfigur
     [JsonPropertyName("sizingMode")]
     public string? SizingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderLogConfiguration
@@ -115,7 +128,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderLogConfiguration
     [JsonPropertyName("level")]
     public string? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderMetadataConfiguration
@@ -128,7 +143,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderMetadataConfiguration
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderRootSquashConfiguration
@@ -141,7 +158,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderRootSquashConfigurati
     [JsonPropertyName("rootSquash")]
     public string? RootSquash { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPolicy
@@ -154,7 +173,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefs
@@ -167,7 +188,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
@@ -180,7 +203,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelector
@@ -197,7 +222,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelect
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicy
@@ -210,7 +237,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefs
@@ -223,7 +252,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicy
@@ -236,7 +267,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelector
@@ -253,7 +286,9 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProvider
@@ -398,7 +433,9 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderDataReadCacheConfiguration
@@ -411,7 +448,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderDataReadCacheConfigu
     [JsonPropertyName("sizingMode")]
     public string? SizingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicy
@@ -424,7 +463,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRef
@@ -437,7 +478,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
@@ -450,7 +493,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelector
@@ -467,7 +512,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderLogConfiguration
@@ -480,7 +527,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderLogConfiguration
     [JsonPropertyName("level")]
     public string? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderMetadataConfiguration
@@ -493,7 +542,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderMetadataConfiguratio
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderRootSquashConfiguration
@@ -506,7 +557,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderRootSquashConfigurat
     [JsonPropertyName("rootSquash")]
     public string? RootSquash { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
@@ -519,7 +572,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefs
@@ -532,7 +587,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -545,7 +602,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelector
@@ -562,7 +621,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicy
@@ -575,7 +636,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefs
@@ -588,7 +651,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicy
@@ -601,7 +666,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelector
@@ -618,7 +685,9 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProvider
@@ -759,7 +828,9 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecProviderConfigRefPolicy
@@ -772,7 +843,9 @@ public partial class V1beta1LustreFileSystemSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecProviderConfigRef
@@ -785,7 +858,9 @@ public partial class V1beta1LustreFileSystemSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LustreFileSystemSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecWriteConnectionSecretToRef
@@ -798,7 +873,9 @@ public partial class V1beta1LustreFileSystemSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LustreFileSystemSpec defines the desired state of LustreFileSystem</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpec
@@ -827,7 +904,9 @@ public partial class V1beta1LustreFileSystemSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LustreFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderDataReadCacheConfiguration
@@ -840,7 +919,9 @@ public partial class V1beta1LustreFileSystemStatusAtProviderDataReadCacheConfigu
     [JsonPropertyName("sizingMode")]
     public string? SizingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
@@ -853,7 +934,9 @@ public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
     [JsonPropertyName("level")]
     public string? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderMetadataConfiguration
@@ -866,7 +949,9 @@ public partial class V1beta1LustreFileSystemStatusAtProviderMetadataConfiguratio
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderRootSquashConfiguration
@@ -879,7 +964,9 @@ public partial class V1beta1LustreFileSystemStatusAtProviderRootSquashConfigurat
     [JsonPropertyName("rootSquash")]
     public string? RootSquash { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProvider
@@ -1032,7 +1119,9 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusConditions
@@ -1061,7 +1150,9 @@ public partial class V1beta1LustreFileSystemStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LustreFileSystemStatus defines the observed state of LustreFileSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatus
@@ -1078,7 +1169,9 @@ public partial class V1beta1LustreFileSystemStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LustreFileSystem is the Schema for the LustreFileSystems API. Manages a FSx Lustre File System.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1108,3 +1201,4 @@ public partial class V1beta1LustreFileSystem : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1LustreFileSystemStatus? Status { get; set; }
 }
+#nullable disable

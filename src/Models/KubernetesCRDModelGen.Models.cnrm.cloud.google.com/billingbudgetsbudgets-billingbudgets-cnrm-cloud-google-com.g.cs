@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.billingbudgets.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BillingBudgetsBudgetList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1BillingBudgetsBudget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels
@@ -50,7 +53,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNoti
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
@@ -67,7 +72,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Rules to apply to notifications sent based on budget spend and thresholds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
@@ -88,7 +95,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
     [JsonPropertyName("schemaVersion")]
     public string? SchemaVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
@@ -105,7 +114,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
     [JsonPropertyName("units")]
     public long? Units { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Budgeted amount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecAmount
@@ -118,7 +129,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmount
     [JsonPropertyName("specifiedAmount")]
     public V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount? SpecifiedAmount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
@@ -135,7 +148,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate
@@ -152,7 +167,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndD
     [JsonPropertyName("year")]
     public long? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Required. The start date must be after January 1, 2017.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate
@@ -169,7 +186,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStar
     [JsonPropertyName("year")]
     public long? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
@@ -182,7 +201,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
     [JsonPropertyName("startDate")]
     public V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate StartDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
@@ -191,7 +212,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
@@ -208,7 +231,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
@@ -225,7 +250,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
@@ -262,7 +289,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
     [JsonPropertyName("subaccounts")]
     public IList<V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts>? Subaccounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
@@ -275,7 +304,9 @@ public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
     [JsonPropertyName("thresholdPercent")]
     public double ThresholdPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetSpec
@@ -308,7 +339,9 @@ public partial class V1beta1BillingBudgetsBudgetSpec
     [JsonPropertyName("thresholdRules")]
     public IList<V1beta1BillingBudgetsBudgetSpecThresholdRules>? ThresholdRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetStatusConditions
@@ -333,7 +366,9 @@ public partial class V1beta1BillingBudgetsBudgetStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BillingBudgetsBudgetStatus
@@ -350,7 +385,9 @@ public partial class V1beta1BillingBudgetsBudgetStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -380,3 +417,4 @@ public partial class V1beta1BillingBudgetsBudget : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1BillingBudgetsBudgetStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elb.aws.m.upbound.io;
+#nullable enable
 /// <summary>BackendServerPolicy is the Schema for the BackendServerPolicys API. Attaches a load balancer policy to an ELB backend server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackendServerPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1BackendServerPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate loadBalancerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameRe
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecForProviderLoadBalancerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate loadBalancerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderLoadBalancerNameSe
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecForProviderLoadBalancerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesRefs
@@ -127,7 +140,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesRefs
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecForProviderPolicyNamesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Policy in elb to populate policyNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesSelector
@@ -161,7 +178,9 @@ public partial class V1beta1BackendServerPolicySpecForProviderPolicyNamesSelecto
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecForProviderPolicyNamesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1BackendServerPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate loadBalancerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameRef
@@ -228,7 +251,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameR
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameSelectorPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate loadBalancerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameSelector
@@ -262,7 +289,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameS
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecInitProviderLoadBalancerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesRefsPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesRefs
@@ -292,7 +323,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesRefs
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecInitProviderPolicyNamesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Policy in elb to populate policyNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelector
@@ -326,7 +361,9 @@ public partial class V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelect
     [JsonPropertyName("policy")]
     public V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecInitProvider
@@ -359,7 +396,9 @@ public partial class V1beta1BackendServerPolicySpecInitProvider
     [JsonPropertyName("policyNamesSelector")]
     public V1beta1BackendServerPolicySpecInitProviderPolicyNamesSelector? PolicyNamesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecProviderConfigRef
@@ -372,7 +411,9 @@ public partial class V1beta1BackendServerPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpecWriteConnectionSecretToRef
@@ -381,7 +422,9 @@ public partial class V1beta1BackendServerPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServerPolicySpec defines the desired state of BackendServerPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicySpec
@@ -406,7 +449,9 @@ public partial class V1beta1BackendServerPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackendServerPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicyStatusAtProvider
@@ -431,7 +476,9 @@ public partial class V1beta1BackendServerPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicyStatusConditions
@@ -460,7 +507,9 @@ public partial class V1beta1BackendServerPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServerPolicyStatus defines the observed state of BackendServerPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServerPolicyStatus
@@ -477,7 +526,9 @@ public partial class V1beta1BackendServerPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendServerPolicy is the Schema for the BackendServerPolicys API. Attaches a load balancer policy to an ELB backend server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +558,4 @@ public partial class V1beta1BackendServerPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1BackendServerPolicyStatus? Status { get; set; }
 }
+#nullable disable

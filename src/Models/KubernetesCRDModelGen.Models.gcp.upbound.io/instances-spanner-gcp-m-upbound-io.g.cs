@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Instance is the Schema for the Instances API. An isolated set of Cloud Spanner resources on which databases can be hosted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Instance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
@@ -46,7 +49,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAu
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
@@ -55,7 +60,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAu
     [JsonPropertyName("autoscalingLimits")]
     public V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits? AutoscalingLimits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
@@ -64,7 +71,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAu
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptions
@@ -77,7 +86,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAu
     [JsonPropertyName("replicaSelection")]
     public V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection? ReplicaSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingLimits
@@ -98,7 +109,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingL
     [JsonPropertyName("minProcessingUnits")]
     public double? MinProcessingUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingTargets
@@ -111,7 +124,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingT
     [JsonPropertyName("storageUtilizationPercent")]
     public double? StorageUtilizationPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, num_nodes and processing_units are treated as, OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfig
@@ -128,7 +143,9 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfig
     [JsonPropertyName("autoscalingTargets")]
     public V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProvider
@@ -177,7 +194,9 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
@@ -190,7 +209,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
@@ -199,7 +220,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("autoscalingLimits")]
     public V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits? AutoscalingLimits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
@@ -208,7 +231,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptions
@@ -221,7 +246,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("replicaSelection")]
     public V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection? ReplicaSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscalingLimits
@@ -242,7 +269,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("minProcessingUnits")]
     public double? MinProcessingUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscalingTargets
@@ -255,7 +284,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("storageUtilizationPercent")]
     public double? StorageUtilizationPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, num_nodes and processing_units are treated as, OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfig
@@ -272,7 +303,9 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfig
     [JsonPropertyName("autoscalingTargets")]
     public V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProvider
@@ -321,7 +354,9 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecProviderConfigRef
@@ -334,7 +369,9 @@ public partial class V1beta1InstanceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
@@ -343,7 +380,9 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceSpec defines the desired state of Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpec
@@ -368,7 +407,9 @@ public partial class V1beta1InstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
@@ -381,7 +422,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
@@ -390,7 +433,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("autoscalingLimits")]
     public V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits? AutoscalingLimits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
@@ -399,7 +444,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptions
@@ -412,7 +459,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricA
     [JsonPropertyName("replicaSelection")]
     public V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection? ReplicaSelection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscalingLimits
@@ -433,7 +482,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("minProcessingUnits")]
     public double? MinProcessingUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscalingTargets
@@ -446,7 +497,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("storageUtilizationPercent")]
     public double? StorageUtilizationPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, num_nodes and processing_units are treated as, OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfig
@@ -463,7 +516,9 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfig
     [JsonPropertyName("autoscalingTargets")]
     public V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProvider
@@ -528,7 +583,9 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusConditions
@@ -557,7 +614,9 @@ public partial class V1beta1InstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceStatus defines the observed state of Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatus
@@ -574,7 +633,9 @@ public partial class V1beta1InstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance is the Schema for the Instances API. An isolated set of Cloud Spanner resources on which databases can be hosted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -604,3 +665,4 @@ public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1InstanceStatus? Status { get; set; }
 }
+#nullable disable

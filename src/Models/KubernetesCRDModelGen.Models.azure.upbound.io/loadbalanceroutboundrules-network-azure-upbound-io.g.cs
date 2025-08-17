@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>LoadBalancerOutboundRule is the Schema for the LoadBalancerOutboundRules API. Manages a Load Balancer Outbound Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LoadBalancerOutboundRuleList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1LoadBalancerOutboundRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddres
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddres
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddres
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddres
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderFrontendIpConfiguration
@@ -98,7 +109,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderFrontendIpCon
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdRefPolicy
@@ -111,7 +124,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdRef
@@ -124,7 +139,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerI
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdSelectorPolicy
@@ -137,7 +154,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdSelector
@@ -154,7 +173,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerI
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecForProviderLoadbalancerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProvider
@@ -203,7 +224,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecForProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdRef
@@ -229,7 +254,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddre
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdSelectorPolicy
@@ -242,7 +269,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdSelector
@@ -259,7 +288,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddre
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecInitProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderFrontendIpConfiguration
@@ -268,7 +299,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProviderFrontendIpCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecInitProvider
@@ -305,7 +338,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecInitProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecProviderConfigRefPolicy
@@ -318,7 +353,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecProviderConfigRef
@@ -331,7 +368,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerOutboundRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecWriteConnectionSecretToRef
@@ -344,7 +383,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerOutboundRuleSpec defines the desired state of LoadBalancerOutboundRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpec
@@ -373,7 +414,9 @@ public partial class V1beta1LoadBalancerOutboundRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LoadBalancerOutboundRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleStatusAtProviderFrontendIpConfiguration
@@ -386,7 +429,9 @@ public partial class V1beta1LoadBalancerOutboundRuleStatusAtProviderFrontendIpCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleStatusAtProvider
@@ -423,7 +468,9 @@ public partial class V1beta1LoadBalancerOutboundRuleStatusAtProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleStatusConditions
@@ -452,7 +499,9 @@ public partial class V1beta1LoadBalancerOutboundRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerOutboundRuleStatus defines the observed state of LoadBalancerOutboundRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleStatus
@@ -469,7 +518,9 @@ public partial class V1beta1LoadBalancerOutboundRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerOutboundRule is the Schema for the LoadBalancerOutboundRules API. Manages a Load Balancer Outbound Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -499,3 +550,4 @@ public partial class V1beta1LoadBalancerOutboundRule : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1LoadBalancerOutboundRuleStatus? Status { get; set; }
 }
+#nullable disable

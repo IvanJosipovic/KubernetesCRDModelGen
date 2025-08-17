@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.discoveryengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DiscoveryEngineDataStore is the Schema for the DiscoveryEngineDataStore API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1DiscoveryEngineDataStore> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ID of the project in which the resource belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config to store data store type configuration for workspace data. This must be set when [DataStore.content_config][google.cloud.discoveryengine.v1.DataStore.content_config] is set as [DataStore.ContentConfig.GOOGLE_WORKSPACE][google.cloud.discoveryengine.v1.DataStore.ContentConfig.GOOGLE_WORKSPACE].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreSpecWorkspaceConfig
@@ -75,7 +80,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreSpecWorkspaceConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreSpec defines the desired state of DiscoveryEngineDataStore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreSpec
@@ -116,7 +123,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreSpec
     [JsonPropertyName("workspaceConfig")]
     public V1alpha1DiscoveryEngineDataStoreSpecWorkspaceConfig? WorkspaceConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreStatusConditions
@@ -141,7 +150,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Data size estimation for billing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreStatusObservedStateBillingEstimation
@@ -170,7 +181,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreStatusObservedStateBillingE
     [JsonPropertyName("websiteDataUpdateTime")]
     public string? WebsiteDataUpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreStatusObservedState
@@ -187,7 +200,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreStatusObservedState
     [JsonPropertyName("defaultSchemaID")]
     public string? DefaultSchemaID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreStatus defines the config connector machine state of DiscoveryEngineDataStore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreStatus
@@ -208,7 +223,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DiscoveryEngineDataStoreStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStore is the Schema for the DiscoveryEngineDataStore API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -238,3 +255,4 @@ public partial class V1alpha1DiscoveryEngineDataStore : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1DiscoveryEngineDataStoreStatus? Status { get; set; }
 }
+#nullable disable

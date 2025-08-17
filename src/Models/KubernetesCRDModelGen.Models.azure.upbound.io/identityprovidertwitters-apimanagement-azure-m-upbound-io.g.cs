@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityProviderTwitterList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityProviderTwitter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Consumer API key for Twitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Consumer API secret key for Twitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRef
@@ -153,7 +170,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelector
@@ -187,7 +208,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProvider
@@ -224,7 +247,9 @@ public partial class V1beta1IdentityProviderTwitterSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Consumer API key for Twitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretRef
@@ -237,7 +262,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRef
@@ -267,7 +296,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelector
@@ -301,7 +334,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Consumer API secret key for Twitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeySecretRef
@@ -314,7 +349,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeyS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy
@@ -327,7 +364,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRef
@@ -344,7 +383,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector
@@ -378,7 +421,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecInitProvider
@@ -415,7 +460,9 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
@@ -428,7 +475,9 @@ public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRef
@@ -437,7 +486,9 @@ public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderTwitterSpec defines the desired state of IdentityProviderTwitter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpec
@@ -462,7 +513,9 @@ public partial class V1beta1IdentityProviderTwitterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatusAtProvider
@@ -479,7 +532,9 @@ public partial class V1beta1IdentityProviderTwitterStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatusConditions
@@ -508,7 +563,9 @@ public partial class V1beta1IdentityProviderTwitterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderTwitterStatus defines the observed state of IdentityProviderTwitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterStatus
@@ -525,7 +582,9 @@ public partial class V1beta1IdentityProviderTwitterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -555,3 +614,4 @@ public partial class V1beta1IdentityProviderTwitter : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1IdentityProviderTwitterStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeTargetHTTPProxyList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeTargetHTTPProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the ComputeURLMap resource that defines the mapping from URL to the BackendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPProxySpecUrlMapRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeTargetHTTPProxySpecUrlMapRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPProxySpec
@@ -79,7 +84,9 @@ public partial class V1beta1ComputeTargetHTTPProxySpec
     [JsonPropertyName("urlMapRef")]
     public V1beta1ComputeTargetHTTPProxySpecUrlMapRef UrlMapRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPProxyStatusConditions
@@ -104,7 +111,9 @@ public partial class V1beta1ComputeTargetHTTPProxyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPProxyStatus
@@ -129,7 +138,9 @@ public partial class V1beta1ComputeTargetHTTPProxyStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -159,3 +170,4 @@ public partial class V1beta1ComputeTargetHTTPProxy : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ComputeTargetHTTPProxyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+#nullable enable
 /// <summary>ImageRecipe is the Schema for the ImageRecipes API. Manage an Image Builder Image Recipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ImageRecipeList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ImageRecipe> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMappingEbs
@@ -70,7 +73,9 @@ public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMappingEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMapping
@@ -91,7 +96,9 @@ public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMapping
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPolicy
@@ -104,7 +111,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRef
@@ -121,7 +130,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicy
@@ -134,7 +145,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelector
@@ -155,7 +168,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponentParameter
@@ -168,7 +183,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderComponent
@@ -189,7 +206,9 @@ public partial class V1beta1ImageRecipeSpecForProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ImageRecipeSpecForProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderSystemsManagerAgent
@@ -198,7 +217,9 @@ public partial class V1beta1ImageRecipeSpecForProviderSystemsManagerAgent
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProvider
@@ -247,7 +268,9 @@ public partial class V1beta1ImageRecipeSpecForProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMappingEbs
@@ -284,7 +307,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMappingEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMapping
@@ -305,7 +330,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMapping
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefPolicy
@@ -318,7 +345,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRef
@@ -335,7 +364,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolicy
@@ -348,7 +379,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelector
@@ -369,7 +402,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSele
     [JsonPropertyName("policy")]
     public V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponentParameter
@@ -382,7 +417,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderComponent
@@ -403,7 +440,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ImageRecipeSpecInitProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderSystemsManagerAgent
@@ -412,7 +451,9 @@ public partial class V1beta1ImageRecipeSpecInitProviderSystemsManagerAgent
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProvider
@@ -457,7 +498,9 @@ public partial class V1beta1ImageRecipeSpecInitProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecProviderConfigRef
@@ -470,7 +513,9 @@ public partial class V1beta1ImageRecipeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecWriteConnectionSecretToRef
@@ -479,7 +524,9 @@ public partial class V1beta1ImageRecipeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageRecipeSpec defines the desired state of ImageRecipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpec
@@ -504,7 +551,9 @@ public partial class V1beta1ImageRecipeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ImageRecipeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMappingEbs
@@ -541,7 +590,9 @@ public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMappingEbs
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMapping
@@ -562,7 +613,9 @@ public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMapping
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderComponentParameter
@@ -575,7 +628,9 @@ public partial class V1beta1ImageRecipeStatusAtProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderComponent
@@ -588,7 +643,9 @@ public partial class V1beta1ImageRecipeStatusAtProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ImageRecipeStatusAtProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderSystemsManagerAgent
@@ -597,7 +654,9 @@ public partial class V1beta1ImageRecipeStatusAtProviderSystemsManagerAgent
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProvider
@@ -670,7 +729,9 @@ public partial class V1beta1ImageRecipeStatusAtProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusConditions
@@ -699,7 +760,9 @@ public partial class V1beta1ImageRecipeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageRecipeStatus defines the observed state of ImageRecipe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatus
@@ -716,7 +779,9 @@ public partial class V1beta1ImageRecipeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageRecipe is the Schema for the ImageRecipes API. Manage an Image Builder Image Recipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -746,3 +811,4 @@ public partial class V1beta1ImageRecipe : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ImageRecipeStatus? Status { get; set; }
 }
+#nullable disable

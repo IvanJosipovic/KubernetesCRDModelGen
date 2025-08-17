@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+#nullable enable
 /// <summary>BlobInventoryPolicy is the Schema for the BlobInventoryPolicys API. Manages a Storage Blob Inventory Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BlobInventoryPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1BlobInventoryPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesFilter
@@ -62,7 +65,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesFilter
     [JsonPropertyName("prefixMatch")]
     public IList<string>? PrefixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicy
@@ -75,7 +80,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRef
@@ -92,7 +99,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelectorPolicy
@@ -105,7 +114,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelector
@@ -126,7 +137,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRulesStorageContai
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderRules
@@ -167,7 +180,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderRules
     [JsonPropertyName("storageContainerNameSelector")]
     public V1beta1BlobInventoryPolicySpecForProviderRulesStorageContainerNameSelector? StorageContainerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicy
@@ -180,7 +195,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRef
@@ -197,7 +214,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRe
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPolicy
@@ -210,7 +229,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelector
@@ -231,7 +252,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSe
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecForProvider
@@ -252,7 +275,9 @@ public partial class V1beta1BlobInventoryPolicySpecForProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1BlobInventoryPolicySpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesFilter
@@ -281,7 +306,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesFilter
     [JsonPropertyName("prefixMatch")]
     public IList<string>? PrefixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicy
@@ -294,7 +321,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRef
@@ -311,7 +340,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelectorPolicy
@@ -324,7 +355,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelector
@@ -345,7 +378,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRulesStorageConta
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderRules
@@ -386,7 +421,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderRules
     [JsonPropertyName("storageContainerNameSelector")]
     public V1beta1BlobInventoryPolicySpecInitProviderRulesStorageContainerNameSelector? StorageContainerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicy
@@ -399,7 +436,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRef
@@ -416,7 +455,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdR
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPolicy
@@ -429,7 +470,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelector
@@ -450,7 +493,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdS
     [JsonPropertyName("policy")]
     public V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecInitProvider
@@ -471,7 +516,9 @@ public partial class V1beta1BlobInventoryPolicySpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1BlobInventoryPolicySpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecProviderConfigRef
@@ -484,7 +531,9 @@ public partial class V1beta1BlobInventoryPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpecWriteConnectionSecretToRef
@@ -493,7 +542,9 @@ public partial class V1beta1BlobInventoryPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BlobInventoryPolicySpec defines the desired state of BlobInventoryPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicySpec
@@ -518,7 +569,9 @@ public partial class V1beta1BlobInventoryPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BlobInventoryPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A filter block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProviderRulesFilter
@@ -547,7 +600,9 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProviderRulesFilter
     [JsonPropertyName("prefixMatch")]
     public IList<string>? PrefixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProviderRules
@@ -580,7 +635,9 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProviderRules
     [JsonPropertyName("storageContainerName")]
     public string? StorageContainerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusAtProvider
@@ -597,7 +654,9 @@ public partial class V1beta1BlobInventoryPolicyStatusAtProvider
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatusConditions
@@ -626,7 +685,9 @@ public partial class V1beta1BlobInventoryPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BlobInventoryPolicyStatus defines the observed state of BlobInventoryPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BlobInventoryPolicyStatus
@@ -643,7 +704,9 @@ public partial class V1beta1BlobInventoryPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BlobInventoryPolicy is the Schema for the BlobInventoryPolicys API. Manages a Storage Blob Inventory Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -673,3 +736,4 @@ public partial class V1beta1BlobInventoryPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1BlobInventoryPolicyStatus? Status { get; set; }
 }
+#nullable disable

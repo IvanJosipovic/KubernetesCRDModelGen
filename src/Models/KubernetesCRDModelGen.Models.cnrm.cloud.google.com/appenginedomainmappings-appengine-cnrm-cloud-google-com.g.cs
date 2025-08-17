@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppEngineDomainMappingList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1alpha1AppEngineDomainMapping> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineDomainMappingSpecSslSettings
@@ -50,7 +53,9 @@ public partial class V1alpha1AppEngineDomainMappingSpecSslSettings
     [JsonPropertyName("sslManagementType")]
     public string SslManagementType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineDomainMappingSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1AppEngineDomainMappingSpec
     [JsonPropertyName("sslSettings")]
     public V1alpha1AppEngineDomainMappingSpecSslSettings? SslSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineDomainMappingStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1AppEngineDomainMappingStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineDomainMappingStatusResourceRecords
@@ -113,7 +122,9 @@ public partial class V1alpha1AppEngineDomainMappingStatusResourceRecords
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppEngineDomainMappingStatus
@@ -134,7 +145,9 @@ public partial class V1alpha1AppEngineDomainMappingStatus
     [JsonPropertyName("resourceRecords")]
     public IList<V1alpha1AppEngineDomainMappingStatusResourceRecords>? ResourceRecords { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -164,3 +177,4 @@ public partial class V1alpha1AppEngineDomainMapping : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1alpha1AppEngineDomainMappingStatus? Status { get; set; }
 }
+#nullable disable

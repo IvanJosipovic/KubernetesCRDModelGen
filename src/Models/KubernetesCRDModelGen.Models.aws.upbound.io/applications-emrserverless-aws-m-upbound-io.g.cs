@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.emrserverless.aws.m.upbound.io;
+#nullable enable
 /// <summary>Application is the Schema for the Applications API. Manages an EMR Serverless Application</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Application> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically start on job submission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderAutoStartConfiguration
@@ -42,7 +45,9 @@ public partial class V1beta1ApplicationSpecForProviderAutoStartConfiguration
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderAutoStopConfiguration
@@ -55,7 +60,9 @@ public partial class V1beta1ApplicationSpecForProviderAutoStopConfiguration
     [JsonPropertyName("idleTimeoutMinutes")]
     public double? IdleTimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The image configuration applied to all worker types.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderImageConfiguration
@@ -64,7 +71,9 @@ public partial class V1beta1ApplicationSpecForProviderImageConfiguration
     [JsonPropertyName("imageUri")]
     public string? ImageUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource configuration of the initial capacity configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderInitialCapacityInitialCapacityConfigWorkerConfiguration
@@ -81,7 +90,9 @@ public partial class V1beta1ApplicationSpecForProviderInitialCapacityInitialCapa
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The initial capacity configuration per worker.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderInitialCapacityInitialCapacityConfig
@@ -94,7 +105,9 @@ public partial class V1beta1ApplicationSpecForProviderInitialCapacityInitialCapa
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderInitialCapacity
@@ -107,7 +120,9 @@ public partial class V1beta1ApplicationSpecForProviderInitialCapacity
     [JsonPropertyName("initialCapacityType")]
     public string? InitialCapacityType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables the interactive use cases to use when running an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderInteractiveConfiguration
@@ -120,7 +135,9 @@ public partial class V1beta1ApplicationSpecForProviderInteractiveConfiguration
     [JsonPropertyName("studioEnabled")]
     public bool? StudioEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderMaximumCapacity
@@ -137,7 +154,9 @@ public partial class V1beta1ApplicationSpecForProviderMaximumCapacity
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network configuration for customer VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderNetworkConfiguration
@@ -150,7 +169,9 @@ public partial class V1beta1ApplicationSpecForProviderNetworkConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically start on job submission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderAutoStartConfiguration
@@ -216,7 +239,9 @@ public partial class V1beta1ApplicationSpecInitProviderAutoStartConfiguration
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderAutoStopConfiguration
@@ -229,7 +254,9 @@ public partial class V1beta1ApplicationSpecInitProviderAutoStopConfiguration
     [JsonPropertyName("idleTimeoutMinutes")]
     public double? IdleTimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The image configuration applied to all worker types.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderImageConfiguration
@@ -238,7 +265,9 @@ public partial class V1beta1ApplicationSpecInitProviderImageConfiguration
     [JsonPropertyName("imageUri")]
     public string? ImageUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource configuration of the initial capacity configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderInitialCapacityInitialCapacityConfigWorkerConfiguration
@@ -255,7 +284,9 @@ public partial class V1beta1ApplicationSpecInitProviderInitialCapacityInitialCap
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The initial capacity configuration per worker.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderInitialCapacityInitialCapacityConfig
@@ -268,7 +299,9 @@ public partial class V1beta1ApplicationSpecInitProviderInitialCapacityInitialCap
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderInitialCapacity
@@ -281,7 +314,9 @@ public partial class V1beta1ApplicationSpecInitProviderInitialCapacity
     [JsonPropertyName("initialCapacityType")]
     public string? InitialCapacityType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables the interactive use cases to use when running an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderInteractiveConfiguration
@@ -294,7 +329,9 @@ public partial class V1beta1ApplicationSpecInitProviderInteractiveConfiguration
     [JsonPropertyName("studioEnabled")]
     public bool? StudioEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderMaximumCapacity
@@ -311,7 +348,9 @@ public partial class V1beta1ApplicationSpecInitProviderMaximumCapacity
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network configuration for customer VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderNetworkConfiguration
@@ -324,7 +363,9 @@ public partial class V1beta1ApplicationSpecInitProviderNetworkConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProvider
@@ -377,7 +418,9 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecProviderConfigRef
@@ -390,7 +433,9 @@ public partial class V1beta1ApplicationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
@@ -399,7 +444,9 @@ public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationSpec defines the desired state of Application</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpec
@@ -424,7 +471,9 @@ public partial class V1beta1ApplicationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically start on job submission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderAutoStartConfiguration
@@ -433,7 +482,9 @@ public partial class V1beta1ApplicationStatusAtProviderAutoStartConfiguration
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderAutoStopConfiguration
@@ -446,7 +497,9 @@ public partial class V1beta1ApplicationStatusAtProviderAutoStopConfiguration
     [JsonPropertyName("idleTimeoutMinutes")]
     public double? IdleTimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The image configuration applied to all worker types.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderImageConfiguration
@@ -455,7 +508,9 @@ public partial class V1beta1ApplicationStatusAtProviderImageConfiguration
     [JsonPropertyName("imageUri")]
     public string? ImageUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource configuration of the initial capacity configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderInitialCapacityInitialCapacityConfigWorkerConfiguration
@@ -472,7 +527,9 @@ public partial class V1beta1ApplicationStatusAtProviderInitialCapacityInitialCap
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The initial capacity configuration per worker.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderInitialCapacityInitialCapacityConfig
@@ -485,7 +542,9 @@ public partial class V1beta1ApplicationStatusAtProviderInitialCapacityInitialCap
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderInitialCapacity
@@ -498,7 +557,9 @@ public partial class V1beta1ApplicationStatusAtProviderInitialCapacity
     [JsonPropertyName("initialCapacityType")]
     public string? InitialCapacityType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables the interactive use cases to use when running an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderInteractiveConfiguration
@@ -511,7 +572,9 @@ public partial class V1beta1ApplicationStatusAtProviderInteractiveConfiguration
     [JsonPropertyName("studioEnabled")]
     public bool? StudioEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderMaximumCapacity
@@ -528,7 +591,9 @@ public partial class V1beta1ApplicationStatusAtProviderMaximumCapacity
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network configuration for customer VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderNetworkConfiguration
@@ -541,7 +606,9 @@ public partial class V1beta1ApplicationStatusAtProviderNetworkConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProvider
@@ -610,7 +677,9 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusConditions
@@ -639,7 +708,9 @@ public partial class V1beta1ApplicationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationStatus defines the observed state of Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatus
@@ -656,7 +727,9 @@ public partial class V1beta1ApplicationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Application is the Schema for the Applications API. Manages an EMR Serverless Application</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -686,3 +759,4 @@ public partial class V1beta1Application : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ApplicationStatus? Status { get; set; }
 }
+#nullable disable

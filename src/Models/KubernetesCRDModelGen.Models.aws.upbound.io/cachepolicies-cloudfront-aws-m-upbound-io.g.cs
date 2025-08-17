@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+#nullable enable
 /// <summary>CachePolicy is the Schema for the CachePolicys API. Use the</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CachePolicyList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1CachePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains a list of cookie names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies
@@ -42,7 +45,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginCookiesConfig
@@ -55,7 +60,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("cookies")]
     public V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object contains a list of header names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders
@@ -64,7 +71,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginHeadersConfig
@@ -77,7 +86,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("headers")]
     public V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameter that contains a list of query string names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings
@@ -86,7 +97,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any URL query strings in viewer requests are included in the cache key. It also automatically includes these query strings in requests that CloudFront sends to the origin. Please refer to the Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig
@@ -99,7 +112,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("queryStrings")]
     public V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for including HTTP headers, cookies, and URL query strings in the cache key. For more information, refer to the Parameters In Cache Key And Forwarded To Origin section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOrigin
@@ -124,7 +139,9 @@ public partial class V1beta1CachePolicySpecForProviderParametersInCacheKeyAndFor
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecForProvider
@@ -153,7 +170,9 @@ public partial class V1beta1CachePolicySpecForProvider
     [JsonPropertyName("parametersInCacheKeyAndForwardedToOrigin")]
     public V1beta1CachePolicySpecForProviderParametersInCacheKeyAndForwardedToOrigin? ParametersInCacheKeyAndForwardedToOrigin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains a list of cookie names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies
@@ -162,7 +181,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginCookiesConfig
@@ -175,7 +196,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("cookies")]
     public V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object contains a list of header names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders
@@ -184,7 +207,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginHeadersConfig
@@ -197,7 +222,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("headers")]
     public V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameter that contains a list of query string names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings
@@ -206,7 +233,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any URL query strings in viewer requests are included in the cache key. It also automatically includes these query strings in requests that CloudFront sends to the origin. Please refer to the Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig
@@ -219,7 +248,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("queryStrings")]
     public V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for including HTTP headers, cookies, and URL query strings in the cache key. For more information, refer to the Parameters In Cache Key And Forwarded To Origin section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOrigin
@@ -244,7 +275,9 @@ public partial class V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndFo
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecInitProvider
@@ -273,7 +306,9 @@ public partial class V1beta1CachePolicySpecInitProvider
     [JsonPropertyName("parametersInCacheKeyAndForwardedToOrigin")]
     public V1beta1CachePolicySpecInitProviderParametersInCacheKeyAndForwardedToOrigin? ParametersInCacheKeyAndForwardedToOrigin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecProviderConfigRef
@@ -286,7 +321,9 @@ public partial class V1beta1CachePolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpecWriteConnectionSecretToRef
@@ -295,7 +332,9 @@ public partial class V1beta1CachePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CachePolicySpec defines the desired state of CachePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicySpec
@@ -320,7 +359,9 @@ public partial class V1beta1CachePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CachePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains a list of cookie names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies
@@ -329,7 +370,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginCookiesConfig
@@ -342,7 +385,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("cookies")]
     public V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object contains a list of header names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders
@@ -351,7 +396,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginHeadersConfig
@@ -364,7 +411,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("headers")]
     public V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameter that contains a list of query string names. See Items for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings
@@ -373,7 +422,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether any URL query strings in viewer requests are included in the cache key. It also automatically includes these query strings in requests that CloudFront sends to the origin. Please refer to the Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig
@@ -386,7 +437,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("queryStrings")]
     public V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for including HTTP headers, cookies, and URL query strings in the cache key. For more information, refer to the Parameters In Cache Key And Forwarded To Origin section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOrigin
@@ -411,7 +464,9 @@ public partial class V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndFo
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOriginQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusAtProvider
@@ -452,7 +507,9 @@ public partial class V1beta1CachePolicyStatusAtProvider
     [JsonPropertyName("parametersInCacheKeyAndForwardedToOrigin")]
     public V1beta1CachePolicyStatusAtProviderParametersInCacheKeyAndForwardedToOrigin? ParametersInCacheKeyAndForwardedToOrigin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatusConditions
@@ -481,7 +538,9 @@ public partial class V1beta1CachePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CachePolicyStatus defines the observed state of CachePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CachePolicyStatus
@@ -498,7 +557,9 @@ public partial class V1beta1CachePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CachePolicy is the Schema for the CachePolicys API. Use the</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -528,3 +589,4 @@ public partial class V1beta1CachePolicy : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1CachePolicyStatus? Status { get; set; }
 }
+#nullable disable

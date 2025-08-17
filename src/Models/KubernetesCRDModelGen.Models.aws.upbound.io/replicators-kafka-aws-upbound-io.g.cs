@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.upbound.io;
+#nullable enable
 /// <summary>Replicator is the Schema for the Replicators API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReplicatorList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Replicator> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluste
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate mskClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluste
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluste
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate mskClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluste
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon MSK cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluster
@@ -106,7 +117,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskCluste
     [JsonPropertyName("mskClusterArnSelector")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterAmazonMskClusterMskClusterArnSelector? MskClusterArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsRefsPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecuri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsRefs
@@ -132,7 +147,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecuri
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecuri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupsIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsSelector
@@ -162,7 +181,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecuri
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSecurityGroupsIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsRefsPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsRefs
@@ -188,7 +211,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnet
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsSelectorPolicy
@@ -201,7 +226,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsSelector
@@ -218,7 +245,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnet
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfig
@@ -247,7 +276,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfig
     [JsonPropertyName("subnetIdsSelector")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfigSubnetIdsSelector? SubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderKafkaCluster
@@ -260,7 +291,9 @@ public partial class V1beta1ReplicatorSpecForProviderKafkaCluster
     [JsonPropertyName("vpcConfig")]
     public V1beta1ReplicatorSpecForProviderKafkaClusterVpcConfig? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListConsumerGroupReplication
@@ -281,7 +314,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListConsumer
     [JsonPropertyName("synchroniseConsumerGroupOffsets")]
     public bool? SynchroniseConsumerGroupOffsets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnRefPolicy
@@ -294,7 +329,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate sourceKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnRef
@@ -307,7 +344,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKa
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnSelectorPolicy
@@ -320,7 +359,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate sourceKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnSelector
@@ -337,7 +378,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKa
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListSourceKafkaClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnRefPolicy
@@ -350,7 +393,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate targetKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnRef
@@ -363,7 +408,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKa
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnSelectorPolicy
@@ -376,7 +423,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate targetKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnSelector
@@ -393,7 +442,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKa
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListTargetKafkaClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying the position in the topics to start replicating from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplicationStartingPosition
@@ -402,7 +453,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicRep
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplicationTopicNameConfiguration
@@ -411,7 +464,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicRep
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplication
@@ -444,7 +499,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicRep
     [JsonPropertyName("topicsToReplicate")]
     public IList<string>? TopicsToReplicate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of replication configurations, where each configuration targets a given source cluster to target cluster replication flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoList
@@ -485,7 +542,9 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoList
     [JsonPropertyName("topicReplication")]
     public IList<V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplication>? TopicReplication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnRefPolicy
@@ -498,7 +557,9 @@ public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnRef
@@ -511,7 +572,9 @@ public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSelectorPolicy
@@ -524,7 +587,9 @@ public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSelector
@@ -541,7 +606,9 @@ public partial class V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProvider
@@ -582,7 +649,9 @@ public partial class V1beta1ReplicatorSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnRefPolicy
@@ -595,7 +664,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate mskClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnRef
@@ -608,7 +679,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnSelectorPolicy
@@ -621,7 +694,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate mskClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnSelector
@@ -638,7 +713,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon MSK cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskCluster
@@ -655,7 +732,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("mskClusterArnSelector")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterAmazonMskClusterMskClusterArnSelector? MskClusterArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsRefsPolicy
@@ -668,7 +747,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsRefs
@@ -681,7 +762,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecur
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsSelectorPolicy
@@ -694,7 +777,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupsIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsSelector
@@ -711,7 +796,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecur
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSecurityGroupsIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsRefsPolicy
@@ -724,7 +811,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsRefs
@@ -737,7 +826,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubne
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsSelectorPolicy
@@ -750,7 +841,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsSelector
@@ -767,7 +860,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubne
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfig
@@ -796,7 +891,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfig
     [JsonPropertyName("subnetIdsSelector")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfigSubnetIdsSelector? SubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderKafkaCluster
@@ -809,7 +906,9 @@ public partial class V1beta1ReplicatorSpecInitProviderKafkaCluster
     [JsonPropertyName("vpcConfig")]
     public V1beta1ReplicatorSpecInitProviderKafkaClusterVpcConfig? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListConsumerGroupReplication
@@ -830,7 +929,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListConsume
     [JsonPropertyName("synchroniseConsumerGroupOffsets")]
     public bool? SynchroniseConsumerGroupOffsets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnRefPolicy
@@ -843,7 +944,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate sourceKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnRef
@@ -856,7 +959,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceK
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnSelectorPolicy
@@ -869,7 +974,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate sourceKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnSelector
@@ -886,7 +993,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceK
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListSourceKafkaClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnRefPolicy
@@ -899,7 +1008,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate targetKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnRef
@@ -912,7 +1023,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetK
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnSelectorPolicy
@@ -925,7 +1038,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate targetKafkaClusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnSelector
@@ -942,7 +1057,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetK
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListTargetKafkaClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying the position in the topics to start replicating from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplicationStartingPosition
@@ -951,7 +1068,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicRe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplicationTopicNameConfiguration
@@ -960,7 +1079,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicRe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplication
@@ -993,7 +1114,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicRe
     [JsonPropertyName("topicsToReplicate")]
     public IList<string>? TopicsToReplicate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of replication configurations, where each configuration targets a given source cluster to target cluster replication flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoList
@@ -1034,7 +1157,9 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoList
     [JsonPropertyName("topicReplication")]
     public IList<V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplication>? TopicReplication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnRefPolicy
@@ -1047,7 +1172,9 @@ public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnRef
@@ -1060,7 +1187,9 @@ public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSelectorPolicy
@@ -1073,7 +1202,9 @@ public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSelector
@@ -1090,7 +1221,9 @@ public partial class V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSel
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProvider
@@ -1127,7 +1260,9 @@ public partial class V1beta1ReplicatorSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecProviderConfigRefPolicy
@@ -1140,7 +1275,9 @@ public partial class V1beta1ReplicatorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecProviderConfigRef
@@ -1153,7 +1290,9 @@ public partial class V1beta1ReplicatorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicatorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecWriteConnectionSecretToRef
@@ -1166,7 +1305,9 @@ public partial class V1beta1ReplicatorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicatorSpec defines the desired state of Replicator</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpec
@@ -1195,7 +1336,9 @@ public partial class V1beta1ReplicatorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReplicatorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon MSK cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderKafkaClusterAmazonMskCluster
@@ -1204,7 +1347,9 @@ public partial class V1beta1ReplicatorStatusAtProviderKafkaClusterAmazonMskClust
     [JsonPropertyName("mskClusterArn")]
     public string? MskClusterArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderKafkaClusterVpcConfig
@@ -1217,7 +1362,9 @@ public partial class V1beta1ReplicatorStatusAtProviderKafkaClusterVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderKafkaCluster
@@ -1230,7 +1377,9 @@ public partial class V1beta1ReplicatorStatusAtProviderKafkaCluster
     [JsonPropertyName("vpcConfig")]
     public V1beta1ReplicatorStatusAtProviderKafkaClusterVpcConfig? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListConsumerGroupReplication
@@ -1251,7 +1400,9 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListConsume
     [JsonPropertyName("synchroniseConsumerGroupOffsets")]
     public bool? SynchroniseConsumerGroupOffsets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying the position in the topics to start replicating from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplicationStartingPosition
@@ -1260,7 +1411,9 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicRe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplicationTopicNameConfiguration
@@ -1269,7 +1422,9 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicRe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplication
@@ -1302,7 +1457,9 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicRe
     [JsonPropertyName("topicsToReplicate")]
     public IList<string>? TopicsToReplicate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of replication configurations, where each configuration targets a given source cluster to target cluster replication flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoList
@@ -1335,7 +1492,9 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoList
     [JsonPropertyName("topicReplication")]
     public IList<V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplication>? TopicReplication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProvider
@@ -1384,7 +1543,9 @@ public partial class V1beta1ReplicatorStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusConditions
@@ -1413,7 +1574,9 @@ public partial class V1beta1ReplicatorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicatorStatus defines the observed state of Replicator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatus
@@ -1430,7 +1593,9 @@ public partial class V1beta1ReplicatorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replicator is the Schema for the Replicators API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1460,3 +1625,4 @@ public partial class V1beta1Replicator : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ReplicatorStatus? Status { get; set; }
 }
+#nullable disable

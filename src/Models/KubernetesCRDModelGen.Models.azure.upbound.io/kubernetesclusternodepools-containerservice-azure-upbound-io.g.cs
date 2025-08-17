@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.upbound.io;
+#nullable enable
 /// <summary>KubernetesClusterNodePool is the Schema for the KubernetesClusterNodePools API. Manages a Node Pool within a Kubernetes Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1KubernetesClusterNodePoolList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1KubernetesClusterNodePool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubeletConfig
@@ -78,7 +81,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubeletConfi
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRefPolicy
@@ -91,7 +96,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRef
@@ -104,7 +111,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelectorPolicy
@@ -117,7 +126,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelector
@@ -134,7 +145,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfigSysctlConfig
@@ -255,7 +268,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfi
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfig
@@ -276,7 +291,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfi
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkProfileAllowedHostPorts
@@ -293,7 +310,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkP
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkProfile
@@ -310,7 +329,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkP
     [JsonPropertyName("nodePublicIpTags")]
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRefPolicy
@@ -323,7 +344,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRef
@@ -336,7 +359,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdR
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPolicy
@@ -349,7 +374,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelector
@@ -366,7 +393,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdS
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSettings
@@ -383,7 +412,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSetti
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRefPolicy
@@ -396,7 +427,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRef
@@ -409,7 +442,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorPolicy
@@ -422,7 +457,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelector
@@ -439,7 +476,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfile
@@ -448,7 +487,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfi
     [JsonPropertyName("outboundNatEnabled")]
     public bool? OutboundNatEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
@@ -641,7 +682,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConfig
@@ -686,7 +729,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConf
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfigSysctlConfig
@@ -807,7 +852,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConf
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfig
@@ -828,7 +875,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConf
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetworkProfileAllowedHostPorts
@@ -845,7 +894,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetwork
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetworkProfile
@@ -862,7 +913,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetwork
     [JsonPropertyName("nodePublicIpTags")]
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRefPolicy
@@ -875,7 +928,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRef
@@ -888,7 +943,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorPolicy
@@ -901,7 +958,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelector
@@ -918,7 +977,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSettings
@@ -935,7 +996,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSett
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRefPolicy
@@ -948,7 +1011,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRef
@@ -961,7 +1026,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelectorPolicy
@@ -974,7 +1041,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelector
@@ -991,7 +1060,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProfile
@@ -1000,7 +1071,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProf
     [JsonPropertyName("outboundNatEnabled")]
     public bool? OutboundNatEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
@@ -1181,7 +1254,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicy
@@ -1194,7 +1269,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRef
@@ -1207,7 +1284,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretToRef
@@ -1220,7 +1299,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KubernetesClusterNodePoolSpec defines the desired state of KubernetesClusterNodePool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpec
@@ -1249,7 +1330,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConfig
@@ -1294,7 +1377,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConf
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfigSysctlConfig
@@ -1415,7 +1500,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConf
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfig
@@ -1436,7 +1523,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConf
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetworkProfileAllowedHostPorts
@@ -1453,7 +1542,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetwork
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetworkProfile
@@ -1470,7 +1561,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetwork
     [JsonPropertyName("nodePublicIpTags")]
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSettings
@@ -1487,7 +1580,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSett
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProfile
@@ -1496,7 +1591,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProf
     [JsonPropertyName("outboundNatEnabled")]
     public bool? OutboundNatEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
@@ -1669,7 +1766,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusConditions
@@ -1698,7 +1797,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KubernetesClusterNodePoolStatus defines the observed state of KubernetesClusterNodePool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatus
@@ -1715,7 +1816,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KubernetesClusterNodePool is the Schema for the KubernetesClusterNodePools API. Manages a Node Pool within a Kubernetes Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1745,3 +1848,4 @@ public partial class V1beta1KubernetesClusterNodePool : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1KubernetesClusterNodePoolStatus? Status { get; set; }
 }
+#nullable disable

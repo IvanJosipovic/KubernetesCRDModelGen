@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatch.aws.m.upbound.io;
+#nullable enable
 /// <summary>CompositeAlarm is the Schema for the CompositeAlarms API. Provides a CloudWatch Composite Alarm resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CompositeAlarmList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1CompositeAlarm> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions will be suppressed if the suppressor alarm is in the ALARM state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderActionsSuppressor
@@ -50,7 +53,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderActionsSuppressor
     [JsonPropertyName("waitPeriod")]
     public double? WaitPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsRefsPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsRefs
@@ -80,7 +87,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecForProviderAlarmActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate alarmActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsSelector
@@ -114,7 +125,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderAlarmActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecForProviderAlarmActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderOkActionsRefsPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderOkActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderOkActionsRefs
@@ -144,7 +159,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderOkActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecForProviderOkActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderOkActionsSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderOkActionsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate okActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderOkActionsSelector
@@ -178,7 +197,9 @@ public partial class V1beta1CompositeAlarmSpecForProviderOkActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecForProviderOkActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProvider
@@ -235,7 +256,9 @@ public partial class V1beta1CompositeAlarmSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions will be suppressed if the suppressor alarm is in the ALARM state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderActionsSuppressor
@@ -252,7 +275,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderActionsSuppressor
     [JsonPropertyName("waitPeriod")]
     public double? WaitPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsRefsPolicy
@@ -265,7 +290,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsRefs
@@ -282,7 +309,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecInitProviderAlarmActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsSelectorPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate alarmActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsSelector
@@ -316,7 +347,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderAlarmActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecInitProviderAlarmActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsRefsPolicy
@@ -329,7 +362,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsRefs
@@ -346,7 +381,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecInitProviderOkActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsSelectorPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate okActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsSelector
@@ -380,7 +419,9 @@ public partial class V1beta1CompositeAlarmSpecInitProviderOkActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1CompositeAlarmSpecInitProviderOkActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecInitProvider
@@ -433,7 +474,9 @@ public partial class V1beta1CompositeAlarmSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecProviderConfigRef
@@ -446,7 +489,9 @@ public partial class V1beta1CompositeAlarmSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecWriteConnectionSecretToRef
@@ -455,7 +500,9 @@ public partial class V1beta1CompositeAlarmSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeAlarmSpec defines the desired state of CompositeAlarm</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpec
@@ -480,7 +527,9 @@ public partial class V1beta1CompositeAlarmSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CompositeAlarmSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions will be suppressed if the suppressor alarm is in the ALARM state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmStatusAtProviderActionsSuppressor
@@ -497,7 +546,9 @@ public partial class V1beta1CompositeAlarmStatusAtProviderActionsSuppressor
     [JsonPropertyName("waitPeriod")]
     public double? WaitPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmStatusAtProvider
@@ -550,7 +601,9 @@ public partial class V1beta1CompositeAlarmStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmStatusConditions
@@ -579,7 +632,9 @@ public partial class V1beta1CompositeAlarmStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeAlarmStatus defines the observed state of CompositeAlarm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmStatus
@@ -596,7 +651,9 @@ public partial class V1beta1CompositeAlarmStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeAlarm is the Schema for the CompositeAlarms API. Provides a CloudWatch Composite Alarm resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -626,3 +683,4 @@ public partial class V1beta1CompositeAlarm : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1CompositeAlarmStatus? Status { get; set; }
 }
+#nullable disable

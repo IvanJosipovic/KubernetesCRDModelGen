@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>TargetSSLProxy is the Schema for the TargetSSLProxys API. Represents a TargetSslProxy resource, which is used by one or more global forwarding rule to route incoming SSL requests to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TargetSSLProxyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1TargetSSLProxy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceRef
@@ -59,7 +64,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceRef
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecForProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderBackendServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesRefsPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesRefsPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesRefs
@@ -115,7 +128,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesRefs
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecForProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SSLCertificate in compute to populate sslCertificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TargetSSLProxySpecForProviderSslCertificatesSelector
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecForProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1TargetSSLProxySpecForProvider
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceRef
@@ -220,7 +243,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceRef
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecInitProviderBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceSelector
@@ -250,7 +277,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderBackendServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesRefsPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesRefs
@@ -276,7 +307,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesRefs
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecInitProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SSLCertificate in compute to populate sslCertificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesSelector
@@ -306,7 +341,9 @@ public partial class V1beta1TargetSSLProxySpecInitProviderSslCertificatesSelecto
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecInitProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1TargetSSLProxySpecInitProvider
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecProviderConfigRefPolicy
@@ -368,7 +407,9 @@ public partial class V1beta1TargetSSLProxySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecProviderConfigRef
@@ -381,7 +422,9 @@ public partial class V1beta1TargetSSLProxySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TargetSSLProxySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpecWriteConnectionSecretToRef
@@ -394,7 +437,9 @@ public partial class V1beta1TargetSSLProxySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetSSLProxySpec defines the desired state of TargetSSLProxy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxySpec
@@ -423,7 +468,9 @@ public partial class V1beta1TargetSSLProxySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TargetSSLProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxyStatusAtProvider
@@ -472,7 +519,9 @@ public partial class V1beta1TargetSSLProxyStatusAtProvider
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxyStatusConditions
@@ -501,7 +550,9 @@ public partial class V1beta1TargetSSLProxyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetSSLProxyStatus defines the observed state of TargetSSLProxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSSLProxyStatus
@@ -518,7 +569,9 @@ public partial class V1beta1TargetSSLProxyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetSSLProxy is the Schema for the TargetSSLProxys API. Represents a TargetSslProxy resource, which is used by one or more global forwarding rule to route incoming SSL requests to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -548,3 +601,4 @@ public partial class V1beta1TargetSSLProxy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1TargetSSLProxyStatus? Status { get; set; }
 }
+#nullable disable

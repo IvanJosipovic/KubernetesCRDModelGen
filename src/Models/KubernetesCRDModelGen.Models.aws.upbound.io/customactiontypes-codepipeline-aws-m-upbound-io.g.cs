@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codepipeline.aws.m.upbound.io;
+#nullable enable
 /// <summary>CustomActionType is the Schema for the CustomActionTypes API. Provides a CodePipeline CustomActionType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomActionTypeList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1CustomActionType> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProviderConfigurationProperty
@@ -66,7 +69,9 @@ public partial class V1beta1CustomActionTypeSpecForProviderConfigurationProperty
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the input artifact for the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProviderInputArtifactDetails
@@ -79,7 +84,9 @@ public partial class V1beta1CustomActionTypeSpecForProviderInputArtifactDetails
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the output artifact of the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProviderOutputArtifactDetails
@@ -92,7 +99,9 @@ public partial class V1beta1CustomActionTypeSpecForProviderOutputArtifactDetails
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for an action type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProviderSettings
@@ -113,7 +122,9 @@ public partial class V1beta1CustomActionTypeSpecForProviderSettings
     [JsonPropertyName("thirdPartyConfigurationUrl")]
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProvider
@@ -154,7 +165,9 @@ public partial class V1beta1CustomActionTypeSpecForProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecInitProviderConfigurationProperty
@@ -187,7 +200,9 @@ public partial class V1beta1CustomActionTypeSpecInitProviderConfigurationPropert
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the input artifact for the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecInitProviderInputArtifactDetails
@@ -200,7 +215,9 @@ public partial class V1beta1CustomActionTypeSpecInitProviderInputArtifactDetails
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the output artifact of the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecInitProviderOutputArtifactDetails
@@ -213,7 +230,9 @@ public partial class V1beta1CustomActionTypeSpecInitProviderOutputArtifactDetail
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for an action type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecInitProviderSettings
@@ -234,7 +253,9 @@ public partial class V1beta1CustomActionTypeSpecInitProviderSettings
     [JsonPropertyName("thirdPartyConfigurationUrl")]
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecInitProvider
@@ -271,7 +292,9 @@ public partial class V1beta1CustomActionTypeSpecInitProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecProviderConfigRef
@@ -284,7 +307,9 @@ public partial class V1beta1CustomActionTypeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecWriteConnectionSecretToRef
@@ -293,7 +318,9 @@ public partial class V1beta1CustomActionTypeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomActionTypeSpec defines the desired state of CustomActionType</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpec
@@ -318,7 +345,9 @@ public partial class V1beta1CustomActionTypeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomActionTypeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusAtProviderConfigurationProperty
@@ -351,7 +380,9 @@ public partial class V1beta1CustomActionTypeStatusAtProviderConfigurationPropert
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the input artifact for the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusAtProviderInputArtifactDetails
@@ -364,7 +395,9 @@ public partial class V1beta1CustomActionTypeStatusAtProviderInputArtifactDetails
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The details of the output artifact of the action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusAtProviderOutputArtifactDetails
@@ -377,7 +410,9 @@ public partial class V1beta1CustomActionTypeStatusAtProviderOutputArtifactDetail
     [JsonPropertyName("minimumCount")]
     public double? MinimumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for an action type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusAtProviderSettings
@@ -398,7 +433,9 @@ public partial class V1beta1CustomActionTypeStatusAtProviderSettings
     [JsonPropertyName("thirdPartyConfigurationUrl")]
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusAtProvider
@@ -455,7 +492,9 @@ public partial class V1beta1CustomActionTypeStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatusConditions
@@ -484,7 +523,9 @@ public partial class V1beta1CustomActionTypeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomActionTypeStatus defines the observed state of CustomActionType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeStatus
@@ -501,7 +542,9 @@ public partial class V1beta1CustomActionTypeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomActionType is the Schema for the CustomActionTypes API. Provides a CodePipeline CustomActionType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -531,3 +574,4 @@ public partial class V1beta1CustomActionType : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1CustomActionTypeStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+#nullable enable
 /// <summary>Crawler is the Schema for the Crawlers API. Manages a Glue Crawler</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CrawlerList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Crawler> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelec
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesRefs
@@ -127,7 +140,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesRefs
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderCatalogTargetTablesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of CatalogTable in glue to populate tables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesSelector
@@ -161,7 +178,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetTablesSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderCatalogTargetTablesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderCatalogTarget
@@ -202,7 +221,9 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTarget
     [JsonPropertyName("tablesSelector")]
     public V1beta1CrawlerSpecForProviderCatalogTargetTablesSelector? TablesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameRef
@@ -232,7 +255,9 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelector
@@ -266,7 +293,9 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDeltaTarget
@@ -287,7 +316,9 @@ public partial class V1beta1CrawlerSpecForProviderDeltaTarget
     [JsonPropertyName("writeManifest")]
     public bool? WriteManifest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderDynamodbTarget
@@ -304,7 +335,9 @@ public partial class V1beta1CrawlerSpecForProviderDynamodbTarget
     [JsonPropertyName("scanRate")]
     public double? ScanRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderHudiTarget
@@ -325,7 +358,9 @@ public partial class V1beta1CrawlerSpecForProviderHudiTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderIcebergTarget
@@ -346,7 +381,9 @@ public partial class V1beta1CrawlerSpecForProviderIcebergTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRef
@@ -376,7 +415,9 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelector
@@ -410,7 +453,9 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelect
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderJdbcTarget
@@ -439,7 +484,9 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTarget
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies Lake Formation configuration settings for the crawler. See Lake Formation Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderLakeFormationConfiguration
@@ -452,7 +499,9 @@ public partial class V1beta1CrawlerSpecForProviderLakeFormationConfiguration
     [JsonPropertyName("useLakeFormationCredentials")]
     public bool? UseLakeFormationCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderLineageConfiguration
@@ -461,7 +510,9 @@ public partial class V1beta1CrawlerSpecForProviderLineageConfiguration
     [JsonPropertyName("crawlerLineageSettings")]
     public string? CrawlerLineageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicy
@@ -474,7 +525,9 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
@@ -491,7 +544,9 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicy
@@ -504,7 +559,9 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelector
@@ -525,7 +582,9 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSel
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderMongodbTarget
@@ -550,7 +609,9 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTarget
     [JsonPropertyName("scanAll")]
     public bool? ScanAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderRecrawlPolicy
@@ -559,7 +620,9 @@ public partial class V1beta1CrawlerSpecForProviderRecrawlPolicy
     [JsonPropertyName("recrawlBehavior")]
     public string? RecrawlBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderRoleRefPolicy
@@ -572,7 +635,9 @@ public partial class V1beta1CrawlerSpecForProviderRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderRoleRef
@@ -589,7 +654,9 @@ public partial class V1beta1CrawlerSpecForProviderRoleRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderRoleSelectorPolicy
@@ -602,7 +669,9 @@ public partial class V1beta1CrawlerSpecForProviderRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderRoleSelector
@@ -623,7 +692,9 @@ public partial class V1beta1CrawlerSpecForProviderRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecForProviderRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderS3Target
@@ -652,7 +723,9 @@ public partial class V1beta1CrawlerSpecForProviderS3Target
     [JsonPropertyName("sampleSize")]
     public double? SampleSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for the crawler's update and deletion behavior. See Schema Change Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProviderSchemaChangePolicy
@@ -665,7 +738,9 @@ public partial class V1beta1CrawlerSpecForProviderSchemaChangePolicy
     [JsonPropertyName("updateBehavior")]
     public string? UpdateBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecForProvider
@@ -774,7 +849,9 @@ public partial class V1beta1CrawlerSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicy
@@ -787,7 +864,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRef
@@ -804,7 +883,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicy
@@ -817,7 +898,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelector
@@ -838,7 +921,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSele
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesRefsPolicy
@@ -851,7 +936,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesRefs
@@ -868,7 +955,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesRefs
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderCatalogTargetTablesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelectorPolicy
@@ -881,7 +970,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of CatalogTable in glue to populate tables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelector
@@ -902,7 +993,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderCatalogTarget
@@ -943,7 +1036,9 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTarget
     [JsonPropertyName("tablesSelector")]
     public V1beta1CrawlerSpecInitProviderCatalogTargetTablesSelector? TablesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy
@@ -956,7 +1051,9 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRef
@@ -973,7 +1070,9 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy
@@ -986,7 +1085,9 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelector
@@ -1007,7 +1108,9 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDeltaTarget
@@ -1028,7 +1131,9 @@ public partial class V1beta1CrawlerSpecInitProviderDeltaTarget
     [JsonPropertyName("writeManifest")]
     public bool? WriteManifest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderDynamodbTarget
@@ -1045,7 +1150,9 @@ public partial class V1beta1CrawlerSpecInitProviderDynamodbTarget
     [JsonPropertyName("scanRate")]
     public double? ScanRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderHudiTarget
@@ -1066,7 +1173,9 @@ public partial class V1beta1CrawlerSpecInitProviderHudiTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderIcebergTarget
@@ -1087,7 +1196,9 @@ public partial class V1beta1CrawlerSpecInitProviderIcebergTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicy
@@ -1100,7 +1211,9 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRef
@@ -1117,7 +1230,9 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy
@@ -1130,7 +1245,9 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelector
@@ -1151,7 +1268,9 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelec
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderJdbcTarget
@@ -1180,7 +1299,9 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTarget
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies Lake Formation configuration settings for the crawler. See Lake Formation Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderLakeFormationConfiguration
@@ -1193,7 +1314,9 @@ public partial class V1beta1CrawlerSpecInitProviderLakeFormationConfiguration
     [JsonPropertyName("useLakeFormationCredentials")]
     public bool? UseLakeFormationCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderLineageConfiguration
@@ -1202,7 +1325,9 @@ public partial class V1beta1CrawlerSpecInitProviderLineageConfiguration
     [JsonPropertyName("crawlerLineageSettings")]
     public string? CrawlerLineageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicy
@@ -1215,7 +1340,9 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRef
@@ -1232,7 +1359,9 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRe
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicy
@@ -1245,7 +1374,9 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelector
@@ -1266,7 +1397,9 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSe
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderMongodbTarget
@@ -1291,7 +1424,9 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTarget
     [JsonPropertyName("scanAll")]
     public bool? ScanAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderRecrawlPolicy
@@ -1300,7 +1435,9 @@ public partial class V1beta1CrawlerSpecInitProviderRecrawlPolicy
     [JsonPropertyName("recrawlBehavior")]
     public string? RecrawlBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderRoleRefPolicy
@@ -1313,7 +1450,9 @@ public partial class V1beta1CrawlerSpecInitProviderRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderRoleRef
@@ -1330,7 +1469,9 @@ public partial class V1beta1CrawlerSpecInitProviderRoleRef
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderRoleSelectorPolicy
@@ -1343,7 +1484,9 @@ public partial class V1beta1CrawlerSpecInitProviderRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderRoleSelector
@@ -1364,7 +1507,9 @@ public partial class V1beta1CrawlerSpecInitProviderRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1CrawlerSpecInitProviderRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderS3Target
@@ -1393,7 +1538,9 @@ public partial class V1beta1CrawlerSpecInitProviderS3Target
     [JsonPropertyName("sampleSize")]
     public double? SampleSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for the crawler's update and deletion behavior. See Schema Change Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProviderSchemaChangePolicy
@@ -1406,7 +1553,9 @@ public partial class V1beta1CrawlerSpecInitProviderSchemaChangePolicy
     [JsonPropertyName("updateBehavior")]
     public string? UpdateBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecInitProvider
@@ -1511,7 +1660,9 @@ public partial class V1beta1CrawlerSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecProviderConfigRef
@@ -1524,7 +1675,9 @@ public partial class V1beta1CrawlerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpecWriteConnectionSecretToRef
@@ -1533,7 +1686,9 @@ public partial class V1beta1CrawlerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CrawlerSpec defines the desired state of Crawler</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerSpec
@@ -1558,7 +1713,9 @@ public partial class V1beta1CrawlerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CrawlerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderCatalogTarget
@@ -1583,7 +1740,9 @@ public partial class V1beta1CrawlerStatusAtProviderCatalogTarget
     [JsonPropertyName("tables")]
     public IList<string>? Tables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderDeltaTarget
@@ -1604,7 +1763,9 @@ public partial class V1beta1CrawlerStatusAtProviderDeltaTarget
     [JsonPropertyName("writeManifest")]
     public bool? WriteManifest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderDynamodbTarget
@@ -1621,7 +1782,9 @@ public partial class V1beta1CrawlerStatusAtProviderDynamodbTarget
     [JsonPropertyName("scanRate")]
     public double? ScanRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderHudiTarget
@@ -1642,7 +1805,9 @@ public partial class V1beta1CrawlerStatusAtProviderHudiTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderIcebergTarget
@@ -1663,7 +1828,9 @@ public partial class V1beta1CrawlerStatusAtProviderIcebergTarget
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderJdbcTarget
@@ -1684,7 +1851,9 @@ public partial class V1beta1CrawlerStatusAtProviderJdbcTarget
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies Lake Formation configuration settings for the crawler. See Lake Formation Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderLakeFormationConfiguration
@@ -1697,7 +1866,9 @@ public partial class V1beta1CrawlerStatusAtProviderLakeFormationConfiguration
     [JsonPropertyName("useLakeFormationCredentials")]
     public bool? UseLakeFormationCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderLineageConfiguration
@@ -1706,7 +1877,9 @@ public partial class V1beta1CrawlerStatusAtProviderLineageConfiguration
     [JsonPropertyName("crawlerLineageSettings")]
     public string? CrawlerLineageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderMongodbTarget
@@ -1723,7 +1896,9 @@ public partial class V1beta1CrawlerStatusAtProviderMongodbTarget
     [JsonPropertyName("scanAll")]
     public bool? ScanAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderRecrawlPolicy
@@ -1732,7 +1907,9 @@ public partial class V1beta1CrawlerStatusAtProviderRecrawlPolicy
     [JsonPropertyName("recrawlBehavior")]
     public string? RecrawlBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderS3Target
@@ -1761,7 +1938,9 @@ public partial class V1beta1CrawlerStatusAtProviderS3Target
     [JsonPropertyName("sampleSize")]
     public double? SampleSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for the crawler's update and deletion behavior. See Schema Change Policy below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProviderSchemaChangePolicy
@@ -1774,7 +1953,9 @@ public partial class V1beta1CrawlerStatusAtProviderSchemaChangePolicy
     [JsonPropertyName("updateBehavior")]
     public string? UpdateBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusAtProvider
@@ -1879,7 +2060,9 @@ public partial class V1beta1CrawlerStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatusConditions
@@ -1908,7 +2091,9 @@ public partial class V1beta1CrawlerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CrawlerStatus defines the observed state of Crawler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CrawlerStatus
@@ -1925,7 +2110,9 @@ public partial class V1beta1CrawlerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Crawler is the Schema for the Crawlers API. Manages a Glue Crawler</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1955,3 +2142,4 @@ public partial class V1beta1Crawler : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1CrawlerStatus? Status { get; set; }
 }
+#nullable disable

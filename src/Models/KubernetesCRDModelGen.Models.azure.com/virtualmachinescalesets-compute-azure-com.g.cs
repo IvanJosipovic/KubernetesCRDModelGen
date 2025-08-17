@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachineScaleSet.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1api20220301storageVirtualMachineScaleSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AdditionalCapabilities Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecAdditionalCapabilities
@@ -50,7 +53,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecAdditionalCap
     [JsonPropertyName("ultraSSDEnabled")]
     public bool? UltraSSDEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutomaticRepairsPolicy Specifies the configuration parameters for automatic repairs on the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecAutomaticRepairsPolicy
@@ -71,7 +76,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecAutomaticRepa
     [JsonPropertyName("repairAction")]
     public string? RepairAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecExtendedLocation
@@ -88,7 +95,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecExtendedLocat
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroupReference
@@ -109,7 +118,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroupRefe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroup
@@ -122,7 +133,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroup
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecHostGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentitiesReference
@@ -143,7 +156,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentities
@@ -156,7 +171,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserA
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity Identity for the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentity
@@ -173,7 +190,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpecConfigMapExpressions
@@ -190,7 +209,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpecC
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpecSecretExpressions
@@ -207,7 +228,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpecS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpec
@@ -224,7 +247,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecOwner
@@ -237,7 +262,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecPlan
@@ -262,7 +289,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecPlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlacementGroupReference
@@ -283,7 +312,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlac
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlacementGroup
@@ -296,7 +327,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecProximityPlac
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecProximityPlacementGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ScaleInPolicy Describes a scale-in policy for a virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecScaleInPolicy
@@ -313,7 +346,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecScaleInPolicy
     [JsonPropertyName("rules")]
     public IList<string>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Sku Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecSku
@@ -334,7 +369,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SpotRestorePolicy Specifies the Spot-Try-Restore properties for the virtual machine scale set. With this property customer can enable or disable automatic restore of the evicted Spot VMSS VM instances opportunistically based on capacity availability and pricing constraint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecSpotRestorePolicy
@@ -351,7 +388,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecSpotRestorePo
     [JsonPropertyName("restoreTimeout")]
     public string? RestoreTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutomaticOSUpgradePolicy The configuration parameters used for performing automatic OS upgrade.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicyAutomaticOSUpgradePolicy
@@ -372,7 +411,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
     [JsonPropertyName("useRollingUpgradePolicy")]
     public bool? UseRollingUpgradePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RollingUpgradePolicy The configuration parameters used while performing a rolling upgrade.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicyRollingUpgradePolicy
@@ -405,7 +446,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
     [JsonPropertyName("prioritizeUnhealthyInstances")]
     public bool? PrioritizeUnhealthyInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UpgradePolicy Describes an upgrade policy - automatic, manual, or rolling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
@@ -426,7 +469,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicy
     [JsonPropertyName("rollingUpgradePolicy")]
     public V1api20220301storageVirtualMachineScaleSetSpecUpgradePolicyRollingUpgradePolicy? RollingUpgradePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PackageReferenceReference: Specifies the GalleryApplicationVersion resource id on the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{application}/versions/{version}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfileGalleryApplicationsPackageReferenceReference
@@ -447,7 +492,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMGalleryApplication Specifies the required information to reference a compute gallery application version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfileGalleryApplications
@@ -480,7 +527,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("treatFailureAsDeploymentFailure")]
     public bool? TreatFailureAsDeploymentFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApplicationProfile Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfile
@@ -493,7 +542,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("galleryApplications")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileApplicationProfileGalleryApplications>? GalleryApplications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.BillingProfile Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileBillingProfile
@@ -506,7 +557,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("maxPrice")]
     public double? MaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroupReference
@@ -527,7 +580,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroup
@@ -540,7 +595,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CapacityReservationProfile The parameters of a capacity reservation Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservation
@@ -553,7 +610,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("capacityReservationGroup")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileCapacityReservationCapacityReservationGroup? CapacityReservationGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.BootDiagnostics Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfileBootDiagnostics
@@ -570,7 +629,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("storageUri")]
     public string? StorageUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.DiagnosticsProfile Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfile
@@ -583,7 +644,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("bootDiagnostics")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfileBootDiagnostics? BootDiagnostics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettings
@@ -592,7 +655,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVaultReference
@@ -613,7 +678,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault
@@ -626,7 +693,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVaultReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVault
@@ -643,7 +712,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("sourceVault")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtension Describes a Virtual Machine Scale Set Extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensions
@@ -700,7 +771,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtensionProfile Describes a virtual machine scale set extension profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfile
@@ -717,7 +790,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("extensionsTimeBudget")]
     public string? ExtensionsTimeBudget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMSizeProperties Specifies VM Size Property settings on the virtual machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileHardwareProfileVmSizeProperties
@@ -734,7 +809,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("vCPUsPerCore")]
     public int? VCPUsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetHardwareProfile Specifies the hardware settings for the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileHardwareProfile
@@ -747,7 +824,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("vmSizeProperties")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileHardwareProfileVmSizeProperties? VmSizeProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileHealthProbeReference
@@ -768,7 +847,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiEntityReference The API entity reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileHealthProbe
@@ -781,7 +862,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileHealthProbeReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfigurationDnsSettings Describes a virtual machines scale sets network configuration's DNS settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsDnsSettings
@@ -794,7 +877,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("dnsServers")]
     public IList<string>? DnsServers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPoolsReference
@@ -815,7 +900,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
@@ -828,7 +915,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroupsReference
@@ -849,7 +938,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
@@ -862,7 +953,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroupsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPoolsReference
@@ -883,7 +976,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
@@ -896,7 +991,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPoolsReference
@@ -917,7 +1014,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPools
@@ -930,7 +1029,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings Describes a virtual machines scale sets network configuration's DNS settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
@@ -943,7 +1044,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("domainNameLabel")]
     public string? DomainNameLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIpTag Contains the IP tag associated with the public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
@@ -960,7 +1063,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefixReference
@@ -981,7 +1086,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
@@ -994,7 +1101,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefixReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PublicIPAddressSku Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
@@ -1011,7 +1120,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfiguration Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
@@ -1052,7 +1163,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("sku")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku? Sku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsReference
@@ -1073,7 +1186,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnetReference
@@ -1094,7 +1209,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiEntityReference The API entity reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
@@ -1107,7 +1224,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIPConfiguration Describes a virtual machine scale set network profile's IP configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
@@ -1156,7 +1275,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("subnet")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroupReference
@@ -1177,7 +1298,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
@@ -1190,7 +1313,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsReference
@@ -1211,7 +1336,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfiguration Describes a virtual machine scale set network profile's network configurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations
@@ -1260,7 +1387,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkProfile Describes a virtual machine scale set network profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfile
@@ -1281,7 +1410,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("networkInterfaceConfigurations")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations>? NetworkInterfaceConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileAdminPassword
@@ -1294,7 +1425,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
@@ -1307,7 +1440,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("rebootSetting")]
     public string? RebootSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxPatchSettings Specifies settings related to VM Guest Patching on Linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationPatchSettings
@@ -1328,7 +1463,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("patchMode")]
     public string? PatchMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SshPublicKeySpec Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys
@@ -1345,7 +1482,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SshConfiguration SSH configuration for Linux based VMs running on Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSsh
@@ -1358,7 +1497,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("publicKeys")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxConfiguration Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfiguration
@@ -1383,7 +1524,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("ssh")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileLinuxConfigurationSsh? Ssh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsSourceVaultReference
@@ -1404,7 +1547,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsSourceVault
@@ -1417,7 +1562,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsSourceVaultReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VaultCertificate Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsVaultCertificates
@@ -1434,7 +1581,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("certificateUrl")]
     public string? CertificateUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VaultSecretGroup Describes a set of certificates which are all in the same Key Vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecrets
@@ -1451,7 +1600,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("vaultCertificates")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileSecretsVaultCertificates>? VaultCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AdditionalUnattendContent Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationAdditionalUnattendContent
@@ -1476,7 +1627,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("settingName")]
     public string? SettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
@@ -1489,7 +1642,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("rebootSetting")]
     public string? RebootSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PatchSettings Specifies settings related to VM Guest Patching on Windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationPatchSettings
@@ -1514,7 +1669,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("patchMode")]
     public string? PatchMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WinRMListener Describes Protocol and thumbprint of Windows Remote Management listener</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners
@@ -1531,7 +1688,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WinRMConfiguration Describes Windows Remote Management configuration of the VM</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRM
@@ -1544,7 +1703,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("listeners")]
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners>? Listeners { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WindowsConfiguration Specifies Windows operating system settings on the virtual machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfiguration
@@ -1577,7 +1738,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("winRM")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfigurationWinRM? WinRM { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSProfile Describes a virtual machine scale set OS profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfile
@@ -1618,7 +1781,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("windowsConfiguration")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileWindowsConfiguration? WindowsConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.TerminateNotificationProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile
@@ -1635,7 +1800,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("notBeforeTimeout")]
     public string? NotBeforeTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ScheduledEventsProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileScheduledEventsProfile
@@ -1648,7 +1815,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("terminateNotificationProfile")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile? TerminateNotificationProfile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UefiSettings Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileSecurityProfileUefiSettings
@@ -1665,7 +1834,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("vTpmEnabled")]
     public bool? VTpmEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SecurityProfile Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileSecurityProfile
@@ -1686,7 +1857,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("uefiSettings")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileSecurityProfileUefiSettings? UefiSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSetReference
@@ -1707,7 +1880,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSet
@@ -1720,7 +1895,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSetReference
@@ -1741,7 +1918,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
@@ -1754,7 +1933,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfile
@@ -1771,7 +1952,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("securityEncryptionType")]
     public string? SecurityEncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters Describes the parameters of a ScaleSet managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisksManagedDisk
@@ -1792,7 +1975,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetDataDisk Describes a virtual machine scale set data disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileDataDisks
@@ -1841,7 +2026,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileImageReferenceReference
@@ -1862,7 +2049,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileImageReference
@@ -1899,7 +2088,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.DiffDiskSettings Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskDiffDiskSettings
@@ -1916,7 +2107,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskImage
@@ -1929,7 +2122,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSetReference
@@ -1950,7 +2145,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSet
@@ -1963,7 +2160,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSetReference
@@ -1984,7 +2183,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
@@ -1997,7 +2198,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfile
@@ -2014,7 +2217,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("securityEncryptionType")]
     public string? SecurityEncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters Describes the parameters of a ScaleSet managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDiskManagedDisk
@@ -2035,7 +2240,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSDisk Describes a virtual machine scale set operating system disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDisk
@@ -2088,7 +2295,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetStorageProfile Describes a virtual machine scale set storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfile
@@ -2109,7 +2318,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("osDisk")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileStorageProfileOsDisk? OsDisk { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetVMProfile Describes a virtual machine scale set virtual machine profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfile
@@ -2178,7 +2389,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpec
@@ -2287,7 +2500,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AdditionalCapabilities_STATUS Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusAdditionalCapabilities
@@ -2304,7 +2519,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusAdditionalC
     [JsonPropertyName("ultraSSDEnabled")]
     public bool? UltraSSDEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutomaticRepairsPolicy_STATUS Specifies the configuration parameters for automatic repairs on the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusAutomaticRepairsPolicy
@@ -2325,7 +2542,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusAutomaticRe
     [JsonPropertyName("repairAction")]
     public string? RepairAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusConditions
@@ -2358,7 +2577,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusExtendedLocation
@@ -2375,7 +2596,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusExtendedLoc
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusHostGroup
@@ -2388,7 +2611,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusHostGroup
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity_UserAssignedIdentities_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentityUserAssignedIdentities
@@ -2405,7 +2630,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentityUse
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIdentity_STATUS Identity for the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentity
@@ -2430,7 +2657,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20220301storageVirtualMachineScaleSetStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Plan_STATUS Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusPlan
@@ -2455,7 +2684,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusPlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusProximityPlacementGroup
@@ -2468,7 +2699,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusProximityPl
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ScaleInPolicy_STATUS Describes a scale-in policy for a virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusScaleInPolicy
@@ -2485,7 +2718,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusScaleInPoli
     [JsonPropertyName("rules")]
     public IList<string>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Sku_STATUS Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusSku
@@ -2506,7 +2741,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SpotRestorePolicy_STATUS Specifies the Spot-Try-Restore properties for the virtual machine scale set. With this property customer can enable or disable automatic restore of the evicted Spot VMSS VM instances opportunistically based on capacity availability and pricing constraint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusSpotRestorePolicy
@@ -2523,7 +2760,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusSpotRestore
     [JsonPropertyName("restoreTimeout")]
     public string? RestoreTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutomaticOSUpgradePolicy_STATUS The configuration parameters used for performing automatic OS upgrade.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicyAutomaticOSUpgradePolicy
@@ -2544,7 +2783,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
     [JsonPropertyName("useRollingUpgradePolicy")]
     public bool? UseRollingUpgradePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RollingUpgradePolicy_STATUS The configuration parameters used while performing a rolling upgrade.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicyRollingUpgradePolicy
@@ -2577,7 +2818,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
     [JsonPropertyName("prioritizeUnhealthyInstances")]
     public bool? PrioritizeUnhealthyInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UpgradePolicy_STATUS Describes an upgrade policy - automatic, manual, or rolling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicy
@@ -2598,7 +2841,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusUpgradePoli
     [JsonPropertyName("rollingUpgradePolicy")]
     public V1api20220301storageVirtualMachineScaleSetStatusUpgradePolicyRollingUpgradePolicy? RollingUpgradePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMGalleryApplication_STATUS Specifies the required information to reference a compute gallery application version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileApplicationProfileGalleryApplications
@@ -2631,7 +2876,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("treatFailureAsDeploymentFailure")]
     public bool? TreatFailureAsDeploymentFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApplicationProfile_STATUS Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileApplicationProfile
@@ -2644,7 +2891,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("galleryApplications")]
     public IList<V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileApplicationProfileGalleryApplications>? GalleryApplications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.BillingProfile_STATUS Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileBillingProfile
@@ -2657,7 +2906,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("maxPrice")]
     public double? MaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileCapacityReservationCapacityReservationGroup
@@ -2670,7 +2921,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CapacityReservationProfile_STATUS The parameters of a capacity reservation Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileCapacityReservation
@@ -2683,7 +2936,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("capacityReservationGroup")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileCapacityReservationCapacityReservationGroup? CapacityReservationGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.BootDiagnostics_STATUS Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileDiagnosticsProfileBootDiagnostics
@@ -2700,7 +2955,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("storageUri")]
     public string? StorageUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.DiagnosticsProfile_STATUS Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileDiagnosticsProfile
@@ -2713,7 +2970,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("bootDiagnostics")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileDiagnosticsProfileBootDiagnostics? BootDiagnostics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault
@@ -2726,7 +2985,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVault
@@ -2743,7 +3004,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("sourceVault")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensionsProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtension_STATUS Describes a Virtual Machine Scale Set Extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfileExtensions
@@ -2808,7 +3071,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetExtensionProfile_STATUS Describes a virtual machine scale set extension profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileExtensionProfile
@@ -2825,7 +3090,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("extensionsTimeBudget")]
     public string? ExtensionsTimeBudget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMSizeProperties_STATUS Specifies VM Size Property settings on the virtual machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileHardwareProfileVmSizeProperties
@@ -2842,7 +3109,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("vCPUsPerCore")]
     public int? VCPUsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetHardwareProfile_STATUS Specifies the hardware settings for the virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileHardwareProfile
@@ -2855,7 +3124,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("vmSizeProperties")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileHardwareProfileVmSizeProperties? VmSizeProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiEntityReference_STATUS The API entity reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileHealthProbe
@@ -2868,7 +3139,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfigurationDnsSettings_STATUS Describes a virtual machines scale sets network configuration's DNS settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsDnsSettings
@@ -2881,7 +3154,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("dnsServers")]
     public IList<string>? DnsServers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
@@ -2894,7 +3169,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
@@ -2907,7 +3184,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
@@ -2920,7 +3199,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerInboundNatPools
@@ -2933,7 +3214,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings_STATUS Describes a virtual machines scale sets network configuration's DNS settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
@@ -2946,7 +3229,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("domainNameLabel")]
     public string? DomainNameLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIpTag_STATUS Contains the IP tag associated with the public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
@@ -2963,7 +3248,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
@@ -2976,7 +3263,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PublicIPAddressSku_STATUS Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
@@ -2993,7 +3282,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetPublicIPAddressConfiguration_STATUS Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
@@ -3034,7 +3325,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("sku")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku? Sku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiEntityReference_STATUS The API entity reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
@@ -3047,7 +3340,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetIPConfiguration_STATUS Describes a virtual machine scale set network profile's IP configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
@@ -3096,7 +3391,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("subnet")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
@@ -3109,7 +3406,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkConfiguration_STATUS Describes a virtual machine scale set network profile's network configurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations
@@ -3158,7 +3457,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("primary")]
     public bool? Primary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetNetworkProfile_STATUS Describes a virtual machine scale set network profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfile
@@ -3179,7 +3480,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("networkInterfaceConfigurations")]
     public IList<V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations>? NetworkInterfaceConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
@@ -3192,7 +3495,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("rebootSetting")]
     public string? RebootSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxPatchSettings_STATUS Specifies settings related to VM Guest Patching on Linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationPatchSettings
@@ -3213,7 +3518,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("patchMode")]
     public string? PatchMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SshPublicKey_STATUS Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys
@@ -3230,7 +3537,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SshConfiguration_STATUS SSH configuration for Linux based VMs running on Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSsh
@@ -3243,7 +3552,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("publicKeys")]
     public IList<V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSshPublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.LinuxConfiguration_STATUS Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfiguration
@@ -3268,7 +3579,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("ssh")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileLinuxConfigurationSsh? Ssh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecretsSourceVault
@@ -3281,7 +3594,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VaultCertificate_STATUS Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecretsVaultCertificates
@@ -3298,7 +3613,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("certificateUrl")]
     public string? CertificateUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VaultSecretGroup_STATUS Describes a set of certificates which are all in the same Key Vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecrets
@@ -3315,7 +3632,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("vaultCertificates")]
     public IList<V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileSecretsVaultCertificates>? VaultCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AdditionalUnattendContent_STATUS Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationAdditionalUnattendContent
@@ -3340,7 +3659,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("settingName")]
     public string? SettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
@@ -3353,7 +3674,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("rebootSetting")]
     public string? RebootSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PatchSettings_STATUS Specifies settings related to VM Guest Patching on Windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationPatchSettings
@@ -3378,7 +3701,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("patchMode")]
     public string? PatchMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WinRMListener_STATUS Describes Protocol and thumbprint of Windows Remote Management listener</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners
@@ -3395,7 +3720,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WinRMConfiguration_STATUS Describes Windows Remote Management configuration of the VM</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRM
@@ -3408,7 +3735,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("listeners")]
     public IList<V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRMListeners>? Listeners { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.WindowsConfiguration_STATUS Specifies Windows operating system settings on the virtual machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfiguration
@@ -3441,7 +3770,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("winRM")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfigurationWinRM? WinRM { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSProfile_STATUS Describes a virtual machine scale set OS profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfile
@@ -3478,7 +3809,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("windowsConfiguration")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileOsProfileWindowsConfiguration? WindowsConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.TerminateNotificationProfile_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile
@@ -3495,7 +3828,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("notBeforeTimeout")]
     public string? NotBeforeTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ScheduledEventsProfile_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileScheduledEventsProfile
@@ -3508,7 +3843,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("terminateNotificationProfile")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileScheduledEventsProfileTerminateNotificationProfile? TerminateNotificationProfile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UefiSettings_STATUS Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileSecurityProfileUefiSettings
@@ -3525,7 +3862,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("vTpmEnabled")]
     public bool? VTpmEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SecurityProfile_STATUS Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileSecurityProfile
@@ -3546,7 +3885,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("uefiSettings")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileSecurityProfileUefiSettings? UefiSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskDiskEncryptionSet
@@ -3559,7 +3900,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
@@ -3572,7 +3915,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDiskSecurityProfile
@@ -3589,7 +3934,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("securityEncryptionType")]
     public string? SecurityEncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters_STATUS Describes the parameters of a ScaleSet managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisksManagedDisk
@@ -3610,7 +3957,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetDataDisk_STATUS Describes a virtual machine scale set data disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileDataDisks
@@ -3659,7 +4008,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ImageReference_STATUS Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileImageReference
@@ -3700,7 +4051,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.DiffDiskSettings_STATUS Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskDiffDiskSettings
@@ -3717,7 +4070,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskImage
@@ -3730,7 +4085,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskDiskEncryptionSet
@@ -3743,7 +4100,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
@@ -3756,7 +4115,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDiskSecurityProfile
@@ -3773,7 +4134,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("securityEncryptionType")]
     public string? SecurityEncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetManagedDiskParameters_STATUS Describes the parameters of a ScaleSet managed disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDiskManagedDisk
@@ -3794,7 +4157,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetOSDisk_STATUS Describes a virtual machine scale set operating system disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDisk
@@ -3847,7 +4212,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetStorageProfile_STATUS Describes a virtual machine scale set storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfile
@@ -3868,7 +4235,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("osDisk")]
     public V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfileStorageProfileOsDisk? OsDisk { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetVMProfile_STATUS Describes a virtual machine scale set virtual machine profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMachineProfile
@@ -3937,7 +4306,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusVirtualMach
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet_STATUS Describes a Virtual Machine Scale Set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatus
@@ -4058,7 +4429,9 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatus
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineScaleSet Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachineScaleSet.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4088,3 +4461,4 @@ public partial class V1api20220301storageVirtualMachineScaleSet : IKubernetesObj
     [JsonPropertyName("status")]
     public V1api20220301storageVirtualMachineScaleSetStatus? Status { get; set; }
 }
+#nullable disable

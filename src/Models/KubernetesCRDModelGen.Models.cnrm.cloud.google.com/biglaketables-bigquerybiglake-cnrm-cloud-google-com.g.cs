@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquerybiglake.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigLakeTable is the Schema for the BigLakeTable API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BigLakeTableList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1BigLakeTable> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The BigLakeCatalog that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecCatalogRef
@@ -50,7 +53,9 @@ public partial class V1alpha1BigLakeTableSpecCatalogRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The parent resource where this table will be created. Format: projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecDatabaseRef
@@ -67,7 +72,9 @@ public partial class V1alpha1BigLakeTableSpecDatabaseRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Serializer and deserializer information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecHiveOptionsStorageDescriptorSerdeInfo
@@ -76,7 +83,9 @@ public partial class V1alpha1BigLakeTableSpecHiveOptionsStorageDescriptorSerdeIn
     [JsonPropertyName("serializationLib")]
     public string? SerializationLib { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stores physical storage information of the data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecHiveOptionsStorageDescriptor
@@ -97,7 +106,9 @@ public partial class V1alpha1BigLakeTableSpecHiveOptionsStorageDescriptor
     [JsonPropertyName("serdeInfo")]
     public V1alpha1BigLakeTableSpecHiveOptionsStorageDescriptorSerdeInfo? SerdeInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options of a Hive table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecHiveOptions
@@ -114,7 +125,9 @@ public partial class V1alpha1BigLakeTableSpecHiveOptions
     [JsonPropertyName("tableType")]
     public string? TableType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpecProjectRef
@@ -135,7 +148,9 @@ public partial class V1alpha1BigLakeTableSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigLakeTableSpec defines the desired state of BigLakeTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableSpec
@@ -172,7 +187,9 @@ public partial class V1alpha1BigLakeTableSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableStatusConditions
@@ -197,7 +214,9 @@ public partial class V1alpha1BigLakeTableStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableStatusObservedState
@@ -218,7 +237,9 @@ public partial class V1alpha1BigLakeTableStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigLakeTableStatus defines the config connector machine state of BigLakeTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeTableStatus
@@ -239,7 +260,9 @@ public partial class V1alpha1BigLakeTableStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BigLakeTableStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigLakeTable is the Schema for the BigLakeTable API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -269,3 +292,4 @@ public partial class V1alpha1BigLakeTable : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1BigLakeTableStatus? Status { get; set; }
 }
+#nullable disable

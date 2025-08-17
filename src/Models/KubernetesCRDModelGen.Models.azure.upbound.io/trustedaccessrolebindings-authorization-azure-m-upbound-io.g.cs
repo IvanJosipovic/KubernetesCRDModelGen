@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.m.upbound.io;
+#nullable enable
 /// <summary>TrustedAccessRoleBinding is the Schema for the TrustedAccessRoleBindings API. Manages a Kubernetes Cluster Trusted Access Role Binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrustedAccessRoleBindingList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1TrustedAccessRoleBinding> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClu
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClu
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecForProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in machinelearningservices to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourc
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in machinelearningservices to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourc
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecForProvider
     [JsonPropertyName("sourceResourceIdSelector")]
     public V1beta1TrustedAccessRoleBindingSpecForProviderSourceResourceIdSelector? SourceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in machinelearningservices to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResour
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in machinelearningservices to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResour
     [JsonPropertyName("policy")]
     public V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecInitProvider
@@ -279,7 +308,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecInitProvider
     [JsonPropertyName("sourceResourceIdSelector")]
     public V1beta1TrustedAccessRoleBindingSpecInitProviderSourceResourceIdSelector? SourceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecProviderConfigRef
@@ -292,7 +323,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpecWriteConnectionSecretToRef
@@ -301,7 +334,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrustedAccessRoleBindingSpec defines the desired state of TrustedAccessRoleBinding</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingSpec
@@ -326,7 +361,9 @@ public partial class V1beta1TrustedAccessRoleBindingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrustedAccessRoleBindingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingStatusAtProvider
@@ -347,7 +384,9 @@ public partial class V1beta1TrustedAccessRoleBindingStatusAtProvider
     [JsonPropertyName("sourceResourceId")]
     public string? SourceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingStatusConditions
@@ -376,7 +415,9 @@ public partial class V1beta1TrustedAccessRoleBindingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrustedAccessRoleBindingStatus defines the observed state of TrustedAccessRoleBinding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustedAccessRoleBindingStatus
@@ -393,7 +434,9 @@ public partial class V1beta1TrustedAccessRoleBindingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrustedAccessRoleBinding is the Schema for the TrustedAccessRoleBindings API. Manages a Kubernetes Cluster Trusted Access Role Binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -423,3 +466,4 @@ public partial class V1beta1TrustedAccessRoleBinding : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1TrustedAccessRoleBindingStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ExpressRouteCircuitPeering is the Schema for the ExpressRouteCircuitPeerings API. Manages an ExpressRoute Circuit Peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1ExpressRouteCircuitPeering> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRout
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExpressRouteCircuit in network to populate expressRouteCircuitName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRout
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRout
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExpressRouteCircuit in network to populate expressRouteCircuitName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRout
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitPeeringSpecForProviderExpressRouteCircuitNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderIpv6MicrosoftPeering
@@ -118,7 +129,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderIpv6Microso
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipv6 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderIpv6
@@ -143,7 +156,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderIpv6
     [JsonPropertyName("secondaryPeerAddressPrefix")]
     public string? SecondaryPeerAddressPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering_config block as defined below. Required when peering_type is set to MicrosoftPeering and config for IPv4.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderMicrosoftPeeringConfig
@@ -164,7 +179,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderMicrosoftPe
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameRefPolicy
@@ -177,7 +194,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameRef
@@ -194,7 +213,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameSelectorPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameSelector
@@ -228,7 +251,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitPeeringSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared key. Can be a maximum of 25 characters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderSharedKeySecretRef
@@ -241,7 +266,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProviderSharedKeySe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecForProvider
@@ -306,7 +333,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecForProvider
     [JsonPropertyName("vlanId")]
     public double? VlanId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderIpv6MicrosoftPeering
@@ -327,7 +356,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderIpv6Micros
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipv6 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderIpv6
@@ -352,7 +383,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderIpv6
     [JsonPropertyName("secondaryPeerAddressPrefix")]
     public string? SecondaryPeerAddressPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering_config block as defined below. Required when peering_type is set to MicrosoftPeering and config for IPv4.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderMicrosoftPeeringConfig
@@ -373,7 +406,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderMicrosoftP
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared key. Can be a maximum of 25 characters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderSharedKeySecretRef
@@ -386,7 +421,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProviderSharedKeyS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProvider
@@ -427,7 +464,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecInitProvider
     [JsonPropertyName("vlanId")]
     public double? VlanId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecProviderConfigRef
@@ -440,7 +479,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpecWriteConnectionSecretToRef
@@ -449,7 +490,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitPeeringSpec defines the desired state of ExpressRouteCircuitPeering</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringSpec
@@ -474,7 +517,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExpressRouteCircuitPeeringSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderIpv6MicrosoftPeering
@@ -495,7 +540,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderIpv6Micros
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ipv6 block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderIpv6
@@ -520,7 +567,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderIpv6
     [JsonPropertyName("secondaryPeerAddressPrefix")]
     public string? SecondaryPeerAddressPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A microsoft_peering_config block as defined below. Required when peering_type is set to MicrosoftPeering and config for IPv4.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderMicrosoftPeeringConfig
@@ -541,7 +590,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProviderMicrosoftP
     [JsonPropertyName("routingRegistryName")]
     public string? RoutingRegistryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProvider
@@ -606,7 +657,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatusAtProvider
     [JsonPropertyName("vlanId")]
     public double? VlanId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatusConditions
@@ -635,7 +688,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitPeeringStatus defines the observed state of ExpressRouteCircuitPeering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitPeeringStatus
@@ -652,7 +707,9 @@ public partial class V1beta1ExpressRouteCircuitPeeringStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitPeering is the Schema for the ExpressRouteCircuitPeerings API. Manages an ExpressRoute Circuit Peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -682,3 +739,4 @@ public partial class V1beta1ExpressRouteCircuitPeering : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1ExpressRouteCircuitPeeringStatus? Status { get; set; }
 }
+#nullable disable

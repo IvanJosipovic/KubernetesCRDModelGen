@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1BGPConfigurationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1BGPConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecCommunities
@@ -46,7 +49,9 @@ public partial class V1BGPConfigurationSpecCommunities
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecNodeMeshPasswordSecretKeyRef
@@ -63,7 +68,9 @@ public partial class V1BGPConfigurationSpecNodeMeshPasswordSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecNodeMeshPassword
@@ -72,7 +79,9 @@ public partial class V1BGPConfigurationSpecNodeMeshPassword
     [JsonPropertyName("secretKeyRef")]
     public V1BGPConfigurationSpecNodeMeshPasswordSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecPrefixAdvertisements
@@ -85,7 +94,9 @@ public partial class V1BGPConfigurationSpecPrefixAdvertisements
     [JsonPropertyName("communities")]
     public IList<string>? Communities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceClusterIPs
@@ -94,7 +105,9 @@ public partial class V1BGPConfigurationSpecServiceClusterIPs
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceExternalIPs
@@ -103,7 +116,9 @@ public partial class V1BGPConfigurationSpecServiceExternalIPs
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpecServiceLoadBalancerIPs
@@ -112,7 +127,9 @@ public partial class V1BGPConfigurationSpecServiceLoadBalancerIPs
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPConfigurationSpec
@@ -181,7 +198,9 @@ public partial class V1BGPConfigurationSpec
     [JsonPropertyName("serviceLoadBalancerIPs")]
     public IList<V1BGPConfigurationSpecServiceLoadBalancerIPs>? ServiceLoadBalancerIPs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -207,3 +226,4 @@ public partial class V1BGPConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("spec")]
     public V1BGPConfigurationSpec? Spec { get; set; }
 }
+#nullable disable

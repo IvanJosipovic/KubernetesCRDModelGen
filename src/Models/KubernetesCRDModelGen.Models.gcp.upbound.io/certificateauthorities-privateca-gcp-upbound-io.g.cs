@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.gcp.upbound.io;
+#nullable enable
 /// <summary>CertificateAuthority is the Schema for the CertificateAuthoritys API. A CertificateAuthority represents an individual Certificate Authority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateAuthorityList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateAuthority> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubject
@@ -70,7 +73,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     [JsonPropertyName("streetAddress")]
     public string? StreetAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubjectAltName
@@ -91,7 +96,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfig
@@ -104,7 +111,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     [JsonPropertyName("subjectAltName")]
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectKeyId
@@ -113,7 +122,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectKeyI
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigAdditionalExtensionsObjectId
@@ -122,7 +133,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigA
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigAdditionalExtensions
@@ -139,7 +152,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigCaOptions
@@ -160,7 +175,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigC
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageBaseKeyUsage
@@ -201,7 +218,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageExtendedKeyUsage
@@ -230,7 +249,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
@@ -239,7 +260,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsage
@@ -256,7 +279,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigNameConstraints
@@ -297,7 +322,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigN
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigPolicyIds
@@ -306,7 +333,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigP
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509Config
@@ -335,7 +364,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509Config
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderConfig
@@ -352,7 +383,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfig
     [JsonPropertyName("x509Config")]
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509Config>? X509Config { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderKeySpec
@@ -365,7 +398,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderKeySpec
     [JsonPropertyName("cloudKmsKeyVersion")]
     public string? CloudKmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolRefPolicy
@@ -378,7 +413,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CAPool in privateca to populate pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolRef
@@ -391,7 +428,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecForProviderPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolicy
@@ -404,7 +443,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CAPool in privateca to populate pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelector
@@ -421,7 +462,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRefPolicy
@@ -434,7 +477,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRef
@@ -447,7 +492,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelectorPolicy
@@ -460,7 +507,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelector
@@ -477,7 +526,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigPemIssuerChain
@@ -486,7 +537,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("pemCertificates")]
     public IList<string>? PemCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
@@ -507,7 +560,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     [JsonPropertyName("pemIssuerChain")]
     public IList<V1beta1CertificateAuthoritySpecForProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderUserDefinedAccessUrls
@@ -520,7 +575,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderUserDefinedAccess
     [JsonPropertyName("crlAccessUrls")]
     public IList<string>? CrlAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProvider
@@ -597,7 +654,9 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     [JsonPropertyName("userDefinedAccessUrls")]
     public IList<V1beta1CertificateAuthoritySpecForProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubject
@@ -634,7 +693,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     [JsonPropertyName("streetAddress")]
     public string? StreetAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubjectAltName
@@ -655,7 +716,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfig
@@ -668,7 +731,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     [JsonPropertyName("subjectAltName")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectKeyId
@@ -677,7 +742,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectKey
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigAdditionalExtensionsObjectId
@@ -686,7 +753,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigAdditionalExtensions
@@ -703,7 +772,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigCaOptions
@@ -724,7 +795,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageBaseKeyUsage
@@ -765,7 +838,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageExtendedKeyUsage
@@ -794,7 +869,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
@@ -803,7 +880,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsage
@@ -820,7 +899,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigNameConstraints
@@ -861,7 +942,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigPolicyIds
@@ -870,7 +953,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
@@ -899,7 +984,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfig
@@ -916,7 +1003,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfig
     [JsonPropertyName("x509Config")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509Config>? X509Config { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderKeySpec
@@ -929,7 +1018,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderKeySpec
     [JsonPropertyName("cloudKmsKeyVersion")]
     public string? CloudKmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRefPolicy
@@ -942,7 +1033,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRef
@@ -955,7 +1048,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelectorPolicy
@@ -968,7 +1063,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelector
@@ -985,7 +1082,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigPemIssuerChain
@@ -994,7 +1093,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("pemCertificates")]
     public IList<string>? PemCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfig
@@ -1015,7 +1116,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     [JsonPropertyName("pemIssuerChain")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderUserDefinedAccessUrls
@@ -1028,7 +1131,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderUserDefinedAcces
     [JsonPropertyName("crlAccessUrls")]
     public IList<string>? CrlAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProvider
@@ -1089,7 +1194,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProvider
     [JsonPropertyName("userDefinedAccessUrls")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
@@ -1102,7 +1209,9 @@ public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRef
@@ -1115,7 +1224,9 @@ public partial class V1beta1CertificateAuthoritySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
@@ -1128,7 +1239,9 @@ public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthoritySpec defines the desired state of CertificateAuthority</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpec
@@ -1157,7 +1270,9 @@ public partial class V1beta1CertificateAuthoritySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderAccessUrls
@@ -1170,7 +1285,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderAccessUrls
     [JsonPropertyName("crlAccessUrls")]
     public IList<string>? CrlAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubject
@@ -1207,7 +1324,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     [JsonPropertyName("streetAddress")]
     public string? StreetAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubjectAltName
@@ -1228,7 +1347,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfig
@@ -1241,7 +1362,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     [JsonPropertyName("subjectAltName")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectKeyId
@@ -1250,7 +1373,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectKey
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigAdditionalExtensionsObjectId
@@ -1259,7 +1384,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigAdditionalExtensions
@@ -1276,7 +1403,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigCaOptions
@@ -1297,7 +1426,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageBaseKeyUsage
@@ -1338,7 +1469,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageExtendedKeyUsage
@@ -1367,7 +1500,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
@@ -1376,7 +1511,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsage
@@ -1393,7 +1530,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigNameConstraints
@@ -1434,7 +1573,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigPolicyIds
@@ -1443,7 +1584,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
@@ -1472,7 +1615,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfig
@@ -1489,7 +1634,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfig
     [JsonPropertyName("x509Config")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509Config>? X509Config { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderKeySpec
@@ -1502,7 +1649,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderKeySpec
     [JsonPropertyName("cloudKmsKeyVersion")]
     public string? CloudKmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfigPemIssuerChain
@@ -1511,7 +1660,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfi
     [JsonPropertyName("pemCertificates")]
     public IList<string>? PemCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfig
@@ -1524,7 +1675,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfi
     [JsonPropertyName("pemIssuerChain")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderUserDefinedAccessUrls
@@ -1537,7 +1690,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderUserDefinedAcces
     [JsonPropertyName("crlAccessUrls")]
     public IList<string>? CrlAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProvider
@@ -1642,7 +1797,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     [JsonPropertyName("userDefinedAccessUrls")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusConditions
@@ -1671,7 +1828,9 @@ public partial class V1beta1CertificateAuthorityStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthorityStatus defines the observed state of CertificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatus
@@ -1688,7 +1847,9 @@ public partial class V1beta1CertificateAuthorityStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthority is the Schema for the CertificateAuthoritys API. A CertificateAuthority represents an individual Certificate Authority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1718,3 +1879,4 @@ public partial class V1beta1CertificateAuthority : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1CertificateAuthorityStatus? Status { get; set; }
 }
+#nullable disable

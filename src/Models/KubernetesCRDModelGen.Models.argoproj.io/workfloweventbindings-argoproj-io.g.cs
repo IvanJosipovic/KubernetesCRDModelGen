@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1WorkflowEventBindingList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1WorkflowEventBinding> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecEvent
@@ -42,13 +45,17 @@ public partial class V1alpha1WorkflowEventBindingSpecEvent
     [JsonPropertyName("selector")]
     public string Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArchiveNone
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArchiveTar
@@ -57,13 +64,17 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArc
     [JsonPropertyName("compressionLevel")]
     public int? CompressionLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArchiveZip
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArchive
@@ -80,7 +91,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArc
     [JsonPropertyName("zip")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArchiveZip? Zip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactGCPodMetadata
@@ -93,7 +106,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArt
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactGC
@@ -110,7 +125,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArt
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactoryPasswordSecret
@@ -127,7 +144,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactoryUsernameSecret
@@ -144,7 +163,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactory
@@ -161,7 +182,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArt
     [JsonPropertyName("usernameSecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsArtifactoryUsernameSecret? UsernameSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsAzureAccountKeySecret
@@ -178,7 +201,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsAzu
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsAzure
@@ -203,7 +228,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsAzu
     [JsonPropertyName("useSDKCreds")]
     public bool? UseSDKCreds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGcsServiceAccountKeySecret
@@ -220,7 +247,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGcs
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGcs
@@ -237,7 +266,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGcs
     [JsonPropertyName("serviceAccountKeySecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGcsServiceAccountKeySecret? ServiceAccountKeySecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGitPasswordSecret
@@ -254,7 +285,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGit
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGitSshPrivateKeySecret
@@ -271,7 +304,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGit
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGitUsernameSecret
@@ -288,7 +323,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGit
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGit
@@ -341,7 +378,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGit
     [JsonPropertyName("usernameSecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsGitUsernameSecret? UsernameSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdfsKrbCCacheSecret
@@ -358,7 +397,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdf
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdfsKrbConfigConfigMap
@@ -375,7 +416,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdf
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdfsKrbKeytabSecret
@@ -392,7 +435,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdf
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdfs
@@ -441,7 +486,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHdf
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthBasicAuthPasswordSecret
@@ -458,7 +505,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthBasicAuthUsernameSecret
@@ -475,7 +524,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthBasicAuth
@@ -488,7 +539,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("usernameSecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthBasicAuthUsernameSecret? UsernameSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthClientCertClientCertSecret
@@ -505,7 +558,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthClientCertClientKeySecret
@@ -522,7 +577,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthClientCert
@@ -535,7 +592,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("clientKeySecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthClientCertClientKeySecret? ClientKeySecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2ClientIDSecret
@@ -552,7 +611,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2ClientSecretSecret
@@ -569,7 +630,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2EndpointParams
@@ -582,7 +645,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2TokenURLSecret
@@ -599,7 +664,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2
@@ -624,7 +691,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("tokenURLSecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2TokenURLSecret? TokenURLSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuth
@@ -641,7 +710,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("oauth2")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpAuthOauth2? Oauth2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttpHeaders
@@ -654,7 +725,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHttp
@@ -671,7 +744,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsHtt
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOssAccessKeySecret
@@ -688,7 +763,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOss
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOssLifecycleRule
@@ -701,7 +778,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOss
     [JsonPropertyName("markInfrequentAccessAfterDays")]
     public int? MarkInfrequentAccessAfterDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOssSecretKeySecret
@@ -718,7 +797,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOss
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOss
@@ -759,7 +840,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsOss
     [JsonPropertyName("useSDKCreds")]
     public bool? UseSDKCreds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsRaw
@@ -768,7 +851,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsRaw
     [JsonPropertyName("data")]
     public string Data { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3AccessKeySecret
@@ -785,7 +870,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3A
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3CaSecret
@@ -802,7 +889,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3C
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3CreateBucketIfNotPresent
@@ -811,7 +900,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3C
     [JsonPropertyName("objectLocking")]
     public bool? ObjectLocking { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3EncryptionOptionsServerSideCustomerKeySecret
@@ -828,7 +919,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3E
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3EncryptionOptions
@@ -849,7 +942,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3E
     [JsonPropertyName("serverSideCustomerKeySecret")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3EncryptionOptionsServerSideCustomerKeySecret? ServerSideCustomerKeySecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3SecretKeySecret
@@ -866,7 +961,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3S
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3SessionTokenSecret
@@ -883,7 +980,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3S
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3
@@ -940,7 +1039,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifactsS3
     [JsonPropertyName("useSDKCreds")]
     public bool? UseSDKCreds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifacts
@@ -1033,7 +1134,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsArtifacts
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersValueFromConfigMapKeyRef
@@ -1050,13 +1153,17 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersVa
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersValueFromSupplied
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersValueFrom
@@ -1097,7 +1204,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersVa
     [JsonPropertyName("supplied")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersValueFromSupplied? Supplied { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParameters
@@ -1130,7 +1239,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArgumentsParameters
     [JsonPropertyName("valueFrom")]
     public V1alpha1WorkflowEventBindingSpecSubmitArgumentsParametersValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitArguments
@@ -1143,7 +1254,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArguments
     [JsonPropertyName("parameters")]
     public IList<V1alpha1WorkflowEventBindingSpecSubmitArgumentsParameters>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitMetadata
@@ -1172,7 +1285,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitMetadata
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitWorkflowTemplateRef
@@ -1185,7 +1300,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitWorkflowTemplateRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmit
@@ -1202,7 +1319,9 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmit
     [JsonPropertyName("workflowTemplateRef")]
     public V1alpha1WorkflowEventBindingSpecSubmitWorkflowTemplateRef WorkflowTemplateRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpec
@@ -1215,7 +1334,9 @@ public partial class V1alpha1WorkflowEventBindingSpec
     [JsonPropertyName("submit")]
     public V1alpha1WorkflowEventBindingSpecSubmit? Submit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1241,3 +1362,4 @@ public partial class V1alpha1WorkflowEventBinding : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("spec")]
     public V1alpha1WorkflowEventBindingSpec Spec { get; set; }
 }
+#nullable disable

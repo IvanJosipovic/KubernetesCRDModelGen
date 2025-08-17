@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DLPInspectTemplateList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1DLPInspectTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionaryCloudStoragePath
@@ -42,7 +45,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionaryWordList
@@ -51,7 +56,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionary
@@ -64,7 +71,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDi
     [JsonPropertyName("wordList")]
     public V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesDictionaryWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesInfoType
@@ -73,7 +82,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression based CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesRegex
@@ -86,7 +97,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesRe
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesStoredTypeNameRef
@@ -103,7 +116,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesSt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesStoredType
@@ -116,7 +131,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesSt
     [JsonPropertyName("nameRef")]
     public V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypesStoredTypeNameRef? NameRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypes
@@ -149,7 +166,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigCustomInfoTypes
     [JsonPropertyName("surrogateType")]
     public JsonNode? SurrogateType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigInfoTypes
@@ -158,7 +177,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigInfoTypes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
@@ -167,7 +188,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindings
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindingsPerInfoType
@@ -180,7 +203,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimitsMaxFindings
     [JsonPropertyName("maxFindings")]
     public long? MaxFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to control the number of findings returned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimits
@@ -197,7 +222,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigLimits
     [JsonPropertyName("maxFindingsPerRequest")]
     public long? MaxFindingsPerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetInfoTypes
@@ -206,7 +233,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetInfoTypes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
@@ -215,7 +244,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
@@ -224,7 +255,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("words")]
     public IList<string>? Words { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dictionary which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionary
@@ -237,7 +270,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("wordList")]
     public V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleDictionaryWordList? WordList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
@@ -246,7 +281,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set of infoTypes for which findings would affect this rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
@@ -255,7 +292,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("infoTypes")]
     public IList<V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleRegex
@@ -268,7 +307,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exclusion rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRule
@@ -289,7 +330,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclu
     [JsonPropertyName("regex")]
     public V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesExclusionRuleRegex? Regex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleHotwordRegex
@@ -302,7 +345,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
@@ -315,7 +360,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
     [JsonPropertyName("relativeLikelihood")]
     public long? RelativeLikelihood { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleProximity
@@ -328,7 +375,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
     [JsonPropertyName("windowBefore")]
     public long? WindowBefore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRule
@@ -345,7 +394,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwo
     [JsonPropertyName("proximity")]
     public V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRuleProximity? Proximity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRules
@@ -358,7 +409,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRules
     [JsonPropertyName("hotwordRule")]
     public V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRulesHotwordRule? HotwordRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSet
@@ -371,7 +424,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfigRuleSet
     [JsonPropertyName("rules")]
     public IList<V1beta1DLPInspectTemplateSpecInspectConfigRuleSetRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The core content of the template. Configuration of the scanning process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecInspectConfig
@@ -408,7 +463,9 @@ public partial class V1beta1DLPInspectTemplateSpecInspectConfig
     [JsonPropertyName("ruleSet")]
     public IList<V1beta1DLPInspectTemplateSpecInspectConfigRuleSet>? RuleSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecOrganizationRef
@@ -425,7 +482,9 @@ public partial class V1beta1DLPInspectTemplateSpecOrganizationRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpecProjectRef
@@ -442,7 +501,9 @@ public partial class V1beta1DLPInspectTemplateSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateSpec
@@ -475,7 +536,9 @@ public partial class V1beta1DLPInspectTemplateSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateStatusConditions
@@ -500,7 +563,9 @@ public partial class V1beta1DLPInspectTemplateStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DLPInspectTemplateStatus
@@ -525,7 +590,9 @@ public partial class V1beta1DLPInspectTemplateStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -555,3 +622,4 @@ public partial class V1beta1DLPInspectTemplate : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1DLPInspectTemplateStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>PrivateDNSResolverOutboundEndpoint is the Schema for the PrivateDNSResolverOutboundEndpoints API. Manages a Private DNS Resolver Outbound Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateDNSResolverOutboundEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateDNSResolver in network to populate privateDnsResolverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPri
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateDNSResolver in network to populate privateDnsResolverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPri
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderPrivateDnsResolverIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSub
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSub
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdRef
@@ -228,7 +251,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSu
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdSelectorPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdSelector
@@ -262,7 +289,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSu
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProvider
@@ -287,7 +316,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecProviderConfigRef
@@ -300,7 +331,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecProviderConfig
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecWriteConnectionSecretToRef
@@ -309,7 +342,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpecWriteConnectio
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSResolverOutboundEndpointSpec defines the desired state of PrivateDNSResolverOutboundEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointSpec
@@ -334,7 +369,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateDNSResolverOutboundEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointStatusAtProvider
@@ -359,7 +396,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointStatusConditions
@@ -388,7 +427,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSResolverOutboundEndpointStatus defines the observed state of PrivateDNSResolverOutboundEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverOutboundEndpointStatus
@@ -405,7 +446,9 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSResolverOutboundEndpoint is the Schema for the PrivateDNSResolverOutboundEndpoints API. Manages a Private DNS Resolver Outbound Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -435,3 +478,4 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpoint : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSResolverOutboundEndpointStatus? Status { get; set; }
 }
+#nullable disable

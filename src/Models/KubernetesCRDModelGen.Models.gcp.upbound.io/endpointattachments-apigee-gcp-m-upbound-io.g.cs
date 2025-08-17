@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.m.upbound.io;
+#nullable enable
 /// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointAttachmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1EndpointAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAttachment in compute to populate serviceAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRef
@@ -63,7 +68,9 @@ public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRe
     [JsonPropertyName("policy")]
     public V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAttachment in compute to populate serviceAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSe
     [JsonPropertyName("policy")]
     public V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1EndpointAttachmentSpecForProvider
     [JsonPropertyName("serviceAttachmentSelector")]
     public V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSelector? ServiceAttachmentSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAttachment in compute to populate serviceAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentRef
@@ -152,7 +167,9 @@ public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentR
     [JsonPropertyName("policy")]
     public V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAttachment in compute to populate serviceAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentSelector
@@ -186,7 +205,9 @@ public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentS
     [JsonPropertyName("policy")]
     public V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1EndpointAttachmentSpecInitProvider
     [JsonPropertyName("serviceAttachmentSelector")]
     public V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentSelector? ServiceAttachmentSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1EndpointAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1EndpointAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAttachmentSpec defines the desired state of EndpointAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpec
@@ -254,7 +281,9 @@ public partial class V1beta1EndpointAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentStatusAtProvider
@@ -287,7 +316,9 @@ public partial class V1beta1EndpointAttachmentStatusAtProvider
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentStatusConditions
@@ -316,7 +347,9 @@ public partial class V1beta1EndpointAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAttachmentStatus defines the observed state of EndpointAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentStatus
@@ -333,7 +366,9 @@ public partial class V1beta1EndpointAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -363,3 +398,4 @@ public partial class V1beta1EndpointAttachment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1EndpointAttachmentStatus? Status { get; set; }
 }
+#nullable disable

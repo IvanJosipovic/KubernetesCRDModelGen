@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SpannerInstance is the Schema for the SpannerInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpannerInstanceList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1SpannerInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Autoscaling limits for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingLimits
@@ -54,7 +57,9 @@ public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingLimit
     [JsonPropertyName("minProcessingUnits")]
     public int? MinProcessingUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The autoscaling targets for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingTargets
@@ -67,7 +72,9 @@ public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingTarge
     [JsonPropertyName("storageUtilizationPercent")]
     public int? StorageUtilizationPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpecAutoscalingConfig
@@ -80,7 +87,9 @@ public partial class V1beta1SpannerInstanceSpecAutoscalingConfig
     [JsonPropertyName("autoscalingTargets")]
     public V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstanceSpec defines the desired state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpec
@@ -121,7 +130,9 @@ public partial class V1beta1SpannerInstanceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceStatusConditions
@@ -146,7 +157,9 @@ public partial class V1beta1SpannerInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceStatusObservedState
@@ -159,7 +172,9 @@ public partial class V1beta1SpannerInstanceStatusObservedState
     [JsonPropertyName("processingUnits")]
     public int? ProcessingUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstanceStatus defines the config connector machine state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceStatus
@@ -184,7 +199,9 @@ public partial class V1beta1SpannerInstanceStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerInstance is the Schema for the SpannerInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -214,3 +231,4 @@ public partial class V1beta1SpannerInstance : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1SpannerInstanceStatus? Status { get; set; }
 }
+#nullable disable

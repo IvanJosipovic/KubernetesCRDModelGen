@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterface Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/networkInterface.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageNetworkInterfaceList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1api20240301storageNetworkInterface> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceDnsSettings DNS settings of a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecDnsSettings
@@ -50,7 +53,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecDnsSettings
     [JsonPropertyName("internalDnsNameLabel")]
     public string? InternalDnsNameLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecExtendedLocation
@@ -67,7 +72,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPoolsReference
@@ -88,7 +95,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApp
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationGatewayBackendAddressPool_NetworkInterface_SubResourceEmbedded Backend Address Pool of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPools
@@ -101,7 +110,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApp
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroupsReference
@@ -122,7 +133,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApp
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationSecurityGroupSpec_NetworkInterface_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroups
@@ -135,7 +148,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsApp
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroupsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsGatewayLoadBalancerReference
@@ -156,7 +171,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsGat
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsGatewayLoadBalancer
@@ -169,7 +186,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsGat
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsGatewayLoadBalancerReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPoolsReference
@@ -190,7 +209,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoa
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BackendAddressPool_NetworkInterface_SubResourceEmbedded Pool of backend IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPools
@@ -203,7 +224,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoa
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPoolsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRulesReference
@@ -224,7 +247,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoa
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatRule_NetworkInterface_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRules
@@ -237,7 +262,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoa
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRulesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsPublicIPAddressReference
@@ -258,7 +285,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsPub
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSpec_NetworkInterface_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsPublicIPAddress
@@ -271,7 +300,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsPub
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsSubnetReference
@@ -292,7 +323,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsSub
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_NetworkInterface_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsSubnet
@@ -305,7 +338,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsSub
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTapsReference
@@ -326,7 +361,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsVir
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkTapSpec_NetworkInterface_SubResourceEmbedded Virtual Network Tap resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTaps
@@ -339,7 +376,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurationsVir
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTapsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_NetworkInterface_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurations
@@ -404,7 +443,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecIpConfigurations
     [JsonPropertyName("virtualNetworkTaps")]
     public IList<V1api20240301storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTaps>? VirtualNetworkTaps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecNetworkSecurityGroupReference
@@ -425,7 +466,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecNetworkSecurityGrou
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkSecurityGroupSpec_NetworkInterface_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecNetworkSecurityGroup
@@ -438,7 +481,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecNetworkSecurityGrou
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecNetworkSecurityGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpecConfigMapExpressions
@@ -455,7 +500,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpecConfigM
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpecSecretExpressions
@@ -472,7 +519,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpecSecretE
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpec
@@ -489,7 +538,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageNetworkInterfaceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecOwner
@@ -502,7 +553,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecPrivateLinkServiceReference
@@ -523,7 +576,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecPrivateLinkServiceR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkServiceSpec Private link service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpecPrivateLinkService
@@ -536,7 +591,9 @@ public partial class V1api20240301storageNetworkInterfaceSpecPrivateLinkService
     [JsonPropertyName("reference")]
     public V1api20240301storageNetworkInterfaceSpecPrivateLinkServiceReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterface_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceSpec
@@ -617,7 +674,9 @@ public partial class V1api20240301storageNetworkInterfaceSpec
     [JsonPropertyName("workloadType")]
     public string? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusConditions
@@ -650,7 +709,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceDnsSettings_STATUS DNS settings of a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusDnsSettings
@@ -679,7 +740,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusDnsSettings
     [JsonPropertyName("internalFqdn")]
     public string? InternalFqdn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusDscpConfiguration
@@ -692,7 +755,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusDscpConfiguration
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusExtendedLocation
@@ -709,7 +774,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Backend Address Pool of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsApplicationGatewayBackendAddressPools
@@ -722,7 +789,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsA
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsApplicationSecurityGroups
@@ -735,7 +804,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsA
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsGatewayLoadBalancer
@@ -748,7 +819,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsG
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Pool of backend IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsLoadBalancerBackendAddressPools
@@ -761,7 +834,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsL
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsLoadBalancerInboundNatRules
@@ -774,7 +849,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsL
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS PrivateLinkConnection properties for the network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsPrivateLinkConnectionProperties
@@ -795,7 +872,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsP
     [JsonPropertyName("requiredMemberName")]
     public string? RequiredMemberName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsPublicIPAddress
@@ -808,7 +887,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsP
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Subnet_STATUS_NetworkInterface_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsSubnet
@@ -821,7 +902,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsS
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded Virtual Network Tap resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsVirtualNetworkTaps
@@ -834,7 +917,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurationsV
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurations
@@ -919,7 +1004,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusIpConfigurations
     [JsonPropertyName("virtualNetworkTaps")]
     public IList<V1api20240301storageNetworkInterfaceStatusIpConfigurationsVirtualNetworkTaps>? VirtualNetworkTaps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusNetworkSecurityGroup
@@ -932,7 +1019,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusNetworkSecurityGr
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded Private endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusPrivateEndpoint
@@ -945,7 +1034,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusPrivateEndpoint
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded Private link service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusPrivateLinkService
@@ -958,7 +1049,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusPrivateLinkServic
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded Tap configuration in a Network Interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusTapConfigurations
@@ -971,7 +1064,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusTapConfigurations
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatusVirtualMachine
@@ -984,7 +1079,9 @@ public partial class V1api20240301storageNetworkInterfaceStatusVirtualMachine
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded A network interface in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNetworkInterfaceStatus
@@ -1113,7 +1210,9 @@ public partial class V1api20240301storageNetworkInterfaceStatus
     [JsonPropertyName("workloadType")]
     public string? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterface Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/networkInterface.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1143,3 +1242,4 @@ public partial class V1api20240301storageNetworkInterface : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1api20240301storageNetworkInterfaceStatus? Status { get; set; }
 }
+#nullable disable

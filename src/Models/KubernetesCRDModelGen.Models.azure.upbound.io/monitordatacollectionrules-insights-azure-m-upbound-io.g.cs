@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorDataCollectionRule is the Schema for the MonitorDataCollectionRules API. Manages a Data Collection Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorDataCollectionRuleList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorDataCollectionRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataFlow
@@ -122,7 +133,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataFlow
     [JsonPropertyName("transformKql")]
     public string? TransformKql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImportEventHubDataSource
@@ -139,7 +152,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesD
     [JsonPropertyName("stream")]
     public string? Stream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_import block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImport
@@ -148,7 +163,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesD
     [JsonPropertyName("eventHubDataSource")]
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesExtension
@@ -173,7 +190,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesE
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesIisLog
@@ -190,7 +209,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesI
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettingsText
@@ -199,7 +220,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     [JsonPropertyName("recordStartTimestampFormat")]
     public string? RecordStartTimestampFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettings
@@ -208,7 +231,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     [JsonPropertyName("text")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettingsText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFile
@@ -233,7 +258,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPerformanceCounter
@@ -254,7 +281,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPlatformTelemetry
@@ -267,7 +296,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPrometheusForwarderLabelIncludeFilter
@@ -280,7 +311,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPrometheusForwarder
@@ -297,7 +330,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesSyslog
@@ -318,7 +353,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesS
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsEventLog
@@ -335,7 +372,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesW
     [JsonPropertyName("xPathQueries")]
     public IList<string>? XPathQueries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsFirewallLog
@@ -348,7 +387,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesW
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_sources block as defined below. This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSources
@@ -393,7 +434,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSources
     [JsonPropertyName("windowsFirewallLog")]
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_monitor_metrics block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsAzureMonitorMetrics
@@ -402,7 +445,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRefPolicy
@@ -415,7 +460,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRef
@@ -432,7 +479,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelectorPolicy
@@ -445,7 +494,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelector
@@ -466,7 +517,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHub
@@ -487,7 +540,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubDirect
@@ -500,7 +555,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy
@@ -513,7 +570,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRef
@@ -530,7 +589,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy
@@ -543,7 +604,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector
@@ -564,7 +627,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalytics
@@ -585,7 +650,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("workspaceResourceIdSelector")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsMonitorAccount
@@ -598,7 +665,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRefPolicy
@@ -611,7 +680,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRef
@@ -628,7 +699,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelectorPolicy
@@ -641,7 +714,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelector
@@ -662,7 +737,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRefPolicy
@@ -675,7 +752,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRef
@@ -692,7 +771,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy
@@ -705,7 +786,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelector
@@ -726,7 +809,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlob
@@ -759,7 +844,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobDirect
@@ -776,7 +863,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageTableDirect
@@ -793,7 +882,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A destinations block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
@@ -830,7 +921,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     [JsonPropertyName("storageTableDirect")]
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsRefsPolicy
@@ -843,7 +936,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsRefs
@@ -860,7 +955,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIden
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsSelectorPolicy
@@ -873,7 +970,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsSelector
@@ -894,7 +993,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIden
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentity
@@ -915,7 +1016,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRefPolicy
@@ -928,7 +1031,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRef
@@ -945,7 +1050,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelectorPolicy
@@ -958,7 +1065,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelector
@@ -979,7 +1088,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclarationColumn
@@ -992,7 +1103,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclar
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclaration
@@ -1005,7 +1118,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclar
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecForProvider
@@ -1070,7 +1185,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRefPolicy
@@ -1083,7 +1200,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRef
@@ -1100,7 +1219,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelectorPolicy
@@ -1113,7 +1234,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelector
@@ -1134,7 +1257,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataFlow
@@ -1159,7 +1284,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataFlow
     [JsonPropertyName("transformKql")]
     public string? TransformKql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImportEventHubDataSource
@@ -1176,7 +1303,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("stream")]
     public string? Stream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_import block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImport
@@ -1185,7 +1314,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("eventHubDataSource")]
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesExtension
@@ -1210,7 +1341,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesIisLog
@@ -1227,7 +1360,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettingsText
@@ -1236,7 +1371,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("recordStartTimestampFormat")]
     public string? RecordStartTimestampFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettings
@@ -1245,7 +1382,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("text")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettingsText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFile
@@ -1270,7 +1409,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPerformanceCounter
@@ -1291,7 +1432,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPlatformTelemetry
@@ -1304,7 +1447,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPrometheusForwarderLabelIncludeFilter
@@ -1317,7 +1462,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPrometheusForwarder
@@ -1334,7 +1481,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesSyslog
@@ -1355,7 +1504,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsEventLog
@@ -1372,7 +1523,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("xPathQueries")]
     public IList<string>? XPathQueries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsFirewallLog
@@ -1385,7 +1538,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_sources block as defined below. This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
@@ -1430,7 +1585,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("windowsFirewallLog")]
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_monitor_metrics block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsAzureMonitorMetrics
@@ -1439,7 +1596,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRefPolicy
@@ -1452,7 +1611,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRef
@@ -1469,7 +1630,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelectorPolicy
@@ -1482,7 +1645,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelector
@@ -1503,7 +1668,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHub
@@ -1524,7 +1691,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubDirect
@@ -1537,7 +1706,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy
@@ -1550,7 +1721,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRef
@@ -1567,7 +1740,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy
@@ -1580,7 +1755,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector
@@ -1601,7 +1778,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalytics
@@ -1622,7 +1801,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("workspaceResourceIdSelector")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsMonitorAccount
@@ -1635,7 +1816,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRefPolicy
@@ -1648,7 +1831,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRef
@@ -1665,7 +1850,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelectorPolicy
@@ -1678,7 +1865,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelector
@@ -1699,7 +1888,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRefPolicy
@@ -1712,7 +1903,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRef
@@ -1729,7 +1922,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy
@@ -1742,7 +1937,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelector
@@ -1763,7 +1960,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlob
@@ -1796,7 +1995,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobDirect
@@ -1813,7 +2014,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageTableDirect
@@ -1830,7 +2033,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A destinations block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinations
@@ -1867,7 +2072,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     [JsonPropertyName("storageTableDirect")]
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsRefsPolicy
@@ -1880,7 +2087,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsRefs
@@ -1897,7 +2106,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIde
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsSelectorPolicy
@@ -1910,7 +2121,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsSelector
@@ -1931,7 +2144,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIde
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleSpecInitProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentity
@@ -1952,7 +2167,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDeclarationColumn
@@ -1965,7 +2182,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDecla
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDeclaration
@@ -1978,7 +2197,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDecla
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProvider
@@ -2031,7 +2252,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecProviderConfigRef
@@ -2044,7 +2267,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretToRef
@@ -2053,7 +2278,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRuleSpec defines the desired state of MonitorDataCollectionRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleSpec
@@ -2078,7 +2305,9 @@ public partial class V1beta1MonitorDataCollectionRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataFlow
@@ -2103,7 +2332,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataFlow
     [JsonPropertyName("transformKql")]
     public string? TransformKql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImportEventHubDataSource
@@ -2120,7 +2351,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("stream")]
     public string? Stream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_import block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImport
@@ -2129,7 +2362,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("eventHubDataSource")]
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesExtension
@@ -2154,7 +2389,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesIisLog
@@ -2171,7 +2408,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettingsText
@@ -2180,7 +2419,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("recordStartTimestampFormat")]
     public string? RecordStartTimestampFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettings
@@ -2189,7 +2430,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("text")]
     public V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettingsText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFile
@@ -2214,7 +2457,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPerformanceCounter
@@ -2235,7 +2480,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPlatformTelemetry
@@ -2248,7 +2495,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPrometheusForwarderLabelIncludeFilter
@@ -2261,7 +2510,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPrometheusForwarder
@@ -2278,7 +2529,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesSyslog
@@ -2299,7 +2552,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsEventLog
@@ -2316,7 +2571,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("xPathQueries")]
     public IList<string>? XPathQueries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsFirewallLog
@@ -2329,7 +2586,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("streams")]
     public IList<string>? Streams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_sources block as defined below. This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
@@ -2374,7 +2633,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("windowsFirewallLog")]
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_monitor_metrics block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsAzureMonitorMetrics
@@ -2383,7 +2644,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsEventHub
@@ -2396,7 +2659,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One or more event_hub blocks as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsEventHubDirect
@@ -2409,7 +2674,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsLogAnalytics
@@ -2422,7 +2689,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsMonitorAccount
@@ -2435,7 +2704,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageBlob
@@ -2452,7 +2723,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageBlobDirect
@@ -2469,7 +2742,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageTableDirect
@@ -2486,7 +2761,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A destinations block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinations
@@ -2523,7 +2800,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     [JsonPropertyName("storageTableDirect")]
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderIdentity
@@ -2544,7 +2823,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDeclarationColumn
@@ -2557,7 +2838,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDecla
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDeclaration
@@ -2570,7 +2853,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDecla
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProvider
@@ -2627,7 +2912,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatusConditions
@@ -2656,7 +2943,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRuleStatus defines the observed state of MonitorDataCollectionRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleStatus
@@ -2673,7 +2962,9 @@ public partial class V1beta1MonitorDataCollectionRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRule is the Schema for the MonitorDataCollectionRules API. Manages a Data Collection Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2703,3 +2994,4 @@ public partial class V1beta1MonitorDataCollectionRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1MonitorDataCollectionRuleStatus? Status { get; set; }
 }
+#nullable disable

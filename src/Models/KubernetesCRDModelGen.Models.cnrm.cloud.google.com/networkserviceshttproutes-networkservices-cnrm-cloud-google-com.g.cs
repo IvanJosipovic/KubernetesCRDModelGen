@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkServicesHTTPRouteList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkServicesHTTPRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
@@ -50,7 +53,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
@@ -67,7 +72,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
@@ -121,7 +130,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
     [JsonPropertyName("maxAge")]
     public string? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef
@@ -138,7 +149,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsS
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
@@ -151,7 +164,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for aborting to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort
@@ -164,7 +179,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("percentage")]
     public long? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for injecting delay to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay
@@ -177,7 +194,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("percentage")]
     public long? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     [JsonPropertyName("delay")]
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, the request is directed as configured by this field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
@@ -223,7 +244,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for modifying the headers of a matching request prior to delivery of the request to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier
@@ -240,7 +263,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeader
     [JsonPropertyName("set")]
     public IDictionary<string, string>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef
@@ -257,7 +282,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination the requests will be mirrored to. The weight of the destination will be ignored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination
@@ -270,7 +297,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the routes destination are shadowed to a separate mirrored destination. Proxy will not wait for the shadow destination to respond before returning the response. Prior to sending traffic to the shadow service, the host/authority header is suffixed with -shadow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     [JsonPropertyName("destination")]
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for modifying the headers of a response prior to sending the response back to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier
@@ -296,7 +327,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeade
     [JsonPropertyName("set")]
     public IDictionary<string, string>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for rewrite URL before forwarding requests to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
@@ -326,7 +361,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The detailed rule defining how to route matched traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
@@ -371,7 +408,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
     [JsonPropertyName("urlRewrite")]
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite? UrlRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, the rule will match if the request header value is within the range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch
@@ -384,7 +423,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRange
     [JsonPropertyName("start")]
     public long? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
@@ -421,7 +462,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters
@@ -442,7 +485,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParamet
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
@@ -471,7 +516,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpecRules
@@ -484,7 +531,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRules
     [JsonPropertyName("matches")]
     public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatches>? Matches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteSpec
@@ -521,7 +570,9 @@ public partial class V1beta1NetworkServicesHTTPRouteSpec
     [JsonPropertyName("rules")]
     public IList<V1beta1NetworkServicesHTTPRouteSpecRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
@@ -546,7 +597,9 @@ public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesHTTPRouteStatus
@@ -571,7 +624,9 @@ public partial class V1beta1NetworkServicesHTTPRouteStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -601,3 +656,4 @@ public partial class V1beta1NetworkServicesHTTPRoute : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1NetworkServicesHTTPRouteStatus? Status { get; set; }
 }
+#nullable disable

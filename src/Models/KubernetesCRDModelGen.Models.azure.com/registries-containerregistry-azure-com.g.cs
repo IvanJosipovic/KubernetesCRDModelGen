@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230701.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2023-07-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230701storageRegistryList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1api20230701storageRegistry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecEncryptionKeyVaultPropertiesIdentityFromConfig
@@ -46,7 +49,9 @@ public partial class V1api20230701storageRegistrySpecEncryptionKeyVaultPropertie
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.KeyVaultProperties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecEncryptionKeyVaultProperties
@@ -67,7 +72,9 @@ public partial class V1api20230701storageRegistrySpecEncryptionKeyVaultPropertie
     [JsonPropertyName("keyIdentifier")]
     public string? KeyIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.EncryptionProperty</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecEncryption
@@ -84,7 +91,9 @@ public partial class V1api20230701storageRegistrySpecEncryption
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecIdentityUserAssignedIdentitiesReference
@@ -105,7 +114,9 @@ public partial class V1api20230701storageRegistrySpecIdentityUserAssignedIdentit
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecIdentityUserAssignedIdentities
@@ -118,7 +129,9 @@ public partial class V1api20230701storageRegistrySpecIdentityUserAssignedIdentit
     [JsonPropertyName("reference")]
     public V1api20230701storageRegistrySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IdentityProperties Managed identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecIdentity
@@ -135,7 +148,9 @@ public partial class V1api20230701storageRegistrySpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20230701storageRegistrySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IPRule IP rule with specific IP or IP range in CIDR format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecNetworkRuleSetIpRules
@@ -152,7 +167,9 @@ public partial class V1api20230701storageRegistrySpecNetworkRuleSetIpRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.NetworkRuleSet The network rule set for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecNetworkRuleSet
@@ -169,7 +186,9 @@ public partial class V1api20230701storageRegistrySpecNetworkRuleSet
     [JsonPropertyName("ipRules")]
     public IList<V1api20230701storageRegistrySpecNetworkRuleSetIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecOperatorSpecConfigMapExpressions
@@ -186,7 +205,9 @@ public partial class V1api20230701storageRegistrySpecOperatorSpecConfigMapExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecOperatorSpecSecretExpressions
@@ -203,7 +224,9 @@ public partial class V1api20230701storageRegistrySpecOperatorSpecSecretExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RegistryOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecOperatorSpec
@@ -220,7 +243,9 @@ public partial class V1api20230701storageRegistrySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230701storageRegistrySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecOwner
@@ -233,7 +258,9 @@ public partial class V1api20230701storageRegistrySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.ExportPolicy The export policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecPoliciesExportPolicy
@@ -246,7 +273,9 @@ public partial class V1api20230701storageRegistrySpecPoliciesExportPolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.QuarantinePolicy The quarantine policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecPoliciesQuarantinePolicy
@@ -259,7 +288,9 @@ public partial class V1api20230701storageRegistrySpecPoliciesQuarantinePolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RetentionPolicy The retention policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecPoliciesRetentionPolicy
@@ -276,7 +307,9 @@ public partial class V1api20230701storageRegistrySpecPoliciesRetentionPolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.TrustPolicy The content trust policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecPoliciesTrustPolicy
@@ -293,7 +326,9 @@ public partial class V1api20230701storageRegistrySpecPoliciesTrustPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Policies The policies for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecPolicies
@@ -318,7 +353,9 @@ public partial class V1api20230701storageRegistrySpecPolicies
     [JsonPropertyName("trustPolicy")]
     public V1api20230701storageRegistrySpecPoliciesTrustPolicy? TrustPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Sku The SKU of a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecSku
@@ -331,7 +368,9 @@ public partial class V1api20230701storageRegistrySpecSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Registry_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpec
@@ -404,7 +443,9 @@ public partial class V1api20230701storageRegistrySpec
     [JsonPropertyName("zoneRedundancy")]
     public string? ZoneRedundancy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusConditions
@@ -437,7 +478,9 @@ public partial class V1api20230701storageRegistryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.KeyVaultProperties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusEncryptionKeyVaultProperties
@@ -466,7 +509,9 @@ public partial class V1api20230701storageRegistryStatusEncryptionKeyVaultPropert
     [JsonPropertyName("versionedKeyIdentifier")]
     public string? VersionedKeyIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.EncryptionProperty_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusEncryption
@@ -483,7 +528,9 @@ public partial class V1api20230701storageRegistryStatusEncryption
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.UserIdentityProperties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusIdentityUserAssignedIdentities
@@ -500,7 +547,9 @@ public partial class V1api20230701storageRegistryStatusIdentityUserAssignedIdent
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IdentityProperties_STATUS Managed identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusIdentity
@@ -525,7 +574,9 @@ public partial class V1api20230701storageRegistryStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20230701storageRegistryStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IPRule_STATUS IP rule with specific IP or IP range in CIDR format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusNetworkRuleSetIpRules
@@ -542,7 +593,9 @@ public partial class V1api20230701storageRegistryStatusNetworkRuleSetIpRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.NetworkRuleSet_STATUS The network rule set for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusNetworkRuleSet
@@ -559,7 +612,9 @@ public partial class V1api20230701storageRegistryStatusNetworkRuleSet
     [JsonPropertyName("ipRules")]
     public IList<V1api20230701storageRegistryStatusNetworkRuleSetIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.ExportPolicy_STATUS The export policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPoliciesExportPolicy
@@ -572,7 +627,9 @@ public partial class V1api20230701storageRegistryStatusPoliciesExportPolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.QuarantinePolicy_STATUS The quarantine policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPoliciesQuarantinePolicy
@@ -585,7 +642,9 @@ public partial class V1api20230701storageRegistryStatusPoliciesQuarantinePolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.RetentionPolicy_STATUS The retention policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPoliciesRetentionPolicy
@@ -606,7 +665,9 @@ public partial class V1api20230701storageRegistryStatusPoliciesRetentionPolicy
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.TrustPolicy_STATUS The content trust policy for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPoliciesTrustPolicy
@@ -623,7 +684,9 @@ public partial class V1api20230701storageRegistryStatusPoliciesTrustPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Policies_STATUS The policies for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPolicies
@@ -648,7 +711,9 @@ public partial class V1api20230701storageRegistryStatusPolicies
     [JsonPropertyName("trustPolicy")]
     public V1api20230701storageRegistryStatusPoliciesTrustPolicy? TrustPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.PrivateEndpointConnection_STATUS An object that represents a private endpoint connection for a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusPrivateEndpointConnections
@@ -661,7 +726,9 @@ public partial class V1api20230701storageRegistryStatusPrivateEndpointConnection
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Sku_STATUS The SKU of a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusSku
@@ -678,7 +745,9 @@ public partial class V1api20230701storageRegistryStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Status_STATUS The status of an Azure resource at the time the operation was called.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusStatus
@@ -699,7 +768,9 @@ public partial class V1api20230701storageRegistryStatusStatus
     [JsonPropertyName("timestamp")]
     public string? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatusSystemData
@@ -732,7 +803,9 @@ public partial class V1api20230701storageRegistryStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Registry_STATUS An object that represents a container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistryStatus
@@ -833,7 +906,9 @@ public partial class V1api20230701storageRegistryStatus
     [JsonPropertyName("zoneRedundancy")]
     public string? ZoneRedundancy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2023-07-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -863,3 +938,4 @@ public partial class V1api20230701storageRegistry : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1api20230701storageRegistryStatus? Status { get; set; }
 }
+#nullable disable

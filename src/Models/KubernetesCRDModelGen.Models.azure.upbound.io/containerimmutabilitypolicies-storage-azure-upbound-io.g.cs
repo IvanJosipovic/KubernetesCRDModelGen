@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+#nullable enable
 /// <summary>ContainerImmutabilityPolicy is the Schema for the ContainerImmutabilityPolicys API. Manages an Immutability Policy for a Container within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerImmutabilityPolicyList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerImmutabilityPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerResourceManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageCon
     [JsonPropertyName("policy")]
     public V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerResourceManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageCon
     [JsonPropertyName("policy")]
     public V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecForProvider
     [JsonPropertyName("storageContainerResourceManagerIdSelector")]
     public V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdSelector? StorageContainerResourceManagerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecInitProvider
@@ -143,7 +156,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecInitProvider
     [JsonPropertyName("protectedAppendWritesEnabled")]
     public bool? ProtectedAppendWritesEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecProviderConfigRefPolicy
@@ -156,7 +171,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecProviderConfigRef
@@ -169,7 +186,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerImmutabilityPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecWriteConnectionSecretToRef
@@ -182,7 +201,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerImmutabilityPolicySpec defines the desired state of ContainerImmutabilityPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpec
@@ -211,7 +232,9 @@ public partial class V1beta1ContainerImmutabilityPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerImmutabilityPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicyStatusAtProvider
@@ -240,7 +263,9 @@ public partial class V1beta1ContainerImmutabilityPolicyStatusAtProvider
     [JsonPropertyName("storageContainerResourceManagerId")]
     public string? StorageContainerResourceManagerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicyStatusConditions
@@ -269,7 +294,9 @@ public partial class V1beta1ContainerImmutabilityPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerImmutabilityPolicyStatus defines the observed state of ContainerImmutabilityPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicyStatus
@@ -286,7 +313,9 @@ public partial class V1beta1ContainerImmutabilityPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerImmutabilityPolicy is the Schema for the ContainerImmutabilityPolicys API. Manages an Immutability Policy for a Container within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -316,3 +345,4 @@ public partial class V1beta1ContainerImmutabilityPolicy : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ContainerImmutabilityPolicyStatus? Status { get; set; }
 }
+#nullable disable

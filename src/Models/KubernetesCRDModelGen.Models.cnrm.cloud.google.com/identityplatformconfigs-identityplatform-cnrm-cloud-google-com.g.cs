@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityPlatformConfigList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityPlatformConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef
@@ -50,7 +53,9 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersF
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers
@@ -63,7 +68,9 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to blocking functions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctions
@@ -72,7 +79,9 @@ public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctions
     [JsonPropertyName("triggers")]
     public IDictionary<string, V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to restricting a user's ability to affect their account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecClientPermissions
@@ -85,7 +94,9 @@ public partial class V1beta1IdentityPlatformConfigSpecClientPermissions
     [JsonPropertyName("disabledUserSignup")]
     public bool? DisabledUserSignup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecClient
@@ -94,7 +105,9 @@ public partial class V1beta1IdentityPlatformConfigSpecClient
     [JsonPropertyName("permissions")]
     public V1beta1IdentityPlatformConfigSpecClientPermissions? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for this project's multi-factor authentication, including whether it is active and what factors can be used for the second factor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMfa
@@ -103,7 +116,9 @@ public partial class V1beta1IdentityPlatformConfigSpecMfa
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging
@@ -112,7 +127,9 @@ public partial class V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to monitoring project activity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMonitoring
@@ -121,7 +138,9 @@ public partial class V1beta1IdentityPlatformConfigSpecMonitoring
     [JsonPropertyName("requestLogging")]
     public V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging? RequestLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef
@@ -142,7 +161,9 @@ public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to multi-tenant functionality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecMultiTenant
@@ -155,7 +176,9 @@ public partial class V1beta1IdentityPlatformConfigSpecMultiTenant
     [JsonPropertyName("defaultTenantLocationRef")]
     public V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef? DefaultTenantLocationRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template for change email</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate
@@ -184,7 +207,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailChang
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information of custom domain DNS verification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsInfo
@@ -193,7 +218,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsIn
     [JsonPropertyName("useCustomDomain")]
     public bool? UseCustomDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template for reset password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate
@@ -222,7 +249,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailReset
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template for reverting second factor addition emails</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate
@@ -251,7 +280,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailRever
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef
@@ -264,7 +295,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom
@@ -273,7 +306,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
     [JsonPropertyName("secretKeyRef")]
     public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SMTP relay password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
@@ -286,7 +321,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpP
     [JsonPropertyName("valueFrom")]
     public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a custom SMTP relay</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp
@@ -315,7 +352,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template for verify email</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate
@@ -344,7 +383,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerif
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for email sending.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmail
@@ -381,7 +422,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmail
     [JsonPropertyName("verifyEmailTemplate")]
     public V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for SMS sending.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotificationSendSms
@@ -390,7 +433,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotificationSendSms
     [JsonPropertyName("useDeviceLocale")]
     public bool? UseDeviceLocale { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to sending notifications to users.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecNotification
@@ -407,7 +452,9 @@ public partial class V1beta1IdentityPlatformConfigSpecNotification
     [JsonPropertyName("sendSms")]
     public V1beta1IdentityPlatformConfigSpecNotificationSendSms? SendSms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecProjectRef
@@ -424,7 +471,9 @@ public partial class V1beta1IdentityPlatformConfigSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
@@ -441,7 +490,9 @@ public partial class V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to quotas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecQuota
@@ -450,7 +501,9 @@ public partial class V1beta1IdentityPlatformConfigSpecQuota
     [JsonPropertyName("signUpQuotaConfig")]
     public V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating an anonymous user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInAnonymous
@@ -459,7 +512,9 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInAnonymous
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating a user by their email address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInEmail
@@ -472,7 +527,9 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInEmail
     [JsonPropertyName("passwordRequired")]
     public bool? PasswordRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignInPhoneNumber
@@ -485,7 +542,9 @@ public partial class V1beta1IdentityPlatformConfigSpecSignInPhoneNumber
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to local sign in methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpecSignIn
@@ -506,7 +565,9 @@ public partial class V1beta1IdentityPlatformConfigSpecSignIn
     [JsonPropertyName("phoneNumber")]
     public V1beta1IdentityPlatformConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigSpec
@@ -551,7 +612,9 @@ public partial class V1beta1IdentityPlatformConfigSpec
     [JsonPropertyName("signIn")]
     public V1beta1IdentityPlatformConfigSpecSignIn? SignIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusClient
@@ -564,7 +627,9 @@ public partial class V1beta1IdentityPlatformConfigStatusClient
     [JsonPropertyName("firebaseSubdomain")]
     public string? FirebaseSubdomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusConditions
@@ -589,7 +654,9 @@ public partial class V1beta1IdentityPlatformConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate
@@ -598,7 +665,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailCha
     [JsonPropertyName("customized")]
     public bool? Customized { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailDnsInfo
@@ -619,7 +688,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailDns
     [JsonPropertyName("pendingCustomDomain")]
     public string? PendingCustomDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate
@@ -628,7 +699,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRes
     [JsonPropertyName("customized")]
     public bool? Customized { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate
@@ -637,7 +710,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRev
     [JsonPropertyName("customized")]
     public bool? Customized { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate
@@ -646,7 +721,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailVer
     [JsonPropertyName("customized")]
     public bool? Customized { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmail
@@ -671,7 +748,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmail
     [JsonPropertyName("verifyEmailTemplate")]
     public V1beta1IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The template to use when sending an SMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate
@@ -680,7 +759,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTe
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSms
@@ -689,7 +770,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSms
     [JsonPropertyName("smsTemplate")]
     public V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate? SmsTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusNotification
@@ -702,7 +785,9 @@ public partial class V1beta1IdentityPlatformConfigStatusNotification
     [JsonPropertyName("sendSms")]
     public V1beta1IdentityPlatformConfigStatusNotificationSendSms? SendSms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Hash config information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig
@@ -727,7 +812,9 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig
     [JsonPropertyName("signerKey")]
     public string? SignerKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInEmail
@@ -736,7 +823,9 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInEmail
     [JsonPropertyName("hashConfig")]
     public V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig? HashConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Hash config information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignInHashConfig
@@ -761,7 +850,9 @@ public partial class V1beta1IdentityPlatformConfigStatusSignInHashConfig
     [JsonPropertyName("signerKey")]
     public string? SignerKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatusSignIn
@@ -774,7 +865,9 @@ public partial class V1beta1IdentityPlatformConfigStatusSignIn
     [JsonPropertyName("hashConfig")]
     public V1beta1IdentityPlatformConfigStatusSignInHashConfig? HashConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformConfigStatus
@@ -803,7 +896,9 @@ public partial class V1beta1IdentityPlatformConfigStatus
     [JsonPropertyName("subtype")]
     public string? Subtype { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -833,3 +928,4 @@ public partial class V1beta1IdentityPlatformConfig : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1IdentityPlatformConfigStatus? Status { get; set; }
 }
+#nullable disable

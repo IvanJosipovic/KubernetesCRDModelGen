@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.costmanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>ResourceGroupCostManagementExport is the Schema for the ResourceGroupCostManagementExports API. Manages an Azure Cost Management Export for a Resource Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceGroupCostManagementExportList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceGroupCostManagementExport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_options block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataOptions
@@ -46,7 +49,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocation
@@ -131,7 +144,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRef
@@ -161,7 +178,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelectorPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelector
@@ -195,7 +216,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProvider
@@ -240,7 +263,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProvider
     [JsonPropertyName("resourceGroupIdSelector")]
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelector? ResourceGroupIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_options block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataOptions
@@ -253,7 +278,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicy
@@ -266,7 +293,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRef
@@ -283,7 +312,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelector
@@ -317,7 +350,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocation
@@ -338,7 +373,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRef
@@ -368,7 +407,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelectorPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelector
@@ -402,7 +445,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     [JsonPropertyName("policy")]
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProvider
@@ -447,7 +492,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProvider
     [JsonPropertyName("resourceGroupIdSelector")]
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelector? ResourceGroupIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecProviderConfigRef
@@ -460,7 +507,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecProviderConfigR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecWriteConnectionSecretToRef
@@ -469,7 +518,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecWriteConnection
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupCostManagementExportSpec defines the desired state of ResourceGroupCostManagementExport</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpec
@@ -494,7 +545,9 @@ public partial class V1beta1ResourceGroupCostManagementExportSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceGroupCostManagementExportSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_options block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExportDataOptions
@@ -507,7 +560,9 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExp
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A export_data_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExportDataStorageLocation
@@ -520,7 +575,9 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExp
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProvider
@@ -561,7 +618,9 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProvider
     [JsonPropertyName("resourceGroupId")]
     public string? ResourceGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportStatusConditions
@@ -590,7 +649,9 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupCostManagementExportStatus defines the observed state of ResourceGroupCostManagementExport.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportStatus
@@ -607,7 +668,9 @@ public partial class V1beta1ResourceGroupCostManagementExportStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceGroupCostManagementExport is the Schema for the ResourceGroupCostManagementExports API. Manages an Azure Cost Management Export for a Resource Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -637,3 +700,4 @@ public partial class V1beta1ResourceGroupCostManagementExport : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1ResourceGroupCostManagementExportStatus? Status { get; set; }
 }
+#nullable disable

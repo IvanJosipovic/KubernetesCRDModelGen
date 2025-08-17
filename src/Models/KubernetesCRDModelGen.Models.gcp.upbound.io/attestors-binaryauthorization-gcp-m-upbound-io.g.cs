@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.binaryauthorization.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Attestor is the Schema for the Attestors API. An attestor that attests to container image artifacts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AttestorList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Attestor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Note in containeranalysis to populate noteReference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceRef
@@ -63,7 +68,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteR
     [JsonPropertyName("policy")]
     public V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Note in containeranalysis to populate noteReference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteR
     [JsonPropertyName("policy")]
     public V1beta1AttestorSpecForProviderAttestationAuthorityNoteNoteReferenceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A raw PKIX SubjectPublicKeyInfo format public key. NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNotePublicKeysPkixPublicKey
@@ -110,7 +121,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNotePubli
     [JsonPropertyName("signatureAlgorithm")]
     public string? SignatureAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNotePublicKeys
@@ -131,7 +144,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNotePubli
     [JsonPropertyName("pkixPublicKey")]
     public V1beta1AttestorSpecForProviderAttestationAuthorityNotePublicKeysPkixPublicKey? PkixPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNote
@@ -152,7 +167,9 @@ public partial class V1beta1AttestorSpecForProviderAttestationAuthorityNote
     [JsonPropertyName("publicKeys")]
     public IList<V1beta1AttestorSpecForProviderAttestationAuthorityNotePublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecForProvider
@@ -169,7 +186,9 @@ public partial class V1beta1AttestorSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceRefPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNote
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Note in containeranalysis to populate noteReference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceRef
@@ -199,7 +220,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNote
     [JsonPropertyName("policy")]
     public V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceSelectorPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNote
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Note in containeranalysis to populate noteReference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceSelector
@@ -233,7 +258,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNote
     [JsonPropertyName("policy")]
     public V1beta1AttestorSpecInitProviderAttestationAuthorityNoteNoteReferenceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A raw PKIX SubjectPublicKeyInfo format public key. NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNotePublicKeysPkixPublicKey
@@ -246,7 +273,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNotePubl
     [JsonPropertyName("signatureAlgorithm")]
     public string? SignatureAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNotePublicKeys
@@ -267,7 +296,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNotePubl
     [JsonPropertyName("pkixPublicKey")]
     public V1beta1AttestorSpecInitProviderAttestationAuthorityNotePublicKeysPkixPublicKey? PkixPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNote
@@ -288,7 +319,9 @@ public partial class V1beta1AttestorSpecInitProviderAttestationAuthorityNote
     [JsonPropertyName("publicKeys")]
     public IList<V1beta1AttestorSpecInitProviderAttestationAuthorityNotePublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecInitProvider
@@ -305,7 +338,9 @@ public partial class V1beta1AttestorSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecProviderConfigRef
@@ -318,7 +353,9 @@ public partial class V1beta1AttestorSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpecWriteConnectionSecretToRef
@@ -327,7 +364,9 @@ public partial class V1beta1AttestorSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttestorSpec defines the desired state of Attestor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorSpec
@@ -352,7 +391,9 @@ public partial class V1beta1AttestorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AttestorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A raw PKIX SubjectPublicKeyInfo format public key. NOTE: id may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If id is left blank, a default one will be computed based on the digest of the DER encoding of the public key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNotePublicKeysPkixPublicKey
@@ -365,7 +406,9 @@ public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNotePubl
     [JsonPropertyName("signatureAlgorithm")]
     public string? SignatureAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNotePublicKeys
@@ -386,7 +429,9 @@ public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNotePubl
     [JsonPropertyName("pkixPublicKey")]
     public V1beta1AttestorStatusAtProviderAttestationAuthorityNotePublicKeysPkixPublicKey? PkixPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNote
@@ -403,7 +448,9 @@ public partial class V1beta1AttestorStatusAtProviderAttestationAuthorityNote
     [JsonPropertyName("publicKeys")]
     public IList<V1beta1AttestorStatusAtProviderAttestationAuthorityNotePublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatusAtProvider
@@ -424,7 +471,9 @@ public partial class V1beta1AttestorStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatusConditions
@@ -453,7 +502,9 @@ public partial class V1beta1AttestorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttestorStatus defines the observed state of Attestor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttestorStatus
@@ -470,7 +521,9 @@ public partial class V1beta1AttestorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Attestor is the Schema for the Attestors API. An attestor that attests to container image artifacts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -500,3 +553,4 @@ public partial class V1beta1Attestor : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1AttestorStatus? Status { get; set; }
 }
+#nullable disable

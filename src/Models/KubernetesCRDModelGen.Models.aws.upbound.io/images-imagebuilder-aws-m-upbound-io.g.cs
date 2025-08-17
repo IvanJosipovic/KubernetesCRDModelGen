@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+#nullable enable
 /// <summary>Image is the Schema for the Images API. Manages an Image Builder Image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ImageList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Image> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderDistributionConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSele
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderDistributionConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageRecipeArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageRecipeArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderImageRecipeArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageRecipeArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageScanningConfigurationEcrConfiguration
@@ -174,7 +193,9 @@ public partial class V1beta1ImageSpecForProviderImageScanningConfigurationEcrCon
     [JsonPropertyName("repositoryName")]
     public string? RepositoryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image scanning configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageScanningConfiguration
@@ -187,7 +208,9 @@ public partial class V1beta1ImageSpecForProviderImageScanningConfiguration
     [JsonPropertyName("imageScanningEnabled")]
     public bool? ImageScanningEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image tests configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageTestsConfiguration
@@ -200,7 +223,9 @@ public partial class V1beta1ImageSpecForProviderImageTestsConfiguration
     [JsonPropertyName("timeoutMinutes")]
     public double? TimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRefPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRef
@@ -230,7 +257,9 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRe
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelector
@@ -264,7 +295,9 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSe
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderWorkflowParameter
@@ -277,7 +310,9 @@ public partial class V1beta1ImageSpecForProviderWorkflowParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderWorkflow
@@ -298,7 +333,9 @@ public partial class V1beta1ImageSpecForProviderWorkflow
     [JsonPropertyName("workflowArn")]
     public string? WorkflowArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProvider
@@ -371,7 +408,9 @@ public partial class V1beta1ImageSpecForProvider
     [JsonPropertyName("workflow")]
     public IList<V1beta1ImageSpecForProviderWorkflow>? Workflow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRefPolicy
@@ -384,7 +423,9 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRef
@@ -401,7 +442,9 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderDistributionConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSelectorPolicy
@@ -414,7 +457,9 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSelector
@@ -435,7 +480,9 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSel
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderDistributionConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnRefPolicy
@@ -448,7 +495,9 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnRef
@@ -465,7 +514,9 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnRef
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderImageRecipeArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy
@@ -478,7 +529,9 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelector
@@ -499,7 +552,9 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageScanningConfigurationEcrConfiguration
@@ -512,7 +567,9 @@ public partial class V1beta1ImageSpecInitProviderImageScanningConfigurationEcrCo
     [JsonPropertyName("repositoryName")]
     public string? RepositoryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image scanning configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageScanningConfiguration
@@ -525,7 +582,9 @@ public partial class V1beta1ImageSpecInitProviderImageScanningConfiguration
     [JsonPropertyName("imageScanningEnabled")]
     public bool? ImageScanningEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image tests configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageTestsConfiguration
@@ -538,7 +597,9 @@ public partial class V1beta1ImageSpecInitProviderImageTestsConfiguration
     [JsonPropertyName("timeoutMinutes")]
     public double? TimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRefPolicy
@@ -551,7 +612,9 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRef
@@ -568,7 +631,9 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnR
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPolicy
@@ -581,7 +646,9 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelector
@@ -602,7 +669,9 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnS
     [JsonPropertyName("policy")]
     public V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderWorkflowParameter
@@ -615,7 +684,9 @@ public partial class V1beta1ImageSpecInitProviderWorkflowParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderWorkflow
@@ -636,7 +707,9 @@ public partial class V1beta1ImageSpecInitProviderWorkflow
     [JsonPropertyName("workflowArn")]
     public string? WorkflowArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProvider
@@ -705,7 +778,9 @@ public partial class V1beta1ImageSpecInitProvider
     [JsonPropertyName("workflow")]
     public IList<V1beta1ImageSpecInitProviderWorkflow>? Workflow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecProviderConfigRef
@@ -718,7 +793,9 @@ public partial class V1beta1ImageSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecWriteConnectionSecretToRef
@@ -727,7 +804,9 @@ public partial class V1beta1ImageSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageSpec defines the desired state of Image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpec
@@ -752,7 +831,9 @@ public partial class V1beta1ImageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ImageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderImageScanningConfigurationEcrConfiguration
@@ -765,7 +846,9 @@ public partial class V1beta1ImageStatusAtProviderImageScanningConfigurationEcrCo
     [JsonPropertyName("repositoryName")]
     public string? RepositoryName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image scanning configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderImageScanningConfiguration
@@ -778,7 +861,9 @@ public partial class V1beta1ImageStatusAtProviderImageScanningConfiguration
     [JsonPropertyName("imageScanningEnabled")]
     public bool? ImageScanningEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with image tests configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderImageTestsConfiguration
@@ -791,7 +876,9 @@ public partial class V1beta1ImageStatusAtProviderImageTestsConfiguration
     [JsonPropertyName("timeoutMinutes")]
     public double? TimeoutMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderOutputResourcesAmis
@@ -816,7 +903,9 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesAmis
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderOutputResourcesContainers
@@ -829,7 +918,9 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesContainers
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderOutputResources
@@ -842,7 +933,9 @@ public partial class V1beta1ImageStatusAtProviderOutputResources
     [JsonPropertyName("containers")]
     public IList<V1beta1ImageStatusAtProviderOutputResourcesContainers>? Containers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderWorkflowParameter
@@ -855,7 +948,9 @@ public partial class V1beta1ImageStatusAtProviderWorkflowParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProviderWorkflow
@@ -876,7 +971,9 @@ public partial class V1beta1ImageStatusAtProviderWorkflow
     [JsonPropertyName("workflowArn")]
     public string? WorkflowArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProvider
@@ -961,7 +1058,9 @@ public partial class V1beta1ImageStatusAtProvider
     [JsonPropertyName("workflow")]
     public IList<V1beta1ImageStatusAtProviderWorkflow>? Workflow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusConditions
@@ -990,7 +1089,9 @@ public partial class V1beta1ImageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageStatus defines the observed state of Image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatus
@@ -1007,7 +1108,9 @@ public partial class V1beta1ImageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Image is the Schema for the Images API. Manages an Image Builder Image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1037,3 +1140,4 @@ public partial class V1beta1Image : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1ImageStatus? Status { get; set; }
 }
+#nullable disable

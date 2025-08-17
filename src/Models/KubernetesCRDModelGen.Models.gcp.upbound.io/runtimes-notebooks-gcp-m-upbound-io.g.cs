@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Runtime is the Schema for the Runtimes API. A Cloud AI Platform Notebook runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RuntimeList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Runtime> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderAccessConfig
@@ -46,7 +49,9 @@ public partial class V1beta1RuntimeSpecForProviderAccessConfig
     [JsonPropertyName("runtimeOwner")]
     public string? RuntimeOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderSoftwareConfigKernels
@@ -59,7 +64,9 @@ public partial class V1beta1RuntimeSpecForProviderSoftwareConfigKernels
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderSoftwareConfig
@@ -100,7 +107,9 @@ public partial class V1beta1RuntimeSpecForProviderSoftwareConfig
     [JsonPropertyName("postStartupScriptBehavior")]
     public string? PostStartupScriptBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
@@ -113,7 +122,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigContainerImages
@@ -126,7 +137,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
@@ -151,7 +164,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data disk option configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigDataDisk
@@ -176,7 +191,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Encryption settings for virtual machine data disk. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigEncryptionConfig
@@ -185,7 +202,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded VM Instance configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
@@ -202,7 +221,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual Machine configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfig
@@ -263,7 +284,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a Compute Engine VM image to start the managed notebook instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderVirtualMachine
@@ -272,7 +295,9 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachine
     [JsonPropertyName("virtualMachineConfig")]
     public V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfig? VirtualMachineConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProvider
@@ -301,7 +326,9 @@ public partial class V1beta1RuntimeSpecForProvider
     [JsonPropertyName("virtualMachine")]
     public V1beta1RuntimeSpecForProviderVirtualMachine? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderAccessConfig
@@ -314,7 +341,9 @@ public partial class V1beta1RuntimeSpecInitProviderAccessConfig
     [JsonPropertyName("runtimeOwner")]
     public string? RuntimeOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderSoftwareConfigKernels
@@ -327,7 +356,9 @@ public partial class V1beta1RuntimeSpecInitProviderSoftwareConfigKernels
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderSoftwareConfig
@@ -368,7 +399,9 @@ public partial class V1beta1RuntimeSpecInitProviderSoftwareConfig
     [JsonPropertyName("postStartupScriptBehavior")]
     public string? PostStartupScriptBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
@@ -381,7 +414,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigContainerImages
@@ -394,7 +429,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
@@ -419,7 +456,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data disk option configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigDataDisk
@@ -444,7 +483,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Encryption settings for virtual machine data disk. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigEncryptionConfig
@@ -453,7 +494,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded VM Instance configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
@@ -470,7 +513,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual Machine configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfig
@@ -531,7 +576,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a Compute Engine VM image to start the managed notebook instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachine
@@ -540,7 +587,9 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachine
     [JsonPropertyName("virtualMachineConfig")]
     public V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfig? VirtualMachineConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecInitProvider
@@ -565,7 +614,9 @@ public partial class V1beta1RuntimeSpecInitProvider
     [JsonPropertyName("virtualMachine")]
     public V1beta1RuntimeSpecInitProviderVirtualMachine? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecProviderConfigRef
@@ -578,7 +629,9 @@ public partial class V1beta1RuntimeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecWriteConnectionSecretToRef
@@ -587,7 +640,9 @@ public partial class V1beta1RuntimeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeSpec defines the desired state of Runtime</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpec
@@ -612,7 +667,9 @@ public partial class V1beta1RuntimeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RuntimeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderAccessConfig
@@ -629,7 +686,9 @@ public partial class V1beta1RuntimeStatusAtProviderAccessConfig
     [JsonPropertyName("runtimeOwner")]
     public string? RuntimeOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderMetrics
@@ -638,7 +697,9 @@ public partial class V1beta1RuntimeStatusAtProviderMetrics
     [JsonPropertyName("systemMetrics")]
     public IDictionary<string, string>? SystemMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderSoftwareConfigKernels
@@ -651,7 +712,9 @@ public partial class V1beta1RuntimeStatusAtProviderSoftwareConfigKernels
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderSoftwareConfig
@@ -696,7 +759,9 @@ public partial class V1beta1RuntimeStatusAtProviderSoftwareConfig
     [JsonPropertyName("upgradeable")]
     public bool? Upgradeable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
@@ -709,7 +774,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigContainerImages
@@ -722,7 +789,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
@@ -747,7 +816,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data disk option configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigDataDisk
@@ -800,7 +871,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Encryption settings for virtual machine data disk. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigEncryptionConfig
@@ -809,7 +882,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded VM Instance configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
@@ -826,7 +901,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual Machine configuration settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfig
@@ -895,7 +972,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a Compute Engine VM image to start the managed notebook instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachine
@@ -912,7 +991,9 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachine
     [JsonPropertyName("virtualMachineConfig")]
     public V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfig? VirtualMachineConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusAtProvider
@@ -965,7 +1046,9 @@ public partial class V1beta1RuntimeStatusAtProvider
     [JsonPropertyName("virtualMachine")]
     public V1beta1RuntimeStatusAtProviderVirtualMachine? VirtualMachine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatusConditions
@@ -994,7 +1077,9 @@ public partial class V1beta1RuntimeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeStatus defines the observed state of Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeStatus
@@ -1011,7 +1096,9 @@ public partial class V1beta1RuntimeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Runtime is the Schema for the Runtimes API. A Cloud AI Platform Notebook runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1041,3 +1128,4 @@ public partial class V1beta1Runtime : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1RuntimeStatus? Status { get; set; }
 }
+#nullable disable

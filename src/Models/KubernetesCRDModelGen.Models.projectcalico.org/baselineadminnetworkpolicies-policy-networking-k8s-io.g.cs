@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.policy.networking.k8s.io;
+#nullable enable
 /// <summary>BaselineAdminNetworkPolicy is a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicyList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1alpha1BaselineAdminNetworkPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPortsPortNumber
@@ -46,7 +49,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPortsPortNumber
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PortRange selects a port range on a pod(s) based on provided start and end values.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPortsPortRange
@@ -63,7 +68,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPortsPortRange
     [JsonPropertyName("start")]
     public int Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdminNetworkPolicyPort describes how to select network ports on pod(s). Exactly one field must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPorts
@@ -80,7 +87,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressPorts
     [JsonPropertyName("portRange")]
     public V1alpha1BaselineAdminNetworkPolicySpecEgressPortsPortRange? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNamespacesMatchExpressions
@@ -97,7 +106,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNamespacesMat
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNamespaces
@@ -110,7 +121,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNamespaces
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNodesMatchExpressions
@@ -127,7 +140,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNodesMatchExp
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nodes defines a way to select a set of nodes in the cluster. This field follows standard label selector semantics; if present but empty, it selects all Nodes.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNodes
@@ -140,7 +155,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToNodes
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsNamespaceSelectorMatchExpressions
@@ -157,7 +174,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsNamespace
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsNamespaceSelector
@@ -170,7 +189,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsNamespace
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsPodSelectorMatchExpressions
@@ -187,7 +208,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsPodSelect
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsPodSelector
@@ -200,7 +223,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsPodSelect
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pods defines a way to select a set of pods in a set of namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPods
@@ -213,7 +238,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressToPods
     [JsonPropertyName("podSelector")]
     public V1alpha1BaselineAdminNetworkPolicySpecEgressToPodsPodSelector PodSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdminNetworkPolicyEgressPeer defines a peer to allow traffic to. Exactly one of the selector pointers must be set for a given peer. If a consumer observes none of its fields are set, they must assume an unknown option has been specified and fail closed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressTo
@@ -234,7 +261,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgressTo
     [JsonPropertyName("pods")]
     public V1alpha1BaselineAdminNetworkPolicySpecEgressToPods? Pods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BaselineAdminNetworkPolicyEgressRule describes an action to take on a particular set of traffic originating from pods selected by a BaselineAdminNetworkPolicy's Subject field. &lt;network-policy-api:experimental:validation&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecEgress
@@ -255,7 +284,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecEgress
     [JsonPropertyName("to")]
     public IList<V1alpha1BaselineAdminNetworkPolicySpecEgressTo> To { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromNamespacesMatchExpressions
@@ -272,7 +303,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromNamespaces
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromNamespaces
@@ -285,7 +318,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromNamespaces
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsNamespaceSelectorMatchExpressions
@@ -302,7 +337,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsNamesp
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsNamespaceSelector
@@ -315,7 +352,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsNamesp
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsPodSelectorMatchExpressions
@@ -332,7 +371,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsPodSel
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsPodSelector
@@ -345,7 +386,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsPodSel
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pods defines a way to select a set of pods in a set of namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPods
@@ -358,7 +401,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFromPods
     [JsonPropertyName("podSelector")]
     public V1alpha1BaselineAdminNetworkPolicySpecIngressFromPodsPodSelector PodSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdminNetworkPolicyIngressPeer defines an in-cluster peer to allow traffic from. Exactly one of the selector pointers must be set for a given peer. If a consumer observes none of its fields are set, they must assume an unknown option has been specified and fail closed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFrom
@@ -371,7 +416,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressFrom
     [JsonPropertyName("pods")]
     public V1alpha1BaselineAdminNetworkPolicySpecIngressFromPods? Pods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPortsPortNumber
@@ -384,7 +431,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPortsPortNumbe
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PortRange selects a port range on a pod(s) based on provided start and end values.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPortsPortRange
@@ -401,7 +450,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPortsPortRange
     [JsonPropertyName("start")]
     public int Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdminNetworkPolicyPort describes how to select network ports on pod(s). Exactly one field must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPorts
@@ -418,7 +469,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngressPorts
     [JsonPropertyName("portRange")]
     public V1alpha1BaselineAdminNetworkPolicySpecIngressPortsPortRange? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BaselineAdminNetworkPolicyIngressRule describes an action to take on a particular set of traffic destined for pods selected by a BaselineAdminNetworkPolicy's Subject field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecIngress
@@ -439,7 +492,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecIngress
     [JsonPropertyName("ports")]
     public IList<V1alpha1BaselineAdminNetworkPolicySpecIngressPorts>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectNamespacesMatchExpressions
@@ -456,7 +511,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectNamespacesMatc
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Namespaces is used to select pods via namespace selectors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectNamespaces
@@ -469,7 +526,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectNamespaces
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsNamespaceSelectorMatchExpressions
@@ -486,7 +545,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsNamespaceS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsNamespaceSelector
@@ -499,7 +560,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsNamespaceS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsPodSelectorMatchExpressions
@@ -516,7 +579,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsPodSelecto
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsPodSelector
@@ -529,7 +594,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsPodSelecto
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pods is used to select pods via namespace AND pod selectors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPods
@@ -542,7 +609,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubjectPods
     [JsonPropertyName("podSelector")]
     public V1alpha1BaselineAdminNetworkPolicySpecSubjectPodsPodSelector PodSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subject defines the pods to which this BaselineAdminNetworkPolicy applies. Note that host-networked pods are not included in subject selection.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpecSubject
@@ -555,7 +624,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpecSubject
     [JsonPropertyName("pods")]
     public V1alpha1BaselineAdminNetworkPolicySpecSubjectPods? Pods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of BaselineAdminNetworkPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicySpec
@@ -572,7 +643,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicySpec
     [JsonPropertyName("subject")]
     public V1alpha1BaselineAdminNetworkPolicySpecSubject Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicyStatusConditions
@@ -601,7 +674,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status is the status to be reported by the implementation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BaselineAdminNetworkPolicyStatus
@@ -610,7 +685,9 @@ public partial class V1alpha1BaselineAdminNetworkPolicyStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1BaselineAdminNetworkPolicyStatusConditions> Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BaselineAdminNetworkPolicy is a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -640,3 +717,4 @@ public partial class V1alpha1BaselineAdminNetworkPolicy : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1alpha1BaselineAdminNetworkPolicyStatus? Status { get; set; }
 }
+#nullable disable

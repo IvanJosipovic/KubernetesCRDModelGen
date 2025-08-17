@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+#nullable enable
 /// <summary>MaintenanceWindowTask is the Schema for the MaintenanceWindowTasks API. Provides an SSM Maintenance Window Task resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MaintenanceWindowTaskList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1MaintenanceWindowTask> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefs
@@ -127,7 +140,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelector
@@ -161,7 +178,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSel
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargets
@@ -182,7 +201,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargets
     [JsonPropertyName("valuesSelector")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate taskArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRef
@@ -212,7 +235,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate taskArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelector
@@ -246,7 +273,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefs
@@ -276,7 +307,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelector
@@ -310,7 +345,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameter
@@ -331,7 +368,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("valuesSelector")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for an AUTOMATION task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParameters
@@ -344,7 +383,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("parameter")]
     public IList<V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JSON to provide to your Lambda function as input.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersLambdaParametersPayloadSecretRef
@@ -357,7 +398,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a LAMBDA task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersLambdaParameters
@@ -374,7 +417,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for sending command output to CloudWatch Logs. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersCloudwatchConfig
@@ -387,7 +432,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("cloudwatchOutputEnabled")]
     public bool? CloudwatchOutputEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy
@@ -400,7 +447,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate notificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRef
@@ -417,7 +466,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicy
@@ -430,7 +481,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate notificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelector
@@ -451,7 +504,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfig
@@ -476,7 +531,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy
@@ -489,7 +546,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate outputS3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRef
@@ -506,7 +565,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicy
@@ -519,7 +580,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate outputS3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelector
@@ -540,7 +603,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersParameter
@@ -553,7 +618,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy
@@ -566,7 +633,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRef
@@ -583,7 +652,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicy
@@ -596,7 +667,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelector
@@ -617,7 +690,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a RUN_COMMAND task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParameters
@@ -682,7 +757,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The inputs for the STEP_FUNCTION task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersStepFunctionsParametersInputSecretRef
@@ -695,7 +772,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a STEP_FUNCTIONS task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersStepFunctionsParameters
@@ -708,7 +787,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with parameters for task execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParameters
@@ -729,7 +810,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     [JsonPropertyName("stepFunctionsParameters")]
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersStepFunctionsParameters? StepFunctionsParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicy
@@ -742,7 +825,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRef
@@ -759,7 +844,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelectorPolicy
@@ -772,7 +859,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelector
@@ -793,7 +882,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProvider
@@ -874,7 +965,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProvider
     [JsonPropertyName("windowIdSelector")]
     public V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicy
@@ -887,7 +980,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRef
@@ -904,7 +999,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPolicy
@@ -917,7 +1014,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelector
@@ -938,7 +1037,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefsPolicy
@@ -951,7 +1052,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefs
@@ -968,7 +1071,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelectorPolicy
@@ -981,7 +1086,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelector
@@ -1002,7 +1109,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSe
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargets
@@ -1023,7 +1132,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargets
     [JsonPropertyName("valuesSelector")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicy
@@ -1036,7 +1147,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate taskArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRef
@@ -1053,7 +1166,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicy
@@ -1066,7 +1181,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate taskArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelector
@@ -1087,7 +1204,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy
@@ -1100,7 +1219,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefs
@@ -1117,7 +1238,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy
@@ -1130,7 +1253,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelector
@@ -1151,7 +1276,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameter
@@ -1172,7 +1299,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("valuesSelector")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for an AUTOMATION task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParameters
@@ -1185,7 +1314,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("parameter")]
     public IList<V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JSON to provide to your Lambda function as input.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersLambdaParametersPayloadSecretRef
@@ -1198,7 +1329,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a LAMBDA task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersLambdaParameters
@@ -1215,7 +1348,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for sending command output to CloudWatch Logs. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersCloudwatchConfig
@@ -1228,7 +1363,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("cloudwatchOutputEnabled")]
     public bool? CloudwatchOutputEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy
@@ -1241,7 +1378,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate notificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRef
@@ -1258,7 +1397,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicy
@@ -1271,7 +1412,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate notificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelector
@@ -1292,7 +1435,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfig
@@ -1317,7 +1462,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy
@@ -1330,7 +1477,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate outputS3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRef
@@ -1347,7 +1496,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicy
@@ -1360,7 +1511,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate outputS3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelector
@@ -1381,7 +1534,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersParameter
@@ -1394,7 +1549,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy
@@ -1407,7 +1564,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRef
@@ -1424,7 +1583,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicy
@@ -1437,7 +1598,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelector
@@ -1458,7 +1621,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a RUN_COMMAND task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParameters
@@ -1523,7 +1688,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The inputs for the STEP_FUNCTION task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersStepFunctionsParametersInputSecretRef
@@ -1536,7 +1703,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a STEP_FUNCTIONS task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersStepFunctionsParameters
@@ -1549,7 +1718,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with parameters for task execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
@@ -1570,7 +1741,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     [JsonPropertyName("stepFunctionsParameters")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersStepFunctionsParameters? StepFunctionsParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicy
@@ -1583,7 +1756,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRef
@@ -1600,7 +1775,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelectorPolicy
@@ -1613,7 +1790,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelector
@@ -1634,7 +1813,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProvider
@@ -1711,7 +1892,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProvider
     [JsonPropertyName("windowIdSelector")]
     public V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecProviderConfigRef
@@ -1724,7 +1907,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecWriteConnectionSecretToRef
@@ -1733,7 +1918,9 @@ public partial class V1beta1MaintenanceWindowTaskSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTaskSpec defines the desired state of MaintenanceWindowTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpec
@@ -1758,7 +1945,9 @@ public partial class V1beta1MaintenanceWindowTaskSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MaintenanceWindowTaskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTargets
@@ -1771,7 +1960,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTargets
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersAutomationParametersParameter
@@ -1784,7 +1975,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for an AUTOMATION task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersAutomationParameters
@@ -1797,7 +1990,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("parameter")]
     public IList<V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersAutomationParametersParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a LAMBDA task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersLambdaParameters
@@ -1810,7 +2005,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for sending command output to CloudWatch Logs. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersRunCommandParametersCloudwatchConfig
@@ -1823,7 +2020,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("cloudwatchOutputEnabled")]
     public bool? CloudwatchOutputEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersRunCommandParametersNotificationConfig
@@ -1840,7 +2039,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersRunCommandParametersParameter
@@ -1853,7 +2054,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a RUN_COMMAND task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersRunCommandParameters
@@ -1902,7 +2105,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The parameters for a STEP_FUNCTIONS task type. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersStepFunctionsParameters
@@ -1911,7 +2116,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with parameters for task execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParameters
@@ -1932,7 +2139,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationP
     [JsonPropertyName("stepFunctionsParameters")]
     public V1beta1MaintenanceWindowTaskStatusAtProviderTaskInvocationParametersStepFunctionsParameters? StepFunctionsParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusAtProvider
@@ -2001,7 +2210,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProvider
     [JsonPropertyName("windowTaskId")]
     public string? WindowTaskId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatusConditions
@@ -2030,7 +2241,9 @@ public partial class V1beta1MaintenanceWindowTaskStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTaskStatus defines the observed state of MaintenanceWindowTask.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskStatus
@@ -2047,7 +2260,9 @@ public partial class V1beta1MaintenanceWindowTaskStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTask is the Schema for the MaintenanceWindowTasks API. Provides an SSM Maintenance Window Task resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2077,3 +2292,4 @@ public partial class V1beta1MaintenanceWindowTask : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1MaintenanceWindowTaskStatus? Status { get; set; }
 }
+#nullable disable

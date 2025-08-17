@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hdinsight.azure.upbound.io;
+#nullable enable
 /// <summary>KafkaCluster is the Schema for the KafkaClusters API. Manages a HDInsight Kafka Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1KafkaClusterList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1KafkaCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderComponentVersion
@@ -42,7 +45,9 @@ public partial class V1beta1KafkaClusterSpecForProviderComponentVersion
     [JsonPropertyName("kafka")]
     public string? Kafka { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderComputeIsolation
@@ -55,7 +60,9 @@ public partial class V1beta1KafkaClusterSpecForProviderComputeIsolation
     [JsonPropertyName("hostSku")]
     public string? HostSku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderDiskEncryption
@@ -76,7 +83,9 @@ public partial class V1beta1KafkaClusterSpecForProviderDiskEncryption
     [JsonPropertyName("keyVaultManagedIdentityId")]
     public string? KeyVaultManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The workspace key of the log analytics extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef
@@ -93,7 +102,9 @@ public partial class V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderExtension
@@ -106,7 +117,9 @@ public partial class V1beta1KafkaClusterSpecForProviderExtension
     [JsonPropertyName("primaryKeySecretRef")]
     public V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef? PrimaryKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password used for the Ambari Portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderGateway
@@ -136,7 +151,9 @@ public partial class V1beta1KafkaClusterSpecForProviderGateway
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordSecretRef
@@ -153,7 +170,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbari
@@ -174,7 +193,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbari
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSecretRef
@@ -191,7 +212,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresHive
@@ -212,7 +235,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresHive
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSecretRef
@@ -229,7 +254,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresOozie
@@ -250,7 +277,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresOozie
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMetastores
@@ -267,7 +296,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastores
     [JsonPropertyName("oozie")]
     public IList<V1beta1KafkaClusterSpecForProviderMetastoresOozie>? Oozie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Operations Management Suite (OMS) workspace key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef
@@ -284,7 +315,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderMonitor
@@ -297,7 +330,9 @@ public partial class V1beta1KafkaClusterSpecForProviderMonitor
     [JsonPropertyName("primaryKeySecretRef")]
     public V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef? PrimaryKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderNetwork
@@ -310,7 +345,9 @@ public partial class V1beta1KafkaClusterSpecForProviderNetwork
     [JsonPropertyName("privateLinkEnabled")]
     public bool? PrivateLinkEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
@@ -336,7 +375,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationI
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
@@ -349,7 +390,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
@@ -366,7 +409,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationI
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfiguration
@@ -399,7 +444,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationI
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1KafkaClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfiguration
@@ -416,7 +463,9 @@ public partial class V1beta1KafkaClusterSpecForProviderPrivateLinkConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolicy
@@ -429,7 +478,9 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRef
@@ -442,7 +493,9 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicy
@@ -455,7 +508,9 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
@@ -472,7 +527,9 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRestProxy
@@ -485,7 +542,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRestProxy
     [JsonPropertyName("securityGroupName")]
     public string? SecurityGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodePasswordSecretRef
@@ -502,7 +561,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodePasswordSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeScriptActions
@@ -519,7 +580,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeScriptAction
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicy
@@ -532,7 +595,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRef
@@ -545,7 +610,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy
@@ -558,7 +625,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelector
@@ -575,7 +644,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSele
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
@@ -616,7 +687,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodePasswordSecretRef
@@ -633,7 +706,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeP
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeScriptActions
@@ -650,7 +725,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRefPolicy
@@ -663,7 +740,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRef
@@ -676,7 +755,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy
@@ -689,7 +770,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelector
@@ -706,7 +789,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
@@ -743,7 +828,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodePasswordSecretRef
@@ -760,7 +847,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodePasswordSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeScriptActions
@@ -777,7 +866,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeScriptActi
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicy
@@ -790,7 +881,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRef
@@ -803,7 +896,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRe
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy
@@ -816,7 +911,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelector
@@ -833,7 +930,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
@@ -882,7 +981,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodePasswordSecretRef
@@ -899,7 +1000,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodePasswor
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeScriptActions
@@ -916,7 +1019,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeScriptA
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicy
@@ -929,7 +1034,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRef
@@ -942,7 +1049,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy
@@ -955,7 +1064,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
@@ -972,7 +1083,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
@@ -1013,7 +1126,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderRoles
@@ -1034,7 +1149,9 @@ public partial class V1beta1KafkaClusterSpecForProviderRoles
     [JsonPropertyName("zookeeperNode")]
     public IList<V1beta1KafkaClusterSpecForProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef
@@ -1051,7 +1168,9 @@ public partial class V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUser
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderSecurityProfile
@@ -1084,7 +1203,9 @@ public partial class V1beta1KafkaClusterSpecForProviderSecurityProfile
     [JsonPropertyName("msiResourceId")]
     public string? MsiResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageAccountKeySecretRef
@@ -1101,7 +1222,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageAcco
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRefPolicy
@@ -1114,7 +1237,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRef
@@ -1127,7 +1252,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy
@@ -1140,7 +1267,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelector
@@ -1157,7 +1286,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccount
@@ -1186,7 +1317,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccount
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountGen2
@@ -1207,7 +1340,9 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountGen2
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecForProvider
@@ -1304,7 +1439,9 @@ public partial class V1beta1KafkaClusterSpecForProvider
     [JsonPropertyName("tlsMinVersion")]
     public string? TlsMinVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderComponentVersion
@@ -1313,7 +1450,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderComponentVersion
     [JsonPropertyName("kafka")]
     public string? Kafka { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderComputeIsolation
@@ -1326,7 +1465,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderComputeIsolation
     [JsonPropertyName("hostSku")]
     public string? HostSku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderDiskEncryption
@@ -1347,7 +1488,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderDiskEncryption
     [JsonPropertyName("keyVaultManagedIdentityId")]
     public string? KeyVaultManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The workspace key of the log analytics extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderExtensionPrimaryKeySecretRef
@@ -1364,7 +1507,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderExtensionPrimaryKeySecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderExtension
@@ -1377,7 +1522,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderExtension
     [JsonPropertyName("primaryKeySecretRef")]
     public V1beta1KafkaClusterSpecInitProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password used for the Ambari Portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderGatewayPasswordSecretRef
@@ -1394,7 +1541,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderGatewayPasswordSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderGateway
@@ -1407,7 +1556,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderGateway
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbariPasswordSecretRef
@@ -1424,7 +1575,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbariPassword
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
@@ -1445,7 +1598,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHivePasswordSecretRef
@@ -1462,7 +1617,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHivePasswordSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
@@ -1483,7 +1640,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOoziePasswordSecretRef
@@ -1500,7 +1659,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOoziePasswordS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
@@ -1521,7 +1682,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastores
@@ -1538,7 +1701,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastores
     [JsonPropertyName("oozie")]
     public IList<V1beta1KafkaClusterSpecInitProviderMetastoresOozie>? Oozie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Operations Management Suite (OMS) workspace key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMonitorPrimaryKeySecretRef
@@ -1555,7 +1720,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMonitorPrimaryKeySecretR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMonitor
@@ -1568,7 +1735,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderMonitor
     [JsonPropertyName("primaryKeySecretRef")]
     public V1beta1KafkaClusterSpecInitProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderNetwork
@@ -1581,7 +1750,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderNetwork
     [JsonPropertyName("privateLinkEnabled")]
     public bool? PrivateLinkEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
@@ -1594,7 +1765,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
@@ -1607,7 +1780,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
@@ -1620,7 +1795,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
@@ -1637,7 +1814,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfiguration
@@ -1670,7 +1849,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1KafkaClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
@@ -1687,7 +1868,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderPrivateLinkConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRestProxy
@@ -1700,7 +1883,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRestProxy
     [JsonPropertyName("securityGroupName")]
     public string? SecurityGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodePasswordSecretRef
@@ -1717,7 +1902,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodePasswordSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeScriptActions
@@ -1734,7 +1921,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeScriptActio
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicy
@@ -1747,7 +1936,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRef
@@ -1760,7 +1951,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy
@@ -1773,7 +1966,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelector
@@ -1790,7 +1985,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
@@ -1831,7 +2028,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodePasswordSecretRef
@@ -1848,7 +2047,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeScriptActions
@@ -1865,7 +2066,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRefPolicy
@@ -1878,7 +2081,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRef
@@ -1891,7 +2096,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy
@@ -1904,7 +2111,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelector
@@ -1921,7 +2130,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
@@ -1958,7 +2169,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodePasswordSecretRef
@@ -1975,7 +2188,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodePasswordS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeScriptActions
@@ -1992,7 +2207,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeScriptAct
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicy
@@ -2005,7 +2222,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRef
@@ -2018,7 +2237,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdR
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy
@@ -2031,7 +2252,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelector
@@ -2048,7 +2271,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
@@ -2097,7 +2322,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodePasswordSecretRef
@@ -2114,7 +2341,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodePasswo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeScriptActions
@@ -2131,7 +2360,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeScript
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicy
@@ -2144,7 +2375,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRef
@@ -2157,7 +2390,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy
@@ -2170,7 +2405,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelector
@@ -2187,7 +2424,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
@@ -2228,7 +2467,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderRoles
@@ -2249,7 +2490,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderRoles
     [JsonPropertyName("zookeeperNode")]
     public IList<V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfileDomainUserPasswordSecretRef
@@ -2266,7 +2509,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfileDomainUse
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
@@ -2299,7 +2544,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
     [JsonPropertyName("msiResourceId")]
     public string? MsiResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageAccountKeySecretRef
@@ -2316,7 +2563,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageAcc
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicy
@@ -2329,7 +2578,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRef
@@ -2342,7 +2593,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy
@@ -2355,7 +2608,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelector
@@ -2372,7 +2627,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccount
@@ -2401,7 +2658,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccount
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountGen2
@@ -2422,7 +2681,9 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountGen2
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProvider
@@ -2507,7 +2768,9 @@ public partial class V1beta1KafkaClusterSpecInitProvider
     [JsonPropertyName("tlsMinVersion")]
     public string? TlsMinVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecProviderConfigRefPolicy
@@ -2520,7 +2783,9 @@ public partial class V1beta1KafkaClusterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecProviderConfigRef
@@ -2533,7 +2798,9 @@ public partial class V1beta1KafkaClusterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1KafkaClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecWriteConnectionSecretToRef
@@ -2546,7 +2813,9 @@ public partial class V1beta1KafkaClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KafkaClusterSpec defines the desired state of KafkaCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpec
@@ -2575,7 +2844,9 @@ public partial class V1beta1KafkaClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1KafkaClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderComponentVersion
@@ -2584,7 +2855,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderComponentVersion
     [JsonPropertyName("kafka")]
     public string? Kafka { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderComputeIsolation
@@ -2597,7 +2870,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderComputeIsolation
     [JsonPropertyName("hostSku")]
     public string? HostSku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderDiskEncryption
@@ -2618,7 +2893,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderDiskEncryption
     [JsonPropertyName("keyVaultManagedIdentityId")]
     public string? KeyVaultManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderExtension
@@ -2627,7 +2904,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderExtension
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderGateway
@@ -2636,7 +2915,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderGateway
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresAmbari
@@ -2653,7 +2934,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresAmbari
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresHive
@@ -2670,7 +2953,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresHive
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresOozie
@@ -2687,7 +2972,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresOozie
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderMetastores
@@ -2704,7 +2991,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastores
     [JsonPropertyName("oozie")]
     public IList<V1beta1KafkaClusterStatusAtProviderMetastoresOozie>? Oozie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderMonitor
@@ -2713,7 +3002,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderMonitor
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderNetwork
@@ -2726,7 +3017,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderNetwork
     [JsonPropertyName("privateLinkEnabled")]
     public bool? PrivateLinkEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderPrivateLinkConfigurationIpConfiguration
@@ -2751,7 +3044,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderPrivateLinkConfiguration
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderPrivateLinkConfiguration
@@ -2768,7 +3063,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderPrivateLinkConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRestProxy
@@ -2781,7 +3078,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRestProxy
     [JsonPropertyName("securityGroupName")]
     public string? SecurityGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActions
@@ -2798,7 +3097,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActio
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
@@ -2827,7 +3128,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNodeScriptActions
@@ -2844,7 +3147,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
@@ -2873,7 +3178,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNodeScriptActions
@@ -2890,7 +3197,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNodeScriptAct
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
@@ -2927,7 +3236,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScriptActions
@@ -2944,7 +3255,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScript
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
@@ -2973,7 +3286,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRoles
@@ -2994,7 +3309,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderRoles
     [JsonPropertyName("zookeeperNode")]
     public IList<V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderSecurityProfile
@@ -3023,7 +3340,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderSecurityProfile
     [JsonPropertyName("msiResourceId")]
     public string? MsiResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderStorageAccount
@@ -3040,7 +3359,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderStorageAccount
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderStorageAccountGen2
@@ -3061,7 +3382,9 @@ public partial class V1beta1KafkaClusterStatusAtProviderStorageAccountGen2
     [JsonPropertyName("storageResourceId")]
     public string? StorageResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProvider
@@ -3166,7 +3489,9 @@ public partial class V1beta1KafkaClusterStatusAtProvider
     [JsonPropertyName("tlsMinVersion")]
     public string? TlsMinVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusConditions
@@ -3195,7 +3520,9 @@ public partial class V1beta1KafkaClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KafkaClusterStatus defines the observed state of KafkaCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatus
@@ -3212,7 +3539,9 @@ public partial class V1beta1KafkaClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KafkaCluster is the Schema for the KafkaClusters API. Manages a HDInsight Kafka Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3242,3 +3571,4 @@ public partial class V1beta1KafkaCluster : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1KafkaClusterStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lexmodels.aws.m.upbound.io;
+#nullable enable
 /// <summary>Bot is the Schema for the Bots API. Provides an Amazon Lex bot resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BotList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1Bot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProviderAbortStatementMessage
@@ -50,7 +53,9 @@ public partial class V1beta1BotSpecForProviderAbortStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProviderAbortStatement
@@ -63,7 +68,9 @@ public partial class V1beta1BotSpecForProviderAbortStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProviderClarificationPromptMessage
@@ -80,7 +87,9 @@ public partial class V1beta1BotSpecForProviderClarificationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProviderClarificationPrompt
@@ -97,7 +106,9 @@ public partial class V1beta1BotSpecForProviderClarificationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProviderIntent
@@ -110,7 +121,9 @@ public partial class V1beta1BotSpecForProviderIntent
     [JsonPropertyName("intentVersion")]
     public string? IntentVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecForProvider
@@ -171,7 +184,9 @@ public partial class V1beta1BotSpecForProvider
     [JsonPropertyName("voiceId")]
     public string? VoiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProviderAbortStatementMessage
@@ -188,7 +203,9 @@ public partial class V1beta1BotSpecInitProviderAbortStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProviderAbortStatement
@@ -201,7 +218,9 @@ public partial class V1beta1BotSpecInitProviderAbortStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProviderClarificationPromptMessage
@@ -218,7 +237,9 @@ public partial class V1beta1BotSpecInitProviderClarificationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProviderClarificationPrompt
@@ -235,7 +256,9 @@ public partial class V1beta1BotSpecInitProviderClarificationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProviderIntent
@@ -248,7 +271,9 @@ public partial class V1beta1BotSpecInitProviderIntent
     [JsonPropertyName("intentVersion")]
     public string? IntentVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecInitProvider
@@ -305,7 +330,9 @@ public partial class V1beta1BotSpecInitProvider
     [JsonPropertyName("voiceId")]
     public string? VoiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecProviderConfigRef
@@ -318,7 +345,9 @@ public partial class V1beta1BotSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpecWriteConnectionSecretToRef
@@ -327,7 +356,9 @@ public partial class V1beta1BotSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotSpec defines the desired state of Bot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotSpec
@@ -352,7 +383,9 @@ public partial class V1beta1BotSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProviderAbortStatementMessage
@@ -369,7 +402,9 @@ public partial class V1beta1BotStatusAtProviderAbortStatementMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProviderAbortStatement
@@ -382,7 +417,9 @@ public partial class V1beta1BotStatusAtProviderAbortStatement
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProviderClarificationPromptMessage
@@ -399,7 +436,9 @@ public partial class V1beta1BotStatusAtProviderClarificationPromptMessage
     [JsonPropertyName("groupNumber")]
     public double? GroupNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProviderClarificationPrompt
@@ -416,7 +455,9 @@ public partial class V1beta1BotStatusAtProviderClarificationPrompt
     [JsonPropertyName("responseCard")]
     public string? ResponseCard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProviderIntent
@@ -429,7 +470,9 @@ public partial class V1beta1BotStatusAtProviderIntent
     [JsonPropertyName("intentVersion")]
     public string? IntentVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusAtProvider
@@ -522,7 +565,9 @@ public partial class V1beta1BotStatusAtProvider
     [JsonPropertyName("voiceId")]
     public string? VoiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatusConditions
@@ -551,7 +596,9 @@ public partial class V1beta1BotStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotStatus defines the observed state of Bot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotStatus
@@ -568,7 +615,9 @@ public partial class V1beta1BotStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bot is the Schema for the Bots API. Provides an Amazon Lex bot resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -598,3 +647,4 @@ public partial class V1beta1Bot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1BotStatus? Status { get; set; }
 }
+#nullable disable

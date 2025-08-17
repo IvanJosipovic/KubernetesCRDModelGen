@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240401.Registry Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/registries.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240401storageRegistryList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1api20240401storageRegistry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentitiesReference
@@ -54,7 +57,9 @@ public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentit
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentities
@@ -67,7 +72,9 @@ public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentit
     [JsonPropertyName("reference")]
     public V1api20240401storageRegistrySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecIdentity
@@ -84,7 +91,9 @@ public partial class V1api20240401storageRegistrySpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20240401storageRegistrySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: Arm ResourceId is in the format "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}" or "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecManagedResourceGroupResourceReference
@@ -105,7 +114,9 @@ public partial class V1api20240401storageRegistrySpecManagedResourceGroupResourc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ArmResourceId ARM ResourceId of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecManagedResourceGroup
@@ -118,7 +129,9 @@ public partial class V1api20240401storageRegistrySpecManagedResourceGroup
     [JsonPropertyName("resourceReference")]
     public V1api20240401storageRegistrySpecManagedResourceGroupResourceReference? ResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapExpressions
@@ -135,7 +148,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapsDiscoveryUrl
@@ -148,7 +163,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapsDisco
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapsMlFlowRegistryUri
@@ -161,7 +178,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMapsMlFlo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMaps
@@ -178,7 +197,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpecConfigMaps
     [JsonPropertyName("mlFlowRegistryUri")]
     public V1api20240401storageRegistrySpecOperatorSpecConfigMapsMlFlowRegistryUri? MlFlowRegistryUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpecSecretExpressions
@@ -195,7 +216,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpecSecretExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOperatorSpec
@@ -216,7 +239,9 @@ public partial class V1api20240401storageRegistrySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240401storageRegistrySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecOwner
@@ -229,7 +254,9 @@ public partial class V1api20240401storageRegistrySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemCreatedAcrAccount</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsSystemCreatedAcrAccount
@@ -246,7 +273,9 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsSyst
     [JsonPropertyName("acrAccountSku")]
     public string? AcrAccountSku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AcrDetails Details of ACR account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetails
@@ -259,7 +288,9 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetails
     [JsonPropertyName("systemCreatedAcrAccount")]
     public V1api20240401storageRegistrySpecRegionDetailsAcrDetailsSystemCreatedAcrAccount? SystemCreatedAcrAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemCreatedStorageAccount</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount
@@ -284,7 +315,9 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccount
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.StorageAccountDetails Details of storage account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetails
@@ -297,7 +330,9 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccount
     [JsonPropertyName("systemCreatedStorageAccount")]
     public V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount? SystemCreatedStorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryRegionArmDetails Details for each region the registry is in</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetails
@@ -318,7 +353,9 @@ public partial class V1api20240401storageRegistrySpecRegionDetails
     [JsonPropertyName("storageAccountDetails")]
     public IList<V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetails>? StorageAccountDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetArmReference: The subnetId that the private endpoint is connected to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsPrivateEndpointSubnetArmReference
@@ -339,7 +376,9 @@ public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.PrivateEndpointResource The PE network resource that is linked to this PE connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsPrivateEndpoint
@@ -352,7 +391,9 @@ public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConn
     [JsonPropertyName("subnetArmReference")]
     public V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsPrivateEndpointSubnetArmReference? SubnetArmReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: This is the private endpoint connection name created on SRP Full resource id: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.MachineLearningServices/{resourceType}/{resourceName}/registryPrivateEndpointConnections/{peConnectionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsReference
@@ -373,7 +414,9 @@ public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryPrivateLinkServiceConnectionState The connection state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsRegistryPrivateLinkServiceConnectionState
@@ -394,7 +437,9 @@ public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConn
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryPrivateEndpointConnection Private endpoint connection definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConnections
@@ -427,7 +472,9 @@ public partial class V1api20240401storageRegistrySpecRegistryPrivateEndpointConn
     [JsonPropertyName("registryPrivateLinkServiceConnectionState")]
     public V1api20240401storageRegistrySpecRegistryPrivateEndpointConnectionsRegistryPrivateLinkServiceConnectionState? RegistryPrivateLinkServiceConnectionState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Sku The resource model definition representing SKU</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecSku
@@ -456,7 +503,9 @@ public partial class V1api20240401storageRegistrySpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Registry_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpec
@@ -529,7 +578,9 @@ public partial class V1api20240401storageRegistrySpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusConditions
@@ -562,7 +613,9 @@ public partial class V1api20240401storageRegistryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusIdentityUserAssignedIdentities
@@ -579,7 +632,9 @@ public partial class V1api20240401storageRegistryStatusIdentityUserAssignedIdent
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusIdentity
@@ -604,7 +659,9 @@ public partial class V1api20240401storageRegistryStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20240401storageRegistryStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusManagedResourceGroup
@@ -617,7 +674,9 @@ public partial class V1api20240401storageRegistryStatusManagedResourceGroup
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccountArmResourceId
@@ -630,7 +689,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSy
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemCreatedAcrAccount_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccount
@@ -651,7 +712,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSy
     [JsonPropertyName("armResourceId")]
     public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccountArmResourceId? ArmResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.AcrDetails_STATUS Details of ACR account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetails
@@ -664,7 +727,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetails
     [JsonPropertyName("systemCreatedAcrAccount")]
     public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccount? SystemCreatedAcrAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsSystemCreatedStorageAccountArmResourceId
@@ -677,7 +742,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccou
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemCreatedStorageAccount_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount
@@ -706,7 +773,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccou
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.StorageAccountDetails_STATUS Details of storage account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetails
@@ -719,7 +788,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccou
     [JsonPropertyName("systemCreatedStorageAccount")]
     public V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount? SystemCreatedStorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryRegionArmDetails_STATUS Details for each region the registry is in</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetails
@@ -740,7 +811,9 @@ public partial class V1api20240401storageRegistryStatusRegionDetails
     [JsonPropertyName("storageAccountDetails")]
     public IList<V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetails>? StorageAccountDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.PrivateEndpointResource_STATUS The PE network resource that is linked to this PE connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointConnectionsPrivateEndpoint
@@ -757,7 +830,9 @@ public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointCo
     [JsonPropertyName("subnetArmId")]
     public string? SubnetArmId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryPrivateLinkServiceConnectionState_STATUS The connection state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointConnectionsRegistryPrivateLinkServiceConnectionState
@@ -778,7 +853,9 @@ public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointCo
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryPrivateEndpointConnection_STATUS Private endpoint connection definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointConnections
@@ -811,7 +888,9 @@ public partial class V1api20240401storageRegistryStatusRegistryPrivateEndpointCo
     [JsonPropertyName("registryPrivateLinkServiceConnectionState")]
     public V1api20240401storageRegistryStatusRegistryPrivateEndpointConnectionsRegistryPrivateLinkServiceConnectionState? RegistryPrivateLinkServiceConnectionState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Sku_STATUS The resource model definition representing SKU</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusSku
@@ -840,7 +919,9 @@ public partial class V1api20240401storageRegistryStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusSystemData
@@ -873,7 +954,9 @@ public partial class V1api20240401storageRegistryStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.RegistryTrackedResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatus
@@ -950,7 +1033,9 @@ public partial class V1api20240401storageRegistryStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240401.Registry Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/registries.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -980,3 +1065,4 @@ public partial class V1api20240401storageRegistry : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1api20240401storageRegistryStatus? Status { get; set; }
 }
+#nullable disable

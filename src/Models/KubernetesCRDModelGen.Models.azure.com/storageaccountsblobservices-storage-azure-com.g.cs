@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceList : IKuber
     [JsonPropertyName("items")]
     public IList<V1api20230101storageStorageAccountsBlobService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ChangeFeed The blob service properties for change feed events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecChangeFeed
@@ -50,7 +53,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecChangeFee
     [JsonPropertyName("retentionInDays")]
     public int? RetentionInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy The service properties for soft delete.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecContainerDeleteRetentionPolicy
@@ -71,7 +76,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecContainer
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecCorsCorsRules
@@ -100,7 +107,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecCorsCorsR
     [JsonPropertyName("maxAgeInSeconds")]
     public int? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecCors
@@ -113,7 +122,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecCors
     [JsonPropertyName("corsRules")]
     public IList<V1api20230101storageStorageAccountsBlobServiceSpecCorsCorsRules>? CorsRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy The service properties for soft delete.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecDeleteRetentionPolicy
@@ -134,7 +145,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecDeleteRet
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.LastAccessTimeTrackingPolicy The blob service properties for Last access time based tracking policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecLastAccessTimeTrackingPolicy
@@ -159,7 +172,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecLastAcces
     [JsonPropertyName("trackingGranularityInDays")]
     public int? TrackingGranularityInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorSpecConfigMapExpressions
@@ -176,7 +191,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorSpecSecretExpressions
@@ -193,7 +210,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorSpec
@@ -210,7 +229,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecOperatorS
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageStorageAccountsBlobServiceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecOwner
@@ -223,7 +244,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.RestorePolicyProperties The blob service properties for blob restore policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpecRestorePolicy
@@ -240,7 +263,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecRestorePo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobService_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpec
@@ -297,7 +322,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpec
     [JsonPropertyName("restorePolicy")]
     public V1api20230101storageStorageAccountsBlobServiceSpecRestorePolicy? RestorePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ChangeFeed_STATUS The blob service properties for change feed events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusChangeFeed
@@ -314,7 +341,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusChangeF
     [JsonPropertyName("retentionInDays")]
     public int? RetentionInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusConditions
@@ -347,7 +376,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy_STATUS The service properties for soft delete.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusContainerDeleteRetentionPolicy
@@ -368,7 +399,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusContain
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusCorsCorsRules
@@ -397,7 +430,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusCorsCor
     [JsonPropertyName("maxAgeInSeconds")]
     public int? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusCors
@@ -410,7 +445,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusCors
     [JsonPropertyName("corsRules")]
     public IList<V1api20230101storageStorageAccountsBlobServiceStatusCorsCorsRules>? CorsRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DeleteRetentionPolicy_STATUS The service properties for soft delete.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusDeleteRetentionPolicy
@@ -431,7 +468,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusDeleteR
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.LastAccessTimeTrackingPolicy_STATUS The blob service properties for Last access time based tracking policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusLastAccessTimeTrackingPolicy
@@ -456,7 +495,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusLastAcc
     [JsonPropertyName("trackingGranularityInDays")]
     public int? TrackingGranularityInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.RestorePolicyProperties_STATUS The blob service properties for blob restore policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusRestorePolicy
@@ -481,7 +522,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusRestore
     [JsonPropertyName("minRestoreTime")]
     public string? MinRestoreTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.Sku_STATUS The SKU of the storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatusSku
@@ -498,7 +541,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobService_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatus
@@ -563,7 +608,9 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -593,3 +640,4 @@ public partial class V1api20230101storageStorageAccountsBlobService : IKubernete
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsBlobServiceStatus? Status { get; set; }
 }
+#nullable disable

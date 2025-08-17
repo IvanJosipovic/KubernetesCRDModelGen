@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfig.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigurationProfile is the Schema for the ConfigurationProfiles API. Provides an AppConfig Configuration Profile resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigurationProfileList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigurationProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSele
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate retrievalRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate retrievalRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderValidatorContentSecretRef
@@ -162,7 +181,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderValidatorContentS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderValidator
@@ -175,7 +196,9 @@ public partial class V1beta1ConfigurationProfileSpecForProviderValidator
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProvider
@@ -236,7 +259,9 @@ public partial class V1beta1ConfigurationProfileSpecForProvider
     [JsonPropertyName("validator")]
     public IList<V1beta1ConfigurationProfileSpecForProviderValidator>? Validator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRefPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRef
@@ -262,7 +289,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelectorPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelector
@@ -292,7 +323,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSel
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRefPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate retrievalRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRef
@@ -318,7 +353,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate retrievalRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelector
@@ -348,7 +387,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderValidatorContentSecretRef
@@ -365,7 +406,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderValidatorContent
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProviderValidator
@@ -378,7 +421,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderValidator
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecInitProvider
@@ -435,7 +480,9 @@ public partial class V1beta1ConfigurationProfileSpecInitProvider
     [JsonPropertyName("validator")]
     public IList<V1beta1ConfigurationProfileSpecInitProviderValidator>? Validator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecProviderConfigRefPolicy
@@ -448,7 +495,9 @@ public partial class V1beta1ConfigurationProfileSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecProviderConfigRef
@@ -461,7 +510,9 @@ public partial class V1beta1ConfigurationProfileSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationProfileSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef
@@ -474,7 +525,9 @@ public partial class V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationProfileSpec defines the desired state of ConfigurationProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpec
@@ -503,7 +556,9 @@ public partial class V1beta1ConfigurationProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileStatusAtProviderValidator
@@ -512,7 +567,9 @@ public partial class V1beta1ConfigurationProfileStatusAtProviderValidator
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileStatusAtProvider
@@ -573,7 +630,9 @@ public partial class V1beta1ConfigurationProfileStatusAtProvider
     [JsonPropertyName("validator")]
     public IList<V1beta1ConfigurationProfileStatusAtProviderValidator>? Validator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileStatusConditions
@@ -602,7 +661,9 @@ public partial class V1beta1ConfigurationProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationProfileStatus defines the observed state of ConfigurationProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileStatus
@@ -619,7 +680,9 @@ public partial class V1beta1ConfigurationProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationProfile is the Schema for the ConfigurationProfiles API. Provides an AppConfig Configuration Profile resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -649,3 +712,4 @@ public partial class V1beta1ConfigurationProfile : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ConfigurationProfileStatus? Status { get; set; }
 }
+#nullable disable

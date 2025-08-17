@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+#nullable enable
 /// <summary>Classifier is the Schema for the Classifiers API. Provides an Glue Classifier resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClassifierList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Classifier> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for CSV content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProviderCsvClassifier
@@ -74,7 +77,9 @@ public partial class V1beta1ClassifierSpecForProviderCsvClassifier
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier that uses grok patterns. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProviderGrokClassifier
@@ -91,7 +96,9 @@ public partial class V1beta1ClassifierSpecForProviderGrokClassifier
     [JsonPropertyName("grokPattern")]
     public string? GrokPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for JSON content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProviderJsonClassifier
@@ -100,7 +107,9 @@ public partial class V1beta1ClassifierSpecForProviderJsonClassifier
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for XML content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProviderXmlClassifier
@@ -113,7 +122,9 @@ public partial class V1beta1ClassifierSpecForProviderXmlClassifier
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProvider
@@ -138,7 +149,9 @@ public partial class V1beta1ClassifierSpecForProvider
     [JsonPropertyName("xmlClassifier")]
     public V1beta1ClassifierSpecForProviderXmlClassifier? XmlClassifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for CSV content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProviderCsvClassifier
@@ -179,7 +192,9 @@ public partial class V1beta1ClassifierSpecInitProviderCsvClassifier
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier that uses grok patterns. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProviderGrokClassifier
@@ -196,7 +211,9 @@ public partial class V1beta1ClassifierSpecInitProviderGrokClassifier
     [JsonPropertyName("grokPattern")]
     public string? GrokPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for JSON content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProviderJsonClassifier
@@ -205,7 +222,9 @@ public partial class V1beta1ClassifierSpecInitProviderJsonClassifier
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for XML content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProviderXmlClassifier
@@ -218,7 +237,9 @@ public partial class V1beta1ClassifierSpecInitProviderXmlClassifier
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProvider
@@ -239,7 +260,9 @@ public partial class V1beta1ClassifierSpecInitProvider
     [JsonPropertyName("xmlClassifier")]
     public V1beta1ClassifierSpecInitProviderXmlClassifier? XmlClassifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecProviderConfigRef
@@ -252,7 +275,9 @@ public partial class V1beta1ClassifierSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecWriteConnectionSecretToRef
@@ -261,7 +286,9 @@ public partial class V1beta1ClassifierSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClassifierSpec defines the desired state of Classifier</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpec
@@ -286,7 +313,9 @@ public partial class V1beta1ClassifierSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClassifierSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for CSV content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProviderCsvClassifier
@@ -327,7 +356,9 @@ public partial class V1beta1ClassifierStatusAtProviderCsvClassifier
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier that uses grok patterns. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProviderGrokClassifier
@@ -344,7 +375,9 @@ public partial class V1beta1ClassifierStatusAtProviderGrokClassifier
     [JsonPropertyName("grokPattern")]
     public string? GrokPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for JSON content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProviderJsonClassifier
@@ -353,7 +386,9 @@ public partial class V1beta1ClassifierStatusAtProviderJsonClassifier
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A classifier for XML content. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProviderXmlClassifier
@@ -366,7 +401,9 @@ public partial class V1beta1ClassifierStatusAtProviderXmlClassifier
     [JsonPropertyName("rowTag")]
     public string? RowTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProvider
@@ -395,7 +432,9 @@ public partial class V1beta1ClassifierStatusAtProvider
     [JsonPropertyName("xmlClassifier")]
     public V1beta1ClassifierStatusAtProviderXmlClassifier? XmlClassifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusConditions
@@ -424,7 +463,9 @@ public partial class V1beta1ClassifierStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClassifierStatus defines the observed state of Classifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatus
@@ -441,7 +482,9 @@ public partial class V1beta1ClassifierStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Classifier is the Schema for the Classifiers API. Provides an Glue Classifier resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -471,3 +514,4 @@ public partial class V1beta1Classifier : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ClassifierStatus? Status { get; set; }
 }
+#nullable disable

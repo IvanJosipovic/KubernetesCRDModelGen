@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>EdgeContainerMachine is the Schema for the EdgeContainerMachine API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1EdgeContainerMachineList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1EdgeContainerMachine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EdgeContainerMachineSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1EdgeContainerMachineSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EdgeContainerMachineSpec defines the desired state of EdgeContainerMachine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EdgeContainerMachineSpec
@@ -79,7 +84,9 @@ public partial class V1alpha1EdgeContainerMachineSpec
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EdgeContainerMachineStatusConditions
@@ -104,7 +111,9 @@ public partial class V1alpha1EdgeContainerMachineStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EdgeContainerMachineStatusObservedState
@@ -129,7 +138,9 @@ public partial class V1alpha1EdgeContainerMachineStatusObservedState
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EdgeContainerMachineStatus defines the config connector machine state of EdgeContainerMachine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EdgeContainerMachineStatus
@@ -150,7 +161,9 @@ public partial class V1alpha1EdgeContainerMachineStatus
     [JsonPropertyName("observedState")]
     public V1alpha1EdgeContainerMachineStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EdgeContainerMachine is the Schema for the EdgeContainerMachine API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -180,3 +193,4 @@ public partial class V1alpha1EdgeContainerMachine : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1EdgeContainerMachineStatus? Status { get; set; }
 }
+#nullable disable

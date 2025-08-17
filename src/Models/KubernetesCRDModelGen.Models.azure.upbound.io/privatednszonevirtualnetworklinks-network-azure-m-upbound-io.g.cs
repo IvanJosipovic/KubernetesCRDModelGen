@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>PrivateDNSZoneVirtualNetworkLink is the Schema for the PrivateDNSZoneVirtualNetworkLinks API. Manages a Private DNS Zone Virtual Network Link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateDNSZoneVirtualNetworkLink> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPriva
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPriva
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPriva
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPriva
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderPrivateDnsZoneNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate virtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate virtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProvider
     [JsonPropertyName("virtualNetworkIdSelector")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecForProviderVirtualNetworkIdSelector? VirtualNetworkIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate virtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdRef
@@ -304,7 +335,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate virtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdSelector
@@ -338,7 +373,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProvider
     [JsonPropertyName("virtualNetworkIdSelector")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecInitProviderVirtualNetworkIdSelector? VirtualNetworkIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecProviderConfigRef
@@ -376,7 +415,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecWriteConnectionSecretToRef
@@ -385,7 +426,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSZoneVirtualNetworkLinkSpec defines the desired state of PrivateDNSZoneVirtualNetworkLink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpec
@@ -410,7 +453,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatusAtProvider
@@ -439,7 +484,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatusAtProvider
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatusConditions
@@ -468,7 +515,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSZoneVirtualNetworkLinkStatus defines the observed state of PrivateDNSZoneVirtualNetworkLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatus
@@ -485,7 +534,9 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLinkStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSZoneVirtualNetworkLink is the Schema for the PrivateDNSZoneVirtualNetworkLinks API. Manages a Private DNS Zone Virtual Network Link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -515,3 +566,4 @@ public partial class V1beta1PrivateDNSZoneVirtualNetworkLink : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSZoneVirtualNetworkLinkStatus? Status { get; set; }
 }
+#nullable disable

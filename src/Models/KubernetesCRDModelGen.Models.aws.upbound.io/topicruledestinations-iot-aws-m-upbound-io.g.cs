@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+#nullable enable
 /// <summary>TopicRuleDestination is the Schema for the TopicRuleDestinations API. Creates and manages an AWS IoT topic rule destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicRuleDestinationList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1TopicRuleDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationR
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationR
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupRefs
@@ -127,7 +140,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdRefsPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdRefs
@@ -191,7 +212,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdRef
@@ -255,7 +284,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdSelector
@@ -289,7 +322,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationV
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the virtual private cloud (VPC) connection. For more info, see the AWS documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfiguration
@@ -342,7 +377,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProviderVpcConfiguration
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfigurationVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecForProvider
@@ -359,7 +396,9 @@ public partial class V1beta1TopicRuleDestinationSpecForProvider
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1TopicRuleDestinationSpecForProviderVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnRefPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnRef
@@ -389,7 +430,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnSelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnSelector
@@ -423,7 +468,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupRefsPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupRefs
@@ -453,7 +502,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupSelectorPolicy
@@ -466,7 +517,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupSelector
@@ -487,7 +540,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdRefsPolicy
@@ -500,7 +555,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdRefs
@@ -517,7 +574,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdSelectorPolicy
@@ -530,7 +589,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdSelector
@@ -551,7 +612,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdRefPolicy
@@ -564,7 +627,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdRef
@@ -581,7 +646,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdSelectorPolicy
@@ -594,7 +661,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdSelector
@@ -615,7 +684,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the virtual private cloud (VPC) connection. For more info, see the AWS documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
@@ -668,7 +739,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfigurationVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecInitProvider
@@ -681,7 +754,9 @@ public partial class V1beta1TopicRuleDestinationSpecInitProvider
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1TopicRuleDestinationSpecInitProviderVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecProviderConfigRef
@@ -694,7 +769,9 @@ public partial class V1beta1TopicRuleDestinationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpecWriteConnectionSecretToRef
@@ -703,7 +780,9 @@ public partial class V1beta1TopicRuleDestinationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRuleDestinationSpec defines the desired state of TopicRuleDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationSpec
@@ -728,7 +807,9 @@ public partial class V1beta1TopicRuleDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicRuleDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the virtual private cloud (VPC) connection. For more info, see the AWS documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationStatusAtProviderVpcConfiguration
@@ -749,7 +830,9 @@ public partial class V1beta1TopicRuleDestinationStatusAtProviderVpcConfiguration
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationStatusAtProvider
@@ -774,7 +857,9 @@ public partial class V1beta1TopicRuleDestinationStatusAtProvider
     [JsonPropertyName("vpcConfiguration")]
     public V1beta1TopicRuleDestinationStatusAtProviderVpcConfiguration? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationStatusConditions
@@ -803,7 +888,9 @@ public partial class V1beta1TopicRuleDestinationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRuleDestinationStatus defines the observed state of TopicRuleDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleDestinationStatus
@@ -820,7 +907,9 @@ public partial class V1beta1TopicRuleDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRuleDestination is the Schema for the TopicRuleDestinations API. Creates and manages an AWS IoT topic rule destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -850,3 +939,4 @@ public partial class V1beta1TopicRuleDestination : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1TopicRuleDestinationStatus? Status { get; set; }
 }
+#nullable disable

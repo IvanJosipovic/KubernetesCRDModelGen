@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.gcp.upbound.io;
+#nullable enable
 /// <summary>AppConnector is the Schema for the AppConnectors API. A BeyondCorp AppConnector resource represents an application facing component deployed proximal to and with direct access to the application instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppConnectorList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1AppConnector> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRef
@@ -59,7 +64,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccount
@@ -106,7 +117,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     [JsonPropertyName("emailSelector")]
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelector? EmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfo
@@ -115,7 +128,9 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfo
     [JsonPropertyName("serviceAccount")]
     public IList<V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProvider
@@ -140,7 +155,9 @@ public partial class V1beta1AppConnectorSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRefPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRef
@@ -166,7 +185,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelector
@@ -196,7 +219,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccount
@@ -213,7 +238,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     [JsonPropertyName("emailSelector")]
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelector? EmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfo
@@ -222,7 +249,9 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfo
     [JsonPropertyName("serviceAccount")]
     public IList<V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecInitProvider
@@ -243,7 +272,9 @@ public partial class V1beta1AppConnectorSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecProviderConfigRefPolicy
@@ -256,7 +287,9 @@ public partial class V1beta1AppConnectorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecProviderConfigRef
@@ -269,7 +302,9 @@ public partial class V1beta1AppConnectorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AppConnectorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecWriteConnectionSecretToRef
@@ -282,7 +317,9 @@ public partial class V1beta1AppConnectorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnectorSpec defines the desired state of AppConnector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpec
@@ -311,7 +348,9 @@ public partial class V1beta1AppConnectorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAccount
@@ -320,7 +359,9 @@ public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAcco
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfo
@@ -329,7 +370,9 @@ public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfo
     [JsonPropertyName("serviceAccount")]
     public IList<V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorStatusAtProvider
@@ -370,7 +413,9 @@ public partial class V1beta1AppConnectorStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorStatusConditions
@@ -399,7 +444,9 @@ public partial class V1beta1AppConnectorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnectorStatus defines the observed state of AppConnector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorStatus
@@ -416,7 +463,9 @@ public partial class V1beta1AppConnectorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnector is the Schema for the AppConnectors API. A BeyondCorp AppConnector resource represents an application facing component deployed proximal to and with direct access to the application instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -446,3 +495,4 @@ public partial class V1beta1AppConnector : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1AppConnectorStatus? Status { get; set; }
 }
+#nullable disable

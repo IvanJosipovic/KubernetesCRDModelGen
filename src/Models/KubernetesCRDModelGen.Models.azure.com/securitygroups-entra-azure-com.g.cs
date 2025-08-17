@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.entra.azure.com;
+#nullable enable
 /// <summary>SecurityGroup is an Entra Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SecurityGroupList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1SecurityGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EntraID: The Entra ID of the group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupSpecOperatorSpecConfigmapsEntraID
@@ -46,7 +49,9 @@ public partial class V1SecurityGroupSpecOperatorSpecConfigmapsEntraID
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMaps specifies any config maps that should be created by the operator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupSpecOperatorSpecConfigmaps
@@ -55,7 +60,9 @@ public partial class V1SecurityGroupSpecOperatorSpecConfigmaps
     [JsonPropertyName("entraID")]
     public V1SecurityGroupSpecOperatorSpecConfigmapsEntraID? EntraID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperatorSpec: The operator specific configuration for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupSpecOperatorSpec
@@ -68,7 +75,9 @@ public partial class V1SecurityGroupSpecOperatorSpec
     [JsonPropertyName("creationMode")]
     public string? CreationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupSpec
@@ -97,7 +106,9 @@ public partial class V1SecurityGroupSpec
     [JsonPropertyName("operatorSpec")]
     public V1SecurityGroupSpecOperatorSpec? OperatorSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupStatusConditions
@@ -130,7 +141,9 @@ public partial class V1SecurityGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupStatus
@@ -155,7 +168,9 @@ public partial class V1SecurityGroupStatus
     [JsonPropertyName("groupEmailAddress")]
     public string GroupEmailAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityGroup is an Entra Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -185,3 +200,4 @@ public partial class V1SecurityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1SecurityGroupStatus? Status { get; set; }
 }
+#nullable disable

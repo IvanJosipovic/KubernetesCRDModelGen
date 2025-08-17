@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>Credential is the Schema for the Credentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CredentialList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1Credential> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProviderAwsIamRole
@@ -50,7 +53,9 @@ public partial class V1alpha1CredentialSpecForProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProviderAzureManagedIdentity
@@ -67,7 +72,9 @@ public partial class V1alpha1CredentialSpecForProviderAzureManagedIdentity
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret generated for the above app ID in AAD. This field is redacted on output</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProviderAzureServicePrincipalClientSecretSecretRef
@@ -84,7 +91,9 @@ public partial class V1alpha1CredentialSpecForProviderAzureServicePrincipalClien
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProviderAzureServicePrincipal
@@ -101,7 +110,9 @@ public partial class V1alpha1CredentialSpecForProviderAzureServicePrincipal
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProviderDatabricksGcpServiceAccount
@@ -118,7 +129,9 @@ public partial class V1alpha1CredentialSpecForProviderDatabricksGcpServiceAccoun
     [JsonPropertyName("privateKeyId")]
     public string? PrivateKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecForProvider
@@ -203,7 +216,9 @@ public partial class V1alpha1CredentialSpecForProvider
     [JsonPropertyName("usedForManagedStorage")]
     public bool? UsedForManagedStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProviderAwsIamRole
@@ -220,7 +235,9 @@ public partial class V1alpha1CredentialSpecInitProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProviderAzureManagedIdentity
@@ -237,7 +254,9 @@ public partial class V1alpha1CredentialSpecInitProviderAzureManagedIdentity
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret generated for the above app ID in AAD. This field is redacted on output</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProviderAzureServicePrincipalClientSecretSecretRef
@@ -254,7 +273,9 @@ public partial class V1alpha1CredentialSpecInitProviderAzureServicePrincipalClie
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProviderAzureServicePrincipal
@@ -271,7 +292,9 @@ public partial class V1alpha1CredentialSpecInitProviderAzureServicePrincipal
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProviderDatabricksGcpServiceAccount
@@ -288,7 +311,9 @@ public partial class V1alpha1CredentialSpecInitProviderDatabricksGcpServiceAccou
     [JsonPropertyName("privateKeyId")]
     public string? PrivateKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecInitProvider
@@ -373,7 +398,9 @@ public partial class V1alpha1CredentialSpecInitProvider
     [JsonPropertyName("usedForManagedStorage")]
     public bool? UsedForManagedStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecProviderConfigRefPolicy
@@ -386,7 +413,9 @@ public partial class V1alpha1CredentialSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecProviderConfigRef
@@ -399,7 +428,9 @@ public partial class V1alpha1CredentialSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1CredentialSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecPublishConnectionDetailsToConfigRefPolicy
@@ -412,7 +443,9 @@ public partial class V1alpha1CredentialSpecPublishConnectionDetailsToConfigRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecPublishConnectionDetailsToConfigRef
@@ -425,7 +458,9 @@ public partial class V1alpha1CredentialSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1CredentialSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecPublishConnectionDetailsToMetadata
@@ -442,7 +477,9 @@ public partial class V1alpha1CredentialSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecPublishConnectionDetailsTo
@@ -459,7 +496,9 @@ public partial class V1alpha1CredentialSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpecWriteConnectionSecretToRef
@@ -472,7 +511,9 @@ public partial class V1alpha1CredentialSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CredentialSpec defines the desired state of Credential</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialSpec
@@ -505,7 +546,9 @@ public partial class V1alpha1CredentialSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1CredentialSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusAtProviderAwsIamRole
@@ -522,7 +565,9 @@ public partial class V1alpha1CredentialStatusAtProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusAtProviderAzureManagedIdentity
@@ -539,7 +584,9 @@ public partial class V1alpha1CredentialStatusAtProviderAzureManagedIdentity
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusAtProviderAzureServicePrincipal
@@ -552,7 +599,9 @@ public partial class V1alpha1CredentialStatusAtProviderAzureServicePrincipal
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusAtProviderDatabricksGcpServiceAccount
@@ -569,7 +618,9 @@ public partial class V1alpha1CredentialStatusAtProviderDatabricksGcpServiceAccou
     [JsonPropertyName("privateKeyId")]
     public string? PrivateKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusAtProvider
@@ -662,7 +713,9 @@ public partial class V1alpha1CredentialStatusAtProvider
     [JsonPropertyName("usedForManagedStorage")]
     public bool? UsedForManagedStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatusConditions
@@ -691,7 +744,9 @@ public partial class V1alpha1CredentialStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CredentialStatus defines the observed state of Credential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CredentialStatus
@@ -708,7 +763,9 @@ public partial class V1alpha1CredentialStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Credential is the Schema for the Credentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -738,3 +795,4 @@ public partial class V1alpha1Credential : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1CredentialStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SidecarList : IKubernetesObject<V1ListMeta>, IItems<V1Sid
     [JsonPropertyName("items")]
     public IList<V1Sidecar> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The port associated with the listener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecEgressPort
@@ -54,7 +57,9 @@ public partial class V1SidecarSpecEgressPort
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecEgress
@@ -75,7 +80,9 @@ public partial class V1SidecarSpecEgress
     [JsonPropertyName("port")]
     public V1SidecarSpecEgressPort? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecInboundConnectionPoolHttp
@@ -112,7 +119,9 @@ public partial class V1SidecarSpecInboundConnectionPoolHttp
     [JsonPropertyName("useClientProtocol")]
     public bool? UseClientProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
@@ -129,7 +138,9 @@ public partial class V1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecInboundConnectionPoolTcp
@@ -154,7 +165,9 @@ public partial class V1SidecarSpecInboundConnectionPoolTcp
     [JsonPropertyName("tcpKeepalive")]
     public V1SidecarSpecInboundConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecInboundConnectionPool
@@ -167,7 +180,9 @@ public partial class V1SidecarSpecInboundConnectionPool
     [JsonPropertyName("tcp")]
     public V1SidecarSpecInboundConnectionPoolTcp? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressConnectionPoolHttp
@@ -204,7 +219,9 @@ public partial class V1SidecarSpecIngressConnectionPoolHttp
     [JsonPropertyName("useClientProtocol")]
     public bool? UseClientProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
@@ -221,7 +238,9 @@ public partial class V1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressConnectionPoolTcp
@@ -246,7 +265,9 @@ public partial class V1SidecarSpecIngressConnectionPoolTcp
     [JsonPropertyName("tcpKeepalive")]
     public V1SidecarSpecIngressConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressConnectionPool
@@ -259,7 +280,9 @@ public partial class V1SidecarSpecIngressConnectionPool
     [JsonPropertyName("tcp")]
     public V1SidecarSpecIngressConnectionPoolTcp? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The port associated with the listener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressPort
@@ -280,7 +303,9 @@ public partial class V1SidecarSpecIngressPort
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressTlsTlsCertificates
@@ -297,7 +322,9 @@ public partial class V1SidecarSpecIngressTlsTlsCertificates
     [JsonPropertyName("serverCertificate")]
     public string? ServerCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set of TLS related options that will enable TLS termination on the sidecar for requests originating from outside the mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngressTls
@@ -362,7 +389,9 @@ public partial class V1SidecarSpecIngressTls
     [JsonPropertyName("verifyCertificateSpki")]
     public IList<string>? VerifyCertificateSpki { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecIngress
@@ -391,7 +420,9 @@ public partial class V1SidecarSpecIngress
     [JsonPropertyName("tls")]
     public V1SidecarSpecIngressTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecOutboundTrafficPolicyEgressProxyPort
@@ -400,7 +431,9 @@ public partial class V1SidecarSpecOutboundTrafficPolicyEgressProxyPort
     [JsonPropertyName("number")]
     public int? Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecOutboundTrafficPolicyEgressProxy
@@ -417,7 +450,9 @@ public partial class V1SidecarSpecOutboundTrafficPolicyEgressProxy
     [JsonPropertyName("subset")]
     public string? Subset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set the default behavior of the sidecar for handling outbound traffic from the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecOutboundTrafficPolicy
@@ -430,7 +465,9 @@ public partial class V1SidecarSpecOutboundTrafficPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criteria used to select the specific set of pods/VMs on which this `Sidecar` configuration should be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpecWorkloadSelector
@@ -439,7 +476,9 @@ public partial class V1SidecarSpecWorkloadSelector
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration affecting network reachability of a sidecar. See more details at: https://istio.io/docs/reference/config/networking/sidecar.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SidecarSpec
@@ -464,7 +503,9 @@ public partial class V1SidecarSpec
     [JsonPropertyName("workloadSelector")]
     public V1SidecarSpecWorkloadSelector? WorkloadSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -494,3 +535,4 @@ public partial class V1Sidecar : IKubernetesObject<V1ObjectMeta>, ISpec<V1Sideca
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

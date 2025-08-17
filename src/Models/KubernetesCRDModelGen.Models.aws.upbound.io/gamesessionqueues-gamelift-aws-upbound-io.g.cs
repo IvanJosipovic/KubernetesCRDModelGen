@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gamelift.aws.upbound.io;
+#nullable enable
 /// <summary>GameSessionQueue is the Schema for the GameSessionQueues API. Provides a GameLift Game Session Queue resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GameSessionQueueList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1GameSessionQueue> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderDestinationsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderDestinationsRefsPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderDestinationsRefs
@@ -59,7 +64,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderDestinationsRefs
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecForProviderDestinationsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderDestinationsSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderDestinationsSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Fleet in gamelift to populate destinations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderDestinationsSelector
@@ -89,7 +98,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderDestinationsSelector
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecForProviderDestinationsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate notificationTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetRef
@@ -115,7 +128,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetRef
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate notificationTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetSelector
@@ -145,7 +162,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetSel
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecForProviderNotificationTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProviderPlayerLatencyPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1GameSessionQueueSpecForProviderPlayerLatencyPolicy
     [JsonPropertyName("policyDurationSeconds")]
     public double? PolicyDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1GameSessionQueueSpecForProvider
     [JsonPropertyName("timeoutInSeconds")]
     public double? TimeoutInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsRefsPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsRefsPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsRefs
@@ -233,7 +258,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsRefs
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecInitProviderDestinationsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsSelectorPolicy
@@ -246,7 +273,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Fleet in gamelift to populate destinations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsSelector
@@ -263,7 +292,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderDestinationsSelector
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecInitProviderDestinationsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicy
@@ -276,7 +307,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate notificationTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetRef
@@ -289,7 +322,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetRe
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelectorPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate notificationTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelector
@@ -319,7 +356,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetSe
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProviderPlayerLatencyPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1GameSessionQueueSpecInitProviderPlayerLatencyPolicy
     [JsonPropertyName("policyDurationSeconds")]
     public double? PolicyDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecInitProvider
@@ -377,7 +418,9 @@ public partial class V1beta1GameSessionQueueSpecInitProvider
     [JsonPropertyName("timeoutInSeconds")]
     public double? TimeoutInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecProviderConfigRefPolicy
@@ -390,7 +433,9 @@ public partial class V1beta1GameSessionQueueSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecProviderConfigRef
@@ -403,7 +448,9 @@ public partial class V1beta1GameSessionQueueSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GameSessionQueueSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpecWriteConnectionSecretToRef
@@ -416,7 +463,9 @@ public partial class V1beta1GameSessionQueueSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GameSessionQueueSpec defines the desired state of GameSessionQueue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueSpec
@@ -445,7 +494,9 @@ public partial class V1beta1GameSessionQueueSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GameSessionQueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueStatusAtProviderPlayerLatencyPolicy
@@ -458,7 +509,9 @@ public partial class V1beta1GameSessionQueueStatusAtProviderPlayerLatencyPolicy
     [JsonPropertyName("policyDurationSeconds")]
     public double? PolicyDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueStatusAtProvider
@@ -503,7 +556,9 @@ public partial class V1beta1GameSessionQueueStatusAtProvider
     [JsonPropertyName("timeoutInSeconds")]
     public double? TimeoutInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueStatusConditions
@@ -532,7 +587,9 @@ public partial class V1beta1GameSessionQueueStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GameSessionQueueStatus defines the observed state of GameSessionQueue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GameSessionQueueStatus
@@ -549,7 +606,9 @@ public partial class V1beta1GameSessionQueueStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GameSessionQueue is the Schema for the GameSessionQueues API. Provides a GameLift Game Session Queue resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +638,4 @@ public partial class V1beta1GameSessionQueue : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1GameSessionQueueStatus? Status { get; set; }
 }
+#nullable disable

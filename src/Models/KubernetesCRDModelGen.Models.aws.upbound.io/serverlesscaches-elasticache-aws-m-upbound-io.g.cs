@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticache.aws.m.upbound.io;
+#nullable enable
 /// <summary>ServerlessCache is the Schema for the ServerlessCaches API. Provides an ElastiCache Serverless Cache resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServerlessCacheList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ServerlessCache> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataStorage
@@ -50,7 +53,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataSt
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond
@@ -63,7 +68,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPe
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimits
@@ -76,7 +83,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimits
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRef
@@ -106,7 +117,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelector
@@ -140,7 +155,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefs
@@ -170,7 +189,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelector
@@ -204,7 +227,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefs
@@ -234,7 +261,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelector
@@ -268,7 +299,9 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProvider
@@ -349,7 +382,9 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     [JsonPropertyName("userGroupId")]
     public string? UserGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataStorage
@@ -366,7 +401,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataS
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond
@@ -379,7 +416,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuP
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits
@@ -392,7 +431,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy
@@ -405,7 +446,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRef
@@ -422,7 +465,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicy
@@ -435,7 +480,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelector
@@ -456,7 +503,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicy
@@ -469,7 +518,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefs
@@ -486,7 +537,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -499,7 +552,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelector
@@ -520,7 +575,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy
@@ -533,7 +590,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefs
@@ -550,7 +609,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicy
@@ -563,7 +624,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector
@@ -584,7 +647,9 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProvider
@@ -661,7 +726,9 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     [JsonPropertyName("userGroupId")]
     public string? UserGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecProviderConfigRef
@@ -674,7 +741,9 @@ public partial class V1beta1ServerlessCacheSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecWriteConnectionSecretToRef
@@ -683,7 +752,9 @@ public partial class V1beta1ServerlessCacheSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessCacheSpec defines the desired state of ServerlessCache</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpec
@@ -708,7 +779,9 @@ public partial class V1beta1ServerlessCacheSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServerlessCacheSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataStorage
@@ -725,7 +798,9 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataS
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond
@@ -738,7 +813,9 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuP
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits
@@ -751,7 +828,9 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderEndpoint
@@ -764,7 +843,9 @@ public partial class V1beta1ServerlessCacheStatusAtProviderEndpoint
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderReaderEndpoint
@@ -777,7 +858,9 @@ public partial class V1beta1ServerlessCacheStatusAtProviderReaderEndpoint
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProvider
@@ -866,7 +949,9 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("userGroupId")]
     public string? UserGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusConditions
@@ -895,7 +980,9 @@ public partial class V1beta1ServerlessCacheStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessCacheStatus defines the observed state of ServerlessCache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatus
@@ -912,7 +999,9 @@ public partial class V1beta1ServerlessCacheStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessCache is the Schema for the ServerlessCaches API. Provides an ElastiCache Serverless Cache resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -942,3 +1031,4 @@ public partial class V1beta1ServerlessCache : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ServerlessCacheStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.upbound.io;
+#nullable enable
 /// <summary>FlexibleServerActiveDirectoryAdministrator is the Schema for the FlexibleServerActiveDirectoryAdministrators API. Manages an Active Directory administrator on a PostgreSQL Flexible server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorList : IKu
     [JsonPropertyName("items")]
     public IList<V1beta1FlexibleServerActiveDirectoryAdministrator> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleServer in dbforpostgresql to populate serverName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleServer in dbforpostgresql to populate serverName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProviderServerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecForPro
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecInitPr
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecProviderConfigRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecProvid
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecWriteConnectionSecretToRef
@@ -246,7 +273,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpecWriteC
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServerActiveDirectoryAdministratorSpec defines the desired state of FlexibleServerActiveDirectoryAdministrator</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpec
@@ -275,7 +304,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatusAtProvider
@@ -308,7 +339,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatusAtPr
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatusConditions
@@ -337,7 +370,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatusCond
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServerActiveDirectoryAdministratorStatus defines the observed state of FlexibleServerActiveDirectoryAdministrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatus
@@ -354,7 +389,9 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministratorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServerActiveDirectoryAdministrator is the Schema for the FlexibleServerActiveDirectoryAdministrators API. Manages an Active Directory administrator on a PostgreSQL Flexible server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -384,3 +421,4 @@ public partial class V1beta1FlexibleServerActiveDirectoryAdministrator : IKubern
     [JsonPropertyName("status")]
     public V1beta1FlexibleServerActiveDirectoryAdministratorStatus? Status { get; set; }
 }
+#nullable disable

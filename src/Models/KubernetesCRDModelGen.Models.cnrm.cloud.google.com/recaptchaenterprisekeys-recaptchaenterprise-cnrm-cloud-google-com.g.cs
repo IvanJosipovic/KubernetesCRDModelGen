@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recaptchaenterprise.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RecaptchaEnterpriseKeyList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1RecaptchaEnterpriseKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for keys that can be used by Android apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
@@ -46,7 +49,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
     [JsonPropertyName("allowedPackageNames")]
     public IList<string>? AllowedPackageNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for keys that can be used by iOS apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
@@ -59,7 +64,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
     [JsonPropertyName("allowedBundleIds")]
     public IList<string>? AllowedBundleIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
@@ -76,7 +83,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Options for user acceptance testing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
@@ -89,7 +98,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
     [JsonPropertyName("testingScore")]
     public double? TestingScore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Settings specific to keys that can be used for WAF (Web Application Firewall).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
@@ -102,7 +113,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
     [JsonPropertyName("wafService")]
     public string WafService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for keys that can be used by websites.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
@@ -127,7 +140,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
     [JsonPropertyName("integrationType")]
     public string IntegrationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeySpec
@@ -164,7 +179,9 @@ public partial class V1beta1RecaptchaEnterpriseKeySpec
     [JsonPropertyName("webSettings")]
     public V1beta1RecaptchaEnterpriseKeySpecWebSettings? WebSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
@@ -189,7 +206,9 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecaptchaEnterpriseKeyStatus
@@ -206,7 +225,9 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -236,3 +257,4 @@ public partial class V1beta1RecaptchaEnterpriseKey : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1RecaptchaEnterpriseKeyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signer.aws.m.upbound.io;
+#nullable enable
 /// <summary>SigningProfilePermission is the Schema for the SigningProfilePermissions API. Creates a Signer Signing Profile Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SigningProfilePermissionList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1SigningProfilePermission> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRe
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecForProviderProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSe
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecForProviderProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SigningProfile in signer to populate profileVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionRef
@@ -127,7 +140,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SigningProfile in signer to populate profileVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1SigningProfilePermissionSpecForProvider
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SigningProfile in signer to populate profileVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRef
@@ -240,7 +263,9 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelectorPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SigningProfile in signer to populate profileVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelector
@@ -274,7 +301,9 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     [JsonPropertyName("policy")]
     public V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecInitProvider
@@ -303,7 +332,9 @@ public partial class V1beta1SigningProfilePermissionSpecInitProvider
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecProviderConfigRef
@@ -316,7 +347,9 @@ public partial class V1beta1SigningProfilePermissionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpecWriteConnectionSecretToRef
@@ -325,7 +358,9 @@ public partial class V1beta1SigningProfilePermissionSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfilePermissionSpec defines the desired state of SigningProfilePermission</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionSpec
@@ -350,7 +385,9 @@ public partial class V1beta1SigningProfilePermissionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SigningProfilePermissionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionStatusAtProvider
@@ -387,7 +424,9 @@ public partial class V1beta1SigningProfilePermissionStatusAtProvider
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionStatusConditions
@@ -416,7 +455,9 @@ public partial class V1beta1SigningProfilePermissionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfilePermissionStatus defines the observed state of SigningProfilePermission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfilePermissionStatus
@@ -433,7 +474,9 @@ public partial class V1beta1SigningProfilePermissionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfilePermission is the Schema for the SigningProfilePermissions API. Creates a Signer Signing Profile Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -463,3 +506,4 @@ public partial class V1beta1SigningProfilePermission : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1SigningProfilePermissionStatus? Status { get; set; }
 }
+#nullable disable

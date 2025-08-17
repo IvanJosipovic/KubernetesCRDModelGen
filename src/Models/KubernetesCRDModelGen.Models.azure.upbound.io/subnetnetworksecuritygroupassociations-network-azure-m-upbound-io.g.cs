@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>SubnetNetworkSecurityGroupAssociation is the Schema for the SubnetNetworkSecurityGroupAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1beta1SubnetNetworkSecurityGroupAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderCon
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNetworkSecurityGroupAssociationSpec defines the desired state of SubnetNetworkSecurityGroupAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpec
@@ -394,7 +437,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusAtProvider
@@ -411,7 +456,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusAtProvide
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusConditions
@@ -440,7 +487,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNetworkSecurityGroupAssociationStatus defines the observed state of SubnetNetworkSecurityGroupAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatus
@@ -457,7 +506,9 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNetworkSecurityGroupAssociation is the Schema for the SubnetNetworkSecurityGroupAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +538,4 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociation : IKubernetesO
     [JsonPropertyName("status")]
     public V1beta1SubnetNetworkSecurityGroupAssociationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudscheduler.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CloudSchedulerJobList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1CloudSchedulerJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine Routing setting for the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting
@@ -50,7 +53,9 @@ public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRou
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine HTTP target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTarget
@@ -75,7 +80,9 @@ public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTarget
     [JsonPropertyName("relativeUri")]
     public string? RelativeUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef
@@ -92,7 +99,9 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAcco
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthToken
@@ -105,7 +114,9 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthToken
     [JsonPropertyName("serviceAccountRef")]
     public V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef
@@ -122,7 +133,9 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccou
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcToken
@@ -135,7 +148,9 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcToken
     [JsonPropertyName("serviceAccountRef")]
     public V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecHttpTarget
@@ -164,7 +179,9 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTarget
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef
@@ -181,7 +198,9 @@ public partial class V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pub/Sub target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecPubsubTarget
@@ -198,7 +217,9 @@ public partial class V1beta1CloudSchedulerJobSpecPubsubTarget
     [JsonPropertyName("topicRef")]
     public V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that determine the retry behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpecRetryConfig
@@ -223,7 +244,9 @@ public partial class V1beta1CloudSchedulerJobSpecRetryConfig
     [JsonPropertyName("retryCount")]
     public long? RetryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobSpec
@@ -268,7 +291,9 @@ public partial class V1beta1CloudSchedulerJobSpec
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting
@@ -277,7 +302,9 @@ public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineR
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTarget
@@ -286,7 +313,9 @@ public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTarget
     [JsonPropertyName("appEngineRouting")]
     public V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatusConditions
@@ -311,7 +340,9 @@ public partial class V1beta1CloudSchedulerJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatusStatusDetails
@@ -324,7 +355,9 @@ public partial class V1beta1CloudSchedulerJobStatusStatusDetails
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The response from the target for the last attempted execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatusStatus
@@ -341,7 +374,9 @@ public partial class V1beta1CloudSchedulerJobStatusStatus
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudSchedulerJobStatus
@@ -378,7 +413,9 @@ public partial class V1beta1CloudSchedulerJobStatus
     [JsonPropertyName("userUpdateTime")]
     public string? UserUpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -408,3 +445,4 @@ public partial class V1beta1CloudSchedulerJob : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1CloudSchedulerJobStatus? Status { get; set; }
 }
+#nullable disable

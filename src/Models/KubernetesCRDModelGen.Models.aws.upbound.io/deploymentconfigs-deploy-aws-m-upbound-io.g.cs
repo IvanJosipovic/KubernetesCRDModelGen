@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploy.aws.m.upbound.io;
+#nullable enable
 /// <summary>DeploymentConfig is the Schema for the DeploymentConfigs API. Provides a CodeDeploy deployment config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DeploymentConfigList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1DeploymentConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A minimum_healthy_hosts block. Required for Server compute platform. Minimum Healthy Hosts are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderMinimumHealthyHosts
@@ -46,7 +49,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderMinimumHealthyHosts
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based canary configuration information. If type is TimeBasedLinear, use time_based_linear instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfigTimeBasedCanary
@@ -59,7 +64,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfigT
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based linear configuration information. If type is TimeBasedCanary, use time_based_canary instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfigTimeBasedLinear
@@ -72,7 +79,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfigT
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfig
@@ -89,7 +98,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderZonalConfigMinimumHealthyHostsPerZone
@@ -102,7 +113,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderZonalConfigMinimumHea
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderZonalConfig
@@ -119,7 +132,9 @@ public partial class V1beta1DeploymentConfigSpecForProviderZonalConfig
     [JsonPropertyName("monitorDurationInSeconds")]
     public double? MonitorDurationInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProvider
@@ -144,7 +159,9 @@ public partial class V1beta1DeploymentConfigSpecForProvider
     [JsonPropertyName("zonalConfig")]
     public V1beta1DeploymentConfigSpecForProviderZonalConfig? ZonalConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A minimum_healthy_hosts block. Required for Server compute platform. Minimum Healthy Hosts are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderMinimumHealthyHosts
@@ -157,7 +174,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderMinimumHealthyHosts
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based canary configuration information. If type is TimeBasedLinear, use time_based_linear instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfigTimeBasedCanary
@@ -170,7 +189,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based linear configuration information. If type is TimeBasedCanary, use time_based_canary instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfigTimeBasedLinear
@@ -183,7 +204,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig
@@ -200,7 +223,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfigMinimumHealthyHostsPerZone
@@ -213,7 +238,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfigMinimumHe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfig
@@ -230,7 +257,9 @@ public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfig
     [JsonPropertyName("monitorDurationInSeconds")]
     public double? MonitorDurationInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProvider
@@ -251,7 +280,9 @@ public partial class V1beta1DeploymentConfigSpecInitProvider
     [JsonPropertyName("zonalConfig")]
     public V1beta1DeploymentConfigSpecInitProviderZonalConfig? ZonalConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecProviderConfigRef
@@ -264,7 +295,9 @@ public partial class V1beta1DeploymentConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecWriteConnectionSecretToRef
@@ -273,7 +306,9 @@ public partial class V1beta1DeploymentConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentConfigSpec defines the desired state of DeploymentConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpec
@@ -298,7 +333,9 @@ public partial class V1beta1DeploymentConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DeploymentConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A minimum_healthy_hosts block. Required for Server compute platform. Minimum Healthy Hosts are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderMinimumHealthyHosts
@@ -311,7 +348,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderMinimumHealthyHosts
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based canary configuration information. If type is TimeBasedLinear, use time_based_linear instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfigTimeBasedCanary
@@ -324,7 +363,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time based linear configuration information. If type is TimeBasedCanary, use time_based_canary instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfigTimeBasedLinear
@@ -337,7 +378,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig
@@ -354,7 +397,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfigMinimumHealthyHostsPerZone
@@ -367,7 +412,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfigMinimumHe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfig
@@ -384,7 +431,9 @@ public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfig
     [JsonPropertyName("monitorDurationInSeconds")]
     public double? MonitorDurationInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProvider
@@ -421,7 +470,9 @@ public partial class V1beta1DeploymentConfigStatusAtProvider
     [JsonPropertyName("zonalConfig")]
     public V1beta1DeploymentConfigStatusAtProviderZonalConfig? ZonalConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusConditions
@@ -450,7 +501,9 @@ public partial class V1beta1DeploymentConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentConfigStatus defines the observed state of DeploymentConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatus
@@ -467,7 +520,9 @@ public partial class V1beta1DeploymentConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentConfig is the Schema for the DeploymentConfigs API. Provides a CodeDeploy deployment config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -497,3 +552,4 @@ public partial class V1beta1DeploymentConfig : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1DeploymentConfigStatus? Status { get; set; }
 }
+#nullable disable

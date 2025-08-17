@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanagement.gcp.upbound.io;
+#nullable enable
 /// <summary>ConnectivityTest is the Schema for the ConnectivityTests API. A connectivity test are a static analysis of your resource configurations that enables you to evaluate connectivity to and from Google Cloud resources in your Virtual Private Cloud (VPC) network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectivityTestList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ConnectivityTest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRef
@@ -59,7 +64,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRe
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSe
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRef
@@ -115,7 +128,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressR
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressS
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRef
@@ -171,7 +192,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelector
@@ -201,7 +226,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSel
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRef
@@ -227,7 +256,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdR
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelector
@@ -257,7 +290,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdS
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderDestination
@@ -338,7 +373,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestination
     [JsonPropertyName("redisInstance")]
     public string? RedisInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceAppEngineVersion
@@ -347,7 +384,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceAppEngineVersio
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceCloudFunction
@@ -356,7 +395,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceCloudFunction
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceCloudRunRevision
@@ -365,7 +406,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceCloudRunRevisio
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRef
@@ -391,7 +436,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelectorPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelector
@@ -421,7 +470,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelecto
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPolicy
@@ -434,7 +485,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRef
@@ -447,7 +500,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelectorPolicy
@@ -460,7 +515,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelector
@@ -477,7 +534,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolicy
@@ -490,7 +549,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRef
@@ -503,7 +564,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelectorPolicy
@@ -516,7 +579,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelector
@@ -533,7 +598,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPolicy
@@ -546,7 +613,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRef
@@ -559,7 +628,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicy
@@ -572,7 +643,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelector
@@ -589,7 +662,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProviderSource
@@ -670,7 +745,9 @@ public partial class V1beta1ConnectivityTestSpecForProviderSource
     [JsonPropertyName("projectIdSelector")]
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelector? ProjectIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecForProvider
@@ -715,7 +792,9 @@ public partial class V1beta1ConnectivityTestSpecForProvider
     [JsonPropertyName("source")]
     public IList<V1beta1ConnectivityTestSpecForProviderSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRefPolicy
@@ -728,7 +807,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRef
@@ -741,7 +822,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceR
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelectorPolicy
@@ -754,7 +837,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelector
@@ -771,7 +856,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceS
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRefPolicy
@@ -784,7 +871,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRef
@@ -797,7 +886,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelectorPolicy
@@ -810,7 +901,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelector
@@ -827,7 +920,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRefPolicy
@@ -840,7 +935,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRef
@@ -853,7 +950,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRe
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelectorPolicy
@@ -866,7 +965,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelector
@@ -883,7 +984,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSe
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRefPolicy
@@ -896,7 +999,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRef
@@ -909,7 +1014,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorPolicy
@@ -922,7 +1029,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelector
@@ -939,7 +1048,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderDestination
@@ -1020,7 +1131,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestination
     [JsonPropertyName("redisInstance")]
     public string? RedisInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceAppEngineVersion
@@ -1029,7 +1142,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceAppEngineVersi
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceCloudFunction
@@ -1038,7 +1153,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceCloudFunction
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceCloudRunRevision
@@ -1047,7 +1164,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceCloudRunRevisi
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPolicy
@@ -1060,7 +1179,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRef
@@ -1073,7 +1194,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelectorPolicy
@@ -1086,7 +1209,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelector
@@ -1103,7 +1228,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPolicy
@@ -1116,7 +1243,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRef
@@ -1129,7 +1258,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelectorPolicy
@@ -1142,7 +1273,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelector
@@ -1159,7 +1292,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelec
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPolicy
@@ -1172,7 +1307,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRef
@@ -1185,7 +1322,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelectorPolicy
@@ -1198,7 +1337,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelector
@@ -1215,7 +1356,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelecto
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPolicy
@@ -1228,7 +1371,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRef
@@ -1241,7 +1386,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicy
@@ -1254,7 +1401,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Address in compute to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelector
@@ -1271,7 +1420,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelec
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProviderSource
@@ -1352,7 +1503,9 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSource
     [JsonPropertyName("projectIdSelector")]
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelector? ProjectIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecInitProvider
@@ -1397,7 +1550,9 @@ public partial class V1beta1ConnectivityTestSpecInitProvider
     [JsonPropertyName("source")]
     public IList<V1beta1ConnectivityTestSpecInitProviderSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecProviderConfigRefPolicy
@@ -1410,7 +1565,9 @@ public partial class V1beta1ConnectivityTestSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecProviderConfigRef
@@ -1423,7 +1580,9 @@ public partial class V1beta1ConnectivityTestSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectivityTestSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpecWriteConnectionSecretToRef
@@ -1436,7 +1595,9 @@ public partial class V1beta1ConnectivityTestSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectivityTestSpec defines the desired state of ConnectivityTest</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestSpec
@@ -1465,7 +1626,9 @@ public partial class V1beta1ConnectivityTestSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectivityTestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProviderDestination
@@ -1514,7 +1677,9 @@ public partial class V1beta1ConnectivityTestStatusAtProviderDestination
     [JsonPropertyName("redisInstance")]
     public string? RedisInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProviderSourceAppEngineVersion
@@ -1523,7 +1688,9 @@ public partial class V1beta1ConnectivityTestStatusAtProviderSourceAppEngineVersi
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProviderSourceCloudFunction
@@ -1532,7 +1699,9 @@ public partial class V1beta1ConnectivityTestStatusAtProviderSourceCloudFunction
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProviderSourceCloudRunRevision
@@ -1541,7 +1710,9 @@ public partial class V1beta1ConnectivityTestStatusAtProviderSourceCloudRunRevisi
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProviderSource
@@ -1590,7 +1761,9 @@ public partial class V1beta1ConnectivityTestStatusAtProviderSource
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusAtProvider
@@ -1647,7 +1820,9 @@ public partial class V1beta1ConnectivityTestStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatusConditions
@@ -1676,7 +1851,9 @@ public partial class V1beta1ConnectivityTestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectivityTestStatus defines the observed state of ConnectivityTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectivityTestStatus
@@ -1693,7 +1870,9 @@ public partial class V1beta1ConnectivityTestStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectivityTest is the Schema for the ConnectivityTests API. A connectivity test are a static analysis of your resource configurations that enables you to evaluate connectivity to and from Google Cloud resources in your Virtual Private Cloud (VPC) network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1723,3 +1902,4 @@ public partial class V1beta1ConnectivityTest : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ConnectivityTestStatus? Status { get; set; }
 }
+#nullable disable

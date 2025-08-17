@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.m.upbound.io;
+#nullable enable
 /// <summary>LogAnalyticsLinkedService is the Schema for the LogAnalyticsLinkedServices API. Manages a Log Analytics Linked Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1LogAnalyticsLinkedService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in automation to populate readAccessId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in automation to populate readAccessId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdR
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdS
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProvider
     [JsonPropertyName("writeAccessId")]
     public string? WriteAccessId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in automation to populate readAccessId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in automation to populate readAccessId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRefPolicy
@@ -347,7 +384,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRef
@@ -364,7 +403,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelectorPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelector
@@ -398,7 +441,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProvider
@@ -431,7 +476,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProvider
     [JsonPropertyName("writeAccessId")]
     public string? WriteAccessId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRef
@@ -444,7 +491,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretToRef
@@ -453,7 +502,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedServiceSpec defines the desired state of LogAnalyticsLinkedService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceSpec
@@ -478,7 +529,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceStatusAtProvider
@@ -507,7 +560,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatusAtProvider
     [JsonPropertyName("writeAccessId")]
     public string? WriteAccessId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceStatusConditions
@@ -536,7 +591,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedServiceStatus defines the observed state of LogAnalyticsLinkedService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedServiceStatus
@@ -553,7 +610,9 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedService is the Schema for the LogAnalyticsLinkedServices API. Manages a Log Analytics Linked Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -583,3 +642,4 @@ public partial class V1beta1LogAnalyticsLinkedService : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1LogAnalyticsLinkedServiceStatus? Status { get; set; }
 }
+#nullable disable

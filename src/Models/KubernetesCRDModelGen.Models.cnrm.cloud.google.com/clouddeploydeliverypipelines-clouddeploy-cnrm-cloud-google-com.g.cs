@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.clouddeploy.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>CloudDeployDeliveryPipeline is the Schema for the CloudDeployDeliveryPipeline API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudDeployDeliveryPipeline> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesDeployParameters
@@ -67,7 +72,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("values")]
     public IDictionary<string, string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the postdeploy job of the last phase. If this is not configured, there will be no postdeploy job for this phase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCanaryDeploymentPostdeploy
@@ -76,7 +83,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the predeploy job of the first phase. If this is not configured, there will be no predeploy job for this phase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCanaryDeploymentPredeploy
@@ -85,7 +94,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the progressive based deployment for a Target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCanaryDeployment
@@ -106,7 +117,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("verify")]
     public bool? Verify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the postdeploy job of this phase. If this is not configured, there will be no postdeploy job for this phase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCustomCanaryDeploymentPhaseConfigsPostdeploy
@@ -115,7 +128,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the predeploy job of this phase. If this is not configured, there will be no predeploy job for this phase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCustomCanaryDeploymentPhaseConfigsPredeploy
@@ -124,7 +139,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCustomCanaryDeploymentPhaseConfigs
@@ -153,7 +170,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("verify")]
     public bool? Verify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the progressive based deployment for a Target, but allows customizing at the phase level where a phase represents each of the percentage deployments.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCustomCanaryDeployment
@@ -162,7 +181,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("phaseConfigs")]
     public IList<V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryCustomCanaryDeploymentPhaseConfigs>? PhaseConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud Run runtime configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigCloudRun
@@ -183,7 +204,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("stableRevisionTags")]
     public IList<string>? StableRevisionTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Route destinations allow configuring the Gateway API HTTPRoute to be deployed to additional clusters. This option is available for multi-cluster service mesh set ups that require the route to exist in the clusters that call the service. If unspecified, the HTTPRoute will only be deployed to the Target cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetesGatewayServiceMeshRouteDestinations
@@ -196,7 +219,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("propagateService")]
     public bool? PropagateService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kubernetes Gateway API service mesh configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetesGatewayServiceMesh
@@ -229,7 +254,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("stableCutbackDuration")]
     public string? StableCutbackDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kubernetes Service networking configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetesServiceNetworking
@@ -250,7 +277,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kubernetes runtime configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetes
@@ -263,7 +292,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("serviceNetworking")]
     public V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetesServiceNetworking? ServiceNetworking { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Runtime specific configurations for the deployment strategy. The runtime configuration is used to determine how Cloud Deploy will split traffic to enable a progressive deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfig
@@ -276,7 +307,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("kubernetes")]
     public V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfigKubernetes? Kubernetes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Canary deployment strategy provides progressive percentage based deployments to a Target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanary
@@ -293,7 +326,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("runtimeConfig")]
     public V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyCanaryRuntimeConfig? RuntimeConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will not be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyStandardPostdeploy
@@ -302,7 +337,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the predeploy job. If this is not configured, predeploy job will not be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyStandardPredeploy
@@ -311,7 +348,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("actions")]
     public IList<string>? Actions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard deployment strategy executes a single deploy and allows verifying the deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyStandard
@@ -328,7 +367,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("verify")]
     public bool? Verify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The strategy to use for a `Rollout` to this stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategy
@@ -341,7 +382,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("standard")]
     public V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStagesStrategyStandard? Standard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
@@ -362,7 +405,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages
     [JsonPropertyName("targetID")]
     public string? TargetID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipeline
@@ -371,7 +416,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpecSerialPipeline
     [JsonPropertyName("stages")]
     public IList<V1alpha1CloudDeployDeliveryPipelineSpecSerialPipelineStages>? Stages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeliveryPipelineSpec defines the desired state of DeployDeliveryPipeline</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineSpec
@@ -408,7 +455,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineSpec
     [JsonPropertyName("suspended")]
     public bool? Suspended { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusConditions
@@ -433,7 +482,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details around the Pipeline's overall status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateConditionPipelineReadyCondition
@@ -446,7 +497,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateCondi
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details around targets enumerated in the pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateConditionTargetsPresentCondition
@@ -463,7 +516,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateCondi
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details on the whether the targets enumerated in the pipeline are of the same type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateConditionTargetsTypeCondition
@@ -476,7 +531,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateCondi
     [JsonPropertyName("status")]
     public bool? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Information around the state of the Delivery Pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateCondition
@@ -493,7 +550,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedStateCondi
     [JsonPropertyName("targetsTypeCondition")]
     public V1alpha1CloudDeployDeliveryPipelineStatusObservedStateConditionTargetsTypeCondition? TargetsTypeCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedState
@@ -514,7 +573,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeliveryPipelineStatus defines the config connector machine state of DeployDeliveryPipeline</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDeployDeliveryPipelineStatus
@@ -535,7 +596,9 @@ public partial class V1alpha1CloudDeployDeliveryPipelineStatus
     [JsonPropertyName("observedState")]
     public V1alpha1CloudDeployDeliveryPipelineStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudDeployDeliveryPipeline is the Schema for the CloudDeployDeliveryPipeline API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -565,3 +628,4 @@ public partial class V1alpha1CloudDeployDeliveryPipeline : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1CloudDeployDeliveryPipelineStatus? Status { get; set; }
 }
+#nullable disable

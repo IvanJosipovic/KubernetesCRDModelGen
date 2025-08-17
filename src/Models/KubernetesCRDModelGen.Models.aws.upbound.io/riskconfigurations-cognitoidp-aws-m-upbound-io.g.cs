@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.m.upbound.io;
+#nullable enable
 /// <summary>RiskConfiguration is the Schema for the RiskConfigurations API. Provides a Cognito Risk Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RiskConfigurationList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1RiskConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a high risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsHighAction
@@ -46,7 +49,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a low risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsLowAction
@@ -59,7 +64,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a medium risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsMediumAction
@@ -72,7 +79,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account takeover risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActions
@@ -89,7 +98,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("mediumAction")]
     public V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsMediumAction? MediumAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
@@ -106,7 +117,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The multi-factor authentication (MFA) email template used when MFA is challenged as part of a detected risk. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
@@ -123,7 +136,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The email template used when a detected risk event is allowed. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
@@ -140,7 +155,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notify configuration used to construct email notifications. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfiguration
@@ -169,7 +186,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The account takeover risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfiguration
@@ -182,7 +201,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     [JsonPropertyName("notifyConfiguration")]
     public V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfiguration? NotifyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentialsRiskConfigurationActions
@@ -191,7 +212,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentia
     [JsonPropertyName("eventAction")]
     public string? EventAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentialsRiskConfiguration
@@ -204,7 +227,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentia
     [JsonPropertyName("eventFilter")]
     public IList<string>? EventFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to override the risk decision. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderRiskExceptionConfiguration
@@ -217,7 +242,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderRiskExceptionConfigu
     [JsonPropertyName("skippedIpRangeList")]
     public IList<string>? SkippedIpRangeList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicy
@@ -230,7 +257,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRef
@@ -247,7 +276,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector
@@ -281,7 +314,9 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProvider
@@ -318,7 +353,9 @@ public partial class V1beta1RiskConfigurationSpecForProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a high risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsHighAction
@@ -331,7 +368,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a low risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsLowAction
@@ -344,7 +383,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a medium risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsMediumAction
@@ -357,7 +398,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account takeover risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActions
@@ -374,7 +417,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("mediumAction")]
     public V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsMediumAction? MediumAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
@@ -391,7 +436,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The multi-factor authentication (MFA) email template used when MFA is challenged as part of a detected risk. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
@@ -408,7 +455,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The email template used when a detected risk event is allowed. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
@@ -425,7 +474,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notify configuration used to construct email notifications. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfiguration
@@ -454,7 +505,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The account takeover risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfiguration
@@ -467,7 +520,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     [JsonPropertyName("notifyConfiguration")]
     public V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfiguration? NotifyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredentialsRiskConfigurationActions
@@ -476,7 +531,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredenti
     [JsonPropertyName("eventAction")]
     public string? EventAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredentialsRiskConfiguration
@@ -489,7 +546,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredenti
     [JsonPropertyName("eventFilter")]
     public IList<string>? EventFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to override the risk decision. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderRiskExceptionConfiguration
@@ -502,7 +561,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderRiskExceptionConfig
     [JsonPropertyName("skippedIpRangeList")]
     public IList<string>? SkippedIpRangeList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicy
@@ -515,7 +576,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRef
@@ -532,7 +595,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicy
@@ -545,7 +610,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelector
@@ -566,7 +633,9 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecInitProvider
@@ -599,7 +668,9 @@ public partial class V1beta1RiskConfigurationSpecInitProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecProviderConfigRef
@@ -612,7 +683,9 @@ public partial class V1beta1RiskConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecWriteConnectionSecretToRef
@@ -621,7 +694,9 @@ public partial class V1beta1RiskConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RiskConfigurationSpec defines the desired state of RiskConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpec
@@ -646,7 +721,9 @@ public partial class V1beta1RiskConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RiskConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a high risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsHighAction
@@ -659,7 +736,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a low risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsLowAction
@@ -672,7 +751,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to take for a medium risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsMediumAction
@@ -685,7 +766,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("notify")]
     public bool? Notify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Account takeover risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActions
@@ -702,7 +785,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("mediumAction")]
     public V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsMediumAction? MediumAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
@@ -719,7 +804,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The multi-factor authentication (MFA) email template used when MFA is challenged as part of a detected risk. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
@@ -736,7 +823,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The email template used when a detected risk event is allowed. See notify email type below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
@@ -753,7 +842,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("textBody")]
     public string? TextBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notify configuration used to construct email notifications. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfiguration
@@ -782,7 +873,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The account takeover risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfiguration
@@ -795,7 +888,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     [JsonPropertyName("notifyConfiguration")]
     public V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfiguration? NotifyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredentialsRiskConfigurationActions
@@ -804,7 +899,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredenti
     [JsonPropertyName("eventAction")]
     public string? EventAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The compromised credentials risk configuration. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredentialsRiskConfiguration
@@ -817,7 +914,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredenti
     [JsonPropertyName("eventFilter")]
     public IList<string>? EventFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to override the risk decision. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProviderRiskExceptionConfiguration
@@ -830,7 +929,9 @@ public partial class V1beta1RiskConfigurationStatusAtProviderRiskExceptionConfig
     [JsonPropertyName("skippedIpRangeList")]
     public IList<string>? SkippedIpRangeList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusAtProvider
@@ -863,7 +964,9 @@ public partial class V1beta1RiskConfigurationStatusAtProvider
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatusConditions
@@ -892,7 +995,9 @@ public partial class V1beta1RiskConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RiskConfigurationStatus defines the observed state of RiskConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationStatus
@@ -909,7 +1014,9 @@ public partial class V1beta1RiskConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RiskConfiguration is the Schema for the RiskConfigurations API. Provides a Cognito Risk Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -939,3 +1046,4 @@ public partial class V1beta1RiskConfiguration : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1RiskConfigurationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aiplatform.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AIPlatformModel is the Schema for the AIPlatformModel API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AIPlatformModelList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1AIPlatformModel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the base model of Genie models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecBaseModelSourceGenieSource
@@ -42,7 +45,9 @@ public partial class V1alpha1AIPlatformModelSpecBaseModelSourceGenieSource
     [JsonPropertyName("baseModelURI")]
     public string? BaseModelURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source information of Model Garden models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecBaseModelSourceModelGardenSource
@@ -51,7 +56,9 @@ public partial class V1alpha1AIPlatformModelSpecBaseModelSourceModelGardenSource
     [JsonPropertyName("publicModelName")]
     public string? PublicModelName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. User input field to specify the base model source. Currently it only supports specifying the Model Garden models and Genie models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecBaseModelSource
@@ -64,7 +71,9 @@ public partial class V1alpha1AIPlatformModelSpecBaseModelSource
     [JsonPropertyName("modelGardenSource")]
     public V1alpha1AIPlatformModelSpecBaseModelSourceModelGardenSource? ModelGardenSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecEnv
@@ -77,7 +86,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecGrpcPorts
@@ -86,7 +97,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecGrpcPorts
     [JsonPropertyName("containerPort")]
     public int? ContainerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExecAction probes the health of a container by executing a command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecHealthProbeExec
@@ -95,7 +108,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecHealthProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specification for Kubernetes readiness probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecHealthProbe
@@ -112,7 +127,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecHealthProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecPorts
@@ -121,7 +138,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecPorts
     [JsonPropertyName("containerPort")]
     public int? ContainerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExecAction probes the health of a container by executing a command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecStartupProbeExec
@@ -130,7 +149,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecStartupProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specification for Kubernetes startup probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpecStartupProbe
@@ -147,7 +168,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpecStartupProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Input only. The specification of the container that is to be used when deploying this Model. The specification is ingested upon [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel], and all binaries it contains are copied and stored internally by Vertex AI. Not required for AutoML Models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecContainerSpec
@@ -200,7 +223,9 @@ public partial class V1alpha1AIPlatformModelSpecContainerSpec
     [JsonPropertyName("startupProbe")]
     public V1alpha1AIPlatformModelSpecContainerSpecStartupProbe? StartupProbe { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stats of data used for training or evaluating the Model.   Only populated when the Model is trained by a TrainingPipeline with  [data_input_config][google.cloud.aiplatform.v1.TrainingPipeline.input_data_config].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecDataStats
@@ -229,7 +254,9 @@ public partial class V1alpha1AIPlatformModelSpecDataStats
     [JsonPropertyName("validationDataItemsCount")]
     public long? ValidationDataItemsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer-managed encryption key spec for a Model. If set, this Model and all sub-resources of this Model will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecEncryptionSpec
@@ -238,7 +265,9 @@ public partial class V1alpha1AIPlatformModelSpecEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsEncodedBaselines
@@ -263,7 +292,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsEnc
     [JsonPropertyName("structValue")]
     public IDictionary<string, string>? StructValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The domain details of the input feature value. Like min/max, original mean or standard deviation if normalized.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsFeatureValueDomain
@@ -284,7 +315,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsFea
     [JsonPropertyName("originalStddev")]
     public double? OriginalStddev { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsInputBaselines
@@ -309,7 +342,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsInp
     [JsonPropertyName("structValue")]
     public IDictionary<string, string>? StructValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Visualization configurations for image explanation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsVisualization
@@ -338,7 +373,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsVis
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputs
@@ -391,7 +428,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputs
     [JsonPropertyName("visualization")]
     public V1alpha1AIPlatformModelSpecExplanationSpecMetadataInputsVisualization? Visualization { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Static mapping between the index and display name.   Use this if the outputs are a deterministic n-dimensional array, e.g. a  list of scores of all the classes in a pre-defined order for a  multi-classification Model. It's not feasible if the outputs are  non-deterministic, e.g. the Model produces top-k classes or sort the  outputs by their values.   The shape of the value must be an n-dimensional array of strings. The  number of dimensions must match that of the outputs to be explained.  The  [Attribution.output_display_name][google.cloud.aiplatform.v1.Attribution.output_display_name]  is populated by locating in the mapping with  [Attribution.output_index][google.cloud.aiplatform.v1.Attribution.output_index].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataOutputsIndexDisplayNameMapping
@@ -416,7 +455,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataOutputsIn
     [JsonPropertyName("structValue")]
     public IDictionary<string, string>? StructValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataOutputs
@@ -433,7 +474,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadataOutputs
     [JsonPropertyName("outputTensorName")]
     public string? OutputTensorName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Metadata describing the Model's input and output for explanation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadata
@@ -454,7 +497,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecMetadata
     [JsonPropertyName("outputs")]
     public IDictionary<string, V1alpha1AIPlatformModelSpecExplanationSpecMetadataOutputs>? Outputs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud Storage location for the input instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesExampleGCSSourceGcsSource
@@ -463,7 +508,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExample
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud Storage input instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesExampleGCSSource
@@ -476,7 +523,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExample
     [JsonPropertyName("gcsSource")]
     public V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesExampleGCSSourceGcsSource? GcsSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The full configuration for the generated index, the semantics are the same as [metadata][google.cloud.aiplatform.v1.Index.metadata] and should match [NearestNeighborSearchConfig](https://cloud.google.com/vertex-ai/docs/explainable-ai/configuring-explanations-example-based#nearest-neighbor-search-config).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesNearestNeighborSearchConfig
@@ -501,7 +550,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExample
     [JsonPropertyName("structValue")]
     public IDictionary<string, string>? StructValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Simplified preset configuration, which automatically sets configuration values based on the desired query speed-precision trade-off and modality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesPresets
@@ -514,7 +565,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExample
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Example-based explanations that returns the nearest neighbors from the provided dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExamples
@@ -535,7 +588,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersExample
     [JsonPropertyName("presets")]
     public V1alpha1AIPlatformModelSpecExplanationSpecParametersExamplesPresets? Presets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config for IG with blur baseline.   When enabled, a linear path from the maximally blurred image to the input  image is created. Using a blurred baseline instead of zero (black image) is  motivated by the BlurIG approach explained here:  https://arxiv.org/abs/2004.03383</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttributionBlurBaselineConfig
@@ -544,7 +599,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegra
     [JsonPropertyName("maxBlurSigma")]
     public double? MaxBlurSigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttributionSmoothGradConfigFeatureNoiseSigmaNoiseSigma
@@ -557,7 +614,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegra
     [JsonPropertyName("sigma")]
     public double? Sigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This is similar to [noise_sigma][google.cloud.aiplatform.v1.SmoothGradConfig.noise_sigma], but provides additional flexibility. A separate noise sigma can be provided for each feature, which is useful if their distributions are different. No noise is added to features that are not set. If this field is unset, [noise_sigma][google.cloud.aiplatform.v1.SmoothGradConfig.noise_sigma] will be used for all features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttributionSmoothGradConfigFeatureNoiseSigma
@@ -566,7 +625,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegra
     [JsonPropertyName("noiseSigma")]
     public IList<V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttributionSmoothGradConfigFeatureNoiseSigmaNoiseSigma>? NoiseSigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config for SmoothGrad approximation of gradients.   When enabled, the gradients are approximated by averaging the gradients  from noisy samples in the vicinity of the inputs. Adding  noise can help improve the computed gradients. Refer to this paper for more  details: https://arxiv.org/pdf/1706.03825.pdf</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttributionSmoothGradConfig
@@ -583,7 +644,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegra
     [JsonPropertyName("noisySampleCount")]
     public int? NoisySampleCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An attribution method that computes Aumann-Shapley values taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegratedGradientsAttribution
@@ -600,7 +663,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersIntegra
     [JsonPropertyName("stepCount")]
     public int? StepCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features. Refer to this paper for model details: https://arxiv.org/abs/1306.4265.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersSampledShapleyAttribution
@@ -609,7 +674,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersSampled
     [JsonPropertyName("pathCount")]
     public int? PathCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config for XRAI with blur baseline.   When enabled, a linear path from the maximally blurred image to the input  image is created. Using a blurred baseline instead of zero (black image) is  motivated by the BlurIG approach explained here:  https://arxiv.org/abs/2004.03383</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttributionBlurBaselineConfig
@@ -618,7 +685,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAtt
     [JsonPropertyName("maxBlurSigma")]
     public double? MaxBlurSigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttributionSmoothGradConfigFeatureNoiseSigmaNoiseSigma
@@ -631,7 +700,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAtt
     [JsonPropertyName("sigma")]
     public double? Sigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This is similar to [noise_sigma][google.cloud.aiplatform.v1.SmoothGradConfig.noise_sigma], but provides additional flexibility. A separate noise sigma can be provided for each feature, which is useful if their distributions are different. No noise is added to features that are not set. If this field is unset, [noise_sigma][google.cloud.aiplatform.v1.SmoothGradConfig.noise_sigma] will be used for all features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttributionSmoothGradConfigFeatureNoiseSigma
@@ -640,7 +711,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAtt
     [JsonPropertyName("noiseSigma")]
     public IList<V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttributionSmoothGradConfigFeatureNoiseSigmaNoiseSigma>? NoiseSigma { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config for SmoothGrad approximation of gradients.   When enabled, the gradients are approximated by averaging the gradients  from noisy samples in the vicinity of the inputs. Adding  noise can help improve the computed gradients. Refer to this paper for more  details: https://arxiv.org/pdf/1706.03825.pdf</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttributionSmoothGradConfig
@@ -657,7 +730,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAtt
     [JsonPropertyName("noisySampleCount")]
     public int? NoisySampleCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An attribution method that redistributes Integrated Gradients  attribution to segmented regions, taking advantage of the model's fully  differentiable structure. Refer to this paper for  more details: https://arxiv.org/abs/1906.02825   XRAI currently performs better on natural images, like a picture of a  house or an animal. If the images are taken in artificial environments,  like a lab or manufacturing line, or from diagnostic equipment, like  x-rays or quality-control cameras, use Integrated Gradients instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttribution
@@ -674,7 +749,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAtt
     [JsonPropertyName("stepCount")]
     public int? StepCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Parameters that configure explaining of the Model's predictions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpecParameters
@@ -699,7 +776,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpecParameters
     [JsonPropertyName("xraiAttribution")]
     public V1alpha1AIPlatformModelSpecExplanationSpecParametersXraiAttribution? XraiAttribution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The default explanation specification for this Model.   The Model can be used for  [requesting  explanation][google.cloud.aiplatform.v1.PredictionService.Explain] after  being [deployed][google.cloud.aiplatform.v1.EndpointService.DeployModel] if  it is populated. The Model can be used for [batch  explanation][google.cloud.aiplatform.v1.BatchPredictionJob.generate_explanation]  if it is populated.   All fields of the explanation_spec can be overridden by  [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]  of  [DeployModelRequest.deployed_model][google.cloud.aiplatform.v1.DeployModelRequest.deployed_model],  or  [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec]  of [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].   If the default explanation specification is not set for this Model, this  Model can still be used for  [requesting  explanation][google.cloud.aiplatform.v1.PredictionService.Explain] by  setting  [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]  of  [DeployModelRequest.deployed_model][google.cloud.aiplatform.v1.DeployModelRequest.deployed_model]  and for [batch  explanation][google.cloud.aiplatform.v1.BatchPredictionJob.generate_explanation]  by setting  [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec]  of [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecExplanationSpec
@@ -712,7 +791,9 @@ public partial class V1alpha1AIPlatformModelSpecExplanationSpec
     [JsonPropertyName("parameters")]
     public V1alpha1AIPlatformModelSpecExplanationSpecParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. An additional information about the Model; the schema of the metadata can be found in [metadata_schema][google.cloud.aiplatform.v1.Model.metadata_schema_uri]. Unset if the Model does not have any additional information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecMetadata
@@ -737,7 +818,9 @@ public partial class V1alpha1AIPlatformModelSpecMetadata
     [JsonPropertyName("structValue")]
     public IDictionary<string, string>? StructValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The schemata that describe formats of the Model's predictions and explanations as given and returned via [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] and [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecPredictSchemata
@@ -754,7 +837,9 @@ public partial class V1alpha1AIPlatformModelSpecPredictSchemata
     [JsonPropertyName("predictionSchemaURI")]
     public string? PredictionSchemaURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecProjectRef
@@ -775,7 +860,9 @@ public partial class V1alpha1AIPlatformModelSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AIPlatformModelSpec defines the desired state of AIPlatformModel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpec
@@ -856,7 +943,9 @@ public partial class V1alpha1AIPlatformModelSpec
     [JsonPropertyName("versionDescription")]
     public string? VersionDescription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusConditions
@@ -881,7 +970,9 @@ public partial class V1alpha1AIPlatformModelStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusObservedStateDeployedModels
@@ -894,7 +985,9 @@ public partial class V1alpha1AIPlatformModelStatusObservedStateDeployedModels
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Source of a model. It can either be automl training pipeline, custom training pipeline, BigQuery ML, or saved and tuned from Genie or Model Garden.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusObservedStateModelSourceInfo
@@ -907,19 +1000,25 @@ public partial class V1alpha1AIPlatformModelStatusObservedStateModelSourceInfo
     [JsonPropertyName("sourceType")]
     public string? SourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. If this Model is a copy of another Model, this contains info about the original.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusObservedStateOriginalModelInfo
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusObservedStateSupportedExportFormats
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatusObservedState
@@ -988,7 +1087,9 @@ public partial class V1alpha1AIPlatformModelStatusObservedState
     [JsonPropertyName("versionUpdateTime")]
     public string? VersionUpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AIPlatformModelStatus defines the config connector machine state of AIPlatformModel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelStatus
@@ -1009,7 +1110,9 @@ public partial class V1alpha1AIPlatformModelStatus
     [JsonPropertyName("observedState")]
     public V1alpha1AIPlatformModelStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AIPlatformModel is the Schema for the AIPlatformModel API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1039,3 +1142,4 @@ public partial class V1alpha1AIPlatformModel : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1AIPlatformModelStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+#nullable enable
 /// <summary>SparkPool is the Schema for the SparkPools API. Manages a Synapse Spark Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SparkPoolList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1SparkPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_pause block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderAutoPause
@@ -42,7 +45,9 @@ public partial class V1beta1SparkPoolSpecForProviderAutoPause
     [JsonPropertyName("delayInMinutes")]
     public double? DelayInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_scale block as defined below. Exactly one of node_count or auto_scale must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderAutoScale
@@ -55,7 +60,9 @@ public partial class V1beta1SparkPoolSpecForProviderAutoScale
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A library_requirement block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderLibraryRequirement
@@ -68,7 +75,9 @@ public partial class V1beta1SparkPoolSpecForProviderLibraryRequirement
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A spark_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderSparkConfig
@@ -81,7 +90,9 @@ public partial class V1beta1SparkPoolSpecForProviderSparkConfig
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdRefPolicy
@@ -94,7 +105,9 @@ public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdRef
@@ -111,7 +124,9 @@ public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdSelectorPolicy
@@ -124,7 +139,9 @@ public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SparkPoolSpecForProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProvider
@@ -230,7 +249,9 @@ public partial class V1beta1SparkPoolSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_pause block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecInitProviderAutoPause
@@ -239,7 +260,9 @@ public partial class V1beta1SparkPoolSpecInitProviderAutoPause
     [JsonPropertyName("delayInMinutes")]
     public double? DelayInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_scale block as defined below. Exactly one of node_count or auto_scale must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecInitProviderAutoScale
@@ -252,7 +275,9 @@ public partial class V1beta1SparkPoolSpecInitProviderAutoScale
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A library_requirement block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecInitProviderLibraryRequirement
@@ -265,7 +290,9 @@ public partial class V1beta1SparkPoolSpecInitProviderLibraryRequirement
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A spark_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecInitProviderSparkConfig
@@ -278,7 +305,9 @@ public partial class V1beta1SparkPoolSpecInitProviderSparkConfig
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecInitProvider
@@ -351,7 +380,9 @@ public partial class V1beta1SparkPoolSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecProviderConfigRef
@@ -364,7 +395,9 @@ public partial class V1beta1SparkPoolSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecWriteConnectionSecretToRef
@@ -373,7 +406,9 @@ public partial class V1beta1SparkPoolSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SparkPoolSpec defines the desired state of SparkPool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpec
@@ -398,7 +433,9 @@ public partial class V1beta1SparkPoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SparkPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_pause block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusAtProviderAutoPause
@@ -407,7 +444,9 @@ public partial class V1beta1SparkPoolStatusAtProviderAutoPause
     [JsonPropertyName("delayInMinutes")]
     public double? DelayInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An auto_scale block as defined below. Exactly one of node_count or auto_scale must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusAtProviderAutoScale
@@ -420,7 +459,9 @@ public partial class V1beta1SparkPoolStatusAtProviderAutoScale
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A library_requirement block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusAtProviderLibraryRequirement
@@ -433,7 +474,9 @@ public partial class V1beta1SparkPoolStatusAtProviderLibraryRequirement
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A spark_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusAtProviderSparkConfig
@@ -446,7 +489,9 @@ public partial class V1beta1SparkPoolStatusAtProviderSparkConfig
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusAtProvider
@@ -527,7 +572,9 @@ public partial class V1beta1SparkPoolStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatusConditions
@@ -556,7 +603,9 @@ public partial class V1beta1SparkPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SparkPoolStatus defines the observed state of SparkPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolStatus
@@ -573,7 +622,9 @@ public partial class V1beta1SparkPoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SparkPool is the Schema for the SparkPools API. Manages a Synapse Spark Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -603,3 +654,4 @@ public partial class V1beta1SparkPool : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1SparkPoolStatus? Status { get; set; }
 }
+#nullable disable

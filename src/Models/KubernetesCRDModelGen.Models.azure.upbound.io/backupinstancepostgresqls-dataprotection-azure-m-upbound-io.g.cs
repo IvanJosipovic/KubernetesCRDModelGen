@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupInstancePostgreSQL is the Schema for the BackupInstancePostgreSQLs API. Manages a Backup Instance to back up PostgreSQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupInstancePostgreSQLList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1BackupInstancePostgreSQL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in dbforpostgresql to populate databaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in dbforpostgresql to populate databaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSel
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRef
@@ -255,7 +284,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelector
@@ -289,7 +322,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelect
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecForProvider
@@ -346,7 +381,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProvider
     [JsonPropertyName("vaultIdSelector")]
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRef
@@ -376,7 +415,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelector
@@ -410,7 +453,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicy
@@ -423,7 +468,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRef
@@ -440,7 +487,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy
@@ -453,7 +502,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelector
@@ -474,7 +525,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicy
@@ -487,7 +540,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in dbforpostgresql to populate databaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRef
@@ -504,7 +559,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRe
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicy
@@ -517,7 +574,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in dbforpostgresql to populate databaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelector
@@ -538,7 +597,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSe
     [JsonPropertyName("policy")]
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProvider
@@ -583,7 +644,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRef
@@ -596,7 +659,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToRef
@@ -605,7 +670,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstancePostgreSQLSpec defines the desired state of BackupInstancePostgreSQL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLSpec
@@ -630,7 +697,9 @@ public partial class V1beta1BackupInstancePostgreSQLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLStatusAtProvider
@@ -659,7 +728,9 @@ public partial class V1beta1BackupInstancePostgreSQLStatusAtProvider
     [JsonPropertyName("vaultId")]
     public string? VaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLStatusConditions
@@ -688,7 +759,9 @@ public partial class V1beta1BackupInstancePostgreSQLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstancePostgreSQLStatus defines the observed state of BackupInstancePostgreSQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstancePostgreSQLStatus
@@ -705,7 +778,9 @@ public partial class V1beta1BackupInstancePostgreSQLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupInstancePostgreSQL is the Schema for the BackupInstancePostgreSQLs API. Manages a Backup Instance to back up PostgreSQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -735,3 +810,4 @@ public partial class V1beta1BackupInstancePostgreSQL : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1BackupInstancePostgreSQLStatus? Status { get; set; }
 }
+#nullable disable

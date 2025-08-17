@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20200601.Topic Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20200601storageTopicList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1api20200601storageTopic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.InboundIpRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInboundIpRules
@@ -50,7 +53,9 @@ public partial class V1api20200601storageTopicSpecInboundIpRules
     [JsonPropertyName("ipMask")]
     public string? IpMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonDataVersion
@@ -67,7 +72,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonDataVers
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTime
@@ -80,7 +87,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTim
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventType
@@ -97,7 +106,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTyp
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonId
@@ -110,7 +121,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonId
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonSubject
@@ -127,7 +140,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonSubject
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonTopic
@@ -140,7 +155,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonTopic
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonInputSchemaMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJson
@@ -177,7 +194,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJson
     [JsonPropertyName("topic")]
     public V1api20200601storageTopicSpecInputSchemaMappingJsonTopic? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.InputSchemaMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecInputSchemaMapping
@@ -190,7 +209,9 @@ public partial class V1api20200601storageTopicSpecInputSchemaMapping
     [JsonPropertyName("json")]
     public V1api20200601storageTopicSpecInputSchemaMappingJson? Json { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapExpressions
@@ -207,7 +228,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint
@@ -220,7 +243,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.TopicOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecConfigMaps
@@ -233,7 +258,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecConfigMaps
     [JsonPropertyName("endpoint")]
     public V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint? Endpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecSecretExpressions
@@ -250,7 +277,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey1
@@ -263,7 +292,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey1
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey2
@@ -276,7 +307,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey2
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.TopicOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpecSecrets
@@ -293,7 +326,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecrets
     [JsonPropertyName("key2")]
     public V1api20200601storageTopicSpecOperatorSpecSecretsKey2? Key2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.TopicOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOperatorSpec
@@ -318,7 +353,9 @@ public partial class V1api20200601storageTopicSpecOperatorSpec
     [JsonPropertyName("secrets")]
     public V1api20200601storageTopicSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpecOwner
@@ -331,7 +368,9 @@ public partial class V1api20200601storageTopicSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.Topic_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicSpec
@@ -380,7 +419,9 @@ public partial class V1api20200601storageTopicSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusConditions
@@ -413,7 +454,9 @@ public partial class V1api20200601storageTopicStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.InboundIpRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInboundIpRules
@@ -430,7 +473,9 @@ public partial class V1api20200601storageTopicStatusInboundIpRules
     [JsonPropertyName("ipMask")]
     public string? IpMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonDataVersion
@@ -447,7 +492,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonDataVe
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventTime
@@ -460,7 +507,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventT
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventType
@@ -477,7 +526,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventT
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonId
@@ -490,7 +541,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonId
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonSubject
@@ -507,7 +560,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonSubjec
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonTopic
@@ -520,7 +575,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonTopic
     [JsonPropertyName("sourceField")]
     public string? SourceField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.JsonInputSchemaMapping_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJson
@@ -557,7 +614,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJson
     [JsonPropertyName("topic")]
     public V1api20200601storageTopicStatusInputSchemaMappingJsonTopic? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.InputSchemaMapping_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusInputSchemaMapping
@@ -570,7 +629,9 @@ public partial class V1api20200601storageTopicStatusInputSchemaMapping
     [JsonPropertyName("json")]
     public V1api20200601storageTopicStatusInputSchemaMappingJson? Json { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusPrivateEndpointConnections
@@ -583,7 +644,9 @@ public partial class V1api20200601storageTopicStatusPrivateEndpointConnections
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatusSystemData
@@ -616,7 +679,9 @@ public partial class V1api20200601storageTopicStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.Topic_STATUS EventGrid Topic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageTopicStatus
@@ -685,7 +750,9 @@ public partial class V1api20200601storageTopicStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20200601.Topic Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -715,3 +782,4 @@ public partial class V1api20200601storageTopic : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1api20200601storageTopicStatus? Status { get; set; }
 }
+#nullable disable

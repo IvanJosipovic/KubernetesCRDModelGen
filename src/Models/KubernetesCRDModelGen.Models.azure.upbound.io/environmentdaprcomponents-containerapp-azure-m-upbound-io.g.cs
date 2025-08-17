@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.m.upbound.io;
+#nullable enable
 /// <summary>EnvironmentDaprComponent is the Schema for the EnvironmentDaprComponents API. Manages a Dapr Component for a Container App Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EnvironmentDaprComponentList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1EnvironmentDaprComponent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppE
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderContainerAppE
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentDaprComponentSpecForProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderMetadata
@@ -114,7 +125,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderMetadata
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value for this secret. The value for this secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderSecretValueSecretRef
@@ -127,7 +140,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderSecretValueSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProviderSecret
@@ -148,7 +163,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProviderSecret
     [JsonPropertyName("valueSecretRef")]
     public V1beta1EnvironmentDaprComponentSpecForProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecForProvider
@@ -193,7 +210,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecForProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecInitProviderMetadata
@@ -210,7 +229,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecInitProviderMetadata
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value for this secret. The value for this secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecInitProviderSecretValueSecretRef
@@ -223,7 +244,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecInitProviderSecretValueS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecInitProviderSecret
@@ -244,7 +267,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecInitProviderSecret
     [JsonPropertyName("valueSecretRef")]
     public V1beta1EnvironmentDaprComponentSpecInitProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecInitProvider
@@ -277,7 +302,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecInitProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecProviderConfigRef
@@ -290,7 +317,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpecWriteConnectionSecretToRef
@@ -299,7 +328,9 @@ public partial class V1beta1EnvironmentDaprComponentSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentDaprComponentSpec defines the desired state of EnvironmentDaprComponent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentSpec
@@ -324,7 +355,9 @@ public partial class V1beta1EnvironmentDaprComponentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EnvironmentDaprComponentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentStatusAtProviderMetadata
@@ -341,7 +374,9 @@ public partial class V1beta1EnvironmentDaprComponentStatusAtProviderMetadata
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentStatusAtProviderSecret
@@ -358,7 +393,9 @@ public partial class V1beta1EnvironmentDaprComponentStatusAtProviderSecret
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentStatusAtProvider
@@ -399,7 +436,9 @@ public partial class V1beta1EnvironmentDaprComponentStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentStatusConditions
@@ -428,7 +467,9 @@ public partial class V1beta1EnvironmentDaprComponentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentDaprComponentStatus defines the observed state of EnvironmentDaprComponent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentDaprComponentStatus
@@ -445,7 +486,9 @@ public partial class V1beta1EnvironmentDaprComponentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentDaprComponent is the Schema for the EnvironmentDaprComponents API. Manages a Dapr Component for a Container App Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -475,3 +518,4 @@ public partial class V1beta1EnvironmentDaprComponent : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1EnvironmentDaprComponentStatus? Status { get; set; }
 }
+#nullable disable

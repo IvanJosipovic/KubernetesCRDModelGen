@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GKEHubFeatureList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1GKEHubFeature> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1beta1GKEHubFeatureSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specified if applying the default routing config to logs not specified in other configs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig
@@ -59,7 +64,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specified if applying the routing config to all logs for all fleet scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig
@@ -68,7 +75,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet Observability Logging-specific spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
@@ -81,7 +90,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     [JsonPropertyName("fleetScopeLogsConfig")]
     public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig? FleetScopeLogsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet Observability spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservability
@@ -90,7 +101,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservability
     [JsonPropertyName("loggingConfig")]
     public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig? LoggingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef
@@ -107,7 +120,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMember
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Multicluster Ingress-specific spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringress
@@ -116,7 +131,9 @@ public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringress
     [JsonPropertyName("configMembershipRef")]
     public V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef ConfigMembershipRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpecSpec
@@ -129,7 +146,9 @@ public partial class V1beta1GKEHubFeatureSpecSpec
     [JsonPropertyName("multiclusteringress")]
     public V1beta1GKEHubFeatureSpecSpecMulticlusteringress? Multiclusteringress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureSpec
@@ -150,7 +169,9 @@ public partial class V1beta1GKEHubFeatureSpec
     [JsonPropertyName("spec")]
     public V1beta1GKEHubFeatureSpecSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureStatusConditions
@@ -175,7 +196,9 @@ public partial class V1beta1GKEHubFeatureStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>State of the Feature resource itself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureStatusResourceState
@@ -188,7 +211,9 @@ public partial class V1beta1GKEHubFeatureStatusResourceState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The "running state" of the Feature in this Hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureStatusStateState
@@ -205,7 +230,9 @@ public partial class V1beta1GKEHubFeatureStatusStateState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The Hub-wide Feature state</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureStatusState
@@ -214,7 +241,9 @@ public partial class V1beta1GKEHubFeatureStatusState
     [JsonPropertyName("state")]
     public V1beta1GKEHubFeatureStatusStateState? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureStatus
@@ -247,7 +276,9 @@ public partial class V1beta1GKEHubFeatureStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -277,3 +308,4 @@ public partial class V1beta1GKEHubFeature : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1GKEHubFeatureStatus? Status { get; set; }
 }
+#nullable disable

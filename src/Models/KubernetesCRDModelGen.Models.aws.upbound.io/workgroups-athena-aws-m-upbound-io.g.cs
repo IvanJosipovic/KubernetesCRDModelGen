@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.athena.aws.m.upbound.io;
+#nullable enable
 /// <summary>Workgroup is the Schema for the Workgroups API. Manages an Athena Workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkgroupList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Workgroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Athena Engine Versioning. For more information, see Athena Engine Versioning. See Engine Version below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationEngineVersion
@@ -42,7 +45,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationEngineVersion
     [JsonPropertyName("selectedEngineVersion")]
     public string? SelectedEngineVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>That an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationAclConfiguration
@@ -51,7 +56,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("s3AclOption")]
     public string? S3AclOption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRefPolicy
@@ -64,7 +71,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRef
@@ -81,7 +90,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelectorPolicy
@@ -94,7 +105,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelector
@@ -115,7 +128,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption settings. See Encryption Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfiguration
@@ -136,7 +151,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1WorkgroupSpecForProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with result settings. See Result Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfiguration
@@ -157,7 +174,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigurationResultConfigura
     [JsonPropertyName("outputLocation")]
     public string? OutputLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with various settings for the workgroup. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfiguration
@@ -190,7 +209,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfiguration
     [JsonPropertyName("resultConfiguration")]
     public V1beta1WorkgroupSpecForProviderConfigurationResultConfiguration? ResultConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1WorkgroupSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Athena Engine Versioning. For more information, see Athena Engine Versioning. See Engine Version below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationEngineVersion
@@ -228,7 +251,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationEngineVersion
     [JsonPropertyName("selectedEngineVersion")]
     public string? SelectedEngineVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>That an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationAclConfiguration
@@ -237,7 +262,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("s3AclOption")]
     public string? S3AclOption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRef
@@ -267,7 +296,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelector
@@ -301,7 +334,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption settings. See Encryption Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfiguration
@@ -322,7 +357,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1WorkgroupSpecInitProviderConfigurationResultConfigurationEncryptionConfigurationKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with result settings. See Result Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfiguration
@@ -343,7 +380,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigurationResultConfigur
     [JsonPropertyName("outputLocation")]
     public string? OutputLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with various settings for the workgroup. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfiguration
@@ -376,7 +415,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfiguration
     [JsonPropertyName("resultConfiguration")]
     public V1beta1WorkgroupSpecInitProviderConfigurationResultConfiguration? ResultConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProvider
@@ -401,7 +442,9 @@ public partial class V1beta1WorkgroupSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecProviderConfigRef
@@ -414,7 +457,9 @@ public partial class V1beta1WorkgroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecWriteConnectionSecretToRef
@@ -423,7 +468,9 @@ public partial class V1beta1WorkgroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkgroupSpec defines the desired state of Workgroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpec
@@ -448,7 +495,9 @@ public partial class V1beta1WorkgroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkgroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the Athena Engine Versioning. For more information, see Athena Engine Versioning. See Engine Version below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfigurationEngineVersion
@@ -461,7 +510,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfigurationEngineVersion
     [JsonPropertyName("selectedEngineVersion")]
     public string? SelectedEngineVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>That an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfigurationAclConfiguration
@@ -470,7 +521,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfigur
     [JsonPropertyName("s3AclOption")]
     public string? S3AclOption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption settings. See Encryption Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfigurationEncryptionConfiguration
@@ -483,7 +536,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfigur
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with result settings. See Result Configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfiguration
@@ -504,7 +559,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfigurationResultConfigur
     [JsonPropertyName("outputLocation")]
     public string? OutputLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with various settings for the workgroup. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfiguration
@@ -537,7 +594,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfiguration
     [JsonPropertyName("resultConfiguration")]
     public V1beta1WorkgroupStatusAtProviderConfigurationResultConfiguration? ResultConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProvider
@@ -578,7 +637,9 @@ public partial class V1beta1WorkgroupStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusConditions
@@ -607,7 +668,9 @@ public partial class V1beta1WorkgroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkgroupStatus defines the observed state of Workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatus
@@ -624,7 +687,9 @@ public partial class V1beta1WorkgroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workgroup is the Schema for the Workgroups API. Manages an Athena Workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -654,3 +719,4 @@ public partial class V1beta1Workgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1WorkgroupStatus? Status { get; set; }
 }
+#nullable disable
