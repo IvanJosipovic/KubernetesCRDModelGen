@@ -75,11 +75,11 @@ public class Generator : IGenerator
 
         namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind ?? crd.Spec.Names.Kind + "List"));
 
-        var nullableDirective = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
+        var nullableTrivia = SyntaxFactory.ParseLeadingTrivia("#nullable enable\r\n");
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
             .WithUsings(GenerateUsings())
-            .WithLeadingTrivia(SyntaxFactory.Trivia(nullableDirective));
+            .WithLeadingTrivia(nullableTrivia);
 
         return compilationUnit.AddMembers(namespaceDeclaration);
     }
