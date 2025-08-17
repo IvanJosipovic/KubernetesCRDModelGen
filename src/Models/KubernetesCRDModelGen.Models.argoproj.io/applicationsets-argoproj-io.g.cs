@@ -412,7 +412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -913,7 +913,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -1664,7 +1664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -2165,7 +2165,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -2904,7 +2904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -3405,7 +3405,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -4130,7 +4130,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -4631,7 +4631,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -5370,7 +5370,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -5871,7 +5871,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -6622,7 +6622,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -7123,7 +7123,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -7862,7 +7862,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -8363,7 +8363,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -9088,7 +9088,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -9589,7 +9589,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -10316,7 +10316,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -10817,7 +10817,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -11937,7 +11937,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -12438,7 +12438,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -13579,7 +13579,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -14080,7 +14080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -14902,7 +14902,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -15403,7 +15403,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -16138,7 +16138,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -16639,7 +16639,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -17390,7 +17390,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -17891,7 +17891,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -18630,7 +18630,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -19131,7 +19131,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -19856,7 +19856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -20357,7 +20357,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -21084,7 +21084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -21585,7 +21585,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -22705,7 +22705,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -23206,7 +23206,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -24347,7 +24347,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -24848,7 +24848,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -25670,7 +25670,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -26171,7 +26171,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -26898,7 +26898,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -27399,7 +27399,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -28519,7 +28519,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -29020,7 +29020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -30161,7 +30161,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -30662,7 +30662,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -31593,7 +31593,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizeReplic
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -32094,7 +32094,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizeRepli
 {
     /// <summary></summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]

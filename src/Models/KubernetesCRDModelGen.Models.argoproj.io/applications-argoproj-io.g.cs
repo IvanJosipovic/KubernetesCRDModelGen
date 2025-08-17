@@ -369,7 +369,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -806,7 +806,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -1423,7 +1423,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -1924,7 +1924,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -2552,7 +2552,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -2989,7 +2989,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -3552,7 +3552,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -3989,7 +3989,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -4603,7 +4603,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -5040,7 +5040,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -5879,7 +5879,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeRepli
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]
@@ -6316,7 +6316,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeRepl
 {
     /// <summary>Number of replicas</summary>
     [JsonPropertyName("count")]
-    public IntstrIntOrString Count { get; set; }
+    public IntstrIntOrString? Count { get; set; }
 
     /// <summary>Name of Deployment or StatefulSet</summary>
     [JsonPropertyName("name")]

@@ -332,7 +332,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerifi
 {
     /// <summary></summary>
     [JsonPropertyName("memoryLimit")]
-    public IntstrIntOrString MemoryLimit { get; set; }
+    public IntstrIntOrString? MemoryLimit { get; set; }
 }
 #nullable disable
 

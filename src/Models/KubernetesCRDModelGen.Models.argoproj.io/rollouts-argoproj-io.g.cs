@@ -2598,7 +2598,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2628,7 +2628,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePostStart
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2700,7 +2700,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopHt
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2730,7 +2730,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLifecyclePreStopTc
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2832,7 +2832,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeHttpG
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2851,7 +2851,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersLivenessProbeTcpSo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2989,7 +2989,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeHttp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3008,7 +3008,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersReadinessProbeTcpS
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3291,7 +3291,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeHttpGe
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3310,7 +3310,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecContainersStartupProbeTcpSoc
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3752,7 +3752,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3782,7 +3782,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3854,7 +3854,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3884,7 +3884,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLifecycle
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3986,7 +3986,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -4005,7 +4005,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersLivenessP
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4143,7 +4143,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -4162,7 +4162,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersReadiness
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4445,7 +4445,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -4464,7 +4464,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecEphemeralContainersStartupPr
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4902,7 +4902,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -4932,7 +4932,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePostS
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -5004,7 +5004,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -5034,7 +5034,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLifecyclePreSt
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -5136,7 +5136,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeH
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -5155,7 +5155,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersLivenessProbeT
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -5293,7 +5293,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -5312,7 +5312,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersReadinessProbe
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -5595,7 +5595,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeHt
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -5614,7 +5614,7 @@ public partial class V1alpha1RolloutSpecTemplateSpecInitContainersStartupProbeTc
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 

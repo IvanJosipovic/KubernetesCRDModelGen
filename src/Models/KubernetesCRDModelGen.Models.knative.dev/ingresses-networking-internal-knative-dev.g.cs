@@ -70,7 +70,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 
     /// <summary>Specifies the port of the referenced service.</summary>
     [JsonPropertyName("servicePort")]
-    public IntstrIntOrString ServicePort { get; set; }
+    public IntstrIntOrString? ServicePort { get; set; }
 }
 #nullable disable
 

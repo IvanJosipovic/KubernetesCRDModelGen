@@ -1263,7 +1263,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -1293,7 +1293,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1365,7 +1365,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -1395,7 +1395,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1497,7 +1497,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -1516,7 +1516,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1654,7 +1654,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -1673,7 +1673,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1956,7 +1956,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -1975,7 +1975,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2417,7 +2417,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2447,7 +2447,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2519,7 +2519,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2549,7 +2549,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2651,7 +2651,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2670,7 +2670,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2808,7 +2808,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -2827,7 +2827,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3110,7 +3110,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3129,7 +3129,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3567,7 +3567,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3597,7 +3597,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3669,7 +3669,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3699,7 +3699,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3801,7 +3801,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3820,7 +3820,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3958,7 +3958,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -3977,7 +3977,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4260,7 +4260,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheme")]
@@ -4279,7 +4279,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
 
     /// <summary></summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
