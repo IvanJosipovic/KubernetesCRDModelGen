@@ -100,7 +100,9 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                                 var code = codeGenerator.GenerateCompilationUnit(doc, "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
 
-                                context.AddSource($"{crd.Metadata.Name.Replace(".", "-")}.g.cs", code.NormalizeWhitespace().ToFullString());
+                                var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs")
+
+                                context.AddSource(filename, code.NormalizeWhitespace().ToFullString());
                             }
                             catch (Exception e)
                             {

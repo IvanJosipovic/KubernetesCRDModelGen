@@ -592,4 +592,20 @@ public class CodeGenerator : ICodeGenerator
         }
         return new XElement("t", text).LastNode?.ToString() ?? "";
     }
-}
+
+    /// <summary>
+    /// Removes invalid characters from a file name to ensure it is safe for use in the file system.
+    /// </summary>
+    /// <param name="fileName">The file name to sanitize.</param>
+    /// <returns>A sanitized file name with illegal characters removed.</returns>
+    /// <exception cref="ArgumentException">Thrown when the file name is null or empty.</exception>
+    public static string RemoveIllegalFileNameCharacters(string fileName)
+    {
+        if (string.IsNullOrEmpty(fileName))
+            throw new ArgumentException("File name cannot be null or empty", nameof(fileName));
+
+        // Remove invalid characters from the input
+        string sanitizedFileName = new([.. fileName.Where(c => !Path.GetInvalidFileNameChars().Contains(c))]);
+
+        return sanitizedFileName;
+    }}

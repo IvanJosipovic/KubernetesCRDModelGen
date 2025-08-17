@@ -33,7 +33,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" PrivateAssets="all" />
+        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj"/>
     </ItemGroup>
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
