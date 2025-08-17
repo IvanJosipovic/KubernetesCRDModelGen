@@ -16,6 +16,7 @@
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <WarningsAsErrors>$(WarningsAsErrors);CS8784;CS8785</WarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
