@@ -25,7 +25,7 @@ namespace Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string folderPath = configuration.GetValue<string>("FolderPath");
+            string? folderPath = configuration.GetValue<string>("FolderPath");
 
             if (string.IsNullOrEmpty(folderPath))
             {
@@ -76,7 +76,7 @@ namespace Worker
 
                                 logger.LogInformation("Generating: {file}", filename);
 
-                                await File.WriteAllTextAsync(Path.Combine(folderPath, filename), code);
+                                await File.WriteAllTextAsync(Path.Combine(folderPath, filename), code, stoppingToken);
                             }
                             catch (Exception e)
                             {
@@ -95,7 +95,7 @@ namespace Worker
                 }
             }
 
-            logger.LogInformation("Tool complated at: {time}", DateTimeOffset.Now);
+            logger.LogInformation("Tool completed at: {time}", DateTimeOffset.Now);
             Environment.ExitCode = 0;
             appLifetime.StopApplication();
         }

@@ -17,7 +17,7 @@ public class Benchmark
     {
         var fac = new LoggerFactory();
 
-        generator = new Generator(fac.CreateLogger<Generator>());
+        generator = new Generator(fac);
 
         crd = KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml").Result;
     }

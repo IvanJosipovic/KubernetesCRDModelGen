@@ -23,7 +23,7 @@ public class UnitTest1
     {
         var fac = LoggerFactory.Create((x) => { });
 
-        return new Generator(fac.CreateLogger<Generator>());
+        return new Generator(fac);
     }
 
     private static Type? GetTypeYaml(string yaml, string kind)
@@ -2364,7 +2364,7 @@ spec:
 
     public void TestCleanIdentifier(string input, string expected, bool @namespace = false)
     {
-        Generator.CleanIdentifier(input, @namespace).Should().Be(expected);
+        CodeGenerator.CleanIdentifier(input, @namespace).Should().Be(expected);
     }
 
     [Fact]
