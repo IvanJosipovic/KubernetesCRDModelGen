@@ -330,13 +330,13 @@ public class Generator : IGenerator
                     @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
                 }
 
-                var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required?.Contains(property.Key) == true);
+                var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required?.Contains(property.Key) == true && (property.Value.Type.HasValue && !property.Value.Type.Value.HasFlag(JsonSchemaType.Null)));
 
                 //Check if class already contains a property with the same name
                 var count = 1;
                 while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
                 {
-                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required?.Contains(property.Key) == true);
+                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required?.Contains(property.Key) == true && (property.Value.Type.HasValue && !property.Value.Type.Value.HasFlag(JsonSchemaType.Null)));
                 }
 
                 @class = @class.AddMembers(newProperty);

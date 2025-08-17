@@ -1060,9 +1060,12 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 
-        specType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
+        var prop = specType.GetProperty("NumberProp");
+        prop.PropertyType.Should().Be(typeof(double));
+
+        var prop2 = specType.GetProperty("NumberProp2");
+        prop2.PropertyType.Should().Be<Nullable<double>>();
     }
 
     [Fact]
@@ -10104,5 +10107,72 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         specType.Should().NotBeNull();
+    }
+
+    [Fact]
+    public void TestNullable()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                spec:
+                  type: object
+                  description: Demo of string field with required and nullable combinations
+                  required:
+                    - modeReqNullable
+                    - modeReqNonNull
+                  properties:
+                    modeReqNullable:
+                      type: number
+                      nullable: true
+                      description: required and may be null
+                    modeReqNonNull:
+                      type: number
+                      description: required and must be non null
+                    modeOptNullable:
+                      type: number
+                      nullable: true
+                      description: optional may be omitted or set to null
+                    modeOptNonNull:
+                      type: number
+                      description: optional may be omitted but if present must be non null
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        // modeReqNullable: required and nullable
+        var modeReqNullable = specType.GetProperty("ModeReqNullable");
+        modeReqNullable.PropertyType.Should().Be<Nullable<double>>();
+
+        // modeReqNonNull: required and non-null
+        var modeReqNonNull = specType.GetProperty("ModeReqNonNull");
+        modeReqNonNull.PropertyType.Should().Be<double>();
+
+        // modeOptNullable: optional and nullable
+        var modeOptNullable = specType.GetProperty("ModeOptNullable");
+        modeOptNullable.PropertyType.Should().Be<Nullable<double>>();
+
+        // modeOptNonNull: optional but if present must be non-null
+        var modeOptNonNull = specType.GetProperty("ModeOptNonNull");
+        modeOptNonNull.PropertyType.Should().Be<Nullable<double>>();
     }
 }
